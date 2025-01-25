@@ -1,31 +1,32 @@
 import { Link } from 'react-router-dom';
 import colors from '../../utils/colors';
 import logo from '../../assets/images/goodTravel.png'; // Asegúrate de que la ruta al logo sea correcta
+import './navComponent.css';
 
 const NavComponent = () => {
     return (
-        <nav style={{ backgroundColor: colors.color1, padding: '10px' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <nav className="nav-container" style={{ backgroundColor: colors.color1 }}>
+            <div className="nav-content">
                 <div>
-                    <img src={logo} alt="logo app" style={{ height: '50px' }} />
+                    <img src={logo} alt="logo app" className="nav-logo" />
                 </div>
-                <ul style={{ display: 'flex', listStyle: 'none', margin: 0, padding: 0 }}>
-                    <li style={{ margin: '0 10px' }}>
+                <ul className="nav-list">
+                    <li className="nav-item">
                         <Link to="/">Inicio</Link>
                     </li>
-                    <li style={{ margin: '0 10px' }}>
+                    <li className="nav-item">
                         <Link to="/experiencias">Experiencias</Link>
                     </li>
-                    <li style={{ margin: '0 10px' }}>
+                    <li className="nav-item">
                         <Link to="/nosotros">Nosotros</Link>
                     </li>
-                    <li style={{ margin: '0 10px' }}>
+                    <li className="nav-item">
                         <Link to="/blog">Blog</Link>
                     </li>
-                    <li style={{ margin: '0 10px' }}>
+                    <li className="nav-item">
                         <Link to="/galeria">Galería</Link>
                     </li>
-                    <li style={{ margin: '0 10px' }}>
+                    <li className="nav-item">
                         <Link to="/contacto">Contacto</Link>
                     </li>
                 </ul>
