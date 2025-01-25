@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import colors from '../../utils/colors';
-import logo from '../../assets/images/goodTravel.png'; // Asegúrate de que la ruta sea válida
+import logo from '../../assets/images/goodTravel.png'; 
 import './navComponent.css';
 
 const NavComponent = () => {
