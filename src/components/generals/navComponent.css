@@ -33,7 +33,6 @@
     font-size: 24px;
     cursor: pointer;
     color: var(--color4);
-
     display: none;
     /* Ocultar el ícono del menú en pantallas grandes */
 }
