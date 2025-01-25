@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color1: #f2f2f2;
+  --color2: #f29863;
+  --color3: #acd6cc;
+  --color4: #2d2c59;
+  --color5: #d9305d;
+}
+
 /* Estilo para el body */
 body {
   font-family: 'Arial', sans-serif;
