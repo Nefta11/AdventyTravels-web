@@ -23,22 +23,22 @@ const NavComponent = () => {
                 </div>
                 <ul className={`nav-list ${menuOpen ? 'open' : ''}`}>
                     <li className="nav-item">
-                        {menuOpen && <FaHome />} <Link to="/">Inicio</Link>
+                        {menuOpen && <FaHome style={{ marginLeft: '10px', marginRight: '8px' }} />} <Link to="/">Inicio</Link>
                     </li>
                     <li className="nav-item">
-                        {menuOpen && <FaSuitcase />} <Link to="/experiencias">Experiencias</Link>
+                        {menuOpen && <FaSuitcase style={{ marginLeft: '10px', marginRight: '8px' }} />} <Link to="/experiencias">Experiencias</Link>
                     </li>
                     <li className="nav-item">
-                        {menuOpen && <FaInfoCircle />} <Link to="/nosotros">Nosotros</Link>
+                        {menuOpen && <FaInfoCircle style={{ marginLeft: '10px', marginRight: '8px' }} />} <Link to="/nosotros">Nosotros</Link>
                     </li>
                     <li className="nav-item">
-                        {menuOpen && <FaBlog />} <Link to="/blog">Blog</Link>
+                        {menuOpen && <FaBlog style={{ marginLeft: '10px', marginRight: '8px' }} />} <Link to="/blog">Blog</Link>
                     </li>
                     <li className="nav-item">
-                        {menuOpen && <FaImages />} <Link to="/galeria">Galeria</Link>
+                        {menuOpen && <FaImages style={{ marginLeft: '10px', marginRight: '8px' }} />} <Link to="/galeria">Galeria</Link>
                     </li>
                     <li className="nav-item">
-                        {menuOpen && <FaEnvelope />} <Link to="/contacto">Contacto</Link>
+                        {menuOpen && <FaEnvelope style={{ marginLeft: '10px', marginRight: '8px' }} />} <Link to="/contacto">Contacto</Link>
                     </li>
                 </ul>
             </div>
