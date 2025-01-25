@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { FaBars, FaHome, FaSuitcase, FaInfoCircle, FaBlog, FaImages, FaEnvelope } from 'react-icons/fa';
-import colors from '../../utils/colors';
-import logo from '../../assets/images/goodTravel.png';
+import colors from '../../../utils/colors';
+import logo from '../../../assets/images/goodTravel.png';
+import LanguageSelector from '../lenguaje/lenguajeSelector';
 import './navComponent.css';
 
 const NavComponent = () => {
@@ -41,6 +42,7 @@ const NavComponent = () => {
                         {menuOpen && <FaEnvelope style={{ marginLeft: '10px', marginRight: '8px' }} />} <Link to="/contacto">Contacto</Link>
                     </li>
                 </ul>
+                <LanguageSelector />
             </div>
         </nav>
     );

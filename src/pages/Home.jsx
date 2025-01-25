@@ -1,4 +1,4 @@
-import NavComponent from '../components/generals/navComponent';
+import NavComponent from '../components/home/nav/navComponent';
 
 export default function Home() {
   return (
