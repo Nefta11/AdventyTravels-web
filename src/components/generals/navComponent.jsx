@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import colors from '../../utils/colors';
-import logo from '../../assets/images/goodTravel.png'; 
+import logo from '../../assets/images/goodTravel.png';
 import './navComponent.css';
 
 const NavComponent = () => {
@@ -15,30 +15,30 @@ const NavComponent = () => {
     return (
         <nav className="nav-container" style={{ backgroundColor: colors.color1 }}>
             <div className="nav-content">
-                <div>
+                <div className="nav-header">
                     <img src={logo} alt="logo app" className="nav-logo" />
-                </div>
-                <div className="nav-menu-icon" onClick={toggleMenu}>
-                    <FaBars />
+                    <div className="nav-menu-icon" onClick={toggleMenu}>
+                        <FaBars />
+                    </div>
                 </div>
                 <ul className={`nav-list ${menuOpen ? 'open' : ''}`}>
                     <li className="nav-item">
                         <Link to="/">Inicio</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/experiencias">Experiencias</Link>
+                        <Link to="/seguridad">Seguridad</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/nosotros">Nosotros</Link>
+                        <Link to="/pago">Pago en Línea</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/blog">Blog</Link>
+                        <Link to="/viajeros">Viajeros</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/galeria">Galería</Link>
+                        <Link to="/productos">Servicios / Productos</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/contacto">Contacto</Link>
+                        <Link to="/lanzamientos">Nuevos lanzamientos</Link>
                     </li>
                 </ul>
             </div>

@@ -1,89 +1,78 @@
 :root {
-    --color1: #F2F2F2;
-    --color2: #F29863;
-    --color3: #ACD6CC;
-    --color4: #2D2C59;
-    --color5: #D9305D;
+    --color1: #f2f2f2;
+    --color2: #f29863;
+    --color3: #acd6cc;
+    --color4: #2d2c59;
+    --color5: #d9305d;
 }
 
 .nav-container {
     padding: 10px;
     background-color: var(--color1);
-    /* Utiliza la variable global de tu sistema de colores */
 }
 
 .nav-content {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-header {
+    display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .nav-logo {
-    height: 100px;
+    height: 60px;
+}
+
+.nav-menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--color4);
+    margin-left: 10px; /* Espaciado entre el logo y el ícono */
 }
 
 .nav-list {
-    display: flex;
+    display: none;
+    flex-direction: column;
     list-style: none;
-    margin: 0;
     padding: 0;
-    font-size: 20px;
-    gap: 15px;
-    /* Espacio entre los elementos de la lista */
+    margin: 20px 0 0;
+    width: 100%;
+}
+
+.nav-list.open {
+    display: flex;
 }
 
 .nav-item {
-    margin: 0 10px;
-    /* Espaciado lateral para cada elemento */
+    margin: 10px 0;
+    text-align: left;
 }
 
 .nav-item a {
     text-decoration: none;
     color: var(--color4);
-    /* Color principal */
+    font-size: 16px;
     transition: color 0.3s ease;
-    /* Suaviza el cambio de color */
 }
 
 .nav-item a:hover {
     color: var(--color5);
-    /* Color al pasar el cursor */
 }
 
-.nav-menu-icon {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-/* Media queries para pantallas pequeñas */
+/* Estilos responsivos */
 @media (max-width: 768px) {
-    .nav-container {
-        padding: 5px;
-    }
-
-    .nav-logo {
-        height: 80px;
-    }
-
-    .nav-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav-menu-icon {
-        display: block;
+    .nav-header {
+        flex-direction: row;
     }
 
     .nav-list {
-        display: none;
         flex-direction: column;
-        width: 100%;
-        text-align: center;
-    }
-
-    .nav-list.open {
-        display: flex;
     }
 
     .nav-item {
