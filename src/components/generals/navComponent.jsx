@@ -1,16 +1,27 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { FaBars } from 'react-icons/fa';
 import colors from '../../utils/colors';
 import logo from '../../assets/images/goodTravel.png'; 
 import './navComponent.css';
 
 const NavComponent = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
     return (
         <nav className="nav-container" style={{ backgroundColor: colors.color1 }}>
             <div className="nav-content">
                 <div>
                     <img src={logo} alt="logo app" className="nav-logo" />
                 </div>
-                <ul className="nav-list">
+                <div className="nav-menu-icon" onClick={toggleMenu}>
+                    <FaBars />
+                </div>
+                <ul className={`nav-list ${menuOpen ? 'open' : ''}`}>
                     <li className="nav-item">
                         <Link to="/">Inicio</Link>
                     </li>
