@@ -26,19 +26,19 @@ const NavComponent = () => {
                         <Link to="/">Inicio</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/seguridad">Seguridad</Link>
+                        <Link to="/seguridad">Experiencias</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/pago">Pago en Línea</Link>
+                        <Link to="/pago">Nosotros</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/viajeros">Viajeros</Link>
+                        <Link to="/viajeros">Blog</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/productos">Servicios / Productos</Link>
+                        <Link to="/productos">Galeria</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/lanzamientos">Nuevos lanzamientos</Link>
+                        <Link to="/lanzamientos">Contacto</Link>
                     </li>
                 </ul>
             </div>
