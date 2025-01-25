@@ -26,40 +26,32 @@
 }
 
 .nav-logo {
-    height: 60px;
-    margin: 0 auto; /* Centrar la imagen */
+    height: 110px;
 }
 
 .nav-menu-icon {
     font-size: 24px;
     cursor: pointer;
     color: var(--color4);
-    margin-left: 10px; /* Espaciado entre el logo y el ícono */
-    display: none; /* Ocultar el ícono del menú en pantallas grandes */
+
+    display: none;
+    /* Ocultar el ícono del menú en pantallas grandes */
 }
 
 .nav-list {
-    display: flex; /* Mostrar la lista en pantallas grandes */
-    flex-direction: row; /* Alinear los elementos en fila */
+    display: flex;/* Mostrar la lista en pantallas grandes */
+    flex-direction: row;
     list-style: none;
-    padding: 0;
-    margin: 0;
-    width: auto;
-}
-
-.nav-list.open {
-    display: flex;
 }
 
 .nav-item {
     margin: 0 10px;
-    text-align: left;
 }
 
 .nav-item a {
     text-decoration: none;
     color: var(--color4);
-    font-size: 18px; /* Aumentar el tamaño de las letras en pantallas grandes */
+    font-size: 25px;
     transition: color 0.3s ease;
 }
 
@@ -70,20 +62,21 @@
 /* Estilos responsivos */
 @media (max-width: 768px) {
     .nav-header {
-        flex-direction: row-reverse; /* Cambiar la dirección para que el menú esté al inicio */
-        justify-content: space-between; /* Espaciar el contenido */
+        flex-direction: row-reverse;
+        justify-content: space-between;
     }
 
     .nav-logo {
-        margin: 0 auto; /* Asegurar que el logo esté centrado */
+        height: 75px;
+        margin: 0 auto;
     }
 
     .nav-menu-icon {
-        display: block; /* Mostrar el ícono del menú en pantallas pequeñas */
+        display: block;
     }
 
     .nav-list {
-        display: none; /* Ocultar la lista en pantallas pequeñas */
+        display: none;
         flex-direction: column;
         width: 100%;
     }
@@ -93,10 +86,11 @@
     }
 
     .nav-item {
-        margin: 10px 0;
+        margin: 15px 0;
+        text-align: left;/* Centrar los elementos de la lista */
     }
 
     .nav-item a {
-        font-size: 16px; /* Reducir el tamaño de las letras en pantallas pequeñas */
+        font-size: 20px;
     }
 }
