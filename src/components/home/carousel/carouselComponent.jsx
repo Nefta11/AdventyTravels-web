@@ -1,10 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./carousel.css";
 
 import usaImage1 from "../../../assets/images/viaje1.jpg";
 import usaImage2 from "../../../assets/images/viaje2.jpeg";
 import usaImage3 from "../../../assets/images/viaje3.jpeg";
-
 
 const images = [usaImage1, usaImage2, usaImage3];
 
@@ -20,6 +19,11 @@ const CarouselComponent = () => {
             prevIndex === 0 ? images.length - 1 : prevIndex - 1
         );
     };
+
+    useEffect(() => {
+        const interval = setInterval(handleNext, 4000); // Cambiar imagen cada 4 segundos
+        return () => clearInterval(interval);
+    }, []);
 
     return (
         <div className="carousel">
