@@ -41,7 +41,7 @@
 }
 
 .nav-item {
-    margin: 0 10px;
+    margin: 0 16px; /* Separar un poco más los elementos */
     margin-top: -70px;
 }
 
@@ -57,7 +57,7 @@
 }
 
 .language-selector-desktop {
-    margin-left: auto; /* Ajustar el margen para alinear con la lista */
+    margin-left: 40px; /* Separar el selector de idioma de la esquina */
 }
 
 /* Estilos responsivos */
