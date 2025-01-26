@@ -30,12 +30,11 @@
 }
 
 .nav-menu-icon {
-    display: none;
-    /* Ocultar el ícono del menú en pantallas grandes */
+    display: none; /* Ocultar el ícono del menú en pantallas grandes */
 }
 
 .nav-list {
-    display: flex;/* Mostrar la lista en pantallas grandes */
+    display: flex; /* Mostrar la lista en pantallas grandes */
     flex-direction: row;
     list-style: none;
 }
@@ -56,15 +55,15 @@
     color: var(--color5);
 }
 
+.language-selector-desktop {
+    margin-left: auto;
+}
+
 /* Estilos responsivos */
 @media (max-width: 768px) {
     .nav-header {
-        flex-direction: row-reverse;
-    }
-
-    .nav-logo {
-        height: 75px;
-        margin: 0 auto;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .nav-menu-icon {
@@ -72,6 +71,16 @@
         font-size: 25px;
         cursor: pointer;
         color: var(--color2);
+    }
+
+    .nav-logo {
+        height: 75px;
+    }
+
+    .language-selector-desktop {
+        position: relative; /* Asegura que esté dentro del flujo */
+        margin-left: auto;
+        top: 0;
     }
 
     .nav-list {
@@ -86,7 +95,7 @@
 
     .nav-item {
         margin: 15px 0;
-        text-align: left;/* Centrar los elementos de la lista */
+        text-align: left; /* Centrar los elementos de la lista */
     }
 
     .nav-item a {
