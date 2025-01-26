@@ -4,7 +4,7 @@ import { FaBars, FaHome, FaSuitcase, FaInfoCircle, FaBlog, FaImages, FaEnvelope 
 import { useTranslation } from 'react-i18next';
 import colors from '../../../utils/colors';
 import logo from '../../../assets/images/goodTravel.png';
-import LanguageSelector from '../lenguaje/lenguajeSelector';
+import LanguageSelector from '../lenguaje/lenguajeSelectorComponent';
 import './navComponent.css';
 
 const NavComponent = () => {
