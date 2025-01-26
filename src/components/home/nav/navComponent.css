@@ -37,6 +37,7 @@
     display: flex; /* Mostrar la lista en pantallas grandes */
     flex-direction: row;
     list-style: none;
+    margin-left: 400px; /* Mover la lista hacia la derecha */
 }
 
 .nav-item {
@@ -56,7 +57,7 @@
 }
 
 .language-selector-desktop {
-    margin-left: auto;
+    margin-left: auto; /* Ajustar el margen para alinear con la lista */
 }
 
 /* Estilos responsivos */
@@ -87,6 +88,7 @@
         display: none;
         flex-direction: column;
         width: 100%;
+        margin-left: 0; /* Restablecer el margen en pantallas pequeñas */
     }
 
     .nav-list.open {
