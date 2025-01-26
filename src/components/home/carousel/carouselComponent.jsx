@@ -1,8 +1,13 @@
 import "./carousel.css";
+import usaImage1 from "../../../assets/images/usa.png";
+import usaImage2 from "../../../assets/images/usa.png";
+import usaImage3 from "../../../assets/images/usa.png";
+import usaImage4 from "../../../assets/images/usa.png";
+import usaImage5 from "../../../assets/images/usa.png";
 
-const images = ["../../../assets/images/usa.png", "../../../assets/images/usa.png", "../../../assets/images/usa.png"]; // Añade tus imágenes aquí
+const images = [usaImage1, usaImage2, usaImage3, usaImage4, usaImage5]; // Añade tus imágenes aquí
 
-const carouselComponent = () => {
+const CarouselComponent = () => {
     return (
         <section className="carousel">
             <ol className="viewport" tabIndex="1">
@@ -19,4 +24,4 @@ const carouselComponent = () => {
     );
 };
 
-export default carouselComponent;
+export default CarouselComponent;

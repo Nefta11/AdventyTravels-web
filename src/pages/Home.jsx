@@ -1,12 +1,11 @@
-//import NavComponent from '../components/home/nav/navComponent';
-
+import NavComponent from '../components/home/nav/navComponent';
+import CarouselComponent from "../components/home/carousel/carouselComponent";
 
 export default function Home() {
   return (
     <div>
-      <h1>Home</h1>
-      
-      {/* <NavComponent /> */}
+      <NavComponent />
+      <CarouselComponent />
     </div>
   );
 }

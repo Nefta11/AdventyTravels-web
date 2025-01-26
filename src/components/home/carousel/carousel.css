@@ -2,16 +2,10 @@
 
 :root {
     --color-bg: #16181b;
+    --color-fg: #ffffff;
 }
 
-body {
-    display: grid;
-    place-items: center;
-    margin: 0;
-    height: 100vh;
-    padding: 0 50px;
-    background: var(--color-bg);
-}
+
 
 * {
     scrollbar-color: transparent transparent;
@@ -45,6 +39,7 @@ li {
     perspective: 100px;
     overflow: hidden;
     cursor: grab;
+    background: var(--color-fg); /* Fondo claro para que las imágenes sean visibles */
 }
 
 .viewport {
