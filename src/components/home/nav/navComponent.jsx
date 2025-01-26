@@ -1,12 +1,14 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { FaBars, FaHome, FaSuitcase, FaInfoCircle, FaBlog, FaImages, FaEnvelope } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 import colors from '../../../utils/colors';
 import logo from '../../../assets/images/goodTravel.png';
 import LanguageSelector from '../lenguaje/lenguajeSelector';
 import './navComponent.css';
 
 const NavComponent = () => {
+    const { t } = useTranslation();
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -33,27 +35,27 @@ const NavComponent = () => {
                 <ul className={`nav-list ${menuOpen ? 'open' : ''}`}>
                     <li className="nav-item">
                         {menuOpen && <FaHome style={{ marginLeft: '10px', marginRight: '8px' }} />}
-                        <Link to="/">Inicio</Link>
+                        <Link to="/">{t('home')}</Link>
                     </li>
                     <li className="nav-item">
                         {menuOpen && <FaSuitcase style={{ marginLeft: '10px', marginRight: '8px' }} />}
-                        <Link to="/experiencias">Experiencias</Link>
+                        <Link to="/experiencias">{t('experiences')}</Link>
                     </li>
                     <li className="nav-item">
                         {menuOpen && <FaInfoCircle style={{ marginLeft: '10px', marginRight: '8px' }} />}
-                        <Link to="/nosotros">Nosotros</Link>
+                        <Link to="/nosotros">{t('about')}</Link>
                     </li>
                     <li className="nav-item">
                         {menuOpen && <FaBlog style={{ marginLeft: '10px', marginRight: '8px' }} />}
-                        <Link to="/blog">Blog</Link>
+                        <Link to="/blog">{t('blog')}</Link>
                     </li>
                     <li className="nav-item">
                         {menuOpen && <FaImages style={{ marginLeft: '10px', marginRight: '8px' }} />}
-                        <Link to="/galeria">Galeria</Link>
+                        <Link to="/galeria">{t('gallery')}</Link>
                     </li>
                     <li className="nav-item">
                         {menuOpen && <FaEnvelope style={{ marginLeft: '10px', marginRight: '8px' }} />}
-                        <Link to="/contacto">Contacto</Link>
+                        <Link to="/contacto">{t('contact')}</Link>
                     </li>
                 </ul>
             </div>

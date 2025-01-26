@@ -1,11 +1,18 @@
 import { useState } from "react";
 import { Menu, MenuItem, Button } from "@mui/material";
-import { ExpandMore } from "@mui/icons-material";
+import { useTranslation } from 'react-i18next';
 import "./LanguageSelector.css";
+import colors from "../../../utils/colors";
+
+// Importa las imágenes de las banderas
+import esFlag from '../../../assets/images/mx.png';
+import enFlag from '../../../assets/images/usa.png';
+import frFlag from '../../../assets/images/fra.png';
 
 const LanguageSelector = () => {
+    const { i18n } = useTranslation();
     const [anchorEl, setAnchorEl] = useState(null);
-    const [selectedLanguage, setSelectedLanguage] = useState("MXN");
+    const [selectedLanguage, setSelectedLanguage] = useState("es");
 
     const handleOpen = (event) => {
         setAnchorEl(event.currentTarget);
@@ -17,13 +24,21 @@ const LanguageSelector = () => {
 
     const handleLanguageChange = (lang) => {
         setSelectedLanguage(lang);
+        i18n.changeLanguage(lang);
         handleClose();
     };
 
-    const flags = {
-        MXN: "🇲🇽",
-        USD: "🇺🇸",
-        FRA: "🇫🇷",
+    const getFlag = (lang) => {
+        switch (lang) {
+            case "es":
+                return esFlag;
+            case "en":
+                return enFlag;
+            case "fr":
+                return frFlag;
+            default:
+                return esFlag;
+        }
     };
 
     return (
@@ -31,10 +46,10 @@ const LanguageSelector = () => {
             <Button
                 variant="outlined"
                 onClick={handleOpen}
-                endIcon={<ExpandMore />}
                 className="language-selector-button"
+                style={{ borderColor: colors.color4 }}
             >
-                {flags[selectedLanguage]} {selectedLanguage}
+                <img src={getFlag(selectedLanguage)} alt={selectedLanguage} className="flag-icon" />
             </Button>
 
             <Menu
@@ -43,9 +58,15 @@ const LanguageSelector = () => {
                 onClose={handleClose}
                 className="language-selector-menu"
             >
-                <MenuItem onClick={() => handleLanguageChange("MXN")}>{flags["MXN"]} Español</MenuItem>
-                <MenuItem onClick={() => handleLanguageChange("USD")}>{flags["USD"]} English</MenuItem>
-                <MenuItem onClick={() => handleLanguageChange("FRA")}>{flags["FRA"]} Français</MenuItem>
+                <MenuItem onClick={() => handleLanguageChange("es")}>
+                    <img src={esFlag} alt="ESP" className="flag-icon" /> ESP
+                </MenuItem>
+                <MenuItem onClick={() => handleLanguageChange("en")}>
+                    <img src={enFlag} alt="ENG" className="flag-icon" /> ENG
+                </MenuItem>
+                <MenuItem onClick={() => handleLanguageChange("fr")}>
+                    <img src={frFlag} alt="FRA" className="flag-icon" /> FRA
+                </MenuItem>
             </Menu>
         </div>
     );
