@@ -17,10 +17,31 @@ li {
     position: relative;
     width: 100%;
     height: 50vh;
-    perspective: 100px;
     overflow: hidden;
     cursor: grab;
     background: var(--color-fg); /* Fondo claro para que las imágenes sean visibles */
+}
+
+.carousel-inner {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    visibility: visible;
 }
 
 .viewport {
