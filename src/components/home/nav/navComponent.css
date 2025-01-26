@@ -60,7 +60,7 @@
 }
 
 /* Estilos responsivos */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .nav-header {
         flex-direction: row;
         justify-content: space-between;
