@@ -1,9 +1,9 @@
 import "./carousel.css";
-import usaImage1 from "../../../assets/images/usa.png";
-import usaImage2 from "../../../assets/images/usa.png";
-import usaImage3 from "../../../assets/images/usa.png";
-import usaImage4 from "../../../assets/images/usa.png";
-import usaImage5 from "../../../assets/images/usa.png";
+import usaImage1 from "../../../assets/images/usa.webp";
+import usaImage2 from "../../../assets/images/usa.webp";
+import usaImage3 from "../../../assets/images/usa.webp";
+import usaImage4 from "../../../assets/images/usa.webp";
+import usaImage5 from "../../../assets/images/usa.webp";
 
 const images = [usaImage1, usaImage2, usaImage3, usaImage4, usaImage5]; // Añade tus imágenes aquí
 
