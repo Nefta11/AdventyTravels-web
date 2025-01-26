@@ -23,7 +23,6 @@ const NavComponent = () => {
                     <div className="nav-menu-icon" onClick={toggleMenu}>
                         <FaBars />
                     </div>
-
                     {/* Logo de la aplicación */}
                     <img src={logo} alt="logo app" className="nav-logo" />
 
