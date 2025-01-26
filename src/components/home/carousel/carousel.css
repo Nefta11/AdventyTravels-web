@@ -1,95 +1,76 @@
-/* Carousel.css */
-
 :root {
-    --color-bg: #16181b;
-    --color-fg: #ffffff;
-}
-
-
-ol,
-li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    --color1: #f2f2f2;
+    --color2: #f29863;
+    --color3: #acd6cc;
+    --color4: #2d2c59;
+    --color5: #d9305d;
 }
 
 .carousel {
     position: relative;
-    width: 100%;
-    height: 50vh;
+    width:auto;
+    height: 450px;
     overflow: hidden;
-    cursor: grab;
-    background: var(--color-fg); /* Fondo claro para que las imágenes sean visibles */
+    background-color: var(--color1);
 }
 
-.carousel-inner {
-    display: flex;
+.carousel-slide {
     width: 100%;
     height: 100%;
 }
 
-.carousel-item {
-    flex: 0 0 100%;
+.carousel-image {
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-position: center;
-    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
-    opacity: 0;
-    visibility: hidden;
+    object-fit: contain; /* Cambiar de cover a contain para mantener la calidad */
 }
 
-.carousel-item.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.viewport {
+.carousel-arrow {
     position: absolute;
-    inset: 0;
-    display: flex;
-    overflow-x: scroll;
-    counter-reset: item;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-}
-
-.carousel::before,
-.carousel::after {
-    content: "";
-    position: absolute;
-    z-index: 2;
-    left: 50%;
-    translate: -50% 0;
-    width: 500%;
-    height: 500%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
     border-radius: 50%;
-    background: var(--color-bg);
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
 }
 
-.carousel::before {
-    top: -480%;
+.carousel-arrow.left {
+    left: 10px;
 }
 
-.carousel::after {
-    bottom: -480%;
+.carousel-arrow.right {
+    right: 10px;
 }
 
-.slide {
-    position: relative;
-    flex: 0 0 33.33%;
-    width: 33.33%;
-    counter-increment: item;
+.carousel-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-.snapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    scroll-snap-align: center;
-    background-size: cover;
-    background-position: 50%;
-    border: 10px solid var(--color-bg);
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 800px) {
+    .carousel {
+        height: auto; /* Ajustar la altura para pantallas pequeñas */
+        height: 220px;
+        overflow: hidden;
+    }
+
+    .carousel-slide {
+        display: flex;
+        align-items: center; /* Centrar verticalmente */
+    }
+
+    .carousel-arrow {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
 }

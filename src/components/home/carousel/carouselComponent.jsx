@@ -1,37 +1,43 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import "./carousel.css";
-import usaImage1 from "../../../assets/images/usa.webp";
-import usaImage2 from "../../../assets/images/usa.webp";
-import usaImage3 from "../../../assets/images/usa.webp";
-import usaImage4 from "../../../assets/images/usa.webp";
-import usaImage5 from "../../../assets/images/usa.webp";
 
-const images = [usaImage1, usaImage2, usaImage3, usaImage4, usaImage5]; // Añade tus imágenes aquí
+import usaImage1 from "../../../assets/images/viaje1.jpg";
+import usaImage2 from "../../../assets/images/viaje2.jpeg";
+import usaImage3 from "../../../assets/images/viaje3.jpeg";
+
+
+const images = [usaImage1, usaImage2, usaImage3];
 
 const CarouselComponent = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 3000); // Cambia de imagen cada 3 segundos
+    const handleNext = () => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    };
 
-        return () => clearInterval(interval);
-    }, []);
+    const handlePrev = () => {
+        setCurrentIndex((prevIndex) =>
+            prevIndex === 0 ? images.length - 1 : prevIndex - 1
+        );
+    };
 
     return (
-        <section className="carousel">
-            <div className="carousel-inner">
-                {images.map((image, index) => (
-                    <div
-                        className={`carousel-item ${index === currentIndex ? "active" : ""}`}
-                        key={index}
-                        style={{ backgroundImage: `url(${image})` }}
-                    ></div>
-                ))}
+        <div className="carousel">
+            <div className="carousel-slide">
+                <img
+                    src={images[currentIndex]}
+                    alt={`Slide ${currentIndex + 1}`}
+                    className="carousel-image"
+                />
             </div>
-        </section>
+            <button className="carousel-arrow left" onClick={handlePrev}>
+                ‹
+            </button>
+            <button className="carousel-arrow right" onClick={handleNext}>
+                ›
+            </button>
+        </div>
     );
 };
 
-export default React.memo(CarouselComponent);
+export default CarouselComponent;
