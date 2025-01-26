@@ -1,9 +1,12 @@
-import NavComponent from '../components/home/nav/navComponent';
+//import NavComponent from '../components/home/nav/navComponent';
+
 
 export default function Home() {
   return (
     <div>
-      <NavComponent />
+      <h1>Home</h1>
+      
+      {/* <NavComponent /> */}
     </div>
   );
 }
