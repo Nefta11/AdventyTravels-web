@@ -1,4 +1,5 @@
 import { FaWhatsapp } from 'react-icons/fa';
+import './WhatsAppIcon.css'; // Importa el archivo CSS
 
 const WhatsAppIcon = () => {
     return (
@@ -6,33 +7,11 @@ const WhatsAppIcon = () => {
             href="https://wa.me/5217716075321"
             target="_blank"
             rel="noopener noreferrer"
-            style={styles.floatingButton}
+            className="floating-button" // Clases CSS
         >
-            <FaWhatsapp style={styles.icon} />
+            <FaWhatsapp className="whatsapp-icon" />
         </a>
     );
-};
-
-const styles = {
-    floatingButton: {
-        position: 'fixed',
-        bottom: '20px',
-        right: '20px',
-        backgroundColor: '#25D366',
-        color: 'white',
-        borderRadius: '50%',
-        padding: '10px',
-        boxShadow: '2px 2px 5px rgba(0,0,0,0.3)',
-        zIndex: 1000,
-    },
-    icon: {
-        fontSize: '2rem', // Tamaño por defecto
-    },
-    '@media (max-width: 768px)': {
-        icon: {
-            fontSize: '1.5rem', // Tamaño para pantallas pequeñas
-        },
-    },
 };
 
 export default WhatsAppIcon;
