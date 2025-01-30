@@ -1,8 +1,12 @@
-import  { useState } from "react";
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import "./travelForm.css";
 
 const travelForm = () => {
     const [isOpen, setIsOpen] = useState(true);
+    const { t } = useTranslation();
+
+    const today = new Date().toISOString().split('T')[0];
 
     if (!isOpen) return null;
 
@@ -12,39 +16,29 @@ const travelForm = () => {
                 <button className="close-button" onClick={() => setIsOpen(false)}>
                     &times;
                 </button>
-                <h2>
-                    ¿Le ayudamos a hacer realidad su viaje?
-                </h2>
+                <h2>{t('travelForm.title')}</h2>
                 <p>
-                    <span role="img" aria-label="Mexico flag">🇲🇽</span> 55 4161 1796
+                    <span role="img" aria-label="Mexico flag">🇲🇽</span> {t('travelForm.phone')}
                 </p>
                 <form>
                     <div className="input-group">
-                        <input type="text" placeholder="Nombres *" required />
-                        <input type="text" placeholder="Apellidos" />
+                        <input type="text" placeholder={t('travelForm.firstName')} required />
+                        <input type="text" placeholder={t('travelForm.lastName')} />
                     </div>
                     <div className="input-group">
-                        <input type="email" placeholder="Email *" required />
+                        <input type="email" placeholder={t('travelForm.email')} required />
                         <div className="phone-input">
                             <span>🇲🇽 +52</span>
-                            <input type="tel" placeholder="Teléfono de Contacto" />
+                            <input type="tel" placeholder={t('travelForm.phonePlaceholder')} />
                         </div>
                     </div>
                     <div className="input-group">
-                        <input type="text" placeholder="Fecha de llegada DD/MM/YYYY" />
-                        <input type="number" placeholder="Número de Viajeros" />
+                        <input type="date" placeholder={t('travelForm.arrivalDate')} max={today} />
+                        <input type="number" placeholder={t('travelForm.numberOfTravelers')} max="11" />
                     </div>
-                    <textarea placeholder="Escribanos aquí su consulta *" required></textarea>
-                    <div className="checkbox-group">
-                        <label>
-                            <input type="checkbox" /> Suscríbete y ¡Entérate de todo!
-                        </label>
-                        <label>
-                            <input type="checkbox" /> Procesamos sus datos de acuerdo a nuestra <a href="#">Política de Privacidad</a>
-                        </label>
-                    </div>
+                    <textarea placeholder={t('travelForm.message')} required></textarea>
                     <button type="submit" className="submit-button">
-                        ¡Consulte Ahora!
+                        {t('travelForm.submit')}
                     </button>
                 </form>
             </div>

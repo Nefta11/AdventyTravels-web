@@ -9,7 +9,19 @@ const resources = {
       about: "Nosotros",
       blog: "Blog",
       gallery: "Galeria",
-      contact: "Contacto"
+      contact: "Contacto",
+      travelForm: {
+        title: "¿Le ayudamos a hacer realidad su viaje?",
+        phone: "55 4161 1796",
+        firstName: "Nombres *",
+        lastName: "Apellidos",
+        email: "Email *",
+        phonePlaceholder: "Teléfono de Contacto",
+        arrivalDate: "Fecha de llegada DD/MM/YYYY",
+        numberOfTravelers: "Número de Viajeros",
+        message: "Escribanos aquí su consulta *",
+        submit: "¡Consulte Ahora!"
+      }
     }
   },
   en: {
@@ -19,7 +31,19 @@ const resources = {
       about: "About Us",
       blog: "Blog",
       gallery: "Gallery",
-      contact: "Contact"
+      contact: "Contact",
+      travelForm: {
+        title: "Can we help you make your trip a reality?",
+        phone: "55 4161 1796",
+        firstName: "First Name *",
+        lastName: "Last Name",
+        email: "Email *",
+        phonePlaceholder: "Contact Phone",
+        arrivalDate: "Arrival Date DD/MM/YYYY",
+        numberOfTravelers: "Number of Travelers",
+        message: "Write your query here *",
+        submit: "Consult Now!"
+      }
     }
   },
   fr: {
@@ -29,7 +53,19 @@ const resources = {
       about: "À propos de nous",
       blog: "Blog",
       gallery: "Galerie",
-      contact: "Contact"
+      contact: "Contact",
+      travelForm: {
+        title: "Pouvons-nous vous aider à réaliser votre voyage?",
+        phone: "55 4161 1796",
+        firstName: "Prénom *",
+        lastName: "Nom de famille",
+        email: "Email *",
+        phonePlaceholder: "Téléphone de contact",
+        arrivalDate: "Date d'arrivée JJ/MM/AAAA",
+        numberOfTravelers: "Nombre de voyageurs",
+        message: "Écrivez votre question ici *",
+        submit: "Consultez maintenant!"
+      }
     }
   }
 };
