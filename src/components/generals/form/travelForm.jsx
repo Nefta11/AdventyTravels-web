@@ -16,7 +16,7 @@ const travelForm = () => {
                 <button className="close-button" onClick={() => setIsOpen(false)}>
                     &times;
                 </button>
-                <h2>{t('travelForm.title')}</h2>
+                <h2 className="title">{t('travelForm.title')}</h2>
                 <form>
                     <div className="input-group">
                         <input type="text" placeholder={t('travelForm.firstName')} required />
