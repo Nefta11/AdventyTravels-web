@@ -1,0 +1,77 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    max-width: 500px;
+    position: relative;
+    text-align: center;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.input-group input,
+.phone-input input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.phone-input {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 10px 0;
+}
+
+.submit-button {
+    background: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .form-container {
+        width: 90%;
+        max-width: none;
+    }
+}
