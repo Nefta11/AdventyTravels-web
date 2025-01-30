@@ -17,9 +17,6 @@ const travelForm = () => {
                     &times;
                 </button>
                 <h2>{t('travelForm.title')}</h2>
-                <p>
-                    <span role="img" aria-label="Mexico flag">🇲🇽</span> {t('travelForm.phone')}
-                </p>
                 <form>
                     <div className="input-group">
                         <input type="text" placeholder={t('travelForm.firstName')} required />

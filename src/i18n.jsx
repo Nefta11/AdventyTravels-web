@@ -12,7 +12,6 @@ const resources = {
       contact: "Contacto",
       travelForm: {
         title: "¿Le ayudamos a hacer realidad su viaje?",
-        phone: "55 4161 1796",
         firstName: "Nombres *",
         lastName: "Apellidos",
         email: "Email *",
@@ -34,7 +33,6 @@ const resources = {
       contact: "Contact",
       travelForm: {
         title: "Can we help you make your trip a reality?",
-        phone: "55 4161 1796",
         firstName: "First Name *",
         lastName: "Last Name",
         email: "Email *",
@@ -56,7 +54,6 @@ const resources = {
       contact: "Contact",
       travelForm: {
         title: "Pouvons-nous vous aider à réaliser votre voyage?",
-        phone: "55 4161 1796",
         firstName: "Prénom *",
         lastName: "Nom de famille",
         email: "Email *",
