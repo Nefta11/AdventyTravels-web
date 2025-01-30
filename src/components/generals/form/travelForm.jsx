@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
 import "./travelForm.css";
 
 const travelForm = () => {
@@ -24,10 +26,10 @@ const travelForm = () => {
                     </div>
                     <div className="input-group">
                         <input type="email" placeholder={t('travelForm.email')} required />
-                        <div className="phone-input">
-                            <span>🇲🇽 +52</span>
-                            <input type="tel" placeholder={t('travelForm.phonePlaceholder')} />
-                        </div>
+                        <PhoneInput
+                            country={'mx'}
+                            placeholder={t('travelForm.phonePlaceholder')}
+                        />
                     </div>
                     <div className="input-group">
                         <input type="date" placeholder={t('travelForm.arrivalDate')} max={today} />
