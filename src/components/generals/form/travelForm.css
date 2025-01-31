@@ -50,6 +50,19 @@ textarea {
     border-radius: 5px;
 }
 
+.email-phone-group {
+    display: flex;
+    gap: 10px;
+}
+
+.email-input {
+    flex: 1;
+}
+
+.phone-input {
+    flex: 1;
+}
+
 .phone-input {
     display: flex;
     align-items: center;
@@ -77,5 +90,14 @@ textarea {
     .form-container {
         width: 90%;
         max-width: none;
+    }
+
+    .email-phone-group {
+        flex-direction: column;
+    }
+
+    .email-input,
+    .phone-input {
+        width: 100%;
     }
 }

@@ -24,12 +24,13 @@ const TravelForm = () => {
                         <input type="text" placeholder={t('travelForm.firstName')} required />
                         <input type="text" placeholder={t('travelForm.lastName')} />
                     </div>
-                    <div className="input-group">
-                        <input type="email" placeholder={t('travelForm.email')} required />
+                    <div className="input-group email-phone-group">
+                        <input type="email" className="email-input" placeholder={t('travelForm.email')} required />
                         <PhoneInput
                             country={'mx'}
                             maxLength={10}
                             placeholder={t('travelForm.phonePlaceholder')}
+                            containerClass="phone-input"
                         />
                     </div>
                     <div className="input-group">
