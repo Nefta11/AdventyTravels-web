@@ -1,0 +1,76 @@
+.tour-search-container {
+    background: url('/ruta/de/la/imagen/buscador.png') no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.tour-search-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 900px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-bottom: 2px solid #ccc;
+}
+
+.tab {
+    cursor: pointer;
+    padding: 5px 10px;
+    font-weight: bold;
+    color: #888;
+}
+
+.tab.active {
+    color: red;
+    border-bottom: 3px solid red;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+.search-fields {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+select,
+.search-button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-button {
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .search-fields {
+        flex-direction: column;
+    }
+
+    .tabs {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tab {
+        margin-bottom: 5px;
+    }
+}

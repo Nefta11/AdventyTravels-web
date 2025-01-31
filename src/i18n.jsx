@@ -20,6 +20,19 @@ const resources = {
         numberOfTravelers: "Número de Viajeros",
         message: "Escribanos aquí su consulta *",
         submit: "¡Consulte Ahora!"
+      },
+      tourSearch: {
+        tours: "Tours",
+        flights: "✈ Vuelos",
+        insurance: "Seguros",
+        hotel: "Hotel",
+        hotels: "Hoteles",
+        findTour: "Encuentra tu tour ideal",
+        region: "Región",
+        cityCountry: "📍 Ciudad, País",
+        month: "📅 Mes",
+        nights: "🌙 Noches",
+        search: "Buscar"
       }
     }
   },
@@ -41,6 +54,19 @@ const resources = {
         numberOfTravelers: "Number of Travelers",
         message: "Write your query here *",
         submit: "Consult Now!"
+      },
+      tourSearch: {
+        tours: "Tours",
+        flights: "✈ Flights",
+        insurance: "Insurance",
+        hotel: "Hotel",
+        hotels: "Hotels",
+        findTour: "Find your ideal tour",
+        region: "Region",
+        cityCountry: "📍 City, Country",
+        month: "📅 Month",
+        nights: "🌙 Nights",
+        search: "Search"
       }
     }
   },
@@ -62,6 +88,19 @@ const resources = {
         numberOfTravelers: "Nombre de voyageurs",
         message: "Écrivez votre question ici *",
         submit: "Consultez maintenant!"
+      },
+      tourSearch: {
+        tours: "Tours",
+        flights: "✈ Vols",
+        insurance: "Assurances",
+        hotel: "Hôtel",
+        hotels: "Hôtels",
+        findTour: "Trouvez votre tour idéal",
+        region: "Région",
+        cityCountry: "📍 Ville, Pays",
+        month: "📅 Mois",
+        nights: "🌙 Nuits",
+        search: "Rechercher"
       }
     }
   }
