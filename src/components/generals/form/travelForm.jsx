@@ -4,7 +4,7 @@ import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import "./travelForm.css";
 
-const travelForm = () => {
+const TravelForm = () => {
     const [isOpen, setIsOpen] = useState(true);
     const { t } = useTranslation();
 
@@ -46,4 +46,4 @@ const travelForm = () => {
     );
 };
 
-export default travelForm;
+export default TravelForm;
