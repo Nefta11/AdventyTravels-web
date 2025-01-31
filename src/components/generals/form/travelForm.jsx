@@ -28,12 +28,13 @@ const travelForm = () => {
                         <input type="email" placeholder={t('travelForm.email')} required />
                         <PhoneInput
                             country={'mx'}
+                            maxLength={10}
                             placeholder={t('travelForm.phonePlaceholder')}
                         />
                     </div>
                     <div className="input-group">
                         <input type="date" placeholder={t('travelForm.arrivalDate')} max={today} />
-                        <input type="number" placeholder={t('travelForm.numberOfTravelers')} max="11" />
+                        <input type="number" placeholder={t('travelForm.numberOfTravelers')} />
                     </div>
                     <textarea placeholder={t('travelForm.message')} required></textarea>
                     <button type="submit" className="submit-button">

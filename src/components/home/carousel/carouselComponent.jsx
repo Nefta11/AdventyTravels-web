@@ -4,8 +4,9 @@ import "./carousel.css";
 import usaImage1 from "../../../assets/images/viaje1.jpg";
 import usaImage2 from "../../../assets/images/viaje2.jpeg";
 import usaImage3 from "../../../assets/images/viaje3.jpeg";
+import usaImage4 from "../../../assets/images/viaje4.png";
 
-const images = [usaImage1, usaImage2, usaImage3];
+const images = [usaImage1, usaImage2, usaImage3, usaImage4];
 
 const CarouselComponent = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
