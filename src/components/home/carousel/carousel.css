@@ -9,7 +9,7 @@
 .carousel {
     position: relative;
     width:auto;
-    height: 450px;
+    height: 330px;
     overflow: hidden;
     background-color: var(--color1);
 }
