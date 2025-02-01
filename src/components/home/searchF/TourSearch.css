@@ -34,11 +34,16 @@
     padding: 5px 10px;
     font-weight: bold;
     color: #888;
+    transition: color 0.3s, border-bottom 0.3s;
 }
 
 .tab.active {
     color: var(--color5);
     border-bottom: 3px solid var(--color5);
+}
+
+.tab:not(.active):hover {
+    color: var(--color4);
 }
 
 h2 {
