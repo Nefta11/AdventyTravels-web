@@ -23,7 +23,7 @@ const resources = {
       },
       tourSearch: {
         tours: "Tours",
-        flights: "✈ Vuelos",
+        flights: "Vuelos",
         insurance: "Seguros",
         hotel: "Hotel",
         hotels: "Hoteles",
@@ -57,7 +57,7 @@ const resources = {
       },
       tourSearch: {
         tours: "Tours",
-        flights: "✈ Flights",
+        flights: "Flights",
         insurance: "Insurance",
         hotel: "Hotel",
         hotels: "Hotels",
@@ -91,7 +91,7 @@ const resources = {
       },
       tourSearch: {
         tours: "Tours",
-        flights: "✈ Vols",
+        flights: "Vols",
         insurance: "Assurances",
         hotel: "Hôtel",
         hotels: "Hôtels",

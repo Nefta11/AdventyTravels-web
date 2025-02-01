@@ -1,5 +1,6 @@
 import "./TourSearch.css";
 import { useTranslation } from 'react-i18next';
+import { FaPlane, FaHotel, FaUmbrellaBeach, FaShieldAlt } from 'react-icons/fa';
 
 const TourSearch = () => {
     const { t } = useTranslation();
@@ -8,11 +9,11 @@ const TourSearch = () => {
         <div className="tour-search-container">
             <div className="tour-search-box">
                 <div className="tabs">
-                    <span className="tab active">{t('tourSearch.tours')}</span>
-                    <span className="tab">{t('tourSearch.flights')}</span>
-                    <span className="tab">{t('tourSearch.insurance')}</span>
-                    <span className="tab">{t('tourSearch.hotel')}</span>
-                    <span className="tab">{t('tourSearch.hotels')}</span>
+                    <span className="tab active"><FaUmbrellaBeach /> {t('tourSearch.tours')}</span>
+                    <span className="tab"><FaPlane /> {t('tourSearch.flights')}</span>
+                    <span className="tab"><FaShieldAlt /> {t('tourSearch.insurance')}</span>
+                    <span className="tab"><FaHotel /> {t('tourSearch.hotel')}</span>
+                    <span className="tab"><FaHotel /> {t('tourSearch.hotels')}</span>
                 </div>
                 <h2>{t('tourSearch.findTour')}</h2>
                 <div className="search-fields">
