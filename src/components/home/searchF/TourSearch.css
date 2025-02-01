@@ -1,3 +1,10 @@
+:root {
+    --color1: #f2f2f2;
+    --color2: #f29863;
+    --color3: #acd6cc;
+    --color4: #2d2c59;
+    --color5: #d9305d;
+}
 .tour-search-container {
     background: url('/ruta/de/la/imagen/buscador.png') no-repeat center center;
     background-size: cover;
@@ -30,8 +37,8 @@
 }
 
 .tab.active {
-    color: red;
-    border-bottom: 3px solid red;
+    color: var(--color5);
+    border-bottom: 3px solid var(--color5);
 }
 
 h2 {
@@ -54,7 +61,7 @@ select,
 }
 
 .search-button {
-    background-color: red;
+    background-color: var(--color5);
     color: white;
     border: none;
     cursor: pointer;
