@@ -28,11 +28,26 @@ const resources = {
         hotel: "Hotel",
         hotels: "Hotel + Vuelo",
         findTour: "Encuentra tu tour ideal",
+        findFlight: "Encuentra tu vuelo ideal",
+        findInsurance: "Encuentra tu seguro ideal",
+        findHotel: "Encuentra tu hotel ideal",
+        findHotels: "Encuentra tu hotel + vuelo ideal",
         region: "Región",
         cityCountry: "📍 Ciudad, País",
         month: "📅 Mes",
         nights: "🌙 Noches",
-        search: "Buscar"
+        search: "Buscar",
+        departureCity: "Ciudad de salida",
+        destinationCity: "Ciudad de destino",
+        departureDate: "Fecha de salida",
+        returnDate: "Fecha de regreso",
+        insuranceType: "Tipo de seguro",
+        coverageAmount: "Monto de cobertura",
+        startDate: "Fecha de inicio",
+        endDate: "Fecha de fin",
+        checkInDate: "Fecha de entrada",
+        checkOutDate: "Fecha de salida",
+        guests: "Huéspedes"
       }
     }
   },
@@ -62,11 +77,26 @@ const resources = {
         hotel: "Hotel",
         hotels: "Hotel + Flight",
         findTour: "Find your ideal tour",
+        findFlight: "Find your ideal flight",
+        findInsurance: "Find your ideal insurance",
+        findHotel: "Find your ideal hotel",
+        findHotels: "Find your ideal hotel + flight",
         region: "Region",
         cityCountry: "📍 City, Country",
         month: "📅 Month",
         nights: "🌙 Nights",
-        search: "Search"
+        search: "Search",
+        departureCity: "Departure City",
+        destinationCity: "Destination City",
+        departureDate: "Departure Date",
+        returnDate: "Return Date",
+        insuranceType: "Insurance Type",
+        coverageAmount: "Coverage Amount",
+        startDate: "Start Date",
+        endDate: "End Date",
+        checkInDate: "Check-in Date",
+        checkOutDate: "Check-out Date",
+        guests: "Guests"
       }
     }
   },
@@ -96,11 +126,26 @@ const resources = {
         hotel: "Hôtel",
         hotels: "Hôtel + Vol",
         findTour: "Trouvez votre tour idéal",
+        findFlight: "Trouvez votre vol idéal",
+        findInsurance: "Trouvez votre assurance idéale",
+        findHotel: "Trouvez votre hôtel idéal",
+        findHotels: "Trouvez votre hôtel + vol idéal",
         region: "Région",
         cityCountry: "📍 Ville, Pays",
         month: "📅 Mois",
         nights: "🌙 Nuits",
-        search: "Rechercher"
+        search: "Rechercher",
+        departureCity: "Ville de départ",
+        destinationCity: "Ville de destination",
+        departureDate: "Date de départ",
+        returnDate: "Date de retour",
+        insuranceType: "Type d'assurance",
+        coverageAmount: "Montant de la couverture",
+        startDate: "Date de début",
+        endDate: "Date de fin",
+        checkInDate: "Date d'arrivée",
+        checkOutDate: "Date de départ",
+        guests: "Invités"
       }
     }
   }
