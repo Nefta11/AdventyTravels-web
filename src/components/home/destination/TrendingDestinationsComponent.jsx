@@ -25,7 +25,7 @@ const TrendingDestinations = () => {
                         className="destination-card"
                         style={{ backgroundImage: `url(${destination.image})` }}
                     >
-                        <span>{destination.name} 🇲🇽</span>
+                        <span>{destination.name} <img src="/src/assets/images/mx.webp" alt="Mexico Flag" style={{ width: '20px', height: '15px' }} /></span>
                     </div>
                 ))}
             </div>
