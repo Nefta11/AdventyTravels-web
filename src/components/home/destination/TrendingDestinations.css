@@ -43,17 +43,23 @@
     border-radius: 5px;
 }
 
-.trending-grid .destination-card:first-child {
-    grid-column: span 2;
+.trending-grid .destination-card:nth-child(1),
+.trending-grid .destination-card:nth-child(2) {
+    grid-column: span 1;
     height: 220px;
+}
+
+.trending-grid .destination-card:nth-child(n+3) {
+    grid-column: span 1;
+    height: 180px;
 }
 
 @media (max-width: 800px) {
     .trending-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .trending-grid .destination-card:first-child {
+    .trending-grid .destination-card {
         grid-column: span 1;
         height: 180px;
     }

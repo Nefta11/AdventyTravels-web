@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import "./TrendingDestinations.css";
 
 const destinations = [
@@ -9,10 +10,12 @@ const destinations = [
 ];
 
 const TrendingDestinations = () => {
+    const { t } = useTranslation();
+
     return (
         <div className="trending-container">
-            <h2>Trending Destinations</h2>
-            <p>People searching in Mexico have also booked here</p>
+            <h2>{t('trendingDestinations')}</h2>
+            <p>{t('peopleSearching')}</p>
             <div className="trending-grid">
                 {destinations.map((destination, index) => (
                     <div

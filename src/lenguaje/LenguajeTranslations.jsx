@@ -48,7 +48,9 @@ const resources = {
         checkInDate: "Fecha de entrada",
         checkOutDate: "Fecha de salida",
         guests: "Huéspedes"
-      }
+      },
+      trendingDestinations: "Destinos de Tendencia",
+      peopleSearching: "Personas buscando en México también han reservado aquí"
     }
   },
   en: {
@@ -97,7 +99,9 @@ const resources = {
         checkInDate: "Check-in Date",
         checkOutDate: "Check-out Date",
         guests: "Guests"
-      }
+      },
+      trendingDestinations: "Trending Destinations",
+      peopleSearching: "People searching in Mexico have also booked here"
     }
   },
   fr: {
@@ -146,7 +150,9 @@ const resources = {
         checkInDate: "Date d'arrivée",
         checkOutDate: "Date de départ",
         guests: "Invités"
-      }
+      },
+      trendingDestinations: "Destinations Tendance",
+      peopleSearching: "Les personnes recherchant au Mexique ont également réservé ici"
     }
   }
 };
