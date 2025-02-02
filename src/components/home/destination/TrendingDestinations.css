@@ -1,0 +1,60 @@
+.trending-container {
+    text-align: left;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.trending-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.trending-container p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.trending-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.destination-card {
+    position: relative;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.destination-card span {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.trending-grid .destination-card:first-child {
+    grid-column: span 2;
+    height: 220px;
+}
+
+@media (max-width: 800px) {
+    .trending-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trending-grid .destination-card:first-child {
+        grid-column: span 1;
+        height: 180px;
+    }
+}

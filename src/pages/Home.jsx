@@ -5,6 +5,7 @@ import WhatsAppIcon from "../components/generals/whatsAppComponent/WhatsAppIcon"
 import TravelForm from "../components/generals/form/travelForm";
 import TourSearch from "../components/home/searchF/TourSearchComponent";
 import PromoBanner from "../components/home/banner/PromoBanner";
+import TrendingDestinations from "../components/home/destination/TrendingDestinationsComponent";
 
 export default function Home() {
   const [showForm, setShowForm] = useState(true);
@@ -19,7 +20,8 @@ export default function Home() {
       <NavComponent />
       <CarouselComponent />
       <TourSearch />
-      <PromoBanner /> 
+      <PromoBanner />
+      <TrendingDestinations />
       <WhatsAppIcon />
     </>
   );
