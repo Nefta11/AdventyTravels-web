@@ -24,7 +24,7 @@
 
 .destination-card {
     position: relative;
-    height: 180px;
+    height: 280px;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
@@ -59,6 +59,10 @@
 @media (max-width: 800px) {
     .trending-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .destination-card {
+        height: 180px
     }
 
     .destination-card span {
