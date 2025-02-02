@@ -19,7 +19,7 @@ export default function Home() {
       <NavComponent />
       <CarouselComponent />
       <TourSearch />
-      <PromoBanner /> {/* Se agregó aquí debajo de TourSearch */}
+      <PromoBanner /> 
       <WhatsAppIcon />
     </div>
   );
