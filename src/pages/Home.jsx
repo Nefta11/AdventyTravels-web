@@ -14,13 +14,13 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <>
       {showForm && <TravelForm />}
       <NavComponent />
       <CarouselComponent />
       <TourSearch />
       <PromoBanner /> 
       <WhatsAppIcon />
-    </div>
+    </>
   );
 }
