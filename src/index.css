@@ -16,7 +16,7 @@
 /* Estilo para el body */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f5f5f5;
+  background-color: var(--color1);
   /* Color de fondo claro */
   color: #333;
   /* Color de texto principal */
