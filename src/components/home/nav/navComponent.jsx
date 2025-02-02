@@ -16,7 +16,7 @@ const NavComponent = () => {
     };
 
     return (
-        <nav className="nav-container" style={{ backgroundColor: colors.color1 }}>
+        <nav className="nav-container fixed-nav" style={{ backgroundColor: colors.color1 }}>
             <div className="nav-content">
                 <div className="nav-header">
                     {/* Ícono del menú al inicio */}

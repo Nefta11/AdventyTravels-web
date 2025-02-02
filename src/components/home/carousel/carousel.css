@@ -9,6 +9,7 @@
 .carousel {
     position: relative;
     width:auto;
+    margin-top: 130px;
     height: 330px;
     overflow: hidden;
     background-color: var(--color1);
@@ -60,6 +61,7 @@
     .carousel {
         height: auto; /* Ajustar la altura para pantallas pequeñas */
         height: 220px;
+        margin-top: 80px;
         overflow: hidden;
     }
 

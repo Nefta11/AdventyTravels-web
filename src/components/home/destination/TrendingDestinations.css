@@ -1,0 +1,74 @@
+.trending-container {
+    text-align: left;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.trending-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.trending-container p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.trending-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.destination-card {
+    position: relative;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.destination-card span {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2px;
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+/* Ajuste para la última imagen sin pareja */
+.trending-grid .destination-card:last-child:nth-child(odd) {
+    grid-column: span 2;
+    /* Ocupa dos columnas */
+    justify-self: center;
+    /* Centra horizontalmente */
+    width: 100%;
+    /* Mantiene el ancho completo */
+    max-width: 600px;
+    /* Tamaño máximo para evitar que se expanda demasiado */
+}
+
+@media (max-width: 800px) {
+    .trending-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .destination-card span {
+        font-size: 16px;
+    }
+
+    /* Ajuste para la última imagen sin pareja */
+    .trending-grid .destination-card:last-child:nth-child(odd) {
+        justify-self: center;
+        width: auto;
+
+    }
+}
