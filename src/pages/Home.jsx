@@ -3,7 +3,7 @@ import NavComponent from '../components/home/nav/navComponent';
 import CarouselComponent from "../components/home/carousel/carouselComponent";
 import WhatsAppIcon from "../components/generals/whatsAppComponent/WhatsAppIcon";
 import TravelForm from "../components/generals/form/travelForm";
-import TourSearch from "../components/home/searchF/TourSearch";
+import TourSearch from "../components/home/searchF/TourSearchComponent";
 import PromoBanner from "../components/home/banner/PromoBanner";
 
 export default function Home() {

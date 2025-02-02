@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { FaPlane, FaHotel, FaUmbrellaBeach, FaShieldAlt, FaPlaneDeparture } from 'react-icons/fa';
 import { useState } from 'react';
 
-const TourSearch = () => {
+const TourSearchComponent = () => {
     const { t } = useTranslation();
     const [activeTab, setActiveTab] = useState('tours');
 
@@ -142,4 +142,4 @@ const TourSearch = () => {
     );
 };
 
-export default TourSearch;
+export default TourSearchComponent;
