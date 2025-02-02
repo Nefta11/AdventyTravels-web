@@ -7,6 +7,8 @@ const destinations = [
     { name: "Tulum", image: "/src/assets/images/destinations/tulum.jpg" },
     { name: "Mexico City", image: "/src/assets/images/destinations/cdmx.webp" },
     { name: "Mérida", image: "/src/assets/images/destinations/merida.jpg" },
+    { name: "San Miguel de Allende", image: "/src/assets/images/destinations/SanMiguel.webp" },
+    { name: "Monterrey", image: "/src/assets/images/destinations/MTY.webp" },
 ];
 
 const TrendingDestinations = () => {

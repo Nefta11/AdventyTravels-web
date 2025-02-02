@@ -43,15 +43,16 @@
     border-radius: 5px;
 }
 
-.trending-grid .destination-card:nth-child(1),
-.trending-grid .destination-card:nth-child(2) {
-    grid-column: span 1;
-    height: 220px;
-}
-
-.trending-grid .destination-card:nth-child(n+3) {
-    grid-column: span 1;
-    height: 180px;
+/* Ajuste para la última imagen sin pareja */
+.trending-grid .destination-card:last-child:nth-child(odd) {
+    grid-column: span 2;
+    /* Ocupa dos columnas */
+    justify-self: center;
+    /* Centra horizontalmente */
+    width: 100%;
+    /* Mantiene el ancho completo */
+    max-width: 600px;
+    /* Tamaño máximo para evitar que se expanda demasiado */
 }
 
 @media (max-width: 800px) {
@@ -59,8 +60,10 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .trending-grid .destination-card {
-        grid-column: span 1;
-        height: 180px;
+    /* Ajuste para la última imagen sin pareja */
+    .trending-grid .destination-card:last-child:nth-child(odd) {
+        justify-self: center;
+        width: auto;
+
     }
 }
