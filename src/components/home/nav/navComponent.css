@@ -41,24 +41,8 @@
     margin-left: 400px; /* Mover la lista hacia la derecha */
 }
 
-.nav-item {
-    margin: 0 16px; /* Separar un poco más los elementos */
-    margin-top: -70px;
-}
-
-.nav-item a {
-    text-decoration: none;
-    color: var(--color4);
-    font-size: 25px;
-    transition: color 0.3s ease;
-}
-
-.nav-item a:hover {
-    color: var(--color5);
-}
-
 .language-selector-desktop {
-    margin-left: 40px; /* Separar el selector de idioma de la esquina */
+    margin-left: 0px; /* Separar el selector de idioma de la esquina */
 }
 
 /* Estilos responsivos */
@@ -88,15 +72,6 @@
 
     .nav-list.open {
         display: flex;
-    }
-
-    .nav-item {
-        margin: 15px 0;
-        text-align: left; /* Centrar los elementos de la lista */
-    }
-
-    .nav-item a {
-        font-size: 20px;
     }
 }
 

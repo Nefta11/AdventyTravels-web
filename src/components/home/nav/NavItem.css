@@ -1,0 +1,87 @@
+.nav-item {
+    position: relative;
+    margin: 0 16px; /* Separar un poco más los elementos */
+    margin-top: -70px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: var(--color4);
+    font-size: 25px;
+    transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+    color: var(--color5);
+}
+
+.nav-icon {
+    margin-left: 10px;
+    margin-right: 8px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.nav-item:hover .dropdown-menu,
+.nav-item .dropdown-menu.open {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 4px 8px; /* Reducir el padding */
+}
+
+.dropdown-menu li a {
+    font-size: 16px; /* Reducir el tamaño de fuente */
+    color: var(--color4);
+}
+
+.dropdown-menu li a:hover {
+    color: var(--color5);
+}
+
+.submenu-title {
+    font-weight: bold;
+    padding: 4px 8px; /* Reducir el padding */
+    font-size: 15px; /* Reducir el tamaño de fuente */
+}
+
+.submenu-icon {
+    margin-left: 10px; /* Reducir el margen */
+    font-size: 16px; /* Reducir el tamaño de fuente */
+}
+
+/* Estilos responsivos */
+@media (max-width: 800px) {
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        flex-direction: row; /* Cambiar a fila para desplegar hacia enfrente */
+    }
+
+    .nav-item:hover .dropdown-menu {
+        display: flex;
+    }
+
+    .nav-item .dropdown-menu {
+        display: flex;
+        flex-direction: row; /* Cambiar a fila para desplegar hacia enfrente */
+    }
+
+    .nav-item {
+        margin: 15px 0;
+        text-align: left; /* Centrar los elementos de la lista */
+    }
+
+    .nav-item a {
+        font-size: 20px;
+    }
+}
