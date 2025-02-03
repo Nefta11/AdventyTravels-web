@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { useRef, useEffect, useState } from 'react';
 import "./TrendingDestinations.css";
+import BlurText from "../../reactbitsComponents/BlurText";
 
 const destinations = [
     { name: "Cancún", image: "/src/assets/images/destinations/cancun.jpg" },
@@ -36,7 +37,13 @@ const TrendingDestinations = () => {
 
     return (
         <div className="trending-container" ref={ref}>
-            <h2>{t('trendingDestinations')}</h2>
+            <BlurText
+                text={t('trendingDestinations')}
+                delay={100}
+                animateBy='words'
+                direction='top'
+                className="trending-container-title"
+            />
             <p>{t('peopleSearching')}</p>
             <div className={`trending-grid ${inView ? 'in-view' : ''}`}>
                 {destinations.map((destination, index) => (
