@@ -50,7 +50,7 @@ const resources = {
         guests: "👥 Huéspedes"
       },
       advantages: {
-        title: "Conoce las ventajas de viajar con Mundo Joven",
+        title: "Conoce las ventajas de viajar con Good Travel",
         items: [
           {
             title: "Compra fácil y rápido",
@@ -130,7 +130,7 @@ const resources = {
         guests: "👥 Guests"
       },
       advantages: {
-        title: "Discover the advantages of traveling with Mundo Joven",
+        title: "Discover the advantages of traveling with Good Travel",
         items: [
           {
             title: "Easy and fast purchase",
@@ -210,7 +210,7 @@ const resources = {
         guests: "👥 Invités"
       },
       advantages: {
-        title: "Découvrez les avantages de voyager avec Mundo Joven",
+        title: "Découvrez les avantages de voyager avec Good Travel",
         items: [
           {
             title: "Achat facile et rapide",
