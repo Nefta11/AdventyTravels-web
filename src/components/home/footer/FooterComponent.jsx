@@ -1,7 +1,9 @@
 import "./Footer.css";
 import { FaInstagram, FaFacebook, FaWhatsapp } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 const FooterComponent = () => {
+    const { t } = useTranslation();
     return (
         <footer className="footer">
             <div className="footer-container">
@@ -33,20 +35,20 @@ const FooterComponent = () => {
                 </div>
                 <div className="footer-links">
                     <ul>
-                        <li>¿Quiénes Somos?</li>
-                        <li>Políticas de Privacidad</li>
-                        <li>Franquicias</li>
-                        <li>Grupos</li>
-                        <li>Financiamiento</li>
+                        <li>{t('footer.aboutUs')}</li>
+                        <li>{t('footer.privacyPolicy')}</li>
+                        <li>{t('footer.franchises')}</li>
+                        <li>{t('footer.groups')}</li>
+                        <li>{t('footer.financing')}</li>
                     </ul>
                 </div>
                 <div className="footer-links">
                     <ul>
-                        <li>Bolsa de trabajo</li>
-                        <li>Líderes viajeros</li>
-                        <li>Visas</li>
-                        <li>Atención al cliente</li>
-                        <li>Blog</li>
+                        <li>{t('footer.jobBoard')}</li>
+                        <li>{t('footer.travelLeaders')}</li>
+                        <li>{t('footer.visas')}</li>
+                        <li>{t('footer.customerService')}</li>
+                        <li>{t('footer.blog')}</li>
                     </ul>
                 </div>
             </div>

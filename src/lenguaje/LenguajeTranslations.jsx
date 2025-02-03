@@ -50,7 +50,19 @@ const resources = {
         guests: "👥 Huéspedes"
       },
       trendingDestinations: "Destinos de Tendencia",
-      peopleSearching: "Personas buscando en México también han reservado aquí"
+      peopleSearching: "Personas buscando en México también han reservado aquí",
+      footer: {
+        aboutUs: "¿Quiénes Somos?",
+        privacyPolicy: "Políticas de Privacidad",
+        franchises: "Franquicias",
+        groups: "Grupos",
+        financing: "Financiamiento",
+        jobBoard: "Bolsa de trabajo",
+        travelLeaders: "Líderes viajeros",
+        visas: "Visas",
+        customerService: "Atención al cliente",
+        blog: "Blog"
+      }
     }
   },
   en: {
@@ -101,7 +113,19 @@ const resources = {
         guests: "👥 Guests"
       },
       trendingDestinations: "Trending Destinations",
-      peopleSearching: "People searching in Mexico have also booked here"
+      peopleSearching: "People searching in Mexico have also booked here",
+      footer: {
+        aboutUs: "About Us",
+        privacyPolicy: "Privacy Policy",
+        franchises: "Franchises",
+        groups: "Groups",
+        financing: "Financing",
+        jobBoard: "Job Board",
+        travelLeaders: "Travel Leaders",
+        visas: "Visas",
+        customerService: "Customer Service",
+        blog: "Blog"
+      }
     }
   },
   fr: {
@@ -152,7 +176,19 @@ const resources = {
         guests: "👥 Invités"
       },
       trendingDestinations: "Destinations Tendance",
-      peopleSearching: "Les personnes recherchant au Mexique ont également réservé ici"
+      peopleSearching: "Les personnes recherchant au Mexique ont également réservé ici",
+      footer: {
+        aboutUs: "Qui sommes-nous?",
+        privacyPolicy: "Politique de confidentialité",
+        franchises: "Franchises",
+        groups: "Groupes",
+        financing: "Financement",
+        jobBoard: "Offres d'emploi",
+        travelLeaders: "Leaders de voyage",
+        visas: "Visas",
+        customerService: "Service client",
+        blog: "Blog"
+      }
     }
   }
 };
