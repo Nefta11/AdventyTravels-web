@@ -7,6 +7,7 @@ import TourSearch from "../components/home/searchF/TourSearchComponent";
 import PromoBanner from "../components/home/banner/PromoBanner";
 import TrendingDestinations from "../components/home/destination/TrendingDestinationsComponent";
 import FooterComponent from "../components/home/footer/FooterComponent";
+import AdvantagesComponent from "../components/home/advantages/AdvantagesComponent";
 
 export default function Home() {
   const [showForm, setShowForm] = useState(true);
@@ -23,6 +24,7 @@ export default function Home() {
       <TourSearch />
       <PromoBanner />
       <TrendingDestinations />
+      <AdvantagesComponent />
       <FooterComponent />
       <WhatsAppIcon />
     </>
