@@ -1,4 +1,5 @@
 import "./Footer.css";
+import { FaInstagram, FaFacebook, FaWhatsapp } from 'react-icons/fa';
 
 const FooterComponent = () => {
     return (
@@ -8,9 +9,15 @@ const FooterComponent = () => {
                     <h2>GOOD TRAVEL® </h2>
                     <p>Agencia de viajes</p>
                     <div className="social-icons">
-                        <i className="fab fa-instagram"></i>
-                        <i className="fab fa-facebook"></i>
-                        <i className="fab fa-whatsapp"></i>
+                        <a href="https://www.instagram.com/adventytravels/" target="_blank" rel="noopener noreferrer">
+                            <FaInstagram />
+                        </a>
+                        <a href="https://www.facebook.com/goodtravelmx23?locale=es_LA" target="_blank" rel="noopener noreferrer">
+                            <FaFacebook />
+                        </a>
+                        <a href="whatsapp://send?phone=5217716075321" target="_blank" rel="noopener noreferrer">
+                            <FaWhatsapp />
+                        </a>
                     </div>
                 </div>
                 <div className="footer-contact">
