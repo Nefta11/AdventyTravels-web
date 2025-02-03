@@ -1,6 +1,7 @@
 import { FaRegClock, FaCreditCard, FaHandshake } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
 import "./advantagesComponent.css";
+import BlurText from "../../reactbitsComponents/BlurText";
 
 const AdvantagesComponent = () => {
     const { t } = useTranslation();
@@ -25,9 +26,13 @@ const AdvantagesComponent = () => {
 
     return (
         <section className="advantages-container">
-            <h2 className="advantages-title">
-                {t('advantages.title')}
-            </h2>
+            <BlurText
+                text={t('advantages.title')}
+                delay={100}
+                animateBy='words'
+                direction='top'
+                className="advantages-title"
+            />
             <div className="advantages-cards">
                 {advantages.map((advantage, index) => (
                     <div className="advantage-card" key={index}>

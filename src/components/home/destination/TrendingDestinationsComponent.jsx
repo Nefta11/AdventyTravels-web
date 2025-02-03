@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { useRef, useEffect, useState } from 'react';
 import "./TrendingDestinations.css";
 
 const destinations = [
@@ -13,12 +14,31 @@ const destinations = [
 
 const TrendingDestinations = () => {
     const { t } = useTranslation();
+    const [inView, setInView] = useState(false);
+    const ref = useRef();
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setInView(true);
+                } else {
+                    setInView(false);
+                }
+            },
+            { threshold: 0.1 }
+        );
+
+        observer.observe(ref.current);
+
+        return () => observer.disconnect();
+    }, []);
 
     return (
-        <div className="trending-container">
+        <div className="trending-container" ref={ref}>
             <h2>{t('trendingDestinations')}</h2>
             <p>{t('peopleSearching')}</p>
-            <div className="trending-grid">
+            <div className={`trending-grid ${inView ? 'in-view' : ''}`}>
                 {destinations.map((destination, index) => (
                     <div
                         key={index}
