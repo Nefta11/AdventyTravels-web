@@ -37,11 +37,9 @@ const BlurText = ({
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
-                if (entry.isIntersecting) {
+                if (entry.isIntersecting && !inView) {
                     setInView(true);
                     animatedCount.current = 0; 
-                } else {
-                    setInView(false);
                 }
             },
             { threshold, rootMargin }
@@ -50,7 +48,7 @@ const BlurText = ({
         observer.observe(ref.current);
 
         return () => observer.disconnect();
-    }, [threshold, rootMargin]);
+    }, [threshold, rootMargin, inView]);
 
     const springs = useSprings(
         elements.length,

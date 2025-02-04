@@ -51,7 +51,7 @@ DecryptedText.propTypes = {
  */
 export default function DecryptedText({
     text,
-    speed = 150, // Cambiado de 50 a 200 para hacerlo más lento
+    speed = 250, // Cambiado de 50 a 200 para hacerlo más lento
     maxIterations = 10,
     sequential = false,
     revealDirection = 'start',
@@ -198,11 +198,9 @@ export default function DecryptedText({
 
         const observerCallback = (entries) => {
             entries.forEach((entry) => {
-                if (entry.isIntersecting) {
+                if (entry.isIntersecting && !hasAnimated) {
                     setIsHovering(true); // trigger the decryption
-                } else {
-                    setIsHovering(false); // reset when out of view
-                    setHasAnimated(false); // allow re-animation
+                    setHasAnimated(true); // ensure it only animates once
                 }
             });
         };
