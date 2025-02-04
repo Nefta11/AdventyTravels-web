@@ -51,7 +51,7 @@ DecryptedText.propTypes = {
  */
 export default function DecryptedText({
     text,
-    speed = 100, // Cambiado de 50 a 200 para hacerlo más lento
+    speed = 150, // Cambiado de 50 a 200 para hacerlo más lento
     maxIterations = 10,
     sequential = false,
     revealDirection = 'start',

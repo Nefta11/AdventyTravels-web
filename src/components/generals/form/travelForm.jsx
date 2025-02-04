@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import "./travelForm.css";
+import BlurText from "../../reactbitsComponents/BlurText";
 
 const TravelForm = () => {
     const [isOpen, setIsOpen] = useState(true);
@@ -18,7 +19,13 @@ const TravelForm = () => {
                 <button className="close-button" onClick={() => setIsOpen(false)}>
                     &times;
                 </button>
-                <h2 className="title">{t('travelForm.title')}</h2>
+                <BlurText
+                    text={t('travelForm.title')}
+                    delay={100}
+                    animateBy='words'
+                    direction='top'
+                    className="title"
+                />
                 <form>
                     <div className="input-group">
                         <input type="text" placeholder={t('travelForm.firstName')} required />
