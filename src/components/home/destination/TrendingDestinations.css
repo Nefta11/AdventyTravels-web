@@ -26,7 +26,7 @@
 .trending-grid.in-view .destination-card {
     opacity: 0;
     transform: scale(0.9);
-    animation: fadeIn 0.5s forwards;
+    animation: fadeIn 1.5s forwards;
 }
 
 @keyframes fadeIn {
