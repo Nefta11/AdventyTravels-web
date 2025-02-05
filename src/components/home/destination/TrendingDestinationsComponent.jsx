@@ -4,6 +4,7 @@ import "./TrendingDestinations.css";
 import BlurText from "../../reactbitsComponents/BlurText";
 
 const destinations = [
+    { name: "Xicotepc de Juarez", image: "/src/assets/images/destinations/xicotepec.jpg" },
     { name: "Cancún", image: "/src/assets/images/destinations/cancun.jpg" },
     { name: "Playa del Carmen", image: "/src/assets/images/destinations/playaDelCarmen.jpg" },
     { name: "Tulum", image: "/src/assets/images/destinations/tulum.jpg" },
@@ -11,6 +12,9 @@ const destinations = [
     { name: "Mérida", image: "/src/assets/images/destinations/merida.jpg" },
     { name: "San Miguel de Allende", image: "/src/assets/images/destinations/SanMiguel.webp" },
     { name: "Monterrey", image: "/src/assets/images/destinations/MTY.webp" },
+
+    { name: "Guadalajara", image: "/src/assets/images/destinations/guadalajara.jpg" },
+
 ];
 
 const TrendingDestinations = () => {

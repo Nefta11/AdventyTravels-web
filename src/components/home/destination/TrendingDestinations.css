@@ -96,7 +96,7 @@
     /* Ajuste para la última imagen sin pareja */
     .trending-grid .destination-card:last-child:nth-child(odd) {
         justify-self: center;
-        width: auto;
+        width: 180px;
 
     }
 }
