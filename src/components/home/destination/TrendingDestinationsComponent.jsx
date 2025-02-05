@@ -23,8 +23,7 @@ const TrendingDestinations = () => {
             ([entry]) => {
                 if (entry.isIntersecting) {
                     setInView(true);
-                } else {
-                    setInView(false);
+                    observer.disconnect(); // Desconectar el observer después de la primera intersección
                 }
             },
             { threshold: 0.1 }
