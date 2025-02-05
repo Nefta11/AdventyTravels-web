@@ -1,67 +1,80 @@
 # GoodTravel-web
 
-Este proyecto es una aplicación web desarrollada con React y Vite. Proporciona una configuración mínima para que React funcione en Vite con HMR y algunas reglas de ESLint.
+Este proyecto es una aplicación web desarrollada con React y Vite. A continuación, se detalla la estructura del proyecto, las dependencias utilizadas y sus propósitos.
 
-## Estructura de Carpetas
+## Estructura del Proyecto
 
-La estructura de carpetas del proyecto es la siguiente:
-
-```
-/src
-  /assets
-  /components
-  /pages
-  /services
-  /styles
-  /utils
-/public
-```
-
-- **/src**: Contiene todo el código fuente de la aplicación.
-  - **/assets**: Archivos estáticos como imágenes y fuentes.
-  - **/components**: Componentes reutilizables de React.
-  - **/pages**: Componentes de página de React.
-  - **/services**: Archivos para interactuar con APIs y otras funcionalidades de backend.
-  - **/styles**: Archivos de estilos CSS o preprocesadores.
-  - **/utils**: Funciones utilitarias y helpers.
-- **/public**: Archivos públicos que no pasan por el proceso de construcción.
+- **src/**: Contiene el código fuente de la aplicación.
+  - **components/**: Componentes reutilizables de React.
+  - **pages/**: Páginas principales de la aplicación.
+  - **assets/**: Recursos estáticos como imágenes y estilos.
+  - **store/**: Configuración de Redux para el manejo del estado global.
+  - **i18n/**: Configuración de internacionalización con i18next.
+  - **App.jsx**: Componente principal de la aplicación.
+  - **main.jsx**: Punto de entrada de la aplicación.
 
 ## Dependencias
 
-El proyecto utiliza las siguientes dependencias:
+- **@emotion/react**: Librería para el manejo de estilos en componentes de React.
+- **@emotion/styled**: API para crear componentes estilizados con Emotion.
+- **@mui/icons-material**: Conjunto de íconos de Material-UI.
+- **@mui/material**: Componentes de interfaz de usuario de Material-UI.
+- **@react-spring/web**: Animaciones para componentes de React.
+- **@reduxjs/toolkit**: Herramientas para simplificar el uso de Redux.
+- **framer-motion**: Librería para animaciones en React.
+- **i18next**: Framework para internacionalización.
+- **react**: Biblioteca principal de React.
+- **react-dom**: Paquete para manipular el DOM con React.
+- **react-i18next**: Integración de i18next con React.
+- **react-icons**: Conjunto de íconos para React.
+- **react-phone-input-2**: Componente de entrada de teléfono para React.
+- **react-redux**: Enlace oficial de React para Redux.
+- **react-router-dom**: Enrutador para aplicaciones de React.
 
-- **react**: Biblioteca para construir interfaces de usuario.
-- **react-dom**: Proporciona métodos específicos del DOM que se utilizan en el nivel superior de una aplicación React.
-- **vite**: Un build tool que mejora la experiencia de desarrollo.
-- **@vitejs/plugin-react**: Plugin oficial de Vite para React que utiliza Babel para Fast Refresh.
-- **@vitejs/plugin-react-swc**: Plugin oficial de Vite para React que utiliza SWC para Fast Refresh.
-- **eslint**: Herramienta para identificar y reportar patrones encontrados en el código ECMAScript/JavaScript.
-- **eslint-plugin-react**: Plugin de ESLint para React.
+## Dependencias de Desarrollo
+
+- **@eslint/js**: Configuración de ESLint para JavaScript.
+- **@types/react**: Tipos de TypeScript para React.
+- **@types/react-dom**: Tipos de TypeScript para React DOM.
+- **@vitejs/plugin-react**: Plugin de Vite para React.
+- **eslint**: Herramienta para el análisis de código estático.
+- **eslint-plugin-react**: Reglas específicas de ESLint para React.
+- **eslint-plugin-react-hooks**: Reglas de ESLint para hooks de React.
+- **eslint-plugin-react-refresh**: Reglas de ESLint para React Refresh.
+- **globals**: Lista de variables globales.
+- **vite**: Herramienta de construcción rápida para proyectos web.
 
 ## Scripts Disponibles
 
-En el directorio del proyecto, puedes ejecutar:
+- `dev`: Inicia el servidor de desarrollo.
+- `build`: Construye la aplicación para producción.
+- `lint`: Ejecuta ESLint para analizar el código.
+- `preview`: Previsualiza la aplicación construida.
 
-### `npm run dev`
+## Instalación
 
-Inicia la aplicación en modo de desarrollo.\
-Abre [http://localhost:3000](http://localhost:3000) para verlo en tu navegador.
+Para instalar las dependencias del proyecto, ejecuta:
 
-### `npm run build`
+```bash
+npm install
+```
 
-Construye la aplicación para producción en la carpeta `dist`.\
-Empaqueta React en modo de producción y optimiza la construcción para el mejor rendimiento.
+## Ejecución
 
-### `npm run lint`
+Para iniciar el servidor de desarrollo, ejecuta:
 
-Ejecuta ESLint para encontrar y arreglar problemas en el código.
+```bash
+npm run dev
+```
 
-## Contribuir
+Para construir la aplicación para producción, ejecuta:
 
-Las solicitudes de pull son bienvenidas. Para cambios importantes, por favor abre un issue primero para discutir lo que te gustaría cambiar.
+```bash
+npm run build
+```
 
-Asegúrate de actualizar las pruebas según corresponda.
+Para previsualizar la aplicación construida, ejecuta:
 
-## Licencia
-
-[MIT](https://choosealicense.com/licenses/mit/)
+```bash
+npm run preview
+```
