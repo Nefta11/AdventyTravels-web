@@ -1,9 +1,9 @@
 :root {
-    --color1: #f2f2f2;
-    --color2: #f29863;
-    --color3: #acd6cc;
-    --color4: #2d2c59;
-    --color5: #d9305d;
+    --color1: #F4F4F4;
+    --color2: #7DC1BD;
+    --color3: #E49F30;
+    --color4: #24455D;
+
 }
 
 .nav-container {
@@ -31,18 +31,22 @@
 }
 
 .nav-menu-icon {
-    display: none; /* Ocultar el ícono del menú en pantallas grandes */
+    display: none;
+    /* Ocultar el ícono del menú en pantallas grandes */
 }
 
 .nav-list {
-    display: flex; /* Mostrar la lista en pantallas grandes */
+    display: flex;
+    /* Mostrar la lista en pantallas grandes */
     flex-direction: row;
     list-style: none;
-    margin-left: 400px; /* Mover la lista hacia la derecha */
+    margin-left: 400px;
+    /* Mover la lista hacia la derecha */
 }
 
 .language-selector-desktop {
-    margin-left: 0px; /* Separar el selector de idioma de la esquina */
+    margin-left: 0px;
+    /* Separar el selector de idioma de la esquina */
 }
 
 /* Estilos responsivos */
@@ -67,7 +71,8 @@
         display: none;
         flex-direction: column;
         width: 100%;
-        margin-left: 0; /* Restablecer el margen en pantallas pequeñas */
+        margin-left: 0;
+        /* Restablecer el margen en pantallas pequeñas */
     }
 
     .nav-list.open {

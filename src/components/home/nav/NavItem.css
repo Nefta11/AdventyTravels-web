@@ -1,6 +1,15 @@
+:root {
+    --color1: #F4F4F4;
+    --color2: #7DC1BD;
+    --color3: #E49F30;
+    --color4: #24455D;
+
+}
+
 .nav-item {
     position: relative;
-    margin: 0 16px; /* Separar un poco más los elementos */
+    margin: 0 16px;
+    /* Separar un poco más los elementos */
     margin-top: -70px;
 }
 
@@ -12,7 +21,7 @@
 }
 
 .nav-item a:hover {
-    color: var(--color5);
+    color: var(--color3);
 }
 
 .nav-icon {
@@ -36,27 +45,33 @@
 }
 
 .dropdown-menu li {
-    padding: 4px 8px; /* Reducir el padding */
+    padding: 4px 8px;
+    /* Reducir el padding */
 }
 
 .dropdown-menu li a {
-    font-size: 16px; /* Reducir el tamaño de fuente */
+    font-size: 16px;
+    /* Reducir el tamaño de fuente */
     color: var(--color4);
 }
 
 .dropdown-menu li a:hover {
-    color: var(--color5);
+    color: var(--color3);
 }
 
 .submenu-title {
     font-weight: bold;
-    padding: 4px 8px; /* Reducir el padding */
-    font-size: 15px; /* Reducir el tamaño de fuente */
+    padding: 4px 8px;
+    /* Reducir el padding */
+    font-size: 15px;
+    /* Reducir el tamaño de fuente */
 }
 
 .submenu-icon {
-    margin-left: 10px; /* Reducir el margen */
-    font-size: 16px; /* Reducir el tamaño de fuente */
+    margin-left: 10px;
+    /* Reducir el margen */
+    font-size: 16px;
+    /* Reducir el tamaño de fuente */
 }
 
 /* Estilos responsivos */
@@ -64,7 +79,8 @@
     .dropdown-menu {
         position: static;
         box-shadow: none;
-        flex-direction: row; /* Cambiar a fila para desplegar hacia enfrente */
+        flex-direction: row;
+        /* Cambiar a fila para desplegar hacia enfrente */
     }
 
     .nav-item:hover .dropdown-menu {
@@ -73,12 +89,14 @@
 
     .nav-item .dropdown-menu {
         display: flex;
-        flex-direction: row; /* Cambiar a fila para desplegar hacia enfrente */
+        flex-direction: row;
+        /* Cambiar a fila para desplegar hacia enfrente */
     }
 
     .nav-item {
         margin: 15px 0;
-        text-align: left; /* Centrar los elementos de la lista */
+        text-align: left;
+        /* Centrar los elementos de la lista */
     }
 
     .nav-item a {
