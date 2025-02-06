@@ -8,7 +8,7 @@ const FooterComponent = () => {
         <footer className="footer">
             <div className="footer-container">
                 <div className="footer-logo">
-                    <h2>GOOD TRAVEL® </h2>
+                    <h2>ADVENTY TRAVELS® </h2>
                     <p>Agencia de viajes</p>
                     <div className="social-icons">
                         <a href="https://www.instagram.com/adventytravels/" target="_blank" rel="noopener noreferrer">

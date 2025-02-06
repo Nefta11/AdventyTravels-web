@@ -50,11 +50,11 @@ const resources = {
         guests: "👥 Huéspedes"
       },
       advantages: {
-        title: "Conoce las ventajas de viajar con Good Travel",
+        title: "Conoce las ventajas de viajar con Adventy Travels",
         items: [
           {
             title: "Compra fácil y rápido",
-            description: "Reservar tus vacaciones y ofertas de viaje es muy sencillo. Lo puedes hacer desde nuestra página web, llamándonos al 7716075321 o visitando tu sucursal Good Travel más cercana."
+            description: "Reservar tus vacaciones y ofertas de viaje es muy sencillo. Lo puedes hacer desde nuestra página web, llamándonos al 7716075321 o visitando tu sucursal Adventy Travels más cercana."
           },
           {
             title: "Formas de pago",
@@ -130,11 +130,11 @@ const resources = {
         guests: "👥 Guests"
       },
       advantages: {
-        title: "Discover the advantages of traveling with Good Travel",
+        title: "Discover the advantages of traveling with Adventy Travels",
         items: [
           {
             title: "Easy and fast purchase",
-            description: "Booking your vacations and travel deals is very simple. You can do it from our website, by calling us at 7716075321 or by visiting your nearest Good Travel branch."
+            description: "Booking your vacations and travel deals is very simple. You can do it from our website, by calling us at 7716075321 or by visiting your nearest Adventy Travels branch."
           },
           {
             title: "Payment methods",
@@ -210,11 +210,11 @@ const resources = {
         guests: "👥 Invités"
       },
       advantages: {
-        title: "Découvrez les avantages de voyager avec Good Travel",
+        title: "Découvrez les avantages de voyager avec Adventy Travels",
         items: [
           {
             title: "Achat facile et rapide",
-            description: "Réserver vos vacances et offres de voyage est très simple. Vous pouvez le faire depuis notre site web, en nous appelant au 7716075321 ou en visitant votre succursale Good Travel la plus proche."
+            description: "Réserver vos vacances et offres de voyage est très simple. Vous pouvez le faire depuis notre site web, en nous appelant au 7716075321 ou en visitant votre succursale Adventy Travels la plus proche."
           },
           {
             title: "Moyens de paiement",
