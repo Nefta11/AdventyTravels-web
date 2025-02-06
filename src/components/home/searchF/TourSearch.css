@@ -1,12 +1,10 @@
 :root {
-    --color1: #f2f2f2;
-    --color2: #f29863;
-    --color3: #acd6cc;
-    --color4: #2d2c59;
-    --color5: #d9305d;
+    --color1: #F4F4F4;
+    --color2: #7DC1BD;
+    --color3: #E49F30;
+    --color4: #24455D;
 }
 .tour-search-container {
-    background: url('/ruta/de/la/imagen/buscador.png') no-repeat center center;
     background-size: cover;
     padding: 20px;
     display: flex;
@@ -37,8 +35,8 @@
 }
 
 .tab.active {
-    color: var(--color5);
-    border-bottom: 3px solid var(--color5);
+    color: var(--color3);
+    border-bottom: 3px solid var(--color3);
 }
 
 h2 {
@@ -61,7 +59,7 @@ select,
 }
 
 .search-button {
-    background-color: var(--color5);
+    background-color: var(--color3);
     color: white;
     border: none;
     cursor: pointer;
