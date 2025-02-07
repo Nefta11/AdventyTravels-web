@@ -76,7 +76,7 @@ const PerfectStay = () => {
                         <div className="hotel-info">
                             <h3>{hotel.name}</h3>
                             <p className="hotel-location">{hotel.location}</p>
-                            <p className="hotel-price">From <strong>{hotel.price}</strong></p>
+                            <p className="hotel-price"><strong>{hotel.price}</strong></p>
                         </div>
                     </div>
                 ))}
