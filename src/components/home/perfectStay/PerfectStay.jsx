@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
+import { useTranslation } from 'react-i18next';
 import "./PerfectStay.css";
 
 const hotels = [
@@ -31,6 +32,7 @@ const hotels = [
 
 
 const PerfectStay = () => {
+    const { t } = useTranslation();
     const [favorites, setFavorites] = useState(Array(hotels.length).fill(false));
     const [inView, setInView] = useState(false);
     const ref = useRef();
@@ -59,8 +61,8 @@ const PerfectStay = () => {
 
     return (
         <div className="perfect-stay-container" ref={ref}>
-            <h2>Looking for the Perfect Stay?</h2>
-            <p>Hotels booked after similar searches</p>
+            <h2>{t('perfectStay.title')}</h2>
+            <p>{t('perfectStay.subtitle')}</p>
             <div className={`hotel-grid ${inView ? 'in-view' : ''}`}>
                 {hotels.map((hotel, index) => (
                     <div key={index} className="hotel-card">

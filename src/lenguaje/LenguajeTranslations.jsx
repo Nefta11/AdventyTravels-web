@@ -49,6 +49,10 @@ const resources = {
         checkOutDate: "📅 Fecha de salida",
         guests: "👥 Huéspedes"
       },
+      perfectStay: {
+        title: "¿Buscas la estancia perfecta?",
+        subtitle: "Hoteles reservados después de búsquedas similares"
+      },
       advantages: {
         title: "Conoce las ventajas de viajar con Adventy Travels",
         items: [
@@ -129,6 +133,10 @@ const resources = {
         checkOutDate: "📅 Check-out Date",
         guests: "👥 Guests"
       },
+      perfectStay: {
+        title: "Looking for the Perfect Stay?",
+        subtitle: "Hotels booked after similar searches"
+      },
       advantages: {
         title: "Discover the advantages of traveling with Adventy Travels",
         items: [
@@ -208,6 +216,10 @@ const resources = {
         checkInDate: "📅 Date d'arrivée",
         checkOutDate: "📅 Date de départ",
         guests: "👥 Invités"
+      },
+      perfectStay: {
+        title: "Vous cherchez le séjour parfait?",
+        subtitle: "Hôtels réservés après des recherches similaires"
       },
       advantages: {
         title: "Découvrez les avantages de voyager avec Adventy Travels",
