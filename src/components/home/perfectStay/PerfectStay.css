@@ -110,6 +110,16 @@
     .hotel-grid {
         grid-template-columns: 1fr;
     }
+
+    .hotel-card {
+        width: 85%;
+        height: 240px;
+        margin: auto;
+    }
+
+    .hotel-image {
+        height: 120px;
+    }
 }
 
 .hotel-grid.in-view .hotel-card {
