@@ -9,6 +9,7 @@ import TrendingDestinations from "../components/home/destination/TrendingDestina
 import FooterComponent from "../components/home/footer/FooterComponent";
 import AdvantagesComponent from "../components/home/advantages/AdvantagesComponent";
 import PerfectStay from "../components/home/perfectStay/PerfectStay";
+import DiscoverStay from "../components/home/discoverStay/DiscoverStay";
 
 export default function Home() {
   const [showForm, setShowForm] = useState(true);
@@ -26,6 +27,7 @@ export default function Home() {
       <PromoBanner />
       <TrendingDestinations />
       <PerfectStay />
+      <DiscoverStay />
       <AdvantagesComponent />
       <FooterComponent />
       <WhatsAppIcon />
