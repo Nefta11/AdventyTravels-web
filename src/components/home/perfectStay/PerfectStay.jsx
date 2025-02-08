@@ -15,19 +15,19 @@ const hotels = [
         name: "Gran Hotel Ciudad de México",
         location: "Ciudad de México, México",
         price: "MXN 12,500",
-        image: "/src/assets/images/perfectStay/2.jpg",
+        image: "/src/assets/images/perfectStay/2.webp",
     },
     {
         name: "Hard Rock Hotel Cancún - Todo Incluido",
         location: "Cancún, México",
         price: "MXN 38,900",
-        image: "/src/assets/images/perfectStay/3.jpg",
+        image: "/src/assets/images/perfectStay/3.webp",
     },
     {
         name: "Rosewood San Miguel de Allende",
         location: "San Miguel de Allende, México",
         price: "MXN 29,850",
-        image: "/src/assets/images/perfectStay/4.jpg",
+        image: "/src/assets/images/perfectStay/4.webp",
     },
 ];
 
