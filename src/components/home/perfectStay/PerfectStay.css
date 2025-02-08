@@ -12,10 +12,11 @@
     margin: auto;
 }
 
-.perfect-stay-container h2 {
-    font-size: 24px;
+.perfect-stay-container-title{
+    font-size: 20px;
     font-weight: bold;
-    margin-bottom: 5px;
+    color: #1e1e1e;
+    margin-bottom: 10px;
 }
 
 .perfect-stay-container p {

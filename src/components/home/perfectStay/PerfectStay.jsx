@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
 import "./PerfectStay.css";
+import BlurText from "../../reactbitsComponents/BlurText";
 
 const hotels = [
     {
@@ -61,7 +62,13 @@ const PerfectStay = () => {
 
     return (
         <div className="perfect-stay-container" ref={ref}>
-            <h2>{t('perfectStay.title')}</h2>
+            <BlurText
+                text={t('perfectStay.title')}
+                delay={100}
+                animateBy='words'
+                direction='top'
+                className="perfect-stay-container-title"
+            />
             <p>{t('perfectStay.subtitle')}</p>
             <div className={`hotel-grid ${inView ? 'in-view' : ''}`}>
                 {hotels.map((hotel, index) => (
