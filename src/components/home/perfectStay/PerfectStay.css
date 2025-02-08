@@ -12,11 +12,11 @@
     margin: auto;
 }
 
-.perfect-stay-container-title{
-    font-size: 20px;
+.perfect-title {
+    font-size: 24px;
     font-weight: bold;
     color: #1e1e1e;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .perfect-stay-container p {

@@ -67,7 +67,7 @@ const PerfectStay = () => {
                 delay={100}
                 animateBy='words'
                 direction='top'
-                className="perfect-stay-container-title"
+                className="perfect-title"
             />
             <p>{t('perfectStay.subtitle')}</p>
             <div className={`hotel-grid ${inView ? 'in-view' : ''}`}>
