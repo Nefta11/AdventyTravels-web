@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import "./carousel.css";
 
-import usaImage1 from "../../../assets/images/viaje1.jpg";
-import usaImage2 from "../../../assets/images/viaje2.jpeg";
-import usaImage3 from "../../../assets/images/viaje3.jpeg";
-import usaImage4 from "../../../assets/images/viaje4.png";
+import usaImage1 from "../../../assets/images/viaje1.webp";
+import usaImage2 from "../../../assets/images/viaje2.webp";
+import usaImage3 from "../../../assets/images/viaje3.webp";
+import usaImage4 from "../../../assets/images/viaje4.webp";
 
 const images = [usaImage1, usaImage2, usaImage3, usaImage4];
 
