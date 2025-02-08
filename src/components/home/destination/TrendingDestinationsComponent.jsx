@@ -4,12 +4,12 @@ import "./TrendingDestinations.css";
 import BlurText from "../../reactbitsComponents/BlurText";
 
 const destinations = [
-    { name: "Cancún", image: "/src/assets/images/destinations/cancun.jpg" },
+    { name: "Cancún", image: "/src/assets/images/destinations/cancun.webp" },
     { name: "Mexico City", image: "/src/assets/images/destinations/cdmx.webp" },
-    { name: "Playa del Carmen", image: "/src/assets/images/destinations/playaDelCarmen.jpg" },
+    { name: "Playa del Carmen", image: "/src/assets/images/destinations/playaDelCarmen.webp" },
     { name: "San Miguel de Allende", image: "/src/assets/images/destinations/SanMiguel.webp" },
-    { name: "Mérida", image: "/src/assets/images/destinations/merida.jpg" },
-    { name: "Tulum", image: "/src/assets/images/destinations/tulum.jpg" },
+    { name: "Mérida", image: "/src/assets/images/destinations/merida.webp" },
+    { name: "Tulum", image: "/src/assets/images/destinations/tulum.webp" },
 ];
 
 const TrendingDestinations = () => {
