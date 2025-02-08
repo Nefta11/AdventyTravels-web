@@ -65,20 +65,22 @@
 @media (max-width: 800px) {
     .city-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 10px; /* Reducir el espacio entre columnas */
     }
 }
 
 @media (max-width: 500px) {
     .city-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px; /* Reducir el espacio entre columnas */
     }
 
     .city-card {
-        width: 85%;
+        width: 95%; /* Aumentar el ancho de las tarjetas */
         margin: auto;
     }
 
     .city-image {
-        height: 120px;
+        height: 130px; /* Ajustar la altura de las imágenes */
     }
 }
