@@ -1,6 +1,8 @@
 import './DiscoverStay.css';
+import { useTranslation } from 'react-i18next';
 
 const DiscoverStay = () => {
+    const { t } = useTranslation();
     const cities = [
         { name: 'Ciudad de México', country: 'México', image: '/src/assets/images/perfectStay/cdmxH.webp' },
         { name: 'Playa del Carmen', country: 'México', image: '/src/assets/images/perfectStay/playaDelcarmenH.webp' },
@@ -10,7 +12,7 @@ const DiscoverStay = () => {
 
     return (
         <div className="discover-stay-container">
-            <h2 className="discover-stay-title">Descubre hospedajes en los destinos más buscados</h2>
+            <h2 className="discover-stay-title">{t('discoverStay.title')}</h2>
             <div className="city-grid">
                 {cities.map((city, index) => (
                     <div key={index} className="city-card">

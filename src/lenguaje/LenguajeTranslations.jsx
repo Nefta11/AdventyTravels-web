@@ -53,6 +53,9 @@ const resources = {
         title: "¿Buscas la estancia perfecta?",
         subtitle: "Hoteles reservados después de búsquedas similares"
       },
+      discoverStay: {
+        title: "Descubre hospedajes en los destinos más buscados"
+      },
       advantages: {
         title: "Conoce las ventajas de viajar con Adventy Travels",
         items: [
@@ -137,6 +140,9 @@ const resources = {
         title: "Looking for the Perfect Stay?",
         subtitle: "Hotels booked after similar searches"
       },
+      discoverStay: {
+        title: "Discover stays in the most sought-after destinations"
+      },
       advantages: {
         title: "Discover the advantages of traveling with Adventy Travels",
         items: [
@@ -220,6 +226,9 @@ const resources = {
       perfectStay: {
         title: "Vous cherchez le séjour parfait?",
         subtitle: "Hôtels réservés après des recherches similaires"
+      },
+      discoverStay: {
+        title: "Découvrez des séjours dans les destinations les plus recherchées"
       },
       advantages: {
         title: "Découvrez les avantages de voyager avec Adventy Travels",
