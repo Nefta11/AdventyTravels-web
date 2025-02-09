@@ -14,7 +14,7 @@ const DiscoverStay = () => {
     return (
         <div className="discover-stay-container">
             <BlurText
-                text={t('advantages.title')}
+                text={t('discoverStay.title')}
                 delay={100}
                 animateBy='words'
                 direction='top'
