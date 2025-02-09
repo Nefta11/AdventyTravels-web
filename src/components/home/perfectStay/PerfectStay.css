@@ -109,12 +109,12 @@
 
 @media (max-width: 500px) {
     .hotel-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .hotel-card {
-        width: 85%;
-        height: 240px;
+        width: 90%;
+        height: 280px;
         margin: auto;
     }
 
