@@ -36,6 +36,22 @@
     margin-right: 8px;
 }
 
+.position-adjust {
+    position: absolute;
+    top: 35px;
+    right: 300px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 800px) {
+    .position-adjust {
+        position: static;
+        top: auto;
+        right: auto;
+        margin-right: 20px;
+    }
+}
+
 @media (min-width: 768px) {
     .language-selector-button {
         font-size: 20px;

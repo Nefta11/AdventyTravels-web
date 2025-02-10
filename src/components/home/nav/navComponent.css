@@ -78,6 +78,11 @@
     .nav-list.open {
         display: flex;
     }
+
+    .language-selector-mobile {
+        margin-right: 20px;
+        /* Ajustar el margen en pantallas pequeñas */
+    }
 }
 
 .fixed-nav {
