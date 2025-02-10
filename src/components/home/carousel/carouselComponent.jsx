@@ -1,12 +1,16 @@
 import { useState, useEffect } from "react";
 import "./carousel.css";
 
-import usaImage1 from "../../../assets/images/viaje1.webp";
-import usaImage2 from "../../../assets/images/viaje2.webp";
-import usaImage3 from "../../../assets/images/viaje3.webp";
-import usaImage4 from "../../../assets/images/viaje4.webp";
+import usaImage1 from "../../../assets/images/carousel/img1.webp";
+import usaImage2 from "../../../assets/images/carousel/img2.webp";
+import usaImage3 from "../../../assets/images/carousel/img3.webp";
+import usaImage4 from "../../../assets/images/carousel/img4.webp";
+import usaImage5 from "../../../assets/images/carousel/img5.webp";
+import usaImage6 from "../../../assets/images/carousel/img6.webp";
+import usaImage7 from "../../../assets/images/carousel/img7.webp";
 
-const images = [usaImage1, usaImage2, usaImage3, usaImage4];
+
+const images = [usaImage1, usaImage2, usaImage3, usaImage4, usaImage5, usaImage6, usaImage7];
 
 const CarouselComponent = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -22,7 +26,7 @@ const CarouselComponent = () => {
     };
 
     useEffect(() => {
-        const interval = setInterval(handleNext, 4000); // Cambiar imagen cada 4 segundos
+        const interval = setInterval(handleNext, 50000); 
         return () => clearInterval(interval);
     }, []);
 
