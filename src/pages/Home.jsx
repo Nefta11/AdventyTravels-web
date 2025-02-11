@@ -11,6 +11,7 @@ import AdvantagesComponent from "../components/home/advantages/AdvantagesCompone
 import PerfectStay from "../components/home/perfectStay/PerfectStay";
 import DiscoverStay from "../components/home/discoverStay/DiscoverStay";
 import HotelLogosGrid from "../components/home/banner/HotelLogosGrid";
+import SalesChannels from "../components/home/advantages/SalesChannels";
 
 export default function Home() {
   const [showForm, setShowForm] = useState(true);
@@ -31,6 +32,7 @@ export default function Home() {
       <DiscoverStay />
       <HotelLogosGrid />
       <AdvantagesComponent />
+      <SalesChannels />
       <FooterComponent />
       <WhatsAppIcon />
     </>
