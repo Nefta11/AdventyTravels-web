@@ -86,6 +86,9 @@ const resources = {
         visas: "Visas",
         customerService: "Atención al cliente",
         blog: "Blog"
+      },
+      salesChannels: {
+        title: "Otros canales de venta asistida:"
       }
     }
   },
@@ -173,6 +176,9 @@ const resources = {
         visas: "Visas",
         customerService: "Customer Service",
         blog: "Blog"
+      },
+      salesChannels: {
+        title: "Other assisted sales channels:"
       }
     }
   },
@@ -260,6 +266,9 @@ const resources = {
         visas: "Visas",
         customerService: "Service client",
         blog: "Blog"
+      },
+      salesChannels: {
+        title: "Autres canaux de vente assistée:"
       }
     }
   }
