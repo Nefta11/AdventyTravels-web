@@ -89,20 +89,46 @@
     margin: auto;
     margin-top: auto;
     /* Empuja el botón hacia abajo */
+    text-decoration: none; /* Eliminar subrayado */
 }
 
 .channel-button:hover {
     background-color: var(--color4);
 }
 
+.no-underline {
+    text-decoration: none; /* Clase para eliminar subrayado */
+}
+
 /* Responsividad */
 @media (max-width: 800px) {
     .channel-list {
-        flex-direction: column;
-        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .channel-card {
-        width: 90%;
+        width: 45%;
+        margin-bottom: 10px;
+    }
+
+    .channel-icon {
+        font-size: 30px; /* Reducir tamaño del icono */
+    }
+
+    .channel-card h3 {
+        font-size: 16px; /* Reducir tamaño del título */
+    }
+
+    .subtitle {
+        font-size: 12px; /* Reducir tamaño del subtítulo */
+    }
+
+    .channel-card p {
+        font-size: 12px; /* Reducir tamaño del texto */
+    }
+
+    .channel-button {
+        font-size: 10px; /* Reducir tamaño del texto del botón */
     }
 }

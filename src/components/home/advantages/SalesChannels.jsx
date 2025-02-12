@@ -15,13 +15,14 @@ const channels = [
         icon: <FaWhatsapp />,
         title: "WhatsApp",
         description: "Realiza tus consultas ¡Escríbenos!",
-        buttonText: "+56 9 5382 4715",
+        buttonText: "+52  771 607 5321",
+        link: "whatsapp://send?phone=5217716075321",
     },
     {
         icon: <FaPhone />,
         title: "Contact Center",
         description: "Llámanos y nuestros ejecutivos te orientarán en todo momento",
-        buttonText: "600 570 0035",
+        buttonText: "+52  771 607 5321",
     },
     {
         icon: <FaStore />,
@@ -49,9 +50,15 @@ const SalesChannels = () => {
                         <h3>{channel.title}</h3>
                         {channel.subtitle && <p className="subtitle">{channel.subtitle}</p>}
                         <p>{channel.description}</p>
-                        <button className="channel-button">
-                            <FaArrowRight /> {channel.buttonText}
-                        </button>
+                        {channel.link ? (
+                            <a href={channel.link} target="_blank" rel="noopener noreferrer" className="channel-button no-underline">
+                                <FaArrowRight /> {channel.buttonText}
+                            </a>
+                        ) : (
+                            <button className="channel-button no-underline">
+                                <FaArrowRight /> {channel.buttonText}
+                            </button>
+                        )}
                     </div>
                 ))}
             </div>
