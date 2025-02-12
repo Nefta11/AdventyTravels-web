@@ -88,8 +88,7 @@
     max-width: 180px;
     margin: auto;
     margin-top: auto;
-    /* Empuja el botón hacia abajo */
-    text-decoration: none; /* Eliminar subrayado */
+    text-decoration: none; 
 }
 
 .channel-button:hover {
@@ -97,7 +96,7 @@
 }
 
 .no-underline {
-    text-decoration: none; /* Clase para eliminar subrayado */
+    text-decoration: none; 
 }
 
 /* Responsividad */
@@ -113,22 +112,22 @@
     }
 
     .channel-icon {
-        font-size: 30px; /* Reducir tamaño del icono */
+        font-size: 30px; 
     }
 
     .channel-card h3 {
-        font-size: 16px; /* Reducir tamaño del título */
+        font-size: 16px;
     }
 
     .subtitle {
-        font-size: 12px; /* Reducir tamaño del subtítulo */
+        font-size: 12px; 
     }
 
     .channel-card p {
-        font-size: 12px; /* Reducir tamaño del texto */
+        font-size: 12px; 
     }
 
     .channel-button {
-        font-size: 10px; /* Reducir tamaño del texto del botón */
+        font-size: 10px; 
     }
 }
