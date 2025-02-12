@@ -1,22 +1,17 @@
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 import "./TravelOptions.css";
 
-const tabs = [
-    { name: "Seguros", content: ["Seguro de viaje Internacional", "Seguro de viaje España", "Seguro de viaje Europa", "Seguro de viaje Canadá", "Seguro de viaje Estados Unidos"] },
-    { name: "Hoteles", content: ["Hotel en Cancún", "Hotel en Madrid", "Hotel en París", "Hotel en Nueva York"] },
-    { name: "Tours Internacionales", content: ["Tour por Asia", "Tour por Europa", "Tour por Sudamérica"] },
-    { name: "Vuelos", content: ["Vuelos nacionales", "Vuelos internacionales", "Vuelos económicos"] },
-    { name: "Paquetes", content: ["Paquete todo incluido", "Paquete de aventura", "Paquete de lujo"] },
-];
-
 const TravelOptions = () => {
+    const { t } = useTranslation();
     const [activeTab, setActiveTab] = useState(0);
+    const tabs = t('travelOptions.tabs', { returnObjects: true });
 
     return (
         <div className="travel-options-container">
-            <h2 className="travel-options-title">Todo lo que buscas en un solo lugar</h2>
+            <h2 className="travel-options-title">{t('travelOptions.title')}</h2>
             <p className="travel-options-description">
-                Vuelos a todo el mundo, múltiples opciones de paquetes vuelo + hotel, la asistencia de viaje más completa y la mejor experiencia en tours lo encuentras en Mundo Joven. No importa el tipo de viajero que seas, tu edad o cuántos integrantes de tu familia vayan de vacaciones siempre tendremos la mejor atención para que tu aventura sea tal y como tú lo deseas.
+                {t('travelOptions.description')}
             </p>
 
             <div className="tabs">

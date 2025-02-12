@@ -1,8 +1,8 @@
 :root {
-    --primary-color: #1e1e1e;
-    --secondary-color: #666;
-    --highlight-color: #70aeea;
-    --background-color: #f4f4f4;
+    --color1: #F4F4F4;
+    --color2: #7DC1BD;
+    --color3: #E49F30;
+    --color4: #24455D;
 }
 
 .travel-options-container {
@@ -15,7 +15,7 @@
 .travel-options-title {
     font-size: 24px;
     font-weight: bold;
-    color: var(--primary-color);
+    color: var(--color1);
     margin-bottom: 10px;
 }
 
@@ -35,16 +35,16 @@
     background: none;
     border: none;
     font-size: 16px;
-    color: var(--primary-color);
+    color: var(--color4);
     padding: 10px 15px;
     cursor: pointer;
     transition: color 0.3s;
 }
 
 .tab.active {
-    color: var(--highlight-color);
+    color: var(--color3);
     font-weight: bold;
-    border-bottom: 3px solid var(--highlight-color);
+    border-bottom: 3px solid var(--color3);
     border-radius: 5px;
 }
 
@@ -59,7 +59,7 @@
 
 .tab-content li {
     font-size: 16px;
-    color: var(--primary-color);
+    color: black;
     margin: 8px 0;
 }
 
