@@ -51,11 +51,13 @@
 /* Responsividad */
 @media (max-width: 800px) {
     .bank-promotions {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .bank-card {
-        width: 90%;
+        width: 45%;
+        margin-bottom: 10px;
     }
 }
