@@ -12,14 +12,13 @@
 }
 
 .secure-text {
-    font-size: 22px;
+    font-size: 25px;
     color: black;
-    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .certifications-title {
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 20px;
     color: var(--color4);
     margin: 10px 0;
 }
@@ -54,20 +53,10 @@
 }
 
 .logo-item img {
-    width: 100px;
+    width: 125px;
     height: auto;
     filter: grayscale(50%);
     transition: filter 0.3s ease-in-out;
-}
-
-/* Logos más pequeños para Facebook y Google */
-.small-logo {
-    width: 75px;
-}
-
-/* Logos más grandes para otros */
-.large-logo {
-    width: 125px;
 }
 
 .logo-item img:hover {

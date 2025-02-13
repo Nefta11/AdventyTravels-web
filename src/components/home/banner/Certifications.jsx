@@ -14,7 +14,7 @@ const partners = [
 const Certifications = () => {
     return (
         <div className="certifications-container">
-            <p className="secure-text">AGENCIA SEGURA, COMPRA SEGURA</p>
+            <p className="secure-text">Afencia Segura, Compra Segura</p>
             <h2 className="certifications-title">Certificaciones, aliados y cuentas oficiales</h2>
             <div className="tabs">
                 <p>Compras Seguras</p>
