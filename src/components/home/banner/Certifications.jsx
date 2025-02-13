@@ -1,14 +1,14 @@
 import "./Certifications.css";
 
 const partners = [
-    { name: "Tripadvisor", logo: "/src/assets/images/logosCert/TripAdvisor.png", large: true },
-    { name: "Facebook", logo: "/src/assets/images/logosCert/facebook.png", small: true },
-    { name: "Google", logo: "/src/assets/images/logosCert/Google_Chrome_icon2.png", small: true },
-    { name: "Bodas.com.mx", logo: "/src/assets/images/logosCert/bodas-removebg.png", large: true },
-    { name: "Secure SSL", logo: "/src/assets/images/logosCert/secure.png", large: true },
-    { name: "Kueski Pay", logo: "/src/assets/images/logosCert/kueskipay.png", large: true },
-    { name: "Openpay", logo: "/src/assets/images/logosCert/openpay.webp", large: true },
-    { name: "Paynet", logo: "/src/assets/images/logosCert/images.png", large: true }
+    { name: "Tripadvisor", logo: "/src/assets/images/logosCert/TripAdvisor.webp" },
+    { name: "Bodas.com.mx", logo: "/src/assets/images/logosCert/bodas-removebg.webp" },
+    { name: "Secure SSL", logo: "/src/assets/images/logosCert/secure.webp" },
+    { name: "Kueski Pay", logo: "/src/assets/images/logosCert/kueskipay.webp" },
+    { name: "Openpay", logo: "/src/assets/images/logosCert/openpay.webp" },
+    { name: "Paynet", logo: "/src/assets/images/logosCert/images.webp" },
+    { name: "Facebook", logo: "/src/assets/images/logosCert/facebook.webp" },
+    { name: "Google", logo: "/src/assets/images/logosCert/chrome.webp" },
 ];
 
 const Certifications = () => {
