@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from 'react-i18next';
 import "./TravelOptions.css";
+import BlurText from "../../reactbitsComponents/BlurText";
 
 const TravelOptions = () => {
     const { t } = useTranslation();
@@ -9,10 +10,20 @@ const TravelOptions = () => {
 
     return (
         <div className="travel-options-container">
-            <h2 className="travel-options-title">{t('travelOptions.title')}</h2>
-            <p className="travel-options-description">
-                {t('travelOptions.description')}
-            </p>
+            <BlurText
+                text={t('travelOptions.title')}
+                delay={100}
+                animateBy='words'
+                direction='top'
+                className="travel-options-title"
+            />
+            <BlurText
+                text={t('travelOptions.description')}
+                delay={70}
+                animateBy='words'
+                direction='top'
+                className="travel-options-description"
+            />
 
             <div className="tabs">
                 {tabs.map((tab, index) => (
@@ -36,3 +47,6 @@ const TravelOptions = () => {
 };
 
 export default TravelOptions;
+
+
+
