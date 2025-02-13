@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import "./Certifications.css";
+import BlurText from '../../reactbitsComponents/BlurText';
 
 const partners = [
     { name: "Tripadvisor", logo: "/src/assets/images/logosCert/TripAdvisor.webp" },
@@ -17,7 +18,13 @@ const Certifications = () => {
 
     return (
         <div className="certifications-container">
-            <p className="secure-text">{t('certifications.secureText')}</p>
+            <BlurText
+                text={t('certifications.secureText')}
+                delay={100}
+                animateBy='words'
+                direction='top'
+                className="secure-text"
+            />
             <h2 className="certifications-title">{t('certifications.title')}</h2>
             <div className="tabs">
                 <p>{t('certifications.safePurchases')}</p>
