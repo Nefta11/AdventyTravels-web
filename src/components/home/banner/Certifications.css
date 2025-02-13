@@ -13,7 +13,7 @@
 
 .secure-text {
     font-size: 22px;
-    color:black;
+    color: black;
     text-transform: uppercase;
 }
 
@@ -68,6 +68,11 @@
     width: 75px;
 }
 
+/* Logos más grandes para otros */
+.large-logo {
+    width: 125px;
+}
+
 .logo-item img:hover {
     filter: grayscale(0%);
 }
@@ -89,5 +94,9 @@
 
     .small-logo {
         width: 60px;
+    }
+
+    .large-logo {
+        width: 100px;
     }
 }
