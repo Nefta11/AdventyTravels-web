@@ -1,7 +1,7 @@
 .floating-button {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 50px;
+    right: 50px;
     background-color: #25D366;
     color: white;
     border-radius: 50%;
@@ -18,5 +18,11 @@
 @media (max-width: 768px) {
     .whatsapp-icon {
         font-size: 2rem;
+    }
+
+    .floating-button {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
     }
 }
