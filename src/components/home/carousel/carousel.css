@@ -12,6 +12,7 @@
     height: 330px;
     overflow: hidden;
     background-color: var(--color1);
+    margin-bottom: 10px;
 }
 
 .carousel-slide {
