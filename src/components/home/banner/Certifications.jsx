@@ -17,8 +17,8 @@ const Certifications = () => {
             <p className="secure-text">AGENCIA SEGURA, COMPRA SEGURA</p>
             <h2 className="certifications-title">Certificaciones, aliados y cuentas oficiales</h2>
             <div className="tabs">
-                <span>Compras Seguras</span>
-                <span>Aliados</span>
+                <p>Compras Seguras</p>
+                <p>Aliados</p>
             </div>
             <div className="logos-container">
                 <div className="logos-row">

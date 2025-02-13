@@ -33,15 +33,12 @@
     margin-bottom: 20px;
 }
 
-.tabs span {
+.tabs p {
     cursor: pointer;
     padding: 5px 10px;
     border-bottom: 2px solid transparent;
 }
 
-.tabs .active {
-    border-bottom: none;
-}
 
 .logos-container {
     display: flex;
