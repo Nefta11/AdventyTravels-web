@@ -100,6 +100,30 @@ const resources = {
           { name: "Vuelos", content: ["Vuelos nacionales", "Vuelos internacionales", "Vuelos económicos"] },
           { name: "Paquetes", content: ["Paquete todo incluido", "Paquete de aventura", "Paquete de lujo"] },
         ]
+      },
+      bankPromotions: {
+        banks: [
+          {
+            name: "BBVA",
+            promotion: "Hasta 13 mensualidades sin intereses con",
+            cardType: "Tarjetas de Crédito BBVA",
+          },
+          {
+            name: "Citibanamex",
+            promotion: "Hasta 6 mensualidades sin intereses con",
+            cardType: "Tarjetas de Crédito Citibanamex",
+          },
+          {
+            name: "HSBC",
+            promotion: "Hasta 6 mensualidades sin intereses con",
+            cardType: "Tarjetas de Crédito HSBC",
+          },
+          {
+            name: "AMEX",
+            promotion: "Hasta 6 mensualidades sin intereses con",
+            cardType: "Tarjetas de Crédito AMEX",
+          },
+        ]
       }
     }
   },
@@ -201,6 +225,30 @@ const resources = {
           { name: "Flights", content: ["Domestic flights", "International flights", "Cheap flights"] },
           { name: "Packages", content: ["All-inclusive package", "Adventure package", "Luxury package"] },
         ]
+      },
+      bankPromotions: {
+        banks: [
+          {
+            name: "BBVA",
+            promotion: "Up to 13 interest-free installments with",
+            cardType: "BBVA Credit Cards",
+          },
+          {
+            name: "Citibanamex",
+            promotion: "Up to  6 interest-free installments with",
+            cardType: "Citibanamex Credit Cards",
+          },
+          {
+            name: "HSBC",
+            promotion: "Up to 6 interest-free installments with",
+            cardType: "HSBC Credit Cards",
+          },
+          {
+            name: "AMEX",
+            promotion: "Up to 6 interest-free installments with",
+            cardType: "AMEX Credit Cards",
+          },
+        ]
       }
     }
   },
@@ -301,6 +349,30 @@ const resources = {
           { name: "Tours internationaux", content: ["Tour d'Asie", "Tour d'Europe", "Tour d'Amérique du Sud"] },
           { name: "Vols", content: ["Vols domestiques", "Vols internationaux", "Vols pas chers"] },
           { name: "Forfaits", content: ["Forfait tout compris", "Forfait aventure", "Forfait de luxe"] },
+        ]
+      },
+      bankPromotions: {
+        banks: [
+          {
+            name: "BBVA",
+            promotion: "Jusqu'à 13 mensualités sans intérêt avec",
+            cardType: "Cartes de Crédit BBVA",
+          },
+          {
+            name: "Citibanamex",
+            promotion: "Jusqu'à 6 mensualités sans intérêt avec",
+            cardType: "Cartes de Crédit Citibanamex",
+          },
+          {
+            name: "HSBC",
+            promotion: "Jusqu'à 6 mensualités sans intérêt avec",
+            cardType: "Cartes de Crédit HSBC",
+          },
+          {
+            name: "AMEX",
+            promotion: "Jusqu'à 6 mensualités sans intérêt avec",
+            cardType: "Cartes de Crédit AMEX",
+          },
         ]
       }
     }
