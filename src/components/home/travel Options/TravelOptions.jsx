@@ -17,13 +17,9 @@ const TravelOptions = () => {
                 direction='top'
                 className="travel-options-title"
             />
-            <BlurText
-                text={t('travelOptions.description')}
-                delay={70}
-                animateBy='words'
-                direction='top'
-                className="travel-options-description"
-            />
+            <p className="travel-options-description">
+                {t('travelOptions.description')}
+            </p>
 
             <div className="tabs">
                 {tabs.map((tab, index) => (
@@ -47,6 +43,3 @@ const TravelOptions = () => {
 };
 
 export default TravelOptions;
-
-
-
