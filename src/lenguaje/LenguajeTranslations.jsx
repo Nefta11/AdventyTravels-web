@@ -124,6 +124,12 @@ const resources = {
             cardType: "Tarjetas de Crédito AMEX",
           },
         ]
+      },
+      certifications: {
+        secureText: "Agencia Segura, Compra Segura",
+        title: "Certificaciones, aliados y cuentas oficiales",
+        safePurchases: "Compras Seguras",
+        allies: "Aliados"
       }
     }
   },
@@ -249,6 +255,12 @@ const resources = {
             cardType: "AMEX Credit Cards",
           },
         ]
+      },
+      certifications: {
+        secureText: "Safe Agency, Safe Purchase",
+        title: "Certifications, allies and official accounts",
+        safePurchases: "Safe Purchases",
+        allies: "Allies"
       }
     }
   },
@@ -374,6 +386,12 @@ const resources = {
             cardType: "Cartes de Crédit AMEX",
           },
         ]
+      },
+      certifications: {
+        secureText: "Agence Sécurisée, Achat Sécurisé",
+        title: "Certifications, alliés et comptes officiels",
+        safePurchases: "Achats Sécurisés",
+        allies: "Alliés"
       }
     }
   }

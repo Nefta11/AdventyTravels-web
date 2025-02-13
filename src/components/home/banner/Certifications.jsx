@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import "./Certifications.css";
 
 const partners = [
@@ -12,13 +13,15 @@ const partners = [
 ];
 
 const Certifications = () => {
+    const { t } = useTranslation();
+
     return (
         <div className="certifications-container">
-            <p className="secure-text">Afencia Segura, Compra Segura</p>
-            <h2 className="certifications-title">Certificaciones, aliados y cuentas oficiales</h2>
+            <p className="secure-text">{t('certifications.secureText')}</p>
+            <h2 className="certifications-title">{t('certifications.title')}</h2>
             <div className="tabs">
-                <p>Compras Seguras</p>
-                <p>Aliados</p>
+                <p>{t('certifications.safePurchases')}</p>
+                <p>{t('certifications.allies')}</p>
             </div>
             <div className="logos-container">
                 <div className="logos-row">
