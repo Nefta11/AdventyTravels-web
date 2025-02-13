@@ -1,0 +1,93 @@
+:root{
+    
+}
+
+.certifications-container {
+    text-align: center;
+    background: #f4f4f4;
+    padding: 40px 20px;
+}
+
+.secure-text {
+    font-size: 12px;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.certifications-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #002b5c;
+    margin: 10px 0;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.tabs span {
+    cursor: pointer;
+    padding: 5px 10px;
+    border-bottom: 2px solid transparent;
+}
+
+/* Se quitó el color del texto "Compras Seguras" */
+.tabs .active {
+    border-bottom: none;
+}
+
+.logos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logos-row {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    /* Se redujo la separación */
+    margin-bottom: 10px;
+    /* Se redujo la separación entre filas */
+}
+
+.logo-item img {
+    width: 100px;
+    height: auto;
+    filter: grayscale(50%);
+    transition: filter 0.3s ease-in-out;
+}
+
+/* Logos más pequeños para Facebook y Google */
+.small-logo {
+    width: 75px;
+}
+
+.logo-item img:hover {
+    filter: grayscale(0%);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .certifications-title {
+        font-size: 18px;
+    }
+
+    .logos-row {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .logo-item img {
+        width: 80px;
+    }
+
+    .small-logo {
+        width: 60px;
+    }
+}
