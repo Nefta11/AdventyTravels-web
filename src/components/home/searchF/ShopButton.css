@@ -22,7 +22,7 @@
     .shop-button-container {
         height: 10vh;
         /* Reduce el espacio vertical */
-        margin-bottom: 30px;
+        margin-bottom:  0px;
     }
 
     .shop-button-img {
