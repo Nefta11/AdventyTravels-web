@@ -13,7 +13,7 @@ import DiscoverStay from "../components/home/discoverStay/DiscoverStay";
 import HotelLogosGrid from "../components/home/banner/HotelLogosGrid";
 import SalesChannels from "../components/home/advantages/SalesChannels";
 import BankPromotions from "../components/home/banner/BankPromotions";
-import TravelOptions from "../components/home/travel Options/TravelOptions";
+//import TravelOptions from "../components/home/travel Options/TravelOptions"; 
 import Certifications from "../components/home/banner/Certifications";
 
 export default function Home() {
@@ -38,7 +38,7 @@ export default function Home() {
       <BankPromotions />
       <SalesChannels />
       <Certifications />
-      <TravelOptions />
+    {/* <TravelOptions /> */}
       <FooterComponent />
       <WhatsAppIcon />
     </>
