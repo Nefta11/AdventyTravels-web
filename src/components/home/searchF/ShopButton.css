@@ -2,11 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30vh;
+    height: 20vh;
 }
 
 .shop-button-img {
-    max-width: 400px;
+    max-width: 385px;
     height: auto;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
