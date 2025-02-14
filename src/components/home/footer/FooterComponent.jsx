@@ -1,5 +1,5 @@
 import "./Footer.css";
-import { FaInstagram, FaFacebook, FaWhatsapp } from 'react-icons/fa';
+import { FaInstagram, FaFacebook, FaWhatsapp, FaTiktok } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 
 const FooterComponent = () => {
@@ -14,11 +14,14 @@ const FooterComponent = () => {
                         <a href="https://www.instagram.com/adventytravels/" target="_blank" rel="noopener noreferrer">
                             <FaInstagram />
                         </a>
-                        <a href="https://www.facebook.com/goodtravelmx23?locale=es_LA" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.facebook.com/adventytravels?locale=es_LA" target="_blank" rel="noopener noreferrer">
                             <FaFacebook />
                         </a>
                         <a href="whatsapp://send?phone=5217716075321" target="_blank" rel="noopener noreferrer">
                             <FaWhatsapp />
+                        </a>
+                        <a href="https://www.tiktok.com/@adventytravels?_t=ZM-8ttXPrhii7p&_r=1" target="_blank" rel="noopener noreferrer">
+                            <FaTiktok />
                         </a>
                     </div>
                 </div>
@@ -30,7 +33,7 @@ const FooterComponent = () => {
                         <i className="fas fa-envelope"></i> administracion@adventytravels.com
                     </p>
                     <p>
-                        <i className="fas fa-map-marker-alt"></i>📍Av.5 de Mayo Local 5PA, Xicotepec de Juárez, Pue.
+                        <i className="fas fa-map-marker-alt"></i>Av.5 de Mayo Local 5PA, Xicotepec de Juárez, Pue.
                     </p>
                 </div>
                 <div className="footer-links">
