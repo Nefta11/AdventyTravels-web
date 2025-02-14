@@ -9,7 +9,6 @@ import usaImage5 from "../../../assets/images/carousel/img5.webp";
 import usaImage6 from "../../../assets/images/carousel/img6.webp";
 import usaImage7 from "../../../assets/images/carousel/img7.webp";
 
-
 const images = [usaImage1, usaImage2, usaImage3, usaImage4, usaImage5, usaImage6, usaImage7];
 
 const CarouselComponent = () => {
@@ -26,7 +25,7 @@ const CarouselComponent = () => {
     };
 
     useEffect(() => {
-        const interval = setInterval(handleNext, 50000); 
+        const interval = setInterval(handleNext, 50000);
         return () => clearInterval(interval);
     }, []);
 
@@ -39,12 +38,8 @@ const CarouselComponent = () => {
                     className="carousel-image"
                 />
             </div>
-            <button className="carousel-arrow left" onClick={handlePrev}>
-                ‹
-            </button>
-            <button className="carousel-arrow right" onClick={handleNext}>
-                ›
-            </button>
+            <button className="carousel-arrow left" onClick={handlePrev}>‹</button>
+            <button className="carousel-arrow right" onClick={handleNext}>›</button>
         </div>
     );
 };
