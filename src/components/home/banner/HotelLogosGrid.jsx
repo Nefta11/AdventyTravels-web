@@ -7,6 +7,8 @@ const hotelLogos = [
     { src: "/src/assets/images/hotels/oasis.webp", alt: "Oasis Hotels & Resorts" },
     { src: "/src/assets/images/hotels/RIU_Hotels.webp", alt: "RIU Hotels & Resorts" },
     { src: "/src/assets/images/hotels/palaceResorts.webp", alt: "Palace Resorts" },
+    { src: "/src/assets/images/hotels/hilton.webp", alt: "Hilton Hotels & Resorts" },
+    { src: "/src/assets/images/hotels/ihg.webp", alt: "IHG Hotels & Resorts" },
 ];
 
 const HotelLogosGrid = () => {
