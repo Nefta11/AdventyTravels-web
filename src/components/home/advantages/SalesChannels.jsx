@@ -15,14 +15,14 @@ const channels = [
         icon: <FaWhatsapp style={{ color: 'var(--color4)' }} />,
         title: "WhatsApp",
         description: "Realiza tus consultas ¡Escríbenos!",
-        buttonText: "+52  771 607 5321",
+        buttonText: "Escríbenos",
         link: "whatsapp://send?phone=5217716075321",
     },
     {
         icon: <FaPhone style={{ color: 'var(--color4)' }} />,
         title: "Contact Center",
         description: "Llámanos y nuestros ejecutivos te orientarán en todo momento",
-        buttonText: "+52  771 607 5321",
+        buttonText: "Llámanos",
     },
     {
         icon: <FaStore style={{ color: 'var(--color4)' }} />,
