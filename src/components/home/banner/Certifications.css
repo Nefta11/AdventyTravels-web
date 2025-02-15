@@ -36,12 +36,6 @@
 .logo-item img {
     width: 200px;
     height: auto;
-    filter: grayscale(50%);
-    transition: filter 0.3s ease-in-out;
-}
-
-.logo-item img:hover {
-    filter: grayscale(0%);
 }
 
 /* Responsivo */
