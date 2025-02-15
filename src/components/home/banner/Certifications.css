@@ -39,7 +39,7 @@
 }
 
 .logo-item img {
-    width: 125px;
+    width: 200px;
     height: auto;
     filter: grayscale(50%);
     transition: filter 0.3s ease-in-out;
@@ -61,7 +61,7 @@
     }
 
     .logo-item img {
-        width: 80px;
+        width: 100px;
     }
 
     .small-logo {
