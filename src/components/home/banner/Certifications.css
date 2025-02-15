@@ -24,25 +24,11 @@
     margin: 10px 0;
 }
 
-.tabs {
-    display: none;
-    justify-content: center;
-    gap: 20px;
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-.tabs p {
-    cursor: pointer;
-    padding: 5px 10px;
-    border-bottom: 2px solid transparent;
-}
-
 .logos-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 30px;
 }
 
 .logos-row {
@@ -53,14 +39,14 @@
 }
 
 .logo-item img {
-    width: 150px; /* Hacer los logos un poco más grandes */
+    width: 125px;
     height: auto;
-    filter: none; /* Quitar el efecto de color gris */
-    transition: none; /* Quitar la transición */
+    filter: grayscale(50%);
+    transition: filter 0.3s ease-in-out;
 }
 
 .logo-item img:hover {
-    filter: none; /* Quitar el efecto de color gris */
+    filter: grayscale(0%);
 }
 
 /* Responsivo */
@@ -75,14 +61,14 @@
     }
 
     .logo-item img {
-        width: 100px; /* Ajustar el tamaño de los logos en pantallas pequeñas */
+        width: 80px;
     }
 
     .small-logo {
-        width: 80px; /* Ajustar el tamaño de los logos pequeños */
+        width: 60px;
     }
 
     .large-logo {
-        width: 120px; /* Ajustar el tamaño de los logos grandes */
+        width: 100px;
     }
 }

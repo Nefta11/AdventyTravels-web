@@ -20,25 +20,9 @@ const Certifications = () => {
                 direction='top'
                 className="secure-text"
             />
-            <h2 className="certifications-title">{t('certifications.title')}</h2>
-            <div className="tabs">
-                <p>{t('certifications.safePurchases')}</p>
-                <p>{t('certifications.allies')}</p>
-            </div>
             <div className="logos-container">
                 <div className="logos-row">
-                    {partners.slice(0, 5).map((partner, index) => (
-                        <div key={index} className="logo-item">
-                            <img
-                                src={partner.logo}
-                                alt={partner.name}
-                                className={partner.small ? "small-logo" : partner.large ? "large-logo" : ""}
-                            />
-                        </div>
-                    ))}
-                </div>
-                <div className="logos-row">
-                    {partners.slice(5).map((partner, index) => (
+                    {partners.map((partner, index) => (
                         <div key={index} className="logo-item">
                             <img
                                 src={partner.logo}
