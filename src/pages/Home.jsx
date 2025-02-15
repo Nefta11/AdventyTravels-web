@@ -30,7 +30,7 @@ export default function Home() {
       <NavComponent />
       <CarouselComponent />
       <ShopButton />
-     {/* <TourSearch />*/}
+      {/* <TourSearch />*/}
       <PromoBanner />
       <TrendingDestinations />
       <PerfectStay />
@@ -40,7 +40,7 @@ export default function Home() {
       <BankPromotions />
       <SalesChannels />
       <Certifications />
-    {/* <TravelOptions /> */}
+      {/* <TravelOptions /> */}
       <FooterComponent />
       <WhatsAppIcon />
     </>
