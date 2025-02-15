@@ -40,15 +40,12 @@ const FooterComponent = () => {
                     <ul>
                         <li>{t('footer.aboutUs')}</li>
                         <li>{t('footer.privacyPolicy')}</li>
-                        <li>{t('footer.franchises')}</li>
-                        <li>{t('footer.groups')}</li>
                         <li>{t('footer.financing')}</li>
                     </ul>
                 </div>
                 <div className="footer-links">
                     <ul>
                         <li>{t('footer.jobBoard')}</li>
-                        <li>{t('footer.travelLeaders')}</li>
                         <li>{t('footer.visas')}</li>
                         <li>{t('footer.customerService')}</li>
                         <li>{t('footer.blog')}</li>
