@@ -12,12 +12,12 @@
 }
 
 .whatsapp-icon {
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 @media (max-width: 768px) {
     .whatsapp-icon {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .floating-button {
