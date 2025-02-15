@@ -1,12 +1,12 @@
 import "./HotelLogosGrid.css";
 
 const hotelLogos = [
-    { src: "/src/assets/images/hotels/marriot.png", alt: "Marriott International" },
-    { src: "/src/assets/images/hotels/fietaAme.png", alt: "Fiesta Americana" },
-    { src: "/src/assets/images/hotels/kristal.png", alt: "Krystal Hotels & Resorts" },
-    { src: "/src/assets/images/hotels/oasis.png", alt: "Oasis Hotels & Resorts" },
-    { src: "/src/assets/images/hotels/RIU_Hotels_logo.svg.png", alt: "RIU Hotels & Resorts" },
-    { src: "/src/assets/images/hotels/palaceResorts.png", alt: "Palace Resorts" },
+    { src: "/src/assets/images/hotels/marriot.webp", alt: "Marriott International" },
+    { src: "/src/assets/images/hotels/fietaAme.webp", alt: "Fiesta Americana" },
+    { src: "/src/assets/images/hotels/kristal.webp", alt: "Krystal Hotels & Resorts" },
+    { src: "/src/assets/images/hotels/oasis.webp", alt: "Oasis Hotels & Resorts" },
+    { src: "/src/assets/images/hotels/RIU_Hotels.webp", alt: "RIU Hotels & Resorts" },
+    { src: "/src/assets/images/hotels/palaceResorts.webp", alt: "Palace Resorts" },
 ];
 
 const HotelLogosGrid = () => {
