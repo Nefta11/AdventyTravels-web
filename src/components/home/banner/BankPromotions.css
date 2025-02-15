@@ -45,10 +45,6 @@
     margin: 5px 0;
 }
 
-.card-type {
-    font-weight: bold;
-}
-
 /* Responsividad */
 @media (max-width: 800px) {
     .bank-promotions {

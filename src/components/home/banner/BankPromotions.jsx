@@ -13,7 +13,6 @@ const BankPromotions = () => {
                     <p>
                         <strong>{bank.promotion}</strong>
                     </p>
-                    <p className="card-type"><strong>{bank.cardType}</strong></p>
                 </div>
             ))}
         </div>
