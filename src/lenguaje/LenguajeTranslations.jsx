@@ -128,8 +128,6 @@ const resources = {
       certifications: {
         secureText: "Agencia Segura, Compra Segura",
         title: "Certificaciones, aliados y cuentas oficiales",
-        safePurchases: "Compras Seguras",
-        allies: "Aliados"
       }
     }
   },
@@ -259,8 +257,6 @@ const resources = {
       certifications: {
         secureText: "Safe Agency, Safe Purchase",
         title: "Certifications, allies and official accounts",
-        safePurchases: "Safe Purchases",
-        allies: "Allies"
       }
     }
   },
@@ -390,8 +386,6 @@ const resources = {
       certifications: {
         secureText: "Agence Sécurisée, Achat Sécurisé",
         title: "Certifications, alliés et comptes officiels",
-        safePurchases: "Achats Sécurisés",
-        allies: "Alliés"
       }
     }
   }
