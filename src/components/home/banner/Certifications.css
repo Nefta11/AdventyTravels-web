@@ -25,7 +25,7 @@
 }
 
 .tabs {
-    display: flex;
+    display: none;
     justify-content: center;
     gap: 20px;
     font-size: 16px;
@@ -38,7 +38,6 @@
     padding: 5px 10px;
     border-bottom: 2px solid transparent;
 }
-
 
 .logos-container {
     display: flex;
@@ -54,14 +53,14 @@
 }
 
 .logo-item img {
-    width: 125px;
+    width: 150px; /* Hacer los logos un poco más grandes */
     height: auto;
-    filter: grayscale(50%);
-    transition: filter 0.3s ease-in-out;
+    filter: none; /* Quitar el efecto de color gris */
+    transition: none; /* Quitar la transición */
 }
 
 .logo-item img:hover {
-    filter: grayscale(0%);
+    filter: none; /* Quitar el efecto de color gris */
 }
 
 /* Responsivo */
@@ -76,14 +75,14 @@
     }
 
     .logo-item img {
-        width: 80px;
+        width: 100px; /* Ajustar el tamaño de los logos en pantallas pequeñas */
     }
 
     .small-logo {
-        width: 60px;
+        width: 80px; /* Ajustar el tamaño de los logos pequeños */
     }
 
     .large-logo {
-        width: 100px;
+        width: 120px; /* Ajustar el tamaño de los logos grandes */
     }
 }

@@ -3,14 +3,9 @@ import "./Certifications.css";
 import BlurText from '../../reactbitsComponents/BlurText';
 
 const partners = [
-    { name: "Tripadvisor", logo: "/src/assets/images/logosCert/TripAdvisor.webp" },
-    { name: "Bodas.com.mx", logo: "/src/assets/images/logosCert/bodas-removebg.webp" },
-    { name: "Secure SSL", logo: "/src/assets/images/logosCert/secure.webp" },
-    { name: "Kueski Pay", logo: "/src/assets/images/logosCert/kueskipay.webp" },
-    { name: "Openpay", logo: "/src/assets/images/logosCert/openpay.webp" },
-    { name: "Paynet", logo: "/src/assets/images/logosCert/images.webp" },
-    { name: "Facebook", logo: "/src/assets/images/logosCert/facebook.webp" },
-    { name: "Google", logo: "/src/assets/images/logosCert/chrome.webp" },
+    { name: "SAT", logo: "/src/assets/images/logosCert/sat (2).png" },
+    { name: "IMPI", logo: "/src/assets/images/logosCert/impi.png" },
+    { name: "TURISMO", logo: "/src/assets/images/logosCert/turismo.png" },
 ];
 
 const Certifications = () => {
