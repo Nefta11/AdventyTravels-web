@@ -11,7 +11,8 @@ const resources = {
       gallery: "Galeria",
       contact: "Contacto",
       travelForm: {
-        title: "¿Le ayudamos a hacer realidad su viaje?",
+        title: "¿Buscando tus próximas vacaciones?",
+        description: "Llena el formulario y llévate hasta un 10% de descuento.",
         firstName: "Nombres",
         lastName: "Apellidos",
         email: "Email",
@@ -132,7 +133,8 @@ const resources = {
       gallery: "Gallery",
       contact: "Contact",
       travelForm: {
-        title: "Can we help you make your trip a reality?",
+        title: "Looking for your next vacation?",
+        description: "Fill out the form and get up to 10% discount.",
         firstName: "First Name",
         lastName: "Last Name",
         email: "Email",
@@ -253,7 +255,8 @@ const resources = {
       gallery: "Galerie",
       contact: "Contact",
       travelForm: {
-        title: "Pouvons-nous vous aider à réaliser votre voyage?",
+        title: "Vous cherchez vos prochaines vacances?",
+        description: "Remplissez le formulaire et obtenez jusqu'à 10% de réduction.",
         firstName: "Prénom",
         lastName: "Nom de famille",
         email: "Email",

@@ -19,13 +19,14 @@ const TravelForm = () => {
                     &times;
                 </button>
                 <h2 className="title">{t('travelForm.title')}</h2>
+                <p className="subtitle">{t('travelForm.description')}</p>
                 <form>
                     <div className="input-group">
                         <input type="text" placeholder={t('travelForm.firstName')} required />
                         <input type="text" placeholder={t('travelForm.lastName')} />
                     </div>
-                    <div className="input-group email-phone-group">
-                        <input type="email" className="email-input" placeholder={t('travelForm.email')} required />
+                    <div className="input-group">
+                        <input type="date" placeholder={t('travelForm.arrivalDate')} max={today} />
                         <PhoneInput
                             country={'mx'}
                             maxLength={10}
@@ -34,10 +35,9 @@ const TravelForm = () => {
                         />
                     </div>
                     <div className="input-group">
-                        <input type="date" placeholder={t('travelForm.arrivalDate')} max={today} />
                         <input type="number" placeholder={t('travelForm.numberOfTravelers')} />
+                        <textarea placeholder={t('travelForm.message')} required></textarea>
                     </div>
-                    <textarea placeholder={t('travelForm.message')} required></textarea>
                     <button type="submit" className="submit-button">
                         {t('travelForm.submit')}
                     </button>
