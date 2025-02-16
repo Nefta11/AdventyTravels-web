@@ -1,9 +1,21 @@
+import  { useState } from 'react';
 import "./Footer.css";
 import { FaInstagram, FaFacebook, FaWhatsapp, FaTiktok } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
+import TermsModal from './TermsModal';
 
 const FooterComponent = () => {
     const { t } = useTranslation();
+    const [showModal, setShowModal] = useState(false);
+
+    const handleModalOpen = () => {
+        setShowModal(true);
+    };
+
+    const handleModalClose = () => {
+        setShowModal(false);
+    };
+
     return (
         <footer className="footer">
             <div className="footer-container">
@@ -39,7 +51,7 @@ const FooterComponent = () => {
                 <div className="footer-links">
                     <ul>
                         <li>{t('footer.aboutUs')}</li>
-                        <li>{t('footer.privacyPolicy')}</li>
+                        <li onClick={handleModalOpen}>{t('footer.privacyPolicy')}</li>
                         <li>{t('footer.financing')}</li>
                     </ul>
                 </div>
@@ -52,6 +64,7 @@ const FooterComponent = () => {
                     </ul>
                 </div>
             </div>
+            <TermsModal show={showModal} handleClose={handleModalClose} />
         </footer>
     );
 };
