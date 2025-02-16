@@ -1,0 +1,68 @@
+:root {
+    --color1: #F4F4F4;
+    --color2: #7DC1BD;
+    --color3: #E49F30;
+    --color4: #24455D;
+}
+
+.bank-promotions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.bank-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bank-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.bank-logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.bank-card p {
+    font-size: 14px;
+    color: black;
+    margin: 5px 0;
+    text-align: center;
+}
+
+.divider {
+    width: 80%;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+/* Responsividad */
+@media (max-width: 800px) {
+    .bank-promotions {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .bank-card {
+        width: 45%;
+        margin-bottom: 10px;
+    }
+}

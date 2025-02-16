@@ -1,0 +1,32 @@
+.shop-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+
+.shop-button-img {
+    max-width: 385px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.shop-button-img:hover {
+    transform: scale(1.05);
+    /* Efecto de agrandado al pasar el cursor */
+}
+
+
+@media (max-width: 800px) {
+    .shop-button-container {
+        height: 10vh;
+        /* Reduce el espacio vertical */
+        margin-bottom:  0px;
+    }
+
+    .shop-button-img {
+        max-width: 250px;
+        /* Tamaño más pequeño */
+    }
+}

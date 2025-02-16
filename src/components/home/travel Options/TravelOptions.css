@@ -1,0 +1,79 @@
+:root {
+    --color1: #F4F4F4;
+    --color2: #7DC1BD;
+    --color3: #E49F30;
+    --color4: #24455D;
+}
+
+.travel-options-container {
+    text-align: left;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.travel-options-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.travel-options-description {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.tabs {
+    display: flex;
+    gap: 15px;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.tab {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: var(--color4);
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.tab.active {
+    color: var(--color3);
+    font-weight: bold;
+    border-bottom: 3px solid var(--color3);
+    border-radius: 5px;
+}
+
+.tab:hover {
+    color: var(--highlight-color);
+}
+
+.tab-content {
+    list-style: none;
+    padding: 0;
+}
+
+.tab-content li {
+    font-size: 16px;
+    color: black;
+    margin: 8px 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .tabs {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .tab {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+}

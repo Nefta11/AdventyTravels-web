@@ -42,7 +42,7 @@ const LanguageSelector = () => {
     };
 
     return (
-        <div className="language-selector-container">
+        <div className="language-selector-container position-adjust">
             <Button
                 variant="outlined"
                 onClick={handleOpen}

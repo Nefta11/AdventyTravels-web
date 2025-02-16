@@ -11,7 +11,8 @@ const resources = {
       gallery: "Galeria",
       contact: "Contacto",
       travelForm: {
-        title: "¿Le ayudamos a hacer realidad su viaje?",
+        title: "¿Buscando tus próximas vacaciones?",
+        description: "Llena el formulario y llévate hasta un 10% de descuento.",
         firstName: "Nombres",
         lastName: "Apellidos",
         email: "Email",
@@ -49,6 +50,13 @@ const resources = {
         checkOutDate: "📅 Fecha de salida",
         guests: "👥 Huéspedes"
       },
+      perfectStay: {
+        title: "¿Buscas la estancia perfecta?",
+        subtitle: "Hoteles reservados después de búsquedas similares"
+      },
+      discoverStay: {
+        title: "Descubre hospedajes en los destinos más buscados"
+      },
       advantages: {
         title: "Conoce las ventajas de viajar con Adventy Travels",
         items: [
@@ -71,14 +79,48 @@ const resources = {
       footer: {
         aboutUs: "¿Quiénes Somos?",
         privacyPolicy: "Políticas de Privacidad",
-        franchises: "Franquicias",
-        groups: "Grupos",
         financing: "Financiamiento",
         jobBoard: "Bolsa de trabajo",
-        travelLeaders: "Líderes viajeros",
         visas: "Visas",
         customerService: "Atención al cliente",
         blog: "Blog"
+      },
+      salesChannels: {
+        title: "Otros canales de venta asistida:"
+      },
+      travelOptions: {
+        title: "Todo lo que buscas en un solo lugar",
+        description: "Vuelos a todo el mundo, múltiples opciones de paquetes vuelo + hotel, la asistencia de viaje más completa y la mejor experiencia en tours lo encuentras en Adventy Travel. No importa el tipo de viajero que seas, tu edad o cuántos integrantes de tu familia vayan de vacaciones siempre tendremos la mejor atención para que tu aventura sea tal y como tú lo deseas.",
+        tabs: [
+          { name: "Seguros", content: ["Seguro de viaje Internacional", "Seguro de viaje España", "Seguro de viaje Europa", "Seguro de viaje Canadá", "Seguro de viaje Estados Unidos"] },
+          { name: "Hoteles", content: ["Hotel en Cancún", "Hotel en Madrid", "Hotel en París", "Hotel en Nueva York"] },
+          { name: "Tours Internacionales", content: ["Tour por Asia", "Tour por Europa", "Tour por Sudamérica"] },
+          { name: "Vuelos", content: ["Vuelos nacionales", "Vuelos internacionales", "Vuelos económicos"] },
+          { name: "Paquetes", content: ["Paquete todo incluido", "Paquete de aventura", "Paquete de lujo"] },
+        ]
+      },
+      bankPromotions: {
+        banks: [
+          {
+            name: "BBVA",
+            promotion: "Hasta 13 mensualidades sin intereses con",
+          },
+          {
+            name: "Citibanamex",
+            promotion: "Hasta 6 mensualidades sin intereses con",
+          },
+          {
+            name: "HSBC",
+            promotion: "Hasta 6 mensualidades sin intereses con",
+          },
+          {
+            name: "AMEX",
+            promotion: "Hasta 6 mensualidades sin intereses con",
+          },
+        ]
+      },
+      certifications: {
+        secureText: "Agencia Segura, Compra Segura",
       }
     }
   },
@@ -91,7 +133,8 @@ const resources = {
       gallery: "Gallery",
       contact: "Contact",
       travelForm: {
-        title: "Can we help you make your trip a reality?",
+        title: "Looking for your next vacation?",
+        description: "Fill out the form and get up to 10% discount.",
         firstName: "First Name",
         lastName: "Last Name",
         email: "Email",
@@ -129,6 +172,13 @@ const resources = {
         checkOutDate: "📅 Check-out Date",
         guests: "👥 Guests"
       },
+      perfectStay: {
+        title: "Looking for the Perfect Stay?",
+        subtitle: "Hotels booked after similar searches"
+      },
+      discoverStay: {
+        title: "Discover stays in the most sought-after destinations"
+      },
       advantages: {
         title: "Discover the advantages of traveling with Adventy Travels",
         items: [
@@ -151,14 +201,48 @@ const resources = {
       footer: {
         aboutUs: "About Us",
         privacyPolicy: "Privacy Policy",
-        franchises: "Franchises",
-        groups: "Groups",
         financing: "Financing",
         jobBoard: "Job Board",
-        travelLeaders: "Travel Leaders",
         visas: "Visas",
         customerService: "Customer Service",
         blog: "Blog"
+      },
+      salesChannels: {
+        title: "Other assisted sales channels:"
+      },
+      travelOptions: {
+        title: "Everything you are looking for in one place",
+        description: "Flights around the world, multiple flight + hotel package options, the most complete travel assistance and the best experience in tours can be found at Advendty Travel. No matter what type of traveler you are, your age or how many family members are going on vacation, we will always have the best attention so that your adventure is just as you want it.",
+        tabs: [
+          { name: "Insurance", content: ["International Travel Insurance", "Spain Travel Insurance", "Europe Travel Insurance", "Canada Travel Insurance", "United States Travel Insurance"] },
+          { name: "Hotels", content: ["Hotel in Cancun", "Hotel in Madrid", "Hotel in Paris", "Hotel in New York"] },
+          { name: "International Tours", content: ["Tour of Asia", "Tour of Europe", "Tour of South America"] },
+          { name: "Flights", content: ["Domestic flights", "International flights", "Cheap flights"] },
+          { name: "Packages", content: ["All-inclusive package", "Adventure package", "Luxury package"] },
+        ]
+      },
+      bankPromotions: {
+        banks: [
+          {
+            name: "BBVA",
+            promotion: "Up to 13 interest-free installments with",
+          },
+          {
+            name: "Citibanamex",
+            promotion: "Up to  6 interest-free installments with",
+          },
+          {
+            name: "HSBC",
+            promotion: "Up to 6 interest-free installments with",
+          },
+          {
+            name: "AMEX",
+            promotion: "Up to 6 interest-free installments with",
+          },
+        ]
+      },
+      certifications: {
+        secureText: "Safe Agency, Safe Purchase",
       }
     }
   },
@@ -171,7 +255,8 @@ const resources = {
       gallery: "Galerie",
       contact: "Contact",
       travelForm: {
-        title: "Pouvons-nous vous aider à réaliser votre voyage?",
+        title: "Vous cherchez vos prochaines vacances?",
+        description: "Remplissez le formulaire et obtenez jusqu'à 10% de réduction.",
         firstName: "Prénom",
         lastName: "Nom de famille",
         email: "Email",
@@ -209,6 +294,13 @@ const resources = {
         checkOutDate: "📅 Date de départ",
         guests: "👥 Invités"
       },
+      perfectStay: {
+        title: "Vous cherchez le séjour parfait?",
+        subtitle: "Hôtels réservés après des recherches similaires"
+      },
+      discoverStay: {
+        title: "Découvrez des séjours dans les destinations les plus recherchées"
+      },
       advantages: {
         title: "Découvrez les avantages de voyager avec Adventy Travels",
         items: [
@@ -231,14 +323,48 @@ const resources = {
       footer: {
         aboutUs: "Qui sommes-nous?",
         privacyPolicy: "Politique de confidentialité",
-        franchises: "Franchises",
-        groups: "Groupes",
         financing: "Financement",
         jobBoard: "Offres d'emploi",
-        travelLeaders: "Leaders de voyage",
         visas: "Visas",
         customerService: "Service client",
         blog: "Blog"
+      },
+      salesChannels: {
+        title: "Autres canaux de vente assistée:"
+      },
+      travelOptions: {
+        title: "Tout ce que vous cherchez en un seul endroit",
+        description: "Des vols autour du monde, de multiples options de forfaits vol + hôtel, l'assistance de voyage la plus complète et la meilleure expérience en tours se trouvent chez Adventy Travel. Peu importe le type de voyageur que vous êtes, votre âge ou le nombre de membres de votre famille qui partent en vacances, nous aurons toujours la meilleure attention pour que votre aventure soit exactement comme vous le souhaitez.",
+        tabs: [
+          { name: "Assurances", content: ["Assurance voyage internationale", "Assurance voyage Espagne", "Assurance voyage Europe", "Assurance voyage Canada", "Assurance voyage États-Unis"] },
+          { name: "Hôtels", content: ["Hôtel à Cancun", "Hôtel à Madrid", "Hôtel à Paris", "Hôtel à New York"] },
+          { name: "Tours internationaux", content: ["Tour d'Asie", "Tour d'Europe", "Tour d'Amérique du Sud"] },
+          { name: "Vols", content: ["Vols domestiques", "Vols internationaux", "Vols pas chers"] },
+          { name: "Forfaits", content: ["Forfait tout compris", "Forfait aventure", "Forfait de luxe"] },
+        ]
+      },
+      bankPromotions: {
+        banks: [
+          {
+            name: "BBVA",
+            promotion: "Jusqu'à 13 mensualités sans intérêt avec",
+          },
+          {
+            name: "Citibanamex",
+            promotion: "Jusqu'à 6 mensualités sans intérêt avec",
+          },
+          {
+            name: "HSBC",
+            promotion: "Jusqu'à 6 mensualités sans intérêt avec",
+          },
+          {
+            name: "AMEX",
+            promotion: "Jusqu'à 6 mensualités sans intérêt avec",
+          },
+        ]
+      },
+      certifications: {
+        secureText: "Agence Sécurisée, Achat Sécurisé",
       }
     }
   }

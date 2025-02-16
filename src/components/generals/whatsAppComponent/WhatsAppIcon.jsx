@@ -9,7 +9,7 @@ const WhatsAppIcon = () => {
             rel="noopener noreferrer"
             className="floating-button" // Clases CSS
         >
-            <FaWhatsapp className="whatsapp-icon" />
+            <FaWhatsapp className="whatsapp-icon" loading="lazy" />
         </a>
     );
 };

@@ -36,7 +36,7 @@ const AdvantagesComponent = () => {
             <div className="advantages-cards">
                 {advantages.map((advantage, index) => (
                     <div className="advantage-card" key={index}>
-                        <advantage.icon className="advantage-icon" />
+                        <advantage.icon className="advantage-icon" loading="lazy" />
                         <h3 className="advantage-title">
                             <BlurText
                                 text={advantage.title}
