@@ -3,7 +3,6 @@
     --color2: #7DC1BD;
     --color3: #E49F30;
     --color4: #24455D;
-
 }
 
 .modal-overlay {
@@ -17,6 +16,7 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    overflow: hidden;
 }
 
 .modal-content {
@@ -48,7 +48,7 @@
 
 .modal-content h4 {
     font-size: 18px;
-    color:  var(--color4);
+    color: var(--color4);
     margin-top: 15px;
 }
 
@@ -69,15 +69,16 @@
     margin: 5px 0;
 }
 
-.modal-content .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+.close-button {
+    position: sticky;
+    top: 0px;
+    right: 100px;
     background: none;
     border: none;
-    font-size: 24px;
+    font-size: 32px;
     cursor: pointer;
-    color: #333;
+    color: var(--color4);
+    z-index: 1001;
 }
 
 .modal-content .accept-button {
@@ -94,4 +95,32 @@
 
 .modal-content .accept-button:hover {
     background: var(--color4);
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .modal-content h2 {
+        font-size: 20px;
+    }
+
+    .modal-content h3 {
+        font-size: 18px;
+    }
+
+    .modal-content h4 {
+        font-size: 16px;
+    }
+
+    .modal-content p,
+    .modal-content ul li {
+        font-size: 12px;
+    }
+
+    .modal-content .accept-button {
+        padding: 8px 16px;
+    }
 }
