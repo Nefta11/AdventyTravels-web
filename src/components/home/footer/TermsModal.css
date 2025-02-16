@@ -21,7 +21,7 @@
 
 .modal-content {
     background: var(--color1);
-    padding: 22px;
+    padding: 28px;
     border-radius: 8px;
     max-width: 600px;
     width: 90%;
@@ -100,7 +100,7 @@
 @media (max-width: 768px) {
     .modal-content {
         max-width: 90%;
-        padding: 15px;
+        padding: 25px;
     }
 
     .modal-content h2 {
