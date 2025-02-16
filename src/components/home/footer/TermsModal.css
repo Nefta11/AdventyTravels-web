@@ -70,9 +70,9 @@
 }
 
 .close-button {
-    position: sticky;
+    position: absolute;
     top: 0px;
-    right: 100px;
+    right: 5px;
     background: none;
     border: none;
     font-size: 32px;
