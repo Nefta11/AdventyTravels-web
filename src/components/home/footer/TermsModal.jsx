@@ -10,6 +10,7 @@ const TermsModal = ({ show, handleClose }) => {
     return (
         <div className="modal-overlay">
             <div className="modal-content">
+                <button className="close-button" onClick={handleClose}>×</button>
                 <h2>{t('termsAndConditions.title')}</h2>
                 <p>{t('termsAndConditions.lastUpdate')}</p>
                 <p>{t('termsAndConditions.intro')}</p>
@@ -105,7 +106,7 @@ const TermsModal = ({ show, handleClose }) => {
                     ))}
                 </ul>
                 <p>{t('termsAndConditions.sections.contact.note')}</p>
-                <button onClick={handleClose}>Cerrar</button>
+                <button className="accept-button" onClick={handleClose}>He leído y acepto</button>
             </div>
         </div>
     );
