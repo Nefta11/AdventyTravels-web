@@ -14,10 +14,12 @@
 
 /* Estilo para el body */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  
   background-color: var(--color1);
   /* Color de fondo claro */
-  color: #333;
+  color: black;
   /* Color de texto principal */
   margin: 0;
   padding: 0;
