@@ -5,11 +5,21 @@ const BankPromotions = () => {
     const { t } = useTranslation();
     const banks = t('bankPromotions.banks', { returnObjects: true });
 
+    const getBankImageUrl = (bankName) => {
+        const urls = {
+            'AMEX': 'https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/bank/AMEX.webp',
+            'CITIBANAMEX': 'https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/bank/Citibanamex.webp',
+            'BBVA': 'https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/bank/bbva.webp',
+            'HSBC': 'https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/bank/hsbc.webp'
+        };
+        return urls[bankName.toUpperCase()] || '';
+    };
+
     return (
         <div className="bank-promotions">
             {banks.map((bank, index) => (
                 <div key={index} className="bank-card">
-                    <img src={`../../../../public/images/bank/${bank.name.toLowerCase()}.webp`} alt={bank.name} className="bank-logo" />
+                    <img src={getBankImageUrl(bank.name)} alt={bank.name} className="bank-logo" />
                     <hr className="divider" />
                     <p>
                         <strong>{bank.promotion}</strong>
