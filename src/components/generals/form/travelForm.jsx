@@ -8,8 +8,6 @@ const TravelForm = () => {
     const [isOpen, setIsOpen] = useState(true);
     const { t } = useTranslation();
 
-    const today = new Date().toISOString().split('T')[0];
-
     if (!isOpen) return null;
 
     return (
@@ -26,7 +24,7 @@ const TravelForm = () => {
                         <input type="text" placeholder={t('travelForm.lastName')} />
                     </div>
                     <div className="input-group">
-                        <input type="date" placeholder={t('travelForm.arrivalDate')} max={today} />
+                        <input type="date" placeholder={t('travelForm.arrivalDate')} />
                         <PhoneInput
                             country={'mx'}
                             maxLength={10}
