@@ -1,5 +1,5 @@
 import "./PromoBanner.css";
-import bannerImage from "../../../assets/images/banner.webp"; 
+import bannerImage from "../../../../public/images/banner.webp"; 
 
 const PromoBanner = () => {
     return (

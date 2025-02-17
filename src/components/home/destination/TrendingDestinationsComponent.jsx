@@ -4,12 +4,12 @@ import "./TrendingDestinations.css";
 import BlurText from "../../reactbitsComponents/BlurText";
 
 const destinations = [
-    { name: "Cancún", image: "/src/assets/images/destinations/cancun.webp" },
-    { name: "Mexico City", image: "/src/assets/images/destinations/cdmx.webp" },
-    { name: "Playa del Carmen", image: "/src/assets/images/destinations/playaDelCarmen.webp" },
-    { name: "San Miguel de Allende", image: "/src/assets/images/destinations/SanMiguel.webp" },
-    { name: "Mérida", image: "/src/assets/images/destinations/merida.webp" },
-    { name: "Tulum", image: "/src/assets/images/destinations/tulum.webp" },
+    { name: "Cancún", image: "../../../../public/images/destinations/cancun.webp" },
+    { name: "Mexico City", image: "../../../../public/images/destinations/cdmx.webp" },
+    { name: "Playa del Carmen", image: "../../../../public/images/destinations/playaDelCarmen.webp" },
+    { name: "San Miguel de Allende", image: "../../../../public/images/destinations/SanMiguel.webp" },
+    { name: "Mérida", image: "../../../../public/images/destinations/merida.webp" },
+    { name: "Tulum", image: "../../../../public/images/destinations/tulum.webp" },
 ];
 
 const TrendingDestinations = () => {
@@ -51,7 +51,7 @@ const TrendingDestinations = () => {
                         style={{ backgroundImage: `url(${destination.image})` }}
                     >
                         <span className="destination-name">
-                            {destination.name} <img src="/src/assets/images/mx.webp" alt="Mexico Flag" style={{ width: '20px', height: '15px' }} />
+                            {destination.name} <img src="../../../../public/images/mx.webp" alt="Mexico Flag" style={{ width: '20px', height: '15px' }} />
                         </span>
                     </div>
                 ))}

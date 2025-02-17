@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import "./carousel.css";
 
-import usaImage1 from "../../../assets/images/carousel/img1.webp";
-import usaImage2 from "../../../assets/images/carousel/img2.webp";
-import usaImage3 from "../../../assets/images/carousel/img3.webp";
-import usaImage4 from "../../../assets/images/carousel/img4.webp";
-import usaImage5 from "../../../assets/images/carousel/img5.webp";
-import usaImage6 from "../../../assets/images/carousel/img6.webp";
-import usaImage7 from "../../../assets/images/carousel/img7.webp";
+import usaImage1 from "../../../../public/images/carousel/img1.webp";
+import usaImage2 from "../../../../public/images/carousel/img2.webp";
+import usaImage3 from "../../../../public/images/carousel/img3.webp";
+import usaImage4 from "../../../../public/images/carousel/img4.webp";
+import usaImage5 from "../../../../public/images/carousel/img5.webp";
+import usaImage6 from "../../../../public/images/carousel/img6.webp";
+import usaImage7 from "../../../../public/images/carousel/img7.webp";
 
 const images = [usaImage1, usaImage2, usaImage3, usaImage4, usaImage5, usaImage6, usaImage7];
 

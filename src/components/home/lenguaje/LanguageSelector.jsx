@@ -5,9 +5,9 @@ import "./LanguageSelector.css";
 import colors from "../../../utils/colors";
 
 // Importa las imágenes de las banderas
-import esFlag from '../../../assets/images/mx.webp';
-import enFlag from '../../../assets/images/usa.webp';
-import frFlag from '../../../assets/images/fra.webp';
+import esFlag from '../../../../public/images/mx.webp';
+import enFlag from '../../../../public/images/usa.webp';
+import frFlag from '../../../../public/images/fra.webp';
 
 const LanguageSelector = () => {
     const { i18n } = useTranslation();

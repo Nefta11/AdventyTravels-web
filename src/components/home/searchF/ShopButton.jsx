@@ -1,5 +1,5 @@
 import "./ShopButton.css";
-import tiendaImg from "/src/assets/images/shop.webp"; // Asegúrate de que la ruta sea correcta
+import tiendaImg from "../../../../public/images/shop.webp"; // Asegúrate de que la ruta sea correcta
 
 const ShopButton = () => {
     return (
