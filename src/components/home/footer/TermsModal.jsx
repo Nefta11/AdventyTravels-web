@@ -106,7 +106,7 @@ const TermsModal = ({ show, handleClose }) => {
                     ))}
                 </ul>
                 <p>{t('termsAndConditions.sections.contact.note')}</p>
-                <button className="accept-button" onClick={handleClose}>He leído y acepto</button>
+                <button className="accept-button" onClick={handleClose}>{t('termsAndConditions.iHaveRead')}</button>
             </div>
         </div>
     );
