@@ -5,10 +5,10 @@ import BlurText from '../../reactbitsComponents/BlurText';
 const DiscoverStay = () => {
     const { t } = useTranslation();
     const cities = [
-        { name: 'Ciudad de México', country: 'México', image: '../../../../public/images/perfectStay/cdmxH.webp' },
-        { name: 'Playa del Carmen', country: 'México', image: '../../../../public/images/perfectStay/playaDelcarmenH.webp' },
-        { name: 'San Miguel de Allende', country: 'México', image: '../../../../public/images/perfectStay/sanMiguelH.webp' },
-        { name: "Cancun", country: "México", image: "../../../../public/images/perfectStay/cancunH.webp" },
+        { name: 'Ciudad de México', country: 'México', image: 'https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/perfectStay/cdmxH.webp' },
+        { name: 'Playa del Carmen', country: 'México', image: 'https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/perfectStay/playaDelcarmenH.webp' },
+        { name: 'San Miguel de Allende', country: 'México', image: 'https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/perfectStay/sanMiguelH.webp' },
+        { name: "Cancun", country: "México", image: "https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/perfectStay/cancunH.webp" },
     ];
 
     return (

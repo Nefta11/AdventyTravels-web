@@ -9,25 +9,25 @@ const hotels = [
         name: "Casa Malca - Lujo Frente al Mar",
         location: "Tulum, México",
         price: "MXN 45,200",
-        image: "../../../../public/images/perfectStay/1.webp",
+        image: "https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/perfectStay/1.webp",
     },
     {
         name: "Gran Hotel Ciudad de México",
         location: "Ciudad de México, México",
         price: "MXN 12,500",
-        image: "../../../../public/images/perfectStay/2.webp",
+        image: "https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/perfectStay/2.webp",
     },
     {
         name: "Hard Rock Hotel Cancún - Todo Incluido",
         location: "Cancún, México",
         price: "MXN 38,900",
-        image: "../../../../public/images/perfectStay/3.webp",
+        image: "https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/perfectStay/3.webp",
     },
     {
         name: "Rosewood San Miguel de Allende",
         location: "San Miguel de Allende, México",
         price: "MXN 29,850",
-        image: "../../../../public/images/perfectStay/4.webp",
+        image: "https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/perfectStay/4.webp",
     },
 ];
 

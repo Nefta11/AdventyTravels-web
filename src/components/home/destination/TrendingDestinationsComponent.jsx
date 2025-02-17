@@ -4,12 +4,12 @@ import "./TrendingDestinations.css";
 import BlurText from "../../reactbitsComponents/BlurText";
 
 const destinations = [
-    { name: "Cancún", image: "../../../../public/images/destinations/cancun.webp" },
-    { name: "Mexico City", image: "../../../../public/images/destinations/cdmx.webp" },
-    { name: "Playa del Carmen", image: "../../../../public/images/destinations/playaDelCarmen.webp" },
-    { name: "San Miguel de Allende", image: "../../../../public/images/destinations/SanMiguel.webp" },
-    { name: "Mérida", image: "../../../../public/images/destinations/merida.webp" },
-    { name: "Tulum", image: "../../../../public/images/destinations/tulum.webp" },
+    { name: "Cancún", image: "https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/destinations/cancun.webp" },
+    { name: "Mexico City", image: "https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/destinations/cdmx.webp" },
+    { name: "Playa del Carmen", image: "https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/destinations/playaDelCarmen.webp" },
+    { name: "San Miguel de Allende", image: "https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/destinations/SanMiguel.webp" },
+    { name: "Mérida", image: "https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/destinations/merida.webp" },
+    { name: "Tulum", image: "https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/destinations/tulum.webp" },
 ];
 
 const TrendingDestinations = () => {

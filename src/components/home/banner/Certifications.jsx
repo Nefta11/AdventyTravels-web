@@ -3,9 +3,9 @@ import "./Certifications.css";
 import BlurText from '../../reactbitsComponents/BlurText';
 
 const partners = [
-    { name: "SAT", logo: "../../../../public/images/logosCert/sat.webp" },
-    { name: "IMPI", logo: "../../../../public/images/logosCert/impi.webp" },
-    { name: "TURISMO", logo: "../../../../public/images/logosCert/turismo.webp" },
+    { name: "SAT", logo: "https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/logosCert/sat.webp" },
+    { name: "IMPI", logo: "https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/logosCert/impi.webp" },
+    { name: "TURISMO", logo: "https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/logosCert/turismo.webp" },
 ];
 
 const Certifications = () => {
