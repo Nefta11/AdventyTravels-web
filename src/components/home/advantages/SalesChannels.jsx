@@ -29,6 +29,7 @@ const channels = [
         title: "Sucursales",
         description: "Visita nuestras sucursales a lo largo del país",
         buttonText: "Ver Sucursales",
+        link: "https://goo.gl/maps/2VQLmc5pb8WYusUQ7",
     },
 ];
 
@@ -55,7 +56,7 @@ const SalesChannels = () => {
                                 <FaArrowRight /> {channel.buttonText}
                             </a>
                         ) : (
-                            <button className="channel-button no-underline">
+                            <button className="channel-button no-underline" onClick={() => window.open(channel.link, '_blank')}>
                                 <FaArrowRight /> {channel.buttonText}
                             </button>
                         )}
