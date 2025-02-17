@@ -95,8 +95,12 @@ textarea {
     padding: 10px;
     border: none;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 12px;
     cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: var(--color4);
 }
 
 @media (max-width: 800px) {
@@ -134,8 +138,11 @@ textarea {
         width: 100% !important;
     }
 
-    .input-group input[type="date"],
+    .input-group input[type="date"] {
+        flex: 0.75;
+    }
+
     .phone-input .form-control {
-        flex: 0.85;
+        flex: 1.25;
     }
 }

@@ -46,7 +46,7 @@
 
 .footer-contact p,
 .footer-links ul {
-    font-size: 14px;
+    font-size: 16px;
     margin: 5px 0;
 }
 
@@ -63,6 +63,7 @@
 .footer-links ul li {
     cursor: pointer;
     transition: color 0.3s ease;
+    font-size: 17px;
 }
 
 .footer-links ul li:hover {
@@ -73,6 +74,7 @@
     .footer-container {
         grid-template-columns: repeat(2, 1fr);
     }
+
 }
 
 @media (max-width: 480px) {
@@ -87,5 +89,11 @@
 
     .social-icons a {
         font-size: 24px;
+    }
+
+    .footer-links ul li {
+        cursor: pointer;
+        transition: color 0.3s ease;
+        font-size: 16px;
     }
 }

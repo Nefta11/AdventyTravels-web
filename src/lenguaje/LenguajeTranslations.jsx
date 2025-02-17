@@ -15,8 +15,6 @@ const resources = {
         description: "Llena el formulario y llévate hasta un 10% de descuento.",
         firstName: "Nombres",
         lastName: "Apellidos",
-        email: "Email",
-        phonePlaceholder: "Teléfono de Contacto",
         arrivalDate: "Fecha de llegada DD/MM/YYYY",
         numberOfTravelers: "Número de Viajeros",
         message: "Escribanos aquí su consulta *",
@@ -121,6 +119,142 @@ const resources = {
       },
       certifications: {
         secureText: "Agencia Segura, Compra Segura",
+      },
+      termsAndConditions: {
+        iHaveRead: "He leído y acepto",
+        title: "TÉRMINOS Y CONDICIONES GENERALES DE ADVENTY TRAVELS",
+        lastUpdate: "Última actualización: 15/02/2025",
+        intro: "El presente documento establece los términos y condiciones bajo los cuales Adventy Travels, operada legalmente por Grupo Comercial Bracarda, ofrece sus servicios de intermediación en la comercialización de viajes y servicios turísticos. Al contratar nuestros servicios, el cliente acepta de manera expresa e incondicional estos términos y condiciones.",
+        sections: {
+          contractPurpose: {
+            title: "OBJETO DEL CONTRATO",
+            content: "Adventy Travels actúa como intermediario entre el cliente y los proveedores de servicios turísticos, incluyendo pero no limitándose a:",
+            items: [
+              "Vuelos: boletos de avión nacionales e internacionales.",
+              "Hospedaje: reservaciones en hoteles y alojamientos turísticos.",
+              "Traslados y transportes: servicios privados o compartidos.",
+              "Paquetes turísticos y cruceros.",
+              "Experiencias y tours guiados.",
+              "Trámites de visa y seguros de viaje."
+            ],
+            note: "El cliente reconoce que los servicios son proporcionados por terceros y que Adventy Travels no es responsable de la ejecución directa de dichos servicios, sino de la correcta intermediación entre el proveedor y el cliente."
+          },
+          bookingAndPayment: {
+            title: "PROCESO DE RESERVA Y PAGO",
+            content: "Para garantizar la contratación de cualquier servicio, el cliente deberá cumplir con los siguientes pasos:",
+            items: [
+              "Solicitud de reservación: el cliente debe proporcionar datos correctos y completos.",
+              "Confirmación y pago: una vez recibida la confirmación de disponibilidad, el cliente deberá realizar el pago según lo indicado por la agencia.",
+              "Entrega de documentos: después de efectuado el pago, se proporcionarán los boletos, comprobantes o vouchers correspondientes."
+            ],
+            paymentMethods: {
+              title: "Formas de pago",
+              content: "Adventy Travels acepta los siguientes métodos de pago:",
+              items: [
+                "Transferencia bancaria.",
+                "Tarjetas de crédito y débito.",
+                "Pagos en efectivo en establecimientos autorizados.",
+                "Otros métodos que se indicarán en el momento de la compra."
+              ],
+              note: "Importante: En caso de pagos con tarjeta, el cliente debe asegurarse de contar con saldo suficiente y autorización bancaria."
+            }
+          },
+          cancellationsAndModifications: {
+            title: "CANCELACIONES Y MODIFICACIONES",
+            clientSide: {
+              title: "Por parte del cliente",
+              items: [
+                "Cancelaciones: Deben solicitarse por escrito. Se aplicarán penalizaciones dependiendo de las políticas de cada proveedor.",
+                "Modificaciones: Cualquier cambio estará sujeto a disponibilidad y podrá generar costos adicionales.",
+                "No presentación: Si el cliente no se presenta en la fecha y hora pactada, perderá el derecho al servicio y no habrá reembolso."
+              ]
+            },
+            agencySide: {
+              title: "Por parte de Adventy Travels",
+              items: [
+                "La agencia se reserva el derecho de modificar o cancelar servicios en caso de fuerza mayor, comprometiéndose a ofrecer alternativas equivalentes o reembolsos, según corresponda."
+              ]
+            }
+          },
+          clientResponsibilities: {
+            title: "DOCUMENTACIÓN Y RESPONSABILIDADES DEL CLIENTE",
+            content: "El cliente es único responsable de contar con la documentación requerida para su viaje, incluyendo:",
+            items: [
+              "Pasaporte vigente.",
+              "Visa correspondiente (en caso de ser necesaria).",
+              "Permisos especiales o requisitos sanitarios (vacunas, pruebas COVID, etc.)."
+            ],
+            note: "Si el cliente no presenta la documentación adecuada, perderá su derecho a los servicios contratados sin posibilidad de reembolso."
+          },
+          refunds: {
+            title: "DEVOLUCIONES",
+            content: "Las devoluciones dependerán de las políticas de cada proveedor. Algunos servicios son no reembolsables, mientras que otros pueden estar sujetos a cargos administrativos o penalizaciones.",
+            note: "Adventy Travels solo podrá gestionar devoluciones cuando los proveedores lo permitan."
+          },
+          specificConditions: {
+            title: "CONDICIONES ESPECÍFICAS POR TIPO DE SERVICIO",
+            flights: {
+              title: "6.1 VUELOS",
+              items: [
+                "Las tarifas de boletos aéreos están sujetas a cambios sin previo aviso.",
+                "Las aerolíneas establecen sus propias políticas de equipaje, cambios y cancelaciones.",
+                "Adventy Travels no se hace responsable por retrasos, cancelaciones o modificaciones de vuelos."
+              ]
+            },
+            transfers: {
+              title: "6.2 TRASLADOS Y OTROS SERVICIOS",
+              items: [
+                "Los clientes deben presentarse puntualmente en los puntos de encuentro indicados.",
+                "Cualquier modificación debe solicitarse con anticipación y está sujeta a disponibilidad.",
+                "La agencia no es responsable por retrasos por tráfico, fallas mecánicas o condiciones climáticas."
+              ]
+            },
+            lodging: {
+              title: "6.3 HOSPEDAJE",
+              items: [
+                "Las condiciones de check-in y check-out dependen de cada hotel.",
+                "Cualquier daño en las instalaciones es responsabilidad del huésped.",
+                "En caso de sobreventa o cancelación por parte del hotel, la agencia gestionará una alternativa similar, pero no se hace responsable de decisiones ajenas."
+              ]
+            }
+          },
+          advertisingAndPromotions: {
+            title: "PUBLICIDAD Y PROMOCIONES",
+            items: [
+              "Las promociones están sujetas a disponibilidad y pueden tener términos específicos.",
+              "Adventy Travels se reserva el derecho de corregir errores en publicidad, precios y disponibilidad."
+            ]
+          },
+          intellectualProperty: {
+            title: "PROPIEDAD INTELECTUAL",
+            content: "Todo el contenido de Adventy Travels (logos, imágenes, textos, promociones) está protegido por derechos de autor y no puede ser utilizado sin autorización."
+          },
+          termsModification: {
+            title: "MODIFICACIONES A LOS TÉRMINOS Y CONDICIONES",
+            content: "Adventy Travels podrá actualizar estos términos en cualquier momento. La versión vigente estará siempre disponible en nuestro sitio web."
+          },
+          applicableLaw: {
+            title: "LEGISLACIÓN APLICABLE Y JURISDICCIÓN",
+            content: "Este contrato se rige por las leyes vigentes en México. Cualquier disputa será resuelta en los tribunales de la Ciudad de México."
+          },
+          qualityControl: {
+            title: "CONTROL DE CALIDAD Y ACEPTACIÓN",
+            items: [
+              "El cliente podrá enviar quejas y sugerencias dentro de los 15 días posteriores al servicio.",
+              "Al realizar una reservación, el cliente acepta todos los términos y condiciones aquí descritos."
+            ]
+          },
+          contact: {
+            title: "CONTACTO Y ATENCIÓN AL CLIENTE",
+            content: "Para cualquier consulta, queja o aclaración, puede comunicarse con Adventy Travels:",
+            items: [
+              "Correo electrónico: administracion@adventytravels.com",
+              "Teléfono: 7716075321",
+              "Dirección: Galerías De Vega, local #5, planta alta, Avenida 5 de Mayo, Colonia Centro, Xicotepec de Juárez, Puebla."
+            ],
+            note: "Al contratar cualquier servicio con Adventy Travels, el cliente declara haber leído, comprendido y aceptado estos Términos y Condiciones en su totalidad."
+          }
+        }
       }
     }
   },
@@ -137,8 +271,6 @@ const resources = {
         description: "Fill out the form and get up to 10% discount.",
         firstName: "First Name",
         lastName: "Last Name",
-        email: "Email",
-        phonePlaceholder: "Contact Phone",
         arrivalDate: "Arrival Date DD/MM/YYYY",
         numberOfTravelers: "Number of Travelers",
         message: "Write your query here *",
@@ -243,6 +375,142 @@ const resources = {
       },
       certifications: {
         secureText: "Safe Agency, Safe Purchase",
+      },
+      termsAndConditions: {
+        iHaveRead:"I have read and accept",
+        title: "GENERAL TERMS AND CONDITIONS OF ADVENTY TRAVELS",
+        lastUpdate: "Last update: 02/15/2025",
+        intro: "This document sets forth the terms and conditions under which Adventy Travels, legally operated by Grupo Comercial Bracarda, offers its services as an intermediary in the marketing of travel and tourism services. By contracting our services, the client expressly and unconditionally accepts these terms and conditions.",
+        sections: {
+          contractPurpose: {
+            title: "PURPOSE OF THE CONTRACT",
+            content: "Adventy Travels acts as an intermediary between the client and the providers of tourism services, including but not limited to:",
+            items: [
+              "Flights: domestic and international airline tickets.",
+              "Lodging: reservations in hotels and tourist accommodations.",
+              "Transfers and transportation: private or shared services.",
+              "Tourist packages and cruises.",
+              "Experiences and guided tours.",
+              "Visa processing and travel insurance."
+            ],
+            note: "The client acknowledges that the services are provided by third parties and that Adventy Travels is not responsible for the direct execution of such services, but for the correct intermediation between the provider and the client."
+          },
+          bookingAndPayment: {
+            title: "BOOKING AND PAYMENT PROCESS",
+            content: "To guarantee the contracting of any service, the client must comply with the following steps:",
+            items: [
+              "Reservation request: the client must provide correct and complete data.",
+              "Confirmation and payment: once the availability confirmation is received, the client must make the payment as indicated by the agency.",
+              "Delivery of documents: after payment is made, the corresponding tickets, vouchers or receipts will be provided."
+            ],
+            paymentMethods: {
+              title: "Payment methods",
+              content: "Adventy Travels accepts the following payment methods:",
+              items: [
+                "Bank transfer.",
+                "Credit and debit cards.",
+                "Cash payments at authorized establishments.",
+                "Other methods that will be indicated at the time of purchase."
+              ],
+              note: "Important: In case of card payments, the client must ensure sufficient balance and bank authorization."
+            }
+          },
+          cancellationsAndModifications: {
+            title: "CANCELLATIONS AND MODIFICATIONS",
+            clientSide: {
+              title: "By the client",
+              items: [
+                "Cancellations: Must be requested in writing. Penalties will apply depending on each provider's policies.",
+                "Modifications: Any change will be subject to availability and may incur additional costs.",
+                "No-show: If the client does not show up on the agreed date and time, they will lose the right to the service and there will be no refund."
+              ]
+            },
+            agencySide: {
+              title: "By Adventy Travels",
+              items: [
+                "The agency reserves the right to modify or cancel services in case of force majeure, committing to offer equivalent alternatives or refunds, as appropriate."
+              ]
+            }
+          },
+          clientResponsibilities: {
+            title: "CLIENT DOCUMENTATION AND RESPONSIBILITIES",
+            content: "The client is solely responsible for having the required documentation for their trip, including:",
+            items: [
+              "Valid passport.",
+              "Corresponding visa (if necessary).",
+              "Special permits or health requirements (vaccines, COVID tests, etc.)."
+            ],
+            note: "If the client does not present the appropriate documentation, they will lose their right to the contracted services without the possibility of a refund."
+          },
+          refunds: {
+            title: "REFUNDS",
+            content: "Refunds will depend on each provider's policies. Some services are non-refundable, while others may be subject to administrative charges or penalties.",
+            note: "Adventy Travels can only manage refunds when providers allow it."
+          },
+          specificConditions: {
+            title: "SPECIFIC CONDITIONS BY TYPE OF SERVICE",
+            flights: {
+              title: "6.1 FLIGHTS",
+              items: [
+                "Airfare rates are subject to change without notice.",
+                "Airlines establish their own baggage, change, and cancellation policies.",
+                "Adventy Travels is not responsible for flight delays, cancellations, or modifications."
+              ]
+            },
+            transfers: {
+              title: "6.2 TRANSFERS AND OTHER SERVICES",
+              items: [
+                "Clients must show up punctually at the indicated meeting points.",
+                "Any modification must be requested in advance and is subject to availability.",
+                "The agency is not responsible for delays due to traffic, mechanical failures, or weather conditions."
+              ]
+            },
+            lodging: {
+              title: "6.3 LODGING",
+              items: [
+                "Check-in and check-out conditions depend on each hotel.",
+                "Any damage to the facilities is the guest's responsibility.",
+                "In case of overbooking or cancellation by the hotel, the agency will manage a similar alternative but is not responsible for external decisions."
+              ]
+            }
+          },
+          advertisingAndPromotions: {
+            title: "ADVERTISING AND PROMOTIONS",
+            items: [
+              "Promotions are subject to availability and may have specific terms.",
+              "Adventy Travels reserves the right to correct errors in advertising, prices, and availability."
+            ]
+          },
+          intellectualProperty: {
+            title: "INTELLECTUAL PROPERTY",
+            content: "All content of Adventy Travels (logos, images, texts, promotions) is protected by copyright and cannot be used without authorization."
+          },
+          termsModification: {
+            title: "MODIFICATIONS TO THE TERMS AND CONDITIONS",
+            content: "Adventy Travels may update these terms at any time. The current version will always be available on our website."
+          },
+          applicableLaw: {
+            title: "APPLICABLE LAW AND JURISDICTION",
+            content: "This contract is governed by the laws in force in Mexico. Any dispute will be resolved in the courts of Mexico City."
+          },
+          qualityControl: {
+            title: "QUALITY CONTROL AND ACCEPTANCE",
+            items: [
+              "The client may send complaints and suggestions within 15 days after the service.",
+              "By making a reservation, the client accepts all the terms and conditions described herein."
+            ]
+          },
+          contact: {
+            title: "CONTACT AND CUSTOMER SERVICE",
+            content: "For any query, complaint, or clarification, you can contact Adventy Travels:",
+            items: [
+              "Email: administracion@adventytravels.com",
+              "Phone: 7716075321",
+              "Address: Galerías De Vega, local #5, planta alta, Avenida 5 de Mayo, Colonia Centro, Xicotepec de Juárez, Puebla."
+            ],
+            note: "By contracting any service with Adventy Travels, the client declares to have read, understood, and accepted these Terms and Conditions in their entirety."
+          }
+        }
       }
     }
   },
@@ -259,8 +527,6 @@ const resources = {
         description: "Remplissez le formulaire et obtenez jusqu'à 10% de réduction.",
         firstName: "Prénom",
         lastName: "Nom de famille",
-        email: "Email",
-        phonePlaceholder: "Téléphone de contact",
         arrivalDate: "Date d'arrivée JJ/MM/AAAA",
         numberOfTravelers: "Nombre de voyageurs",
         message: "Écrivez votre question ici *",
@@ -365,7 +631,145 @@ const resources = {
       },
       certifications: {
         secureText: "Agence Sécurisée, Achat Sécurisé",
+      },
+      "termsAndConditions": {
+        "iHaveRead": "J'ai lu et j'accepte",
+        "title": "CONDITIONS GÉNÉRALES D'ADVENTY TRAVELS",
+        "lastUpdate": "Dernière mise à jour : 15/02/2025",
+        "intro": "Le présent document établit les conditions générales selon lesquelles Adventy Travels, exploitée légalement par Grupo Comercial Bracarda, offre ses services d'intermédiation dans la commercialisation de voyages et services touristiques. En contractant nos services, le client accepte expressément et inconditionnellement ces termes et conditions.",
+        "sections": {
+          "contractPurpose": {
+            "title": "OBJET DU CONTRAT",
+            "content": "Adventy Travels agit en tant qu'intermédiaire entre le client et les fournisseurs de services touristiques, y compris mais sans s'y limiter :",
+            "items": [
+              "Vols : billets d'avion nationaux et internationaux.",
+              "Hébergement : réservations dans des hôtels et logements touristiques.",
+              "Transferts et transports : services privés ou partagés.",
+              "Forfaits touristiques et croisières.",
+              "Expériences et visites guidées.",
+              "Démarches de visa et assurances voyage."
+            ],
+            "note": "Le client reconnaît que les services sont fournis par des tiers et qu'Adventy Travels n'est pas responsable de l'exécution directe de ces services, mais de la bonne intermédiation entre le prestataire et le client."
+          },
+          "bookingAndPayment": {
+            "title": "PROCESSUS DE RÉSERVATION ET DE PAIEMENT",
+            "content": "Pour garantir la réservation de tout service, le client doit suivre les étapes suivantes :",
+            "items": [
+              "Demande de réservation : le client doit fournir des informations correctes et complètes.",
+              "Confirmation et paiement : après réception de la confirmation de disponibilité, le client doit effectuer le paiement selon les indications de l'agence.",
+              "Remise des documents : après paiement, les billets, reçus ou bons correspondants seront fournis."
+            ],
+            "paymentMethods": {
+              "title": "Modes de paiement",
+              "content": "Adventy Travels accepte les modes de paiement suivants :",
+              "items": [
+                "Virement bancaire.",
+                "Cartes de crédit et de débit.",
+                "Paiements en espèces dans les établissements autorisés.",
+                "Autres méthodes qui seront indiquées au moment de l'achat."
+              ],
+              "note": "Important : En cas de paiement par carte, le client doit s'assurer d'avoir un solde suffisant et une autorisation bancaire."
+            }
+          },
+          "cancellationsAndModifications": {
+            "title": "ANNULATIONS ET MODIFICATIONS",
+            "clientSide": {
+              "title": "Par le client",
+              "items": [
+                "Annulations : doivent être demandées par écrit. Des pénalités s'appliqueront selon les politiques de chaque fournisseur.",
+                "Modifications : tout changement sera soumis à disponibilité et pourra entraîner des coûts supplémentaires.",
+                "Non-présentation : si le client ne se présente pas à la date et à l'heure convenues, il perdra son droit au service sans remboursement."
+              ]
+            },
+            "agencySide": {
+              "title": "Par Adventy Travels",
+              "items": [
+                "L'agence se réserve le droit de modifier ou d'annuler des services en cas de force majeure, en s'engageant à proposer des alternatives équivalentes ou des remboursements, selon le cas."
+              ]
+            }
+          },
+          "clientResponsibilities": {
+            "title": "DOCUMENTATION ET RESPONSABILITÉS DU CLIENT",
+            "content": "Le client est seul responsable d'avoir la documentation requise pour son voyage, y compris :",
+            "items": [
+              "Passeport valide.",
+              "Visa correspondant (si nécessaire).",
+              "Autorisations spéciales ou exigences sanitaires (vaccins, tests COVID, etc.)."
+            ],
+            "note": "Si le client ne présente pas la documentation adéquate, il perdra son droit aux services réservés sans possibilité de remboursement."
+          },
+          "refunds": {
+            "title": "REMBOURSEMENTS",
+            "content": "Les remboursements dépendront des politiques de chaque fournisseur. Certains services ne sont pas remboursables, tandis que d'autres peuvent être soumis à des frais administratifs ou pénalités.",
+            "note": "Adventy Travels ne pourra traiter les remboursements que lorsque les fournisseurs l'autorisent."
+          },
+          "specificConditions": {
+            "title": "CONDITIONS SPÉCIFIQUES PAR TYPE DE SERVICE",
+            "flights": {
+              "title": "6.1 VOLS",
+              "items": [
+                "Les tarifs des billets d'avion sont sujets à modification sans préavis.",
+                "Les compagnies aériennes établissent leurs propres politiques en matière de bagages, de modifications et d'annulations.",
+                "Adventy Travels n'est pas responsable des retards, annulations ou modifications de vols."
+              ]
+            },
+            "transfers": {
+              "title": "6.2 TRANSFERTS ET AUTRES SERVICES",
+              "items": [
+                "Les clients doivent se présenter ponctuellement aux points de rencontre indiqués.",
+                "Toute modification doit être demandée à l'avance et est soumise à disponibilité.",
+                "L'agence n'est pas responsable des retards dus à la circulation, aux pannes mécaniques ou aux conditions météorologiques."
+              ]
+            },
+            "lodging": {
+              "title": "6.3 HÉBERGEMENT",
+              "items": [
+                "Les conditions de check-in et check-out dépendent de chaque hôtel.",
+                "Tout dommage aux installations est sous la responsabilité du client.",
+                "En cas de surréservation ou d'annulation par l'hôtel, l'agence gérera une alternative similaire, mais ne sera pas responsable des décisions des fournisseurs."
+              ]
+            }
+          },
+          "advertisingAndPromotions": {
+            "title": "PUBLICITÉ ET PROMOTIONS",
+            "items": [
+              "Les promotions sont soumises à disponibilité et peuvent avoir des conditions spécifiques.",
+              "Adventy Travels se réserve le droit de corriger toute erreur dans la publicité, les prix et la disponibilité."
+            ]
+          },
+          "intellectualProperty": {
+            "title": "PROPRIÉTÉ INTELLECTUELLE",
+            "content": "Tout le contenu d'Adventy Travels (logos, images, textes, promotions) est protégé par des droits d'auteur et ne peut être utilisé sans autorisation."
+          },
+          "termsModification": {
+            "title": "MODIFICATIONS DES CONDITIONS GÉNÉRALES",
+            "content": "Adventy Travels peut mettre à jour ces conditions à tout moment. La version en vigueur sera toujours disponible sur notre site web."
+          },
+          "applicableLaw": {
+            "title": "LÉGISLATION APPLICABLE ET JURIDICTION",
+            "content": "Ce contrat est régi par les lois en vigueur au Mexique. Tout litige sera résolu devant les tribunaux de Mexico."
+          },
+          "qualityControl": {
+            "title": "CONTRÔLE DE QUALITÉ ET ACCEPTATION",
+            "items": [
+              "Le client peut soumettre des plaintes et suggestions dans les 15 jours suivant le service.",
+              "En effectuant une réservation, le client accepte tous les termes et conditions décrits ici."
+            ]
+          },
+          "contact": {
+            "title": "CONTACT ET SERVICE CLIENT",
+            "content": "Pour toute question, plainte ou clarification, veuillez contacter Adventy Travels :",
+            "items": [
+              "E-mail : administracion@adventytravels.com",
+              "Téléphone : 7716075321",
+              "Adresse : Galerías De Vega, local #5, étage supérieur, Avenue 5 de Mayo, Colonia Centro, Xicotepec de Juárez, Puebla."
+            ],
+            "note": "En contractant tout service avec Adventy Travels, le client déclare avoir lu, compris et accepté intégralement ces conditions générales."
+          }
+        }
       }
+
+
     }
   }
 };
