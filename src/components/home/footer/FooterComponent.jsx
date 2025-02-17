@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import "./Footer.css";
 import { FaInstagram, FaFacebook, FaWhatsapp, FaTiktok } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
@@ -42,7 +42,7 @@ const FooterComponent = () => {
                         <i className="fas fa-phone-alt"></i> (+52) 776 607 5321
                     </p>
                     <p>
-                        <i className="fas fa-envelope"></i> administracion@adventytravels.com
+                        <i className="fas fa-envelope"></i>Administracion@adventytravels.com
                     </p>
                     <p>
                         <i className="fas fa-map-marker-alt"></i>Av.5 de Mayo Local 5PA, Xicotepec de Juárez, Pue.
