@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import 'react-phone-input-2/lib/style.css';
 import emailjs from 'emailjs-com';
 import "./travelForm.css";
 
