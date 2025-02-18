@@ -101,19 +101,19 @@ const resources = {
         banks: [
           {
             name: "BBVA",
-            promotion: "Hasta 13 mensualidades sin intereses con",
+            promotion: "Hasta 18 mensualidades sin intereses con",
           },
           {
             name: "Citibanamex",
-            promotion: "Hasta 6 mensualidades sin intereses con",
+            promotion: "Hasta 13 mensualidades sin intereses con",
           },
           {
             name: "HSBC",
-            promotion: "Hasta 6 mensualidades sin intereses con",
+            promotion: "Hasta 12 mensualidades sin intereses con",
           },
           {
             name: "AMEX",
-            promotion: "Hasta 6 mensualidades sin intereses con",
+            promotion: "Hasta 9 mensualidades sin intereses con",
           },
         ]
       },
@@ -357,19 +357,19 @@ const resources = {
         banks: [
           {
             name: "BBVA",
-            promotion: "Up to 13 interest-free installments with",
+            promotion: "Up to 18 interest-free installments with",
           },
           {
             name: "Citibanamex",
-            promotion: "Up to  6 interest-free installments with",
+            promotion: "Up to  13 interest-free installments with",
           },
           {
             name: "HSBC",
-            promotion: "Up to 6 interest-free installments with",
+            promotion: "Up to 12 interest-free installments with",
           },
           {
             name: "AMEX",
-            promotion: "Up to 6 interest-free installments with",
+            promotion: "Up to 9 interest-free installments with",
           },
         ]
       },
@@ -613,19 +613,19 @@ const resources = {
         banks: [
           {
             name: "BBVA",
-            promotion: "Jusqu'à 13 mensualités sans intérêt avec",
+            promotion: "Jusqu'à 18 mensualités sans intérêt avec",
           },
           {
             name: "Citibanamex",
-            promotion: "Jusqu'à 6 mensualités sans intérêt avec",
+            promotion: "Jusqu'à 13 mensualités sans intérêt avec",
           },
           {
             name: "HSBC",
-            promotion: "Jusqu'à 6 mensualités sans intérêt avec",
+            promotion: "Jusqu'à 12 mensualités sans intérêt avec",
           },
           {
             name: "AMEX",
-            promotion: "Jusqu'à 6 mensualités sans intérêt avec",
+            promotion: "Jusqu'à 9 mensualités sans intérêt avec",
           },
         ]
       },
