@@ -94,8 +94,8 @@ textarea {
     color: white;
     padding: 10px;
     border: none;
-    width: 100%;
-    border-radius: 12px;
+    width: 40%;
+    border-radius: 5px;
     cursor: pointer;
 }
 
