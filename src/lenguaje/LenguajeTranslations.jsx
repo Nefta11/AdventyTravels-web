@@ -101,20 +101,24 @@ const resources = {
         banks: [
           {
             name: "BBVA",
-            promotion: "Hasta 18 mensualidades sin intereses con",
+            promotion: "Hasta 18 mensualidades sin intereses",
           },
           {
             name: "Citibanamex",
-            promotion: "Hasta 13 mensualidades sin intereses con",
+            promotion: "Hasta 13 mensualidades sin intereses",
           },
           {
             name: "HSBC",
-            promotion: "Hasta 12 mensualidades sin intereses con",
+            promotion: "Hasta 12 mensualidades sin intereses",
           },
           {
             name: "AMEX",
-            promotion: "Hasta 9 mensualidades sin intereses con",
+            promotion: "Hasta 9 mensualidades sin intereses",
           },
+          {
+            name:"BANCOAZTECA",
+            promotion:"Hasta 18 mensualidades sin intereses"
+          }
         ]
       },
       certifications: {
@@ -357,20 +361,24 @@ const resources = {
         banks: [
           {
             name: "BBVA",
-            promotion: "Up to 18 interest-free installments with",
+            promotion: "Up to 18 interest-free installments",
           },
           {
             name: "Citibanamex",
-            promotion: "Up to  13 interest-free installments with",
+            promotion: "Up to  13 interest-free installments",
           },
           {
             name: "HSBC",
-            promotion: "Up to 12 interest-free installments with",
+            promotion: "Up to 12 interest-free installments",
           },
           {
             name: "AMEX",
-            promotion: "Up to 9 interest-free installments with",
+            promotion: "Up to 9 interest-free installments",
           },
+          {
+            name:"BANCOAZTECA",
+            promotion:"Up to 18 interest-free installments"
+          }
         ]
       },
       certifications: {
@@ -613,20 +621,24 @@ const resources = {
         banks: [
           {
             name: "BBVA",
-            promotion: "Jusqu'à 18 mensualités sans intérêt avec",
+            promotion: "Jusqu'à 18 mensualités sans intérêt",
           },
           {
             name: "Citibanamex",
-            promotion: "Jusqu'à 13 mensualités sans intérêt avec",
+            promotion: "Jusqu'à 13 mensualités sans intérêt",
           },
           {
             name: "HSBC",
-            promotion: "Jusqu'à 12 mensualités sans intérêt avec",
+            promotion: "Jusqu'à 12 mensualités sans intérêt",
           },
           {
             name: "AMEX",
-            promotion: "Jusqu'à 9 mensualités sans intérêt avec",
+            promotion: "Jusqu'à 9 mensualités sans intérêt",
           },
+          {
+            name:"BANCOAZTECA",
+            promotion:"Jusqu'à 18 mensualités sans intérêt"
+          }
         ]
       },
       certifications: {
