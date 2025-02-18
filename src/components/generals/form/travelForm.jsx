@@ -43,8 +43,8 @@ const TravelForm = () => {
                         <input type="text" name="lastName" placeholder={t('travelForm.lastName')} required />
                     </div>
                     <div className="input-group">
-                        <input type="text" name="phoneNumber" placeholder={t('travelForm.phoneNumber')} />
-                        <input type="text" name="whatsappNumber" placeholder={t('travelForm.whatsappNumber')} />
+                        <input type="text" name="phoneNumber" placeholder={t('travelForm.phoneNumber')} maxLength="11" />
+                        <input type="text" name="whatsappNumber" placeholder={t('travelForm.whatsappNumber')} maxLength="11" />
                     </div>
                     <div className="input-group">
                         <select name="estado" required >
