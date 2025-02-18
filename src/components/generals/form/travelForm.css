@@ -125,4 +125,13 @@ textarea {
     select {
         width: 100%;
     }
+
+    .swal-modal {
+        width: 90%;
+    }
+
+    .swal-button--success,
+    .swal-button--error {
+        width: 90%;
+    }
 }

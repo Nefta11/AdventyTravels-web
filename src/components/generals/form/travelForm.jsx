@@ -24,8 +24,8 @@ const TravelForm = () => {
             .then((result) => {
                 console.log("Success:", result.text);
                 swal({
-                    title: 'Tu información se ha enviado con éxito',
-                    text: 'En breve recibirás atención de nuestros asesores',
+                    title: t('sweetAlert.successTitle'),
+                    text: t('sweetAlert.successText'),
                     icon: 'success',
                     button: {
                         text: "OK",
@@ -39,8 +39,8 @@ const TravelForm = () => {
             }, (error) => {
                 console.log("Error:", error.text);
                 swal({
-                    title: 'Hubo un error',
-                    text: 'Intente de nuevo',
+                    title: t('sweetAlert.errorTitle'),
+                    text: t('sweetAlert.errorText'),
                     icon: 'error',
                     button: {
                         text: "OK",

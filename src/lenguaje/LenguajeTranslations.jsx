@@ -264,6 +264,12 @@ const resources = {
             note: "Al contratar cualquier servicio con Adventy Travels, el cliente declara haber leído, comprendido y aceptado estos Términos y Condiciones en su totalidad."
           }
         }
+      },
+      sweetAlert: {
+        successTitle: "Tu información se ha enviado con éxito",
+        successText: "En breve recibirás atención de nuestros asesores",
+        errorTitle: "Hubo un error",
+        errorText: "Intente de nuevo"
       }
     }
   },
@@ -529,6 +535,12 @@ const resources = {
             note: "By contracting any service with Adventy Travels, the client declares to have read, understood, and accepted these Terms and Conditions in their entirety."
           }
         }
+      },
+      sweetAlert: {
+        successTitle: "Your information has been sent successfully",
+        successText: "You will receive attention from our advisors shortly",
+        errorTitle: "There was an error",
+        errorText: "Please try again"
       }
     }
   },
@@ -794,9 +806,13 @@ const resources = {
             "note": "En contractant tout service avec Adventy Travels, le client déclare avoir lu, compris et accepté intégralement ces conditions générales."
           }
         }
+      },
+      sweetAlert: {
+        successTitle: "Vos informations ont été envoyées avec succès",
+        successText: "Vous recevrez bientôt l'attention de nos conseillers",
+        errorTitle: "Il y a eu une erreur",
+        errorText: "Veuillez réessayer"
       }
-
-
     }
   }
 };
