@@ -1,6 +1,5 @@
 import './DiscoverStay.css';
 import { useTranslation } from 'react-i18next';
-import BlurText from '../../reactbitsComponents/BlurText';
 
 const DiscoverStay = () => {
     const { t } = useTranslation();
@@ -13,13 +12,7 @@ const DiscoverStay = () => {
 
     return (
         <div className="discover-stay-container">
-            <BlurText
-                text={t('discoverStay.title')}
-                delay={100}
-                animateBy='words'
-                direction='top'
-                className="discover-stay-title"
-            />
+            <h2 className='discover-stay-title'>{t('discoverStay.title')}</h2>
             <div className="city-grid">
                 {cities.map((city, index) => (
                     <div key={index} className="city-card">

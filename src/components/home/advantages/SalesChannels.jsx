@@ -1,6 +1,5 @@
 import { FaVideo, FaWhatsapp, FaPhone, FaStore, FaArrowRight } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
-import BlurText from '../../reactbitsComponents/BlurText';
 import "./SalesChannels.css";
 
 const channels = [
@@ -37,13 +36,7 @@ const SalesChannels = () => {
     const { t } = useTranslation();
     return (
         <div className="sales-channels">
-            <BlurText
-                text={t('salesChannels.title')}
-                delay={100}
-                animateBy='words'
-                direction='top'
-                className="sales-channels-title"
-            />
+            <h2 className="sales-channels-title">{t('salesChannels.title')}</h2>
             <div className="channel-list">
                 {channels.map((channel, index) => (
                     <div key={index} className="channel-card">
