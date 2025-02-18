@@ -1,5 +1,5 @@
 import "./ShopButton.css";
-import tiendaImg from "../../../assets/images/shop.webp"; // Asegúrate de que la ruta sea correcta
+import tiendaImg from "../../../assets/images/shop.webp";
 
 const ShopButton = () => {
     return (
@@ -12,3 +12,4 @@ const ShopButton = () => {
 };
 
 export default ShopButton;
+    
