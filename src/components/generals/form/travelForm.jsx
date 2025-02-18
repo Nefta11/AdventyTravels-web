@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import emailjs from 'emailjs-com';
+import swal from 'sweetalert';
 import "./travelForm.css";
 
 const estadosMexico = [
@@ -22,10 +23,32 @@ const TravelForm = () => {
         emailjs.sendForm('service_zmd74hu', 'template_nkyigza', e.target, '9CUfOoMbPp6o8R4bH')
             .then((result) => {
                 console.log("Success:", result.text);
-                alert('Message sent successfully!');
+                swal({
+                    title: 'Tu información se ha enviado con éxito',
+                    text: 'En breve recibirás atención de nuestros asesores',
+                    icon: 'success',
+                    button: {
+                        text: "OK",
+                        closeModal: true,
+                        className: "swal-button--success"
+                    },
+                    className: "swal-overlay--success"
+                }).then(() => {
+                    setIsOpen(false);
+                });
             }, (error) => {
                 console.log("Error:", error.text);
-                alert('Failed to send message, please try again.');
+                swal({
+                    title: 'Hubo un error',
+                    text: 'Intente de nuevo',
+                    icon: 'error',
+                    button: {
+                        text: "OK",
+                        closeModal: true,
+                        className: "swal-button--error"
+                    },
+                    className: "swal-overlay--error"
+                });
             });
     };
 

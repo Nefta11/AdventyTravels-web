@@ -87,6 +87,24 @@ textarea {
     background-color: var(--color4);
 }
 
+.swal-overlay--success .swal-modal {
+    background-color: var(--color3);
+}
+
+.swal-overlay--error .swal-modal {
+    background-color: var(--color4);
+}
+
+.swal-button--success {
+    background-color: var(--color4);
+    color: white;
+}
+
+.swal-button--error {
+    background-color: var(--color3);
+    color: white;
+}
+
 @media (max-width: 800px) {
     .form-container {
         width: 90%;
