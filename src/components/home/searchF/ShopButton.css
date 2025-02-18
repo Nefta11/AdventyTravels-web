@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 18vh;
+    height: 15vh;
 }
 
 .shop-button-img {
@@ -20,7 +20,7 @@
 
 @media (max-width: 800px) {
     .shop-button-container {
-        height: 7vh;
+        height: 6vh;
         max-width: 400px;
         /* Reduce el espacio vertical */
         margin-bottom:  0px;
