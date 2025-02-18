@@ -15,10 +15,11 @@ const resources = {
         description: "Llena el formulario y llévate hasta un 10% de descuento.",
         firstName: "Nombres",
         lastName: "Apellidos",
-        arrivalDate: "Fecha de llegada DD/MM/YYYY",
-        numberOfTravelers: "Número de Viajeros",
-        message: "Escribanos aquí su consulta *",
-        submit: "¡Consulte Ahora!"
+        phoneNumber: "Número de teléfono",
+        whatsappNumber: "Número de WhatsApp",
+        selectState: "Selecciona un estado o región",
+        message: "Escribanos aquí su consulta",
+        submit: "Enviar"
       },
       tourSearch: {
         tours: "Tours",
@@ -279,10 +280,11 @@ const resources = {
         description: "Fill out the form and get up to 10% discount.",
         firstName: "First Name",
         lastName: "Last Name",
-        arrivalDate: "Arrival Date DD/MM/YYYY",
-        numberOfTravelers: "Number of Travelers",
-        message: "Write your query here *",
-        submit: "Consult Now!"
+        phoneNumber: "Phone Number",
+        whatsappNumber: "WhatsApp Number",
+        selectState: "Select a state or region",
+        message: "Write your inquiry here",
+        submit: "Send"
       },
       tourSearch: {
         tours: "Tours",
@@ -539,14 +541,15 @@ const resources = {
       gallery: "Galerie",
       contact: "Contact",
       travelForm: {
-        title: "Vous cherchez vos prochaines vacances?",
-        description: "Remplissez le formulaire et obtenez jusqu'à 10% de réduction.",
+        title: "Vous cherchez vos prochaines vacances ?",
+        description: "Remplissez le formulaire et obtenez jusqu'à 10 % de réduction.",
         firstName: "Prénom",
         lastName: "Nom de famille",
-        arrivalDate: "Date d'arrivée JJ/MM/AAAA",
-        numberOfTravelers: "Nombre de voyageurs",
-        message: "Écrivez votre question ici *",
-        submit: "Consultez maintenant!"
+        phoneNumber: "Numéro de téléphone",
+        whatsappNumber: "Numéro WhatsApp",
+        selectState: "Sélectionnez un état ou une région",
+        message: "Écrivez votre demande ici",
+        submit: "Envoyer"
       },
       tourSearch: {
         tours: "Tours",
