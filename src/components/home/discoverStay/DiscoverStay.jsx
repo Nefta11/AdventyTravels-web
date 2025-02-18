@@ -10,12 +10,16 @@ const DiscoverStay = () => {
         { name: "Cancun", country: "México", image: "https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/perfectStay/cancunH.webp" },
     ];
 
+    const handleCardClick = () => {
+        window.location.href = 'https://booking.adventytravels.com/';
+    };
+
     return (
         <div className="discover-stay-container">
             <h2 className='discover-stay-title'>{t('discoverStay.title')}</h2>
             <div className="city-grid">
                 {cities.map((city, index) => (
-                    <div key={index} className="city-card">
+                    <div key={index} className="city-card" onClick={handleCardClick}>
                         <img src={city.image} alt={city.name} className="city-image" />
                         <div className="city-info">
                             <h3>{city.name}</h3>

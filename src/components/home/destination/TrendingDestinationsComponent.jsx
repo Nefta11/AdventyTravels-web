@@ -32,6 +32,10 @@ const TrendingDestinations = () => {
         return () => observer.disconnect();
     }, []);
 
+    const handleCardClick = () => {
+        window.location.href = 'https://booking.adventytravels.com/';
+    };
+
     return (
         <div className="trending-container" ref={ref}>
             <h2 className='trending-container-title'>{t('trendingDestinations')}</h2>
@@ -42,6 +46,7 @@ const TrendingDestinations = () => {
                         key={index}
                         className="destination-card"
                         style={{ backgroundImage: `url(${destination.image})` }}
+                        onClick={handleCardClick}
                     >
                         <span className="destination-name">
                             {destination.name}
