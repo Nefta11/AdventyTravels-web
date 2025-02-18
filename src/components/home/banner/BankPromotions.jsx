@@ -11,7 +11,8 @@ const BankPromotions = () => {
             'CITIBANAMEX': 'https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/bank/Citibanamex.webp',
             'BBVA': 'https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/bank/bbva.webp',
             'HSBC': 'https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/bank/hsbc.webp',
-            'BANCOAZTECA' :''
+            'BANCOAZTECA' :'https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/Dev-Update/src/assets/images/bank/BANCOAZTECA.webp',
+            'SANTANDER':''
         };
         return urls[bankName.toUpperCase()] || '';
     };

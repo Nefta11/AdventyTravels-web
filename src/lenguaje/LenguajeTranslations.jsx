@@ -116,8 +116,12 @@ const resources = {
             promotion: "Hasta 9 mensualidades sin intereses",
           },
           {
-            name:"BANCOAZTECA",
-            promotion:"Hasta 18 mensualidades sin intereses"
+            name: "BANCOAZTECA",
+            promotion: "Hasta 18 mensualidades sin intereses"
+          },
+          {
+            name: "SANTANDER",
+            promotion: "Hasta 6 mensualidades sin intereses"
           }
         ]
       },
@@ -376,8 +380,12 @@ const resources = {
             promotion: "Up to 9 interest-free installments",
           },
           {
-            name:"BANCOAZTECA",
-            promotion:"Up to 18 interest-free installments"
+            name: "BANCOAZTECA",
+            promotion: "Up to 18 interest-free installments"
+          },
+          {
+            name: "SANTANDER",
+            promotion: "Up to 6 interest-free installments"
           }
         ]
       },
@@ -385,7 +393,7 @@ const resources = {
         secureText: "Safe Agency, Safe Purchase",
       },
       termsAndConditions: {
-        iHaveRead:"I have read and accept",
+        iHaveRead: "I have read and accept",
         title: "GENERAL TERMS AND CONDITIONS OF ADVENTY TRAVELS",
         lastUpdate: "Last update: 02/15/2025",
         intro: "This document sets forth the terms and conditions under which Adventy Travels, legally operated by Grupo Comercial Bracarda, offers its services as an intermediary in the marketing of travel and tourism services. By contracting our services, the client expressly and unconditionally accepts these terms and conditions.",
@@ -636,8 +644,12 @@ const resources = {
             promotion: "Jusqu'à 9 mensualités sans intérêt",
           },
           {
-            name:"BANCOAZTECA",
-            promotion:"Jusqu'à 18 mensualités sans intérêt"
+            name: "BANCOAZTECA",
+            promotion: "Jusqu'à 18 mensualités sans intérêt"
+          },
+          {
+            name: "SANTANDER",
+            promotion: "Jusqu'à 6 mensualités sans intérêt"
           }
         ]
       },
