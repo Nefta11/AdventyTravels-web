@@ -55,12 +55,21 @@
 }
 
 .input-group input,
-.phone-input input,
 textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* Asegurar que el select se despliegue hacia abajo */
+    max-height: 200px; /* Ajusta la altura máxima según tu necesidad */
+    overflow-y: auto; /* Permite el desbordamiento vertical con barra de desplazamiento */
 }
 
 
@@ -88,36 +97,14 @@ textarea {
         flex-direction: column;
     }
 
-    .input-group input,
-    .phone-input input,
-    textarea {
-        width: 100%;
-    }
-
-    .input-group {
-        display: flex;
-        flex-direction: column;
-    }
-
     .input-group:nth-child(1),
-    .input-group:nth-child(2),
-    .input-group:nth-child(3) {
+    .input-group:nth-child(2) {
         flex-direction: row;
     }
 
-    .phone-input {
-        width: 10%;
-    }
-
-    .phone-input .form-control {
-        width: 100% !important;
-    }
-
-    .input-group input[type="date"] {
-        flex: 0.75;
-    }
-
-    .phone-input .form-control {
-        flex: 1.25;
+    .input-group input,
+    textarea,
+    select {
+        width: 100%;
     }
 }

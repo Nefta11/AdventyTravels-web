@@ -41,19 +41,20 @@ const TravelForm = () => {
                     <div className="input-group">
                         <input type="text" name="firstName" placeholder={t('travelForm.firstName')} required />
                         <input type="text" name="lastName" placeholder={t('travelForm.lastName')} required />
-
                     </div>
                     <div className="input-group">
                         <input type="text" name="phoneNumber" placeholder={t('travelForm.phoneNumber')} />
                         <input type="text" name="whatsappNumber" placeholder={t('travelForm.whatsappNumber')} />
                     </div>
                     <div className="input-group">
-                        <select name="estado" required>
+                        <select name="estado" required >
                             <option value="">{t('travelForm.selectState')}</option>
                             {estadosMexico.map((estado, index) => (
                                 <option key={index} value={estado}>{estado}</option>
                             ))}
                         </select>
+                    </div>
+                    <div className="input-group">
                         <textarea name="comments" placeholder={t('travelForm.message')} required></textarea>
                     </div>
                     <button type="submit" className="submit-button">{t('travelForm.submit')}</button>
