@@ -4,27 +4,27 @@ import "./SalesChannels.css";
 
 const channels = [
     {
-        icon: <FaVideo style={{ color: 'var(--color4)' }} />,
+        icon: <FaVideo style={{ color: 'var(--color3)' }} />,
         title: "En Vivo",
         subtitle: "VIDEOLLAMADA",
         description: "Contactar ahora a tu Asesor",
         buttonText: "Contacta",
     },
     {
-        icon: <FaWhatsapp style={{ color: 'var(--color4)' }} />,
+        icon: <FaWhatsapp style={{ color: 'var(--color3)' }} />,
         title: "WhatsApp",
         description: "Realiza tus consultas ¡Escríbenos!",
         buttonText: "Escríbenos",
         link: "whatsapp://send?phone=5217716075321",
     },
     {
-        icon: <FaPhone style={{ color: 'var(--color4)' }} />,
+        icon: <FaPhone style={{ color: 'var(--color3)' }} />,
         title: "Contact Center",
         description: "Llámanos y nuestros ejecutivos te orientarán en todo momento",
         buttonText: "Llámanos",
     },
     {
-        icon: <FaStore style={{ color: 'var(--color4)' }} />,
+        icon: <FaStore style={{ color: 'var(--color3)' }} />,
         title: "Sucursales",
         description: "Visita nuestras sucursales a lo largo del país",
         buttonText: "Ver Sucursales",
