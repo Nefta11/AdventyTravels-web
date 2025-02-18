@@ -51,7 +51,7 @@ const TrendingDestinations = () => {
                         style={{ backgroundImage: `url(${destination.image})` }}
                     >
                         <span className="destination-name">
-                            {destination.name} <img src="../../../../public/images/mx.webp" alt="Mexico Flag" style={{ width: '20px', height: '15px' }} />
+                            {destination.name} <img src="https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/mx.webp" alt="Mexico Flag" style={{ width: '20px', height: '15px' }} />
                         </span>
                     </div>
                 ))}
