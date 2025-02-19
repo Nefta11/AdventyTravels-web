@@ -19,6 +19,7 @@ const BankPromotions = () => {
 
     return (
         <div className="bank-promotions">
+            <h2 className='title'>{t('bankPromotions.title')}</h2>
             {banks.map((bank, index) => (
                 <div key={index} className="bank-card">
                     <img src={getBankImageUrl(bank.name)} alt={bank.name} className="bank-logo" />

@@ -117,6 +117,7 @@ const resources = {
         ]
       },
       bankPromotions: {
+        title: "Promociones bancarias",
         banks: [
           {
             name: "BBVA",
@@ -406,6 +407,7 @@ const resources = {
         ]
       },
       bankPromotions: {
+        title: "Bank promotions",
         banks: [
           {
             name: "BBVA",
@@ -695,6 +697,7 @@ const resources = {
         ]
       },
       bankPromotions: {
+        title: "Promotions bancaires",
         banks: [
           {
             name: "BBVA",
