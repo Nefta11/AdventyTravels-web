@@ -66,9 +66,12 @@
         height: 135px;
         /* 🔹 Se mantiene grande en móvil */
         margin-top: 80px;
+        margin-bottom: 20px;
     }
 
     .carousel-image {
+        width: auto;
+        height: 100%;
         object-fit: contain;
         /* 🔹 No se corta en móvil */
         object-position: center;
