@@ -2,9 +2,9 @@ import { useTranslation } from 'react-i18next';
 import "./Certifications.css";
 
 const partners = [
-    { name: "SAT", logo: "https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/logosCert/sat.webp" },
-    { name: "IMPI", logo: "https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/logosCert/impi.webp" },
-    { name: "TURISMO", logo: "https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/logosCert/turismo.webp" },
+    { name: "SAT", logo: "https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/src/assets/images/logosCert/sat.webp" },
+    { name: "IMPI", logo: "https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/src/assets/images/logosCert/impi.webp" },
+    { name: "TURISMO", logo: "https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/src/assets/images/logosCert/turismo.webp" },
 ];
 
 const Certifications = () => {
