@@ -85,7 +85,25 @@ const resources = {
         blog: "Blog"
       },
       salesChannels: {
-        title: "Otros canales de venta asistida:"
+        title: "Otros canales de venta asistida:",
+        channels: {
+          live: {
+            description: "Contactar ahora a tu Asesor",
+            buttonText: "Contacta"
+          },
+          whatsapp: {
+            description: "Realiza tus consultas ¡Escríbenos!",
+            buttonText: "Escríbenos"
+          },
+          phone: {
+            description: "Llámanos y nuestros ejecutivos te orientarán en todo momento",
+            buttonText: "Llámanos"
+          },
+          store: {
+            description: "Visita nuestras sucursales a lo largo del país",
+            buttonText: "Ver Sucursales"
+          }
+        }
       },
       travelOptions: {
         title: "Todo lo que buscas en un solo lugar",
@@ -356,7 +374,25 @@ const resources = {
         blog: "Blog"
       },
       salesChannels: {
-        title: "Other assisted sales channels:"
+        title: "Other assisted sales channels:",
+        channels: {
+          live: {
+            description: "Contact your Advisor now",
+            buttonText: "Contact"
+          },
+          whatsapp: {
+            description: "Make your inquiries, write to us!",
+            buttonText: "Write to us"
+          },
+          phone: {
+            description: "Call us and our executives will guide you at all times",
+            buttonText: "Call us"
+          },
+          store: {
+            description: "Visit our branches throughout the country",
+            buttonText: "View Branches"
+          }
+        }
       },
       travelOptions: {
         title: "Everything you are looking for in one place",
@@ -627,7 +663,25 @@ const resources = {
         blog: "Blog"
       },
       salesChannels: {
-        title: "Autres canaux de vente assistée:"
+        title: "Autres canaux de vente assistée:",
+        channels: {
+          live: {
+            description: "Contactez votre conseiller maintenant",
+            buttonText: "Contactez"
+          },
+          whatsapp: {
+            description: "Faites vos demandes, écrivez-nous!",
+            buttonText: "Écrivez-nous"
+          },
+          phone: {
+            description: "Appelez-nous et nos cadres vous guideront à tout moment",
+            buttonText: "Appelez-nous"
+          },
+          store: {
+            description: "Visitez nos succursales à travers le pays",
+            buttonText: "Voir les succursales"
+          }
+        }
       },
       travelOptions: {
         title: "Tout ce que vous cherchez en un seul endroit",
