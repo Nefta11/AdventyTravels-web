@@ -13,15 +13,15 @@
 }
 
 .sales-channels h2 {
-    color: #333;
+    color: black;
     font-size: 24px;
     margin-bottom: 20px;
 }
 
 .sales-channels-title {
-    font-size: 24px;
+    font-size: 27px;
     font-weight: bold;
-    color: #1e1e1e;
+    color: black;
     margin-bottom: 20px;
 }
 
@@ -64,12 +64,12 @@
 .subtitle {
     font-size: 14px;
     font-weight: bold;
-    color: #555;
+    color: black;
 }
 
 .channel-card p {
     font-size: 14px;
-    color: #666;
+    color: black;
     margin-bottom: 10px;
 }
 
@@ -89,7 +89,7 @@
     max-width: 180px;
     margin: auto;
     margin-top: auto;
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 .channel-button:hover {
@@ -97,11 +97,19 @@
 }
 
 .no-underline {
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 /* Responsividad */
 @media (max-width: 800px) {
+
+    .sales-channels-title {
+        font-size: 23px;
+        font-weight: bold;
+        color: #1e1e1e;
+        margin-bottom: 20px;
+    }
+
     .channel-list {
         flex-wrap: wrap;
         justify-content: center;
@@ -113,7 +121,7 @@
     }
 
     .channel-icon {
-        font-size: 30px; 
+        font-size: 30px;
     }
 
     .channel-card h3 {
@@ -121,14 +129,14 @@
     }
 
     .subtitle {
-        font-size: 12px; 
+        font-size: 12px;
     }
 
     .channel-card p {
-        font-size: 12px; 
+        font-size: 12px;
     }
 
     .channel-button {
-        font-size: 10px; 
+        font-size: 10px;
     }
 }

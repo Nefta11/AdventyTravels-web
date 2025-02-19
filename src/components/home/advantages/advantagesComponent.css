@@ -49,16 +49,18 @@
 }
 
 .advantage-title {
-    font-size: 20px;
+    font-size: 27px;
     font-weight: bold;
     color: #1e1e1e;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .advantage-description {
+    margin-top: 5px;
     font-size: 16px;
     color: #555;
     line-height: 1.5;
+    text-align: justify;
 }
 
 @media (max-width: 800px) {
@@ -84,8 +86,8 @@
     }
 
     .advantage-title {
-        font-size: 17px;
-        margin-bottom: 7px;
+        font-size: 23px;
+        margin-bottom: 20px;
     }
 
     .advantage-description {

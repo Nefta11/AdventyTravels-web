@@ -7,14 +7,14 @@
 }
 
 .trending-container-title {
-    font-size: 24px;
+    font-size: 27px;
     font-weight: bolder;
     margin-bottom: 5px;
     color: black;
 }
 
 .trending-container p {
-    color: #666;
+    color: black;
     margin-bottom: 20px;
 }
 
@@ -84,6 +84,13 @@
 @media (max-width: 800px) {
     .trending-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .trending-container-title {
+        font-size: 23px;
+        font-weight: bolder;
+        margin-bottom: 5px;
+        color: black;
     }
 
     .destination-card {

@@ -1,6 +1,5 @@
 import './DiscoverStay.css';
 import { useTranslation } from 'react-i18next';
-import BlurText from '../../reactbitsComponents/BlurText';
 
 const DiscoverStay = () => {
     const { t } = useTranslation();
@@ -11,18 +10,16 @@ const DiscoverStay = () => {
         { name: "Cancun", country: "México", image: "https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/perfectStay/cancunH.webp" },
     ];
 
+    const handleCardClick = () => {
+        window.location.href = 'https://booking.adventytravels.com/';
+    };
+
     return (
         <div className="discover-stay-container">
-            <BlurText
-                text={t('discoverStay.title')}
-                delay={100}
-                animateBy='words'
-                direction='top'
-                className="discover-stay-title"
-            />
+            <h2 className='discover-stay-title'>{t('discoverStay.title')}</h2>
             <div className="city-grid">
                 {cities.map((city, index) => (
-                    <div key={index} className="city-card">
+                    <div key={index} className="city-card" onClick={handleCardClick}>
                         <img src={city.image} alt={city.name} className="city-image" />
                         <div className="city-info">
                             <h3>{city.name}</h3>

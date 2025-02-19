@@ -1,49 +1,43 @@
 import { FaVideo, FaWhatsapp, FaPhone, FaStore, FaArrowRight } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
-import BlurText from '../../reactbitsComponents/BlurText';
 import "./SalesChannels.css";
-
-const channels = [
-    {
-        icon: <FaVideo style={{ color: 'var(--color4)' }} />,
-        title: "En Vivo",
-        subtitle: "VIDEOLLAMADA",
-        description: "Contactar ahora a tu Asesor",
-        buttonText: "Contacta",
-    },
-    {
-        icon: <FaWhatsapp style={{ color: 'var(--color4)' }} />,
-        title: "WhatsApp",
-        description: "Realiza tus consultas ¡Escríbenos!",
-        buttonText: "Escríbenos",
-        link: "whatsapp://send?phone=5217716075321",
-    },
-    {
-        icon: <FaPhone style={{ color: 'var(--color4)' }} />,
-        title: "Contact Center",
-        description: "Llámanos y nuestros ejecutivos te orientarán en todo momento",
-        buttonText: "Llámanos",
-    },
-    {
-        icon: <FaStore style={{ color: 'var(--color4)' }} />,
-        title: "Sucursales",
-        description: "Visita nuestras sucursales a lo largo del país",
-        buttonText: "Ver Sucursales",
-        link: "https://goo.gl/maps/2VQLmc5pb8WYusUQ7",
-    },
-];
 
 const SalesChannels = () => {
     const { t } = useTranslation();
+    const channels = [
+        {
+            icon: <FaVideo style={{ color: 'var(--color3)' }} />,
+            title: "En Vivo",
+            subtitle: "VIDEOLLAMADA",
+            description: t('salesChannels.channels.live.description'),
+            buttonText: t('salesChannels.channels.live.buttonText'),
+        },
+        {
+            icon: <FaWhatsapp style={{ color: 'var(--color3)' }} />,
+            title: "WhatsApp",
+            description: t('salesChannels.channels.whatsapp.description'),
+            buttonText: t('salesChannels.channels.whatsapp.buttonText'),
+            link: "whatsapp://send?phone=5217716075321",
+        },
+        {
+            icon: <FaPhone style={{ color: 'var(--color3)' }} />,
+            title: "Contact Center",
+            description: t('salesChannels.channels.phone.description'),
+            buttonText: t('salesChannels.channels.phone.buttonText'),
+            link: "tel:+5217716075321",
+        },
+        {
+            icon: <FaStore style={{ color: 'var(--color3)' }} />,
+            title: "Sucursales",
+            description: t('salesChannels.channels.store.description'),
+            buttonText: t('salesChannels.channels.store.buttonText'),
+            link: "https://goo.gl/maps/2VQLmc5pb8WYusUQ7",
+        },
+    ];
+
     return (
         <div className="sales-channels">
-            <BlurText
-                text={t('salesChannels.title')}
-                delay={100}
-                animateBy='words'
-                direction='top'
-                className="sales-channels-title"
-            />
+            <h2 className="sales-channels-title">{t('salesChannels.title')}</h2>
             <div className="channel-list">
                 {channels.map((channel, index) => (
                     <div key={index} className="channel-card">

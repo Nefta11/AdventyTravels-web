@@ -15,10 +15,11 @@ const resources = {
         description: "Llena el formulario y llévate hasta un 10% de descuento.",
         firstName: "Nombres",
         lastName: "Apellidos",
-        arrivalDate: "Fecha de llegada DD/MM/YYYY",
-        numberOfTravelers: "Número de Viajeros",
-        message: "Escribanos aquí su consulta *",
-        submit: "¡Consulte Ahora!"
+        phoneNumber: "Número de teléfono",
+        whatsappNumber: "Número de WhatsApp",
+        selectState: "Selecciona un estado o región",
+        message: "Escribanos aquí su consulta",
+        submit: "Enviar"
       },
       tourSearch: {
         tours: "Tours",
@@ -84,7 +85,25 @@ const resources = {
         blog: "Blog"
       },
       salesChannels: {
-        title: "Otros canales de venta asistida:"
+        title: "Otros canales de venta asistida:",
+        channels: {
+          live: {
+            description: "Contactar ahora a tu Asesor",
+            buttonText: "Contacta"
+          },
+          whatsapp: {
+            description: "Realiza tus consultas ¡Escríbenos!",
+            buttonText: "Escríbenos"
+          },
+          phone: {
+            description: "Llámanos y nuestros ejecutivos te orientarán en todo momento",
+            buttonText: "Llámanos"
+          },
+          store: {
+            description: "Visita nuestras sucursales a lo largo del país",
+            buttonText: "Ver Sucursales"
+          }
+        }
       },
       travelOptions: {
         title: "Todo lo que buscas en un solo lugar",
@@ -101,20 +120,28 @@ const resources = {
         banks: [
           {
             name: "BBVA",
-            promotion: "Hasta 13 mensualidades sin intereses con",
+            promotion: "Hasta 18 mensualidades sin intereses",
           },
           {
             name: "Citibanamex",
-            promotion: "Hasta 6 mensualidades sin intereses con",
+            promotion: "Hasta 13 mensualidades sin intereses",
           },
           {
             name: "HSBC",
-            promotion: "Hasta 6 mensualidades sin intereses con",
+            promotion: "Hasta 12 mensualidades sin intereses",
           },
           {
             name: "AMEX",
-            promotion: "Hasta 6 mensualidades sin intereses con",
+            promotion: "Hasta 9 mensualidades sin intereses",
           },
+          {
+            name: "BANCOAZTECA",
+            promotion: "Hasta 18 mensualidades sin intereses"
+          },
+          {
+            name: "SANTANDER",
+            promotion: "Hasta 6 mensualidades sin intereses"
+          }
         ]
       },
       certifications: {
@@ -255,6 +282,12 @@ const resources = {
             note: "Al contratar cualquier servicio con Adventy Travels, el cliente declara haber leído, comprendido y aceptado estos Términos y Condiciones en su totalidad."
           }
         }
+      },
+      sweetAlert: {
+        successTitle: "Tu información se ha enviado con éxito",
+        successText: "En breve recibirás atención de nuestros asesores",
+        errorTitle: "Hubo un error",
+        errorText: "Intente de nuevo"
       }
     }
   },
@@ -271,10 +304,11 @@ const resources = {
         description: "Fill out the form and get up to 10% discount.",
         firstName: "First Name",
         lastName: "Last Name",
-        arrivalDate: "Arrival Date DD/MM/YYYY",
-        numberOfTravelers: "Number of Travelers",
-        message: "Write your query here *",
-        submit: "Consult Now!"
+        phoneNumber: "Phone Number",
+        whatsappNumber: "WhatsApp Number",
+        selectState: "Select a state or region",
+        message: "Write your inquiry here",
+        submit: "Send"
       },
       tourSearch: {
         tours: "Tours",
@@ -340,7 +374,25 @@ const resources = {
         blog: "Blog"
       },
       salesChannels: {
-        title: "Other assisted sales channels:"
+        title: "Other assisted sales channels:",
+        channels: {
+          live: {
+            description: "Contact your Advisor now",
+            buttonText: "Contact"
+          },
+          whatsapp: {
+            description: "Make your inquiries, write to us!",
+            buttonText: "Write to us"
+          },
+          phone: {
+            description: "Call us and our executives will guide you at all times",
+            buttonText: "Call us"
+          },
+          store: {
+            description: "Visit our branches throughout the country",
+            buttonText: "View Branches"
+          }
+        }
       },
       travelOptions: {
         title: "Everything you are looking for in one place",
@@ -357,27 +409,35 @@ const resources = {
         banks: [
           {
             name: "BBVA",
-            promotion: "Up to 13 interest-free installments with",
+            promotion: "Up to 18 interest-free installments",
           },
           {
             name: "Citibanamex",
-            promotion: "Up to  6 interest-free installments with",
+            promotion: "Up to  13 interest-free installments",
           },
           {
             name: "HSBC",
-            promotion: "Up to 6 interest-free installments with",
+            promotion: "Up to 12 interest-free installments",
           },
           {
             name: "AMEX",
-            promotion: "Up to 6 interest-free installments with",
+            promotion: "Up to 9 interest-free installments",
           },
+          {
+            name: "BANCOAZTECA",
+            promotion: "Up to 18 interest-free installments"
+          },
+          {
+            name: "SANTANDER",
+            promotion: "Up to 6 interest-free installments"
+          }
         ]
       },
       certifications: {
         secureText: "Safe Agency, Safe Purchase",
       },
       termsAndConditions: {
-        iHaveRead:"I have read and accept",
+        iHaveRead: "I have read and accept",
         title: "GENERAL TERMS AND CONDITIONS OF ADVENTY TRAVELS",
         lastUpdate: "Last update: 02/15/2025",
         intro: "This document sets forth the terms and conditions under which Adventy Travels, legally operated by Grupo Comercial Bracarda, offers its services as an intermediary in the marketing of travel and tourism services. By contracting our services, the client expressly and unconditionally accepts these terms and conditions.",
@@ -511,6 +571,12 @@ const resources = {
             note: "By contracting any service with Adventy Travels, the client declares to have read, understood, and accepted these Terms and Conditions in their entirety."
           }
         }
+      },
+      sweetAlert: {
+        successTitle: "Your information has been sent successfully",
+        successText: "You will receive attention from our advisors shortly",
+        errorTitle: "There was an error",
+        errorText: "Please try again"
       }
     }
   },
@@ -523,14 +589,15 @@ const resources = {
       gallery: "Galerie",
       contact: "Contact",
       travelForm: {
-        title: "Vous cherchez vos prochaines vacances?",
-        description: "Remplissez le formulaire et obtenez jusqu'à 10% de réduction.",
+        title: "Vous cherchez vos prochaines vacances ?",
+        description: "Remplissez le formulaire et obtenez jusqu'à 10 % de réduction.",
         firstName: "Prénom",
         lastName: "Nom de famille",
-        arrivalDate: "Date d'arrivée JJ/MM/AAAA",
-        numberOfTravelers: "Nombre de voyageurs",
-        message: "Écrivez votre question ici *",
-        submit: "Consultez maintenant!"
+        phoneNumber: "Numéro de téléphone",
+        whatsappNumber: "Numéro WhatsApp",
+        selectState: "Sélectionnez un état ou une région",
+        message: "Écrivez votre demande ici",
+        submit: "Envoyer"
       },
       tourSearch: {
         tours: "Tours",
@@ -596,7 +663,25 @@ const resources = {
         blog: "Blog"
       },
       salesChannels: {
-        title: "Autres canaux de vente assistée:"
+        title: "Autres canaux de vente assistée:",
+        channels: {
+          live: {
+            description: "Contactez votre conseiller maintenant",
+            buttonText: "Contactez"
+          },
+          whatsapp: {
+            description: "Faites vos demandes, écrivez-nous!",
+            buttonText: "Écrivez-nous"
+          },
+          phone: {
+            description: "Appelez-nous et nos cadres vous guideront à tout moment",
+            buttonText: "Appelez-nous"
+          },
+          store: {
+            description: "Visitez nos succursales à travers le pays",
+            buttonText: "Voir les succursales"
+          }
+        }
       },
       travelOptions: {
         title: "Tout ce que vous cherchez en un seul endroit",
@@ -613,20 +698,28 @@ const resources = {
         banks: [
           {
             name: "BBVA",
-            promotion: "Jusqu'à 13 mensualités sans intérêt avec",
+            promotion: "Jusqu'à 18 mensualités sans intérêt",
           },
           {
             name: "Citibanamex",
-            promotion: "Jusqu'à 6 mensualités sans intérêt avec",
+            promotion: "Jusqu'à 13 mensualités sans intérêt",
           },
           {
             name: "HSBC",
-            promotion: "Jusqu'à 6 mensualités sans intérêt avec",
+            promotion: "Jusqu'à 12 mensualités sans intérêt",
           },
           {
             name: "AMEX",
-            promotion: "Jusqu'à 6 mensualités sans intérêt avec",
+            promotion: "Jusqu'à 9 mensualités sans intérêt",
           },
+          {
+            name: "BANCOAZTECA",
+            promotion: "Jusqu'à 18 mensualités sans intérêt"
+          },
+          {
+            name: "SANTANDER",
+            promotion: "Jusqu'à 6 mensualités sans intérêt"
+          }
         ]
       },
       certifications: {
@@ -767,9 +860,13 @@ const resources = {
             "note": "En contractant tout service avec Adventy Travels, le client déclare avoir lu, compris et accepté intégralement ces conditions générales."
           }
         }
+      },
+      sweetAlert: {
+        successTitle: "Vos informations ont été envoyées avec succès",
+        successText: "Vous recevrez bientôt l'attention de nos conseillers",
+        errorTitle: "Il y a eu une erreur",
+        errorText: "Veuillez réessayer"
       }
-
-
     }
   }
 };

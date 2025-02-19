@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { FaBars, FaHome, FaSuitcase, FaInfoCircle, FaBlog, FaImages, FaEnvelope } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 import colors from '../../../utils/colors';
-import logo from '../../../../public/images/LOGOTIPO_OFICIAL.webp';
+import logo from '../../../assets/images/LOGOTIPO_OFICIAL.webp';
 import LanguageSelector from '../lenguaje/LanguageSelector';
 import NavItem from './NavItem';
 import './navComponent.css';

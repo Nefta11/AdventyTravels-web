@@ -55,7 +55,6 @@
 }
 
 .input-group input,
-.phone-input input,
 textarea {
     width: 100%;
     padding: 10px;
@@ -63,44 +62,47 @@ textarea {
     border-radius: 5px;
 }
 
-.email-phone-group {
-    display: flex;
-    gap: 10px;
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* Asegurar que el select se despliegue hacia abajo */
+    max-height: 200px; /* Ajusta la altura máxima según tu necesidad */
+    overflow-y: auto; /* Permite el desbordamiento vertical con barra de desplazamiento */
 }
 
-.email-input {
-    flex: 1;
-}
-
-.phone-input {
-    flex: 1;
-}
-
-.phone-input {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.checkbox-group {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    margin: 10px 0;
-}
 
 .submit-button {
     background: var(--color3);
     color: white;
     padding: 10px;
     border: none;
-    width: 100%;
-    border-radius: 12px;
+    width: 40%;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 .submit-button:hover {
     background-color: var(--color4);
+}
+
+.swal-overlay--success .swal-modal {
+    background-color: var(--color3);
+}
+
+.swal-overlay--error .swal-modal {
+    background-color: var(--color4);
+}
+
+.swal-button--success {
+    background-color: var(--color4);
+    color: white;
+}
+
+.swal-button--error {
+    background-color: var(--color3);
+    color: white;
 }
 
 @media (max-width: 800px) {
@@ -113,36 +115,23 @@ textarea {
         flex-direction: column;
     }
 
-    .input-group input,
-    .phone-input input,
-    textarea {
-        width: 100%;
-    }
-
-    .input-group {
-        display: flex;
-        flex-direction: column;
-    }
-
     .input-group:nth-child(1),
-    .input-group:nth-child(2),
-    .input-group:nth-child(3) {
+    .input-group:nth-child(2) {
         flex-direction: row;
     }
 
-    .phone-input {
+    .input-group input,
+    textarea,
+    select {
         width: 100%;
     }
 
-    .phone-input .form-control {
-        width: 100% !important;
+    .swal-modal {
+        width: 90%;
     }
 
-    .input-group input[type="date"] {
-        flex: 0.75;
-    }
-
-    .phone-input .form-control {
-        flex: 1.25;
+    .swal-button--success,
+    .swal-button--error {
+        width: 90%;
     }
 }

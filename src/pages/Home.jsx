@@ -8,7 +8,7 @@ import PromoBanner from "../components/home/banner/PromoBanner";
 import TrendingDestinations from "../components/home/destination/TrendingDestinationsComponent";
 import FooterComponent from "../components/home/footer/FooterComponent";
 import AdvantagesComponent from "../components/home/advantages/AdvantagesComponent";
-import PerfectStay from "../components/home/perfectStay/PerfectStay";
+//import PerfectStay from "../components/home/perfectStay/PerfectStay";
 import DiscoverStay from "../components/home/discoverStay/DiscoverStay";
 import HotelLogosGrid from "../components/home/banner/HotelLogosGrid";
 import SalesChannels from "../components/home/advantages/SalesChannels";
@@ -33,7 +33,7 @@ export default function Home() {
       {/* <TourSearch />*/}
       <PromoBanner />
       <TrendingDestinations />
-      <PerfectStay />
+      {/*<PerfectStay />*/}
       <DiscoverStay />
       <HotelLogosGrid />
       <AdvantagesComponent />

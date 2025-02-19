@@ -10,7 +10,9 @@ const BankPromotions = () => {
             'AMEX': 'https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/bank/AMEX.webp',
             'CITIBANAMEX': 'https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/bank/Citibanamex.webp',
             'BBVA': 'https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/bank/bbva.webp',
-            'HSBC': 'https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/bank/hsbc.webp'
+            'HSBC': 'https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/public/images/bank/hsbc.webp',
+            'BANCOAZTECA': 'https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/Dev-Update/src/assets/images/bank/BANCOAZTECA.webp',
+            'SANTANDER': 'https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/Dev-Update/src/assets/images/bank/SANTANDER.webp'
         };
         return urls[bankName.toUpperCase()] || '';
     };
