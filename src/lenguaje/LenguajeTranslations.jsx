@@ -145,7 +145,7 @@ const resources = {
         ]
       },
       certifications: {
-        secureText: "Agencia Segura, Compra Segura",
+        secureText: "Registros gubernamentales",
       },
       termsAndConditions: {
         iHaveRead: "He leído y acepto",
@@ -434,7 +434,7 @@ const resources = {
         ]
       },
       certifications: {
-        secureText: "Safe Agency, Safe Purchase",
+        secureText: "Government records",
       },
       termsAndConditions: {
         iHaveRead: "I have read and accept",
@@ -723,7 +723,7 @@ const resources = {
         ]
       },
       certifications: {
-        secureText: "Agence Sécurisée, Achat Sécurisé",
+        secureText: "Registres gouvernementaux",
       },
       "termsAndConditions": {
         "iHaveRead": "J'ai lu et j'accepte",
