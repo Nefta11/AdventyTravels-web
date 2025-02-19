@@ -22,6 +22,7 @@ const channels = [
         title: "Contact Center",
         description: "Llámanos y nuestros ejecutivos te orientarán en todo momento",
         buttonText: "Llámanos",
+        link: "tel:+5217716075321",
     },
     {
         icon: <FaStore style={{ color: 'var(--color3)' }} />,
