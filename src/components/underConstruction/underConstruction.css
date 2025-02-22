@@ -12,13 +12,13 @@
 }
 
 .construction-logo {
-    width: 50%;
-    max-width: 500px;
+    width: 40%; /* Cambiado de 50% a 40% */
+    max-width: 400px; /* Cambiado de 500px a 400px */
     margin-bottom: 20px;
 }
 
 .construction-title {
-    font-size: 2rem;
+    font-size: 2.5rem; /* Cambiado de 2rem a 2.5rem */
     font-weight: bold;
     margin-bottom: 10px;
     color: #333;
@@ -35,4 +35,31 @@
 .construction-gif {
     height: 250px;
     border: 5px solid var(--color3);
+}
+
+@media (max-width: 768px) {
+    .under-construction {
+        height: auto;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+
+    .construction-logo {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .construction-title {
+        font-size: 1.5rem;
+    }
+
+    .construction-text {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    .construction-gif {
+        height: 200px;
+    }
 }
