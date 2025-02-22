@@ -1,0 +1,37 @@
+.under-construction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    text-align: center;
+    padding: 20px;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    background-color: white;
+}
+
+.construction-logo {
+    width: 50%;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+.construction-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.construction-text {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.construction-gif {
+    height: 250px;
+    border: 5px solid var(--color3); /* Agregar borde alrededor del gif */
+}
