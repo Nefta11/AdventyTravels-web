@@ -31,7 +31,7 @@ const SalesChannels = () => {
             title: "Sucursales",
             description: t('salesChannels.channels.store.description'),
             buttonText: t('salesChannels.channels.store.buttonText'),
-            link: "https://goo.gl/maps/2VQLmc5pb8WYusUQ7",
+            link: "https://maps.app.goo.gl/HJwStKyVzAsN3ftF6",
         },
     ];
 
