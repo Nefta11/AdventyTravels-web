@@ -21,23 +21,24 @@
 .construction-logo {
     width: 200px;
     width: 300px;
-    margin-bottom: 5px;
+    margin-bottom: 1px;
 }
 
 .construction-title {
     font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 1px;
     color: var(--color3);
     margin-top: 40px;
 }
 
 .construction-text {
     font-size: 1.2rem;
-    color: #666;
+    color: var(--color4);
     max-width: 600px;
     line-height: 1.6;
-    margin-bottom: 5px;
+    margin-bottom: 1px;
+    font-weight: bold;
 }
 
 .construction-gif {
