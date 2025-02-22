@@ -11,6 +11,7 @@ const SalesChannels = () => {
             subtitle: "VIDEOLLAMADA",
             description: t('salesChannels.channels.live.description'),
             buttonText: t('salesChannels.channels.live.buttonText'),
+            link: "https://calendly.com/administracion-adventytravels",
         },
         {
             icon: <FaWhatsapp style={{ color: 'var(--color3)' }} />,
