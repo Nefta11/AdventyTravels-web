@@ -1,0 +1,81 @@
+/* 🎨 Definimos la paleta de colores */
+:root {
+    --color1: #F4F4F4;
+    --color2: #7DC1BD;
+    --color3: #E49F30;
+    --color4: #24455D;
+}
+
+.construction-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    /* Fondo claro */
+}
+
+.construction-logo {
+    width: 50%;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+.construction-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--color4);
+    /* Azul oscuro */
+}
+
+.construction-text {
+    font-size: 1.2rem;
+    color: var(--color4);
+    /* Azul oscuro */
+    max-width: 600px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: var(--color2);
+    /* Azul turquesa */
+    border-radius: 10px;
+    color: var(--color1);
+    /* Texto claro */
+}
+
+.construction-gif {
+    width: 40%;
+    max-width: 400px;
+    border: 3px solid var(--color3);
+    /* Borde naranja */
+    border-radius: 10px;
+}
+
+/* 📌 MEDIA QUERY para pantallas pequeñas */
+@media (max-width: 768px) {
+    .construction-container {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .construction-logo {
+        width: 70%;
+    }
+
+    .construction-title {
+        font-size: 1.8rem;
+    }
+
+    .construction-text {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+
+    .construction-gif {
+        width: 60%;
+    }
+}
