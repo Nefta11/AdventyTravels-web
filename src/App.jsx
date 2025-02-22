@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { I18nextProvider } from 'react-i18next';
 import LenguajeTranslations from './lenguaje/LenguajeTranslations';
 import Home from './pages/Home';
+import Experiences from './pages/Experiences';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <div className="container">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/experiencias" element={<Experiences />} />
           </Routes>
         </div>
       </BrowserRouter>
