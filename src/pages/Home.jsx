@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { motion } from 'framer-motion';
 import NavComponent from '../components/home/nav/navComponent';
 import CarouselComponent from "../components/home/carousel/carouselComponent";
 import WhatsAppIcon from "../components/generals/whatsAppComponent/WhatsAppIcon";
@@ -25,7 +26,11 @@ export default function Home() {
   }, []);
 
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       {showForm && <TravelForm />}
       <NavComponent />
       <CarouselComponent />
@@ -43,6 +48,6 @@ export default function Home() {
       {/* <TravelOptions /> */}
       <FooterComponent />
       <WhatsAppIcon />
-    </>
+    </motion.div>
   );
 }
