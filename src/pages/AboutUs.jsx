@@ -8,7 +8,7 @@ export default function AboutUs() {
     return (
         <>
             <NavComponent />
-            <UnderConstruction />
+            <UnderConstruction pageName="Nosotros" />
             <FooterComponent />
             <WhatsAppIcon />
         </>

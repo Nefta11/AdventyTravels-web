@@ -8,7 +8,7 @@ export default function Experiences() {
     return (
         <>
             <NavComponent />
-            <UnderConstruction />
+            <UnderConstruction pageName="Experiencias" />
             <FooterComponent />
             <WhatsAppIcon />
         </>

@@ -8,7 +8,7 @@ export default function Gallery() {
     return (
         <>
             <NavComponent />
-            <UnderConstruction />
+            <UnderConstruction pageName="Galería" />
             <FooterComponent />
             <WhatsAppIcon />
         </>

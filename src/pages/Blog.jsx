@@ -8,7 +8,7 @@ export default function Blog() {
     return (
         <>
             <NavComponent />
-            <UnderConstruction />
+            <UnderConstruction pageName="Blog" />
             <FooterComponent />
             <WhatsAppIcon />
         </>
