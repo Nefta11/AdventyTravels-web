@@ -9,8 +9,7 @@
 .nav-container {
     padding: 10px;
     background-color: var(--color1);
-    border-bottom: 3px solid var(--color1);
-    animation: borderColorChange 6s infinite;
+    border-bottom: 2px solid var(--color3);
 }
 
 .nav-content {
@@ -94,20 +93,4 @@
     z-index: 1000;
 }
 
-@keyframes borderColorChange {
-    0% {
-        border-color: var(--color1);
-    }
-    25% {
-        border-color: var(--color2);
-    }
-    50% {
-        border-color: var(--color3);
-    }
-    75% {
-        border-color: var(--color4);
-    }
-    100% {
-        border-color: var(--color1);
-    }
-}
+
