@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { FaBars, FaHome, FaSuitcase, FaInfoCircle, FaBlog, FaImages, FaEnvelope } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import colors from '../../../utils/colors';
 import logo from '../../../assets/images/LOGOTIPO_OFICIAL.webp';
 import LanguageSelector from '../lenguaje/LanguageSelector';
@@ -34,7 +35,9 @@ const NavComponent = () => {
                         <FaBars />
                     </div>
                     {/* Logo de la aplicación */}
-                    <img src={logo} alt="logo app" className="nav-logo" />
+                    <Link to="/">
+                        <img src={logo} alt="logo app" className="nav-logo" />
+                    </Link>
                     {/* Selector de idioma fuera de la lista en pantallas pequeñas */}
                     {isMobile && <LanguageSelector className="language-selector-mobile" />}
                 </div>
