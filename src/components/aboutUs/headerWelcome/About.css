@@ -40,7 +40,7 @@
 /* 🔽 Media query para pantallas de hasta 800px */
 @media (max-width: 800px) {
     .about-section {
-        height: 200px;
+        height: 170px;
         margin-top: 83.5px;
     }
 
