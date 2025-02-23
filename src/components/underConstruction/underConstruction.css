@@ -29,7 +29,7 @@
     font-weight: bold;
     margin-bottom: 1px;
     color: var(--color3);
-    margin-top: 40px;
+    margin-top: 70px;
 }
 
 .construction-text {
@@ -42,8 +42,8 @@
 }
 
 .construction-gif {
-    height: 280px;
-    margin-bottom: 35px;
+    height: 350px;
+    margin-bottom: 50px;
 }
 
 @media (max-width: 768px) {
