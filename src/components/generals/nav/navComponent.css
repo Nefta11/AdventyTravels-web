@@ -7,8 +7,7 @@
 }
 
 .nav-container {
-    padding: 10px;
-    background-color: var(--color1);
+    padding: 2px;
     border-bottom: 2px solid var(--color3);
 }
 
@@ -52,6 +51,9 @@
 
 /* Estilos responsivos */
 @media (max-width: 800px) {
+    .nav-container {
+        border-bottom: 1.5px solid var(--color3);
+    }
     .nav-header {
         flex-direction: row;
         justify-content: space-between;

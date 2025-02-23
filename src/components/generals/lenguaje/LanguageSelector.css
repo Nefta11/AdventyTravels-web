@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    margin: 5px;
 }
 
 .language-selector-button {
@@ -33,7 +33,7 @@
 .flag-icon {
     width: 20px; /* Reducir el tamaño de la bandera */
     height: 20px; /* Reducir el tamaño de la bandera */
-    margin-right: 6px; /* Ajustar el margen */
+    margin-right: 5px; /* Ajustar el margen */
 }
 
 .position-adjust {
