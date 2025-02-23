@@ -4,17 +4,14 @@ import NavComponent from '../components/home/nav/navComponent';
 import CarouselComponent from "../components/home/carousel/carouselComponent";
 import WhatsAppIcon from "../components/generals/whatsAppComponent/WhatsAppIcon";
 import TravelForm from "../components/generals/form/travelForm";
-//import TourSearch from "../components/home/searchF/TourSearchComponent";
 import PromoBanner from "../components/home/banner/PromoBanner";
 import TrendingDestinations from "../components/home/destination/TrendingDestinationsComponent";
 import FooterComponent from "../components/home/footer/FooterComponent";
 import AdvantagesComponent from "../components/home/advantages/AdvantagesComponent";
-//import PerfectStay from "../components/home/perfectStay/PerfectStay";
 import DiscoverStay from "../components/home/discoverStay/DiscoverStay";
 import HotelLogosGrid from "../components/home/banner/HotelLogosGrid";
 import SalesChannels from "../components/home/advantages/SalesChannels";
 import BankPromotions from "../components/home/banner/BankPromotions";
-//import TravelOptions from "../components/home/travel Options/TravelOptions"; 
 import Certifications from "../components/home/banner/Certifications";
 import ShopButton from "../components/home/searchF/ShopButton";
 
@@ -35,17 +32,14 @@ export default function Home() {
       <NavComponent />
       <CarouselComponent />
       <ShopButton />
-      {/* <TourSearch />*/}
       <PromoBanner />
       <TrendingDestinations />
-      {/*<PerfectStay />*/}
       <DiscoverStay />
       <HotelLogosGrid />
       <AdvantagesComponent />
       <BankPromotions />
       <SalesChannels />
       <Certifications />
-      {/* <TravelOptions /> */}
       <FooterComponent />
       <WhatsAppIcon />
     </motion.div>

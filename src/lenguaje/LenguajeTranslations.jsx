@@ -21,38 +21,6 @@ const resources = {
         message: "Escribanos aquí su consulta",
         submit: "Enviar"
       },
-      tourSearch: {
-        tours: "Tours",
-        flights: "Vuelos",
-        insurance: "Seguros",
-        hotel: "Hotel",
-        hotels: "Hotel + Vuelo",
-        findTour: "Encuentra tu tour ideal",
-        findFlight: "Encuentra tu vuelo ideal",
-        findInsurance: "Encuentra tu seguro ideal",
-        findHotel: "Encuentra tu hotel ideal",
-        findHotels: "Encuentra tu hotel + vuelo ideal",
-        region: "🌍 Región",
-        cityCountry: "📍 Ciudad, País",
-        month: "📅 Mes",
-        nights: "🌙 Noches",
-        search: "Buscar",
-        departureCity: "🚀 Ciudad de salida",
-        destinationCity: "🎯 Ciudad de destino",
-        departureDate: "📅 Fecha de salida",
-        returnDate: "📅 Fecha de regreso",
-        insuranceType: "🛡️ Tipo de seguro",
-        coverageAmount: "💰 Monto de cobertura",
-        startDate: "📅 Fecha de inicio",
-        endDate: "📅 Fecha de fin",
-        checkInDate: "📅 Fecha de entrada",
-        checkOutDate: "📅 Fecha de salida",
-        guests: "👥 Huéspedes"
-      },
-      perfectStay: {
-        title: "¿Buscas la estancia perfecta?",
-        subtitle: "Hoteles reservados después de búsquedas similares"
-      },
       discoverStay: {
         title: "Descubre hospedajes en los destinos más buscados"
       },
@@ -104,17 +72,6 @@ const resources = {
             buttonText: "Ver Sucursales"
           }
         }
-      },
-      travelOptions: {
-        title: "Todo lo que buscas en un solo lugar",
-        description: "Vuelos a todo el mundo, múltiples opciones de paquetes vuelo + hotel, la asistencia de viaje más completa y la mejor experiencia en tours lo encuentras en Adventy Travel. No importa el tipo de viajero que seas, tu edad o cuántos integrantes de tu familia vayan de vacaciones siempre tendremos la mejor atención para que tu aventura sea tal y como tú lo deseas.",
-        tabs: [
-          { name: "Seguros", content: ["Seguro de viaje Internacional", "Seguro de viaje España", "Seguro de viaje Europa", "Seguro de viaje Canadá", "Seguro de viaje Estados Unidos"] },
-          { name: "Hoteles", content: ["Hotel en Cancún", "Hotel en Madrid", "Hotel en París", "Hotel en Nueva York"] },
-          { name: "Tours Internacionales", content: ["Tour por Asia", "Tour por Europa", "Tour por Sudamérica"] },
-          { name: "Vuelos", content: ["Vuelos nacionales", "Vuelos internacionales", "Vuelos económicos"] },
-          { name: "Paquetes", content: ["Paquete todo incluido", "Paquete de aventura", "Paquete de lujo"] },
-        ]
       },
       bankPromotions: {
         title: "Promociones bancarias",
@@ -311,38 +268,7 @@ const resources = {
         message: "Write your inquiry here",
         submit: "Send"
       },
-      tourSearch: {
-        tours: "Tours",
-        flights: "Flights",
-        insurance: "Insurance",
-        hotel: "Hotel",
-        hotels: "Hotel + Flight",
-        findTour: "Find your ideal tour",
-        findFlight: "Find your ideal flight",
-        findInsurance: "Find your ideal insurance",
-        findHotel: "Find your ideal hotel",
-        findHotels: "Find your ideal hotel + flight",
-        region: "🌍 Region",
-        cityCountry: "📍 City, Country",
-        month: "📅 Month",
-        nights: "🌙 Nights",
-        search: "Search",
-        departureCity: "🚀 Departure City",
-        destinationCity: "🎯 Destination City",
-        departureDate: "📅 Departure Date",
-        returnDate: "📅 Return Date",
-        insuranceType: "🛡️ Insurance Type",
-        coverageAmount: "💰 Coverage Amount",
-        startDate: "📅 Start Date",
-        endDate: "📅 End Date",
-        checkInDate: "📅 Check-in Date",
-        checkOutDate: "📅 Check-out Date",
-        guests: "👥 Guests"
-      },
-      perfectStay: {
-        title: "Looking for the Perfect Stay?",
-        subtitle: "Hotels booked after similar searches"
-      },
+
       discoverStay: {
         title: "Discover stays in the most sought-after destinations"
       },
@@ -394,17 +320,6 @@ const resources = {
             buttonText: "View Branches"
           }
         }
-      },
-      travelOptions: {
-        title: "Everything you are looking for in one place",
-        description: "Flights around the world, multiple flight + hotel package options, the most complete travel assistance and the best experience in tours can be found at Advendty Travel. No matter what type of traveler you are, your age or how many family members are going on vacation, we will always have the best attention so that your adventure is just as you want it.",
-        tabs: [
-          { name: "Insurance", content: ["International Travel Insurance", "Spain Travel Insurance", "Europe Travel Insurance", "Canada Travel Insurance", "United States Travel Insurance"] },
-          { name: "Hotels", content: ["Hotel in Cancun", "Hotel in Madrid", "Hotel in Paris", "Hotel in New York"] },
-          { name: "International Tours", content: ["Tour of Asia", "Tour of Europe", "Tour of South America"] },
-          { name: "Flights", content: ["Domestic flights", "International flights", "Cheap flights"] },
-          { name: "Packages", content: ["All-inclusive package", "Adventure package", "Luxury package"] },
-        ]
       },
       bankPromotions: {
         title: "Bank promotions",
@@ -601,38 +516,6 @@ const resources = {
         message: "Écrivez votre demande ici",
         submit: "Envoyer"
       },
-      tourSearch: {
-        tours: "Tours",
-        flights: "Vols",
-        insurance: "Assurances",
-        hotel: "Hôtel",
-        hotels: "Hôtel + Vol",
-        findTour: "Trouvez votre tour idéal",
-        findFlight: "Trouvez votre vol idéal",
-        findInsurance: "Trouvez votre assurance idéale",
-        findHotel: "Trouvez votre hôtel idéal",
-        findHotels: "Trouvez votre hôtel + vol idéal",
-        region: "🌍 Région",
-        cityCountry: "📍 Ville, Pays",
-        month: "📅 Mois",
-        nights: "🌙 Nuits",
-        search: "Rechercher",
-        departureCity: "🚀 Ville de départ",
-        destinationCity: "🎯 Ville de destination",
-        departureDate: "📅 Date de départ",
-        returnDate: "📅 Date de retour",
-        insuranceType: "🛡️ Type d'assurance",
-        coverageAmount: "💰 Montant de la couverture",
-        startDate: "📅 Date de début",
-        endDate: "📅 Date de fin",
-        checkInDate: "📅 Date d'arrivée",
-        checkOutDate: "📅 Date de départ",
-        guests: "👥 Invités"
-      },
-      perfectStay: {
-        title: "Vous cherchez le séjour parfait?",
-        subtitle: "Hôtels réservés après des recherches similaires"
-      },
       discoverStay: {
         title: "Découvrez des séjours dans les destinations les plus recherchées"
       },
@@ -684,17 +567,6 @@ const resources = {
             buttonText: "Voir les succursales"
           }
         }
-      },
-      travelOptions: {
-        title: "Tout ce que vous cherchez en un seul endroit",
-        description: "Des vols autour du monde, de multiples options de forfaits vol + hôtel, l'assistance de voyage la plus complète et la meilleure expérience en tours se trouvent chez Adventy Travel. Peu importe le type de voyageur que vous êtes, votre âge ou le nombre de membres de votre famille qui partent en vacances, nous aurons toujours la meilleure attention pour que votre aventure soit exactement comme vous le souhaitez.",
-        tabs: [
-          { name: "Assurances", content: ["Assurance voyage internationale", "Assurance voyage Espagne", "Assurance voyage Europe", "Assurance voyage Canada", "Assurance voyage États-Unis"] },
-          { name: "Hôtels", content: ["Hôtel à Cancun", "Hôtel à Madrid", "Hôtel à Paris", "Hôtel à New York"] },
-          { name: "Tours internationaux", content: ["Tour d'Asie", "Tour d'Europe", "Tour d'Amérique du Sud"] },
-          { name: "Vols", content: ["Vols domestiques", "Vols internationaux", "Vols pas chers"] },
-          { name: "Forfaits", content: ["Forfait tout compris", "Forfait aventure", "Forfait de luxe"] },
-        ]
       },
       bankPromotions: {
         title: "Promotions bancaires",
