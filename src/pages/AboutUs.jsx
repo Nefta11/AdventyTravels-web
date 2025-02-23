@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import NavComponent from '../components/generals/nav/navComponent';
 import WhatsAppIcon from "../components/generals/whatsAppComponent/WhatsAppIcon";
 import FooterComponent from "../components/generals/footer/FooterComponent";
-import UnderConstruction from '../components/underConstruction/UnderConstruction';
+import About from "../components/aboutUs/headerWelcome/About";
 
 export default function AboutUs() {
 
@@ -13,7 +13,7 @@ export default function AboutUs() {
             exit={{ opacity: 0 }}
         >
             <NavComponent />
-            <UnderConstruction pageName="Nosotros" />
+            <About />
             <FooterComponent />
             <WhatsAppIcon />
         </motion.div>
