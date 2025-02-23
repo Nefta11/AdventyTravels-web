@@ -51,9 +51,14 @@
 
 /* Estilos responsivos */
 @media (max-width: 800px) {
+    .nav-menu-icon {
+        margin-left: 3.5px;
+    }
+
     .nav-container {
         border-bottom: 1.5px solid var(--color3);
     }
+
     .nav-header {
         flex-direction: row;
         justify-content: space-between;
@@ -95,5 +100,3 @@
     width: 100%;
     z-index: 1000;
 }
-
-
