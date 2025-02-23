@@ -13,9 +13,9 @@
     height: 80vh;
     text-align: center;
     padding: 20px;
-    margin-top: 90px;
-    margin-bottom: 0px;
-    background-color: white;
+    margin-top: 95px;
+    margin-bottom:120px;
+    background-color: var(--color1);
 }
 
 .construction-logo {
@@ -29,7 +29,7 @@
     font-weight: bold;
     margin-bottom: 1px;
     color: var(--color3);
-    margin-top: 70px;
+    margin-top: 190px;
 }
 
 .construction-text {
@@ -37,13 +37,33 @@
     color: var(--color4);
     max-width: 600px;
     line-height: 1.6;
-    margin-bottom: 1px;
+    margin-bottom: 15px;
     font-weight: bold;
 }
 
 .construction-gif {
     height: 350px;
     margin-bottom: 50px;
+    border: 5px solid var(--color1);
+    animation: borderColorChange 4s infinite;
+}
+
+@keyframes borderColorChange {
+    0% {
+        border-color: var(--color1);
+    }
+    25% {
+        border-color: var(--color2);
+    }
+    50% {
+        border-color: var(--color3);
+    }
+    75% {
+        border-color: var(--color4);
+    }
+    100% {
+        border-color: var(--color1);
+    }
 }
 
 @media (max-width: 768px) {
