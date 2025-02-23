@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, MenuItem, Button } from "@mui/material";
 import { useTranslation } from 'react-i18next';
 import "./LanguageSelector.css";
@@ -10,9 +10,13 @@ import enFlag from '../../../assets/images/usa.webp';
 import frFlag from '../../../assets/images/fra.webp';
 
 const LanguageSelector = () => {
-    const { i18n } = useTranslation();
+    const { i18n } = useTranslation(); 
     const [anchorEl, setAnchorEl] = useState(null);
-    const [selectedLanguage, setSelectedLanguage] = useState("es");
+    const [selectedLanguage, setSelectedLanguage] = useState(localStorage.getItem("selectedLanguage") || "es");
+
+    useEffect(() => {
+        i18n.changeLanguage(selectedLanguage);
+    }, [selectedLanguage, i18n]);
 
     const handleOpen = (event) => {
         setAnchorEl(event.currentTarget);
@@ -24,7 +28,7 @@ const LanguageSelector = () => {
 
     const handleLanguageChange = (lang) => {
         setSelectedLanguage(lang);
-        i18n.changeLanguage(lang);
+        localStorage.setItem("selectedLanguage", lang);
         handleClose();
     };
 

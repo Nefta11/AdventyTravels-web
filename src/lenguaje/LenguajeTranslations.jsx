@@ -246,6 +246,10 @@ const resources = {
         successText: "En breve recibirás atención de nuestros asesores",
         errorTitle: "Hubo un error",
         errorText: "Intente de nuevo"
+      },
+      underConstruction: {
+        title: "La sección de {{pageName}} está en construcción",
+        text: "Estamos trabajando para ofrecerte la mejor experiencia. ¡Vuelve pronto!"
       }
     }
   },
@@ -494,6 +498,10 @@ const resources = {
         successText: "You will receive attention from our advisors shortly",
         errorTitle: "There was an error",
         errorText: "Please try again"
+      },
+      underConstruction: {
+        title: "{{pageName}} section is under construction",
+        text: "We are working to offer you the best experience. Come back soon!"
       }
     }
   },
@@ -741,6 +749,10 @@ const resources = {
         successText: "Vous recevrez bientôt l'attention de nos conseillers",
         errorTitle: "Il y a eu une erreur",
         errorText: "Veuillez réessayer"
+      },
+      underConstruction: {
+        title: "La section {{pageName}} est en construction",
+        text: "Nous travaillons pour vous offrir la meilleure expérience. Revenez bientôt!"
       }
     }
   }
