@@ -11,7 +11,7 @@
     height: 405px;
     overflow: hidden;
     background-color: var(--color1);
-    margin-top: 130px;
+    margin-top: 120px;
     margin-bottom: 10px;
 }
 
@@ -65,7 +65,7 @@
     .carousel {
         height: 135px;
         /* 🔹 Se mantiene grande en móvil */
-        margin-top: 100px;
+        margin-top: 85px;
         margin-bottom: 20px;
     }
 
