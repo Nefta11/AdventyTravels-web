@@ -8,7 +8,6 @@
 .nav-item {
     position: relative;
     margin: 0 16px;
-    /* Separar un poco más los elementos */
     margin-top: -70px;
 }
 
@@ -36,6 +35,9 @@
     background-color: var(--color1);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1000;
+    padding: 12px;
+    border-radius: 4px;
+    list-style: none; /* Quitar viñetas */
 }
 
 .nav-item:hover .dropdown-menu,
@@ -45,13 +47,14 @@
 
 .dropdown-menu li {
     padding: 4px 8px;
-    /* Reducir el padding */
+    font-size: 14px;
 }
 
 .dropdown-menu li a {
-    font-size: 16px;
-    /* Reducir el tamaño de fuente */
+    font-size: 15px;
     color: var(--color4);
+    display: flex;
+    align-items: center;
 }
 
 .dropdown-menu li a:hover {
@@ -61,16 +64,12 @@
 .submenu-title {
     font-weight: bold;
     padding: 4px 8px;
-    /* Reducir el padding */
-    font-size: 15px;
-    /* Reducir el tamaño de fuente */
+    font-size: 14px;
 }
 
 .submenu-icon {
     margin-left: 10px;
-    /* Reducir el margen */
-    font-size: 16px;
-    /* Reducir el tamaño de fuente */
+    font-size: 20px;
 }
 
 /* Estilos responsivos */
@@ -79,23 +78,21 @@
         position: static;
         box-shadow: none;
         flex-direction: row;
-        /* Cambiar a fila para desplegar hacia enfrente */
+        display: none; /* Ocultar el submenú en dispositivos móviles */
     }
 
-    .nav-item:hover .dropdown-menu {
-        display: flex;
-    }
-
-    .nav-item .dropdown-menu {
-        display: flex;
-        flex-direction: row;
-        /* Cambiar a fila para desplegar hacia enfrente */
+    .nav-item .dropdown-menu.open {
+        display: flex; /* Mostrar el submenú cuando esté abierto */
+        flex-direction: column; /* Alinear elementos en columna */
+        background-color: var(--color1);
+        padding: 8px;
+        border-radius: 4px;
+        list-style: none; /* Quitar viñetas */
     }
 
     .nav-item {
         margin: 15px 0;
         text-align: left;
-        /* Centrar los elementos de la lista */
     }
 
     .nav-item a {

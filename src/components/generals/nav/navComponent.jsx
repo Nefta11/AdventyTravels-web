@@ -49,8 +49,7 @@ const NavComponent = () => {
                     <NavItem to="/nosotros" icon={FaInfoCircle} label={t('about')} menuOpen={menuOpen} />
                     <NavItem to="/blog" icon={FaBlog} label={t('blog')} menuOpen={menuOpen} />
                     <NavItem to="/galeria" icon={FaImages} label={t('gallery')} menuOpen={menuOpen} />
-                    <NavItem to="/contacto" icon={FaEnvelope} label={t('contact')} menuOpen={menuOpen} />
-                    {/* Selector de idioma dentro de la lista en pantallas grandes */}
+                    <NavItem  icon={FaEnvelope} label={t('contact')} menuOpen={menuOpen} submenu />
                     {!isMobile && <LanguageSelector className="language-selector-desktop" />}
                 </ul>
             </div>
