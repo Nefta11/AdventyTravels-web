@@ -10,20 +10,21 @@ const WhoWeAre = () => {
             </div>
             <div className="text-container">
                 <p>
-                    Somos una marca orgullosamente poblana y la primera Agencia de Viajes
-                    legalmente registrada en <strong>Xicotepec, Puebla</strong>. Fundada el 27 de marzo de 2019.
+                    <strong>Adventy Travels</strong> es una agencia de viajes 100% poblana, orgullosamente mexicana y legalmente
+                    constituida, <strong>con más de 6 años de experiencia en el sector turístico</strong>. Somos la primera agencia de
+                    viajes registrada legalmente ante la Secretaría de Turismo en <strong>Xicotepec de Juárez</strong>, Puebla, desde
+                    nuestra <strong>fundación el 27 de marzo de 2019</strong>.
                 </p>
                 <p>
-                    Nuestro equipo lo forman jóvenes profesionales mexicanos, comprometidos
-                    con mejorar la experiencia de nuestros viajeros innovando y capacitándose constantemente.
+                    Nos destacamos por ofrecer experiencias de viaje personalizadas y de alta calidad, <strong>con un equipo
+                    conformado por jóvenes profesionales comprometidos con la excelencia, la innovación y la
+                    capacitación constante</strong>. A lo largo de nuestra trayectoria, hemos recibido múltiples reconocimientos
+                    y certificaciones en los estados de Puebla e Hidalgo, que nos avalan como una agencia segura,
+                    confiable, responsable y totalmente legal.
                 </p>
                 <p>
-                    <strong>Contamos con más de 5 años de experiencia en el sector</strong>, y estamos
-                    registrados ante la Secretaría de Turismo (SECTUR) con el número de
-                    identificación <strong>0421197308708</strong>. Operamos bajo la representación legal
-                    de Grupo Comercial Barcera. Además, hemos recibido diferentes reconocimientos y
-                    capacitaciones en los estados de Puebla e Hidalgo, lo que nos avala como una
-                    <strong> agencia segura, confiable, responsable y totalmente legal.</strong>
+                    Operamos bajo la representación legal de <strong>GRUPO COMERCIAL BRACARDA</strong>, lo que nos permite
+                    ampliar nuestra red de servicios, garantizar el respaldo legal y operativo de nuestra empresa.
                 </p>
             </div>
         </section>

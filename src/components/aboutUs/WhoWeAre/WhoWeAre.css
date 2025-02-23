@@ -17,8 +17,8 @@
 
 .who-we-are .image-container {
     position: relative;
-    width: 50%;
-    height: 400px;
+    width: 55%;
+    height: 420px;
     background: url('/src/assets/images/aboutUs/aboutWere.webp') center/cover no-repeat;
 }
 
@@ -37,14 +37,14 @@
 
 .who-we-are .overlay h2 {
     color: white;
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: bold;
 }
 
 .who-we-are .text-container {
     width: 50%;
     color: #333;
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     line-height: 1.6;
 }
 
@@ -85,7 +85,6 @@
         font-size: 0.9rem;
         margin-bottom: 10px;
         text-align: justify;
-
     }
 
     .who-we-are .text-container strong {
