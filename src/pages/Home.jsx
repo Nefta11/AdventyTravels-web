@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { motion } from 'framer-motion';
-import NavComponent from '../components/home/nav/navComponent';
+import NavComponent from '../components/generals/nav/navComponent';
 import CarouselComponent from "../components/home/carousel/carouselComponent";
 import WhatsAppIcon from "../components/generals/whatsAppComponent/WhatsAppIcon";
 import TravelForm from "../components/generals/form/travelForm";
 import PromoBanner from "../components/home/banner/PromoBanner";
 import TrendingDestinations from "../components/home/destination/TrendingDestinationsComponent";
-import FooterComponent from "../components/home/footer/FooterComponent";
+import FooterComponent from "../components/generals/footer/FooterComponent";
 import AdvantagesComponent from "../components/home/advantages/AdvantagesComponent";
 import DiscoverStay from "../components/home/discoverStay/DiscoverStay";
 import HotelLogosGrid from "../components/home/banner/HotelLogosGrid";
