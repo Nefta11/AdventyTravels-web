@@ -13,7 +13,7 @@
     background-color: var(--color1);
     margin-top: 120px;
     margin-bottom: 10px;
-    background: url('/src//assets/images/aboutUs/aboutWere.jpg') center/cover no-repeat;
+    background: url('/src//assets/images/aboutUs/About1.jpg') center/cover no-repeat;
     filter: brightness(0.8);
 }
 
@@ -29,26 +29,12 @@
 }
 
 .text-container {
-    color: var(--color1);
+    color: white;
 }
 
 .text-container h1 {
-    font-size: 4.5rem;
+    font-size: 6rem;
     font-weight: bold;
-}
-
-.text-container .breadcrumb {
-    margin-top: 10px;
-    padding: 8px 16px;
-    background-color: var(--color2);
-    border-radius: 20px;
-    font-size: 1rem;
-    color: var(--color1);
-}
-
-.text-container .breadcrumb .active {
-    font-weight: bold;
-    color: var(--color4);
 }
 
 /* 🔽 Media query para pantallas de hasta 800px */
@@ -64,11 +50,7 @@
 
     .text-container h1 {
         font-size: 3rem;
+        font-weight: bold;
     }
 
-    .text-container .breadcrumb {
-        font-size: 0.8rem;
-        padding: 5px 10px;
-    }
 }
-
