@@ -14,7 +14,7 @@
     text-align: center;
     padding: 20px;
     margin-top: 90px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     background-color: white;
 }
 
@@ -42,7 +42,8 @@
 }
 
 .construction-gif {
-    height: 250px;
+    height: 280px;
+    margin-bottom: 35px;
 }
 
 @media (max-width: 768px) {
