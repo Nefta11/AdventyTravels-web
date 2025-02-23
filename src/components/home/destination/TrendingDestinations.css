@@ -54,7 +54,7 @@
 
 .destination-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .destination-card span {
