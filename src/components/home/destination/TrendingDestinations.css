@@ -52,6 +52,11 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
+.destination-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+}
+
 .destination-card span {
     background: rgba(0, 0, 0, 0.5);
     padding: 2px;
