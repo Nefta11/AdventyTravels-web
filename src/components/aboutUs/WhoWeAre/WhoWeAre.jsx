@@ -5,7 +5,7 @@ const WhoWeAre = () => {
     const { t } = useTranslation();
 
     return (
-        <section className="who-we-are">
+        <section className="who-we-are no-overlay-scroll">
             <div className="image-container">
                 <div className="overlay">
                     <h2>{t('whoWeAre.title')}</h2>

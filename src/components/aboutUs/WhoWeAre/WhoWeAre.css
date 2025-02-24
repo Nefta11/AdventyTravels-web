@@ -59,6 +59,11 @@
     font-weight: bold;
 }
 
+.no-overlay-scroll {
+    position: relative;
+    z-index: 1;
+}
+
 /* 🔽 Media query para pantallas de hasta 800px */
 @media (max-width: 800px) {
     .who-we-are {
