@@ -256,7 +256,8 @@ const resources = {
         description1: "<strong>Adventy Travels</strong> es una agencia de viajes 100% poblana, orgullosamente mexicana y legalmente constituida, <strong>con más de 6 años de experiencia en el sector turístico</strong>. Somos la primera agencia de viajes registrada legalmente ante la Secretaría de Turismo en <strong>Xicotepec de Juárez</strong>, Puebla, desde nuestra <strong>fundación el 27 de marzo de 2019</strong>.",
         description2: "Nos destacamos por ofrecer experiencias de viaje personalizadas y de alta calidad, <strong>con un equipo conformado por jóvenes profesionales comprometidos con la excelencia, la innovación y la capacitación constante</strong>. A lo largo de nuestra trayectoria, hemos recibido múltiples reconocimientos y certificaciones en los estados de Puebla e Hidalgo, que nos avalan como una agencia segura, confiable, responsable y totalmente legal.",
         description3: "Operamos bajo la representación legal de <strong>GRUPO COMERCIAL BRACARDA</strong>, lo que nos permite ampliar nuestra red de servicios, garantizar el respaldo legal y operativo de nuestra empresa."
-      }
+      },
+      aboutUsHeader: "Nosotros"
     }
   },
   en: {
@@ -514,7 +515,8 @@ const resources = {
         description1: "<strong>Adventy Travels</strong> is a 100% Pueblan travel agency, proudly Mexican and legally constituted, <strong>with more than 6 years of experience in the tourism sector</strong>. We are the first travel agency legally registered with the Ministry of Tourism in <strong>Xicotepec de Juárez</strong>, Puebla, since our <strong>foundation on March 27, 2019</strong>.",
         description2: "We stand out for offering personalized and high-quality travel experiences, <strong>with a team made up of young professionals committed to excellence, innovation, and constant training</strong>. Throughout our trajectory, we have received multiple recognitions and certifications in the states of Puebla and Hidalgo, which endorse us as a safe, reliable, responsible, and fully legal agency.",
         description3: "We operate under the legal representation of <strong>GRUPO COMERCIAL BRACARDA</strong>, which allows us to expand our service network, guaranteeing the legal and operational support of our company."
-      }
+      },
+      aboutUsHeader: "About Us"
     }
   },
   fr: {
@@ -771,7 +773,8 @@ const resources = {
         description1: "<strong>Adventy Travels</strong> est une agence de voyages 100% poblana, fièrement mexicaine et légalement constituée, <strong>avec plus de 6 ans d'expérience dans le secteur touristique</strong>. Nous sommes la première agence de voyages légalement enregistrée auprès du Secrétariat du Tourisme à <strong>Xicotepec de Juárez</strong>, Puebla, depuis notre <strong>fondation le 27 mars 2019</strong>.",
         description2: "Nous nous distinguons par offrir des expériences de voyage personnalisées et de haute qualité, <strong>avec une équipe composée de jeunes professionnels engagés dans l'excellence, l'innovation et la formation continue</strong>. Tout au long de notre trajectoire, nous avons reçu de nombreuses reconnaissances et certifications dans les états de Puebla et Hidalgo, qui nous approuvent comme une agence sûre, fiable, responsable et totalement légale.",
         description3: "Nous opérons sous la représentation légale de <strong>GRUPO COMERCIAL BRACARDA</strong>, ce qui nous permet d'élargir notre réseau de services, garantissant le soutien légal et opérationnel de notre entreprise."
-      }
+      },
+      aboutUsHeader: "À propos de nous"
     }
   }
 };
