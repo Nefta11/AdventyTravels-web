@@ -257,7 +257,42 @@ const resources = {
         description2: "Nos destacamos por ofrecer experiencias de viaje personalizadas y de alta calidad, <strong>con un equipo conformado por jóvenes profesionales comprometidos con la excelencia, la innovación y la capacitación constante</strong>. A lo largo de nuestra trayectoria, hemos recibido múltiples reconocimientos y certificaciones en los estados de Puebla e Hidalgo, que nos avalan como una agencia segura, confiable, responsable y totalmente legal.",
         description3: "Operamos bajo la representación legal de <strong>GRUPO COMERCIAL BRACARDA</strong>, lo que nos permite ampliar nuestra red de servicios, garantizar el respaldo legal y operativo de nuestra empresa."
       },
-      aboutUsHeader: "Nosotros"
+      aboutUsHeader: "Nosotros",
+      ourServices: "Nuestros Servicios",
+      services: {
+        hotelBooking: {
+          title: "Reserva de Hoteles",
+          description: "Gestionamos la reserva de hoteles alrededor del mundo, desde alojamientos económicos hasta lujosos resorts."
+        },
+        flightTickets: {
+          title: "Venta de Boletos Aéreos Nacionales e Internacionales",
+          description: "Compra y reserva de boletos aéreos con opciones personalizadas para encontrar las mejores tarifas."
+        },
+        packages: {
+          title: "Paquetes (Hotel + Tours) Nacional e Internacional",
+          description: "Combinamos hospedaje con tours y actividades en destinos nacionales e internacionales."
+        },
+        tours: {
+          title: "Tours y Actividades",
+          description: "Visitas guiadas, excursiones y actividades adaptadas a tus intereses en diferentes destinos."
+        },
+        transfers: {
+          title: "Traslados Privados o Compartidos",
+          description: "Coordinamos traslados desde y hacia aeropuertos, asegurando comodidad y puntualidad."
+        },
+        carRental: {
+          title: "Renta de Autos",
+          description: "Alquiler de vehículos en tus destinos de viaje con opciones variadas y flexibles."
+        },
+        cruises: {
+          title: "Cruceros",
+          description: "Reserva de cruceros con diferentes rutas y líneas de navegación para unas vacaciones en alta mar."
+        },
+        travelInsurance: {
+          title: "Seguro de Viajes",
+          description: "Seguros de viaje que cubren emergencias médicas, cancelaciones y pérdida de equipaje."
+        }
+      }
     }
   },
   en: {
@@ -516,7 +551,42 @@ const resources = {
         description2: "We stand out for offering personalized and high-quality travel experiences, <strong>with a team made up of young professionals committed to excellence, innovation, and constant training</strong>. Throughout our trajectory, we have received multiple recognitions and certifications in the states of Puebla and Hidalgo, which endorse us as a safe, reliable, responsible, and fully legal agency.",
         description3: "We operate under the legal representation of <strong>GRUPO COMERCIAL BRACARDA</strong>, which allows us to expand our service network, guaranteeing the legal and operational support of our company."
       },
-      aboutUsHeader: "About Us"
+      aboutUsHeader: "About Us",
+      ourServices: "Our Services",
+      services: {
+        hotelBooking: {
+          title: "Hotel Booking",
+          description: "We manage hotel reservations around the world, from budget accommodations to luxurious resorts."
+        },
+        flightTickets: {
+          title: "National and International Flight Tickets",
+          description: "Purchase and book airline tickets with personalized options to find the best rates."
+        },
+        packages: {
+          title: "Packages (Hotel + Tours) National and International",
+          description: "We combine lodging with tours and activities in national and international destinations."
+        },
+        tours: {
+          title: "Tours and Activities",
+          description: "Guided tours, excursions, and activities tailored to your interests in different destinations."
+        },
+        transfers: {
+          title: "Private or Shared Transfers",
+          description: "We coordinate transfers to and from airports, ensuring comfort and punctuality."
+        },
+        carRental: {
+          title: "Car Rental",
+          description: "Vehicle rental at your travel destinations with varied and flexible options."
+        },
+        cruises: {
+          title: "Cruises",
+          description: "Cruise reservations with different routes and cruise lines for a vacation at sea."
+        },
+        travelInsurance: {
+          title: "Travel Insurance",
+          description: "Travel insurance covering medical emergencies, cancellations, and lost luggage."
+        }
+      }
     }
   },
   fr: {
@@ -774,7 +844,42 @@ const resources = {
         description2: "Nous nous distinguons par offrir des expériences de voyage personnalisées et de haute qualité, <strong>avec une équipe composée de jeunes professionnels engagés dans l'excellence, l'innovation et la formation continue</strong>. Tout au long de notre trajectoire, nous avons reçu de nombreuses reconnaissances et certifications dans les états de Puebla et Hidalgo, qui nous approuvent comme une agence sûre, fiable, responsable et totalement légale.",
         description3: "Nous opérons sous la représentation légale de <strong>GRUPO COMERCIAL BRACARDA</strong>, ce qui nous permet d'élargir notre réseau de services, garantissant le soutien légal et opérationnel de notre entreprise."
       },
-      aboutUsHeader: "À propos de nous"
+      aboutUsHeader: "À propos de nous",
+      ourServices: "Nos Services",
+      services: {
+        hotelBooking: {
+          title: "Réservation d'Hôtels",
+          description: "Nous gérons la réservation d'hôtels dans le monde entier, des hébergements économiques aux complexes de luxe."
+        },
+        flightTickets: {
+          title: "Billets d'Avion Nationaux et Internationaux",
+          description: "Achat et réservation de billets d'avion avec des options personnalisées pour trouver les meilleurs tarifs."
+        },
+        packages: {
+          title: "Forfaits (Hôtel + Tours) Nationaux et Internationaux",
+          description: "Nous combinons l'hébergement avec des visites et des activités dans des destinations nationales et internationales."
+        },
+        tours: {
+          title: "Tours et Activités",
+          description: "Visites guidées, excursions et activités adaptées à vos intérêts dans différentes destinations."
+        },
+        transfers: {
+          title: "Transferts Privés ou Partagés",
+          description: "Nous coordonnons les transferts depuis et vers les aéroports, assurant confort et ponctualité."
+        },
+        carRental: {
+          title: "Location de Voitures",
+          description: "Location de véhicules dans vos destinations de voyage avec des options variées et flexibles."
+        },
+        cruises: {
+          title: "Croisières",
+          description: "Réservation de croisières avec différentes routes et compagnies de navigation pour des vacances en mer."
+        },
+        travelInsurance: {
+          title: "Assurance Voyage",
+          description: "Assurances voyage couvrant les urgences médicales, les annulations et la perte de bagages."
+        }
+      }
     }
   }
 };
