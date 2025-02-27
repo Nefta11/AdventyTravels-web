@@ -1,6 +1,7 @@
 import './OurServices.css';
 import { useTranslation } from 'react-i18next';
 import { FaHotel, FaPlane, FaSuitcase, FaMapMarkedAlt, FaShuttleVan, FaCar, FaShip, FaShieldAlt, FaPassport, FaStar } from 'react-icons/fa';
+import { useState } from 'react';
 
 const services = [
     { icon: <FaHotel />, title: 'services.hotelBooking.title', description: 'services.hotelBooking.description' },
@@ -17,14 +18,19 @@ const services = [
 
 const OurServices = () => {
     const { t } = useTranslation();
+    const [clickedIndex, setClickedIndex] = useState(null);
+
+    const handleCardClick = (index) => {
+        setClickedIndex(clickedIndex === index ? null : index);
+    };
 
     return (
         <section className="our-services-section">
-            <h2>{t('ourServices')}</h2>
+            <h2 className='title' >{t('ourServices')}</h2>
             <div className="services-container">
                 {services.map((service, index) => (
-                    <div key={index} className="service-card">
-                        <div className="service-card-inner">
+                    <div key={index} className="service-card" onClick={() => handleCardClick(index)}>
+                        <div className={`service-card-inner ${clickedIndex === index ? 'clicked' : ''}`}>
                             <div className="service-card-front">
                                 <div className="service-icon">{service.icon}</div>
                                 <h3>{t(service.title)}</h3>
