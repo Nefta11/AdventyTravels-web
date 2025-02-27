@@ -70,7 +70,7 @@
 }
 
 .service-card-back {
-    background: var(--color2);
+    color: var(--color4);
     transform: rotateY(180deg);
     display: flex;
     align-items: center;
