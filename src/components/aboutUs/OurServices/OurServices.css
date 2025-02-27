@@ -103,17 +103,3 @@
     }
 }
 
-@media (max-width: 480px) {
-    .services-container {
-        grid-template-columns: 1fr;
-    }
-
-    .service-card-inner {
-        height: 120px;
-    }
-
-    .service-card-front,
-    .service-card-back {
-        font-size: 0.8rem;
-    }
-}
