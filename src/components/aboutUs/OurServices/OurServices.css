@@ -66,7 +66,6 @@
     align-items: center;
     justify-content: center;
     font-size: 1rem;
-    /* Tamaño de letra manipulable */
 }
 
 .service-card-back {
@@ -77,7 +76,6 @@
     justify-content: center;
     padding: 1rem;
     font-size: 0.9rem;
-    /* Tamaño de letra manipulable */
 }
 
 .service-icon {
