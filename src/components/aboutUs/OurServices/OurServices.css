@@ -14,7 +14,7 @@
     font-size: 27px;
     font-weight: bolder;
     margin-bottom: 25px;
-    color: var(--color4);
+    color: black;
 }
 
 .services-container {
@@ -29,6 +29,11 @@
 .service-card {
     perspective: 1000px;
     /* 🔥 Necesario para el efecto 3D */
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
 }
 
 .service-card-inner {
@@ -55,6 +60,7 @@
     border-radius: 8px;
     padding: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--color4); /* Contorno de color #24455D */
 }
 
 .service-card-front {
