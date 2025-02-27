@@ -11,7 +11,7 @@
     height: 350px;
     overflow: hidden;
     background-color: var(--color1);
-    margin-top: 120px;
+    margin-top: 100px;
     margin-bottom: 10px;
     background: url('https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/feature/Fixed-abouUS/src/assets/images/aboutUs/About1.webp') center/cover no-repeat;
     filter: brightness(0.8);
