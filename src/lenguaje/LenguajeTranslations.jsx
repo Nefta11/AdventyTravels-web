@@ -291,6 +291,14 @@ const resources = {
         travelInsurance: {
           title: "Seguro de Viajes",
           description: "Seguros de viaje que cubren emergencias médicas, cancelaciones y pérdida de equipaje."
+        },
+        visaProcessing: {
+          title: "Trámite de Visas",
+          description: "Asesoramos y gestionamos el trámite de visas para facilitar tu entrada a países extranjeros, asegurándonos de cumplir con todos los requisitos necesarios."
+        },
+        experiencesEvents: {
+          title: "Experiencias y Eventos",
+          description: "Organizamos eventos especiales y experiencias únicas, como bodas, lunas de miel, y celebraciones personalizadas, para hacer de tu viaje una ocasión memorable."
         }
       }
     }
@@ -585,6 +593,14 @@ const resources = {
         travelInsurance: {
           title: "Travel Insurance",
           description: "Travel insurance covering medical emergencies, cancellations, and lost luggage."
+        },
+        visaProcessing: {
+          title: "Visa Processing",
+          description: "We advise and manage visa processing to facilitate your entry into foreign countries, ensuring all necessary requirements are met."
+        },
+        experiencesEvents: {
+          title: "Experiences and Events",
+          description: "We organize special events and unique experiences, such as weddings, honeymoons, and personalized celebrations, to make your trip a memorable occasion."
         }
       }
     }
@@ -878,6 +894,14 @@ const resources = {
         travelInsurance: {
           title: "Assurance Voyage",
           description: "Assurances voyage couvrant les urgences médicales, les annulations et la perte de bagages."
+        },
+        visaProcessing: {
+          title: "Traitement des Visas",
+          description: "Nous conseillons et gérons le traitement des visas pour faciliter votre entrée dans les pays étrangers, en veillant à ce que toutes les exigences nécessaires soient remplies."
+        },
+        experiencesEvents: {
+          title: "Expériences et Événements",
+          description: "Nous organisons des événements spéciaux et des expériences uniques, comme des mariages, des lunes de miel et des célébrations personnalisées, pour faire de votre voyage une occasion mémorable."
         }
       }
     }

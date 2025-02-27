@@ -1,6 +1,6 @@
 import './OurServices.css';
 import { useTranslation } from 'react-i18next';
-import { FaHotel, FaPlane, FaSuitcase, FaMapMarkedAlt, FaShuttleVan, FaCar, FaShip, FaShieldAlt } from 'react-icons/fa';
+import { FaHotel, FaPlane, FaSuitcase, FaMapMarkedAlt, FaShuttleVan, FaCar, FaShip, FaShieldAlt, FaPassport, FaStar } from 'react-icons/fa';
 
 const services = [
     { icon: <FaHotel />, title: 'services.hotelBooking.title', description: 'services.hotelBooking.description' },
@@ -10,7 +10,9 @@ const services = [
     { icon: <FaShuttleVan />, title: 'services.transfers.title', description: 'services.transfers.description' },
     { icon: <FaCar />, title: 'services.carRental.title', description: 'services.carRental.description' },
     { icon: <FaShip />, title: 'services.cruises.title', description: 'services.cruises.description' },
-    { icon: <FaShieldAlt />, title: 'services.travelInsurance.title', description: 'services.travelInsurance.description' }
+    { icon: <FaShieldAlt />, title: 'services.travelInsurance.title', description: 'services.travelInsurance.description' },
+    { icon: <FaPassport />, title: 'services.visaProcessing.title', description: 'services.visaProcessing.description' },
+    { icon: <FaStar />, title: 'services.experiencesEvents.title', description: 'services.experiencesEvents.description' }
 ];
 
 const OurServices = () => {
