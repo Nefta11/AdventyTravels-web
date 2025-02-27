@@ -5,7 +5,7 @@ import FooterComponent from "../components/generals/footer/FooterComponent";
 import About from "../components/aboutUs/headerWelcome/About";
 import WhoWeAre from '../components/aboutUs/WhoWeAre/WhoWeAre';
 import OurServices from '../components/aboutUs/OurServices/OurServices';
-import LocationMap from '../components/aboutUs/LocationMap';
+import LocationMap from '../components/aboutUs/locationMap/LocationMap';
 
 export default function AboutUs() {
 
