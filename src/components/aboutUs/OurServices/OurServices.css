@@ -18,19 +18,15 @@
 }
 
 .services-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
     /* Aumentar la separación entre las tarjetas */
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 .service-card {
-    flex: 1 1 calc(20% - 1rem);
-    max-width: 220px;
-    min-width: 170px;
     perspective: 1000px;
     /* 🔥 Necesario para el efecto 3D */
 }
@@ -93,8 +89,8 @@
         color: var(--color4);
     }
 
-    .service-card {
-        flex: 1 1 calc(50% - 1rem);
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .service-card-inner {
@@ -104,5 +100,20 @@
     .service-card-front,
     .service-card-back {
         font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card-inner {
+        height: 120px;
+    }
+
+    .service-card-front,
+    .service-card-back {
+        font-size: 0.8rem;
     }
 }
