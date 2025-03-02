@@ -5,19 +5,19 @@ const teamMembers = [
         id: 1,
         name: "Nombre 1",
         position: "Puesto de Trabajo",
-        image: "", 
+        image: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/feature/Fixed-abouUS/src/assets/images/aboutUs/members.webp", 
     },
     {
         id: 2,
         name: "Nombre 2",
         position: "Puesto de Trabajo",
-        image: "/path/to/image.jpg",
+        image: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/feature/Fixed-abouUS/src/assets/images/aboutUs/members.webp",
     },
     {
         id: 3,
         name: "Nombre 3",
         position: "Puesto de Trabajo",
-        image: "/path/to/image.jpg",
+        image: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/feature/Fixed-abouUS/src/assets/images/aboutUs/members.webp",
     },
 ];
 
