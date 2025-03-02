@@ -43,8 +43,7 @@
     text-align: justify;
 }
 
-.more-about-us .text-container p,
-.more-about-us .text-container ul {
+.more-about-us .text-container p {
     text-align: justify;
 }
 
@@ -52,6 +51,7 @@
     list-style-type: none;
     padding-left: 0;
     margin-bottom: 20px; 
+    text-align: left;
 }
 
 /* Responsividad */
