@@ -14,14 +14,10 @@
     border: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .location-map {
-        height: 300px;
+        height: 230px;
     }
 }
 
-@media (max-width: 480px) {
-    .location-map {
-        height: 200px;
-    }
-}
+
