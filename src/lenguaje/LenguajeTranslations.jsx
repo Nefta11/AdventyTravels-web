@@ -300,6 +300,22 @@ const resources = {
           title: "Experiencias y Eventos",
           description: "Organizamos eventos especiales y experiencias únicas, como bodas, lunas de miel, y celebraciones personalizadas, para hacer de tu viaje una ocasión memorable."
         }
+      },
+      moreAboutUs: {
+        title: "Más sobre nosotros",
+        description: "Adventy Travels mantiene cientos de convenios y contratos directos vigentes con importantes empresas del sector turístico. Estas alianzas nos permiten ofrecer tarifas competitivas y experiencias de viaje de primer nivel",
+        items: [
+          "Cadenas hoteleras nacionales e internacionales.",
+          "Brokers internacionales de viajes y hospedajes.",
+          "Discotecas y centros de entretenimiento.",
+          "Empresas de transporte público y privado.",
+          "Parques temáticos, acuáticos y zoológicos.",
+          "Operadoras turísticas nacionales e internacionales"
+        ],
+        teamTitle: "NUESTRO EQUIPO: COMPROMISO CON LOS JÓVENES",
+        teamDescription: "En Adventy Travels confiamos en el talento joven y apostamos por su crecimiento profesional. Todo nuestro personal está compuesto por jóvenes altamente capacitados",
+        agencyTitle: "UNA AGENCIA SEGURA, CONFIABLE Y LEGAL",
+        agencyDescription: "La confianza es fundamental en la industria del turismo, y en Adventy Travels nos comprometemos a brindar transparencia, calidad y seguridad en cada servicio. Como la primera agencia de viajes legalmente registrada en Xicotepec de Juárez, cumplimos con todas las normativas vigentes y contamos con el respaldo de la Secretaría de Turismo."
       }
     }
   },
@@ -602,6 +618,22 @@ const resources = {
           title: "Experiences and Events",
           description: "We organize special events and unique experiences, such as weddings, honeymoons, and personalized celebrations, to make your trip a memorable occasion."
         }
+      },
+      moreAboutUs: {
+        title: "More about us",
+        description: "Adventy Travels maintains hundreds of direct agreements and contracts with major companies in the tourism sector. These alliances allow us to offer competitive rates and top-notch travel experiences",
+        items: [
+          "National and international hotel chains.",
+          "International travel and lodging brokers.",
+          "Nightclubs and entertainment centers.",
+          "Public and private transportation companies.",
+          "Theme parks, water parks, and zoos.",
+          "National and international tour operators"
+        ],
+        teamTitle: "OUR TEAM: COMMITMENT TO YOUTH",
+        teamDescription: "At Adventy Travels, we trust in young talent and are committed to their professional growth. All our staff is made up of highly trained young people",
+        agencyTitle: "A SAFE, RELIABLE, AND LEGAL AGENCY",
+        agencyDescription: "Trust is fundamental in the tourism industry, and at Adventy Travels we are committed to providing transparency, quality, and safety in every service. As the first legally registered travel agency in Xicotepec de Juárez, we comply with all current regulations and have the backing of the Ministry of Tourism."
       }
     }
   },
@@ -903,6 +935,22 @@ const resources = {
           title: "Expériences et Événements",
           description: "Nous organisons des événements spéciaux et des expériences uniques, comme des mariages, des lunes de miel et des célébrations personnalisées, pour faire de votre voyage une occasion mémorable."
         }
+      },
+      moreAboutUs: {
+        title: "Plus sur nous",
+        description: "Adventy Travels maintient des centaines d'accords et de contrats directs avec des entreprises majeures du secteur touristique. Ces alliances nous permettent d'offrir des tarifs compétitifs et des expériences de voyage de premier ordre",
+        items: [
+          "Chaînes hôtelières nationales et internationales.",
+          "Courtiers internationaux en voyages et hébergements.",
+          "Discothèques et centres de divertissement.",
+          "Entreprises de transport public et privé.",
+          "Parcs à thème, parcs aquatiques et zoos.",
+          "Opérateurs touristiques nationaux et internationaux"
+        ],
+        teamTitle: "NOTRE ÉQUIPE: ENGAGEMENT ENVERS LES JEUNES",
+        teamDescription: "Chez Adventy Travels, nous faisons confiance aux jeunes talents et misons sur leur croissance professionnelle. Tout notre personnel est composé de jeunes hautement qualifiés",
+        agencyTitle: "UNE AGENCE SÛRE, FIABLE ET LÉGALE",
+        agencyDescription: "La confiance est fondamentale dans l'industrie du tourisme, et chez Adventy Travels, nous nous engageons à fournir transparence, qualité et sécurité dans chaque service. En tant que première agence de voyages légalement enregistrée à Xicotepec de Juárez, nous respectons toutes les réglementations en vigueur et bénéficions du soutien du Ministère du Tourisme."
       }
     }
   }

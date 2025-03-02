@@ -8,9 +8,16 @@ const MoreAboutUs = () => {
         <section className="more-about-us">
             <div className="text-container">
                 <h2>{t('moreAboutUs.title')}</h2>
-                <p className="highlight" dangerouslySetInnerHTML={{ __html: t('moreAboutUs.description1') }}></p>
-                <p dangerouslySetInnerHTML={{ __html: t('moreAboutUs.description2') }}></p>
-                <p dangerouslySetInnerHTML={{ __html: t('moreAboutUs.description3') }}></p>
+                <p>{t('moreAboutUs.description')}</p>
+                <ul>
+                    {t('moreAboutUs.items', { returnObjects: true }).map((item, index) => (
+                        <li key={index}>{item}</li>
+                    ))}
+                </ul>
+                <h3>{t('moreAboutUs.teamTitle')}</h3>
+                <p>{t('moreAboutUs.teamDescription')}</p>
+                <h3>{t('moreAboutUs.agencyTitle')}</h3>
+                <p>{t('moreAboutUs.agencyDescription')}</p>
             </div>
             <div className="image-container"></div>
         </section>

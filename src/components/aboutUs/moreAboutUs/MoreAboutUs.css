@@ -31,10 +31,25 @@
 }
 
 .more-about-us .image-container {
-    width: 45%;
-    height: 300px;
+    width: 480px;
+    height: 560px;
     border-radius: 15px;
     background: url('https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/feature/Fixed-abouUS/src/assets/images/aboutUs/oficce.webp') center/cover no-repeat;
+}
+
+.more-about-us .justified {
+    text-align: justify;
+}
+
+.more-about-us .text-container p,
+.more-about-us .text-container ul {
+    text-align: justify;
+}
+
+.more-about-us .text-container ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 20px; 
 }
 
 /* Responsividad */
