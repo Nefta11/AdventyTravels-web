@@ -7,7 +7,7 @@ import WhoWeAre from '../components/aboutUs/WhoWeAre/WhoWeAre';
 import OurServices from '../components/aboutUs/OurServices/OurServices';
 import LocationMap from '../components/aboutUs/locationMap/LocationMap';
 import MoreAboutUs from '../components/aboutUs/moreAboutUs/MoreAboutUs';
-import TeamMembers from '../components/aboutUs/teamMem/TeamMembers';
+import TeamSection from '../components/aboutUs/teamMem/TeamSection';
 
 export default function AboutUs() {
 
@@ -21,7 +21,7 @@ export default function AboutUs() {
             <About />
             <WhoWeAre />
             <MoreAboutUs />
-            <TeamMembers />
+            <TeamSection />
             <OurServices />
             <LocationMap />
             <FooterComponent />
