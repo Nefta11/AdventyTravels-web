@@ -320,6 +320,11 @@ const resources = {
       },
       hotelLogosGrid: {
         title: "Los mejores hoteles"
+      },
+      error404: {
+        title: "Error 404",
+        message: "La página que estás buscando no existe.",
+        link: "Volver al inicio"
       }
     }
   },
@@ -642,6 +647,11 @@ const resources = {
       },
       hotelLogosGrid: {
         title: "The best hotels"
+      },
+      error404: {
+        title: "Error 404",
+        message: "The page you are looking for does not exist.",
+        link: "Go back to home"
       }
     }
   },
@@ -963,6 +973,11 @@ const resources = {
       },
       hotelLogosGrid: {
         title: "Les meilleurs hôtels"
+      },
+      error404: {
+        title: "Erreur 404",
+        message: "La page que vous recherchez n'existe pas.",
+        link: "Retour à l'accueil"
       }
     }
   }

@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import './Error404.css';
 import errorGif from './error.gif'; // Asegúrate de tener el archivo error.gif en la misma carpeta
 
 function Error404() {
+    const { t } = useTranslation();
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -24,7 +27,7 @@ function Error404() {
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.5 }}
             >
-                Error 404
+                {t('error404.title')}
             </motion.h1>
             <motion.p
                 className="error-message"
@@ -32,7 +35,7 @@ function Error404() {
                 animate={{ x: 0 }}
                 transition={{ type: 'spring', stiffness: 50 }}
             >
-                La página que estás buscando no existe.
+                {t('error404.message')}
             </motion.p>
             <motion.a
                 href="/"
@@ -43,7 +46,7 @@ function Error404() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
             >
-                Volver al inicio
+                {t('error404.link')}
             </motion.a>
         </motion.div>
     );
