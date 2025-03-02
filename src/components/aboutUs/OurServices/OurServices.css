@@ -101,16 +101,14 @@
     }
 
     .service-card-inner {
-        height: 117px;
-        width: 112px;
-        margin-left: -9px;
+        height: 100px;
     }
 
     .service-card-front{
         font-size: 8.6px;
     }
     .service-card-back {
-        font-size: 9px;
+        font-size: 7.5px;
     }
 
     .service-card:nth-child(10) {
