@@ -23,6 +23,9 @@ const HotelLogosGrid = () => {
     const handleMouseEnter = () => setIsPaused(true);
     const handleMouseLeave = () => setIsPaused(false);
 
+    const handleTouchStart = () => setIsPaused(true);
+    const handleTouchEnd = () => setIsPaused(false);
+
     return (
         <div className="carousel-container">
             <h2 className="carousel-title">{t('hotelLogosGrid.title')}</h2>
@@ -30,6 +33,8 @@ const HotelLogosGrid = () => {
                 className={`carousel-track ${isPaused ? "paused" : ""}`} 
                 onMouseEnter={handleMouseEnter} 
                 onMouseLeave={handleMouseLeave}
+                onTouchStart={handleTouchStart}
+                onTouchEnd={handleTouchEnd}
             >
                 {logosDuplicated.map((logo, index) => (
                     <div key={index} className="hotel-logo-item">
