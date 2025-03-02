@@ -18,6 +18,10 @@
     align-items: center; /* Alinea los logos verticalmente al centro */
 }
 
+.carousel-track.paused {
+    animation-play-state: paused;
+}
+
 .hotel-logo-item {
     flex: 0 0 auto;
     max-width: 120px;
@@ -49,6 +53,25 @@
     margin-bottom: 1rem;
 }
 
+.separator-line {
+    width: 100%;
+    height: 2px;
+    background-color: #ccc;
+}
+
+.pause-button {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 /* Responsividad para pantallas pequeñas */
 @media (max-width: 800px) {
     .carousel-track {
@@ -59,7 +82,8 @@
         font-size: 23px;
         font-weight: bolder;
         margin-bottom: 5px;
-        color: black;    }
+        color: black;    
+    }
 
     .hotel-logo-item {
         max-width: 90px;
@@ -70,5 +94,9 @@
         height: auto;
         max-width: 100px;
         object-fit: contain;
+    }
+
+    .pause-button {
+        display: block;
     }
 }

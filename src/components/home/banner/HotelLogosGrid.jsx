@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import "./HotelLogosGrid.css";
 
 const hotelLogos = [
@@ -15,16 +16,30 @@ const hotelLogos = [
 const logosDuplicated = [...hotelLogos, ...hotelLogos];
 
 const HotelLogosGrid = () => {
+    const [isPaused, setIsPaused] = useState(false);
+
+    const handleMouseEnter = () => setIsPaused(true);
+    const handleMouseLeave = () => setIsPaused(false);
+    const togglePause = () => setIsPaused(!isPaused);
+
     return (
         <div className="carousel-container">
-            <h2 className="carousel-title">Los mejores hoteles</h2> {/* Título agregado */}
-            <div className="carousel-track">
+            <h2 className="carousel-title">Los mejores hoteles</h2>
+            <div 
+                className={`carousel-track ${isPaused ? "paused" : ""}`} 
+                onMouseEnter={handleMouseEnter} 
+                onMouseLeave={handleMouseLeave}
+            >
                 {logosDuplicated.map((logo, index) => (
                     <div key={index} className="hotel-logo-item">
                         <img src={logo.src} alt={logo.alt} />
                     </div>
                 ))}
             </div>
+            <div className="separator-line"></div>
+            <button className="pause-button" onClick={togglePause}>
+                {isPaused ? "Play" : "Pause"}
+            </button>
         </div>
     );
 };
