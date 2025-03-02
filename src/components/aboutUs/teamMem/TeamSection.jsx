@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 import "./TeamSection.css";
 
 const teamMembers = [
@@ -33,6 +34,7 @@ const teamMembers = [
 ];
 
 const TeamSection = () => {
+    const { t } = useTranslation();
     const [selectedMember, setSelectedMember] = useState(null);
 
     const handleCardClick = (member) => {
@@ -45,8 +47,8 @@ const TeamSection = () => {
 
     return (
         <section className="team-section">
-            <h2 className="section-title">¡CONÓCENOS!</h2>
-            <h3 className="section-subtitle">Familia Good Travel</h3>
+            <h2 className="section-title">{t('sectionTitles.knowUs')}</h2>
+            <h3 className="section-subtitle">{t('sectionTitles.adventyFamily')}</h3>
             <div className="team-container">
                 {teamMembers.map((member) => (
                     <div key={member.id} className="team-card" onClick={() => handleCardClick(member)}>

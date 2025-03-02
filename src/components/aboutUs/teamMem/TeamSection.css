@@ -12,14 +12,14 @@
 }
 
 .section-title {
-    font-size: 16px;
+    font-size: 27px;
     font-weight: bold;
     color: var(--color4);
-    text-transform: uppercase;
+    margin-bottom: 1rem;
 }
 
 .section-subtitle {
-    font-size: 28px;
+    font-size: 25px;
     font-weight: bold;
     color: black;
     margin-bottom: 2rem;
@@ -102,11 +102,26 @@
         gap: 1rem;
     }
 
+    .section-title {
+        font-size: 23px;
+        font-weight: bolder;
+        margin-bottom: 5px;
+        color: var(--color4);
+    }
+    
+    .section-subtitle {
+        font-size: 20px;
+        font-weight: bolder;
+        color: black;
+        margin-bottom: 1rem;
+    }
+
     .team-card {
         max-width: 100%;
     }
 
     .overlay-text {
-        font-size: 14px; /* Reducir el tamaño del texto de descripción */
+        font-size: 14px;
+        /* Reducir el tamaño del texto de descripción */
     }
 }
