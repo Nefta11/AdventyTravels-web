@@ -310,7 +310,7 @@ const resources = {
           "*Discotecas y centros de entretenimiento.",
           "*Empresas de transporte público y privado.",
         ],
-        teamTitle: "NUESTRO EQUIPO: COMPROMISO CON LOS JÓVENES",
+        teamTitle: "Nustro Equipo: compromiso con los jovenes",
         teamDescription: "En Adventy Travels confiamos en el talento joven y apostamos por su crecimiento profesional. Todo nuestro personal está compuesto por jóvenes altamente capacitados y comprometidos, listos para atender cualquier consulta y garantizar la mejor experiencia de viaje.",
         agencyDescription: "La confianza es fundamental en la industria del turismo, y en Adventy Travels nos comprometemos a brindar transparencia, calidad y seguridad en cada servicio. Como la primera agencia de viajes legalmente registrada en Xicotepec de Juárez, cumplimos con todas las normativas vigentes y contamos con el respaldo de la Secretaría de Turismo."
       },
@@ -629,7 +629,7 @@ const resources = {
           "*Nightclubs and entertainment centers.",
           "*Public and private transportation companies.",
         ],
-        teamTitle: "OUR TEAM: COMMITMENT TO YOUTH",
+        teamTitle: "Our Team: commitment to young people",
         teamDescription: "At Adventy Travels, we trust in young talent and are committed to their professional growth. All our staff is made up of highly trained young people who are committed, ready to assist with any inquiry, and ensure the best travel experience.",
         agencyDescription: "Trust is fundamental in the tourism industry, and at Adventy Travels we are committed to providing transparency, quality, and safety in every service. As the first legally registered travel agency in Xicotepec de Juárez, we comply with all current regulations and have the backing of the Ministry of Tourism."
       },
@@ -947,7 +947,7 @@ const resources = {
           "*Discothèques et centres de divertissement.",
           "*Entreprises de transport public et privé.",
         ],
-        teamTitle: "NOTRE ÉQUIPE: ENGAGEMENT ENVERS LES JEUNES",
+        teamTitle: "Notre Équipe : engagement envers les jeunes",
         teamDescription: "Chez Adventy Travels, nous faisons confiance aux jeunes talents et misons sur leur croissance professionnelle. Tout notre personnel est composé de jeunes hautement qualifiés et engagés, prêts à répondre à toute demande et à garantir la meilleure expérience de voyage.",
         agencyDescription: "La confiance est fondamentale dans l'industrie du tourisme, et chez Adventy Travels, nous nous engageons à fournir transparence, qualité et sécurité dans chaque service. En tant que première agence de voyages légalement enregistrée à Xicotepec de Juárez, nous respectons toutes les réglementations en vigueur et bénéficions du soutien du Ministère du Tourisme."
       },

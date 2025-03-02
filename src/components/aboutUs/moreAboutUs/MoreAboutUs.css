@@ -22,7 +22,11 @@
     margin-bottom: 15px;
     text-align: justify;
 }
-
+.sub{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: start;
+}
 .more-about-us .text-container p {
     margin-bottom: 15px;
     font-size: 1.0rem;

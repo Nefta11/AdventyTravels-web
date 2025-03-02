@@ -14,7 +14,7 @@ const MoreAboutUs = () => {
                         <li key={index}>{item}</li>
                     ))}
                 </ul>
-                <h3>{t('moreAboutUs.teamTitle')}</h3>
+                <h3 className="sub">{t('moreAboutUs.teamTitle')}</h3>
                 <p>{t('moreAboutUs.teamDescription')}</p>
                 <p>{t('moreAboutUs.agencyDescription')}</p>
             </div>
