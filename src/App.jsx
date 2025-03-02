@@ -7,6 +7,7 @@ import Experiences from './pages/Experiences';
 import AboutUs from './pages/AboutUs';
 import Gallery from './pages/Gallery';
 import Blog from './pages/Blog';
+import Error404 from './pages/pagError/Error404';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function RoutesWithAnimation() {
       <Route path="/nosotros" element={<AboutUs />} />
       <Route path="/galeria" element={<Gallery />} />
       <Route path="/blog" element={<Blog />} />
+      <Route path="*" element={<Error404 />} />
     </Routes>
   );
 }
