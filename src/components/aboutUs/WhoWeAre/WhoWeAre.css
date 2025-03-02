@@ -46,7 +46,7 @@
 
 .who-we-are .text-container {
     width: 50%;
-    color: #333;
+    color: #000;
     font-size: 1.0rem;
     line-height: 1.6;
 }
@@ -80,7 +80,7 @@
     }
 
     .who-we-are .overlay h2 {
-        font-size: 2rem;
+        font-size: 27px;
         padding: 0 10px;
     }
 
@@ -91,7 +91,7 @@
     }
 
     .who-we-are .text-container p {
-        font-size: 0.9rem;
+        font-size: 12px;
         margin-bottom: 10px;
         text-align: justify;
     }

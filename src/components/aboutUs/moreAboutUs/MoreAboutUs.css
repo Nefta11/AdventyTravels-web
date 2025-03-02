@@ -1,3 +1,10 @@
+:root{
+    --color1: #F4F4F4;
+    --color2: #7DC1BD;
+    --color3: #E49F30;
+    --color4: #24455D;
+}
+
 /* MoreAboutUs.css */
 .more-about-us {
     display: flex;
@@ -11,25 +18,27 @@
 
 .more-about-us .text-container {
     width: 50%;
-    color: "black";
+    color: #000;
     font-size: 1.0rem;
     line-height: 1.6;
 }
 
 .more-about-us .text-container h2  {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: bold;
     margin-bottom: 15px;
     text-align: justify;
 }
 .sub{
-    font-size: 20px;
+    font-size: 1.0rem;
     font-weight: bold;
     text-align: start;
 }
 .more-about-us .text-container p {
     margin-bottom: 15px;
     font-size: 1.0rem;
+    text-align: justify;
+    color: #000;
 }
 
 .more-about-us .text-container .highlight {
@@ -44,10 +53,6 @@
 }
 
 .more-about-us .justified {
-    text-align: justify;
-}
-
-.more-about-us .text-container p {
     text-align: justify;
 }
 
@@ -75,22 +80,26 @@
 
     .more-about-us .text-container h2  {
         font-size: 2rem;
-        padding: 0 1px;
+        padding: 0 10px;
     }
 
     .more-about-us .text-container p {
-        font-size: 0.9rem;
-        margin-bottom: 5px;
+        font-size: 12px;
+        margin-bottom: 10px;
         text-align: justify;
     }
 
     .more-about-us .text-container .highlight {
-        font-size: 0.9rem;
+        font-size: 12px;
         text-align: justify;
     }
 
     .more-about-us .image-container {
         width: 100%;
         height: 250px;
+    }
+
+    .more-about-us .text-container ul {
+        font-size: 12px;
     }
 }
