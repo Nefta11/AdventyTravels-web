@@ -16,10 +16,11 @@
     line-height: 1.6;
 }
 
-.more-about-us .text-container h2 {
+.more-about-us .text-container h2  {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 15px;
+    text-align: justify;
 }
 
 .more-about-us .text-container p {

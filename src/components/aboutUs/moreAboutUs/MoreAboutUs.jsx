@@ -16,7 +16,6 @@ const MoreAboutUs = () => {
                 </ul>
                 <h3>{t('moreAboutUs.teamTitle')}</h3>
                 <p>{t('moreAboutUs.teamDescription')}</p>
-                <h3>{t('moreAboutUs.agencyTitle')}</h3>
                 <p>{t('moreAboutUs.agencyDescription')}</p>
             </div>
             <div className="image-container"></div>
