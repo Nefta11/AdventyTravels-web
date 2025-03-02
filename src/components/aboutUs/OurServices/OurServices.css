@@ -101,7 +101,9 @@
     }
 
     .service-card-inner {
-        height: 100px;
+        height: 115px;
+        width: 110px;
+        margin-left: -9px;
     }
 
     .service-card-front{
