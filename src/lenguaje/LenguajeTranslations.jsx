@@ -317,6 +317,9 @@ const resources = {
       sectionTitles: {
         knowUs: "¡CONÓCENOS!",
         adventyFamily: "Familia Adventy Travels"
+      },
+      hotelLogosGrid: {
+        title: "Los mejores hoteles"
       }
     }
   },
@@ -636,6 +639,9 @@ const resources = {
       sectionTitles: {
         knowUs: "GET TO KNOW US!",
         adventyFamily: "Adventy Travels Family"
+      },
+      hotelLogosGrid: {
+        title: "The best hotels"
       }
     }
   },
@@ -954,6 +960,9 @@ const resources = {
       sectionTitles: {
         knowUs: "FAITES CONNAISSANCE AVEC NOUS!",
         adventyFamily: "Famille Adventy Travels"
+      },
+      hotelLogosGrid: {
+        title: "Les meilleurs hôtels"
       }
     }
   }

@@ -1,4 +1,5 @@
-import  { useState } from "react";
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import "./HotelLogosGrid.css";
 
 const hotelLogos = [
@@ -17,13 +18,14 @@ const logosDuplicated = [...hotelLogos, ...hotelLogos];
 
 const HotelLogosGrid = () => {
     const [isPaused, setIsPaused] = useState(false);
+    const { t } = useTranslation();
 
     const handleMouseEnter = () => setIsPaused(true);
     const handleMouseLeave = () => setIsPaused(false);
 
     return (
         <div className="carousel-container">
-            <h2 className="carousel-title">Los mejores hoteles</h2>
+            <h2 className="carousel-title">{t('hotelLogosGrid.title')}</h2>
             <div 
                 className={`carousel-track ${isPaused ? "paused" : ""}`} 
                 onMouseEnter={handleMouseEnter} 
