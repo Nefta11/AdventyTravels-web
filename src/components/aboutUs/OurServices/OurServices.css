@@ -97,18 +97,21 @@
     }
 
     .services-container {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr); 
     }
 
     .service-card-inner {
-        height: 100px;
+        height: 140px;
+        width: 110%;
+        margin: 0 auto; 
     }
 
-    .service-card-front{
-        font-size: 8.6px;
+    .service-card-front {
+        font-size: 10px; 
     }
+
     .service-card-back {
-        font-size: 8px;
+        font-size: 10px; 
     }
 
     .service-card:nth-child(10) {
