@@ -6,6 +6,7 @@ import About from "../components/aboutUs/headerWelcome/About";
 import WhoWeAre from '../components/aboutUs/WhoWeAre/WhoWeAre';
 import OurServices from '../components/aboutUs/OurServices/OurServices';
 import LocationMap from '../components/aboutUs/locationMap/LocationMap';
+import MoreAboutUs from '../components/aboutUs/moreAboutUs/MoreAboutUs';
 
 export default function AboutUs() {
 
@@ -18,6 +19,7 @@ export default function AboutUs() {
             <NavComponent />
             <About />
             <WhoWeAre />
+            <MoreAboutUs />
             <OurServices />
             <LocationMap />
             <FooterComponent />
