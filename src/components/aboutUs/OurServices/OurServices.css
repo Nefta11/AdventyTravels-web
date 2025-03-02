@@ -114,4 +114,8 @@
     .service-card:nth-child(10) {
         display: none;
     }
+
+    .service-card:hover {
+        transform: none;
+    }
 }
