@@ -1,12 +1,24 @@
+:root {
+    --color1: #F4F4F4;
+    --color2: #7DC1BD;
+    --color3: #E49F30;
+    --color4: #24455D;
+}
+
 .mission-vision {
     display: flex;
     justify-content: center;
-    padding: 2rem;
+    padding: 3rem 1rem;
+    background-color: var(--color1);
+    margin-top: -20px;
 }
 
 .mission-vision-container {
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
     max-width: 1200px;
     border-radius: 10px;
     overflow: hidden;
@@ -24,9 +36,10 @@
 }
 
 .mission-title, .vision-title {
-    font-size: 1.5rem;
+    font-size: 27px;
     font-weight: bold;
-    color: black;
+    color: var(--color4);
+    margin-bottom: 1rem;
 }
 
 .mission-vision-text p {
@@ -50,5 +63,16 @@
     .mission-vision-text {
         width: 100%;
         padding: 1.5rem;
+    }
+
+    .mission-title, .vision-title {
+        font-size: 23px;
+        font-weight: bolder;
+        margin-bottom: 5px;
+        color: var(--color4);
+    }
+
+    .mission-vision-text p {
+        font-size: 14px;
     }
 }

@@ -325,6 +325,12 @@ const resources = {
         title: "Error 404",
         message: "La página que estás buscando no existe.",
         link: "Volver al inicio"
+      },
+      missionVision: {
+        missionTitle: "Nuestra Misión",
+        missionText: "Brindar experiencias de viaje excepcionales y personalizadas que superen las expectativas de nuestros clientes, garantizando calidad, seguridad y confianza en cada servicio que ofrecemos. A través de la innovación y la capacitación continua, nos esforzamos por transformar cada viaje en una vivencia inolvidable.",
+        visionTitle: "Nuestra Visión",
+        visionText: "Ser una empresa líder a nivel nacional en el sector turístico, reconocida por la calidad de sus servicios y la calidez de su atención. Aspiramos a consolidarnos como una agencia rentable y socialmente responsable, impulsada por un equipo joven, profesional y apasionado por el turismo."
       }
     }
   },
@@ -652,6 +658,12 @@ const resources = {
         title: "Error 404",
         message: "The page you are looking for does not exist.",
         link: "Go back to home"
+      },
+      missionVision: {
+        missionTitle: "Our Mission",
+        missionText: "To provide exceptional and personalized travel experiences that exceed our clients' expectations, ensuring quality, safety, and trust in every service we offer. Through innovation and continuous training, we strive to transform each trip into an unforgettable experience.",
+        visionTitle: "Our Vision",
+        visionText: "To be a national leader in the tourism sector, recognized for the quality of our services and the warmth of our attention. We aspire to establish ourselves as a profitable and socially responsible agency, driven by a young, professional, and passionate team about tourism."
       }
     }
   },
@@ -978,6 +990,12 @@ const resources = {
         title: "Erreur 404",
         message: "La page que vous recherchez n'existe pas.",
         link: "Retour à l'accueil"
+      },
+      missionVision: {
+        missionTitle: "Notre Mission",
+        missionText: "Offrir des expériences de voyage exceptionnelles et personnalisées qui dépassent les attentes de nos clients, garantissant qualité, sécurité et confiance dans chaque service que nous proposons. Grâce à l'innovation et à la formation continue, nous nous efforçons de transformer chaque voyage en une expérience inoubliable.",
+        visionTitle: "Notre Vision",
+        visionText: "Être un leader national dans le secteur du tourisme, reconnu pour la qualité de nos services et la chaleur de notre accueil. Nous aspirons à nous établir comme une agence rentable et socialement responsable, animée par une équipe jeune, professionnelle et passionnée par le tourisme."
       }
     }
   }
