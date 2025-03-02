@@ -1,5 +1,8 @@
 :root {
     --color1: #F4F4F4;
+    --color2: #7DC1BD;
+    --color3: #E49F30;
+    --color4: #24455D;
 }
 
 .carousel-container {
@@ -55,21 +58,9 @@
 
 .separator-line {
     width: 100%;
-    height: 2px;
-    background-color: #ccc;
-}
-
-.pause-button {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+    height: 1px;
+    margin-top: -15px;
+    background-color: var(--color2);
 }
 
 /* Responsividad para pantallas pequeñas */
@@ -94,9 +85,5 @@
         height: auto;
         max-width: 100px;
         object-fit: contain;
-    }
-
-    .pause-button {
-        display: block;
     }
 }

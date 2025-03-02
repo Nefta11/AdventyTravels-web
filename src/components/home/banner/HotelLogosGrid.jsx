@@ -20,7 +20,6 @@ const HotelLogosGrid = () => {
 
     const handleMouseEnter = () => setIsPaused(true);
     const handleMouseLeave = () => setIsPaused(false);
-    const togglePause = () => setIsPaused(!isPaused);
 
     return (
         <div className="carousel-container">
@@ -37,9 +36,6 @@ const HotelLogosGrid = () => {
                 ))}
             </div>
             <div className="separator-line"></div>
-            <button className="pause-button" onClick={togglePause}>
-                {isPaused ? "Play" : "Pause"}
-            </button>
         </div>
     );
 };
