@@ -11,14 +11,20 @@ const hotelLogos = [
     { src: "https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/src/assets/images/hotels/ihg.webp", alt: "IHG Hotels & Resorts" },
 ];
 
+// Duplicamos el array para que el efecto sea continuo
+const logosDuplicated = [...hotelLogos, ...hotelLogos];
+
 const HotelLogosGrid = () => {
     return (
-        <div className="hotel-logos-grid">
-            {hotelLogos.map((logo, index) => (
-                <div key={index} className="hotel-logo-item">
-                    <img src={logo.src} alt={logo.alt} />
-                </div>
-            ))}
+        <div className="carousel-container">
+            <h2 className="carousel-title">Los mejores hoteles</h2> {/* Título agregado */}
+            <div className="carousel-track">
+                {logosDuplicated.map((logo, index) => (
+                    <div key={index} className="hotel-logo-item">
+                        <img src={logo.src} alt={logo.alt} />
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };
