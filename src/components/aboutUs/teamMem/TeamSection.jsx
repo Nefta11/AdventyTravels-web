@@ -23,6 +23,13 @@ const teamMembers = [
         image: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/feature/Fixed-abouUS/src/assets/images/aboutUs/members.webp",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
     },
+    {
+        id: 4,
+        name: "Nombre 4",
+        position: "Puesto de Trabajo",
+        image: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/feature/Fixed-abouUS/src/assets/images/aboutUs/members.webp",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
+    },
 ];
 
 const TeamSection = () => {

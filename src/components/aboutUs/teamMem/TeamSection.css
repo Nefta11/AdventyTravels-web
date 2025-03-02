@@ -94,3 +94,19 @@
     color: var(--color1);
     text-align: center;
 }
+
+@media (max-width: 768px) {
+    .team-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .team-card {
+        max-width: 100%;
+    }
+
+    .overlay-text {
+        font-size: 14px; /* Reducir el tamaño del texto de descripción */
+    }
+}
