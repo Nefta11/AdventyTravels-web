@@ -55,7 +55,7 @@ const TravelForm = () => {
     if (!isOpen) return null;
 
     return (
-        <div className="overlay">
+        <div className="overlayForm">
             <div className="form-container">
                 <h2 className="title">{t('travelForm.title')}</h2>
                 <h3 className="subtitle">{t('travelForm.description')}</h3>

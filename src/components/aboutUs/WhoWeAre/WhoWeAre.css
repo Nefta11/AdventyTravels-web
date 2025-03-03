@@ -23,7 +23,7 @@
     background: url('https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/feature/Fixed-abouUS/src/assets/images/aboutUs/aboutWere.webp') center/cover no-repeat;
 }
 
-.who-we-are .overlay {
+.who-we-are .nuestrofondo {
     position: absolute; 
     top: 0;
     left: 0;
@@ -34,6 +34,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    color: white;
     border-radius: 15px;
 
 }

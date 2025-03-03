@@ -7,7 +7,7 @@ const WhoWeAre = () => {
     return (
         <section className="who-we-are no-overlay-scroll">
             <div className="image-container">
-                <div className="overlay">
+                <div className="nuestrofondo">
                     <h2>{t('whoWeAre.title')}</h2>
                 </div>
             </div>
