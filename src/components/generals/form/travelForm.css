@@ -6,7 +6,7 @@
 }
 
 .overlay {
-    position: fixed; /* Permite que el overlay ocupe toda la pantalla */
+    position: fixed  !important ; /* Permite que el overlay ocupe toda la pantalla */
     top: 0;
     left: 0;
     width: 100%;
