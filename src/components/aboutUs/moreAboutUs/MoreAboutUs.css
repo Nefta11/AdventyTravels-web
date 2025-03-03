@@ -19,24 +19,24 @@
 .more-about-us .text-container {
     width: 50%;
     color: #000;
-    font-size: 1.0rem;
+    font-size: 16px;
     line-height: 1.6;
 }
 
 .more-about-us .text-container h2  {
-    font-size: 3.5rem;
+    font-size: 56px;
     font-weight: bold;
     margin-bottom: 15px;
     text-align: justify;
 }
 .sub{
-    font-size: 1.0rem;
+    font-size: 16px;
     font-weight: bold;
     text-align: start;
 }
 .more-about-us .text-container p {
     margin-bottom: 15px;
-    font-size: 1.0rem;
+    font-size: 16px;
     text-align: justify;
     color: #000;
 }
@@ -75,11 +75,11 @@
     .more-about-us .text-container {
         width: 100%;
         padding: 15px;
-        font-size: 1rem;
+        font-size: 16px;
     }
 
     .more-about-us .text-container h2  {
-        font-size: 2rem;
+        font-size: 32px;
         padding: 0 10px;
     }
 
