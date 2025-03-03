@@ -7,7 +7,7 @@
 
 .team-section {
     text-align: center;
-    padding: 3rem 1rem;
+    padding: 48px 16px;
     background-color: var(--color1);
     margin-top: -20px;
 }
@@ -29,7 +29,7 @@
 .team-container {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 24px;
     flex-wrap: wrap;
 }
 
@@ -60,7 +60,7 @@
 }
 
 .team-info {
-    padding: 1rem;
+    padding: 16px;
 }
 
 .team-name {
@@ -86,7 +86,7 @@
     align-items: center;
     color: var(--color4);
     font-size: 16px;
-    padding: 1rem;
+    padding: 16px;
     box-sizing: border-box;
     cursor: pointer;
 }
@@ -123,6 +123,5 @@
 
     .overlay-text {
         font-size: 14px;
-        /* Reducir el tamaño del texto de descripción */
     }
 }
