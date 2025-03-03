@@ -28,11 +28,7 @@ export default function Home() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      {showForm && (
-        <div className="fixed-form">
-          <TravelForm />
-        </div>
-      )}
+      {showForm && <TravelForm />}
       <NavComponent />
       <CarouselComponent />
       <ShopButton />
