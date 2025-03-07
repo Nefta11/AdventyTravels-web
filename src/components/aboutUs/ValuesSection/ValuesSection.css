@@ -15,7 +15,7 @@
 .values-title {
     font-size: 32px;
     font-weight: bold;
-    color: #000;
+    color: var(--color4);
     margin-bottom: 15px;
 }
 
