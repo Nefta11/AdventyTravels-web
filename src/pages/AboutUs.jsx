@@ -9,6 +9,7 @@ import LocationMap from '../components/aboutUs/locationMap/LocationMap';
 import MoreAboutUs from '../components/aboutUs/moreAboutUs/MoreAboutUs';
 import TeamSection from '../components/aboutUs/teamMem/TeamSection';
 import MissionVision from '../components/aboutUs/moreAboutUs/MissionVision';
+import ValuesSection from '../components/aboutUs/ValuesSection/ValuesSection';
 
 export default function AboutUs() {
 
@@ -24,6 +25,7 @@ export default function AboutUs() {
             <MoreAboutUs />
             <TeamSection />
             <MissionVision />
+            <ValuesSection />
             <OurServices />
             <LocationMap />
             <FooterComponent />
