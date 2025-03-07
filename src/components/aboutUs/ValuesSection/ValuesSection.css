@@ -41,6 +41,8 @@
     border-radius: 10px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 80%; 
+    height:auto;
 }
 
 .value-card:hover {
@@ -72,6 +74,7 @@
     }
     .value-card {
         padding: 16px;
+        width: 100%; /* Ancho completo en móviles */
     }
     .value-icon {
         font-size: 32px;
