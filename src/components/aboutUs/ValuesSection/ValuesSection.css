@@ -72,7 +72,13 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
+    .values-title {
+        font-size: 24px;
+    }
+    .values-description {
+        font-size: 16px;
+    }
     .values-section {
         margin-top: -30px;
     }
