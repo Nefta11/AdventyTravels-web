@@ -331,6 +331,18 @@ const resources = {
         missionText: "Brindar experiencias de viaje excepcionales y personalizadas que superen las expectativas de nuestros clientes, garantizando calidad, seguridad y confianza en cada servicio que ofrecemos. A través de la innovación y la capacitación continua, nos esforzamos por transformar cada viaje en una vivencia inolvidable.",
         visionTitle: "Nuestra Visión",
         visionText: "Ser una empresa líder a nivel nacional en el sector turístico, reconocida por la calidad de sus servicios y la calidez de su atención. Aspiramos a consolidarnos como una agencia rentable y socialmente responsable, impulsada por un equipo joven, profesional y apasionado por el turismo."
+      },
+      valuesSection: {
+        title: "Nuestros Valores",
+        description: "En Adventy Travels, creemos firmemente en los valores que nos definen y guían nuestro actuar en cada viaje, reservación y atención al cliente.",
+        values: [
+          { title: "Compromiso", description: "Nos dedicamos a brindar experiencias de viaje únicas y personalizadas con total responsabilidad." },
+          { title: "Calidad", description: "Cuidamos cada detalle para que nuestros clientes disfruten de un servicio excepcional." },
+          { title: "Confianza", description: "Somos una agencia legalmente registrada y avalada, garantizando seguridad en cada transacción." },
+          { title: "Innovación", description: "Estamos en constante evolución para ofrecer las mejores opciones y tendencias del turismo." },
+          { title: "Trabajo en equipo", description: "Fomentamos un ambiente colaborativo y joven, donde cada integrante aporta su talento y pasión." },
+          { title: "Crecimiento profesional", description: "Impulsamos la formación continua de nuestro equipo para ofrecer siempre la mejor asesoría." }
+        ]
       }
     }
   },
@@ -664,6 +676,18 @@ const resources = {
         missionText: "To provide exceptional and personalized travel experiences that exceed our clients' expectations, ensuring quality, safety, and trust in every service we offer. Through innovation and continuous training, we strive to transform each trip into an unforgettable experience.",
         visionTitle: "Our Vision",
         visionText: "To be a national leader in the tourism sector, recognized for the quality of our services and the warmth of our attention. We aspire to establish ourselves as a profitable and socially responsible agency, driven by a young, professional, and passionate team about tourism."
+      },
+      valuesSection: {
+        title: "Our Values",
+        description: "At Adventy Travels, we firmly believe in the values that define us and guide our actions in every trip, reservation, and customer service.",
+        values: [
+          { title: "Commitment", description: "We are dedicated to providing unique and personalized travel experiences with total responsibility." },
+          { title: "Quality", description: "We take care of every detail so that our clients enjoy exceptional service." },
+          { title: "Trust", description: "We are a legally registered and endorsed agency, guaranteeing security in every transaction." },
+          { title: "Innovation", description: "We are constantly evolving to offer the best options and trends in tourism." },
+          { title: "Teamwork", description: "We foster a collaborative and young environment, where each member contributes their talent and passion." },
+          { title: "Professional Growth", description: "We promote continuous training of our team to always offer the best advice." }
+        ]
       }
     }
   },
@@ -996,6 +1020,18 @@ const resources = {
         missionText: "Offrir des expériences de voyage exceptionnelles et personnalisées qui dépassent les attentes de nos clients, garantissant qualité, sécurité et confiance dans chaque service que nous proposons. Grâce à l'innovation et à la formation continue, nous nous efforçons de transformer chaque voyage en une expérience inoubliable.",
         visionTitle: "Notre Vision",
         visionText: "Être un leader national dans le secteur du tourisme, reconnu pour la qualité de nos services et la chaleur de notre accueil. Nous aspirons à nous établir comme une agence rentable et socialement responsable, animée par une équipe jeune, professionnelle et passionnée par le tourisme."
+      },
+      valuesSection: {
+        title: "Nos Valeurs",
+        description: "Chez Adventy Travels, nous croyons fermement aux valeurs qui nous définissent et guident nos actions dans chaque voyage, réservation et service client.",
+        values: [
+          { title: "Engagement", description: "Nous nous engageons à fournir des expériences de voyage uniques et personnalisées avec une responsabilité totale." },
+          { title: "Qualité", description: "Nous prenons soin de chaque détail pour que nos clients profitent d'un service exceptionnel." },
+          { title: "Confiance", description: "Nous sommes une agence légalement enregistrée et approuvée, garantissant la sécurité dans chaque transaction." },
+          { title: "Innovation", description: "Nous évoluons constamment pour offrir les meilleures options et tendances du tourisme." },
+          { title: "Travail d'équipe", description: "Nous favorisons un environnement collaboratif et jeune, où chaque membre apporte son talent et sa passion." },
+          { title: "Croissance professionnelle", description: "Nous encourageons la formation continue de notre équipe pour toujours offrir les meilleurs conseils." }
+        ]
       }
     }
   }

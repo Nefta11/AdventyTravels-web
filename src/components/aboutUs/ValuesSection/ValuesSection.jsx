@@ -1,27 +1,27 @@
 import { FaHandshake, FaStar, FaShieldAlt, FaLightbulb, FaUsers, FaChartLine } from "react-icons/fa";
+import { useTranslation } from 'react-i18next';
 import "./ValuesSection.css";
 
-const values = [
-    { icon: <FaHandshake />, title: "Compromiso", description: "Nos dedicamos a brindar experiencias de viaje únicas y personalizadas con total responsabilidad." },
-    { icon: <FaStar />, title: "Calidad", description: "Cuidamos cada detalle para que nuestros clientes disfruten de un servicio excepcional." },
-    { icon: <FaShieldAlt />, title: "Confianza", description: "Somos una agencia legalmente registrada y avalada, garantizando seguridad en cada transacción." },
-    { icon: <FaLightbulb />, title: "Innovación", description: "Estamos en constante evolución para ofrecer las mejores opciones y tendencias del turismo." },
-    { icon: <FaUsers />, title: "Trabajo en equipo", description: "Fomentamos un ambiente colaborativo y joven, donde cada integrante aporta su talento y pasión." },
-    { icon: <FaChartLine />, title: "Crecimiento profesional", description: "Impulsamos la formación continua de nuestro equipo para ofrecer siempre la mejor asesoría." }
-];
-
 const ValuesSection = () => {
+    const { t } = useTranslation();
+
+    const values = t('valuesSection.values', { returnObjects: true });
+
     return (
         <section className="values-section">
-            <h2 className="values-title">Nuestros Valores</h2>
-            <p className="values-description">
-                En Adventy Travels, creemos firmemente en los valores que nos definen y guían nuestro actuar en
-                cada viaje, reservación y atención al cliente.
-            </p>
+            <h2 className="values-title">{t('valuesSection.title')}</h2>
+            <p className="values-description">{t('valuesSection.description')}</p>
             <div className="values-grid">
                 {values.map((value, index) => (
                     <div key={index} className="value-card">
-                        <div className="value-icon">{value.icon}</div>
+                        <div className="value-icon">
+                            {index === 0 && <FaHandshake />}
+                            {index === 1 && <FaStar />}
+                            {index === 2 && <FaShieldAlt />}
+                            {index === 3 && <FaLightbulb />}
+                            {index === 4 && <FaUsers />}
+                            {index === 5 && <FaChartLine />}
+                        </div>
                         <h3 className="value-title">{value.title}</h3>
                         <p className="value-text">{value.description}</p>
                     </div>
