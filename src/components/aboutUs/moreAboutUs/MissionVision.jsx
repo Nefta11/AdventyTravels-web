@@ -1,5 +1,5 @@
 import "./MissionVision.css";
-import officeImage from "../../../assets/images/aboutUs/oficce.webp"; // Reemplaza con la ruta de tu imagen
+const officeImage = "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/feature/Fixed-abouUS/src/assets/images/aboutUs/adventy.webp"; // Asegúrate de que la URL de la imagen sea correcta
 import { useTranslation } from 'react-i18next';
 
 const MissionVision = () => {
