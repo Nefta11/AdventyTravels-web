@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { FaWhatsapp, FaFacebookMessenger, FaPhone } from 'react-icons/fa';
+import { FaWhatsapp, FaFacebookMessenger, FaPhone, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import "./NavItem.css";
 
 const NavItem = ({ to, icon: Icon, label, menuOpen, submenu }) => {
@@ -26,7 +26,10 @@ const NavItem = ({ to, icon: Icon, label, menuOpen, submenu }) => {
     return (
         <li className="nav-item">
             {menuOpen && <Icon style={{ marginLeft: '10px', marginRight: '8px' }} />}
-            <Link to={to} onClick={submenu ? handleSubmenuToggle : null}>{label}</Link>
+            <Link to={to} onClick={submenu ? handleSubmenuToggle : null}>
+                {label}
+                {submenu && (submenuOpen ? <FaChevronUp style={{ marginLeft: '5px', fontSize: '0.7em', position: 'relative', top: '2px' }} /> : <FaChevronDown style={{ marginLeft: '5px', fontSize: '0.7em', position: 'relative', top: '2px' }} />)}
+            </Link>
             {submenu && (
                 <ul className={`dropdown-menu ${submenuOpen ? 'open' : ''}`}>
                     <li>

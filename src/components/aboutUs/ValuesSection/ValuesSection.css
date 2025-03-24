@@ -1,0 +1,102 @@
+:root {
+    --color1: #F4F4F4;
+    --color2: #7DC1BD;
+    --color3: #E49F30;
+    --color4: #24455D;
+}
+
+.values-section {
+    margin-top: 1px;
+    text-align: center;
+    padding: 32px;
+    background-color: var(--color1);
+}
+
+.values-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--color4);
+    margin-bottom: 15px;
+}
+
+.values-description {
+    font-size: 20px;
+    color: black;
+    margin-bottom: 32px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: 1080px; 
+    margin: 0 auto;
+    margin-top: 16px;
+}
+
+.value-card {
+    background: white;
+    padding: 24px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width:320px; 
+    height:auto;
+    border: 1px solid var(--color4);
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.value-icon {
+    font-size: 40px;
+    color: var(--color4);
+    margin-bottom: 12px;
+}
+
+.value-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.value-text {
+    font-size: 16px;
+    color: #000;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    .values-title {
+        font-size: 24px;
+    }
+    .values-description {
+        font-size: 16px;
+    }
+    .values-section {
+        margin-top: -30px;
+    }
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .value-card {
+        padding: 16px; 
+        width: 100%; 
+    }
+    .value-icon {
+        font-size: 24px; 
+        margin-bottom: 1px;
+    }
+    .value-title {
+        font-size: 14px; 
+    }
+    .value-text {
+        font-size: 12px; 
+    }
+}

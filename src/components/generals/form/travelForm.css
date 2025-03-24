@@ -5,8 +5,8 @@
     --color4: #24455D;
 }
 
-.overlay {
-    position: fixed;
+.overlayForm {
+    position: fixed  !important ; /* Permite que el overlay ocupe toda la pantalla */
     top: 0;
     left: 0;
     width: 100%;

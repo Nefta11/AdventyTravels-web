@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { FaBars, FaHome, FaSuitcase, FaInfoCircle, FaBlog, FaImages, FaEnvelope } from 'react-icons/fa';
+import { FaBars, FaTimes, FaHome, FaSuitcase, FaInfoCircle, FaBlog, FaImages, FaEnvelope } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import colors from '../../../utils/colors';
@@ -32,7 +32,7 @@ const NavComponent = () => {
                 <div className="nav-header">
                     {/* Ícono del menú al inicio */}
                     <div className="nav-menu-icon" onClick={toggleMenu}>
-                        <FaBars />
+                        {menuOpen ? <FaTimes /> : <FaBars />}
                     </div>
                     {/* Logo de la aplicación */}
                     <Link to="/">

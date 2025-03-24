@@ -250,6 +250,99 @@ const resources = {
       underConstruction: {
         title: "La sección de {{pageName}} está en construcción",
         text: "Estamos trabajando para ofrecerte la mejor experiencia. ¡Vuelve pronto!"
+      },
+      whoWeAre: {
+        title: "¿Quiénes somos?",
+        description1: "<strong>Adventy Travels</strong> es una agencia de viajes 100% poblana, orgullosamente mexicana y legalmente constituida, <strong>con más de 6 años de experiencia en el sector turístico</strong>. Somos la primera agencia de viajes registrada legalmente ante la Secretaría de Turismo en <strong>Xicotepec de Juárez</strong>, Puebla, desde nuestra <strong>fundación el 27 de marzo de 2019</strong>.",
+        description2: "Nos destacamos por ofrecer experiencias de viaje personalizadas y de alta calidad, <strong>con un equipo conformado por jóvenes profesionales comprometidos con la excelencia, la innovación y la capacitación constante</strong>. A lo largo de nuestra trayectoria, hemos recibido múltiples reconocimientos y certificaciones en los estados de Puebla e Hidalgo, que nos avalan como una agencia segura, confiable, responsable y totalmente legal.",
+        description3: "Operamos bajo la representación legal de <strong>GRUPO COMERCIAL BRACARDA</strong>, lo que nos permite ampliar nuestra red de servicios, garantizar el respaldo legal y operativo de nuestra empresa."
+      },
+      aboutUsHeader: "Nosotros",
+      ourServices: "Nuestros Servicios",
+      services: {
+        hotelBooking: {
+          title: "Reserva de Hoteles",
+          description: "Gestionamos la reserva de hoteles alrededor del mundo, desde alojamientos económicos hasta lujosos resorts."
+        },
+        flightTickets: {
+          title: "Venta de Boletos Aéreos Nacionales e Internacionales",
+          description: "Compra y reserva de boletos aéreos con opciones personalizadas para encontrar las mejores tarifas."
+        },
+        packages: {
+          title: "Paquetes (Hotel + Tours) Nacional e Internacional",
+          description: "Combinamos hospedaje con tours y actividades en destinos nacionales e internacionales."
+        },
+        tours: {
+          title: "Tours y Actividades",
+          description: "Visitas guiadas, excursiones y actividades adaptadas a tus intereses en diferentes destinos."
+        },
+        transfers: {
+          title: "Traslados Privados o Compartidos",
+          description: "Coordinamos traslados desde y hacia aeropuertos, asegurando comodidad y puntualidad."
+        },
+        carRental: {
+          title: "Renta de Autos",
+          description: "Alquiler de vehículos en tus destinos de viaje con opciones variadas y flexibles."
+        },
+        cruises: {
+          title: "Cruceros",
+          description: "Reserva de cruceros con diferentes rutas y líneas de navegación para unas vacaciones en alta mar."
+        },
+        travelInsurance: {
+          title: "Seguro de Viajes",
+          description: "Seguros de viaje que cubren emergencias médicas, cancelaciones y pérdida de equipaje."
+        },
+        visaProcessing: {
+          title: "Trámite de Visas",
+          description: "Asesoramos y gestionamos el trámite de visas para facilitar tu entrada a países extranjeros, asegurándonos de cumplir con todos los requisitos necesarios."
+        },
+        experiencesEvents: {
+          title: "Experiencias y Eventos",
+          description: "Organizamos eventos especiales y experiencias únicas, como bodas, lunas de miel, y celebraciones personalizadas, para hacer de tu viaje una ocasión memorable."
+        }
+      },
+      moreAboutUs: {
+        title: "Más sobre nosotros",
+        description: "Adventy Travels mantiene cientos de convenios y contratos directos vigentes con importantes empresas del sector turístico. Estas alianzas nos permiten ofrecer tarifas competitivas y experiencias de viaje de primer nivel",
+        items: [
+          "*Cadenas hoteleras nacionales e internacionales.",
+          "*Brokers internacionales de viajes y hospedajes.",
+          "*Discotecas y centros de entretenimiento.",
+          "*Empresas de transporte público y privado.",
+        ],
+        teamTitle: "Nustro Equipo: compromiso con los jovenes",
+        teamDescription: "En Adventy Travels confiamos en el talento joven y apostamos por su crecimiento profesional. Todo nuestro personal está compuesto por jóvenes altamente capacitados y comprometidos, listos para atender cualquier consulta y garantizar la mejor experiencia de viaje.",
+        agencyDescription: "La confianza es fundamental en la industria del turismo, y en Adventy Travels nos comprometemos a brindar transparencia, calidad y seguridad en cada servicio. Como la primera agencia de viajes legalmente registrada en Xicotepec de Juárez, cumplimos con todas las normativas vigentes y contamos con el respaldo de la Secretaría de Turismo."
+      },
+      sectionTitles: {
+        knowUs: "¡CONÓCENOS!",
+        adventyFamily: "Familia Adventy Travels"
+      },
+      hotelLogosGrid: {
+        title: "Los mejores hoteles"
+      },
+      error404: {
+        title: "Error 404",
+        message: "La página que estás buscando no existe.",
+        link: "Volver al inicio"
+      },
+      missionVision: {
+        missionTitle: "Nuestra Misión",
+        missionText: "Brindar experiencias de viaje excepcionales y personalizadas que superen las expectativas de nuestros clientes, garantizando calidad, seguridad y confianza en cada servicio que ofrecemos. A través de la innovación y la capacitación continua, nos esforzamos por transformar cada viaje en una vivencia inolvidable.",
+        visionTitle: "Nuestra Visión",
+        visionText: "Ser una empresa líder a nivel nacional en el sector turístico, reconocida por la calidad de sus servicios y la calidez de su atención. Aspiramos a consolidarnos como una agencia rentable y socialmente responsable, impulsada por un equipo joven, profesional y apasionado por el turismo."
+      },
+      valuesSection: {
+        title: "Nuestros Valores",
+        description: "En Adventy Travels, creemos firmemente en los valores que nos definen y guían nuestro actuar en cada viaje, reservación y atención al cliente.",
+        values: [
+          { title: "Compromiso", description: "Nos dedicamos a brindar experiencias de viaje únicas y personalizadas con total responsabilidad." },
+          { title: "Calidad", description: "Cuidamos cada detalle para que nuestros clientes disfruten de un servicio excepcional." },
+          { title: "Confianza", description: "Somos una agencia legalmente registrada y avalada, garantizando seguridad en cada transacción." },
+          { title: "Innovación", description: "Estamos en constante evolución para ofrecer las mejores opciones y tendencias del turismo." },
+          { title: "Trabajo en equipo", description: "Fomentamos un ambiente colaborativo y joven, donde cada integrante aporta su talento y pasión." },
+          { title: "Crecimiento profesional", description: "Impulsamos la formación continua de nuestro equipo para ofrecer siempre la mejor asesoría." }
+        ]
       }
     }
   },
@@ -502,6 +595,99 @@ const resources = {
       underConstruction: {
         title: "{{pageName}} section is under construction",
         text: "We are working to offer you the best experience. Come back soon!"
+      },
+      whoWeAre: {
+        title: "Who We Are ?",
+        description1: "<strong>Adventy Travels</strong> is a 100% Pueblan travel agency, proudly Mexican and legally constituted, <strong>with more than 6 years of experience in the tourism sector</strong>. We are the first travel agency legally registered with the Ministry of Tourism in <strong>Xicotepec de Juárez</strong>, Puebla, since our <strong>foundation on March 27, 2019</strong>.",
+        description2: "We stand out for offering personalized and high-quality travel experiences, <strong>with a team made up of young professionals committed to excellence, innovation, and constant training</strong>. Throughout our trajectory, we have received multiple recognitions and certifications in the states of Puebla and Hidalgo, which endorse us as a safe, reliable, responsible, and fully legal agency.",
+        description3: "We operate under the legal representation of <strong>GRUPO COMERCIAL BRACARDA</strong>, which allows us to expand our service network, guaranteeing the legal and operational support of our company."
+      },
+      aboutUsHeader: "About Us",
+      ourServices: "Our Services",
+      services: {
+        hotelBooking: {
+          title: "Hotel Booking",
+          description: "We manage hotel reservations around the world, from budget accommodations to luxurious resorts."
+        },
+        flightTickets: {
+          title: "National and International Flight Tickets",
+          description: "Purchase and book airline tickets with personalized options to find the best rates."
+        },
+        packages: {
+          title: "Packages (Hotel + Tours) National and International",
+          description: "We combine lodging with tours and activities in national and international destinations."
+        },
+        tours: {
+          title: "Tours and Activities",
+          description: "Guided tours, excursions, and activities tailored to your interests in different destinations."
+        },
+        transfers: {
+          title: "Private or Shared Transfers",
+          description: "We coordinate transfers to and from airports, ensuring comfort and punctuality."
+        },
+        carRental: {
+          title: "Car Rental",
+          description: "Vehicle rental at your travel destinations with varied and flexible options."
+        },
+        cruises: {
+          title: "Cruises",
+          description: "Cruise reservations with different routes and cruise lines for a vacation at sea."
+        },
+        travelInsurance: {
+          title: "Travel Insurance",
+          description: "Travel insurance covering medical emergencies, cancellations, and lost luggage."
+        },
+        visaProcessing: {
+          title: "Visa Processing",
+          description: "We advise and manage visa processing to facilitate your entry into foreign countries, ensuring all necessary requirements are met."
+        },
+        experiencesEvents: {
+          title: "Experiences and Events",
+          description: "We organize special events and unique experiences, such as weddings, honeymoons, and personalized celebrations, to make your trip a memorable occasion."
+        }
+      },
+      moreAboutUs: {
+        title: "More about us",
+        description: "Adventy Travels maintains hundreds of direct agreements and contracts with major companies in the tourism sector. These alliances allow us to offer competitive rates and top-notch travel experiences",
+        items: [
+          "*National and international hotel chains.",
+          "*International travel and lodging brokers.",
+          "*Nightclubs and entertainment centers.",
+          "*Public and private transportation companies.",
+        ],
+        teamTitle: "Our Team: commitment to young people",
+        teamDescription: "At Adventy Travels, we trust in young talent and are committed to their professional growth. All our staff is made up of highly trained young people who are committed, ready to assist with any inquiry, and ensure the best travel experience.",
+        agencyDescription: "Trust is fundamental in the tourism industry, and at Adventy Travels we are committed to providing transparency, quality, and safety in every service. As the first legally registered travel agency in Xicotepec de Juárez, we comply with all current regulations and have the backing of the Ministry of Tourism."
+      },
+      sectionTitles: {
+        knowUs: "GET TO KNOW US!",
+        adventyFamily: "Adventy Travels Family"
+      },
+      hotelLogosGrid: {
+        title: "The best hotels"
+      },
+      error404: {
+        title: "Error 404",
+        message: "The page you are looking for does not exist.",
+        link: "Go back to home"
+      },
+      missionVision: {
+        missionTitle: "Our Mission",
+        missionText: "To provide exceptional and personalized travel experiences that exceed our clients' expectations, ensuring quality, safety, and trust in every service we offer. Through innovation and continuous training, we strive to transform each trip into an unforgettable experience.",
+        visionTitle: "Our Vision",
+        visionText: "To be a national leader in the tourism sector, recognized for the quality of our services and the warmth of our attention. We aspire to establish ourselves as a profitable and socially responsible agency, driven by a young, professional, and passionate team about tourism."
+      },
+      valuesSection: {
+        title: "Our Values",
+        description: "At Adventy Travels, we firmly believe in the values that define us and guide our actions in every trip, reservation, and customer service.",
+        values: [
+          { title: "Commitment", description: "We are dedicated to providing unique and personalized travel experiences with total responsibility." },
+          { title: "Quality", description: "We take care of every detail so that our clients enjoy exceptional service." },
+          { title: "Trust", description: "We are a legally registered and endorsed agency, guaranteeing security in every transaction." },
+          { title: "Innovation", description: "We are constantly evolving to offer the best options and trends in tourism." },
+          { title: "Teamwork", description: "We foster a collaborative and young environment, where each member contributes their talent and passion." },
+          { title: "Professional Growth", description: "We promote continuous training of our team to always offer the best advice." }
+        ]
       }
     }
   },
@@ -753,6 +939,99 @@ const resources = {
       underConstruction: {
         title: "La section {{pageName}} est en construction",
         text: "Nous travaillons pour vous offrir la meilleure expérience. Revenez bientôt!"
+      },
+      whoWeAre: {
+        title: "Qui sommes-nous?",
+        description1: "<strong>Adventy Travels</strong> est une agence de voyages 100% poblana, fièrement mexicaine et légalement constituée, <strong>avec plus de 6 ans d'expérience dans le secteur touristique</strong>. Nous sommes la première agence de voyages légalement enregistrée auprès du Secrétariat du Tourisme à <strong>Xicotepec de Juárez</strong>, Puebla, depuis notre <strong>fondation le 27 mars 2019</strong>.",
+        description2: "Nous nous distinguons par offrir des expériences de voyage personnalisées et de haute qualité, <strong>avec une équipe composée de jeunes professionnels engagés dans l'excellence, l'innovation et la formation continue</strong>. Tout au long de notre trajectoire, nous avons reçu de nombreuses reconnaissances et certifications dans les états de Puebla et Hidalgo, qui nous approuvent comme une agence sûre, fiable, responsable et totalement légale.",
+        description3: "Nous opérons sous la représentation légale de <strong>GRUPO COMERCIAL BRACARDA</strong>, ce qui nous permet d'élargir notre réseau de services, garantissant le soutien légal et opérationnel de notre entreprise."
+      },
+      aboutUsHeader: "À propos de nous",
+      ourServices: "Nos Services",
+      services: {
+        hotelBooking: {
+          title: "Réservation d'Hôtels",
+          description: "Nous gérons la réservation d'hôtels dans le monde entier, des hébergements économiques aux complexes de luxe."
+        },
+        flightTickets: {
+          title: "Billets d'Avion Nationaux et Internationaux",
+          description: "Achat et réservation de billets d'avion avec des options personnalisées pour trouver les meilleurs tarifs."
+        },
+        packages: {
+          title: "Forfaits (Hôtel + Tours) Nationaux et Internationaux",
+          description: "Nous combinons l'hébergement avec des visites et des activités dans des destinations nationales et internationales."
+        },
+        tours: {
+          title: "Tours et Activités",
+          description: "Visites guidées, excursions et activités adaptées à vos intérêts dans différentes destinations."
+        },
+        transfers: {
+          title: "Transferts Privés ou Partagés",
+          description: "Nous coordonnons les transferts depuis et vers les aéroports, assurant confort et ponctualité."
+        },
+        carRental: {
+          title: "Location de Voitures",
+          description: "Location de véhicules dans vos destinations de voyage avec des options variées et flexibles."
+        },
+        cruises: {
+          title: "Croisières",
+          description: "Réservation de croisières avec différentes routes et compagnies de navigation pour des vacances en mer."
+        },
+        travelInsurance: {
+          title: "Assurance Voyage",
+          description: "Assurances voyage couvrant les urgences médicales, les annulations et la perte de bagages."
+        },
+        visaProcessing: {
+          title: "Traitement des Visas",
+          description: "Nous conseillons et gérons le traitement des visas pour faciliter votre entrée dans les pays étrangers, en veillant à ce que toutes les exigences nécessaires soient remplies."
+        },
+        experiencesEvents: {
+          title: "Expériences et Événements",
+          description: "Nous organisons des événements spéciaux et des expériences uniques, comme des mariages, des lunes de miel et des célébrations personnalisées, pour faire de votre voyage une occasion mémorable."
+        }
+      },
+      moreAboutUs: {
+        title: "Plus sur nous",
+        description: "Adventy Travels maintient des centaines d'accords et de contrats directs avec des entreprises majeures du secteur touristique. Ces alliances nous permettent d'offrir des tarifs compétitifs et des expériences de voyage de premier ordre",
+        items: [
+          "*Chaînes hôtelières nationales et internationales.",
+          "*Courtiers internationaux en voyages et hébergements.",
+          "*Discothèques et centres de divertissement.",
+          "*Entreprises de transport public et privé.",
+        ],
+        teamTitle: "Notre Équipe : engagement envers les jeunes",
+        teamDescription: "Chez Adventy Travels, nous faisons confiance aux jeunes talents et misons sur leur croissance professionnelle. Tout notre personnel est composé de jeunes hautement qualifiés et engagés, prêts à répondre à toute demande et à garantir la meilleure expérience de voyage.",
+        agencyDescription: "La confiance est fondamentale dans l'industrie du tourisme, et chez Adventy Travels, nous nous engageons à fournir transparence, qualité et sécurité dans chaque service. En tant que première agence de voyages légalement enregistrée à Xicotepec de Juárez, nous respectons toutes les réglementations en vigueur et bénéficions du soutien du Ministère du Tourisme."
+      },
+      sectionTitles: {
+        knowUs: "FAITES CONNAISSANCE AVEC NOUS!",
+        adventyFamily: "Famille Adventy Travels"
+      },
+      hotelLogosGrid: {
+        title: "Les meilleurs hôtels"
+      },
+      error404: {
+        title: "Erreur 404",
+        message: "La page que vous recherchez n'existe pas.",
+        link: "Retour à l'accueil"
+      },
+      missionVision: {
+        missionTitle: "Notre Mission",
+        missionText: "Offrir des expériences de voyage exceptionnelles et personnalisées qui dépassent les attentes de nos clients, garantissant qualité, sécurité et confiance dans chaque service que nous proposons. Grâce à l'innovation et à la formation continue, nous nous efforçons de transformer chaque voyage en une expérience inoubliable.",
+        visionTitle: "Notre Vision",
+        visionText: "Être un leader national dans le secteur du tourisme, reconnu pour la qualité de nos services et la chaleur de notre accueil. Nous aspirons à nous établir comme une agence rentable et socialement responsable, animée par une équipe jeune, professionnelle et passionnée par le tourisme."
+      },
+      valuesSection: {
+        title: "Nos Valeurs",
+        description: "Chez Adventy Travels, nous croyons fermement aux valeurs qui nous définissent et guident nos actions dans chaque voyage, réservation et service client.",
+        values: [
+          { title: "Engagement", description: "Nous nous engageons à fournir des expériences de voyage uniques et personnalisées avec une responsabilité totale." },
+          { title: "Qualité", description: "Nous prenons soin de chaque détail pour que nos clients profitent d'un service exceptionnel." },
+          { title: "Confiance", description: "Nous sommes une agence légalement enregistrée et approuvée, garantissant la sécurité dans chaque transaction." },
+          { title: "Innovation", description: "Nous évoluons constamment pour offrir les meilleures options et tendances du tourisme." },
+          { title: "Travail d'équipe", description: "Nous favorisons un environnement collaboratif et jeune, où chaque membre apporte son talent et sa passion." },
+          { title: "Croissance professionnelle", description: "Nous encourageons la formation continue de notre équipe pour toujours offrir les meilleurs conseils." }
+        ]
       }
     }
   }

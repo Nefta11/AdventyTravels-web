@@ -1,0 +1,56 @@
+:root {
+    --color1: #F4F4F4;
+    --color2: #7DC1BD;
+    --color3: #E49F30;
+    --color4: #24455D;
+}
+
+.about-section {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    background-color: var(--color1);
+    margin-top: 100px;
+    margin-bottom: 10px;
+    background: url('https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/feature/Fixed-abouUS/src/assets/images/aboutUs/About1.webp') center/cover no-repeat;
+    filter: brightness(0.8);
+}
+
+.about-section .overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.about-section .text-container {
+    color: white;
+}
+
+.about-section .text-container h1 {
+    font-size: 96px;
+    font-weight: bold;
+}
+
+/* 🔽 Media query para pantallas de hasta 800px */
+@media (max-width: 800px) {
+    .about-section {
+        height: 170px;
+        margin-top: 83.5px;
+    }
+
+    .about-section .overlay {
+        height: 100%;
+    }
+
+    .about-section .text-container h1 {
+        font-size: 48px;
+        font-weight: bold;
+    }
+
+}
