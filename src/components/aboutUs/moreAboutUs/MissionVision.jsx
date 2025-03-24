@@ -1,5 +1,5 @@
 import "./MissionVision.css";
-const officeImage = "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/feature/Fixed-abouUS/src/assets/images/aboutUs/adventy.webp";
+const officeImage = "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/images/aboutUs/adventy.webp";
 import { useTranslation } from 'react-i18next';
 
 const MissionVision = () => {
