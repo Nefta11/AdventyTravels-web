@@ -8,7 +8,7 @@ import AboutUs from './pages/AboutUs';
 import Gallery from './pages/Gallery';
 import Blog from './pages/Blog';
 import Error404 from './pages/pagError/Error404';
-import { SpeedInsights } from "@vercel/speed-insights/next"; // Importar SpeedInsights
+import { SpeedInsights } from "@vercel/speed-insights/react"; // Importar SpeedInsights correctamente
 
 function App() {
   return (
