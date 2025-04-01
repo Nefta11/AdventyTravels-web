@@ -294,7 +294,7 @@ const resources = {
         },
         visaProcessing: {
           title: "Trámite de Visas",
-          description: "Asesoramos y gestionamos el trámite de visas para facilitar tu entrada a países extranjeros, asegurándonos de cumplir con todos los requisitos necesarios."
+          description: "Te asesoramos y gestionamos tu visa para garantizar tu entrada cumpliendo todos los requisitos."
         },
         experiencesEvents: {
           title: "Experiencias y Eventos",
@@ -639,7 +639,7 @@ const resources = {
         },
         visaProcessing: {
           title: "Visa Processing",
-          description: "We advise and manage visa processing to facilitate your entry into foreign countries, ensuring all necessary requirements are met."
+          description: "We advise and manage your visa to ensure your entry by meeting all requirements."
         },
         experiencesEvents: {
           title: "Experiences and Events",
