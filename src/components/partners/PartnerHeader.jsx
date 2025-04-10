@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { FaHandPointRight } from 'react-icons/fa';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, EffectFade } from 'swiper/modules';
+import { Autoplay, EffectFade, EffectCreative } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
+import 'swiper/css/effect-creative';
 import './PartnerHeader.css';
 
 const carouselImages = [
@@ -24,22 +25,52 @@ const headerTexts = [
 
 const PartnerHeader = () => {
     const [currentTextIndex, setCurrentTextIndex] = useState(0);
+    const [isVisible, setIsVisible] = useState(false);
+    const [activeSection, setActiveSection] = useState(null);
 
     useEffect(() => {
+        setIsVisible(true);
+
         const interval = setInterval(() => {
             setCurrentTextIndex((prevIndex) => (prevIndex + 1) % headerTexts.length);
         }, 3000);
 
-        return () => clearInterval(interval);
+        const handleScroll = () => {
+            const sections = document.querySelectorAll('.animate-on-scroll');
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                const isInView = rect.top <= window.innerHeight * 0.75;
+                if (isInView) {
+                    section.classList.add('visible');
+                    setActiveSection(section.id);
+                }
+            });
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+
+        return () => {
+            clearInterval(interval);
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, []);
 
     return (
         <>
-            <div className="partner-header">
+            <div className={`partner-header ${isVisible ? 'visible' : ''}`}>
                 <div className="header-overlay"></div>
                 <Swiper
-                    modules={[Autoplay, EffectFade]}
-                    effect="fade"
+                    modules={[Autoplay, EffectFade, EffectCreative]}
+                    effect="creative"
+                    creativeEffect={{
+                        prev: {
+                            translate: [0, 0, -400],
+                        },
+                        next: {
+                            translate: ['100%', 0, 0],
+                        },
+                    }}
                     autoplay={{
                         delay: 5000,
                         disableOnInteraction: false,
@@ -65,8 +96,13 @@ const PartnerHeader = () => {
                             className="logo-image"
                         />
                         <h2 className="animated-text">
-                            OBTÉN <span className="primary-text">{headerTexts[currentTextIndex].primary}</span>{' '}
-                            <span className="secondary-text">{headerTexts[currentTextIndex].secondary}</span>
+                            OBTÉN{' '}
+                            <span className="primary-text" key={`primary-${currentTextIndex}`}>
+                                {headerTexts[currentTextIndex].primary}
+                            </span>{' '}
+                            <span className="secondary-text" key={`secondary-${currentTextIndex}`}>
+                                {headerTexts[currentTextIndex].secondary}
+                            </span>
                         </h2>
                     </div>
                 </div>
@@ -74,7 +110,7 @@ const PartnerHeader = () => {
 
             <div className="partner-container">
                 <div className="cards-wrapper">
-                    <div className="info-cards">
+                    <div className="info-cards animate-on-scroll" id="info-cards">
                         <div className="info-card">
                             <div className="info-card-content">
                                 <h3>¡ÚNETE A NUESTRA COMUNIDAD DE VIAJES!</h3>
@@ -83,23 +119,23 @@ const PartnerHeader = () => {
                         </div>
 
                         <div className="cta-wrapper">
-                            <button className="cta-button">
+                            <button className="cta-button pulse">
                                 ¡DA CLICK AQUÍ PARA SER UN ADVENTY PARTNER!
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <div className="what-is-section">
+                <div className="what-is-section animate-on-scroll" id="what-is">
                     <div className="header-content">
-                        <FaHandPointRight className="pointer-icon" />
+                        <FaHandPointRight className={`pointer-icon ${activeSection === 'what-is' ? 'active' : ''}`} />
                         <h2>¿QUÉ ES ADVENTY PARTNER?</h2>
                     </div>
                     <div className="what-is-content">
-                        <p>
+                        <p className="fade-in-paragraph">
                             Adventy Partner es un nuevo programa de Adventy Travels, creado para personas que aman organizar y fomentar viajes propios, para amigos, familiares, conocidos o incluso clientes. La intención es que no sólo goces dicha planeación, sino que también obtengas ingresos extras por hacerlo.
                         </p>
-                        <p>
+                        <p className="fade-in-paragraph">
                             Al ser parte de esta comunidad te damos acceso a herramientas digitales, entrenamientos en línea súper fáciles y un catálogo gigante de hoteles, departamentos, tours, transportes, vuelos ¡y más! a competitivos precios. Sólo necesitas ganas de aprender y de vender o compartir experiencias increíbles.
                         </p>
                     </div>
