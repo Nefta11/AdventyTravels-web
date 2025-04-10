@@ -6,7 +6,7 @@ import WhoWeAre from '../components/aboutUs/WhoWeAre/WhoWeAre';
 import OurServices from '../components/aboutUs/OurServices/OurServices';
 import LocationMap from '../components/aboutUs/locationMap/LocationMap';
 import MoreAboutUs from '../components/aboutUs/moreAboutUs/MoreAboutUs';
-import TeamSection from '../components/aboutUs/teamMem/TeamSection';
+//import TeamSection from '../components/aboutUs/teamMem/TeamSection';
 import MissionVision from '../components/aboutUs/moreAboutUs/MissionVision';
 import ValuesSection from '../components/aboutUs/ValuesSection/ValuesSection';
 import Certifications from '../components/home/banner/Certifications';
@@ -23,7 +23,7 @@ export default function AboutUs() {
             {/*<About />*/}
             <WhoWeAre />
             <MoreAboutUs />
-            <TeamSection />
+            {/*<TeamSection />*/}
             <MissionVision />
             <ValuesSection />
             <OurServices />
