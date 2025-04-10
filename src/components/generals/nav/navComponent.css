@@ -29,7 +29,7 @@
 
 .nav-logo {
     height: 90px;
-    margin-left: 20px;
+    margin-left: -45px;
     transition: transform 0.3s ease;
 }
 
