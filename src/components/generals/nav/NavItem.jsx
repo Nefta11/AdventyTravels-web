@@ -36,25 +36,25 @@ const NavItem = ({ to, icon: Icon, label, menuOpen, submenu, submenuItems }) => 
 
     const isSmallScreen = windowWidth <= 800;
 
-    // Componente para el submenú de Contacto optimizado para móvil
+    // Componente para el submenú de Contacto
     const ContactSubmenu = () => (
         <>
             <li>
                 <a href="tel:+5217716075321">
                     Via Llamada
-                    {isSmallScreen && <FaPhone className="submenu-icon" />}
+                    <FaPhone className="submenu-icon" />
                 </a>
             </li>
             <li>
                 <a href="whatsapp://send?phone=5217716075321" target="_blank" rel="noopener noreferrer">
                     Via WhatsApp
-                    {isSmallScreen && <FaWhatsapp className="submenu-icon" />}
+                    <FaWhatsapp className="submenu-icon" />
                 </a>
             </li>
             <li>
                 <a href={isMobile ? "fb-messenger://user/108316027661637" : "https://www.facebook.com/messages/t/108316027661637?locale=es_LA"} target="_blank" rel="noopener noreferrer">
                     Via Messenger
-                    {isSmallScreen && <FaFacebookMessenger className="submenu-icon" />}
+                    <FaFacebookMessenger className="submenu-icon" />
                 </a>
             </li>
         </>
