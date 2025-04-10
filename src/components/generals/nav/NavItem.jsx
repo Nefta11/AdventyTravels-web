@@ -7,7 +7,6 @@ import "./NavItem.css";
 const NavItem = ({ to, icon: Icon, label, menuOpen, submenu, submenuItems }) => {
     const [submenuOpen, setSubmenuOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     const handleSubmenuToggle = (e) => {
         if (submenu) {
@@ -27,14 +26,12 @@ const NavItem = ({ to, icon: Icon, label, menuOpen, submenu, submenuItems }) => 
         setIsMobile(/android|iPad|iPhone|iPod/.test(userAgent.toLowerCase()));
 
         const handleResize = () => {
-            setWindowWidth(window.innerWidth);
+            // Add any resize logic here if needed
         };
 
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
-
-    const isSmallScreen = windowWidth <= 800;
 
     // Componente para el submenú de Contacto
     const ContactSubmenu = () => (
