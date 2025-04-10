@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import NavComponent from '../components/generals/nav/navComponent';
 import FooterComponent from '../components/generals/footer/FooterComponent';
 import WhatsAppIcon from "../components/generals/whatsAppComponent/WhatsAppIcon";
-import UnderConstruction from '../components/underConstruction/UnderConstruction';
+import PartnerHeader from '../components/Partners/PartnerHeader';
 
 const Partners = () => {
     return (
@@ -12,7 +12,7 @@ const Partners = () => {
             exit={{ opacity: 0 }}
         >
             <NavComponent />
-            <UnderConstruction pageName="Partners" />
+            <PartnerHeader />
             <FooterComponent />
             <WhatsAppIcon />
         </motion.div>
