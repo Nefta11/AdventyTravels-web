@@ -7,6 +7,7 @@ import "./NavItem.css";
 const NavItem = ({ to, icon: Icon, label, menuOpen, submenu, submenuItems }) => {
     const [submenuOpen, setSubmenuOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     const handleSubmenuToggle = (e) => {
         if (submenu) {
@@ -24,7 +25,40 @@ const NavItem = ({ to, icon: Icon, label, menuOpen, submenu, submenuItems }) => 
     useEffect(() => {
         const userAgent = navigator.userAgent || navigator.vendor || window.opera;
         setIsMobile(/android|iPad|iPhone|iPod/.test(userAgent.toLowerCase()));
+
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
+
+    const isSmallScreen = windowWidth <= 800;
+
+    // Componente para el submenú de Contacto optimizado para móvil
+    const ContactSubmenu = () => (
+        <>
+            <li>
+                <a href="tel:+5217716075321">
+                    Via Llamada
+                    {isSmallScreen && <FaPhone className="submenu-icon" />}
+                </a>
+            </li>
+            <li>
+                <a href="whatsapp://send?phone=5217716075321" target="_blank" rel="noopener noreferrer">
+                    Via WhatsApp
+                    {isSmallScreen && <FaWhatsapp className="submenu-icon" />}
+                </a>
+            </li>
+            <li>
+                <a href={isMobile ? "fb-messenger://user/108316027661637" : "https://www.facebook.com/messages/t/108316027661637?locale=es_LA"} target="_blank" rel="noopener noreferrer">
+                    Via Messenger
+                    {isSmallScreen && <FaFacebookMessenger className="submenu-icon" />}
+                </a>
+            </li>
+        </>
+    );
 
     return (
         <li className="nav-item">
@@ -38,31 +72,18 @@ const NavItem = ({ to, icon: Icon, label, menuOpen, submenu, submenuItems }) => 
             {submenu && (
                 <ul className={`dropdown-menu ${submenuOpen ? 'open' : ''}`}>
                     {submenuItems ? (
+                        // Renderizar los items del submenu pasados como props
                         submenuItems.map((item, index) => (
                             <li key={index}>
                                 <a href={item.href} target={item.target} rel={item.rel}>
-                                    {item.label} {item.icon && <item.icon className="submenu-icon" />}
+                                    {item.label}
+                                    {item.icon && <item.icon className="submenu-icon" />}
                                 </a>
                             </li>
                         ))
                     ) : (
-                        <>
-                            <li>
-                                <a href="tel:+5217716075321">
-                                    Via Llamada<FaPhone className="submenu-icon" />
-                                </a>
-                            </li>
-                            <li>
-                                <a href="whatsapp://send?phone=5217716075321" target="_blank" rel="noopener noreferrer">
-                                    Via WhatsApp <FaWhatsapp className="submenu-icon" />
-                                </a>
-                            </li>
-                            <li>
-                                <a href={isMobile ? "fb-messenger://user/108316027661637" : "https://www.facebook.com/messages/t/108316027661637?locale=es_LA"} target="_blank" rel="noopener noreferrer">
-                                    Via Messenger <FaFacebookMessenger className="submenu-icon" />
-                                </a>
-                            </li>
-                        </>
+                        // Renderizar el submenu de contacto
+                        <ContactSubmenu />
                     )}
                 </ul>
             )}

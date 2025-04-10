@@ -135,24 +135,26 @@
         flex-direction: column;
         /* Alinear elementos en columna */
         background-color: var(--color1);
-        padding: 8px;
-        border-radius: 8px;
+        padding: 6px;
+        border-radius: 6px;
         list-style: none;
         /* Quitar viñetas */
-        margin-top: 8px;
+        margin-top: 5px;
         border-left: 2px solid var(--color3);
-        width: 85%;
-        margin-left: 15px;
+        width: 75%;
+        /* Reducir el ancho para que ocupe menos espacio */
+        margin-left: 20px;
     }
 
     .nav-item {
-        margin: 15px 0;
+        margin: 10px 0;
+        /* Reducir el margen vertical */
         text-align: left;
     }
 
     .nav-item a {
-        font-size: 18px;
-        /* Reducir tamaño del texto en móvil */
+        font-size: 16px;
+        /* Reducir aún más el tamaño del texto */
     }
 
     .nav-item a::after {
@@ -160,10 +162,19 @@
         /* Eliminar línea de subrayado en móvil */
     }
 
+    .dropdown-menu li {
+        padding: 2px 4px;
+        /* Reducir el padding */
+    }
+
     .dropdown-menu li a {
-        font-size: 14px;
-        /* Reducir aún más el texto del menú desplegable */
-        padding: 8px 10px;
+        font-size: 13px;
+        /* Reducir el tamaño del texto */
+        padding: 6px 8px;
+        /* Reducir el padding */
+        display: flex;
+        justify-content: space-between;
+        /* Espaciar el texto y el ícono */
     }
 
     .dropdown-menu li a:hover {
@@ -175,6 +186,12 @@
 
     .submenu-icon {
         margin-left: 6px;
-        font-size: 16px;
+        font-size: 14px;
+        /* Reducir el tamaño del ícono */
+    }
+
+    /* Añadir una sombra sutil para distinguir el menú del fondo */
+    .nav-item .dropdown-menu.open {
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 }

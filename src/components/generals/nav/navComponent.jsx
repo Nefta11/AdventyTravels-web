@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { FaBars, FaTimes, FaHome, FaSuitcase, FaInfoCircle, FaBlog, FaImages, FaEnvelope, FaNewspaper, FaBuilding, FaHandshake } from 'react-icons/fa';
+import { FaBars, FaTimes, FaHome, FaSuitcase, FaInfoCircle, FaBlog, FaImages, FaEnvelope, FaUsers, FaBuilding, FaHandshake } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import colors from '../../../utils/colors';
@@ -64,7 +64,7 @@ const NavComponent = () => {
                     <NavItem to="/blog" icon={FaBlog} label={t('blog')} menuOpen={menuOpen} />
                     <NavItem to="/galeria" icon={FaImages} label={t('gallery')} menuOpen={menuOpen} />
                     <NavItem icon={FaEnvelope} label={t('contact')} menuOpen={menuOpen} submenu />
-                    <NavItem icon={FaNewspaper} label="News" menuOpen={menuOpen} submenu submenuItems={newsSubmenuItems} />
+                    <NavItem icon={FaUsers} label="News" menuOpen={menuOpen} submenu submenuItems={newsSubmenuItems} />
                     {!isMobile && <LanguageSelector className="language-selector-desktop" />}
                 </ul>
             </div>
