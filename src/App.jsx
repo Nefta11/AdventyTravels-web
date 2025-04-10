@@ -9,6 +9,8 @@ import Gallery from './pages/Gallery';
 import Blog from './pages/Blog';
 import Error404 from './pages/pagError/Error404';
 import { SpeedInsights } from "@vercel/speed-insights/react"; // Importar SpeedInsights correctamente
+import Distribuidor from './pages/Distribuidor';
+import Partners from './pages/Partners';
 
 function App() {
   return (
@@ -35,6 +37,8 @@ function RoutesWithAnimation() {
       <Route path="/nosotros" element={<AboutUs />} />
       <Route path="/galeria" element={<Gallery />} />
       <Route path="/blog" element={<Blog />} />
+      <Route path="/distribuidor" element={<Distribuidor />} />
+      <Route path="/partners" element={<Partners />} />
       <Route path="*" element={<Error404 />} />
     </Routes>
   );
