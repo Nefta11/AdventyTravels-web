@@ -2,7 +2,8 @@ import { motion } from 'framer-motion';
 import NavComponent from '../components/generals/nav/navComponent';
 import FooterComponent from '../components/generals/footer/FooterComponent';
 import WhatsAppIcon from "../components/generals/whatsAppComponent/WhatsAppIcon";
-import PartnerHeader from "../components/partners/PartnerHeader.jsx";
+import PartnerHeader from "../components/partners/header/PartnerHeader.jsx";
+import PartnerBenefits from '../components/partners/benefits/PartnerBenefits.jsx';
 
 const Partners = () => {
     return (
@@ -13,6 +14,7 @@ const Partners = () => {
         >
             <NavComponent />
             <PartnerHeader />
+            <PartnerBenefits />
             <FooterComponent />
             <WhatsAppIcon />
         </motion.div>
