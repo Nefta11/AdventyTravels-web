@@ -22,7 +22,6 @@ const PartnerHeader = () => {
     const { t } = useTranslation();
     const [currentTextIndex, setCurrentTextIndex] = useState(0);
     const [isVisible, setIsVisible] = useState(false);
-    const [activeSection, setActiveSection] = useState(null);
 
     const handleScroll = useCallback(() => {
         const sections = document.querySelectorAll('.animate-on-scroll');
@@ -32,7 +31,7 @@ const PartnerHeader = () => {
 
             if (isInView) {
                 section.classList.add('visible');
-                setActiveSection(section.id);
+                // setActiveSection(section.id); // Removed or commented out as it is not defined
             }
         });
     }, []);
@@ -106,7 +105,7 @@ const PartnerHeader = () => {
 
             <div className="partner-container">
                 <InfoCards />
-                <WhatIsSection isActive={activeSection === 'what-is'} />
+                <WhatIsSection />
             </div>
         </>
     );
@@ -134,30 +133,24 @@ const InfoCards = () => {
     );
 };
 
-import PropTypes from 'prop-types';
-
-const WhatIsSection = ({ isActive }) => {
+const WhatIsSection = () => {
     const { t } = useTranslation();
     return (
-        <div className="what-is-section animate-on-scroll" id="what-is">
+        <div className="what-is-section" id="what-is">
             <div className="header-content">
-                <FaHandPointRight className={`pointer-icon ${isActive ? 'active' : ''}`} />
+                <FaHandPointRight className="pointer-icon" />
                 <h2>{t('partnerHeader.whatIsTitle')}</h2>
             </div>
             <div className="what-is-content">
-                <p className="fade-in-paragraph">
+                <p>
                     {t('partnerHeader.whatIsDescription1')}
                 </p>
-                <p className="fade-in-paragraph">
+                <p>
                     {t('partnerHeader.whatIsDescription2')}
                 </p>
             </div>
         </div>
     );
 };
-WhatIsSection.propTypes = {
-    isActive: PropTypes.bool.isRequired,
-};
-
 
 export default PartnerHeader;
