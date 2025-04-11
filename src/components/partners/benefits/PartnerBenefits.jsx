@@ -9,8 +9,7 @@ import {
 } from 'react-icons/fa';
 import './PartnerBenefits.css';
 
-// Agregar las variables CSS como clase en el nivel raíz
-
+// Datos estáticos para las tarjetas de beneficios
 const BENEFITS_DATA = [
     {
         id: 1,
@@ -55,32 +54,43 @@ const PartnerBenefits = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const benefitCards = document.querySelectorAll('.benefit-card');
+            const benefitCards = document.querySelectorAll('.benefits-card');
 
             benefitCards.forEach((card, index) => {
                 const rect = card.getBoundingClientRect();
                 const isInView = rect.top <= window.innerHeight * 0.8;
 
-                if (isInView && !visibleItems.includes(index)) {
-                    setVisibleItems(prev => [...prev, index]);
-                }
+                setVisibleItems(prev => {
+                    if (isInView && !prev.includes(index)) {
+                        return [...prev, index];
+                    }
+                    return prev;
+                });
             });
         };
 
-        window.addEventListener('scroll', handleScroll);
-        // Initial check
-        setTimeout(handleScroll, 100);
+        // Inicializar todas las tarjetas como visibles inicialmente
+        const initVisibility = () => {
+            const initialVisible = Array.from({ length: BENEFITS_DATA.length }, (_, i) => i);
+            setVisibleItems(initialVisible);
+
+            // También configurar el evento de desplazamiento para animaciones futuras
+            window.addEventListener('scroll', handleScroll);
+        };
+
+        // Usar setTimeout para asegurar que los elementos DOM existan
+        setTimeout(initVisibility, 100);
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, [visibleItems]);
+    }, []); // Quitar visibleItems de las dependencias para evitar bucle infinito
 
     return (
         <section className="benefits-root benefits-partner-section">
             <div className="benefits-container">
                 <h2 className="benefits-heading">
-                    Beneficios <span>UVAC Partner</span>
+                    Beneficios <span>Adventy Partner</span>
                 </h2>
 
                 <div className="benefits-grid">
