@@ -1,10 +1,11 @@
 /* Base Variables - specific to benefits component */
 .benefits-root {
-    --benefits-primary: #8e44ad;
-    --benefits-light: #F4F4F4;
-    --benefits-teal: #7DC1BD;
-    --benefits-orange: #E49F30;
-    --benefits-navy: #24455D;
+    --primary-color: #0046be;
+    --secondary-color: #8e44ad;
+    --accent-color: #6a3cb5;
+    --white: #ffffff;
+    --gray-light: #f8f8f8;
+    --gray-dark: #333333;
     --benefits-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     --benefits-transition-fast: all 0.3s ease;
     --benefits-transition-medium: all 0.5s ease;
@@ -12,7 +13,7 @@
 
 /* Main Section Styles */
 .benefits-partner-section {
-    background: linear-gradient(135deg, var(--benefits-navy), var(--benefits-primary));
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     padding: 50px 20px;
     position: relative;
     overflow: hidden;
@@ -46,13 +47,13 @@
     font-size: 2.5rem;
     font-weight: 700;
     text-align: center;
-    color: var(--benefits-light);
+    color: var(--white);
     margin-bottom: 50px;
     letter-spacing: 1px;
 }
 
 .benefits-heading span {
-    color: var(--benefits-orange);
+    color: var(--gray-light);
     font-weight: 800;
 }
 
@@ -158,12 +159,12 @@
 /* Icon Styling */
 .benefits-icon {
     font-size: 2.5rem;
-    color: var(--benefits-light);
+    color: var(--white);
     margin-bottom: 15px;
     display: inline-block;
     border-radius: 50%;
     padding: 12px;
-    background: linear-gradient(135deg, var(--benefits-primary), rgba(142, 68, 173, 0.7));
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
     transition: var(--benefits-transition-medium);
     width: 60px;
@@ -175,21 +176,21 @@
 
 .benefits-card:hover .benefits-icon {
     transform: scale(1.1) rotate(5deg);
-    color: var(--benefits-teal);
-    background: linear-gradient(135deg, var(--benefits-navy), var(--benefits-primary));
+    color: var(--gray-light);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
 }
 
 /* Title inside cards */
 .benefits-card-title {
     font-size: 1.2rem;
     font-weight: 700;
-    color: var(--benefits-light);
+    color: var(--white);
     margin-bottom: 12px;
     transition: var(--benefits-transition-fast);
 }
 
 .benefits-card:hover .benefits-card-title {
-    color: var(--benefits-orange);
+    color: var(--gray-light);
 }
 
 /* Description inside cards */
