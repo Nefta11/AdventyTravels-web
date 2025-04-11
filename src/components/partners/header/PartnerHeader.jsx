@@ -118,7 +118,6 @@ const InfoCards = () => {
             <div className="info-cards animate-on-scroll" id="info-cards">
                 <div className="info-card">
                     <div className="info-card-content">
-                        <h3>{t('partnerHeader.joinCommunity')}</h3>
                         <p>{t('partnerHeader.joinDescription')}</p>
                     </div>
                 </div>

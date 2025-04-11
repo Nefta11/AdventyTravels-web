@@ -352,7 +352,7 @@ const resources = {
           { primary: "INGRESOS", secondary: "EXTRAS" }
         ],
         joinCommunity: "OBTÉN",
-        joinDescription: "Sé parte de Adventy Partner y transforma tu pasión por los viajes en una oportunidad de crecimiento.",
+        joinDescription: "Sé parte de Adventy Partner y transforma tu pasión por los viajes en una oportunidad de crecimiento personal y profesional.",
         ctaButton: "¡DA CLICK AQUÍ PARA SER UN ADVENTY PARTNER!",
         whatIsTitle: "¿QUÉ ES ADVENTY PARTNER?",
         whatIsDescription1: "Adventy Partner es un nuevo programa de Adventy Travels, creado para personas que aman organizar y fomentar viajes propios, para amigos, familiares, conocidos o incluso clientes. La intención es que no sólo goces dicha planeación, sino que también obtengas ingresos extras por hacerlo.",
@@ -711,7 +711,7 @@ const resources = {
           { primary: "EXTRA", secondary: "INCOME" }
         ],
         joinCommunity: "GET",
-        joinDescription: "Be part of Adventy Partner and transform your passion for travel into a growth opportunity.",
+        joinDescription: "Be part of Adventy Partner and transform your passion for travel into a personal and professional growth opportunity.",
         ctaButton: "CLICK HERE TO BECOME AN ADVENTY PARTNER!",
         whatIsTitle: "WHAT IS ADVENTY PARTNER?",
         whatIsDescription1: "Adventy Partner is a new program by Adventy Travels, created for people who love organizing and promoting trips for themselves, friends, family, acquaintances, or even clients. The goal is not only to enjoy the planning but also to earn extra income by doing it.",
@@ -1069,7 +1069,7 @@ const resources = {
           { primary: "REVENUS", secondary: "SUPPLÉMENTAIRES" }
         ],
         joinCommunity: "OBTENEZ",
-        joinDescription: "Faites partie d'Adventy Partner et transformez votre passion pour les voyages en une opportunité de croissance.",
+        joinDescription: "Devenez partenaire d'Adventy et transformez votre passion pour les voyages en une opportunité de croissance personnelle et professionnelle.",
         ctaButton: "CLIQUEZ ICI POUR DEVENIR UN ADVENTY PARTNER!",
         whatIsTitle: "QU'EST-CE QU'ADVENTY PARTNER?",
         whatIsDescription1: "Adventy Partner est un nouveau programme d'Adventy Travels, créé pour les personnes qui aiment organiser et promouvoir des voyages pour elles-mêmes, leurs amis, leur famille, leurs connaissances ou même leurs clients. L'objectif est non seulement de profiter de la planification, mais aussi de gagner des revenus supplémentaires en le faisant.",
