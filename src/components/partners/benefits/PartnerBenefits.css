@@ -80,7 +80,7 @@
     overflow: hidden;
     max-width: 320px;
     margin: 0 auto;
-    height: 250px;
+    height: 235px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -218,7 +218,7 @@
     }
 
     .benefits-card {
-        height: 230px;
+        height: 220px;
         padding: 18px 15px;
     }
 }
@@ -236,7 +236,7 @@
     }
 
     .benefits-card {
-        height: 220px;
+        height: 210px;
     }
 
     .benefits-icon {
@@ -250,7 +250,7 @@
     }
 
     .benefits-description {
-        font-size: 0.85rem;
+        font-size: 0.80rem;
         -webkit-line-clamp: 3;
     }
 }
@@ -272,7 +272,7 @@
     }
 
     .benefits-card {
-        height: 220px;
+        height: 195px;
         padding: 15px 12px;
         max-width: 200px;
     }
@@ -291,7 +291,7 @@
     }
 
     .benefits-description {
-        font-size: 0.70rem;
+        font-size: 0.67rem;
         line-height: 1.3;
         -webkit-line-clamp: 6;
     }
