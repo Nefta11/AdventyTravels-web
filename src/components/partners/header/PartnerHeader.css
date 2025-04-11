@@ -97,7 +97,6 @@
     position: relative;
     overflow: hidden;
     box-shadow: var(--shadow-medium);
-    border-radius: 0 0 30px 30px;
     opacity: 0;
     transform: translateY(20px);
     transition: var(--transition-slow);
@@ -476,7 +475,6 @@
     .partner-header {
         height: 45vh;
         margin-top: 70px;
-        border-radius: 0 0 20px 20px;
     }
 
     .carousel-slide {
@@ -520,7 +518,6 @@
 @media (max-width: 480px) {
     .partner-header {
         height: 40vh;
-        border-radius: 0 0 15px 15px;
     }
 
     .carousel-slide {
