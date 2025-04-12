@@ -233,7 +233,7 @@
 
 @media (max-width: 480px) {
     .adventy-header-container {
-        height: 65vh;
+        height: 55vh;
         margin-top: 50px;
     }
 
@@ -247,8 +247,8 @@
     }
 
     .adventy-logo {
-        width: 130px;
-        margin-top: -40px;
+        width: 220px;
+        margin-top: 15px;
         margin-bottom: 10px;
     }
 
