@@ -79,13 +79,17 @@ const PartnerProcess = () => {
                     </div>
                 </div>
 
-                <p className="partner-process-tagline">
-                    ¡Conviértete en un experto en viajes y comienza a generar ingresos con el respaldo de nuestra plataforma exclusiva!
-                </p>
+                <div className="partner-highlight-wrapper">
+                    <div className="partner-highlight-container">
+                        <p className="partner-highlight-tagline">
+                            ¡Conviértete en un <span className="partner-highlight-text">experto en viajes</span> y comienza a <span className="partner-highlight-text">generar ingresos</span> con el respaldo de nuestra <span className="partner-highlight-text">plataforma exclusiva</span>!
+                        </p>
+                    </div>
+                </div>
             </section>
 
             <section className="partner-types-section">
-            <h2 className="partner-section-title">¿Quién Puede Ser Adventy Partner?</h2>
+                <h2 className="partner-section-title">¿Quién Puede Ser Adventy Partner?</h2>
 
                 <div className="partner-types-grid">
                     {partnerTypes.map(type => (

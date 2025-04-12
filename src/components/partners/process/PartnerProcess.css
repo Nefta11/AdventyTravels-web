@@ -116,12 +116,90 @@
     line-height: 1.3;
 }
 
-.partner-process-tagline {
+/* Nuevo estilo para destacar la frase */
+.partner-highlight-wrapper {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.partner-highlight-container {
+    position: relative;
+    max-width: 800px;
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    border-radius: 15px;
+    padding: 30px 40px;
+    box-shadow: 0 10px 30px rgba(36, 69, 93, 0.25);
+    transform-style: preserve-3d;
+    transform: rotateX(5deg);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.partner-highlight-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    animation: shine 3s infinite linear;
+}
+
+@keyframes shine {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.partner-highlight-tagline {
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 600;
     text-align: center;
-    font-style: italic;
-    color: var(--gray-dark);
-    margin-top: 40px;
-    font-size: 1.1rem;
+    margin: 0;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 2;
+}
+
+.partner-highlight-text {
+    color: var(--primary-color);
+    font-weight: 800;
+    position: relative;
+    display: inline-block;
+    padding: 0 5px;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
+.partner-highlight-text::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.partner-highlight-container:hover .partner-highlight-text {
+    transform: translateY(-2px);
+}
+
+.partner-highlight-container:hover .partner-highlight-text::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 /* Estilos para la sección de tipos de partner */
@@ -217,6 +295,10 @@
     .partner-type-card {
         padding: 25px 15px;
     }
+
+    .partner-highlight-tagline {
+        font-size: 1.2rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -266,6 +348,14 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
+
+    .partner-highlight-container {
+        padding: 25px 20px;
+    }
+
+    .partner-highlight-tagline {
+        font-size: 1.1rem;
+    }
 }
 
 @media (max-width: 576px) {
@@ -303,10 +393,14 @@
         line-height: 1.2;
     }
 
-    .partner-process-tagline {
-        font-size: 0.85rem;
-        margin-top: 30px;
-        padding: 0 15px;
+    .partner-highlight-container {
+        padding: 20px 15px;
+        border-radius: 10px;
+    }
+
+    .partner-highlight-tagline {
+        font-size: 0.9rem;
+        line-height: 1.5;
     }
 
     .partner-step-content {
