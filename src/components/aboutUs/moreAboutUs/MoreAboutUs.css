@@ -1,105 +1,358 @@
-:root{
-    --color1: #F4F4F4;
-    --color2: #7DC1BD;
-    --color3: #E49F30;
-    --color4: #24455D;
+:root {
+    --mau-color1: #F4F4F4;
+    --mau-color2: #7DC1BD;
+    --mau-color3: #E49F30;
+    --mau-color4: #24455D;
+    --mau-white: #ffffff;
+    --mau-black: #000000;
+    --mau-gray: #f8f8f8;
+    --mau-transition: all 0.4s ease;
 }
 
-/* MoreAboutUs.css */
-.more-about-us {
+/* Animaciones */
+@keyframes mau-fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes mau-scaleIn {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes mau-expandWidth {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 80px;
+    }
+}
+
+@keyframes mau-slideInLeft {
+    from {
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes mau-slideInRight {
+    from {
+        transform: translateX(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.mau-more-about-us {
+    padding: 80px 20px;
+    background-color: var(--mau-color1);
+    position: relative;
+    overflow: hidden;
+}
+
+.mau-more-about-us::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(125, 193, 189, 0.1), transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.mau-content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
-    margin: auto;
-    gap: 20px;
-    padding: 40px 20px;
+    gap: 50px;
+    position: relative;
+    z-index: 2;
 }
 
-.more-about-us .text-container {
+.mau-content-wrapper.mau-visible .mau-text-container {
+    animation: mau-slideInLeft 0.6s forwards;
+}
+
+.mau-content-wrapper.mau-visible .mau-image-wrapper {
+    animation: mau-slideInRight 0.6s forwards;
+}
+
+.mau-text-container {
     width: 50%;
-    color: #000;
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+.mau-title {
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--mau-color4);
+    margin: 0 0 15px;
+    position: relative;
+    line-height: 1.2;
+}
+
+.mau-accent-line {
+    height: 4px;
+    width: 0;
+    background: linear-gradient(to right, var(--mau-color3), var(--mau-color2));
+    margin-bottom: 25px;
+    border-radius: 2px;
+}
+
+.mau-content-wrapper.mau-visible .mau-accent-line {
+    animation: mau-expandWidth 0.6s forwards 0.3s;
+}
+
+.mau-description {
+    margin-bottom: 25px;
+    opacity: 0;
+}
+
+.mau-content-wrapper.mau-visible .mau-description {
+    animation: mau-fadeIn 0.5s forwards 0.4s;
+}
+
+.mau-description p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--mau-black);
+    margin: 0;
+    text-align: justify;
+}
+
+.mau-features-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 30px;
+    opacity: 0;
+}
+
+.mau-content-wrapper.mau-visible .mau-features-list {
+    animation: mau-fadeIn 0.5s forwards 0.6s;
+}
+
+.mau-feature-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    padding-left: 5px;
+}
+
+.mau-check-icon {
+    color: var(--mau-color3);
+    font-size: 18px;
+    margin-right: 10px;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.mau-feature-item span {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--mau-black);
+}
+
+.mau-team-section {
+    background-color: var(--mau-gray);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.mau-content-wrapper.mau-visible .mau-team-section {
+    animation: mau-fadeIn 0.5s forwards 0.8s;
+}
+
+.mau-team-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--mau-color3), var(--mau-color2));
+}
+
+.mau-team-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.mau-team-icon {
+    color: var(--mau-color3);
+    font-size: 20px;
+}
+
+.mau-sub-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--mau-color4);
+    margin: 0;
+}
+
+.mau-team-section p {
     font-size: 16px;
     line-height: 1.6;
-}
-
-.more-about-us .text-container h2  {
-    font-size: 56px;
-    font-weight: bold;
-    margin-bottom: 15px;
+    color: var(--mau-black);
+    margin: 0 0 15px;
     text-align: justify;
 }
-.sub{
-    font-size: 16px;
-    font-weight: bold;
-    text-align: start;
-}
-.more-about-us .text-container p {
-    margin-bottom: 15px;
-    font-size: 16px;
-    text-align: justify;
-    color: #000;
+
+.mau-agency-description {
+    margin-bottom: 0 !important;
+    font-style: italic;
 }
 
-.more-about-us .text-container .highlight {
-    font-weight: bold;
+.mau-image-wrapper {
+    width: 45%;
+    opacity: 0;
+    transform: translateX(30px);
 }
 
-.more-about-us .image-container {
-    width: 480px;
+.mau-image-container {
+    width: 100%;
     height: 600px;
-    border-radius: 15px;
-    background: url('https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/images/aboutUs/oficce.webp') center/cover no-repeat;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    background: url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80') center/cover no-repeat;
+    transition: transform 0.5s ease;
 }
 
-.more-about-us .justified {
-    text-align: justify;
+.mau-image-container:hover {
+    transform: scale(1.02);
 }
 
-.more-about-us .text-container ul {
-    list-style-type: none;
-    padding-left: 0;
-    margin-bottom: 20px; 
-    text-align: left;
+.mau-image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 35%;
+    background: linear-gradient(to top, rgba(36, 69, 93, 0.8), transparent);
+    pointer-events: none;
 }
 
-/* Responsividad */
-@media (max-width: 800px) {
-    .more-about-us {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 20px 10px;
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .mau-content-wrapper {
+        gap: 40px;
     }
 
-    .more-about-us .text-container {
+    .mau-title {
+        font-size: 42px;
+    }
+
+    .mau-image-container {
+        height: 550px;
+    }
+}
+
+@media (max-width: 900px) {
+    .mau-more-about-us {
+        padding: 60px 20px;
+    }
+
+    .mau-content-wrapper {
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+
+    .mau-text-container,
+    .mau-image-wrapper {
         width: 100%;
-        padding: 15px;
-        font-size: 16px;
     }
 
-    .more-about-us .text-container h2  {
-        font-size: 32px;
-        padding: 0 10px;
+    .mau-image-container {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mau-more-about-us {
+        padding: 50px 15px;
     }
 
-    .more-about-us .text-container p {
-        font-size: 12px;
-        margin-bottom: 10px;
-        text-align: justify;
+    .mau-title {
+        font-size: 36px;
     }
 
-    .more-about-us .text-container .highlight {
-        font-size: 12px;
-        text-align: justify;
+    .mau-sub-title {
+        font-size: 18px;
     }
 
-    .more-about-us .image-container {
-        width: 100%;
+    .mau-image-container {
+        height: 350px;
+    }
+
+    .mau-team-section {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mau-more-about-us {
+        padding: 40px 15px;
+    }
+
+    .mau-title {
+        font-size: 28px;
+    }
+
+    .mau-description p,
+    .mau-feature-item span,
+    .mau-team-section p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .mau-image-container {
         height: 250px;
     }
 
-    .more-about-us .text-container ul {
-        font-size: 12px;
+    .mau-check-icon,
+    .mau-team-icon {
+        font-size: 16px;
+    }
+
+    .mau-sub-title {
+        font-size: 16px;
     }
 }
