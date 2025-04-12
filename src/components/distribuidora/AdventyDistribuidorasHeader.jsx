@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './AdventyDistribuidorasHeader.css';
 
+// Array of carousel images (professional women)
 const CAROUSEL_IMAGES = [
     'https://images.unsplash.com/photo-1573497019236-17f8177b81e8?auto=format&fit=crop&q=60',
     'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=60',
@@ -54,8 +55,7 @@ const AdventyDistribuidorasHeader = () => {
                 <img src={LOGO_URL} alt="Adventy Logo" className="adventy-logo" />
                 <h1 className="adventy-title">Convierte tu pasión por viajar en tu nuevo ingreso</h1>
                 <p className="adventy-subtitle">
-                    Sé parte de ADVENTY DISTRIBUIDORAS. Únete a nuestro programa y accede a
-                    capacitación, herramientas digitales y la oportunidad de emprender en el sector turístico
+                    Sé parte de ADVENTY DISTRIBUIDORAS
                 </p>
 
                 <div className="adventy-buttons">

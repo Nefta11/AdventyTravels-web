@@ -24,10 +24,11 @@
 .adventy-header-container {
     position: relative;
     width: 100%;
-    height: 90vh;
-    /* Increased height for better visibility */
+    height: 85vh;
+    /* Slightly reduced from 90vh */
     overflow: hidden;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    /* Reduced from 50px */
 }
 
 .adventy-curved-bottom {
@@ -35,8 +36,8 @@
     bottom: -2px;
     left: 0;
     width: 100%;
-    height: 60px;
-    /* Reduced height for better proportion */
+    height: 50px;
+    /* Reduced from 60px */
     background-color: white;
     border-radius: 100% 100% 0 0;
     z-index: 10;
@@ -68,7 +69,6 @@
     transition: opacity 1s ease-in-out;
     background-size: cover;
     background-position: center 30%;
-    /* Better positioning for focusing on people */
 }
 
 .adventy-carousel-slide.active {
@@ -83,65 +83,61 @@
     z-index: 5;
     text-align: center;
     width: 90%;
-    /* Increased width for better mobile display */
     max-width: 800px;
     animation: adventy-fadeIn 1s ease-out;
-    padding: 20px;
-    /* Added padding */
+    padding: 15px;
+    /* Reduced from 20px */
 }
 
 .adventy-logo {
-    width: 240px;
-    /* Reduced from 440px for better proportion */
+    width: 340px;
     height: auto;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    /* Reduced from 25px */
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
     max-width: 90%;
-    /* Ensure it doesn't overflow */
 }
 
 .adventy-title {
-    font-size: 32px;
+    font-size: 38px;
     font-weight: 700;
     color: var(--adventy-white);
-    margin-bottom: 15px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 12px;
+    /* Reduced from 15px */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
     line-height: 1.2;
-    /* Improved readability */
 }
 
 .adventy-subtitle {
-    font-size: 18px;
+    font-size: 22px;
     color: var(--adventy-white);
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    /* Reduced from 25px */
     line-height: 1.4;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
 }
 
 .adventy-buttons {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
     margin-top: 20px;
-    flex-wrap: wrap;
-    /* Allow buttons to wrap on very small screens */
+    /* Reduced from 30px */
 }
 
 .adventy-button {
     padding: 12px 20px;
+    /* Reduced from 14px 24px */
     border-radius: 30px;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     transition: var(--adventy-transition);
     text-decoration: none;
-    font-size: 15px;
+    font-size: 16px;
     border: 2px solid transparent;
     text-align: center;
-    /* Center text in buttons */
-    min-width: 200px;
-    /* Minimum width for buttons */
-    margin-bottom: 5px;
-    /* Space between buttons when they wrap */
+    min-width: 220px;
 }
 
 .adventy-button-primary {
@@ -166,162 +162,172 @@
     color: var(--adventy-deep-purple);
 }
 
-/* Enhanced Media Queries */
+/* Enhanced Media Queries with MORE COMPACT SIZING */
 @media (max-width: 1024px) {
+    .adventy-header-container {
+        height: 70vh;
+        /* Reduced */
+    }
+
     .adventy-logo {
-        width: 200px;
+        width: 280px;
     }
 
     .adventy-title {
-        font-size: 30px;
+        font-size: 34px;
+    }
+
+    .adventy-subtitle {
+        font-size: 20px;
     }
 }
 
 @media (max-width: 768px) {
     .adventy-header-container {
-        height: 80vh;
-    }
-
-    .adventy-logo {
-        width: 180px;
-        margin-bottom: 20px;
-    }
-
-    .adventy-title {
-        font-size: 26px;
-        margin-bottom: 12px;
-    }
-
-    .adventy-subtitle {
-        font-size: 16px;
-        margin-bottom: 20px;
-    }
-
-    .adventy-buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-    }
-
-    .adventy-button {
-        width: 100%;
-        max-width: 250px;
-        padding: 10px 15px;
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 576px) {
-    .adventy-header-container {
-        height: 100vh;
-        /* Full height on very small screens */
+        height: 60vh;
+        /* Significantly reduced */
+        margin-bottom: 25px;
     }
 
     .adventy-curved-bottom {
         height: 40px;
     }
 
-    .adventy-content {
-        width: 95%;
-        padding: 15px 10px;
+    .adventy-logo {
+        width: 220px;
+        margin-bottom: 15px;
+    }
+
+    .adventy-title {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .adventy-subtitle {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .adventy-buttons {
+        gap: 12px;
+        margin-top: 15px;
+    }
+
+    .adventy-button {
+        min-width: 180px;
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .adventy-header-container {
+        height: 50vh;
+        /* Much more compact */
+        margin-bottom: 20px;
+    }
+
+    .adventy-curved-bottom {
+        height: 30px;
     }
 
     .adventy-logo {
-        width: 150px;
-        margin-bottom: 15px;
+        width: 180px;
+        margin-bottom: 10px;
     }
 
     .adventy-title {
         font-size: 22px;
-        margin-bottom: 10px;
-    }
-
-    .adventy-subtitle {
-        font-size: 14px;
-        line-height: 1.3;
-        margin-bottom: 15px;
-    }
-}
-
-@media (max-width: 380px) {
-    .adventy-header-container {
-        height: 100vh;
-    }
-
-    .adventy-logo {
-        width: 130px;
-        margin-bottom: 12px;
-    }
-
-    .adventy-title {
-        font-size: 20px;
-    }
-
-    .adventy-subtitle {
-        font-size: 13px;
-    }
-
-    .adventy-button {
-        padding: 9px 14px;
-        font-size: 13px;
-        min-width: 180px;
-    }
-}
-
-/* Fix for extremely small screens */
-@media (max-width: 320px) {
-    .adventy-logo {
-        width: 110px;
-    }
-
-    .adventy-title {
-        font-size: 18px;
-    }
-
-    .adventy-subtitle {
-        font-size: 12px;
-        line-height: 1.2;
-    }
-
-    .adventy-button {
-        min-width: 160px;
-        font-size: 12px;
-        padding: 8px 12px;
-    }
-}
-
-/* Fix for very tall but narrow screens (iPhone SE, etc.) */
-@media (max-height: 667px) and (max-width: 375px) {
-    .adventy-header-container {
-        height: 95vh;
-    }
-
-    .adventy-content {
-        top: 45%;
-        /* Move content up slightly */
-    }
-
-    .adventy-logo {
-        width: 120px;
-        margin-bottom: 10px;
-    }
-
-    .adventy-title {
-        font-size: 19px;
         margin-bottom: 8px;
     }
 
     .adventy-subtitle {
-        font-size: 12px;
+        font-size: 16px;
         margin-bottom: 12px;
+    }
+
+    .adventy-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 12px;
+    }
+
+    .adventy-button {
+        width: 100%;
+        max-width: 220px;
+        padding: 8px 16px;
     }
 }
 
-/* For landscape mode on mobile devices */
+@media (max-width: 480px) {
+    .adventy-header-container {
+        height: 45vh;
+        /* Extremely compact */
+    }
+
+    .adventy-logo {
+        width: 150px;
+        margin-bottom: 8px;
+    }
+
+    .adventy-title {
+        font-size: 20px;
+        margin-bottom: 6px;
+        line-height: 1.1;
+    }
+
+    .adventy-subtitle {
+        font-size: 14px;
+        margin-bottom: 10px;
+        line-height: 1.2;
+    }
+
+    .adventy-button {
+        padding: 8px 14px;
+        font-size: 13px;
+        min-width: 200px;
+    }
+}
+
+/* For very small screens */
+@media (max-width: 380px) {
+    .adventy-header-container {
+        height: 40vh;
+        /* Most compact */
+    }
+
+    .adventy-curved-bottom {
+        height: 25px;
+    }
+
+    .adventy-logo {
+        width: 130px;
+        margin-bottom: 6px;
+    }
+
+    .adventy-title {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .adventy-subtitle {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+
+    .adventy-button {
+        padding: 7px 12px;
+        font-size: 12px;
+        min-width: 180px;
+    }
+}
+
+/* For landscape orientation */
 @media (max-height: 500px) and (orientation: landscape) {
     .adventy-header-container {
-        height: 120vh;
-        /* Make sure it takes up enough space in landscape */
+        height: 90vh;
+        /* Adjusted for landscape */
     }
 
     .adventy-content {
@@ -329,28 +335,28 @@
     }
 
     .adventy-logo {
-        width: 120px;
+        width: 140px;
         margin-bottom: 8px;
     }
 
     .adventy-title {
         font-size: 20px;
-        margin-bottom: 8px;
+        margin-bottom: 6px;
     }
 
     .adventy-subtitle {
-        font-size: 13px;
-        margin-bottom: 10px;
+        font-size: 14px;
+        margin-bottom: 8px;
     }
 
     .adventy-buttons {
         flex-direction: row;
-        /* Show buttons side by side in landscape */
         gap: 10px;
     }
 
     .adventy-button {
-        min-width: 170px;
-        padding: 8px 12px;
+        min-width: 160px;
+        padding: 6px 12px;
+        font-size: 12px;
     }
 }
