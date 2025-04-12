@@ -8,6 +8,7 @@ import {
     FaUsers
 } from 'react-icons/fa';
 import './PartnerBenefits.css';
+
 const BENEFITS_DATA = [
     {
         "id": 1,
