@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import NavComponent from '../components/generals/nav/navComponent';
 import FooterComponent from '../components/generals/footer/FooterComponent';
 import WhatsAppIcon from "../components/generals/whatsAppComponent/WhatsAppIcon";
-import AdventyDistribuidorasHeader from '../components/distribuidora/AdventyDistribuidorasHeader';
+import AdventyDistribuidorasHeader from '../components/distribuidora/header/AdventyDistribuidorasHeader';
 const Distribuidor = () => {
     return (
         <motion.div
