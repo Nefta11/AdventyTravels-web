@@ -30,16 +30,16 @@ const CarouselComponent = () => {
     }, []);
 
     return (
-        <div className="carousel">
-            <div className="carousel-slide">
+        <div className="carouselComponent-carousel">
+            <div className="carouselComponent-carousel-slide">
                 <img
                     src={images[currentIndex]}
                     alt={`Slide ${currentIndex + 1}`}
-                    className="carousel-image"
+                    className="carouselComponent-carousel-image"
                 />
             </div>
-            <button className="carousel-arrow left" onClick={handlePrev}>‹</button>
-            <button className="carousel-arrow right" onClick={handleNext}>›</button>
+            <button className="carouselComponent-carousel-arrow carouselComponent-carousel-arrow-left" onClick={handlePrev}>‹</button>
+            <button className="carouselComponent-carousel-arrow carouselComponent-carousel-arrow-right" onClick={handleNext}>›</button>
         </div>
     );
 };
