@@ -1,8 +1,8 @@
 /* Base Variables - specific to benefits component */
 .benefits-root {
-    --primary-color: #0046be;
-    --secondary-color: #8e44ad;
-    --accent-color: #6a3cb5;
+    --primary-color: #E49F30;
+    --secondary-color: #24455D;
+    --accent-color: #24455D;
     --white: #ffffff;
     --gray-light: #f8f8f8;
     --gray-dark: #333333;
@@ -13,7 +13,7 @@
 
 /* Main Section Styles */
 .benefits-partner-section {
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     padding: 50px 20px;
     position: relative;
     overflow: hidden;
