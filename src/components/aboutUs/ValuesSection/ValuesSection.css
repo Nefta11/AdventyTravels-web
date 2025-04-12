@@ -80,7 +80,7 @@
         font-size: 16px;
     }
     .values-section {
-        margin-top: -30px;
+        margin-top: -10px;
     }
     .values-grid {
         grid-template-columns: repeat(2, 1fr);
