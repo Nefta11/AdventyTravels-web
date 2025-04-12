@@ -26,15 +26,14 @@ const NavComponent = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    // Definir las opciones para el submenú de Noticias
     const newsSubmenuItems = [
         {
-            label: 'Distribuidoras',
+            label: 'Distribuidoras Adventy',
             href: '/distribuidor',
-            icon: FaFemale // Changed icon to FaFemale
+            icon: FaFemale 
         },
         {
-            label: 'Partners',
+            label: 'Adventy Partners',
             href: '/partners',
             icon: FaHandshake
         }
