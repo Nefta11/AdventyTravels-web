@@ -18,7 +18,7 @@ const AdventyWomenCampaign = () => {
                     entry.target.classList.add('campaign-animate-in');
                 }
             });
-        }, { threshold: 0.2 });
+        }, { threshold: 0.1 }); // Reduced threshold for earlier animation trigger
 
         document.querySelectorAll('.campaign-benefit-card').forEach(card => {
             observer.observe(card);
@@ -30,47 +30,46 @@ const AdventyWomenCampaign = () => {
     const benefits = [
         {
             icon: <FaGraduationCap />,
-            title: "Capacitación completa y constante",
-            description: "Aprende todo sobre turismo, ventas, manejo de clientes y plataformas digitales."
+            title: "Capacitación completa",
+            description: "Aprende todo sobre turismo, ventas y manejo de plataformas digitales."
         },
         {
             icon: <FaLaptop />,
-            title: "Herramientas y plataforma digital",
-            description: "Accede a nuestra plataforma para vender viajes nacionales e internacionales, paquetes de temporada y productos de nuestra tienda en línea."
+            title: "Herramientas digitales",
+            description: "Accede a nuestra plataforma para vender viajes y productos exclusivos."
         },
         {
             icon: <FaGift />,
             title: "Kit de bienvenida",
-            description: "Material promocional y herramientas para comenzar con fuerza."
+            description: "Material promocional para comenzar con fuerza."
         },
         {
             icon: <FaClock />,
             title: "Libertad y flexibilidad",
-            description: "Maneja tu tiempo, trabaja desde donde quieras y construye tu propio camino."
+            description: "Maneja tu tiempo y trabaja desde donde quieras."
         },
         {
             icon: <FaUsers />,
-            title: "Comunidad de mujeres que inspiran",
-            description: "Conéctate con otras distribuidoras, aprende y crece en una red que te impulsa."
+            title: "Comunidad de apoyo",
+            description: "Conéctate con otras distribuidoras y crece en red."
         },
         {
             icon: <FaChartLine />,
-            title: "Crecimiento financiero sostenido",
-            description: "Desarrolla un negocio con ingresos crecientes y oportunidades de liderazgo."
+            title: "Crecimiento financiero",
+            description: "Desarrolla un negocio con ingresos crecientes."
         }
     ];
 
     return (
         <div className={`campaign-container ${isVisible ? 'campaign-visible' : ''}`}>
             <div className="campaign-overlay"></div>
-            <div className="campaign-background-decoration"></div>
 
             <div className="campaign-content">
                 <div className="campaign-header">
                     <div className="campaign-logo-wrapper">
                         <div className="campaign-logo">A</div>
                     </div>
-                    <h2 className="campaign-title">CAMPAÑA: MUJERES LIBRES CON ADVENTY</h2>
+                    <h2 className="campaign-title">MUJERES LIBRES CON ADVENTY</h2>
                     <p className="campaign-intro">
                         ¿Eres una mujer soñadora, valiente y con hambre de libertad?
                     </p>

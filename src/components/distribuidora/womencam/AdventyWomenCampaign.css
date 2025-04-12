@@ -8,20 +8,16 @@
     --campaign-deep-purple: #5A2E9D;
     --campaign-white: #ffffff;
     --campaign-off-white: #F9F5FF;
-    --campaign-light-gray: #f5f5f5;
-    --campaign-medium-gray: #e0e0e0;
     --campaign-dark-gray: #444444;
     --campaign-shadow: 0 4px 15px rgba(138, 79, 255, 0.15);
-    --campaign-transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
-    --campaign-card-radius: 16px;
-    --campaign-button-radius: 50px;
+    --campaign-transition: all 0.35s cubic-bezier(0.215, 0.61, 0.355, 1);
+    --campaign-card-radius: 12px;
 }
 
 /* Contenedor principal y fondo */
 .campaign-container {
     background-color: var(--campaign-off-white);
-
-    padding: 120px 0;
+    padding: 80px 0;
     position: relative;
     overflow: hidden;
     opacity: 0;
@@ -47,20 +43,10 @@
     z-index: 1;
 }
 
-.campaign-background-decoration {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 60%;
-    height: 100%;
-    z-index: 1;
-    opacity: 0.7;
-}
-
 .campaign-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 20px;
     position: relative;
     z-index: 2;
 }
@@ -68,31 +54,29 @@
 /* Encabezado y título */
 .campaign-header {
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
     position: relative;
 }
 
 .campaign-logo-wrapper {
     display: flex;
     justify-content: center;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .campaign-logo {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     background: linear-gradient(135deg, var(--campaign-purple), var(--campaign-pink));
-    border-radius: 20px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 40px;
+    font-size: 35px;
     font-weight: 900;
     color: var(--campaign-white);
-    box-shadow: 0 10px 20px rgba(138, 79, 255, 0.25),
-        0 0 30px var(--campaign-pink-glow);
+    box-shadow: 0 8px 16px rgba(138, 79, 255, 0.25);
     position: relative;
-    overflow: hidden;
     transform: rotate(-5deg);
     transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -101,37 +85,12 @@
     transform: rotate(0) scale(1.05);
 }
 
-.campaign-logo:before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    width: 40px;
-    height: 40px;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-}
-
-.campaign-logo:after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: -15px;
-    width: 30px;
-    height: 30px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-}
-
 .campaign-title {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     font-weight: 800;
     color: var(--campaign-deep-purple);
-    margin-bottom: 25px;
-    position: relative;
-    display: inline-block;
+    margin-bottom: 20px;
     letter-spacing: 0.5px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background: linear-gradient(to right, var(--campaign-deep-purple), var(--campaign-pink));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -139,24 +98,23 @@
 }
 
 .campaign-intro {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--campaign-pink);
     margin-bottom: 15px;
-    position: relative;
 }
 
 .campaign-description {
-    font-size: 1.25rem;
-    line-height: 1.7;
+    font-size: 1.15rem;
+    line-height: 1.6;
     color: var(--campaign-dark-gray);
     max-width: 800px;
-    margin: 0 auto 30px;
+    margin: 0 auto 25px;
 }
 
 .campaign-divider {
-    width: 120px;
-    height: 5px;
+    width: 100px;
+    height: 4px;
     background: linear-gradient(to right, var(--campaign-purple), var(--campaign-pink));
     margin: 0 auto;
     border-radius: 3px;
@@ -178,59 +136,44 @@
     }
 }
 
-.campaign-divider:before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(to right, var(--campaign-purple), var(--campaign-pink));
-    filter: blur(8px);
-    opacity: 0.5;
-    border-radius: 3px;
-}
-
 /* Sección de beneficios */
 .campaign-benefits-title {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--campaign-deep-purple);
     text-align: center;
-    margin-bottom: 50px;
-    position: relative;
+    margin-bottom: 40px;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .campaign-benefits-title:after {
     content: '';
     display: block;
-    width: 60px;
+    width: 50px;
     height: 3px;
     background: linear-gradient(to right, var(--campaign-purple), var(--campaign-pink));
-    margin: 15px auto 0;
+    margin: 12px auto 0;
     border-radius: 2px;
 }
 
 .campaign-benefits-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 35px;
-    margin-bottom: 70px;
+    gap: 25px;
+    margin-bottom: 50px;
 }
 
 .campaign-benefit-card {
     background: var(--campaign-white);
     border-radius: var(--campaign-card-radius);
     box-shadow: var(--campaign-shadow);
-    padding: 40px 30px;
+    padding: 30px 20px;
     transition: var(--campaign-transition);
     position: relative;
     z-index: 1;
-    border: 2px solid transparent;
+    border: 1px solid transparent;
     opacity: 0;
     transform: translateY(30px);
-    overflow: hidden;
 }
 
 .campaign-animate-in {
@@ -250,76 +193,37 @@
 }
 
 .campaign-benefit-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(138, 79, 255, 0.25);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(138, 79, 255, 0.2);
     border-color: var(--campaign-light-purple);
 }
 
-.campaign-benefit-card:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 0;
-    background: linear-gradient(to bottom, var(--campaign-light-purple), transparent);
-    border-radius: var(--campaign-card-radius) var(--campaign-card-radius) 0 0;
-    opacity: 0;
-    transition: var(--campaign-transition);
-    z-index: -1;
-}
-
-.campaign-benefit-card:after {
-    content: '';
-    position: absolute;
-    bottom: -100px;
-    right: -100px;
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle at center, var(--campaign-light-pink) 0%, transparent 70%);
-    opacity: 0;
-    transition: var(--campaign-transition);
-    z-index: -1;
-}
-
-.campaign-benefit-card:hover:before {
-    height: 100%;
-    opacity: 0.5;
-}
-
-.campaign-benefit-card:hover:after {
-    opacity: 0.3;
-}
-
 .campaign-benefit-icon {
-    font-size: 3rem;
+    font-size: 2.2rem;
     color: var(--campaign-pink);
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     transition: var(--campaign-transition);
-    display: inline-block;
     background: var(--campaign-light-pink);
-    padding: 15px;
+    padding: 12px;
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
+    width: 65px;
+    height: 65px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .campaign-benefit-card:hover .campaign-benefit-icon {
-    transform: scale(1.15) rotate(5deg);
+    transform: scale(1.1);
     color: var(--campaign-purple);
     background: linear-gradient(135deg, var(--campaign-light-purple), var(--campaign-light-pink));
-    box-shadow: 0 5px 15px rgba(138, 79, 255, 0.15);
 }
 
 .campaign-benefit-title {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: var(--campaign-deep-purple);
-    margin-bottom: 15px;
-    position: relative;
+    margin-bottom: 12px;
     transition: var(--campaign-transition);
 }
 
@@ -328,82 +232,55 @@
 }
 
 .campaign-benefit-description {
-    font-size: 1.05rem;
-    line-height: 1.6;
+    font-size: 1rem;
+    line-height: 1.5;
     color: var(--campaign-dark-gray);
-    margin-bottom: 20px;
-    transition: var(--campaign-transition);
+    margin-bottom: 15px;
 }
 
 .campaign-benefit-indicator {
-    width: 40px;
-    height: 4px;
+    width: 35px;
+    height: 3px;
     background: linear-gradient(to right, var(--campaign-purple), var(--campaign-pink));
     border-radius: 2px;
-    margin-top: 10px;
-    transition: var(--campaign-transition);
-    position: relative;
-}
-
-.campaign-benefit-indicator:before {
-    content: '';
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    right: -1px;
-    bottom: -1px;
-    background: linear-gradient(to right, var(--campaign-purple), var(--campaign-pink));
-    filter: blur(3px);
-    opacity: 0;
-    border-radius: 2px;
+    margin-top: 8px;
     transition: var(--campaign-transition);
 }
 
 .campaign-benefit-card:hover .campaign-benefit-indicator {
-    width: 60px;
-}
-
-.campaign-benefit-card:hover .campaign-benefit-indicator:before {
-    opacity: 0.5;
+    width: 50px;
 }
 
 /* Media queries para responsividad mejorada */
 @media (max-width: 1200px) {
     .campaign-benefits-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
     }
 
     .campaign-title {
-        font-size: 2.6rem;
+        font-size: 2.2rem;
+    }
+
+    .campaign-benefit-card {
+        padding: 25px 18px;
+    }
+
+    .campaign-benefit-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
     }
 }
 
 @media (max-width: 992px) {
     .campaign-container {
-        padding: 80px 0;
+        padding: 70px 0;
     }
 
-    .campaign-title {
-        font-size: 2.4rem;
-    }
-
-    .campaign-intro {
-        font-size: 1.4rem;
-    }
-
-    .campaign-benefits-title {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .campaign-container {
-        padding: 60px 0;
-    }
-
-    .campaign-content {
-        padding: 0 20px;
+    .campaign-benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
     .campaign-title {
@@ -414,74 +291,8 @@
         font-size: 1.3rem;
     }
 
-    .campaign-description {
-        font-size: 1.1rem;
-    }
-
     .campaign-benefits-title {
         font-size: 1.8rem;
-        margin-bottom: 30px;
-    }
-
-    .campaign-benefits-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    .campaign-benefit-card {
-        padding: 30px 25px;
-    }
-
-    .campaign-benefit-icon {
-        width: 70px;
-        height: 70px;
-        font-size: 2.5rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .campaign-container {
-        padding: 50px 0;
-    }
-
-    .campaign-header {
-        margin-bottom: 50px;
-    }
-
-    .campaign-logo {
-        width: 60px;
-        height: 60px;
-        font-size: 30px;
-    }
-
-    .campaign-title {
-        font-size: 1.6rem;
-        margin-bottom: 20px;
-    }
-
-    .campaign-intro {
-        font-size: 1.1rem;
-    }
-
-    .campaign-description {
-        font-size: 1rem;
-        line-height: 1.6;
-    }
-
-    .campaign-divider {
-        width: 80px;
-        height: 4px;
-    }
-
-    .campaign-benefits-title {
-        font-size: 1.5rem;
-    }
-
-    .campaign-benefit-icon {
-        width: 60px;
-        height: 60px;
-        font-size: 2.2rem;
-        padding: 12px;
     }
 
     .campaign-benefit-title {
@@ -489,13 +300,61 @@
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
+    .campaign-container {
+        padding: 50px 0;
+    }
+
+    .campaign-header {
+        margin-bottom: 40px;
+    }
+
     .campaign-title {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
     }
 
     .campaign-intro {
+        font-size: 1.2rem;
+    }
+
+    .campaign-description {
         font-size: 1rem;
+    }
+
+    .campaign-benefits-title {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+    }
+
+    .campaign-benefit-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .campaign-container {
+        padding: 40px 0;
+    }
+
+    .campaign-benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .campaign-logo {
+        width: 55px;
+        height: 55px;
+        font-size: 28px;
+    }
+
+    .campaign-title {
+        font-size: 1.5rem;
+    }
+
+    .campaign-intro {
+        font-size: 1.1rem;
     }
 
     .campaign-description {
@@ -503,18 +362,78 @@
     }
 
     .campaign-benefits-title {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 
     .campaign-benefit-card {
-        padding: 25px 20px;
+        padding: 20px 15px;
     }
 
     .campaign-benefit-icon {
-        width: 50px;
-        height: 50px;
-        font-size: 1.8rem;
+        width: 45px;
+        height: 45px;
+        font-size: 1.5rem;
         padding: 10px;
         margin-bottom: 15px;
+    }
+
+    .campaign-benefit-title {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .campaign-benefit-description {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        margin-bottom: 10px;
+    }
+
+    .campaign-benefit-indicator {
+        height: 2px;
+        width: 25px;
+    }
+
+    .campaign-benefit-card:hover .campaign-benefit-indicator {
+        width: 40px;
+    }
+}
+
+@media (max-width: 400px) {
+    .campaign-title {
+        font-size: 1.3rem;
+    }
+
+    .campaign-intro {
+        font-size: 1rem;
+    }
+
+    .campaign-description {
+        font-size: 0.9rem;
+    }
+
+    .campaign-benefits-title {
+        font-size: 1.2rem;
+    }
+
+    .campaign-benefit-card {
+        padding: 15px 12px;
+    }
+
+    .campaign-benefit-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3rem;
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+
+    .campaign-benefit-title {
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+    }
+
+    .campaign-benefit-description {
+        font-size: 0.8rem;
+        line-height: 1.3;
     }
 }
