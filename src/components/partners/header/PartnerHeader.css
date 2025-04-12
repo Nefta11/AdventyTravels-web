@@ -1,28 +1,17 @@
-/* CSS Variables for consistent theming */
+/* CSS Variables simplificadas */
 :root {
     --headerPat-primary-color: #E49F30;
     --headerPat-secondary-color: #24455D;
-    --headerPat-accent-color: #24455D;
     --headerPat-white: #ffffff;
     --headerPat-gray-light: #f8f8f8;
     --headerPat-gray-dark: #333333;
-
-    /* Shadows and effects */
     --headerPat-shadow-soft: 0 4px 8px rgba(0, 0, 0, 0.1);
     --headerPat-shadow-medium: 0 6px 12px rgba(0, 0, 0, 0.15);
-    --headerPat-shadow-large: 0 15px 30px rgba(0, 0, 0, 0.1);
-
-    /* Animations */
     --headerPat-transition-quick: all 0.3s ease;
     --headerPat-transition-medium: all 0.5s ease;
-    --headerPat-transition-slow: all 0.8s ease;
-
-    /* Gradients */
-    --headerPat-gradient-header: linear-gradient(135deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.65));
-    --headerPat-gradient-card: linear-gradient(145deg, var(--headerPat-white), var(--headerPat-gray-light));
-    --headerPat-gradient-shine: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
 }
 
+/* Animaciones optimizadas: mantener solo las esenciales */
 @keyframes headerPat-fadeInUp {
     from {
         opacity: 0;
@@ -35,60 +24,7 @@
     }
 }
 
-@keyframes headerPat-float {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-@keyframes headerPat-pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(228, 159, 48, 0.4);
-    }
-
-    70% {
-        box-shadow: 0 0 0 10px rgba(228, 159, 48, 0);
-    }
-
-    100% {
-        box-shadow: 0 0 0 0 rgba(228, 159, 48, 0);
-    }
-}
-
-@keyframes headerPat-wiggle {
-
-    0%,
-    100% {
-        transform: rotate(0deg);
-    }
-
-    25% {
-        transform: rotate(-10deg);
-    }
-
-    75% {
-        transform: rotate(10deg);
-    }
-}
-
-@keyframes headerPat-point {
-
-    0%,
-    100% {
-        transform: translateX(0);
-    }
-
-    50% {
-        transform: translateX(5px);
-    }
-}
-
+/* Estilos para el header y carrusel */
 .headerPat-partner-header {
     height: 50vh;
     width: 100%;
@@ -99,7 +35,7 @@
     box-shadow: var(--headerPat-shadow-medium);
     opacity: 0;
     transform: translateY(20px);
-    transition: var(--headerPat-transition-slow);
+    transition: var(--headerPat-transition-medium);
 }
 
 .headerPat-partner-header.headerPat-visible {
@@ -107,12 +43,19 @@
     transform: translateY(0);
 }
 
+/* Overlay mejorado para que no se corte */
 .headerPat-header-overlay {
     position: absolute;
-    inset: 0;
-    background: var(--headerPat-gradient-header);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.65));
     z-index: 2;
-    mix-blend-mode: multiply;
+    pointer-events: none;
+    /* Permite clicks en elementos debajo */
 }
 
 .headerPat-carousel-swiper {
@@ -122,16 +65,11 @@
 
 .headerPat-carousel-slide {
     height: 50vh;
-    width: 100vw;
+    width: 100%;
     background-size: cover;
     background-position: center;
     position: relative;
-    transform: scale(1.1);
-    transition: transform 6s ease-in-out;
-}
-
-.swiper-slide-active .headerPat-carousel-slide {
-    transform: scale(1);
+    /* Eliminado el transform para mejorar rendimiento */
 }
 
 .headerPat-partner-content {
@@ -143,7 +81,7 @@
     width: 100%;
     text-align: center;
     padding: 0 20px;
-    animation: headerPat-fadeInUp 1s ease-out;
+    animation: headerPat-fadeInUp 0.8s ease-out;
 }
 
 .headerPat-partner-logo {
@@ -169,24 +107,15 @@
     text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.headerPat-animated-text span {
+.headerPat-primary-text {
     display: inline-block;
-    animation: headerPat-fadeInUp 0.5s ease forwards;
-    position: relative;
-}
-
-.headerPat-primary-text,
-.headerPat-secondary-text {
     color: var(--headerPat-white);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    position: relative;
-    transition: var(--headerPat-transition-quick);
-}
-
-.headerPat-primary-text {
     padding: 0 5px;
+    position: relative;
 }
 
+/* Simplificado el efecto hover */
 .headerPat-primary-text::after {
     content: '';
     position: absolute;
@@ -206,26 +135,14 @@
 }
 
 .headerPat-secondary-text {
+    display: inline-block;
     background: var(--headerPat-primary-color);
+    color: var(--headerPat-white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     padding: 0 10px;
     border-radius: 4px;
     margin-left: 5px;
-    overflow: hidden;
-}
-
-.headerPat-secondary-text::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: var(--headerPat-gradient-shine);
-    transition: 0.5s;
-}
-
-.headerPat-secondary-text:hover::before {
-    left: 100%;
+    position: relative;
 }
 
 .headerPat-partner-container {
@@ -240,7 +157,6 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    perspective: 1000px;
 }
 
 .headerPat-info-cards {
@@ -268,24 +184,16 @@
     box-shadow: var(--headerPat-shadow-soft);
     transition: var(--headerPat-transition-quick);
     width: 100%;
-    transform-style: preserve-3d;
-    position: relative;
 }
 
 .headerPat-info-card:hover {
-    transform: translateY(-5px) rotateX(5deg);
-    box-shadow: var(--headerPat-shadow-large);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .headerPat-info-card-content {
     padding: 20px;
     text-align: center;
-    position: relative;
-    z-index: 1;
-}
-
-.headerPat-info-card:hover .headerPat-info-card-content::before {
-    transform: translateX(100%);
 }
 
 .headerPat-info-card p {
@@ -299,7 +207,6 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    perspective: 1000px;
 }
 
 .headerPat-cta-button {
@@ -314,35 +221,13 @@
     text-align: center;
     border-radius: 8px;
     box-shadow: var(--headerPat-shadow-soft);
-    position: relative;
-    overflow: hidden;
     max-width: 250px;
-    transform-style: preserve-3d;
-}
-
-.headerPat-cta-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: var(--headerPat-gradient-shine);
-    transition: 0.5s;
 }
 
 .headerPat-cta-button:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
     background: var(--headerPat-secondary-color);
-}
-
-.headerPat-cta-button:hover::before {
-    left: 100%;
-}
-
-.headerPat-cta-button.headerPat-pulse {
-    animation: headerPat-pulse 2s infinite;
 }
 
 .headerPat-what-is-section {
@@ -351,14 +236,13 @@
     padding: 30px;
     border: 2px solid var(--headerPat-secondary-color);
     border-radius: 15px;
-    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
-    backdrop-filter: blur(10px);
+    background: var(--headerPat-white);
     position: relative;
-    overflow: hidden;
+    transition: var(--headerPat-transition-quick);
 }
 
 .headerPat-what-is-section:hover {
-    box-shadow: var(--headerPat-shadow-large);
+    box-shadow: var(--headerPat-shadow-medium);
     border-color: var(--headerPat-primary-color);
 }
 
@@ -367,13 +251,11 @@
     align-items: center;
     gap: 15px;
     margin-bottom: 20px;
-    position: relative;
 }
 
 .headerPat-pointer-icon {
     color: var(--headerPat-primary-color);
     font-size: 24px;
-    transition: var(--headerPat-transition-quick);
 }
 
 .headerPat-what-is-content p {
@@ -385,6 +267,7 @@
     padding-left: 15px;
 }
 
+/* Media queries optimizadas */
 @media (max-width: 1024px) {
     .headerPat-animated-text {
         font-size: 36px;
@@ -411,14 +294,6 @@
 
     .headerPat-info-cards {
         max-width: 400px;
-    }
-
-    .headerPat-info-card-content {
-        padding: 20px;
-    }
-
-    .headerPat-info-card h3 {
-        font-size: 18px;
     }
 
     .headerPat-info-card p {
@@ -459,11 +334,6 @@
 
     .headerPat-info-card-content {
         padding: 15px;
-    }
-
-    .headerPat-info-card h3 {
-        font-size: 16px;
-        margin-bottom: 8px;
     }
 
     .headerPat-info-card p {
