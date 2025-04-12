@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { FaBars, FaTimes, FaHome, FaSuitcase, FaInfoCircle, FaBlog, FaImages, FaEnvelope, FaUsers, FaBuilding, FaHandshake } from 'react-icons/fa';
+import { FaBars, FaTimes, FaHome, FaSuitcase, FaInfoCircle, FaBlog, FaImages, FaEnvelope, FaUsers,  FaHandshake, FaFemale } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import colors from '../../../utils/colors';
@@ -29,9 +29,9 @@ const NavComponent = () => {
     // Definir las opciones para el submenú de Noticias
     const newsSubmenuItems = [
         {
-            label: 'Distribuidor',
+            label: 'Distribuidoras',
             href: '/distribuidor',
-            icon: FaBuilding
+            icon: FaFemale // Changed icon to FaFemale
         },
         {
             label: 'Partners',
