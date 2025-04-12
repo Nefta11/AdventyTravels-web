@@ -92,6 +92,12 @@
     box-shadow: 0 10px 20px rgba(138, 79, 255, 0.25);
     position: relative;
     overflow: hidden;
+    transform: rotate(-5deg);
+    transition: var(--campaign-transition);
+}
+
+.campaign-logo:hover {
+    transform: rotate(0deg) scale(1.05);
 }
 
 .campaign-logo:before {
@@ -164,11 +170,30 @@
     position: relative;
 }
 
+.campaign-benefits-title:after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, var(--campaign-purple), var(--campaign-pink));
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 1.5px;
+}
+
 .campaign-benefits-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 35px;
     margin-bottom: 70px;
+    justify-items: center;
+}
+
+/* Clase para centrar la última fila cuando hay elementos sobrantes */
+.campaign-benefits-grid::after {
+    content: '';
+    grid-column: span 1;
 }
 
 .campaign-benefit-card {
@@ -182,6 +207,8 @@
     border: 2px solid transparent;
     opacity: 0;
     transform: translateY(30px);
+    width: 100%;
+    max-width: 350px;
 }
 
 .campaign-animate-in {
@@ -231,11 +258,19 @@
     margin-bottom: 25px;
     transition: var(--campaign-transition);
     display: inline-block;
+    background-color: var(--campaign-light-pink);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .campaign-benefit-card:hover .campaign-benefit-icon {
     transform: scale(1.15);
     color: var(--campaign-purple);
+    background-color: var(--campaign-light-purple);
 }
 
 .campaign-benefit-title {
@@ -266,17 +301,10 @@
     width: 60px;
 }
 
-/* Sección de testimonios eliminada */
-
-/* CTA y botón */
-/* CTA wrapper styles removed */
-
-/* Button styles removed */
-
 /* Media queries para responsividad mejorada */
 @media (max-width: 1200px) {
     .campaign-benefits-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 30px;
     }
 
@@ -290,6 +318,18 @@
         padding: 80px 0;
     }
 
+    .campaign-benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    /* Centrar último elemento cuando hay un número impar */
+    .campaign-benefits-grid>*:last-child:nth-child(2n + 1) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        max-width: 350px;
+    }
+
     .campaign-title {
         font-size: 2.4rem;
     }
@@ -300,10 +340,6 @@
 
     .campaign-benefits-title {
         font-size: 2rem;
-    }
-
-    .campaign-cta-title {
-        font-size: 1.6rem;
     }
 }
 
@@ -330,16 +366,17 @@
 
     .campaign-benefits-title {
         font-size: 1.8rem;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
     }
 
     .campaign-benefits-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 25px;
     }
 
     .campaign-benefit-card {
         padding: 30px 25px;
+        max-width: 300px;
     }
 }
 
@@ -382,11 +419,29 @@
     }
 
     .campaign-benefit-icon {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+        width: 60px;
+        height: 60px;
     }
 
     .campaign-benefit-title {
         font-size: 1.2rem;
+    }
+
+    .campaign-benefit-card {
+        padding: 25px 20px;
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .campaign-benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .campaign-benefit-card {
+        max-width: 300px;
     }
 }
 
@@ -409,5 +464,6 @@
 
     .campaign-benefit-card {
         padding: 25px 20px;
+        max-width: 280px;
     }
 }

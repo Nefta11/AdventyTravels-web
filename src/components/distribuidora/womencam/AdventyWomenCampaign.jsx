@@ -4,6 +4,7 @@ import { FaGraduationCap, FaLaptop, FaGift, FaClock, FaUsers } from 'react-icons
 
 const AdventyWomenCampaign = () => {
     const [isVisible, setIsVisible] = useState(false);
+    const [screenSize, setScreenSize] = useState('large');
 
     useEffect(() => {
         // Animation on component mount
@@ -24,7 +25,25 @@ const AdventyWomenCampaign = () => {
             observer.observe(card);
         });
 
-        return () => observer.disconnect();
+        // Screen size detection for responsive layout
+        const handleResize = () => {
+            if (window.innerWidth <= 480) {
+                setScreenSize('small');
+            } else if (window.innerWidth <= 992) {
+                setScreenSize('medium');
+            } else {
+                setScreenSize('large');
+            }
+        };
+
+        // Initial check and event listener
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            observer.disconnect();
+            window.removeEventListener('resize', handleResize);
+        };
     }, []);
 
     const benefits = [
@@ -55,7 +74,21 @@ const AdventyWomenCampaign = () => {
         }
     ];
 
-    // handleCtaHover function removed
+    // Función para obtener clase adicional para el grid basado en el número de beneficios
+    const getGridClassForCentering = () => {
+        const benefitsCount = benefits.length;
+
+        if (screenSize === 'large') {
+            // Para pantallas grandes (3 columnas)
+            return benefitsCount % 3 === 1 ? 'center-last-one' :
+                benefitsCount % 3 === 2 ? 'center-last-two' : '';
+        } else if (screenSize === 'medium') {
+            // Para pantallas medianas (2 columnas)
+            return benefitsCount % 2 === 1 ? 'center-last-one' : '';
+        }
+
+        return '';
+    };
 
     return (
         <div className={`campaign-container ${isVisible ? 'campaign-visible' : ''}`}>
@@ -80,7 +113,7 @@ const AdventyWomenCampaign = () => {
 
                 <h3 className="campaign-benefits-title">¿Qué obtienes como Distribuidora ADVENTY?</h3>
 
-                <div className="campaign-benefits-grid">
+                <div className={`campaign-benefits-grid ${getGridClassForCentering()}`}>
                     {benefits.map((benefit, index) => (
                         <div
                             className="campaign-benefit-card"
