@@ -59,6 +59,19 @@ const PartnerProcess = () => {
 
     return (
         <div className="partner-container">
+            <section className="partner-types-section">
+                <h2 className="partner-section-title">¿Quién Puede Ser Adventy Partner?</h2>
+
+                <div className="partner-types-grid">
+                    {partnerTypes.map(type => (
+                        <div key={type.id} className="partner-type-card">
+                            <div className="partner-type-icon">{type.icon}</div>
+                            <h3 className="partner-type-title">{type.title}</h3>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
             <section className="partner-process-section">
                 <h2 className="partner-section-title">¿Cómo Funciona Adventy Partner?</h2>
 
@@ -85,19 +98,6 @@ const PartnerProcess = () => {
                             ¡Conviértete en un <span className="partner-highlight-text">experto en viajes</span> y comienza a <span className="partner-highlight-text">generar ingresos</span> con el respaldo de nuestra <span className="partner-highlight-text">plataforma exclusiva</span>!
                         </p>
                     </div>
-                </div>
-            </section>
-
-            <section className="partner-types-section">
-                <h2 className="partner-section-title">¿Quién Puede Ser Adventy Partner?</h2>
-
-                <div className="partner-types-grid">
-                    {partnerTypes.map(type => (
-                        <div key={type.id} className="partner-type-card">
-                            <div className="partner-type-icon">{type.icon}</div>
-                            <h3 className="partner-type-title">{type.title}</h3>
-                        </div>
-                    ))}
                 </div>
             </section>
         </div>

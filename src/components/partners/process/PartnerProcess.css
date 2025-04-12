@@ -13,6 +13,7 @@
     max-width: 1200px;
     margin: 0 auto;
     font-family: Arial, sans-serif;
+    margin-top: -100px;
 }
 
 /* Estilos de títulos */
@@ -39,7 +40,8 @@
 
 /* Estilos de la sección del proceso */
 .partner-process-section {
-    margin-bottom: 80px;
+    margin-bottom: 1px;
+    margin-top: 65px;
 }
 
 .partner-process-timeline {
