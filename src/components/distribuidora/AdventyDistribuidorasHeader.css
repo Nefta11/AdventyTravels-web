@@ -22,22 +22,25 @@
 }
 
 .adventy-header-container {
-    position: relative;
+    height: 70vh;
     width: 100%;
-    height: 75vh;
-    /* Altura un poco más reducida en web */
+    margin-top: 100px;
+    margin-bottom: 10px;
+    position: relative;
     overflow: hidden;
-    margin-bottom: 25px;
 }
 
+/* Curva inferior mucho más pronunciada */
 .adventy-curved-bottom {
     position: absolute;
     bottom: -2px;
     left: 0;
     width: 100%;
-    height: 40px;
+    height: 80px;
+    /* Altura aumentada para curva más prominente */
     background-color: white;
     border-radius: 100% 100% 0 0;
+    /* Asegura que la curva sea suave */
     z-index: 10;
 }
 
@@ -67,7 +70,7 @@
     transition: opacity 1s ease-in-out;
     background-size: cover;
     background-position: center 40%;
-    /* Reducido el zoom, mostrando más contexto */
+    /* Menos zoom */
 }
 
 .adventy-carousel-slide.active {
@@ -76,7 +79,8 @@
 
 .adventy-content {
     position: absolute;
-    top: 50%;
+    top: 47%;
+    /* Ligeramente más arriba para compensar la curva */
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 5;
@@ -89,11 +93,10 @@
 
 .adventy-logo {
     width: 280px;
-    /* Ligeramente más pequeño para mejor proporción */
     height: auto;
     margin-bottom: 15px;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
-    max-width: 90%;
+    max-width: 85%;
 }
 
 .adventy-title {
@@ -156,15 +159,36 @@
     color: var(--adventy-deep-purple);
 }
 
-/* Media queries balanceadas */
+/* Media queries con EXTREMA RESPONSIVIDAD */
+@media (max-width: 1200px) {
+    .adventy-header-container {
+        height: 70vh;
+    }
+
+    .adventy-curved-bottom {
+        height: 70px;
+    }
+
+    .adventy-logo {
+        width: 260px;
+    }
+
+    .adventy-title {
+        font-size: 30px;
+    }
+}
+
 @media (max-width: 1024px) {
     .adventy-header-container {
         height: 60vh;
     }
 
+    .adventy-curved-bottom {
+        height: 60px;
+    }
+
     .adventy-carousel-slide {
         background-position: center 35%;
-        /* Ajustado para mostrar mejor las personas */
     }
 
     .adventy-logo {
@@ -183,12 +207,11 @@
 @media (max-width: 768px) {
     .adventy-header-container {
         height: 55vh;
-        /* Un poco más alto para ver mejor el contenido */
         margin-bottom: 20px;
     }
 
     .adventy-curved-bottom {
-        height: 30px;
+        height: 50px;
     }
 
     .adventy-logo {
@@ -220,17 +243,21 @@
 
 @media (max-width: 576px) {
     .adventy-header-container {
-        height: 45vh;
-        /* Aumentado para asegurar visibilidad */
+        height: 50vh;
+        /* Incrementado para pantallas pequeñas */
     }
 
     .adventy-curved-bottom {
-        height: 25px;
+        height: 40px;
     }
 
     .adventy-carousel-slide {
         background-position: center 30%;
-        /* Ajustado para móviles */
+    }
+
+    .adventy-content {
+        width: 95%;
+        padding: 10px;
     }
 
     .adventy-logo {
@@ -264,14 +291,24 @@
     }
 }
 
+/* Incrementando altura en móviles para mayor visibilidad */
 @media (max-width: 480px) {
     .adventy-header-container {
-        height: 40vh;
-        /* Incrementado para asegurar que todo sea visible */
+        height: 60vh;
+        /* Significativamente mayor para asegurar visibilidad */
+    }
+
+    .adventy-curved-bottom {
+        height: 30px;
+    }
+
+    .adventy-content {
+        top: 45%;
+        /* Ajuste para centrar mejor con la altura incrementada */
     }
 
     .adventy-logo {
-        width: 135px;
+        width: 140px;
         margin-bottom: 8px;
     }
 
@@ -294,15 +331,19 @@
     }
 }
 
-/* Para pantallas pequeñas pero asegurando visibilidad */
+/* Para pantallas muy pequeñas con visibilidad mejorada */
 @media (max-width: 380px) {
     .adventy-header-container {
-        height: 38vh;
-        /* Ligeramente incrementado */
+        height: 65vh;
+        /* Extra alto para asegurar que todo se vea */
     }
 
     .adventy-curved-bottom {
-        height: 20px;
+        height: 25px;
+    }
+
+    .adventy-content {
+        top: 42%;
     }
 
     .adventy-logo {
@@ -327,11 +368,57 @@
     }
 }
 
+/* Para pantallas extremadamente pequeñas */
+@media (max-width: 320px) {
+    .adventy-header-container {
+        height: 70vh;
+        /* Máxima altura para asegurar visibilidad */
+    }
+
+    .adventy-curved-bottom {
+        height: 20px;
+    }
+
+    .adventy-content {
+        top: 40%;
+        padding: 8px;
+    }
+
+    .adventy-logo {
+        width: 110px;
+        margin-bottom: 5px;
+    }
+
+    .adventy-title {
+        font-size: 15px;
+        margin-bottom: 4px;
+    }
+
+    .adventy-subtitle {
+        font-size: 11px;
+        margin-bottom: 5px;
+    }
+
+    .adventy-buttons {
+        gap: 8px;
+    }
+
+    .adventy-button {
+        padding: 5px 10px;
+        font-size: 10px;
+        min-width: 120px;
+    }
+}
+
 /* Para orientación horizontal */
 @media (max-height: 500px) and (orientation: landscape) {
     .adventy-header-container {
-        height: 80vh;
-        /* Incrementado para asegurar visibilidad horizontal */
+        height: 90vh;
+        /* Extra alto para asegurar visibilidad horizontal */
+    }
+
+    .adventy-curved-bottom {
+        height: 30px;
     }
 
     .adventy-carousel-slide {
@@ -339,7 +426,7 @@
     }
 
     .adventy-content {
-        top: 55%;
+        top: 50%;
     }
 
     .adventy-logo {
