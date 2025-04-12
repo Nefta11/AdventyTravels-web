@@ -4,6 +4,7 @@ import FooterComponent from '../components/generals/footer/FooterComponent';
 import WhatsAppIcon from "../components/generals/whatsAppComponent/WhatsAppIcon";
 import PartnerHeader from "../components/partners/header/PartnerHeader.jsx";
 import PartnerBenefits from '../components/partners/benefits/PartnerBenefits.jsx';
+import PartnerProcess from '../components/partners/process/PartnerProcess.jsx';
 
 const Partners = () => {
     return (
@@ -15,6 +16,7 @@ const Partners = () => {
             <NavComponent />
             <PartnerHeader />
             <PartnerBenefits />
+            <PartnerProcess />
             <FooterComponent />
             <WhatsAppIcon />
         </motion.div>
