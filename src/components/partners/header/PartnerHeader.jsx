@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectCreative } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-creative';
-import './PartnerHeader.css';
+import './PartnerHeader.css'; // Make sure this points to your newly refactored CSS file
 import { useTranslation } from 'react-i18next';
 
 const CAROUSEL_IMAGES = [
@@ -24,14 +24,13 @@ const PartnerHeader = () => {
     const [isVisible, setIsVisible] = useState(false);
 
     const handleScroll = useCallback(() => {
-        const sections = document.querySelectorAll('.animate-on-scroll');
+        const sections = document.querySelectorAll('.headerPat-animate-on-scroll');
         sections.forEach(section => {
             const rect = section.getBoundingClientRect();
             const isInView = rect.top <= window.innerHeight * 0.75;
 
             if (isInView) {
-                section.classList.add('visible');
-                // setActiveSection(section.id); // Removed or commented out as it is not defined
+                section.classList.add('headerPat-visible');
             }
         });
     }, []);
@@ -57,8 +56,8 @@ const PartnerHeader = () => {
 
     return (
         <>
-            <div className={`partner-header ${isVisible ? 'visible' : ''}`}>
-                <div className="header-overlay"></div>
+            <div className={`headerPat-partner-header ${isVisible ? 'headerPat-visible' : ''}`}>
+                <div className="headerPat-header-overlay"></div>
                 <Swiper
                     modules={[Autoplay, EffectCreative]}
                     effect="creative"
@@ -71,31 +70,31 @@ const PartnerHeader = () => {
                         disableOnInteraction: false,
                     }}
                     loop={true}
-                    className="carousel-swiper"
+                    className="headerPat-carousel-swiper"
                 >
                     {CAROUSEL_IMAGES.map((image, index) => (
                         <SwiperSlide key={index}>
                             <div
-                                className="carousel-slide"
+                                className="headerPat-carousel-slide"
                                 style={{ backgroundImage: `url(${image})` }}
                             />
                         </SwiperSlide>
                     ))}
                 </Swiper>
 
-                <div className="partner-content">
-                    <div className="partner-logo">
+                <div className="headerPat-partner-content">
+                    <div className="headerPat-partner-logo">
                         <img
                             src={LOGO_URL}
                             alt="Adventy Partner Logo"
-                            className="logo-image"
+                            className="headerPat-logo-image"
                         />
-                        <h2 className="animated-text">
+                        <h2 className="headerPat-animated-text">
                             {t('partnerHeader.joinCommunity')}{' '}
-                            <span className="primary-text" key={`primary-${currentTextIndex}`}>
+                            <span className="headerPat-primary-text" key={`primary-${currentTextIndex}`}>
                                 {primary}
                             </span>{' '}
-                            <span className="secondary-text" key={`secondary-${currentTextIndex}`}>
+                            <span className="headerPat-secondary-text" key={`secondary-${currentTextIndex}`}>
                                 {secondary}
                             </span>
                         </h2>
@@ -103,7 +102,7 @@ const PartnerHeader = () => {
                 </div>
             </div>
 
-            <div className="partner-container">
+            <div className="headerPat-partner-container">
                 <InfoCards />
                 <WhatIsSection />
             </div>
@@ -114,16 +113,16 @@ const PartnerHeader = () => {
 const InfoCards = () => {
     const { t } = useTranslation();
     return (
-        <div className="cards-wrapper">
-            <div className="info-cards animate-on-scroll" id="info-cards">
-                <div className="info-card">
-                    <div className="info-card-content">
+        <div className="headerPat-cards-wrapper">
+            <div className="headerPat-info-cards headerPat-animate-on-scroll" id="headerPat-info-cards">
+                <div className="headerPat-info-card">
+                    <div className="headerPat-info-card-content">
                         <p>{t('partnerHeader.joinDescription')}</p>
                     </div>
                 </div>
 
-                <div className="cta-wrapper">
-                    <button className="cta-button pulse">
+                <div className="headerPat-cta-wrapper">
+                    <button className="headerPat-cta-button headerPat-pulse">
                         {t('partnerHeader.ctaButton')}
                     </button>
                 </div>
@@ -135,12 +134,12 @@ const InfoCards = () => {
 const WhatIsSection = () => {
     const { t } = useTranslation();
     return (
-        <div className="what-is-section" id="what-is">
-            <div className="header-content">
-                <FaHandPointRight className="pointer-icon" />
+        <div className="headerPat-what-is-section" id="headerPat-what-is">
+            <div className="headerPat-header-content">
+                <FaHandPointRight className="headerPat-pointer-icon" />
                 <h2>{t('partnerHeader.whatIsTitle')}</h2>
             </div>
-            <div className="what-is-content">
+            <div className="headerPat-what-is-content">
                 <p>
                     {t('partnerHeader.whatIsDescription1')}
                 </p>
