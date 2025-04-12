@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './AdventyWomenCampaign.css';
-import { FaGraduationCap, FaLaptop, FaGift, FaClock, FaUsers, FaArrowRight } from 'react-icons/fa';
+import { FaGraduationCap, FaLaptop, FaGift, FaClock, FaUsers } from 'react-icons/fa';
 
 const AdventyWomenCampaign = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -55,14 +55,7 @@ const AdventyWomenCampaign = () => {
         }
     ];
 
-    const handleCtaHover = (e) => {
-        const button = e.currentTarget;
-        const x = e.pageX - button.offsetLeft;
-        const y = e.pageY - button.offsetTop;
-
-        button.style.setProperty('--x', `${x}px`);
-        button.style.setProperty('--y', `${y}px`);
-    };
+    // handleCtaHover function removed
 
     return (
         <div className={`campaign-container ${isVisible ? 'campaign-visible' : ''}`}>

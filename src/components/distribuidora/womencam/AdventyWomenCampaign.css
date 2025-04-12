@@ -269,86 +269,9 @@
 /* Sección de testimonios eliminada */
 
 /* CTA y botón */
-.campaign-cta-wrapper {
-    text-align: center;
-    margin-top: 60px;
-    padding: 40px;
-    background-color: var(--campaign-white);
-    border-radius: var(--campaign-card-radius);
-    box-shadow: var(--campaign-shadow);
-    position: relative;
-    overflow: hidden;
-}
+/* CTA wrapper styles removed */
 
-.campaign-cta-wrapper:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 10px;
-    background: linear-gradient(to right, var(--campaign-purple), var(--campaign-pink));
-}
-
-.campaign-button {
-    position: relative;
-    padding: 16px 30px;
-    border-radius: var(--campaign-button-radius);
-    font-weight: 700;
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: var(--campaign-transition);
-    text-decoration: none;
-    border: none;
-    outline: none;
-    overflow: hidden;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 280px;
-}
-
-.campaign-button-primary {
-    background: linear-gradient(135deg, var(--campaign-purple), var(--campaign-pink));
-    color: var(--campaign-white);
-    box-shadow: 0 10px 20px rgba(138, 79, 255, 0.25);
-}
-
-.campaign-button-effect {
-    position: absolute;
-    display: block;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.3);
-    transform: translate(-50%, -50%);
-    transition: width 0.7s, height 0.7s;
-    z-index: 1;
-    top: var(--y);
-    left: var(--x);
-}
-
-.campaign-button:hover .campaign-button-effect {
-    width: 300px;
-    height: 300px;
-}
-
-.campaign-button-icon {
-    margin-left: 10px;
-    transition: transform 0.3s ease;
-    position: relative;
-    z-index: 2;
-}
-
-.campaign-button:hover .campaign-button-icon {
-    transform: translateX(5px);
-}
-
-.campaign-button:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 25px rgba(138, 79, 255, 0.35);
-}
+/* Button styles removed */
 
 /* Media queries para responsividad mejorada */
 @media (max-width: 1200px) {
@@ -418,15 +341,6 @@
     .campaign-benefit-card {
         padding: 30px 25px;
     }
-
-    .campaign-cta-wrapper {
-        padding: 40px 20px;
-    }
-
-    .campaign-button {
-        min-width: 100%;
-        max-width: 100%;
-    }
 }
 
 @media (max-width: 576px) {
@@ -473,11 +387,6 @@
 
     .campaign-benefit-title {
         font-size: 1.2rem;
-    }
-
-    .campaign-button {
-        padding: 14px 20px;
-        font-size: 1rem;
     }
 }
 
