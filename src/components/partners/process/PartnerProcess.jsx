@@ -10,27 +10,27 @@ const PartnerProcess = () => {
     const processSteps = [
         {
             id: 1,
-            text: 'Contáctanos para recibir toda la información necesaria'
+            text: 'Contáctanos para obtener toda la información que necesitas'
         },
         {
             id: 2,
-            text: 'Realizamos la verificación completa de tus datos'
+            text: 'Verificamos tus datos de manera completa'
         },
         {
             id: 3,
-            text: 'Accede a capacitaciones y canal de apoyo exclusivo'
+            text: 'Accede a entrenamientos y a un canal de soporte exclusivo'
         },
         {
             id: 4,
-            text: 'Recibe todos tus beneficios como Adventy Partner'
+            text: 'Disfruta de todos los beneficios como Adventy Partner'
         },
         {
             id: 5,
-            text: 'Comparte los beneficios con tu red de contactos'
+            text: 'Comparte las ventajas con tu red de contactos'
         },
         {
             id: 6,
-            text: 'Comienza a generar ingresos con Adventy Partner'
+            text: 'Empieza a generar ingresos como Adventy Partner'
         }
     ];
 
@@ -38,22 +38,22 @@ const PartnerProcess = () => {
         {
             id: 1,
             icon: <FaBriefcase />,
-            title: 'Agencias de viajes ya establecidas'
+            title: 'Agencias de viajes ya consolidadas'
         },
         {
             id: 2,
             icon: <FaLightbulb />,
-            title: 'Emprendedores'
+            title: 'Personas emprendedoras'
         },
         {
             id: 3,
             icon: <FaVideo />,
-            title: 'Creadores de contenido'
+            title: 'Creadores de contenido digital'
         },
         {
             id: 4,
             icon: <FaUsers />,
-            title: 'Cualquier persona interesada en obtener ingresos extra, desde cualquier parte'
+            title: 'Cualquier persona interesada en ganar ingresos adicionales desde cualquier lugar'
         }
     ];
 
@@ -95,7 +95,7 @@ const PartnerProcess = () => {
                 <div className="partner-highlight-wrapper">
                     <div className="partner-highlight-container">
                         <p className="partner-highlight-tagline">
-                            ¡Conviértete en un <span className="partner-highlight-text">experto en viajes</span> y comienza a <span className="partner-highlight-text">generar ingresos</span> con el respaldo de nuestra <span className="partner-highlight-text">plataforma exclusiva</span>!
+                            ¡Conviértete en un <span className="partner-highlight-text">especialista en viajes</span> y empieza a <span className="partner-highlight-text">ganar dinero</span> con el respaldo de nuestra <span className="partner-highlight-text">plataforma única</span>!
                         </p>
                     </div>
                 </div>
