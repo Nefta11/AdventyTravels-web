@@ -8,16 +8,17 @@ import AboutUs from './pages/AboutUs';
 import Gallery from './pages/Gallery';
 import Blog from './pages/Blog';
 import Error404 from './pages/pagError/Error404';
-import { SpeedInsights } from "@vercel/speed-insights/react"; // Importar SpeedInsights correctamente
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import Distribuidor from './pages/Distribuidor';
 import Partners from './pages/Partners';
+import VerifyDistributor from './pages/VerifyDistributor';
 
 function App() {
   return (
     <I18nextProvider i18n={LenguajeTranslations}>
       <BrowserRouter>
         <div className="container">
-          <SpeedInsights /> {/* Agregar SpeedInsights */}
+          <SpeedInsights />
           <AnimatePresence exitBeforeEnter>
             <RoutesWithAnimation />
           </AnimatePresence>
@@ -39,6 +40,7 @@ function RoutesWithAnimation() {
       <Route path="/blog" element={<Blog />} />
       <Route path="/distribuidor" element={<Distribuidor />} />
       <Route path="/partners" element={<Partners />} />
+      <Route path="/verify-distributor" element={<VerifyDistributor />} />
       <Route path="*" element={<Error404 />} />
     </Routes>
   );
