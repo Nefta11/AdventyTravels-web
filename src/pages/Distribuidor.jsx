@@ -3,6 +3,8 @@ import NavComponent from '../components/generals/nav/navComponent';
 import FooterComponent from '../components/generals/footer/FooterComponent';
 import WhatsAppIcon from "../components/generals/whatsAppComponent/WhatsAppIcon";
 import AdventyDistribuidorasHeader from '../components/distribuidora/header/AdventyDistribuidorasHeader';
+import AdventyWomenCampaign from '../components/distribuidora/womencam/AdventyWomenCampaign';
+
 const Distribuidor = () => {
     return (
         <motion.div
@@ -12,6 +14,7 @@ const Distribuidor = () => {
         >
             <NavComponent />
             <AdventyDistribuidorasHeader />
+            <AdventyWomenCampaign />
             <FooterComponent />
             <WhatsAppIcon />
         </motion.div>
