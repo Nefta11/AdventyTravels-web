@@ -1,108 +1,313 @@
 :root {
-    --color1: #F4F4F4;
-    --color2: #7DC1BD;
-    --color3: #E49F30;
-    --color4: #24455D;
+    --wwa-color1: #F4F4F4;
+    --wwa-color2: #7DC1BD;
+    --wwa-color3: #E49F30;
+    --wwa-color4: #24455D;
+    --wwa-white: #ffffff;
+    --wwa-black: #000000;
+    --wwa-transition: all 0.4s ease;
 }
 
-.who-we-are {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: auto;
-    gap: 20px;
-    padding: 40px 20px;
+@keyframes wwa-fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes wwa-scaleIn {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes wwa-slideInLeft {
+    from {
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes wwa-slideInRight {
+    from {
+        transform: translateX(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes wwa-expandLine {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 80px;
+    }
+}
+
+.wwa-who-we-are {
+    padding: 80px 20px;
+    background-color: var(--wwa-color1);
+    position: relative;
+    overflow: hidden;
     margin-top: 100px;
 }
 
-.who-we-are .image-container {
-    position: relative;
-    width: 55%;
-    height: 420px;
-    border-radius: 15px;
-    background: url('https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/images/aboutUs/aboutWere.webp') center/cover no-repeat;
-}
-
-.who-we-are .nuestrofondo {
-    position: absolute; 
+.wwa-who-we-are::before {
+    content: '';
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(36, 69, 93, 0.9); 
+    background: radial-gradient(circle at top right, rgba(125, 193, 189, 0.1), transparent 60%),
+        radial-gradient(circle at bottom left, rgba(228, 159, 48, 0.1), transparent 60%);
+    pointer-events: none;
+}
+
+.wwa-content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: var(--wwa-transition);
+}
+
+.wwa-content-wrapper.wwa-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.wwa-image-container {
+    width: 48%;
+    height: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    background: url('https://images.unsplash.com/photo-1530521954074-e64f6810b32d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+    transform: translateX(-30px);
+    opacity: 0;
+    transition: var(--wwa-transition);
+}
+
+.wwa-visible .wwa-image-container {
+    animation: wwa-slideInLeft 0.6s forwards 0.2s;
+}
+
+.wwa-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(36, 69, 93, 0.85), rgba(36, 69, 93, 0.95));
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    color: var(--wwa-white);
+    transition: var(--wwa-transition);
+}
+
+.wwa-image-container:hover .wwa-overlay {
+    background: linear-gradient(135deg, rgba(36, 69, 93, 0.75), rgba(36, 69, 93, 0.85));
+}
+
+.wwa-overlay h2 {
+    color: var(--wwa-white);
+    font-size: 52px;
+    font-weight: 800;
+    margin: 0 0 20px;
+    transform: scale(0.95);
+    opacity: 0;
+}
+
+.wwa-visible .wwa-overlay h2 {
+    animation: wwa-scaleIn 0.6s forwards 0.6s;
+}
+
+.wwa-decorative-line {
+    height: 3px;
+    width: 0;
+    background: var(--wwa-color3);
+    margin-bottom: 20px;
+    border-radius: 3px;
+}
+
+.wwa-visible .wwa-decorative-line {
+    animation: wwa-expandLine 0.6s forwards 1s;
+}
+
+.wwa-quote-icon {
+    font-size: 24px;
+    color: var(--wwa-color3);
+    opacity: 0;
+}
+
+.wwa-visible .wwa-quote-icon {
+    animation: wwa-fadeIn 0.6s forwards 1.2s;
+}
+
+.wwa-text-container {
+    width: 48%;
+    transform: translateX(30px);
+    opacity: 0;
+}
+
+.wwa-visible .wwa-text-container {
+    animation: wwa-slideInRight 0.6s forwards 0.4s;
+}
+
+.wwa-text-content {
+    background: var(--wwa-white);
+    padding: 30px;
     border-radius: 15px;
-
-}
-
-.who-we-are .nuestrofondo h2 {
-    color: white;
-    font-size: 56px;
-    font-weight: bold;
-}
-
-.who-we-are .text-container {
-    width: 50%;
-    color: #000;
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-.who-we-are .text-container p {
-    margin-bottom: 15px;
-}
-
-.who-we-are .text-container strong {
-    font-weight: bold;
-}
-
-.no-nuestrofondo-scroll {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
     position: relative;
-    z-index: 1;
+    overflow: hidden;
 }
 
-/* 🔽 Media query para pantallas de hasta 800px */
-@media (max-width: 800px) {
-    .who-we-are {
+.wwa-text-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--wwa-color3), var(--wwa-color2));
+}
+
+.wwa-paragraph-wrapper {
+    margin-bottom: 20px;
+    opacity: 0;
+}
+
+.wwa-p1 {
+    animation: wwa-fadeIn 0.5s forwards 0.8s;
+}
+
+.wwa-p2 {
+    animation: wwa-fadeIn 0.5s forwards 1s;
+}
+
+.wwa-p3 {
+    animation: wwa-fadeIn 0.5s forwards 1.2s;
+    margin-bottom: 0;
+}
+
+.wwa-text-container p {
+    margin: 0;
+    color: var(--wwa-black);
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.wwa-text-container strong {
+    color: var(--wwa-color4);
+    font-weight: 700;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+    .wwa-who-we-are {
+        padding: 60px 20px;
+        margin-top: 80px;
+    }
+
+    .wwa-content-wrapper {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 20px 10px;
-        margin-bottom: -45px;
+        gap: 30px;
+    }
+
+    .wwa-image-container,
+    .wwa-text-container {
+        width: 100%;
+    }
+
+    .wwa-image-container {
+        height: 350px;
+    }
+
+    .wwa-overlay h2 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 768px) {
+    .wwa-who-we-are {
+        padding: 50px 15px;
         margin-top: 75px;
     }
 
-    .who-we-are .image-container {
-        width: 90%;
-        height: 190px;
+    .wwa-image-container {
+        height: 280px;
     }
 
-    .who-we-are .nuestrofondo h2 {
-        font-size: 27px;
-        padding: 0 10px;
+    .wwa-overlay h2 {
+        font-size: 36px;
     }
 
-    .who-we-are .text-container {
-        width: 100%;
-        padding: 15px;
-        font-size: 16px;
-    }
-
-    .who-we-are .text-container p {
-        font-size: 12px;
-        margin-bottom: 10px;
-        text-align: justify;
-    }
-
-    .who-we-are .text-container strong {
-        font-size: 14.4px;
-        text-align: justify;
+    .wwa-text-content {
+        padding: 25px;
     }
 }
 
+@media (max-width: 480px) {
+    .wwa-who-we-are {
+        padding: 40px 15px;
+        margin-top: 70px;
+    }
 
+    .wwa-image-container {
+        height: 220px;
+    }
+
+    .wwa-overlay h2 {
+        font-size: 30px;
+    }
+
+    .wwa-decorative-line {
+        margin-bottom: 15px;
+    }
+
+    .wwa-quote-icon {
+        font-size: 18px;
+    }
+
+    .wwa-text-content {
+        padding: 20px;
+    }
+
+    .wwa-text-container p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+}
