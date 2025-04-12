@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './AdventyDistribuidorasHeader.css';
+import AdventyDistribuidoraModal from './AdventyDistribuidoraModal';
 
 // Array de imágenes de mujeres profesionales (vistas más amplias)
 const CAROUSEL_IMAGES = [
@@ -18,6 +19,7 @@ const LOGO_URL = "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/r
 const AdventyDistribuidorasHeader = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const navigate = useNavigate();
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     // Handle carousel rotation
     useEffect(() => {
@@ -30,52 +32,65 @@ const AdventyDistribuidorasHeader = () => {
 
     // Navigation handlers
     const handleBeDistributor = () => {
-        navigate('/distributor-signup');
+        // Instead of navigating, we now open the modal
+        setIsModalOpen(true);
     };
 
     const handleVerifyDistributor = () => {
         navigate('/verify-distributor');
     };
 
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+    };
+
     return (
-        <div className="adventy-header-container">
-            <div className="adventy-header-overlay"></div>
+        <>
+            <div className="adventy-header-container">
+                <div className="adventy-header-overlay"></div>
 
-            <div className="adventy-carousel">
-                {CAROUSEL_IMAGES.map((image, index) => (
-                    <div
-                        key={index}
-                        className={`adventy-carousel-slide ${index === activeIndex ? 'active' : ''}`}
-                        style={{ backgroundImage: `url(${image})` }}
-                    />
-                ))}
-            </div>
-
-            <div className="adventy-content">
-                <img src={LOGO_URL} alt="Adventy Logo" className="adventy-logo" />
-                <h1 className="adventy-title">Convierte tu pasión por viajar en tu nuevo ingreso</h1>
-                <p className="adventy-subtitle">
-                    Sé parte de ADVENTY DISTRIBUIDORAS
-                </p>
-
-                <div className="adventy-buttons">
-                    <button
-                        className="adventy-button adventy-button-primary"
-                        onClick={handleBeDistributor}
-                    >
-                        QUIERO SER DISTRIBUIDORA
-                    </button>
-                    <button
-                        className="adventy-button adventy-button-secondary"
-                        onClick={handleVerifyDistributor}
-                    >
-                        VERIFICAR DISTRIBUIDORA
-                    </button>
+                <div className="adventy-carousel">
+                    {CAROUSEL_IMAGES.map((image, index) => (
+                        <div
+                            key={index}
+                            className={`adventy-carousel-slide ${index === activeIndex ? 'active' : ''}`}
+                            style={{ backgroundImage: `url(${image})` }}
+                        />
+                    ))}
                 </div>
+
+                <div className="adventy-content">
+                    <img src={LOGO_URL} alt="Adventy Logo" className="adventy-logo" />
+                    <h1 className="adventy-title">Convierte tu pasión por viajar en tu nuevo ingreso</h1>
+                    <p className="adventy-subtitle">
+                        Sé parte de ADVENTY DISTRIBUIDORAS
+                    </p>
+
+                    <div className="adventy-buttons">
+                        <button
+                            className="adventy-button adventy-button-primary"
+                            onClick={handleBeDistributor}
+                        >
+                            QUIERO SER DISTRIBUIDORA
+                        </button>
+                        <button
+                            className="adventy-button adventy-button-secondary"
+                            onClick={handleVerifyDistributor}
+                        >
+                            VERIFICAR DISTRIBUIDORA
+                        </button>
+                    </div>
+                </div>
+
+                <div className="adventy-curved-bottom"></div>
             </div>
 
-            <div className="adventy-curved-bottom"></div>
-        </div>
+            {/* Modal component */}
+            <AdventyDistribuidoraModal
+                isOpen={isModalOpen}
+                onClose={handleCloseModal}
+            />
+        </>
     );
 };
 

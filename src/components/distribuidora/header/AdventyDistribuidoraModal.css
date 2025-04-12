@@ -1,0 +1,153 @@
+/* Modal variables - using the same colors from the header */
+:root {
+    --adventy-pink: #FF5FA2;
+    --adventy-purple: #8A4FFF;
+    --adventy-deep-purple: #5A2E9D;
+    --adventy-white: #ffffff;
+    --adventy-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    --adventy-transition: all 0.3s ease;
+}
+
+.adventy-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: adventy-fadeIn 0.3s ease-out;
+}
+
+.adventy-modal-container {
+    background-color: white;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    padding: 25px;
+    position: relative;
+    box-shadow: var(--adventy-shadow);
+    border: 2px solid var(--adventy-pink);
+}
+
+.adventy-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #333;
+    transition: var(--adventy-transition);
+}
+
+.adventy-modal-close:hover {
+    color: var(--adventy-pink);
+}
+
+.adventy-modal-title {
+    color: #333;
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.adventy-modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.adventy-modal-input {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: var(--adventy-transition);
+}
+
+.adventy-modal-input:focus {
+    border-color: var(--adventy-purple);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(138, 79, 255, 0.2);
+}
+
+.adventy-modal-row {
+    display: flex;
+    gap: 15px;
+}
+
+.adventy-modal-row .adventy-modal-input {
+    flex: 1;
+}
+
+.adventy-modal-submit {
+    background-color: var(--adventy-pink);
+    color: var(--adventy-white);
+    border: none;
+    border-radius: 5px;
+    padding: 14px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: var(--adventy-transition);
+    margin-top: 5px;
+}
+
+.adventy-modal-submit:hover {
+    background-color: var(--adventy-deep-purple);
+}
+
+@keyframes adventy-fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .adventy-modal-container {
+        padding: 20px;
+    }
+
+    .adventy-modal-title {
+        font-size: 20px;
+    }
+
+    .adventy-modal-input {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .adventy-modal-submit {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .adventy-modal-container {
+        padding: 15px;
+    }
+
+    .adventy-modal-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .adventy-modal-title {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+}
