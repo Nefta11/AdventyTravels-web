@@ -30,7 +30,7 @@
     padding: 25px;
     position: relative;
     box-shadow: var(--adventy-shadow);
-    border: 2px solid var(--adventy-pink);
+    border: 2px solid var(--adventy-purple);
 }
 
 .adventy-modal-close {
@@ -46,7 +46,7 @@
 }
 
 .adventy-modal-close:hover {
-    color: var(--adventy-pink);
+    color: var(--adventy-purple);
 }
 
 .adventy-modal-title {
@@ -87,7 +87,7 @@
 }
 
 .adventy-modal-submit {
-    background-color: var(--adventy-pink);
+    background-color: var(--adventy-purple);
     color: var(--adventy-white);
     border: none;
     border-radius: 5px;
