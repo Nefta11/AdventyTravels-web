@@ -1,49 +1,49 @@
 import { useEffect, useState } from 'react';
 import {
     FaBookReader,
-    FaGift,
-    FaLock,
-    FaHandshake,
-    FaHeadset,
-    FaUserFriends
+    FaTags,
+    FaGlobe,
+    FaDollarSign,
+    FaLifeRing,
+    FaUsers
 } from 'react-icons/fa';
 import './PartnerBenefits.css';
 const BENEFITS_DATA = [
     {
         "id": 1,
         "icon": <FaBookReader />,
-        "title": "Aprende fácil y a tus tiempos",
-        "description": "Capacitación desde cero para dominar las reservaciones en nuestra tienda en línea y convertirte en un experto."
+        "title": "Aprende a tu ritmo",
+        "description": "Formación desde lo básico para que domines las reservas en nuestra plataforma y te conviertas en un profesional."
     },
     {
         "id": 2,
-        "icon": <FaGift />,
-        "title": "Vende lo mejor",
-        "description": "Acceso exclusivo a precios increíbles en hoteles, actividades y más, diseñados solo para ti."
+        "icon": <FaTags />,
+        "title": "Ofrece lo mejor",
+        "description": "Accede a tarifas exclusivas en hoteles, actividades y más, diseñadas especialmente para ti."
     },
     {
         "id": 3,
-        "icon": <FaLock />,
-        "title": "Libertad total",
-        "description": "Trabaja a tu ritmo desde cualquier lugar con solo un dispositivo e internet. ¡Tú decides cómo!"
+        "icon": <FaGlobe />,
+        "title": "Trabaja con libertad",
+        "description": "Realiza tus actividades desde cualquier lugar con solo un dispositivo e internet. ¡Tú decides cómo trabajar!"
     },
     {
         "id": 4,
-        "icon": <FaHandshake />,
-        "title": "Gana en cada viaje",
-        "description": "Obtén más rewards y beneficios al vender o compartir ideas de viaje con tus clientes."
+        "icon": <FaDollarSign />,
+        "title": "Gana con cada reserva",
+        "description": "Recibe recompensas y beneficios adicionales al vender o compartir experiencias de viaje con tus clientes."
     },
     {
         "id": 5,
-        "icon": <FaHeadset />,
-        "title": "Soporte personalizado",
-        "description": "Asistencia constante para resolver dudas sobre capacitaciones, reservaciones y más."
+        "icon": <FaLifeRing />,
+        "title": "Asistencia personalizada",
+        "description": "Soporte continuo para resolver tus dudas sobre formación, reservas y más."
     },
     {
         "id": 6,
-        "icon": <FaUserFriends />,
-        "title": "Código Partner Corporativo",
-        "description": "Comparte descuentos y acumula rewards para ti y tu comunidad, maximizando tus beneficios."
+        "icon": <FaUsers />,
+        "title": "Código Partner exclusivo",
+        "description": "Comparte descuentos y acumula recompensas para ti y tu comunidad, maximizando tus ganancias."
     }
 ];
 
