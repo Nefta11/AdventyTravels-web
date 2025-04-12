@@ -1,0 +1,190 @@
+/* Variables de color */
+:root {
+    --adventy-pink: #FF5FA2;
+    --adventy-purple: #8A4FFF;
+    --adventy-deep-purple: #5A2E9D;
+    --adventy-white: #ffffff;
+    --adventy-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    --adventy-transition: all 0.3s ease;
+}
+
+/* Animaciones */
+@keyframes adventy-fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.adventy-header-container {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.adventy-curved-bottom {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    border-radius: 100% 100% 0 0;
+    z-index: 10;
+}
+
+.adventy-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(138, 79, 255, 0.85), rgba(255, 95, 162, 0.85));
+    z-index: 2;
+}
+
+.adventy-carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.adventy-carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background-size: cover;
+    background-position: center;
+}
+
+.adventy-carousel-slide.active {
+    opacity: 1;
+}
+
+.adventy-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+    animation: adventy-fadeIn 1s ease-out;
+}
+
+.adventy-logo {
+    width: 440px;
+    height: auto;
+    margin-bottom: 30px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.adventy-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--adventy-white);
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.adventy-subtitle {
+    font-size: 18px;
+    color: var(--adventy-white);
+    margin-bottom: 30px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.adventy-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.adventy-button {
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--adventy-transition);
+    text-decoration: none;
+    font-size: 16px;
+    border: 2px solid transparent;
+}
+
+.adventy-button-primary {
+    background-color: var(--adventy-white);
+    color: var(--adventy-deep-purple);
+    border-color: var(--adventy-white);
+}
+
+.adventy-button-primary:hover {
+    background-color: transparent;
+    color: var(--adventy-white);
+}
+
+.adventy-button-secondary {
+    background-color: transparent;
+    color: var(--adventy-white);
+    border-color: var(--adventy-white);
+}
+
+.adventy-button-secondary:hover {
+    background-color: var(--adventy-white);
+    color: var(--adventy-deep-purple);
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .adventy-header-container {
+        height: 70vh;
+    }
+
+    .adventy-title {
+        font-size: 28px;
+    }
+
+    .adventy-subtitle {
+        font-size: 16px;
+    }
+
+    .adventy-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .adventy-logo {
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .adventy-header-container {
+        height: 60vh;
+    }
+
+    .adventy-title {
+        font-size: 24px;
+    }
+
+    .adventy-subtitle {
+        font-size: 14px;
+    }
+
+    .adventy-logo {
+        width: 120px;
+    }
+}
