@@ -30,43 +30,35 @@ const ContentCreatorSection = () => {
                     </h2>
                 </div>
 
-                <div className="creator-description">
-                    <p>Si eres un creador de contenido, influencer o blogger, únete a nuestro programa Adventy Partner y disfruta de beneficios exclusivos para ti y tu comunidad de esta manera:</p>
-                </div>
-
-                <div className="creator-steps">
-                    <ol>
-                        {steps.map(step => (
-                            <li key={step.id} className="creator-step-item">
-                                {step.text}
-                            </li>
-                        ))}
-                    </ol>
-                </div>
-
-                <div className="creator-cta">
-                    <p>¡Convierte tu contenido en ingresos mientras ayudas a tu comunidad a viajar mejor! Únete hoy y comienza a ganar con Adventy Partners.</p>
-                </div>
-
-                <div className="creator-images">
-                    <div className="creator-image-box">
-                        <img
-                            src="https://plus.unsplash.com/premium_photo-1668472170724-8b544ca3c86e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            alt="Persona con teléfono en mano"
-                            className="creator-phone-image"
-                        />
-                        <div className="creator-image-text">
-                            <p className="creator-text-highlight">Comparte tu código único con tu comunidad</p>
+                <div className="creator-flex-container">
+                    <div className="creator-left-column">
+                        <div className="creator-description">
+                            <p>Si eres un creador de contenido, influencer o blogger, únete a nuestro programa Adventy Partner y disfruta de beneficios exclusivos para ti y tu comunidad de esta manera:</p>
                         </div>
+
+                        <div className="creator-steps">
+                            <ol>
+                                {steps.map(step => (
+                                    <li key={step.id} className="creator-step-item">
+                                        {step.text}
+                                    </li>
+                                ))}
+                            </ol>
+                        </div>
+
+
                     </div>
-                    <div className="creator-image-box">
-                        <img
-                            src="https://images.unsplash.com/photo-1523206489230-c012c64b2b48?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            alt="Persona usando smartphone"
-                            className="creator-phone-image"
-                        />
-                        <div className="creator-image-text">
-                            <p className="creator-text-highlight">Tus seguidores usan tu código, obtienen descuentos y todos se benefician</p>
+
+                    <div className="creator-image-container">
+                        <div className="creator-image-box">
+                            <img
+                                src="https://plus.unsplash.com/premium_photo-1668472170724-8b544ca3c86e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Persona con teléfono en mano"
+                                className="creator-phone-image"
+                            />
+                            <div className="creator-image-text">
+                                <p className="creator-text-highlight">Comparte tu código único con tu comunidad</p>
+                            </div>
                         </div>
                     </div>
                 </div>
