@@ -82,7 +82,7 @@ const PartnerBenefits = () => {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []); // Quitar visibleItems de las dependencias para evitar bucle infinito
+    }, []);
 
     return (
         <section className="benefits-root benefits-partner-section">
