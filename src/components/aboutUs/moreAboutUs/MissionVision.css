@@ -60,7 +60,7 @@
 
 .mv-mission-vision {
     padding: 60px 20px;
-    background-color: var(--mau-color1);
+    background: linear-gradient(135deg, var(--mv-color1) 0%, #f9f9f9 100%);
     margin-top: -20px;
     position: relative;
     overflow: hidden;
@@ -114,7 +114,6 @@
     width: 45%;
     position: relative;
     overflow: hidden;
-    border-radius: 0 10px 10px 0;
 }
 
 .mv-mission-vision-image {
@@ -193,6 +192,7 @@
 .mv-icon {
     font-size: 24px;
     color: var(--mv-color3);
+    flex-shrink: 0;
 }
 
 .mv-mission-title,
@@ -202,6 +202,7 @@
     color: var(--mv-color4);
     margin: 0;
     position: relative;
+    line-height: 1.2;
 }
 
 .mv-mission-title::after,
@@ -224,7 +225,7 @@
 
 .mv-quote-container {
     position: relative;
-    padding: 10px 30px;
+    padding: 15px 25px;
     border-left: 3px solid var(--mv-color2);
     background-color: rgba(125, 193, 189, 0.05);
     border-radius: 0 10px 10px 0;
@@ -237,18 +238,18 @@
 }
 
 .mv-quote-left {
-    top: 0;
+    top: 5px;
     left: 10px;
-    font-size: 20px;
+    font-size: 18px;
     animation: mv-slideRight 0.5s forwards;
     animation-delay: 0.8s;
     opacity: 0;
 }
 
 .mv-quote-right {
-    bottom: 0;
+    bottom: 5px;
     right: 10px;
-    font-size: 20px;
+    font-size: 18px;
     animation: mv-slideLeft 0.5s forwards;
     animation-delay: 1s;
     opacity: 0;
@@ -256,7 +257,7 @@
 
 .mv-quote-container p {
     font-size: 16px;
-    line-height: 1.8;
+    line-height: 1.7;
     color: #333;
     margin: 0;
     text-align: justify;
@@ -271,6 +272,10 @@
 
 /* Responsive Styles */
 @media (max-width: 1000px) {
+    .mv-mission-vision {
+        padding: 50px 20px;
+    }
+
     .mv-mission-vision-container {
         flex-direction: column;
     }
@@ -282,10 +287,12 @@
 
     .mv-image-container {
         height: 350px;
+        order: 1;
     }
 
     .mv-mission-vision-text {
-        padding: 40px 30px;
+        padding: 35px 30px;
+        order: 2;
     }
 }
 
@@ -295,11 +302,12 @@
     }
 
     .mv-image-container {
-        height: 250px;
+        height: 280px;
     }
 
     .mv-mission-vision-text {
         padding: 30px 25px;
+        gap: 25px;
     }
 
     .mv-mission-title,
@@ -308,12 +316,70 @@
     }
 
     .mv-quote-container {
-        padding: 10px 20px;
+        padding: 12px 20px 12px 25px;
+    }
+
+    .mv-quote-container p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .mv-icon {
+        font-size: 22px;
+    }
+
+    .mv-quote-left {
+        top: 5px;
+        left: 8px;
+        font-size: 16px;
+    }
+
+    .mv-quote-right {
+        bottom: 5px;
+        right: 8px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .mv-mission-vision {
+        padding: 35px 12px;
+    }
+
+    .mv-mission-vision-container {
+        border-radius: 15px;
+    }
+
+    .mv-image-container {
+        height: 240px;
+    }
+
+    .mv-mission-vision-text {
+        padding: 25px 20px;
+        gap: 22px;
+    }
+
+    .mv-section-header {
+        margin-bottom: 12px;
+    }
+
+    .mv-mission-title,
+    .mv-vision-title {
+        font-size: 22px;
+    }
+
+    .mv-icon {
+        font-size: 20px;
+    }
+
+    .mv-quote-container {
+        padding: 10px 18px 10px 22px;
+        border-left-width: 2px;
     }
 
     .mv-quote-container p {
         font-size: 14px;
-        line-height: 1.6;
+        line-height: 1.5;
     }
 }
 
@@ -327,12 +393,13 @@
     }
 
     .mv-mission-vision-text {
-        padding: 25px 20px;
+        padding: 22px 18px;
         gap: 20px;
     }
 
     .mv-section-header {
         margin-bottom: 10px;
+        gap: 8px;
     }
 
     .mv-mission-title,
@@ -345,15 +412,40 @@
     }
 
     .mv-quote-container {
-        padding: 5px 15px;
+        padding: 8px 15px 8px 20px;
     }
 
-    .mv-quote-icon {
-        font-size: 16px;
+    .mv-quote-left,
+    .mv-quote-right {
+        font-size: 14px;
+    }
+
+    .mv-quote-left {
+        top: 3px;
+        left: 6px;
+    }
+
+    .mv-quote-right {
+        bottom: 3px;
+        right: 6px;
     }
 
     .mv-quote-container p {
         font-size: 13px;
-        line-height: 1.5;
+        line-height: 1.4;
+    }
+
+    .mv-divider {
+        height: 1px;
+    }
+
+    .mv-image-indicators {
+        bottom: 15px;
+        gap: 6px;
+    }
+
+    .mv-indicator {
+        width: 8px;
+        height: 8px;
     }
 }

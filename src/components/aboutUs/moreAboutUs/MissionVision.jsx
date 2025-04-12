@@ -51,6 +51,7 @@ const MissionVision = () => {
                             key={index}
                             className={`mv-mission-vision-image ${index === currentImage ? 'mv-active' : ''}`}
                             style={{ backgroundImage: `url(${image})` }}
+                            aria-hidden={index !== currentImage}
                         />
                     ))}
                     <div className="mv-image-indicators">
@@ -60,6 +61,7 @@ const MissionVision = () => {
                                 className={`mv-indicator ${index === currentImage ? 'mv-active' : ''}`}
                                 onClick={() => setCurrentImage(index)}
                                 aria-label={`Ver imagen ${index + 1}`}
+                                aria-pressed={index === currentImage}
                             />
                         ))}
                     </div>
@@ -67,27 +69,27 @@ const MissionVision = () => {
                 <div className="mv-mission-vision-text">
                     <div className="mv-section-content mv-mission-section">
                         <div className="mv-section-header">
-                            <FaCompass className="mv-icon" />
+                            <FaCompass className="mv-icon" aria-hidden="true" />
                             <h2 className="mv-mission-title">{t('missionVision.missionTitle')}</h2>
                         </div>
                         <div className="mv-quote-container">
-                            <FaQuoteLeft className="mv-quote-icon mv-quote-left" />
+                            <FaQuoteLeft className="mv-quote-icon mv-quote-left" aria-hidden="true" />
                             <p>{t('missionVision.missionText')}</p>
-                            <FaQuoteRight className="mv-quote-icon mv-quote-right" />
+                            <FaQuoteRight className="mv-quote-icon mv-quote-right" aria-hidden="true" />
                         </div>
                     </div>
 
-                    <div className="mv-divider"></div>
+                    <div className="mv-divider" role="separator"></div>
 
                     <div className="mv-section-content mv-vision-section">
                         <div className="mv-section-header">
-                            <FaEye className="mv-icon" />
+                            <FaEye className="mv-icon" aria-hidden="true" />
                             <h2 className="mv-vision-title">{t('missionVision.visionTitle')}</h2>
                         </div>
                         <div className="mv-quote-container">
-                            <FaQuoteLeft className="mv-quote-icon mv-quote-left" />
+                            <FaQuoteLeft className="mv-quote-icon mv-quote-left" aria-hidden="true" />
                             <p>{t('missionVision.visionText')}</p>
-                            <FaQuoteRight className="mv-quote-icon mv-quote-right" />
+                            <FaQuoteRight className="mv-quote-icon mv-quote-right" aria-hidden="true" />
                         </div>
                     </div>
                 </div>
