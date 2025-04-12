@@ -46,18 +46,18 @@ const RegistrationFAQ = () => {
             <div className="registration-faq-content">
                 <div className="registration-form-section">
                     <div className="registration-form-card">
-                        <h2 className="registration-form-title">FORMULARIO DE REGISTRO</h2>
+                        <h2 className="registration-form-title">Formulario De Registro</h2>
                         <form className="registration-form">
                             <input type="text" placeholder="Nombre" className="registration-input" />
                             <input type="email" placeholder="Email" className="registration-input" />
                             <input type="tel" placeholder="WhatsApp" className="registration-input" />
-                            <button type="submit" className="registration-submit-btn">REGISTRAR AHORA</button>
+                            <button type="submit" className="registration-submit-btn">Registrar Ahora</button>
                         </form>
                     </div>
                 </div>
 
                 <div className="faq-section">
-                    <h2 className="faq-title">ALGUNAS DUDAS QUE QUIZÁ PUEDES TENER...</h2>
+                    <h2 className="faq-title">Algunas Dudas Que Quizá Puedes Tener...</h2>
                     <div className="faq-accordion">
                         {faqItems.map((item, index) => (
                             <div key={item.id} className="faq-item">

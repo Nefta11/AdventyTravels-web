@@ -28,7 +28,7 @@
 /* Estilos para el formulario */
 .registration-form-section {
     flex: 1;
-    margin-top: 30px;
+    margin-top: 40px;
     min-width: 320px;
     transition: all var(--transition-speed) ease;
 }
@@ -118,7 +118,7 @@
 
 .faq-question {
     padding: 15px;
-    font-size: 0.95rem;
+    font-size: 0.90rem;
     font-weight: 600;
     color: var(--gray-dark);
     cursor: pointer;
@@ -154,7 +154,7 @@
 .faq-answer {
     max-height: 0;
     overflow: hidden;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: var(--gray-dark);
     line-height: 1.5;
     transition: max-height var(--transition-speed) ease, padding var(--transition-speed) ease;
@@ -234,7 +234,7 @@
 
     .faq-answer.active {
         padding: 12px 12px 12px 35px;
-        font-size: 0.85rem;
+        font-size: 0.80rem;
     }
 
     .registration-input,
