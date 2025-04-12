@@ -1,0 +1,244 @@
+/* Variables de colores */
+:root {
+    --primary-color: #E49F30;
+    --secondary-color: #24455D;
+    --white: #ffffff;
+    --gray-light: #f8f8f8;
+    --gray-dark: #333333;
+    --transition-speed: 0.3s;
+}
+
+.registration-faq-container {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.registration-faq-content {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    width: 100%;
+    align-items: flex-start;
+}
+
+/* Estilos para el formulario */
+.registration-form-section {
+    flex: 1;
+    margin-top: 30px;
+    min-width: 320px;
+    transition: all var(--transition-speed) ease;
+}
+
+.registration-form-card {
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    padding: 30px 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.registration-form-title {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.registration-input {
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    font-size: 0.9rem;
+    transition: box-shadow 0.2s ease;
+}
+
+.registration-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(36, 69, 93, 0.3);
+}
+
+.registration-submit-btn {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color var(--transition-speed) ease;
+}
+
+.registration-submit-btn:hover {
+    background-color: #1c3647;
+}
+
+/* Estilos para la sección de FAQs */
+.faq-section {
+    flex: 1;
+    min-width: 320px;
+}
+
+.faq-title {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.faq-accordion {
+    background-color: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item {
+    border-bottom: 1px solid #eaeaea;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    padding: 15px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--gray-dark);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all var(--transition-speed) ease;
+}
+
+.faq-question:hover {
+    background-color: var(--gray-light);
+}
+
+.faq-question.active {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.faq-icon {
+    margin-right: 15px;
+    font-weight: 700;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    transition: all var(--transition-speed) ease;
+}
+
+.faq-question.active .faq-icon {
+    color: var(--primary-color);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    font-size: 0.9rem;
+    color: var(--gray-dark);
+    line-height: 1.5;
+    transition: max-height var(--transition-speed) ease, padding var(--transition-speed) ease;
+    background-color: #fafafa;
+}
+
+.faq-answer.active {
+    max-height: 300px;
+    padding: 15px 15px 15px 50px;
+    border-left: 3px solid var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .registration-faq-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .registration-form-section,
+    .faq-section {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .faq-section {
+        order: 1;
+    }
+
+    .registration-form-section {
+        order: 2;
+    }
+}
+
+@media (max-width: 576px) {
+    .registration-faq-container {
+        margin: 25px auto;
+        padding: 0 15px;
+    }
+
+    .registration-form-card,
+    .faq-accordion {
+        border-radius: 10px;
+    }
+
+    .registration-form-title,
+    .faq-title {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+    .faq-answer.active {
+        padding: 15px 15px 15px 40px;
+    }
+}
+
+@media (max-width: 400px) {
+    .registration-faq-container {
+        padding: 0 10px;
+    }
+
+    .registration-form-card {
+        padding: 20px 15px;
+    }
+
+    .faq-question {
+        padding: 12px;
+        font-size: 0.85rem;
+    }
+
+    .faq-icon {
+        margin-right: 10px;
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+    }
+
+    .faq-answer.active {
+        padding: 12px 12px 12px 35px;
+        font-size: 0.85rem;
+    }
+
+    .registration-input,
+    .registration-submit-btn {
+        padding: 10px;
+    }
+}

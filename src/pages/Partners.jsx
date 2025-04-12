@@ -6,6 +6,7 @@ import PartnerHeader from "../components/partners/header/PartnerHeader.jsx";
 import PartnerBenefits from '../components/partners/benefits/PartnerBenefits.jsx';
 import PartnerProcess from '../components/partners/process/PartnerProcess.jsx';
 import ContentCreatorSection from '../components/partners/ContentCreatorSection/ContentCreatorSection.jsx';
+import RegistrationFAQ from '../components/partners/RegistrationFAQ/RegistrationFAQ.jsx';
 
 const Partners = () => {
     return (
@@ -19,6 +20,7 @@ const Partners = () => {
             <PartnerProcess />
             <PartnerBenefits />
             <ContentCreatorSection />
+            <RegistrationFAQ />
             <FooterComponent />
             <WhatsAppIcon />
         </motion.div>
