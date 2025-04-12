@@ -7,33 +7,33 @@ const RegistrationFAQ = () => {
     const faqItems = [
         {
             id: 1,
-            question: '¿Qué son los Rewards y cómo puedo usarlos?',
-            answer: 'Al realizar ventas desde tu usuario o al hacer uso de tu Código Partner Corporativo, acumulas el 5% del total de las ventas realizadas, los cuales podrás canjear cada mes por cualquier producto o servicio de nuestra tienda en línea o incluso solicitarlo en cash back. Esto adicional a tus beneficios Adventy Partner.'
+            question: '¿Qué son los Rewards y cómo funcionan?',
+            answer: 'Cada vez que generas ventas desde tu cuenta o utilizas tu Código Partner Corporativo, acumulas el 5% del total vendido. Estas recompensas pueden ser usadas mensualmente en nuestra tienda en línea o solicitadas como cashback. Además, disfrutarás de los beneficios exclusivos de Adventy Partner.'
         },
         {
             id: 2,
-            question: '¿Necesito experiencia vendiendo viajes?',
-            answer: 'No necesitas experiencia previa. Nosotros te proporcionamos toda la capacitación y herramientas necesarias para que comiences a generar ingresos inmediatamente.'
+            question: '¿Es necesario tener experiencia previa en ventas de viajes?',
+            answer: 'No, no necesitas experiencia previa. Nosotros te proporcionamos todas las herramientas y formación necesarias para que comiences a generar ingresos desde el primer día.'
         },
         {
             id: 3,
-            question: '¿Qué beneficios tengo al ser Adventy Partner?',
-            answer: 'Como Adventy Partner disfrutarás de comisiones por ventas, capacitación exclusiva, material promocional personalizado, soporte técnico prioritario y acceso a ofertas especiales para ti y tus clientes.'
+            question: '¿Qué beneficios obtengo al ser Adventy Partner?',
+            answer: 'Como Adventy Partner, recibirás comisiones por ventas, acceso a formación especializada, material promocional personalizado, soporte técnico prioritario y ofertas exclusivas para ti y tus clientes.'
         },
         {
             id: 4,
-            question: '¿Cuáles son los requisitos para ser un Adventy Partner?',
-            answer: 'Solo necesitas completar el formulario de registro, proporcionar tu información básica y tener ganas de emprender en el mundo de los viajes. No hay inversión inicial requerida.'
+            question: '¿Qué necesito para convertirme en Adventy Partner?',
+            answer: 'Solo debes completar el formulario de registro, proporcionar tus datos básicos y tener ganas de emprender en el sector de viajes. No se requiere inversión inicial.'
         },
         {
             id: 5,
-            question: '¿Qué tipo de soporte le da Adventy a sus Partners?',
-            answer: 'Proporcionamos soporte técnico 24/7, capacitaciones periódicas, materiales promocionales, un gestor personal para resolver tus dudas, y una plataforma intuitiva para realizar reservas y seguimiento.'
+            question: '¿Qué tipo de soporte ofrece Adventy a sus Partners?',
+            answer: 'Te brindamos soporte técnico las 24 horas, capacitaciones periódicas, materiales promocionales, un gestor personal para resolver tus dudas y una plataforma fácil de usar para gestionar reservas y seguimientos.'
         },
         {
             id: 6,
-            question: '¿Cómo puedo ser Partner siendo una agencia de viajes?',
-            answer: 'Las agencias de viajes tienen un programa especial con beneficios adicionales. Completa el formulario y nuestro equipo se pondrá en contacto contigo para brindarte todos los detalles del programa corporativo.'
+            question: '¿Cómo puede una agencia de viajes unirse como Partner?',
+            answer: 'Las agencias de viajes tienen un programa especial con beneficios adicionales. Completa el formulario y nuestro equipo se pondrá en contacto contigo para explicarte todos los detalles del programa corporativo.'
         }
     ];
 

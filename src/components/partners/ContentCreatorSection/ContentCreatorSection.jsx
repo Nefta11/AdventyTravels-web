@@ -4,19 +4,19 @@ const ContentCreatorSection = () => {
     const steps = [
         {
             id: 1,
-            text: 'Solicita tu cupón personalizado y se parte del programa Adventy Partner'
+            text: 'Registra tu código único y comienza a formar parte del programa Adventy Partner.'
         },
         {
             id: 2,
-            text: 'Comparte tu cupón con tu comunidad y dales hasta un 15% de descuento en nuestra tienda en línea mientras acumulan el 5% en rewards para ellos en nuestra tienda en línea'
+            text: 'Comparte tu código con tus seguidores para que obtengan hasta un 15% de descuento en nuestra tienda, mientras acumulan un 5% en recompensas.'
         },
         {
             id: 3,
-            text: 'Obtén el 5% de recompensa acumulable en rewards para ti por cada reserva que realice tu comunidad con tu código'
+            text: 'Por cada reserva que realicen tus seguidores usando tu código, recibirás un 5% en recompensas acumulables.'
         },
         {
             id: 4,
-            text: '¡Y listo! Disfruta tus beneficios y canjea tus rewards en nuestra tienda en línea o solicítalo en cashback.'
+            text: '¡Así de fácil! Usa tus recompensas en nuestra tienda en línea o solicítalas como cashback.'
         }
     ];
 
@@ -25,13 +25,13 @@ const ContentCreatorSection = () => {
             <div className="creator-content">
                 <div className="creator-header">
                     <h2 className="creator-title">
-                        <span className="creator-title-blue">¿ERES CREADOR DE CONTENIDO?</span>
-                        <span className="creator-title-pink">¡TAMBIÉN PUEDES GENERAR INGRESOS CON ADVENTY PARTNER!</span>
+                        <span className="creator-title-blue">¿Eres Un Creador De Contenido?</span>
+                        <span className="creator-title-pink">¡Genera Ingresos Con Adventy Partner!</span>
                     </h2>
                 </div>
 
                 <div className="creator-description">
-                    <p>Si eres influencer, blogger o creador de contenido, únete a nuestro programa Adventy Partner y disfruta de beneficios exclusivos para ti y tus seguidores de la siguiente manera:</p>
+                    <p>Si eres un creador de contenido, influencer o blogger, únete a nuestro programa Adventy Partner y disfruta de beneficios exclusivos para ti y tu comunidad de esta manera:</p>
                 </div>
 
                 <div className="creator-steps">
@@ -45,7 +45,7 @@ const ContentCreatorSection = () => {
                 </div>
 
                 <div className="creator-cta">
-                    <p>¡Convierte tu contenido en ingresos y ayuda a tu comunidad a viajar mejor! Únete ahora y empieza a ganar con Adventy Partners</p>
+                    <p>¡Convierte tu contenido en ingresos mientras ayudas a tu comunidad a viajar mejor! Únete hoy y comienza a ganar con Adventy Partners.</p>
                 </div>
 
                 <div className="creator-images">
@@ -56,7 +56,7 @@ const ContentCreatorSection = () => {
                             className="creator-phone-image"
                         />
                         <div className="creator-image-text">
-                            <p className="creator-text-highlight">Comparte con tu comunidad tu código personalizado</p>
+                            <p className="creator-text-highlight">Comparte tu código único con tu comunidad</p>
                         </div>
                     </div>
                     <div className="creator-image-box">
@@ -66,7 +66,7 @@ const ContentCreatorSection = () => {
                             className="creator-phone-image"
                         />
                         <div className="creator-image-text">
-                            <p className="creator-text-highlight">Aplican tu código, obtienen un descuento y todos ganan</p>
+                            <p className="creator-text-highlight">Tus seguidores usan tu código, obtienen descuentos y todos se benefician</p>
                         </div>
                     </div>
                 </div>
