@@ -1,3 +1,33 @@
+/* Tamaños muy pequeños */
+@media (max-width: 320px) {
+    .creator-title {
+        font-size: 1.1rem;
+    }
+
+    .creator-description,
+    .creator-cta {
+        font-size: 0.8rem;
+    }
+
+    .creator-step-item {
+        font-size: 0.8rem;
+        margin-bottom: 8px;
+    }
+
+    .creator-phone-image {
+        height: 150px;
+    }
+
+    .creator-image-text {
+        padding: 6px 4px;
+    }
+
+    .creator-text-highlight {
+        font-size: 0.75rem;
+        line-height: 1.2;
+    }
+}
+
 /* Variables de colores */
 :root {
     --primary-color: #E49F30;
@@ -123,6 +153,7 @@
     width: 100%;
     padding: 15px;
     text-align: center;
+    transition: padding 0.3s ease;
 }
 
 .creator-text-highlight {
@@ -257,21 +288,26 @@
         padding: 0 5px;
     }
 
+    .creator-images {
+        gap: 15px;
+        margin-top: 20px;
+    }
+
     .creator-text-highlight {
         font-size: 0.95rem;
         padding: 5px;
     }
 
     .creator-image-box {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     .creator-phone-image {
-        height: 250px;
+        height: 220px;
     }
 
     .creator-image-text {
-        padding: 12px 10px;
+        padding: 10px 8px;
     }
 }
 
@@ -300,10 +336,29 @@
 
     .creator-step-item {
         font-size: 0.85rem;
-        margin-bottom: 12px;
+        margin-bottom: 10px;
+    }
+
+    .creator-images {
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .creator-image-box {
+        margin-bottom: 10px;
     }
 
     .creator-phone-image {
-        height: 200px;
+        height: 180px;
+    }
+
+    .creator-image-text {
+        padding: 8px 5px;
+    }
+
+    .creator-text-highlight {
+        font-size: 0.8rem;
+        padding: 2px;
+        line-height: 1.3;
     }
 }
