@@ -16,8 +16,8 @@ const Partners = () => {
         >
             <NavComponent />
             <PartnerHeader />
-            <PartnerBenefits />
             <PartnerProcess />
+            <PartnerBenefits />
             <ContentCreatorSection />
             <FooterComponent />
             <WhatsAppIcon />
