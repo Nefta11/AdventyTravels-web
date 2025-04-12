@@ -2,14 +2,14 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './AdventyDistribuidorasHeader.css';
 
-// Array of carousel images (professional women)
+// Array de imágenes de mujeres profesionales (vistas más amplias)
 const CAROUSEL_IMAGES = [
-    'https://images.unsplash.com/photo-1573497019236-17f8177b81e8?auto=format&fit=crop&q=60',
-    'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=60',
-    'https://images.unsplash.com/photo-1599231091889-c1fd76b87226?auto=format&fit=crop&q=60',
-    'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=60',
-    'https://images.unsplash.com/photo-1650113794972-56031832c0db?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    'https://images.unsplash.com/photo-1573497491765-dccce02b29df?auto=format&fit=crop&q=60'
+    'https://images.unsplash.com/photo-1573497019236-17f8177b81e8?auto=format&fit=crop&q=80&w=2070', // Ancho aumentado para mejor vista
+    'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=2070',
+    'https://images.unsplash.com/photo-1599231091889-c1fd76b87226?auto=format&fit=crop&q=80&w=2070',
+    'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=2070',
+    'https://images.unsplash.com/photo-1650113794972-56031832c0db?auto=format&fit=crop&q=80&w=2070',
+    'https://images.unsplash.com/photo-1573497491765-dccce02b29df?auto=format&fit=crop&q=80&w=2070'
 ];
 
 // Logo URL
