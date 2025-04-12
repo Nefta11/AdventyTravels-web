@@ -20,7 +20,8 @@
 /* Contenedor principal y fondo */
 .campaign-container {
     background-color: var(--campaign-off-white);
-    padding: 100px 0;
+
+    padding: 120px 0;
     position: relative;
     overflow: hidden;
     opacity: 0;
@@ -52,7 +53,6 @@
     right: 0;
     width: 60%;
     height: 100%;
-    background: radial-gradient(circle at top right, var(--campaign-light-purple), transparent 70%);
     z-index: 1;
     opacity: 0.7;
 }
@@ -79,25 +79,26 @@
 }
 
 .campaign-logo {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     background: linear-gradient(135deg, var(--campaign-purple), var(--campaign-pink));
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 36px;
+    font-size: 40px;
     font-weight: 900;
     color: var(--campaign-white);
-    box-shadow: 0 10px 20px rgba(138, 79, 255, 0.25);
+    box-shadow: 0 10px 20px rgba(138, 79, 255, 0.25),
+        0 0 30px var(--campaign-pink-glow);
     position: relative;
     overflow: hidden;
     transform: rotate(-5deg);
-    transition: var(--campaign-transition);
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .campaign-logo:hover {
-    transform: rotate(0deg) scale(1.05);
+    transform: rotate(0) scale(1.05);
 }
 
 .campaign-logo:before {
@@ -105,6 +106,17 @@
     position: absolute;
     top: -10px;
     right: -10px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+}
+
+.campaign-logo:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: -15px;
     width: 30px;
     height: 30px;
     background-color: rgba(255, 255, 255, 0.2);
@@ -120,6 +132,10 @@
     display: inline-block;
     letter-spacing: 0.5px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, var(--campaign-deep-purple), var(--campaign-pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .campaign-intro {
@@ -139,12 +155,27 @@
 }
 
 .campaign-divider {
-    width: 100px;
+    width: 120px;
     height: 5px;
     background: linear-gradient(to right, var(--campaign-purple), var(--campaign-pink));
     margin: 0 auto;
     border-radius: 3px;
     position: relative;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 var(--campaign-pink-glow);
+    }
+
+    70% {
+        box-shadow: 0 0 10px 5px var(--campaign-pink-glow);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 var(--campaign-pink-glow);
+    }
 }
 
 .campaign-divider:before {
@@ -168,18 +199,17 @@
     text-align: center;
     margin-bottom: 50px;
     position: relative;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .campaign-benefits-title:after {
     content: '';
-    position: absolute;
+    display: block;
     width: 60px;
     height: 3px;
     background: linear-gradient(to right, var(--campaign-purple), var(--campaign-pink));
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 1.5px;
+    margin: 15px auto 0;
+    border-radius: 2px;
 }
 
 .campaign-benefits-grid {
@@ -187,13 +217,6 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 35px;
     margin-bottom: 70px;
-    justify-items: center;
-}
-
-/* Clase para centrar la última fila cuando hay elementos sobrantes */
-.campaign-benefits-grid::after {
-    content: '';
-    grid-column: span 1;
 }
 
 .campaign-benefit-card {
@@ -207,8 +230,7 @@
     border: 2px solid transparent;
     opacity: 0;
     transform: translateY(30px);
-    width: 100%;
-    max-width: 350px;
+    overflow: hidden;
 }
 
 .campaign-animate-in {
@@ -229,7 +251,7 @@
 
 .campaign-benefit-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(138, 79, 255, 0.2);
+    box-shadow: 0 15px 30px rgba(138, 79, 255, 0.25);
     border-color: var(--campaign-light-purple);
 }
 
@@ -247,9 +269,26 @@
     z-index: -1;
 }
 
+.campaign-benefit-card:after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle at center, var(--campaign-light-pink) 0%, transparent 70%);
+    opacity: 0;
+    transition: var(--campaign-transition);
+    z-index: -1;
+}
+
 .campaign-benefit-card:hover:before {
     height: 100%;
     opacity: 0.5;
+}
+
+.campaign-benefit-card:hover:after {
+    opacity: 0.3;
 }
 
 .campaign-benefit-icon {
@@ -258,7 +297,8 @@
     margin-bottom: 25px;
     transition: var(--campaign-transition);
     display: inline-block;
-    background-color: var(--campaign-light-pink);
+    background: var(--campaign-light-pink);
+    padding: 15px;
     border-radius: 50%;
     width: 80px;
     height: 80px;
@@ -268,9 +308,10 @@
 }
 
 .campaign-benefit-card:hover .campaign-benefit-icon {
-    transform: scale(1.15);
+    transform: scale(1.15) rotate(5deg);
     color: var(--campaign-purple);
-    background-color: var(--campaign-light-purple);
+    background: linear-gradient(135deg, var(--campaign-light-purple), var(--campaign-light-pink));
+    box-shadow: 0 5px 15px rgba(138, 79, 255, 0.15);
 }
 
 .campaign-benefit-title {
@@ -279,6 +320,11 @@
     color: var(--campaign-deep-purple);
     margin-bottom: 15px;
     position: relative;
+    transition: var(--campaign-transition);
+}
+
+.campaign-benefit-card:hover .campaign-benefit-title {
+    color: var(--campaign-purple);
 }
 
 .campaign-benefit-description {
@@ -286,6 +332,7 @@
     line-height: 1.6;
     color: var(--campaign-dark-gray);
     margin-bottom: 20px;
+    transition: var(--campaign-transition);
 }
 
 .campaign-benefit-indicator {
@@ -295,16 +342,35 @@
     border-radius: 2px;
     margin-top: 10px;
     transition: var(--campaign-transition);
+    position: relative;
+}
+
+.campaign-benefit-indicator:before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    background: linear-gradient(to right, var(--campaign-purple), var(--campaign-pink));
+    filter: blur(3px);
+    opacity: 0;
+    border-radius: 2px;
+    transition: var(--campaign-transition);
 }
 
 .campaign-benefit-card:hover .campaign-benefit-indicator {
     width: 60px;
 }
 
+.campaign-benefit-card:hover .campaign-benefit-indicator:before {
+    opacity: 0.5;
+}
+
 /* Media queries para responsividad mejorada */
 @media (max-width: 1200px) {
     .campaign-benefits-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 30px;
     }
 
@@ -316,18 +382,6 @@
 @media (max-width: 992px) {
     .campaign-container {
         padding: 80px 0;
-    }
-
-    .campaign-benefits-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-    }
-
-    /* Centrar último elemento cuando hay un número impar */
-    .campaign-benefits-grid>*:last-child:nth-child(2n + 1) {
-        grid-column: 1 / -1;
-        justify-self: center;
-        max-width: 350px;
     }
 
     .campaign-title {
@@ -366,17 +420,22 @@
 
     .campaign-benefits-title {
         font-size: 1.8rem;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
 
     .campaign-benefits-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 25px;
     }
 
     .campaign-benefit-card {
         padding: 30px 25px;
-        max-width: 300px;
+    }
+
+    .campaign-benefit-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2.5rem;
     }
 }
 
@@ -419,29 +478,14 @@
     }
 
     .campaign-benefit-icon {
-        font-size: 2.2rem;
         width: 60px;
         height: 60px;
+        font-size: 2.2rem;
+        padding: 12px;
     }
 
     .campaign-benefit-title {
         font-size: 1.2rem;
-    }
-
-    .campaign-benefit-card {
-        padding: 25px 20px;
-        max-width: 250px;
-    }
-}
-
-@media (max-width: 480px) {
-    .campaign-benefits-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .campaign-benefit-card {
-        max-width: 300px;
     }
 }
 
@@ -464,6 +508,13 @@
 
     .campaign-benefit-card {
         padding: 25px 20px;
-        max-width: 280px;
+    }
+
+    .campaign-benefit-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.8rem;
+        padding: 10px;
+        margin-bottom: 15px;
     }
 }

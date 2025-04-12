@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react';
 import './AdventyWomenCampaign.css';
-import { FaGraduationCap, FaLaptop, FaGift, FaClock, FaUsers } from 'react-icons/fa';
+import { FaGraduationCap, FaLaptop, FaGift, FaClock, FaUsers, FaChartLine } from 'react-icons/fa';
 
 const AdventyWomenCampaign = () => {
     const [isVisible, setIsVisible] = useState(false);
-    const [screenSize, setScreenSize] = useState('large');
 
     useEffect(() => {
         // Animation on component mount
@@ -25,25 +24,7 @@ const AdventyWomenCampaign = () => {
             observer.observe(card);
         });
 
-        // Screen size detection for responsive layout
-        const handleResize = () => {
-            if (window.innerWidth <= 480) {
-                setScreenSize('small');
-            } else if (window.innerWidth <= 992) {
-                setScreenSize('medium');
-            } else {
-                setScreenSize('large');
-            }
-        };
-
-        // Initial check and event listener
-        handleResize();
-        window.addEventListener('resize', handleResize);
-
-        return () => {
-            observer.disconnect();
-            window.removeEventListener('resize', handleResize);
-        };
+        return () => observer.disconnect();
     }, []);
 
     const benefits = [
@@ -71,24 +52,13 @@ const AdventyWomenCampaign = () => {
             icon: <FaUsers />,
             title: "Comunidad de mujeres que inspiran",
             description: "Conéctate con otras distribuidoras, aprende y crece en una red que te impulsa."
+        },
+        {
+            icon: <FaChartLine />,
+            title: "Crecimiento financiero sostenido",
+            description: "Desarrolla un negocio con ingresos crecientes y oportunidades de liderazgo."
         }
     ];
-
-    // Función para obtener clase adicional para el grid basado en el número de beneficios
-    const getGridClassForCentering = () => {
-        const benefitsCount = benefits.length;
-
-        if (screenSize === 'large') {
-            // Para pantallas grandes (3 columnas)
-            return benefitsCount % 3 === 1 ? 'center-last-one' :
-                benefitsCount % 3 === 2 ? 'center-last-two' : '';
-        } else if (screenSize === 'medium') {
-            // Para pantallas medianas (2 columnas)
-            return benefitsCount % 2 === 1 ? 'center-last-one' : '';
-        }
-
-        return '';
-    };
 
     return (
         <div className={`campaign-container ${isVisible ? 'campaign-visible' : ''}`}>
@@ -113,7 +83,7 @@ const AdventyWomenCampaign = () => {
 
                 <h3 className="campaign-benefits-title">¿Qué obtienes como Distribuidora ADVENTY?</h3>
 
-                <div className={`campaign-benefits-grid ${getGridClassForCentering()}`}>
+                <div className="campaign-benefits-grid">
                     {benefits.map((benefit, index) => (
                         <div
                             className="campaign-benefit-card"
