@@ -352,11 +352,11 @@ const resources = {
           { primary: "INGRESOS", secondary: "EXTRAS" }
         ],
         joinCommunity: "OBTÉN",
-        joinDescription: "Sé parte de Adventy Partner y transforma tu pasión por los viajes en una oportunidad de crecimiento personal y profesional.",
-        ctaButton: "¡DA CLICK AQUÍ PARA SER UN ADVENTY PARTNER!",
-        whatIsTitle: "¿QUÉ ES ADVENTY PARTNER?",
-        whatIsDescription1: "Adventy Partner es un nuevo programa de Adventy Travels, creado para personas que aman organizar y fomentar viajes propios, para amigos, familiares, conocidos o incluso clientes. La intención es que no sólo goces dicha planeación, sino que también obtengas ingresos extras por hacerlo.",
-        whatIsDescription2: "Al ser parte de esta comunidad te damos acceso a herramientas digitales, entrenamientos en línea súper fáciles y un catálogo gigante de hoteles, departamentos, tours, transportes, vuelos ¡y más! a competitivos precios. Sólo necesitas ganas de aprender y de vender o compartir experiencias increíbles."
+        joinDescription: "Forma parte de Adventy Partner y convierte tu pasión por los viajes en una oportunidad para crecer personal y profesionalmente.",
+        ctaButton: "¡HAZ CLICK AQUÍ Y SÉ UN ADVENTY PARTNER!",
+        whatIsTitle: "¿QUÉ ES EL PROGRAMA ADVENTY PARTNER?",
+        whatIsDescription1: "Adventy Partner es un programa innovador de Adventy Travels diseñado para quienes disfrutan planificar y promover viajes, ya sea para ellos mismos, amigos, familiares o clientes. Este programa te permite disfrutar de la organización de viajes mientras generas ingresos adicionales.",
+        whatIsDescription2: "Al unirte a esta comunidad, tendrás acceso a herramientas digitales, capacitaciones en línea fáciles de seguir y un extenso catálogo de hoteles, apartamentos, tours, transportes, vuelos y más, todo a precios competitivos. Solo necesitas entusiasmo por aprender y compartir experiencias inolvidables."
       }
     }
   },
@@ -711,11 +711,11 @@ const resources = {
           { primary: "EXTRA", secondary: "INCOME" }
         ],
         joinCommunity: "GET",
-        joinDescription: "Be part of Adventy Partner and transform your passion for travel into a personal and professional growth opportunity.",
-        ctaButton: "CLICK HERE TO BECOME AN ADVENTY PARTNER!",
-        whatIsTitle: "WHAT IS ADVENTY PARTNER?",
-        whatIsDescription1: "Adventy Partner is a new program by Adventy Travels, created for people who love organizing and promoting trips for themselves, friends, family, acquaintances, or even clients. The goal is not only to enjoy the planning but also to earn extra income by doing it.",
-        whatIsDescription2: "By being part of this community, we give you access to digital tools, super easy online training, and a giant catalog of hotels, apartments, tours, transportation, flights, and more at competitive prices. All you need is the desire to learn and sell or share incredible experiences."
+        joinDescription: "Join Adventy Partner and turn your passion for travel into an opportunity to grow personally and professionally.",
+        ctaButton: "CLICK HERE AND BE AN ADVENTY PARTNER!",
+        whatIsTitle: "WHAT IS THE ADVENTY PARTNER PROGRAM?",
+        whatIsDescription1: "Adventy Partner is an innovative program from Adventy Travels designed for those who enjoy planning and promoting trips, whether for themselves, friends, family, or clients. This program allows you to enjoy organizing trips while generating additional income.",
+        whatIsDescription2: "By joining this community, you will have access to digital tools, easy-to-follow online training, and an extensive catalog of hotels, apartments, tours, transportation, flights, and more, all at competitive prices. You only need enthusiasm for learning and sharing unforgettable experiences."
       }
     }
   },
@@ -1068,12 +1068,12 @@ const resources = {
           { primary: "EXPÉRIENCES", secondary: "INCROYABLES" },
           { primary: "REVENUS", secondary: "SUPPLÉMENTAIRES" }
         ],
-        joinCommunity: "OBTENEZ",
-        joinDescription: "Devenez partenaire d'Adventy et transformez votre passion pour les voyages en une opportunité de croissance personnelle et professionnelle.",
-        ctaButton: "CLIQUEZ ICI POUR DEVENIR UN ADVENTY PARTNER!",
-        whatIsTitle: "QU'EST-CE QU'ADVENTY PARTNER?",
-        whatIsDescription1: "Adventy Partner est un nouveau programme d'Adventy Travels, créé pour les personnes qui aiment organiser et promouvoir des voyages pour elles-mêmes, leurs amis, leur famille, leurs connaissances ou même leurs clients. L'objectif est non seulement de profiter de la planification, mais aussi de gagner des revenus supplémentaires en le faisant.",
-        whatIsDescription2: "En faisant partie de cette communauté, nous vous donnons accès à des outils numériques, des formations en ligne très faciles et un catalogue géant d'hôtels, d'appartements, de circuits, de transports, de vols et plus encore à des prix compétitifs. Tout ce dont vous avez besoin, c'est de l'envie d'apprendre et de vendre ou partager des expériences incroyables."
+        joinCommunity: "DEVENEZ",
+        joinDescription: "Rejoignez Adventy Partner et transformez votre passion pour les voyages en une opportunité de croissance personnelle et professionnelle.",
+        ctaButton: "CLIQUEZ ICI ET DEVENEZ UN PARTENAIRE ADVENTY!",
+        whatIsTitle: "QU'EST-CE QUE LE PROGRAMME ADVENTY PARTNER?",
+        whatIsDescription1: "Adventy Partner est un programme innovant d'Adventy Travels conçu pour ceux qui aiment planifier et promouvoir des voyages, que ce soit pour eux-mêmes, leurs amis, leur famille ou leurs clients. Ce programme vous permet de profiter de l'organisation de voyages tout en générant des revenus supplémentaires.",
+        whatIsDescription2: "En rejoignant cette communauté, vous aurez accès à des outils numériques, à des formations en ligne faciles à suivre et à un vaste catalogue d'hôtels, d'appartements, de visites, de transports, de vols et plus encore, le tout à des prix compétitifs. Vous n'avez besoin que d'enthousiasme pour apprendre et partager des expériences inoubliables."
       }
     }
   }
