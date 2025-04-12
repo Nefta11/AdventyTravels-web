@@ -22,7 +22,7 @@ const PartnerProcess = () => {
         },
         {
             id: 4,
-            text: 'Recibe todos tus beneficios como UVAC Partner'
+            text: 'Recibe todos tus beneficios como Adventy Partner'
         },
         {
             id: 5,
@@ -30,7 +30,7 @@ const PartnerProcess = () => {
         },
         {
             id: 6,
-            text: 'Comienza a generar ingresos con UVAC Partner'
+            text: 'Comienza a generar ingresos con Adventy Partner'
         }
     ];
 
@@ -60,7 +60,7 @@ const PartnerProcess = () => {
     return (
         <div className="partner-container">
             <section className="partner-process-section">
-                <h2 className="partner-section-title">¿CÓMO FUNCIONA UVAC PARTNER?</h2>
+                <h2 className="partner-section-title">¿Cómo Funciona Adventy Partner?</h2>
 
                 <div className="partner-process-timeline">
                     <div className="partner-timeline-line"></div>
@@ -85,7 +85,7 @@ const PartnerProcess = () => {
             </section>
 
             <section className="partner-types-section">
-                <h2 className="partner-section-title">¿QUIÉN PUEDE SER UVAC PARTNER?</h2>
+            <h2 className="partner-section-title">¿Quién Puede Ser Adventy Partner?</h2>
 
                 <div className="partner-types-grid">
                     {partnerTypes.map(type => (
