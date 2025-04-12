@@ -58,40 +58,40 @@ const PartnerProcess = () => {
     ];
 
     return (
-        <div className="partner-process-container">
-            <section className="process-section">
-                <h2 className="section-title">¿CÓMO FUNCIONA UVAC PARTNER?</h2>
+        <div className="partner-container">
+            <section className="partner-process-section">
+                <h2 className="partner-section-title">¿CÓMO FUNCIONA UVAC PARTNER?</h2>
 
-                <div className="process-timeline">
-                    <div className="timeline-line"></div>
-                    <div className="steps-container">
+                <div className="partner-process-timeline">
+                    <div className="partner-timeline-line"></div>
+                    <div className="partner-steps-container">
                         {processSteps.map(step => (
                             <div
                                 key={step.id}
-                                className="process-step"
+                                className="partner-process-step"
                             >
-                                <div className="step-number">{step.id}</div>
-                                <div className="step-content">
-                                    <p className="step-text">{step.text}</p>
+                                <div className="partner-step-number">{step.id}</div>
+                                <div className="partner-step-content">
+                                    <p className="partner-step-text">{step.text}</p>
                                 </div>
                             </div>
                         ))}
                     </div>
                 </div>
 
-                <p className="process-tagline">
+                <p className="partner-process-tagline">
                     ¡Conviértete en un experto en viajes y comienza a generar ingresos con el respaldo de nuestra plataforma exclusiva!
                 </p>
             </section>
 
             <section className="partner-types-section">
-                <h2 className="section-title">¿QUIÉN PUEDE SER UVAC PARTNER?</h2>
+                <h2 className="partner-section-title">¿QUIÉN PUEDE SER UVAC PARTNER?</h2>
 
                 <div className="partner-types-grid">
                     {partnerTypes.map(type => (
                         <div key={type.id} className="partner-type-card">
-                            <div className="type-icon">{type.icon}</div>
-                            <h3 className="type-title">{type.title}</h3>
+                            <div className="partner-type-icon">{type.icon}</div>
+                            <h3 className="partner-type-title">{type.title}</h3>
                         </div>
                     ))}
                 </div>
