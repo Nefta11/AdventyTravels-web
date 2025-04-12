@@ -1,12 +1,12 @@
 import { useState, useEffect, useCallback } from 'react';
 import { FaHandPointRight } from 'react-icons/fa';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules'; // Removido EffectCreative para reducir carga
+import { Autoplay } from 'swiper/modules'; 
 import 'swiper/css';
 import './PartnerHeader.css';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom'; 
 
-// Optimizadas para ser más ligeras, considera usar webp para producción
 const CAROUSEL_IMAGES = [
     'https://images.unsplash.com/photo-1573497019236-17f8177b81e8?auto=format&fit=crop&q=60',
     'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=60',
@@ -22,8 +22,6 @@ const PartnerHeader = () => {
     const { t } = useTranslation();
     const [currentTextIndex, setCurrentTextIndex] = useState(0);
     const [isVisible, setIsVisible] = useState(false);
-
-    // Simplificado para mejorar rendimiento
     const handleScroll = useCallback(() => {
         const infoCards = document.getElementById('headerPat-info-cards');
         if (infoCards) {
@@ -39,7 +37,7 @@ const PartnerHeader = () => {
 
         const textRotationInterval = setInterval(() => {
             setCurrentTextIndex(prevIndex => (prevIndex + 1) % t('partnerHeader.carouselTexts', { returnObjects: true }).length);
-        }, 4000); // Aumentado para reducir animaciones frecuentes
+        }, 4000); 
 
         window.addEventListener('scroll', handleScroll);
         handleScroll();
@@ -55,13 +53,12 @@ const PartnerHeader = () => {
     return (
         <>
             <div className={`headerPat-partner-header ${isVisible ? 'headerPat-visible' : ''}`}>
-                {/* El overlay ahora es un div completo que cubre todo el carrusel */}
                 <div className="headerPat-header-overlay"></div>
 
                 <Swiper
                     modules={[Autoplay]}
                     autoplay={{
-                        delay: 6000, // Más tiempo entre transiciones
+                        delay: 5000,
                         disableOnInteraction: false,
                     }}
                     loop={true}
@@ -107,6 +104,12 @@ const PartnerHeader = () => {
 
 const InfoCards = () => {
     const { t } = useTranslation();
+    const navigate = useNavigate();
+
+    const handleNavigateToFAQ = () => {
+        navigate('/partners', { state: { scrollToFAQ: true } }); 
+    };
+
     return (
         <div className="headerPat-cards-wrapper">
             <div className="headerPat-info-cards" id="headerPat-info-cards">
@@ -117,7 +120,7 @@ const InfoCards = () => {
                 </div>
 
                 <div className="headerPat-cta-wrapper">
-                    <button className="headerPat-cta-button">
+                    <button className="headerPat-cta-button" onClick={handleNavigateToFAQ}>
                         {t('partnerHeader.ctaButton')}
                     </button>
                 </div>
