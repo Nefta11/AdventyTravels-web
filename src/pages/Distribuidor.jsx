@@ -5,6 +5,7 @@ import WhatsAppIcon from "../components/generals/whatsAppComponent/WhatsAppIcon"
 import AdventyDistribuidorasHeader from '../components/distribuidora/header/AdventyDistribuidorasHeader';
 import AdventyWomenCampaign from '../components/distribuidora/womencam/AdventyWomenCampaign';
 import AdventyDistributorSection from '../components/distribuidora/adventyDis/AdventyDistributorSection';
+import AdventyRevolutionBanner from '../components/distribuidora/banner/AdventyRevolutionBanner';
 
 const Distribuidor = () => {
     return (
@@ -17,6 +18,7 @@ const Distribuidor = () => {
             <AdventyDistribuidorasHeader />
             <AdventyWomenCampaign />
             <AdventyDistributorSection />
+            <AdventyRevolutionBanner />
             <FooterComponent />
             <WhatsAppIcon />
         </motion.div>
