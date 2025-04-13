@@ -6,6 +6,7 @@ import AdventyDistribuidorasHeader from '../components/distribuidora/header/Adve
 import AdventyWomenCampaign from '../components/distribuidora/womencam/AdventyWomenCampaign';
 import AdventyDistributorSection from '../components/distribuidora/adventyDis/AdventyDistributorSection';
 import AdventyRevolutionBanner from '../components/distribuidora/banner/AdventyRevolutionBanner';
+import AdventyTestimonialsSection from '../components/distribuidora/proxima/AdventyTestimonialsSection';
 
 const Distribuidor = () => {
     return (
@@ -19,6 +20,7 @@ const Distribuidor = () => {
             <AdventyWomenCampaign />
             <AdventyDistributorSection />
             <AdventyRevolutionBanner />
+            <AdventyTestimonialsSection />
             <FooterComponent />
             <WhatsAppIcon />
         </motion.div>
