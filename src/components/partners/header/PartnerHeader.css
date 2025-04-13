@@ -11,20 +11,8 @@
     --headerPat-transition-medium: all 0.5s ease;
 }
 
-/* Animaciones optimizadas: mantener solo las esenciales */
-@keyframes headerPat-fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Estilos para el header y carrusel */
+/* ======= CORRECCIÓN DE LOS PROBLEMAS DE APARIENCIA ======= */
+/* Antes de que las imágenes estén cargadas, evitamos que el header se muestre */
 .headerPat-partner-header {
     height: 50vh;
     width: 100%;
@@ -33,14 +21,27 @@
     position: relative;
     overflow: hidden;
     box-shadow: var(--headerPat-shadow-medium);
+
+    /* Inicio invisible */
     opacity: 0;
-    transform: translateY(20px);
-    transition: var(--headerPat-transition-medium);
+
+    /* Desactivamos las transiciones y transformaciones iniciales */
+    transform: none !important;
+    transition: opacity 0.4s ease-out;
+
+    /* Evitar recalculaciones de layout */
+    contain: layout size;
 }
 
+/* Cuando el contenido esté listo */
 .headerPat-partner-header.headerPat-visible {
     opacity: 1;
-    transform: translateY(0);
+}
+
+/* Clase aplicada cuando las imágenes están listas */
+.headerPat-partner-header.headerPat-images-loaded {
+    /* Esta clase indica que ya podemos aplicar transiciones */
+    will-change: opacity;
 }
 
 /* Overlay mejorado para que no se corte */
@@ -55,7 +56,8 @@
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.65));
     z-index: 2;
     pointer-events: none;
-    /* Permite clicks en elementos debajo */
+    /* Comenzar con transform estable para evitar desplazamientos */
+    transform: none !important;
 }
 
 .headerPat-carousel-swiper {
@@ -72,16 +74,30 @@
     /* Eliminado el transform para mejorar rendimiento */
 }
 
+/* Cambio a flexbox para el centrado */
 .headerPat-partner-content {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     z-index: 10;
+
+    /* Usar flexbox en lugar de transformaciones para centrar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     width: 100%;
     text-align: center;
     padding: 0 20px;
-    animation: headerPat-fadeInUp 0.8s ease-out;
+
+    /* Eliminar la animación inicial que causa problemas */
+    animation: none !important;
+
+    /* Aplicar estilos en una sola operación para evitar repaints */
+    transform: none !important;
 }
 
 .headerPat-partner-logo {
@@ -105,6 +121,24 @@
     color: var(--headerPat-white);
     letter-spacing: 1px;
     text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Definimos la animación pero no la aplicamos */
+@keyframes headerPat-fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Solo aplicamos la animación cuando el contenido está listo */
+.headerPat-images-loaded .headerPat-partner-content {
+    animation: headerPat-fadeInUp 0.8s ease-out forwards;
 }
 
 .headerPat-primary-text {

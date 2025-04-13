@@ -1,11 +1,11 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { FaHandPointRight } from 'react-icons/fa';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules'; 
+import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import './PartnerHeader.css';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 
 const CAROUSEL_IMAGES = [
     'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
@@ -22,6 +22,52 @@ const PartnerHeader = () => {
     const { t } = useTranslation();
     const [currentTextIndex, setCurrentTextIndex] = useState(0);
     const [isVisible, setIsVisible] = useState(false);
+    const [imagesLoaded, setImagesLoaded] = useState(false);
+    const headerRef = useRef(null);
+
+    // Precargar imágenes para evitar saltos visuales
+    useEffect(() => {
+        const preloadImages = () => {
+            let loadedCount = 0;
+            const totalImages = CAROUSEL_IMAGES.length + 1; // +1 para el logo
+
+            const checkAllLoaded = () => {
+                loadedCount++;
+                if (loadedCount === totalImages) {
+                    setImagesLoaded(true);
+                    // Aplicar visibilidad después de una pequeña espera para asegurar que todo esté renderizado
+                    setTimeout(() => setIsVisible(true), 100);
+                }
+            };
+
+            // Precargar imágenes del carrusel
+            CAROUSEL_IMAGES.forEach(src => {
+                const img = new Image();
+                img.src = src;
+                img.onload = checkAllLoaded;
+                img.onerror = checkAllLoaded; // Contar incluso si hay error para no bloquear la UI
+            });
+
+            // Precargar logo
+            const logoImg = new Image();
+            logoImg.src = LOGO_URL;
+            logoImg.onload = checkAllLoaded;
+            logoImg.onerror = checkAllLoaded;
+        };
+
+        preloadImages();
+
+        // Fallback por si algo falla con la carga de imágenes
+        const timer = setTimeout(() => {
+            if (!imagesLoaded) {
+                setImagesLoaded(true);
+                setIsVisible(true);
+            }
+        }, 3000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
     const handleScroll = useCallback(() => {
         const infoCards = document.getElementById('headerPat-info-cards');
         if (infoCards) {
@@ -33,11 +79,12 @@ const PartnerHeader = () => {
     }, []);
 
     useEffect(() => {
-        setIsVisible(true);
+        // Iniciar la rotación de textos solo cuando las imágenes estén cargadas
+        if (!imagesLoaded) return;
 
         const textRotationInterval = setInterval(() => {
             setCurrentTextIndex(prevIndex => (prevIndex + 1) % t('partnerHeader.carouselTexts', { returnObjects: true }).length);
-        }, 4000); 
+        }, 4000);
 
         window.addEventListener('scroll', handleScroll);
         handleScroll();
@@ -46,13 +93,16 @@ const PartnerHeader = () => {
             clearInterval(textRotationInterval);
             window.removeEventListener('scroll', handleScroll);
         };
-    }, [handleScroll, t]);
+    }, [handleScroll, t, imagesLoaded]);
 
     const { primary, secondary } = t('partnerHeader.carouselTexts', { returnObjects: true })[currentTextIndex];
 
     return (
         <>
-            <div className={`headerPat-partner-header ${isVisible ? 'headerPat-visible' : ''}`}>
+            <div
+                ref={headerRef}
+                className={`headerPat-partner-header ${isVisible ? 'headerPat-visible' : ''} ${imagesLoaded ? 'headerPat-images-loaded' : ''}`}
+            >
                 <div className="headerPat-header-overlay"></div>
 
                 <Swiper
@@ -107,7 +157,7 @@ const InfoCards = () => {
     const navigate = useNavigate();
 
     const handleNavigateToFAQ = () => {
-        navigate('/partners', { state: { scrollToFAQ: true } }); 
+        navigate('/partners', { state: { scrollToFAQ: true } });
     };
 
     return (
