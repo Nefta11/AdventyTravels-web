@@ -5,7 +5,7 @@ import AdventyDistribuidoraModal from './AdventyDistribuidoraModal';
 
 // Array de imágenes de mujeres profesionales (vistas más amplias)
 const CAROUSEL_IMAGES = [
-    'https://images.unsplash.com/photo-1573497019236-17f8177b81e8?auto=format&fit=crop&q=80&w=2070', // Ancho aumentado para mejor vista
+    'https://images.unsplash.com/photo-1573497019236-17f8177b81e8?auto=format&fit=crop&q=80&w=2070',
     'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=2070',
     'https://images.unsplash.com/photo-1599231091889-c1fd76b87226?auto=format&fit=crop&q=80&w=2070',
     'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=2070',
@@ -18,8 +18,8 @@ const LOGO_URL = "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/r
 
 const AdventyDistribuidorasHeader = () => {
     const [activeIndex, setActiveIndex] = useState(0);
-    const navigate = useNavigate();
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const navigate = useNavigate();
 
     // Handle carousel rotation
     useEffect(() => {
@@ -32,7 +32,6 @@ const AdventyDistribuidorasHeader = () => {
 
     // Navigation handlers
     const handleBeDistributor = () => {
-        // Instead of navigating, we now open the modal
         setIsModalOpen(true);
     };
 
@@ -60,7 +59,11 @@ const AdventyDistribuidorasHeader = () => {
                 </div>
 
                 <div className="adventy-content">
-                    <img src={LOGO_URL} alt="Adventy Logo" className="adventy-logo" />
+                    <img
+                        src={LOGO_URL}
+                        alt="Adventy Logo"
+                        className="adventy-logo"
+                    />
                     <h1 className="adventy-title">Convierte tu pasión por viajar en tu nuevo ingreso</h1>
                     <p className="adventy-subtitle">
                         Sé parte de ADVENTY DISTRIBUIDORAS
