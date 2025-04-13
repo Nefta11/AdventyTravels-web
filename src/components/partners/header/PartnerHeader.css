@@ -1,0 +1,394 @@
+/* CSS Variables simplificadas */
+:root {
+    --headerPat-primary-color: #E49F30;
+    --headerPat-secondary-color: #24455D;
+    --headerPat-white: #ffffff;
+    --headerPat-gray-light: #f8f8f8;
+    --headerPat-gray-dark: #333333;
+    --headerPat-shadow-soft: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --headerPat-shadow-medium: 0 6px 12px rgba(0, 0, 0, 0.15);
+    --headerPat-transition-quick: all 0.3s ease;
+    --headerPat-transition-medium: all 0.5s ease;
+}
+
+/* ======= CORRECCIÓN DE LOS PROBLEMAS DE APARIENCIA ======= */
+/* Antes de que las imágenes estén cargadas, evitamos que el header se muestre */
+.headerPat-partner-header {
+    height: 50vh;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--headerPat-shadow-medium);
+
+    /* Inicio invisible */
+    opacity: 0;
+
+    /* Desactivamos las transiciones y transformaciones iniciales */
+    transform: none !important;
+    transition: opacity 0.4s ease-out;
+
+    /* Evitar recalculaciones de layout */
+    contain: layout size;
+}
+
+/* Cuando el contenido esté listo */
+.headerPat-partner-header.headerPat-visible {
+    opacity: 1;
+}
+
+/* Clase aplicada cuando las imágenes están listas */
+.headerPat-partner-header.headerPat-images-loaded {
+    /* Esta clase indica que ya podemos aplicar transiciones */
+    will-change: opacity;
+}
+
+/* Overlay mejorado para que no se corte */
+.headerPat-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.65));
+    z-index: 2;
+    pointer-events: none;
+    /* Comenzar con transform estable para evitar desplazamientos */
+    transform: none !important;
+}
+
+.headerPat-carousel-swiper {
+    height: 100%;
+    width: 100%;
+}
+
+.headerPat-carousel-slide {
+    height: 50vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    /* Eliminado el transform para mejorar rendimiento */
+}
+
+/* Cambio a flexbox para el centrado */
+.headerPat-partner-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+
+    /* Usar flexbox en lugar de transformaciones para centrar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    text-align: center;
+    padding: 0 20px;
+
+    /* Eliminar la animación inicial que causa problemas */
+    animation: none !important;
+
+    /* Aplicar estilos en una sola operación para evitar repaints */
+    transform: none !important;
+}
+
+.headerPat-partner-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.headerPat-logo-image {
+    max-width: 440px;
+    margin-bottom: 25px;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
+}
+
+.headerPat-animated-text {
+    font-size: 42px;
+    font-weight: 800;
+    margin: 0;
+    color: var(--headerPat-white);
+    letter-spacing: 1px;
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Definimos la animación pero no la aplicamos */
+@keyframes headerPat-fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Solo aplicamos la animación cuando el contenido está listo */
+.headerPat-images-loaded .headerPat-partner-content {
+    animation: headerPat-fadeInUp 0.8s ease-out forwards;
+}
+
+.headerPat-primary-text {
+    display: inline-block;
+    color: var(--headerPat-white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 0 5px;
+    position: relative;
+}
+
+/* Simplificado el efecto hover */
+.headerPat-primary-text::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--headerPat-white);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: var(--headerPat-transition-quick);
+}
+
+.headerPat-animated-text:hover .headerPat-primary-text::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.headerPat-secondary-text {
+    display: inline-block;
+    background: var(--headerPat-primary-color);
+    color: var(--headerPat-white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 0 10px;
+    border-radius: 4px;
+    margin-left: 5px;
+    position: relative;
+}
+
+.headerPat-partner-container {
+    max-width: 1000px;
+    margin: -50px auto 0;
+    padding: 0 20px;
+    position: relative;
+    z-index: 20;
+}
+
+.headerPat-cards-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.headerPat-info-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 50px;
+    max-width: 500px;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: var(--headerPat-transition-medium);
+}
+
+.headerPat-info-cards.headerPat-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.headerPat-info-card {
+    background: var(--headerPat-white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--headerPat-shadow-soft);
+    transition: var(--headerPat-transition-quick);
+    width: 100%;
+}
+
+.headerPat-info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.headerPat-info-card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.headerPat-info-card p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+    color: black;
+}
+
+.headerPat-cta-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.headerPat-cta-button {
+    background: var(--headerPat-primary-color);
+    color: var(--headerPat-white);
+    border: none;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--headerPat-transition-quick);
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: var(--headerPat-shadow-soft);
+    max-width: 250px;
+}
+
+.headerPat-cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    background: var(--headerPat-secondary-color);
+}
+
+.headerPat-what-is-section {
+    margin: 30px 0 30px;
+    margin-top: -10px;
+    padding: 30px;
+    border: 2px solid var(--headerPat-secondary-color);
+    border-radius: 15px;
+    background: var(--headerPat-white);
+    position: relative;
+    transition: var(--headerPat-transition-quick);
+}
+
+.headerPat-what-is-section:hover {
+    box-shadow: var(--headerPat-shadow-medium);
+    border-color: var(--headerPat-primary-color);
+}
+
+.headerPat-header-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.headerPat-pointer-icon {
+    color: var(--headerPat-primary-color);
+    font-size: 24px;
+}
+
+.headerPat-what-is-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 15px;
+    color: var(--headerPat-gray-dark);
+    position: relative;
+    padding-left: 15px;
+}
+
+/* Media queries optimizadas */
+@media (max-width: 1024px) {
+    .headerPat-animated-text {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .headerPat-partner-header {
+        height: 45vh;
+        margin-top: 70px;
+    }
+
+    .headerPat-carousel-slide {
+        height: 45vh;
+    }
+
+    .headerPat-logo-image {
+        max-width: 320px;
+    }
+
+    .headerPat-animated-text {
+        font-size: 28px;
+    }
+
+    .headerPat-info-cards {
+        max-width: 400px;
+    }
+
+    .headerPat-info-card p {
+        font-size: 14px;
+    }
+
+    .headerPat-cta-button {
+        max-width: 220px;
+        font-size: 13px;
+    }
+
+    .headerPat-what-is-section {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .headerPat-partner-header {
+        height: 40vh;
+    }
+
+    .headerPat-carousel-slide {
+        height: 40vh;
+    }
+
+    .headerPat-logo-image {
+        max-width: 220px;
+    }
+
+    .headerPat-animated-text {
+        font-size: 24px;
+    }
+
+    .headerPat-info-cards {
+        max-width: 300px;
+        gap: 15px;
+    }
+
+    .headerPat-info-card-content {
+        padding: 15px;
+    }
+
+    .headerPat-info-card p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .headerPat-cta-button {
+        max-width: 200px;
+        font-size: 12px;
+        padding: 10px 20px;
+    }
+
+    .headerPat-what-is-section {
+        padding: 15px;
+        margin: 20px 0;
+        margin-top: -10px;
+    }
+
+    .headerPat-what-is-content p {
+        font-size: 12px;
+        padding-left: 5px;
+    }
+}

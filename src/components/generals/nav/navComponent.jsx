@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { FaBars, FaTimes, FaHome, FaSuitcase, FaInfoCircle, FaBlog, FaImages, FaEnvelope } from 'react-icons/fa';
+import { FaBars, FaTimes, FaHome, FaSuitcase, FaInfoCircle, FaBlog, FaImages, FaEnvelope, FaUsers,  FaHandshake, FaFemale } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import colors from '../../../utils/colors';
@@ -26,6 +26,19 @@ const NavComponent = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
+    const newsSubmenuItems = [
+        {
+            label: 'Distribuidoras Adventy',
+            href: '/distribuidor',
+            icon: FaFemale 
+        },
+        {
+            label: 'Adventy Partners',
+            href: '/partners',
+            icon: FaHandshake
+        }
+    ];
+
     return (
         <nav className="nav-container fixed-nav" style={{ backgroundColor: colors.color1 }}>
             <div className="nav-content">
@@ -49,7 +62,8 @@ const NavComponent = () => {
                     <NavItem to="/nosotros" icon={FaInfoCircle} label={t('about')} menuOpen={menuOpen} />
                     <NavItem to="/blog" icon={FaBlog} label={t('blog')} menuOpen={menuOpen} />
                     <NavItem to="/galeria" icon={FaImages} label={t('gallery')} menuOpen={menuOpen} />
-                    <NavItem  icon={FaEnvelope} label={t('contact')} menuOpen={menuOpen} submenu />
+                    <NavItem icon={FaEnvelope} label={t('contact')} menuOpen={menuOpen} submenu />
+                    <NavItem icon={FaUsers} label="News" menuOpen={menuOpen} submenu submenuItems={newsSubmenuItems} />
                     {!isMobile && <LanguageSelector className="language-selector-desktop" />}
                 </ul>
             </div>

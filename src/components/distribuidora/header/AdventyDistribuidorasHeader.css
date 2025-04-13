@@ -1,0 +1,277 @@
+/* Variables de color */
+:root {
+    --adventy-pink: #FF5FA2;
+    --adventy-purple: #8A4FFF;
+    --adventy-deep-purple: #5A2E9D;
+    --adventy-white: #ffffff;
+    --adventy-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    --adventy-transition: all 0.3s ease;
+}
+
+/* Estilos del contenedor principal - CORREGIDO para evitar desplazamientos iniciales */
+.adventy-header-container {
+    height: 70vh;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: -10px;
+    position: relative;
+    overflow: hidden;
+    /* Establecer el transform directamente sin animación inicial */
+    transform: none !important;
+    /* Prevenir cambios de layout entre renders */
+    contain: layout;
+}
+
+/* Curva inferior */
+.adventy-curved-bottom {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    border-radius: 100% 100% 0 0;
+    z-index: 10;
+}
+
+.adventy-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(138, 79, 255, 0.85), rgba(255, 95, 162, 0.85));
+    z-index: 2;
+}
+
+.adventy-carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.adventy-carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background-size: cover;
+    background-position: center 40%;
+}
+
+.adventy-carousel-slide.active {
+    opacity: 1;
+}
+
+/* IMPORTANTE: Fijamos exactamente las coordenadas del contenido para evitar desplazamientos */
+.adventy-content {
+    position: absolute;
+    /* Usar valores específicos en lugar de porcentajes para evitar cálculos que podrían causar desplazamientos */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Centrar utilizando flexbox en lugar de transform para más estabilidad */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    text-align: center;
+    /* Eliminamos la animación inicial para evitar el desplazamiento */
+    transform: none !important;
+    animation: none !important;
+    padding: 15px;
+}
+
+.adventy-logo {
+    max-width: 440px;
+    width: 440px;
+    height: auto;
+    margin-top: -80px;
+    margin-bottom: 25px;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
+}
+
+.adventy-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--adventy-white);
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    line-height: 1.2;
+}
+
+.adventy-subtitle {
+    font-size: 20px;
+    color: var(--adventy-white);
+    margin-bottom: 15px;
+    line-height: 1.3;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
+}
+
+.adventy-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.adventy-button {
+    padding: 14px 24px;
+    border-radius: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--adventy-transition);
+    text-decoration: none;
+    font-size: 16px;
+    border: 2px solid transparent;
+    text-align: center;
+    min-width: 230px;
+}
+
+.adventy-button-primary {
+    background-color: var(--adventy-white);
+    color: var(--adventy-deep-purple);
+    border-color: var(--adventy-white);
+}
+
+.adventy-button-primary:hover {
+    background-color: transparent;
+    color: var(--adventy-white);
+}
+
+.adventy-button-secondary {
+    background-color: transparent;
+    color: var(--adventy-white);
+    border-color: var(--adventy-white);
+}
+
+.adventy-button-secondary:hover {
+    background-color: var(--adventy-white);
+    color: var(--adventy-deep-purple);
+}
+
+/* Solo 3 media queries como solicitado */
+@media (max-width: 1024px) {
+    .adventy-header-container {
+        height: 60vh;
+    }
+
+    .adventy-curved-bottom {
+        height: 60px;
+    }
+
+    .adventy-carousel-slide {
+        background-position: center 35%;
+    }
+
+    .adventy-logo {
+        width: 280px;
+        margin-top: -60px;
+    }
+
+    .adventy-title {
+        font-size: 28px;
+    }
+
+    .adventy-subtitle {
+        font-size: 18px;
+    }
+
+    .adventy-button {
+        min-width: 200px;
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .adventy-header-container {
+        height: 55vh;
+        margin-top: 50px;
+    }
+
+    .adventy-curved-bottom {
+        height: 40px;
+    }
+
+    .adventy-content {
+        padding: 10px;
+    }
+
+    .adventy-logo {
+        width: 180px;
+        margin-top: -50px;
+        margin-bottom: 15px;
+    }
+
+    .adventy-title {
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+
+    .adventy-subtitle {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .adventy-buttons {
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .adventy-button {
+        min-width: 180px;
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .adventy-header-container {
+        height: 55vh;
+        margin-top: 50px;
+    }
+
+    .adventy-curved-bottom {
+        height: 25px;
+    }
+
+    .adventy-logo {
+        width: 220px;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    .adventy-title {
+        font-size: 16px;
+        margin-bottom: 5px;
+        line-height: 1.1;
+    }
+
+    .adventy-subtitle {
+        font-size: 12px;
+        margin-bottom: 8px;
+        line-height: 1.2;
+    }
+
+    .adventy-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-top: 18px;
+    }
+
+    .adventy-button {
+        width: 100%;
+        max-width: 200px;
+        padding: 10px 16px;
+        font-size: 13px;
+        min-width: 170px;
+    }
+}

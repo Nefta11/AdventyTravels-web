@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import NavComponent from '../components/generals/nav/navComponent';
 import FooterComponent from "../components/generals/footer/FooterComponent";
-//import About from "../components/aboutUs/headerWelcome/About";
 import WhoWeAre from '../components/aboutUs/WhoWeAre/WhoWeAre';
 import OurServices from '../components/aboutUs/OurServices/OurServices';
 import LocationMap from '../components/aboutUs/locationMap/LocationMap';
@@ -20,7 +19,6 @@ export default function AboutUs() {
             exit={{ opacity: 0 }}
         >
             <NavComponent />
-            {/*<About />*/}
             <WhoWeAre />
             <MoreAboutUs />
             {/*<TeamSection />*/}
