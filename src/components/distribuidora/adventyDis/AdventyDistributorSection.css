@@ -4,8 +4,9 @@
     --neft-secondary: #FF5FA2;
     --neft-gradient: linear-gradient(135deg, #8A4FFF, #FF5FA2);
     --neft-light-purple: #f1eaff;
+    --campaign-light-purple: #E4DAFF;
     --neft-light-pink: #ffe6f0;
-    --neft-white: #ffffff;
+    --campaign-off-white: #F9F5FF;
     --neft-dark: #333333;
     --neft-gray: #777777;
     --neft-shadow: 0 10px 30px rgba(138, 79, 255, 0.15);
@@ -17,6 +18,7 @@
 .neft-distributor-section {
     padding: 80px 0;
     opacity: 0;
+    background-color: var(--campaign-off-white);
     margin-top: -80px;
     transform: translateY(30px);
     transition: opacity 0.8s ease, transform 0.8s ease;
