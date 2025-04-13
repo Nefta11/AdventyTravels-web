@@ -6,12 +6,10 @@ const AdventyDistributorSection = () => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
-        // Animation on component mount
         setTimeout(() => {
             setIsVisible(true);
         }, 100);
 
-        // Intersection Observer for scroll animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
