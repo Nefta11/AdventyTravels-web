@@ -4,15 +4,16 @@ import PropTypes from 'prop-types';
 import { FaWhatsapp, FaFacebookMessenger, FaPhone, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import "./NavItem.css";
 
-const NavItem = ({ to, icon: Icon, label, menuOpen, submenu, submenuItems }) => {
+const NavItem = ({ to, icon: Icon, label, menuOpen, submenu, submenuItems, isActive }) => {
     const [submenuOpen, setSubmenuOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
 
     const handleSubmenuToggle = (e) => {
         if (submenu) {
             e.preventDefault(); // Prevenir navegación cuando hay submenú
+            e.stopPropagation(); // Evita que el evento se propague
+            setSubmenuOpen(!submenuOpen);
         }
-        setSubmenuOpen(!submenuOpen);
     };
 
     useEffect(() => {
@@ -26,7 +27,7 @@ const NavItem = ({ to, icon: Icon, label, menuOpen, submenu, submenuItems }) => 
         setIsMobile(/android|iPad|iPhone|iPod/.test(userAgent.toLowerCase()));
 
         const handleResize = () => {
-            // Add any resize logic here if needed
+            setIsMobile(window.innerWidth <= 800);
         };
 
         window.addEventListener('resize', handleResize);
@@ -59,13 +60,36 @@ const NavItem = ({ to, icon: Icon, label, menuOpen, submenu, submenuItems }) => 
 
     return (
         <li className="nav-item">
-            {menuOpen && <Icon style={{ marginLeft: '10px', marginRight: '8px' }} />}
-            <Link to={to || "#"} onClick={submenu ? handleSubmenuToggle : null}>
-                {label}
-                {submenu && (submenuOpen ?
-                    <FaChevronUp style={{ marginLeft: '5px', fontSize: '0.7em', position: 'relative', top: '2px', transition: 'transform 0.3s ease' }} /> :
-                    <FaChevronDown style={{ marginLeft: '5px', fontSize: '0.7em', position: 'relative', top: '2px', transition: 'transform 0.3s ease' }} />)}
-            </Link>
+            {Icon && <Icon className="nav-icon" />}
+
+            {to ? (
+                <Link
+                    to={to}
+                    className={isActive ? 'active' : ''}
+                    onClick={submenu ? handleSubmenuToggle : null}
+                >
+                    {label}
+                    {submenu && (
+                        submenuOpen ?
+                            <FaChevronUp className="chevron-icon" /> :
+                            <FaChevronDown className="chevron-icon" />
+                    )}
+                </Link>
+            ) : (
+                <a
+                    href="#"
+                    className={isActive ? 'active' : ''}
+                    onClick={handleSubmenuToggle}
+                >
+                    {label}
+                    {submenu && (
+                        submenuOpen ?
+                            <FaChevronUp className="chevron-icon" /> :
+                            <FaChevronDown className="chevron-icon" />
+                    )}
+                </a>
+            )}
+
             {submenu && (
                 <ul className={`dropdown-menu ${submenuOpen ? 'open' : ''}`}>
                     {submenuItems ? (
@@ -90,7 +114,7 @@ const NavItem = ({ to, icon: Icon, label, menuOpen, submenu, submenuItems }) => 
 
 NavItem.propTypes = {
     to: PropTypes.string,
-    icon: PropTypes.elementType.isRequired,
+    icon: PropTypes.elementType,
     label: PropTypes.string.isRequired,
     menuOpen: PropTypes.bool.isRequired,
     submenu: PropTypes.bool,
@@ -102,7 +126,8 @@ NavItem.propTypes = {
             target: PropTypes.string,
             rel: PropTypes.string
         })
-    )
+    ),
+    isActive: PropTypes.bool
 };
 
 export default NavItem;

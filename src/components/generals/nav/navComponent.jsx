@@ -1,36 +1,75 @@
 import { useState, useEffect } from 'react';
-import { FaBars, FaTimes, FaHome, FaSuitcase, FaInfoCircle, FaBlog, FaImages, FaEnvelope, FaUsers,  FaHandshake, FaFemale } from 'react-icons/fa';
+import { FaBars, FaTimes, FaHome, FaSuitcase, FaInfoCircle, FaBlog, FaImages, FaEnvelope, FaUsers, FaHandshake, FaFemale, FaSun, FaMoon } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
-import colors from '../../../utils/colors';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../../../assets/images/LOGOTIPO_OFICIAL.webp';
 import LanguageSelector from '../lenguaje/LanguageSelector';
 import NavItem from './NavItem';
-import './navComponent.css';
+import './NavComponent.css';
 
 const NavComponent = () => {
     const { t } = useTranslation();
+    const location = useLocation();
     const [menuOpen, setMenuOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 800);
+    const [isScrolled, setIsScrolled] = useState(false);
+    const [isDark, setIsDark] = useState(() => {
+        const savedTheme = localStorage.getItem('theme');
+        return savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    });
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
 
+    const toggleTheme = () => {
+        setIsDark(!isDark);
+    };
+
+    useEffect(() => {
+        if (isDark) {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+        }
+    }, [isDark]);
+
+    useEffect(() => {
+        setMenuOpen(false);
+    }, [location]);
+
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 800);
+            if (window.innerWidth > 800) {
+                setMenuOpen(false);
+            }
+        };
+
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
         };
 
         window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, []);
 
     const newsSubmenuItems = [
         {
             label: 'Distribuidoras Adventy',
             href: '/distribuidor',
-            icon: FaFemale 
+            icon: FaFemale
         },
         {
             label: 'Adventy Partners',
@@ -40,32 +79,106 @@ const NavComponent = () => {
     ];
 
     return (
-        <nav className="nav-container fixed-nav" style={{ backgroundColor: colors.color1 }}>
+        <nav className={`nav-container fixed-nav ${isScrolled ? 'scrolled' : ''} ${isDark ? 'dark' : ''}`}>
             <div className="nav-content">
-                <div className="nav-header">
-                    {/* Ícono del menú al inicio */}
-                    <div className="nav-menu-icon" onClick={toggleMenu}>
+                {/* Mobile hamburger button */}
+                {isMobile && (
+                    <div className="mobile-menu-btn" onClick={toggleMenu}>
                         {menuOpen ? <FaTimes /> : <FaBars />}
                     </div>
-                    {/* Logo de la aplicación */}
-                    <Link to="/">
-                        <img src={logo} alt="logo app" className="nav-logo" />
-                    </Link>
-                    {/* Selector de idioma fuera de la lista en pantallas pequeñas */}
-                    {isMobile && <LanguageSelector className="language-selector-mobile" />}
+                )}
+
+                {/* Logo */}
+                <Link to="/" className="logo-container">
+                    <img src={logo} alt="Adventy Travels" className="nav-logo" />
+                </Link>
+
+                {/* Main navigation */}
+                <div className="nav-menu-container">
+                    <ul className={`nav-list ${menuOpen ? 'open' : ''}`}>
+                        <NavItem
+                            to="/"
+                            icon={isMobile ? FaHome : null}
+                            label={t('home')}
+                            menuOpen={menuOpen}
+                            isActive={location.pathname === '/'}
+                        />
+                        <NavItem
+                            to="/experiencias"
+                            icon={isMobile ? FaSuitcase : null}
+                            label={t('experiences')}
+                            menuOpen={menuOpen}
+                            isActive={location.pathname === '/experiencias'}
+                        />
+                        <NavItem
+                            to="/nosotros"
+                            icon={isMobile ? FaInfoCircle : null}
+                            label={t('about')}
+                            menuOpen={menuOpen}
+                            isActive={location.pathname === '/nosotros'}
+                        />
+                        <NavItem
+                            to="/blog"
+                            icon={isMobile ? FaBlog : null}
+                            label={t('blog')}
+                            menuOpen={menuOpen}
+                            isActive={location.pathname === '/blog'}
+                        />
+                        <NavItem
+                            to="/galeria"
+                            icon={isMobile ? FaImages : null}
+                            label={t('gallery')}
+                            menuOpen={menuOpen}
+                            isActive={location.pathname === '/galeria'}
+                        />
+                        <NavItem
+                            icon={isMobile ? FaEnvelope : null}
+                            label={t('contact')}
+                            menuOpen={menuOpen}
+                            submenu
+                        />
+                        <NavItem
+                            icon={isMobile ? FaUsers : null}
+                            label="News"
+                            menuOpen={menuOpen}
+                            submenu
+                            submenuItems={newsSubmenuItems}
+                        />
+
+                        {/* Theme toggle button (desktop) */}
+                        {!isMobile && (
+                            <li className="nav-item theme-toggle-item">
+                                <button onClick={toggleTheme} className="theme-toggle-btn">
+                                    {isDark ? <FaSun className="theme-icon" /> : <FaMoon className="theme-icon" />}
+                                </button>
+                            </li>
+                        )}
+                    </ul>
                 </div>
 
-                {/* Lista de navegación */}
-                <ul className={`nav-list ${menuOpen ? 'open' : ''}`}>
-                    <NavItem to="/" icon={FaHome} label={t('home')} menuOpen={menuOpen} />
-                    <NavItem to="/experiencias" icon={FaSuitcase} label={t('experiences')} menuOpen={menuOpen} />
-                    <NavItem to="/nosotros" icon={FaInfoCircle} label={t('about')} menuOpen={menuOpen} />
-                    <NavItem to="/blog" icon={FaBlog} label={t('blog')} menuOpen={menuOpen} />
-                    <NavItem to="/galeria" icon={FaImages} label={t('gallery')} menuOpen={menuOpen} />
-                    <NavItem icon={FaEnvelope} label={t('contact')} menuOpen={menuOpen} submenu />
-                    <NavItem icon={FaUsers} label="News" menuOpen={menuOpen} submenu submenuItems={newsSubmenuItems} />
-                    {!isMobile && <LanguageSelector className="language-selector-desktop" />}
-                </ul>
+                {/* Controls container (always visible) */}
+                <div className="controls-container">
+                    {/* Desktop language selector */}
+                    {!isMobile && (
+                        <div className="language-selector-desktop-container">
+                            <LanguageSelector />
+                        </div>
+                    )}
+
+                    {/* Mobile theme toggle */}
+                    {isMobile && (
+                        <button onClick={toggleTheme} className="theme-toggle-mobile-btn">
+                            {isDark ? <FaSun size={20} /> : <FaMoon size={20} />}
+                        </button>
+                    )}
+
+                    {/* Mobile language selector */}
+                    {isMobile && (
+                        <div className="language-selector-mobile-container">
+                            <LanguageSelector />
+                        </div>
+                    )}
+                </div>
             </div>
         </nav>
     );

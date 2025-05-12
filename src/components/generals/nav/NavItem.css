@@ -1,3 +1,5 @@
+/* Aquí está el código actualizado de NavItem.css */
+
 :root {
     --color1: #F4F4F4;
     --color2: #7DC1BD;
@@ -5,22 +7,37 @@
     --color4: #24455D;
 }
 
+.dark {
+    --color1: #1e293b;
+    --color2: #38bdf8;
+    --color3: #f59e0b;
+    --color4: #f1f5f9;
+}
+
 .nav-item {
     position: relative;
     margin: 0 16px;
-    margin-top: -60px;
+    display: flex;
+    align-items: center;
 }
 
 .nav-item a {
     text-decoration: none;
     color: var(--color4);
-    font-size: 25px;
+    font-size: 18px;
     transition: all 0.3s ease;
     position: relative;
-    padding-bottom: 5px;
+    padding: 10px 5px;
+    display: flex;
+    align-items: center;
 }
 
-.nav-item a:hover {
+.dark .nav-item a {
+    color: var(--color4);
+}
+
+.nav-item a:hover,
+.nav-item a.active {
     color: var(--color3);
 }
 
@@ -35,13 +52,22 @@
     transition: width 0.3s ease;
 }
 
-.nav-item a:hover::after {
+.nav-item a:hover::after,
+.nav-item a.active::after {
     width: 100%;
 }
 
 .nav-icon {
-    margin-left: 10px;
     margin-right: 8px;
+    font-size: 18px;
+}
+
+.chevron-icon {
+    margin-left: 5px;
+    font-size: 12px;
+    position: relative;
+    top: 1px;
+    transition: transform 0.3s ease;
 }
 
 .dropdown-menu {
@@ -55,11 +81,15 @@
     padding: 10px;
     border-radius: 8px;
     list-style: none;
-    /* Quitar viñetas */
-    min-width: 160px;
-    margin-top: 10px;
+    min-width: 180px;
+    margin-top: 5px;
     border-left: 3px solid var(--color3);
     animation: fadeIn 0.3s ease;
+}
+
+.dark .dropdown-menu {
+    background-color: var(--color1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes fadeIn {
@@ -74,19 +104,12 @@
     }
 }
 
-.nav-item:hover .dropdown-menu {
-    display: none;
-    /* Eliminar apertura al pasar el cursor */
-}
-
-.nav-item .dropdown-menu.open {
+.dropdown-menu.open {
     display: block;
-    /* Mantener apertura al hacer clic */
 }
 
 .dropdown-menu li {
-    padding: 4px 8px;
-    font-size: 14px;
+    padding: 4px 0;
 }
 
 .dropdown-menu li a {
@@ -94,10 +117,15 @@
     color: var(--color4);
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 8px 10px;
     border-radius: 4px;
     margin: 2px 0;
     transition: all 0.2s ease;
+}
+
+.dark .dropdown-menu li a {
+    color: var(--color4);
 }
 
 .dropdown-menu li a:hover {
@@ -106,92 +134,103 @@
     transform: translateX(3px);
 }
 
-.submenu-title {
-    font-weight: bold;
-    padding: 4px 8px;
-    font-size: 14px;
+.dark .dropdown-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .submenu-icon {
     margin-left: 10px;
-    font-size: 25px;
+    font-size: 16px;
 }
 
-/* Estilos responsivos */
+/* Mobile styles */
 @media (max-width: 800px) {
-    .dropdown-menu {
-        position: static;
-        box-shadow: none;
-        flex-direction: row;
-        display: none;
-        /* Ocultar el submenú en dispositivos móviles */
-        border-left: none;
-        animation: none;
-    }
-
-    .nav-item .dropdown-menu.open {
-        display: flex;
-        /* Mostrar el submenú cuando esté abierto */
-        flex-direction: column;
-        /* Alinear elementos en columna */
-        background-color: var(--color1);
-        padding: 6px;
-        border-radius: 6px;
-        list-style: none;
-        /* Quitar viñetas */
-        margin-top: 5px;
-        border-left: 2px solid var(--color3);
-        width: 75%;
-        /* Reducir el ancho para que ocupe menos espacio */
-        margin-left: 20px;
-    }
-
     .nav-item {
-        margin: 10px 0;
-        /* Reducir el margen vertical */
-        text-align: left;
+        margin: 5px 0;
+        width: 100%;
     }
 
     .nav-item a {
         font-size: 16px;
-        /* Reducir aún más el tamaño del texto */
+        width: 100%;
+        padding: 12px 5px;
     }
 
     .nav-item a::after {
         display: none;
-        /* Eliminar línea de subrayado en móvil */
+    }
+
+    /* Asegurar que los iconos mantengan su tamaño */
+    .nav-icon {
+        font-size: 18px;
+        min-width: 18px;
+        margin-right: 12px;
+    }
+
+    /* Submenu extreme simplification */
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        padding: 0;
+        border-left: none;
+        background-color: transparent;
+        border-radius: 0;
+        animation: fadeIn 0.2s ease;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
     }
 
     .dropdown-menu li {
-        padding: 2px 4px;
-        /* Reducir el padding */
+        padding: 0;
+        margin-left: 30px;
     }
 
     .dropdown-menu li a {
-        font-size: 13px;
-        /* Reducir el tamaño del texto */
-        padding: 6px 8px;
-        /* Reducir el padding */
-        display: flex;
-        justify-content: space-between;
-        /* Espaciar el texto y el ícono */
+        font-size: 14px;
+        padding: 8px 5px;
+        margin: 0;
+        background-color: transparent;
+        border-radius: 0;
+        border-bottom: 1px solid rgba(125, 193, 189, 0.1);
+    }
+
+    .dark .dropdown-menu li a {
+        background-color: transparent;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .dropdown-menu li:last-child a {
+        border-bottom: none;
     }
 
     .dropdown-menu li a:hover {
-        transform: translateX(0);
-        /* No desplazar en horizontal en móvil */
-        background-color: var(--color2);
-        color: var(--color4);
+        transform: none;
+        background-color: transparent;
+        color: var(--color3);
     }
 
     .submenu-icon {
-        margin-left: 6px;
         font-size: 14px;
-        /* Reducir el tamaño del ícono */
     }
 
-    /* Añadir una sombra sutil para distinguir el menú del fondo */
-    .nav-item .dropdown-menu.open {
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Mejorar la transición del chevron */
+    .chevron-icon {
+        transition: transform 0.3s ease;
+    }
+
+    a:has(.fa-chevron-up) .chevron-icon {
+        transform: rotate(180deg);
     }
 }
