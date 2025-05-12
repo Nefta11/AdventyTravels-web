@@ -75,40 +75,41 @@ const NavItem = ({ to, icon: Icon, label, menuOpen, submenu, submenuItems, isAct
                             <FaChevronDown className="chevron-icon" />
                     )}
                 </Link>
-            ) : (
-                <a
-                    href="#"
-                    className={isActive ? 'active' : ''}
-                    onClick={handleSubmenuToggle}
-                >
-                    {label}
-                    {submenu && (
-                        submenuOpen ?
-                            <FaChevronUp className="chevron-icon" /> :
-                            <FaChevronDown className="chevron-icon" />
-                    )}
-                </a>
-            )}
+) : (
+    <a
+        href="#"
+        className={isActive ? 'active' : ''}
+        onClick={handleSubmenuToggle}
+    >
+        {label}
+        {submenu && (
+            submenuOpen ?
+                <FaChevronUp className="chevron-icon" /> :
+                <FaChevronDown className="chevron-icon" />
+        )}
+    </a>
+)}
 
-            {submenu && (
-                <ul className={`dropdown-menu ${submenuOpen ? 'open' : ''}`}>
-                    {submenuItems ? (
-                        // Renderizar los items del submenu pasados como props
-                        submenuItems.map((item, index) => (
-                            <li key={index}>
-                                <a href={item.href} target={item.target} rel={item.rel}>
-                                    {item.label}
-                                    {item.icon && <item.icon className="submenu-icon" />}
-                                </a>
-                            </li>
-                        ))
-                    ) : (
-                        // Renderizar el submenu de contacto
-                        <ContactSubmenu />
-                    )}
-                </ul>
+{submenu && (
+        <ul className={`dropdown-menu ${submenuOpen ? 'open' : ''}`}>
+            {submenuItems ? (
+                // Renderizar los items del submenu pasados como props
+                submenuItems.map((item, index) => (
+                    <li key={index}>
+                        <a href={item.href} target={item.target} rel={item.rel}>
+                            {item.label}
+                            {item.icon && <item.icon className="submenu-icon" />}
+                        </a>
+                    </li>
+                ))
+            ) : (
+                // Renderizar el submenu de contacto
+                <ContactSubmenu />
             )}
-        </li>
+        </ul>
+    )
+}
+        </li >
     );
 };
 

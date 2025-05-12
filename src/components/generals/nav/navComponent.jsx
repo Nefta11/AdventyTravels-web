@@ -12,7 +12,6 @@ const NavComponent = () => {
     const location = useLocation();
     const [menuOpen, setMenuOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 800);
-    const [isScrolled, setIsScrolled] = useState(false);
     const [isDark, setIsDark] = useState(() => {
         const savedTheme = localStorage.getItem('theme');
         return savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches);
@@ -48,20 +47,10 @@ const NavComponent = () => {
             }
         };
 
-        const handleScroll = () => {
-            if (window.scrollY > 50) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
-        };
-
         window.addEventListener('resize', handleResize);
-        window.addEventListener('scroll', handleScroll);
 
         return () => {
             window.removeEventListener('resize', handleResize);
-            window.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
@@ -79,19 +68,46 @@ const NavComponent = () => {
     ];
 
     return (
-        <nav className={`nav-container fixed-nav ${isScrolled ? 'scrolled' : ''} ${isDark ? 'dark' : ''}`}>
+        <nav className={`nav-container fixed-nav ${isDark ? 'dark' : ''}`}>
             <div className="nav-content">
+                {/* Logo */}
+                <Link to="/" className="logo-container">
+                    <img src={logo} alt="Adventy Travels" className="nav-logo" />
+                </Link>
+
+                {/* Controls container (always visible) */}
+                <div className="controls-container">
+                    {/* Desktop language selector */}
+                    {!isMobile && (
+                        <div className="language-selector-desktop-container">
+                            <LanguageSelector />
+                        </div>
+                    )}
+
+                    {/* Theme toggle button (SOLO EN MÓVIL) */}
+                    {isMobile && (
+                        <button
+                            onClick={toggleTheme}
+                            className="theme-toggle-mobile-btn"
+                        >
+                            {isDark ? <FaSun size={20} /> : <FaMoon size={20} />}
+                        </button>
+                    )}
+
+                    {/* Mobile language selector */}
+                    {isMobile && (
+                        <div className="language-selector-mobile-container">
+                            <LanguageSelector />
+                        </div>
+                    )}
+                </div>
+
                 {/* Mobile hamburger button */}
                 {isMobile && (
                     <div className="mobile-menu-btn" onClick={toggleMenu}>
                         {menuOpen ? <FaTimes /> : <FaBars />}
                     </div>
                 )}
-
-                {/* Logo */}
-                <Link to="/" className="logo-container">
-                    <img src={logo} alt="Adventy Travels" className="nav-logo" />
-                </Link>
 
                 {/* Main navigation */}
                 <div className="nav-menu-container">
@@ -145,7 +161,7 @@ const NavComponent = () => {
                             submenuItems={newsSubmenuItems}
                         />
 
-                        {/* Theme toggle button (desktop) */}
+                        {/* Theme toggle - SOLO SE MUESTRA EN ESCRITORIO */}
                         {!isMobile && (
                             <li className="nav-item theme-toggle-item">
                                 <button onClick={toggleTheme} className="theme-toggle-btn">
@@ -154,30 +170,6 @@ const NavComponent = () => {
                             </li>
                         )}
                     </ul>
-                </div>
-
-                {/* Controls container (always visible) */}
-                <div className="controls-container">
-                    {/* Desktop language selector */}
-                    {!isMobile && (
-                        <div className="language-selector-desktop-container">
-                            <LanguageSelector />
-                        </div>
-                    )}
-
-                    {/* Mobile theme toggle */}
-                    {isMobile && (
-                        <button onClick={toggleTheme} className="theme-toggle-mobile-btn">
-                            {isDark ? <FaSun size={20} /> : <FaMoon size={20} />}
-                        </button>
-                    )}
-
-                    {/* Mobile language selector */}
-                    {isMobile && (
-                        <div className="language-selector-mobile-container">
-                            <LanguageSelector />
-                        </div>
-                    )}
                 </div>
             </div>
         </nav>
