@@ -1,7 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { ArrowLeft, Home, HelpCircle } from 'lucide-react';
+import { Home, HelpCircle } from 'lucide-react';
 import './Error404.css';
 import errorGif from './error.gif';
 
@@ -34,18 +33,6 @@ function Error404() {
         }
     };
 
-    const shapeVariants = {
-        animate: {
-            y: [0, 15, 0],
-            rotate: [0, 10, -10, 0],
-            transition: {
-                duration: 6,
-                ease: "easeInOut",
-                repeat: Infinity,
-                repeatType: "reverse"
-            }
-        }
-    };
 
     return (
         <div className="error-container">
