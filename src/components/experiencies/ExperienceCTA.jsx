@@ -8,7 +8,7 @@ const ExperienceCTA = () => {
                     <h2>¿No encuentras lo que buscas?</h2>
                     <p>Podemos diseñar una experiencia personalizada según tus intereses y preferencias.</p>
                     <a
-                        href="https://booking.adventytravels.com/"
+                        href="whatsapp://send?phone=5217716075321&text=Hola,%20me%20interesa%20una%20experiencia%20personalizada."
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn btn-primary"

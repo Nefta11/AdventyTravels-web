@@ -518,6 +518,7 @@
         justify-content: flex-start;
         padding-bottom: 1rem;
         margin-bottom: 2rem;
+        margin-top: 2rem;
         -webkit-overflow-scrolling: touch;
     }
 
@@ -531,6 +532,19 @@
 
     .meta-item {
         font-size: 0.85rem;
+    }
+
+    .filter-tabs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-top: 30px; /* Increased margin to separate from the component above */
+        justify-items: center;
+    }
+
+    .filter-button {
+        font-size: 0.8rem; /* Reduced font size for smaller screens */
+        padding: 8px; /* Adjusted padding for better fit */
     }
 }
 

@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
 import './Experiences.css';
+import { FaGlobe, FaLandmark, FaTree, FaHiking } from 'react-icons/fa';
 
 const ExperienceFilters = ({ activeFilter, onFilterChange }) => {
     const filters = [
-        { id: 'all', label: 'Todos' },
-        { id: 'cultural', label: 'Cultural' },
-        { id: 'naturaleza', label: 'Naturaleza' },
-        { id: 'aventura', label: 'Aventura' }
+        { id: 'all', label: 'Todos', icon: <FaGlobe /> },
+        { id: 'cultural', label: 'Cultural', icon: <FaLandmark /> },
+        { id: 'naturaleza', label: 'Naturaleza', icon: <FaTree /> },
+        { id: 'aventura', label: 'Aventura', icon: <FaHiking /> }
     ];
 
     return (
@@ -14,10 +15,10 @@ const ExperienceFilters = ({ activeFilter, onFilterChange }) => {
             {filters.map(filter => (
                 <button
                     key={filter.id}
-                    className={activeFilter === filter.id ? 'active' : ''}
+                    className={`filter-button ${activeFilter === filter.id ? 'active' : ''}`}
                     onClick={() => onFilterChange(filter.id)}
                 >
-                    {filter.label}
+                    {filter.icon} {filter.label}
                 </button>
             ))}
         </div>
