@@ -132,7 +132,7 @@
     .nav-logo {
         height: 70px;
         /* Tamaño fijo para móvil */
-        margin-left: 0;
+        margin-left: 25px;
     }
 
     .controls-container {
