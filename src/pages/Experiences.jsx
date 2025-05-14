@@ -16,7 +16,7 @@ const experiences = [
         duration: "5 días",
         groupSize: "2 personas",
         rating: 4.9,
-        price: 17098,
+        price: "17,098",
         category: "naturaleza",
         description: "Sumérgete en las aguas cristalinas de Tulum, explora cenotes místicos y descubre las majestuosas ruinas mayas junto al mar Caribe.",
         highlights: ["Ruinas mayas", "Cenotes secretos", "Playas paradisíacas", "Gastronomía local"]
@@ -29,7 +29,7 @@ const experiences = [
         duration: "7 días",
         groupSize: "2 personas",
         rating: 4.8,
-        price: 10000,
+        price: "10,000",
         category: "aventura",
         description: "Viaja a través de la selva chiapaneca en el Tren Maya, descubriendo cascadas, sitios arqueológicos y la rica cultura indígena.",
         highlights: ["Tren Maya", "Cascadas de Agua Azul", "Palenque", "Comunidades indígenas"]
@@ -42,7 +42,7 @@ const experiences = [
         duration: "4 días",
         groupSize: "2 personas",
         rating: 4.9,
-        price: 12300,
+        price: "12,300",
         category: "cultural",
         description: "Explora los coloridos callejones coloniales de San Miguel de Allende, reconocida como la mejor ciudad pequeña del mundo.",
         highlights: ["Centro histórico", "Galerías de arte", "Viñedos", "Arquitectura colonial"]
@@ -55,7 +55,7 @@ const experiences = [
         duration: "6 días",
         groupSize: "2 personas",
         rating: 4.9,
-        price: 21786,
+        price: "21,786",
         category: "naturaleza",
         description: "Disfruta de las mejores playas del Caribe mexicano, resorts de lujo y experiencias exclusivas en el paraíso.",
         highlights: ["Playas premium", "Spa de lujo", "Deportes acuáticos", "Gastronomía gourmet"]
@@ -68,7 +68,7 @@ const experiences = [
         duration: "5 días",
         groupSize: "2 personas",
         rating: 4.8,
-        price: 28000,
+        price: "28,000",
         category: "aventura",
         description: "Vive la magia de Xcaret con acceso ilimitado a todos sus parques, combinando aventura, cultura y naturaleza.",
         highlights: ["Parques temáticos", "Shows nocturnos", "Río subterráneo", "Cultura maya"]
@@ -81,7 +81,7 @@ const experiences = [
         duration: "5 días",
         groupSize: "2 personas",
         rating: 4.7,
-        price: 16536,
+        price: "16,536",
         category: "naturaleza",
         description: "Descubre la vibrante Quinta Avenida, playas de arena blanca y la vida nocturna más animada de la Riviera Maya.",
         highlights: ["Quinta Avenida", "Playa Mamitas", "Cenotes cercanos", "Vida nocturna"]
@@ -94,7 +94,7 @@ const experiences = [
         duration: "4 días",
         groupSize: "2 personas",
         rating: 4.9,
-        price: 3342,
+        price: "3,342",
         category: "cultural",
         description: "Explora la ciudad amurallada de Cartagena, sus calles coloniales y disfruta de la mejor gastronomía caribeña.",
         highlights: ["Ciudad amurallada", "Getsemaní", "Islas del Rosario", "Cocina caribeña"]
@@ -107,7 +107,7 @@ const experiences = [
         duration: "5 días",
         groupSize: "2 personas",
         rating: 4.8,
-        price: 18000,
+        price: "18,000",
         category: "cultural",
         description: "Sumérgete en la riqueza cultural de Oaxaca, explorando sus mercados vibrantes, arquitectura colonial y la deliciosa gastronomía local.",
         highlights: ["Monte Albán", "Mercado 20 de Noviembre", "Templo de Santo Domingo", "Mezcal artesanal"]
@@ -120,7 +120,7 @@ const experiences = [
         duration: "5 días",
         groupSize: "2 personas",
         rating: 4.9,
-        price: 16078,
+        price: "16,078",
         category: "naturaleza",
         description: "Relájate en las playas vírgenes de Holbox, disfruta de su ambiente tranquilo y observa el espectáculo del bioluminiscente.",
         highlights: ["Playa Punta Cocos", "Bioluminiscencia", "Avistamiento de flamencos", "Paseos en bicicleta"]
@@ -133,7 +133,7 @@ const experiences = [
         duration: "5 días",
         groupSize: "2 personas",
         rating: 4.8,
-        price: 12000,
+        price: "12,000",
         category: "cultural",
         description: "Descubre la magia de San Cristóbal de las Casas, con sus calles empedradas, iglesias coloniales y mercados artesanales.",
         highlights: ["Catedral de San Cristóbal", "Mercado de Dulces y Artesanías", "Museo del Ámbar", "Cañón del Sumidero"]
@@ -146,7 +146,7 @@ const experiences = [
         duration: "3 días",
         groupSize: "2 personas",
         rating: 4.7,
-        price: 12000,
+        price: "12,000",
         category: "cultural",
         description: "Embárcate en la Ruta del Tequila, visitando destilerías tradicionales y disfrutando de catas en el corazón de Jalisco.",
         highlights: ["Destilerías de Tequila", "Campos de agave", "Pueblo Mágico de Tequila", "Museo Nacional del Tequila"]
