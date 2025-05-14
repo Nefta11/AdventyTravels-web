@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { FaBars, FaTimes, FaHome, FaSuitcase, FaInfoCircle, FaBlog, FaImages, FaEnvelope, FaUsers, FaHandshake, FaFemale, FaSun, FaMoon } from 'react-icons/fa';
+import { FaBars, FaTimes, FaHome, FaSuitcase, FaInfoCircle, FaBlog, FaImages, FaEnvelope, FaUsers, FaHandshake, FaFemale } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../../../assets/images/LOGOTIPO_OFICIAL.webp';
@@ -12,28 +12,10 @@ const NavComponent = () => {
     const location = useLocation();
     const [menuOpen, setMenuOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 800);
-    const [isDark, setIsDark] = useState(() => {
-        const savedTheme = localStorage.getItem('theme');
-        return savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches);
-    });
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
-
-    const toggleTheme = () => {
-        setIsDark(!isDark);
-    };
-
-    useEffect(() => {
-        if (isDark) {
-            document.documentElement.classList.add('dark');
-            localStorage.setItem('theme', 'dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-            localStorage.setItem('theme', 'light');
-        }
-    }, [isDark]);
 
     useEffect(() => {
         setMenuOpen(false);
@@ -42,9 +24,6 @@ const NavComponent = () => {
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 800);
-            if (window.innerWidth > 800) {
-                setMenuOpen(false);
-            }
         };
 
         window.addEventListener('resize', handleResize);
@@ -68,7 +47,7 @@ const NavComponent = () => {
     ];
 
     return (
-        <nav className={`nav-container fixed-nav ${isDark ? 'dark' : ''}`}>
+        <nav className="nav-container fixed-nav">
             <div className="nav-content">
                 {/* Logo */}
                 <Link to="/" className="logo-container">
@@ -82,16 +61,6 @@ const NavComponent = () => {
                         <div className="language-selector-desktop-container">
                             <LanguageSelector />
                         </div>
-                    )}
-
-                    {/* Theme toggle button (SOLO EN MÓVIL) */}
-                    {isMobile && (
-                        <button
-                            onClick={toggleTheme}
-                            className="theme-toggle-mobile-btn"
-                        >
-                            {isDark ? <FaSun size={20} /> : <FaMoon size={20} />}
-                        </button>
                     )}
 
                     {/* Mobile language selector */}
@@ -160,15 +129,6 @@ const NavComponent = () => {
                             submenu
                             submenuItems={newsSubmenuItems}
                         />
-
-                        {/* Theme toggle - SOLO SE MUESTRA EN ESCRITORIO */}
-                        {!isMobile && (
-                            <li className="nav-item theme-toggle-item">
-                                <button onClick={toggleTheme} className="theme-toggle-btn">
-                                    {isDark ? <FaSun className="theme-icon" /> : <FaMoon className="theme-icon" />}
-                                </button>
-                            </li>
-                        )}
                     </ul>
                 </div>
             </div>

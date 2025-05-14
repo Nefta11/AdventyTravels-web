@@ -90,45 +90,6 @@
     margin-left: 50px;
 }
 
-/* Botón de tema en desktop */
-.theme-toggle-item {
-    margin-left: 5px;
-    display: flex;
-    align-items: center;
-}
-
-.theme-toggle-btn {
-    background: none;
-    border: none;
-    color: var(--color4);
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: var(--transition);
-    padding: 0;
-}
-
-.dark .theme-toggle-btn {
-    color: var(--color4);
-}
-
-.theme-toggle-btn:hover {
-    background-color: rgba(125, 193, 189, 0.2);
-    transform: rotate(15deg);
-}
-
-.dark .theme-toggle-btn:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.theme-icon {
-    font-size: 20px;
-}
-
 /* Botón de menú móvil */
 .mobile-menu-btn {
     color: var(--color4);
@@ -150,24 +111,6 @@
 
 .dark .mobile-menu-btn:hover {
     background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Botón de tema en móvil */
-.theme-toggle-mobile-btn {
-    background: none;
-    border: none;
-    color: var(--color4);
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-}
-
-.dark .theme-toggle-mobile-btn {
-    color: var(--color4);
 }
 
 /* Estilos para móvil */
@@ -237,12 +180,6 @@
 
     .theme-toggle-item {
         margin: 10px 0;
-    }
-
-    /* Estilo para el botón de tema en móvil */
-    .theme-toggle-mobile-btn {
-        display: flex;
-        font-size: 20px;
     }
 
     /* Ajuste para selector de idioma en móvil */
