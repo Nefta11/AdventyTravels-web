@@ -1,9 +1,31 @@
+// AdvantagesComponent.jsx
 import { FaRegClock, FaCreditCard, FaHandshake } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
+import { useRef, useEffect, useState } from 'react';
 import "./advantagesComponent.css";
 
 const AdvantagesComponent = () => {
     const { t } = useTranslation();
+    const [inView, setInView] = useState(false);
+    const sectionRef = useRef();
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setInView(true);
+                    observer.disconnect();
+                }
+            },
+            { threshold: 0.1 }
+        );
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, []);
 
     const advantages = [
         {
@@ -24,17 +46,32 @@ const AdvantagesComponent = () => {
     ];
 
     return (
-        <section className="advantages-container">
-            <h2 className="advantage-title">{t('advantages.title')}</h2>
-            <div className="advantages-cards">
+        <section className="advantages-container" ref={sectionRef}>
+            <div className="advantages-header">
+                <h2 className="advantage-title">{t('advantages.title')}</h2>
+                <div className="title-underline"></div>
+            </div>
+
+            <div className={`advantages-cards ${inView ? 'animate-in' : ''}`}>
                 {advantages.map((advantage, index) => (
-                    <div className="advantage-card" key={index}>
-                        <advantage.icon className="advantage-icon" loading="lazy" />
-                        <h3>
-                            {advantage.title}
-                        </h3>
-                        <p className="advantage-description"> {advantage.description}
-                        </p>
+                    <div
+                        className="advantage-card"
+                        key={index}
+                        style={{ animationDelay: `${index * 150}ms` }}
+                        tabIndex={0}
+                    >
+                        <div className="icon-container">
+                            <advantage.icon className="advantage-icon" aria-hidden="true" />
+                        </div>
+                        <div className="card-content">
+                            <h3 className="card-title">
+                                {advantage.title}
+                            </h3>
+                            <p className="advantage-description">
+                                {advantage.description}
+                            </p>
+                        </div>
+                        <div className="card-background"></div>
                     </div>
                 ))}
             </div>
