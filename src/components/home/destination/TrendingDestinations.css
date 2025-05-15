@@ -1,3 +1,11 @@
+/* TrendingDestinations.css */
+:root {
+    --color1: #F4F4F4;
+    --color2: #7DC1BD;
+    --color3: #E49F30;
+    --color4: #24455D;
+}
+
 .trending-container {
     text-align: left;
     padding: 20px;
@@ -10,11 +18,24 @@
     font-size: 27px;
     font-weight: bolder;
     margin-bottom: 5px;
-    color: black;
+    color: var(--color4);
+    position: relative;
+    display: inline-block;
+}
+
+.trending-container-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: var(--color3);
+    border-radius: 3px;
 }
 
 .trending-container p {
-    color: black;
+    color: var(--color4);
     margin-bottom: 20px;
 }
 
@@ -40,50 +61,112 @@
 .destination-card {
     position: relative;
     height: 260px;
-    background-size: cover;
-    background-position: center;
     border-radius: 10px;
-    display: flex;
-    align-items: flex-end;
-    padding: 15px;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 .destination-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 15px rgba(36, 69, 93, 0.25);
 }
 
-.destination-card span {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 2px;
-    border-radius: 5px;
-    font-size: 25px;
+.destination-card:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--color2), 0 8px 15px rgba(36, 69, 93, 0.25);
+}
+
+.card-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+
+.destination-card:hover .card-background {
+    transform: scale(1.05);
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            rgba(36, 69, 93, 0.6) 0%,
+            rgba(36, 69, 93, 0.3) 30%,
+            rgba(36, 69, 93, 0.3) 60%,
+            rgba(36, 69, 93, 0.7) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.destination-card:hover .card-overlay {
+    opacity: 1;
 }
 
 .destination-name {
     position: absolute;
     top: 10px;
     left: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(36, 69, 93, 0.8);
     color: white;
-    padding: 5px;
+    padding: 6px 12px;
     border-radius: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.destination-card:hover .destination-name {
+    background-color: var(--color3);
+    transform: translateY(3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-explore {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background-color: var(--color2);
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(20px) rotate(-45deg);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+}
+
+.destination-card:hover .card-explore {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+}
+
+.explore-icon {
+    font-size: 22px;
 }
 
 /* Ajuste para la última imagen sin pareja */
 .trending-grid .destination-card:last-child:nth-child(odd) {
     grid-column: span 2;
-    /* Ocupa dos columnas */
     justify-self: center;
-    /* Centra horizontalmente */
     width: 100%;
-    /* Mantiene el ancho completo */
     max-width: 600px;
-    /* Tamaño máximo para evitar que se expanda demasiado */
 }
 
 @media (max-width: 800px) {
@@ -95,14 +178,30 @@
         font-size: 23px;
         font-weight: bolder;
         margin-bottom: 5px;
-        color: black;
+    }
+
+    .trending-container-title::after {
+        width: 30px;
+        height: 2px;
     }
 
     .destination-card {
-        height: 180px
+        height: 180px;
     }
 
-    .destination-card span {
+    .destination-name {
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+
+    .card-explore {
+        width: 35px;
+        height: 35px;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .explore-icon {
         font-size: 16px;
     }
 
@@ -110,6 +209,5 @@
     .trending-grid .destination-card:last-child:nth-child(odd) {
         justify-self: center;
         width: 180px;
-
     }
 }

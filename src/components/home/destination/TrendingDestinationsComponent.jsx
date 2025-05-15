@@ -1,3 +1,4 @@
+// TrendingDestinations.jsx
 import { useTranslation } from 'react-i18next';
 import { useRef, useEffect, useState } from 'react';
 import "./TrendingDestinations.css";
@@ -27,7 +28,9 @@ const TrendingDestinations = () => {
             { threshold: 0.1 }
         );
 
-        observer.observe(ref.current);
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
 
         return () => observer.disconnect();
     }, []);
@@ -38,19 +41,27 @@ const TrendingDestinations = () => {
 
     return (
         <div className="trending-container" ref={ref}>
-            <h2 className='trending-container-title'>{t('trendingDestinations')}</h2>
+            <h2 className="trending-container-title">{t('trendingDestinations')}</h2>
             <p>{t('peopleSearching')}</p>
             <div className={`trending-grid ${inView ? 'in-view' : ''}`}>
                 {destinations.map((destination, index) => (
                     <div
                         key={index}
                         className="destination-card"
-                        style={{ backgroundImage: `url(${destination.image})` }}
                         onClick={handleCardClick}
+                        tabIndex={0}
+                        role="button"
+                        aria-label={`Ver destino ${destination.name}`}
                     >
-                        <span className="destination-name">
-                            {destination.name}
-                        </span>
+                        <div
+                            className="card-background"
+                            style={{ backgroundImage: `url(${destination.image})` }}
+                        ></div>
+                        <div className="card-overlay"></div>
+                        <span className="destination-name">{destination.name}</span>
+                        <div className="card-explore">
+                            <span className="explore-icon">✈</span>
+                        </div>
                     </div>
                 ))}
             </div>
