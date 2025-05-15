@@ -5,14 +5,13 @@ import { FaPlane, FaMapMarkerAlt } from 'react-icons/fa';
 import "./TrendingDestinations.css";
 
 const destinations = [
-    { name: "Cancún", image: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/images/destinations/cancun.webp" },
-    { name: "Ciudad de Mexico", image: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/images/destinations/cdmx.webp" },
-    { name: "Playa del Carmen", image: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/images/destinations/playaDelCarmen.webp" },
-    { name: "San Miguel de Allende", image: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/images/destinations/SanMiguel.webp" },
-    { name: "Mérida", image: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/images/destinations/merida.webp" },
-    { name: "Tulum", image: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/images/destinations/tulum.webp" },
+    { name: "Cancún", image: "https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/src/assets/images/destinations/cancun.webp" },
+    { name: "Ciudad de Mexico", image: "https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/src/assets/images/destinations/cdmx.webp" },
+    { name: "Playa del Carmen", image: "https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/src/assets/images/destinations/playaDelCarmen.webp" },
+    { name: "San Miguel de Allende", image: "https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/src/assets/images/destinations/SanMiguel.webp" },
+    { name: "Mérida", image: "https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/src/assets/images/destinations/merida.webp" },
+    { name: "Tulum", image: "https://raw.githubusercontent.com/Nefta11/GoodTravel-web/refs/heads/main/src/assets/images/destinations/tulum.webp" },
 ];
-
 
 const TrendingDestinations = () => {
     const { t } = useTranslation();
@@ -50,21 +49,16 @@ const TrendingDestinations = () => {
                     <div
                         key={index}
                         className="destination-card"
+                        style={{ backgroundImage: `url(${destination.image})` }}
                         onClick={handleCardClick}
                         tabIndex={0}
                         role="button"
                         aria-label={`Ver destino ${destination.name}`}
                     >
-                        <div
-                            className="card-background"
-                            style={{ backgroundImage: `url(${destination.image})` }}
-                        ></div>
                         <div className="card-overlay"></div>
-                        <div className="destination-info">
-                            <span className="destination-name">
-                                <FaMapMarkerAlt className="location-icon" /> {destination.name}
-                            </span>
-                        </div>
+                        <span className="destination-name">
+                            <FaMapMarkerAlt className="location-icon" /> {destination.name}
+                        </span>
                         <div className="card-explore">
                             <FaPlane className="explore-icon" />
                         </div>
