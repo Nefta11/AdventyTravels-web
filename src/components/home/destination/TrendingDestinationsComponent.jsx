@@ -1,6 +1,7 @@
 // TrendingDestinations.jsx
 import { useTranslation } from 'react-i18next';
 import { useRef, useEffect, useState } from 'react';
+import { FaPlane, FaMapMarkerAlt } from 'react-icons/fa';
 import "./TrendingDestinations.css";
 
 const destinations = [
@@ -58,9 +59,13 @@ const TrendingDestinations = () => {
                             style={{ backgroundImage: `url(${destination.image})` }}
                         ></div>
                         <div className="card-overlay"></div>
-                        <span className="destination-name">{destination.name}</span>
+                        <div className="destination-info">
+                            <span className="destination-name">
+                                <FaMapMarkerAlt className="location-icon" /> {destination.name}
+                            </span>
+                        </div>
                         <div className="card-explore">
-                            <span className="explore-icon">✈</span>
+                            <FaPlane className="explore-icon" />
                         </div>
                     </div>
                 ))}
