@@ -1,3 +1,4 @@
+// BankPromotions.jsx
 import { useTranslation } from 'react-i18next';
 import "./BankPromotions.css";
 
@@ -20,15 +21,21 @@ const BankPromotions = () => {
     return (
         <div className="bank-promotions">
             <h2 className='title'>{t('bankPromotions.title')}</h2>
-            {banks.map((bank, index) => (
-                <div key={index} className="bank-card">
-                    <img src={getBankImageUrl(bank.name)} alt={bank.name} className="bank-logo" />
-                    <hr className="divider" />
-                    <p>
-                        <strong>{bank.promotion}</strong>
-                    </p>
-                </div>
-            ))}
+            <div className="bank-cards-container">
+                {banks.map((bank, index) => (
+                    <div key={index} className="bank-card" tabIndex={0}>
+                        <div className="bank-logo-container">
+                            <img src={getBankImageUrl(bank.name)} alt={bank.name} className="bank-logo" />
+                        </div>
+                        <div className="divider"></div>
+                        <div className="promotion-text">
+                            <p>
+                                <strong>{bank.promotion}</strong>
+                            </p>
+                        </div>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };

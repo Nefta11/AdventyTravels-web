@@ -1,3 +1,4 @@
+/* BankPromotions.css */
 :root {
     --color1: #F4F4F4;
     --color2: #7DC1BD;
@@ -7,78 +8,253 @@
 
 .bank-promotions {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    padding: 20px;
-    margin-bottom: 10px;
-}
-
-.bank-card {
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 190px;
-    display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 30px 20px;
+    margin-bottom: 10px;
+    background-color: var(--color1);
 }
 
 .title {
     font-size: 27px;
     font-weight: bolder;
-    margin-bottom: 5px;
-    color: black;
+    margin-bottom: 20px;
+    color: var(--color4);
     width: 100%;
     text-align: center;
+    position: relative;
+    display: inline-block;
 }
 
-.bank-card:hover {
+.title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--color3);
+    border-radius: 3px;
+}
+
+.bank-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: nowrap;
+    width: 100%;
+    max-width: 1280px;
+    overflow-x: auto;
+    padding: 10px 5px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color2) var(--color1);
+}
+
+/* Estilos para la barra de desplazamiento */
+.bank-cards-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.bank-cards-container::-webkit-scrollbar-track {
+    background-color: var(--color1);
+    border-radius: 10px;
+}
+
+.bank-cards-container::-webkit-scrollbar-thumb {
+    background-color: var(--color2);
+    border-radius: 10px;
+}
+
+.bank-card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    width: 190px;
+    min-width: 190px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.bank-card:hover,
+.bank-card:focus {
     transform: translateY(-5px);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.12);
+    border-color: var(--color2);
+}
+
+.bank-card:focus {
+    outline: none;
+}
+
+.bank-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
 }
 
 .bank-logo {
     width: 80px;
     height: auto;
-    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+    object-fit: contain;
 }
 
-.bank-card p {
-    font-size: 14px;
-    color: black;
-    margin: 5px 0;
-    text-align: center;
+.bank-card:hover .bank-logo {
+    transform: scale(1.05);
 }
 
 .divider {
     width: 80%;
-    border: 0;
-    border-top: 1px solid #ccc;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color2), transparent);
     margin: 10px 0;
+    border: none;
+}
+
+.promotion-text {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
+.bank-card p {
+    font-size: 14px;
+    color: var(--color4);
+    margin: 8px 0;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.bank-card:hover p {
+    color: var(--color3);
+}
+
+/* Añadir un efecto de brillo al pasar el cursor */
+.bank-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(to bottom right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.3) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.bank-card:hover::before {
+    opacity: 1;
+    animation: shine 1.5s forwards;
+}
+
+@keyframes shine {
+    to {
+        left: 150%;
+    }
+}
+
+/* Indicador de desplazamiento horizontal */
+.bank-promotions::after {
+    content: '→ desliza →';
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    background-color: rgba(36, 69, 93, 0.7);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    animation: fadeInOut 2s infinite;
+}
+
+@keyframes fadeInOut {
+
+    0%,
+    100% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
 }
 
 /* Responsividad */
 @media (max-width: 800px) {
     .bank-promotions {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+        padding: 20px 15px;
+        position: relative;
     }
 
     .title {
         font-size: 23px;
-        font-weight: bolder;
-        margin-bottom: 5px;
-        color: black;
+        margin-bottom: 15px;
+    }
+
+    .title::after {
+        width: 60px;
+        height: 2px;
+    }
+
+    .bank-cards-container {
+        flex-wrap: wrap;
+        overflow-x: visible;
+        justify-content: center;
+        gap: 10px;
     }
 
     .bank-card {
         width: 40%;
-        margin-bottom: 5px;
+        min-width: 0;
+        margin-bottom: 10px;
+        padding: 12px 10px;
+        border-radius: 10px;
+    }
+
+    .bank-logo-container {
+        height: 70px;
+    }
+
+    .bank-logo {
+        width: 70px;
+    }
+
+    .divider {
+        margin: 8px 0;
+    }
+
+    .promotion-text {
+        padding: 0 5px;
+    }
+
+    .bank-card p {
+        font-size: 13px;
+        margin: 5px 0;
+    }
+
+    .bank-promotions::after {
+        display: none;
     }
 }
