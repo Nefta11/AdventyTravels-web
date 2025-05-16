@@ -28,7 +28,7 @@ const HotelLogosGrid = () => {
 
     return (
         <div className="carousel-container">
-            <h2 className="carousel-title">{t('hotelLogosGrid.title')}</h2>
+            <h2 className="carousel-title-hotel">{t('hotelLogosGrid.title')}</h2>
             <div 
                 className={`carousel-track ${isPaused ? "paused" : ""}`} 
                 onMouseEnter={handleMouseEnter} 

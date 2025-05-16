@@ -20,7 +20,7 @@ const BankPromotions = () => {
 
     return (
         <div className="bank-promotions">
-            <h2 className='title'>{t('bankPromotions.title')}</h2>
+            <h2 className='title-bank'>{t('bankPromotions.title')}</h2>
             <div className="bank-cards-container">
                 {banks.map((bank, index) => (
                     <div key={index} className="bank-card" tabIndex={0}>

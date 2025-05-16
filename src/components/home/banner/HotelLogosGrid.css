@@ -48,12 +48,27 @@
     }
 }
 
-.carousel-title {
+.title-bank {
     font-size: 27px;
-    font-weight: bold;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    color: var(--color4);
+    width: 100%;
     text-align: center;
-    color: black;
-    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.title-bank::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--color3);
+    border-radius: 3px;
 }
 
 .separator-line {
