@@ -1,6 +1,9 @@
 import './OurServices.css';
 import { useTranslation } from 'react-i18next';
-import { FaHotel, FaPlane, FaSuitcase, FaMapMarkedAlt, FaShuttleVan, FaCar, FaShip, FaShieldAlt, FaPassport, FaStar } from 'react-icons/fa';
+import {
+    FaHotel, FaPlane, FaSuitcase, FaMapMarkedAlt, FaShuttleVan,
+    FaCar, FaShip, FaShieldAlt, FaPassport, FaStar, FaInfoCircle
+} from 'react-icons/fa';
 import { useState } from 'react';
 
 const services = [
@@ -26,17 +29,30 @@ const OurServices = () => {
 
     return (
         <section className="our-services-section">
-            <h2 className='title' >{t('ourServices')}</h2>
+            <div className="services-header">
+                <h2 className='title'>{t('ourServices')}</h2>
+                <div className="title-underline"></div>
+            </div>
+
             <div className="services-container">
                 {services.map((service, index) => (
-                    <div key={index} className="service-card" onClick={() => handleCardClick(index)}>
+                    <div
+                        key={index}
+                        className={`service-card ${clickedIndex === index ? 'active' : ''}`}
+                        onClick={() => handleCardClick(index)}
+                    >
                         <div className={`service-card-inner ${clickedIndex === index ? 'clicked' : ''}`}>
                             <div className="service-card-front">
-                                <div className="service-icon">{service.icon}</div>
-                                <h3>{t(service.title)}</h3>
+                                <div className="service-icon-wrapper">
+                                    <div className="service-icon">{service.icon}</div>
+                                </div>
+                                <h3 className="service-title">{t(service.title)}</h3>
+                                <div className="click-indicator">
+                                    <FaInfoCircle />
+                                </div>
                             </div>
                             <div className="service-card-back">
-                                <p>{t(service.description)}</p>
+                                <p className="service-description">{t(service.description)}</p>
                             </div>
                         </div>
                     </div>
