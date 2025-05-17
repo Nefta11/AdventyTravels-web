@@ -2,13 +2,11 @@ import './TermsModal.css';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 import { useEffect, useRef, useState } from 'react';
-import { FaTimes, FaCheckCircle, FaChevronUp, FaArrowLeft } from 'react-icons/fa';
+import { FaTimes, FaCheckCircle, FaChevronUp } from 'react-icons/fa';
 
 const TermsModal = ({ show, handleClose }) => {
     const { t } = useTranslation();
     const modalRef = useRef(null);
-    const [scrollPosition, setScrollPosition] = useState(0);
-    const [activeSection, setActiveSection] = useState(null);
     const [showScrollTop, setShowScrollTop] = useState(false);
 
     useEffect(() => {
@@ -27,7 +25,6 @@ const TermsModal = ({ show, handleClose }) => {
         const handleScroll = () => {
             if (modalRef.current) {
                 const position = modalRef.current.scrollTop;
-                setScrollPosition(position);
                 setShowScrollTop(position > 300);
             }
         };
@@ -61,20 +58,6 @@ const TermsModal = ({ show, handleClose }) => {
     };
 
     // Sections for the table of contents
-    const sections = [
-        'termsAndConditions.sections.contractPurpose.title',
-        'termsAndConditions.sections.bookingAndPayment.title',
-        'termsAndConditions.sections.cancellationsAndModifications.title',
-        'termsAndConditions.sections.clientResponsibilities.title',
-        'termsAndConditions.sections.refunds.title',
-        'termsAndConditions.sections.specificConditions.title',
-        'termsAndConditions.sections.advertisingAndPromotions.title',
-        'termsAndConditions.sections.intellectualProperty.title',
-        'termsAndConditions.sections.termsModification.title',
-        'termsAndConditions.sections.applicableLaw.title',
-        'termsAndConditions.sections.qualityControl.title',
-        'termsAndConditions.sections.contact.title'
-    ];
 
     return (
         <div className="terms-modal-overlay">
