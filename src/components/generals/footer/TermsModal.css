@@ -3,124 +3,368 @@
     --color2: #7DC1BD;
     --color3: #E49F30;
     --color4: #24455D;
+    --border-radius: 10px;
+    --box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
 }
 
-.modal-overlay {
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Overlay styling */
+.terms-modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
     overflow: hidden;
+    animation: fadeIn 0.4s ease forwards;
 }
 
-.modal-content {
-    background: var(--color1);
-    padding: 28px;
-    border-radius: 8px;
-    max-width: 600px;
+/* Modal container */
+.terms-modal-container {
+    max-width: 750px;
     width: 90%;
-    max-height: 80%;
+    max-height: 85vh;
+    margin: 0 auto;
+    display: flex;
+    animation: slideInUp 0.5s ease forwards;
+}
+
+/* Modal content */
+.terms-modal-content {
+    background: var(--color1);
+    padding: 32px;
+    border-radius: var(--border-radius);
+    width: 100%;
+    max-height: 85vh;
     overflow-y: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    font-family: Arial, sans-serif;
-    color: black;
+    box-shadow: var(--box-shadow);
     position: relative;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color2) var(--color1);
 }
 
-.modal-content h2 {
-    margin-top: 0;
-    font-size: 24px;
-    color: var(--color3);
-    text-align: center;
+.terms-modal-content::-webkit-scrollbar {
+    width: 8px;
 }
 
-.modal-content h3 {
-    font-size: 20px;
-    color: var(--color4);
-    margin-top: 20px;
+.terms-modal-content::-webkit-scrollbar-track {
+    background: #eaeaea;
+    border-radius: 10px;
 }
 
-.modal-content h4 {
+.terms-modal-content::-webkit-scrollbar-thumb {
+    background-color: var(--color2);
+    border-radius: 10px;
+}
+
+/* Close button */
+.terms-close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--color4);
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
     font-size: 18px;
-    color: var(--color4);
-    margin-top: 15px;
+    cursor: pointer;
+    transition: var(--transition);
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.modal-content p {
+.terms-close-button:hover {
+    background: var(--color3);
+    transform: rotate(90deg);
+}
+
+/* Headers */
+.terms-header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 15px;
+}
+
+.terms-header h2 {
+    color: var(--color3);
+    font-size: 28px;
+    margin: 0 0 10px;
+    font-weight: 700;
+}
+
+.terms-last-update {
     font-size: 14px;
-    line-height: 1.6;
-    margin: 10px 0;
-}
-
-.modal-content ul {
-    padding-left: 20px;
-    margin: 10px 0;
-}
-
-.modal-content ul li {
-    font-size: 14px;
-    line-height: 1.6;
+    color: #666;
+    font-style: italic;
     margin: 5px 0;
 }
 
-.close-button {
-    position: absolute;
-    top: 0px;
-    right: 5px;
-    background: none;
-    border: none;
-    font-size: 32px;
-    cursor: pointer;
-    color: var(--color4);
-    z-index: 1001;
+.terms-intro {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 500;
 }
 
-.modal-content .accept-button {
-    display: block;
-    margin: 20px auto 0;
-    padding: 10px 20px;
+/* Sections */
+.terms-section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.terms-section:last-of-type {
+    border-bottom: none;
+}
+
+.terms-section h3 {
+    color: var(--color4);
+    font-size: 22px;
+    margin: 20px 0 15px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.terms-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--color3);
+    border-radius: 3px;
+}
+
+.terms-subsection {
+    margin: 15px 0;
+    padding-left: 15px;
+    border-left: 3px solid var(--color2);
+}
+
+.terms-section h4 {
+    color: var(--color2);
+    font-size: 18px;
+    margin: 15px 0 10px;
+}
+
+.terms-section p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333;
+    margin: 10px 0;
+}
+
+.terms-note {
+    background-color: rgba(125, 193, 189, 0.1);
+    border-left: 3px solid var(--color2);
+    padding: 12px 15px;
+    margin: 15px 0;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+    border-radius: 0 5px 5px 0;
+}
+
+/* Lists */
+.terms-list {
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+.terms-list li {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 8px 0;
+    color: #333;
+    position: relative;
+}
+
+.terms-list li::marker {
+    color: var(--color3);
+}
+
+/* Accept button */
+.terms-footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.terms-accept-button {
     background: var(--color3);
     color: white;
     border: none;
-    border-radius: 4px;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(228, 159, 48, 0.3);
 }
 
-.modal-content .accept-button:hover {
+.terms-accept-button:hover {
     background: var(--color4);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(36, 69, 93, 0.3);
 }
 
+.terms-button-icon {
+    font-size: 18px;
+}
+
+/* Scroll to top button */
+.terms-scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 44px;
+    height: 44px;
+    background: var(--color2);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    animation: fadeIn 0.3s ease;
+}
+
+.terms-scroll-top:hover {
+    background: var(--color3);
+    transform: translateY(-5px);
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    .modal-content {
-        max-width: 90%;
-        padding: 25px;
+    .terms-modal-container {
+        width: 95%;
+        max-height: 90vh;
     }
 
-    .modal-content h2 {
-        font-size: 20px;
+    .terms-modal-content {
+        padding: 25px 20px;
+        border-radius: 8px;
     }
 
-    .modal-content h3 {
+    .terms-header h2 {
+        font-size: 22px;
+    }
+
+    .terms-intro {
+        font-size: 15px;
+    }
+
+    .terms-section h3 {
         font-size: 18px;
     }
 
-    .modal-content h4 {
+    .terms-section h4 {
         font-size: 16px;
     }
 
-    .modal-content p,
-    .modal-content ul li {
-        font-size: 12px;
+    .terms-section p,
+    .terms-list li {
+        font-size: 14px;
     }
 
-    .modal-content .accept-button {
-        padding: 8px 16px;
+    .terms-accept-button {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+
+    .terms-scroll-top {
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .terms-modal-content {
+        padding: 20px 15px;
+    }
+
+    .terms-header h2 {
+        font-size: 20px;
+    }
+
+    .terms-intro {
+        font-size: 14px;
+    }
+
+    .terms-section h3 {
+        font-size: 17px;
+    }
+
+    .terms-section h4 {
+        font-size: 15px;
+    }
+
+    .terms-section p,
+    .terms-list li,
+    .terms-note {
+        font-size: 13px;
     }
 }
