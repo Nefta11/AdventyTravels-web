@@ -4,19 +4,12 @@
     --color2: #7DC1BD;
     --color3: #E49F30;
     --color4: #24455D;
-
-    /* Colores para los iconos */
-    --icon-handshake: #E67E22;
-    --icon-star: #F1C40F;
-    --icon-shield: #3498DB;
-    --icon-bulb: #27AE60;
-    --icon-users: #9B59B6;
-    --icon-chart: #E74C3C;
 }
 
 .values-section {
     margin-top: 1px;
-    padding: 50px 32px;
+    text-align: center;
+    padding: 40px 32px;
     background-color: var(--color1);
     position: relative;
     overflow: hidden;
@@ -27,37 +20,33 @@
 .values-section::after {
     content: '';
     position: absolute;
-    background-color: var(--color2);
-    opacity: 0.05;
     border-radius: 50%;
     z-index: 0;
 }
 
 .values-section::before {
+    top: -150px;
+    right: -100px;
     width: 300px;
     height: 300px;
-    top: -100px;
-    left: -100px;
+    background-color: var(--color2);
+    opacity: 0.05;
 }
 
 .values-section::after {
-    width: 400px;
-    height: 400px;
-    bottom: -200px;
-    right: -150px;
-}
-
-.values-container {
-    position: relative;
-    z-index: 1;
-    max-width: 1200px;
-    margin: 0 auto;
+    bottom: -100px;
+    left: -80px;
+    width: 250px;
+    height: 250px;
+    background-color: var(--color3);
+    opacity: 0.05;
 }
 
 .values-header {
-    text-align: center;
-    margin-bottom: 50px;
     position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto 40px;
 }
 
 .values-title {
@@ -69,26 +58,22 @@
     display: inline-block;
 }
 
-.values-title::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
+.title-underline {
     width: 80px;
-    height: 4px;
-    background-color: var(--color3);
-    border-radius: 4px;
+    height: 3px;
+    background: var(--color3);
+    margin: 5px auto 20px;
+    border-radius: 2px;
 }
 
 .values-description {
     font-size: 20px;
-    color: #555;
+    color: #333;
     margin-bottom: 32px;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 .values-grid {
@@ -97,117 +82,108 @@
     gap: 25px;
     max-width: 1080px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .value-card {
+    width: 320px;
+    height: auto;
+    perspective: 1000px;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.value-card:hover {
+    transform: translateY(-8px);
+}
+
+.value-card-inner {
     background: white;
     padding: 30px 24px;
     border-radius: 16px;
     text-align: center;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    width: 320px;
-    height: auto;
-    border: none;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    height: 100%;
     position: relative;
-    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(36, 69, 93, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.value-card::before {
+.value-card:hover .value-card-inner {
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    border-color: rgba(125, 193, 189, 0.5);
+}
+
+.value-icon-container {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    position: relative;
+}
+
+.value-icon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color1);
+    border-radius: 50%;
+    font-size: 40px;
+    color: var(--color4);
+    box-shadow: 0 5px 15px rgba(36, 69, 93, 0.15);
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.value-icon::after {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, var(--color2), var(--color3));
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.value-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-.value-card:hover::before {
-    opacity: 1;
-}
-
-.value-icon-container {
-    position: relative;
-    width: 80px;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.icon-background {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    bottom: 0;
     border-radius: 50%;
-    background-color: var(--color1);
-    transition: transform 0.3s ease;
+    border: 2px dashed var(--color3);
+    opacity: 0.5;
+    animation: spin 30s linear infinite;
+    z-index: -1;
 }
 
-.value-card:hover .icon-background {
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.value-card:hover .value-icon {
+    color: var(--color3);
     transform: scale(1.1);
 }
 
-.icon-wrapper {
-    position: relative;
-    z-index: 1;
-    font-size: 35px;
-    transition: transform 0.3s ease;
+.icon-inner {
+    transition: all 0.4s ease;
 }
 
-.value-card:hover .icon-wrapper {
-    transform: scale(1.1) rotate(10deg);
-}
-
-/* Colores específicos para cada icono */
-.icon-handshake .icon-wrapper {
-    color: var(--icon-handshake);
-}
-
-.icon-star .icon-wrapper {
-    color: var(--icon-star);
-}
-
-.icon-shield .icon-wrapper {
-    color: var(--icon-shield);
-}
-
-.icon-bulb .icon-wrapper {
-    color: var(--icon-bulb);
-}
-
-.icon-users .icon-wrapper {
-    color: var(--icon-users);
-}
-
-.icon-chart .icon-wrapper {
-    color: var(--icon-chart);
-}
-
-.value-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+.value-card:hover .icon-inner {
+    transform: scale(1.1);
 }
 
 .value-title {
     font-size: 20px;
     font-weight: bold;
     color: var(--color4);
-    margin-bottom: 12px;
+    margin: 0 0 12px;
     transition: color 0.3s ease;
+    position: relative;
 }
 
 .value-card:hover .value-title {
@@ -218,33 +194,29 @@
     font-size: 16px;
     color: #555;
     line-height: 1.5;
-    flex: 1;
+    flex-grow: 1;
 }
 
 /* Responsive */
 @media (max-width: 800px) {
     .values-section {
-        padding: 30px 20px;
         margin-top: -10px;
-    }
-
-    .values-header {
-        margin-bottom: 30px;
+        padding: 30px 20px;
     }
 
     .values-title {
         font-size: 24px;
     }
 
-    .values-title::after {
+    .title-underline {
         width: 60px;
-        height: 3px;
-        bottom: -8px;
+        height: 2px;
+        margin-bottom: 15px;
     }
 
     .values-description {
         font-size: 16px;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
     }
 
     .values-grid {
@@ -253,24 +225,26 @@
     }
 
     .value-card {
-        padding: 16px;
         width: 100%;
-        border-radius: 12px;
+    }
+
+    .value-card-inner {
+        padding: 16px;
     }
 
     .value-icon-container {
         width: 60px;
         height: 60px;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
     }
 
-    .icon-wrapper {
+    .value-icon {
         font-size: 24px;
     }
 
     .value-title {
         font-size: 14px;
-        margin-bottom: 5px;
+        margin-bottom: 8px;
     }
 
     .value-text {
