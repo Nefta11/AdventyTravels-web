@@ -121,6 +121,33 @@ const Gallery = () => {
             location: "Chihuahua",
             date: "2024-03-01",
             photographer: "Andrea Castro"
+        },
+        {
+            id: 13,
+            src: "https://images.pexels.com/photos/12189242/pexels-photo-12189242.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            alt: "Campos de Agave",
+            category: "cultural",
+            location: "Tequila, Jalisco",
+            date: "2024-04-05",
+            photographer: "Rafael Méndez"
+        },
+        {
+            id: 14,
+            src: "https://images.pexels.com/photos/8399128/pexels-photo-8399128.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            alt: "Centro Histórico de Oaxaca",
+            category: "cultural",
+            location: "Oaxaca de Juárez, Oaxaca",
+            date: "2024-03-20",
+            photographer: "Lucía Hernández"
+        },
+        {
+            id: 15,
+            src: "https://images.pexels.com/photos/13650615/pexels-photo-13650615.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            alt: "Playa del Carmen",
+            category: "playas",
+            location: "Playa del Carmen, Quintana Roo",
+            date: "2024-02-12",
+            photographer: "Miguel Ángel Torres"
         }
     ];
 
