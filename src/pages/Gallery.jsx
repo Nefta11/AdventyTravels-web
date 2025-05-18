@@ -16,7 +16,7 @@ const Gallery = () => {
     const photos = [
         {
             id: 1,
-            src: "https://images.pexels.com/photos/3290067/pexels-photo-3290067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            src: "https://www.barcelo.com/guia-turismo/wp-content/uploads/2021/02/riviera-maya-tulum-castillo-888.jpg",
             alt: "Ruinas de Tulum",
             category: "cultural",
             location: "Tulum, Quintana Roo",
@@ -25,7 +25,7 @@ const Gallery = () => {
         },
         {
             id: 2,
-            src: "https://images.pexels.com/photos/1573471/pexels-photo-1573471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            src: "https://cenotecristalino.com/wp-content/uploads/2023/08/cenote-cristalino.jpeg",
             alt: "Cenote Cristalino",
             category: "naturaleza",
             location: "Riviera Maya, Quintana Roo",
@@ -34,7 +34,7 @@ const Gallery = () => {
         },
         {
             id: 3,
-            src: "https://images.pexels.com/photos/5339066/pexels-photo-5339066.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            src: "https://cdn.sanity.io/images/atvntylo/production/c5523e15a9221746d44966d37ad0a38071ebe244-1080x720.webp?w=1080&q=65&fit=clip&auto=format",
             alt: "Pirámide de Chichén Itzá",
             category: "cultural",
             location: "Chichén Itzá, Yucatán",
@@ -43,7 +43,7 @@ const Gallery = () => {
         },
         {
             id: 4,
-            src: "https://images.pexels.com/photos/1802255/pexels-photo-1802255.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            src: "https://icdn.descubro.mx/uploads/2017/08/Coba-Tulum-Playa-Paraiso-Maya-Vacanze-1024x768.jpg?strip=all&lossy=1&ssl=1",
             alt: "Playa Paraíso",
             category: "playas",
             location: "Tulum, Quintana Roo",
@@ -52,7 +52,7 @@ const Gallery = () => {
         },
         {
             id: 5,
-            src: "https://images.pexels.com/photos/5747136/pexels-photo-5747136.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            src: "https://blog.uber-cdn.com/cdn-cgi/image/width=2160,quality=80,onerror=redirect,format=auto/wp-content/uploads/2019/04/Lugares-cautivadores-para-conocer-en-San-Miguel-de-Allende.png",
             alt: "Calles de San Miguel de Allende",
             category: "cultural",
             location: "San Miguel de Allende, Guanajuato",
@@ -61,7 +61,7 @@ const Gallery = () => {
         },
         {
             id: 6,
-            src: "https://images.pexels.com/photos/4825701/pexels-photo-4825701.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            src: "https://venues.com.mx/wp-content/uploads/2024/05/Parque-Xcaret-Entradas-15.jpeg",
             alt: "Parque Xcaret",
             category: "aventura",
             location: "Playa del Carmen, Quintana Roo",
@@ -70,7 +70,7 @@ const Gallery = () => {
         },
         {
             id: 7,
-            src: "https://images.pexels.com/photos/1174732/pexels-photo-1174732.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            src: "https://randomtrip.es/wp-content/uploads/2024/07/zz-portada-cancun-playa-2.jpg",
             alt: "Playa en Cancún",
             category: "playas",
             location: "Cancún, Quintana Roo",
@@ -79,7 +79,7 @@ const Gallery = () => {
         },
         {
             id: 8,
-            src: "https://images.pexels.com/photos/12861657/pexels-photo-12861657.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            src: "https://energiatoday.com/wp-content/uploads/2022/05/Desierto-de-Sonora.jpg",
             alt: "Desierto de Sonora",
             category: "naturaleza",
             location: "Sonora",
@@ -88,7 +88,7 @@ const Gallery = () => {
         },
         {
             id: 9,
-            src: "https://images.pexels.com/photos/13090617/pexels-photo-13090617.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/99/ae/ef/varais-piscinas-naturais.jpg?w=700&h=400&s=1",
             alt: "Cascadas de Agua Azul",
             category: "naturaleza",
             location: "Chiapas",
@@ -97,7 +97,7 @@ const Gallery = () => {
         },
         {
             id: 10,
-            src: "https://images.pexels.com/photos/3987927/pexels-photo-3987927.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            src: "https://demo.clevercloudapp.com/repo/public/Noche-de-muertos_15_blog_b7f669cf80d15a807c0f1f469eabe6a5.webp",
             alt: "Día de los Muertos",
             category: "cultural",
             location: "Ciudad de México",
@@ -106,7 +106,7 @@ const Gallery = () => {
         },
         {
             id: 11,
-            src: "https://images.pexels.com/photos/7412095/pexels-photo-7412095.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            src: "https://tecolotito.elsiglodetorreon.com.mx/cdn-cgi/image/format=webp,width=773,quality=75/i/2020/06/1319646.jpeg",
             alt: "Mariachis en Garibaldi",
             category: "cultural",
             location: "Ciudad de México",
@@ -115,7 +115,7 @@ const Gallery = () => {
         },
         {
             id: 12,
-            src: "https://images.pexels.com/photos/13397460/pexels-photo-13397460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            src: "https://www.aletazulcompany.com/cdn/shop/articles/urique.jpg?v=1632841652&width=1000",
             alt: "Barrancas del Cobre",
             category: "montañas",
             location: "Chihuahua",
@@ -124,7 +124,7 @@ const Gallery = () => {
         },
         {
             id: 13,
-            src: "https://images.pexels.com/photos/12189242/pexels-photo-12189242.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            src: "https://wp.rutopia.com/wp-content/uploads/2021/11/Mexico-agave-fields.jpeg",
             alt: "Campos de Agave",
             category: "cultural",
             location: "Tequila, Jalisco",
@@ -133,7 +133,7 @@ const Gallery = () => {
         },
         {
             id: 14,
-            src: "https://images.pexels.com/photos/8399128/pexels-photo-8399128.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            src: "https://queretaro.quadratin.com.mx/www/wp-content/uploads/2024/06/WhatsApp-Image-2024-06-08-at-4.17.59-PM-1160x700.jpeg",
             alt: "Centro Histórico de Oaxaca",
             category: "cultural",
             location: "Oaxaca de Juárez, Oaxaca",
@@ -142,7 +142,7 @@ const Gallery = () => {
         },
         {
             id: 15,
-            src: "https://images.pexels.com/photos/13650615/pexels-photo-13650615.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            src: "https://cdn.sanity.io/images/atvntylo/production/4512065539db3fcdbc34cf03f59e90ff386d1c76-1080x720.webp?w=1080&q=65&fit=clip&auto=format",
             alt: "Playa del Carmen",
             category: "playas",
             location: "Playa del Carmen, Quintana Roo",
