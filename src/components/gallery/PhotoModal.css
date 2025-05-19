@@ -108,24 +108,6 @@
     font-weight: 600;
 }
 
-.toggle-details {
-    font-size: 0.85rem;
-    color: var(--primary-color, #7DC1BD);
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.3rem 0;
-    opacity: 0.8;
-    transition: opacity 0.2s;
-    font-weight: 500;
-}
-
-.toggle-details:hover,
-.toggle-details.active {
-    opacity: 1;
-    text-decoration: underline;
-}
-
 .category-tag {
     display: inline-block;
     padding: 0.4rem 1rem;

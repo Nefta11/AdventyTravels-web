@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { X } from 'lucide-react';
 import './PhotoModal.css';
@@ -7,7 +7,13 @@ const PhotoModal = ({ photo, onClose }) => {
     const modalRef = useRef(null);
     const [startY, setStartY] = useState(0);
     const [isClosing, setIsClosing] = useState(false);
-    const [showFullDetails, setShowFullDetails] = useState(false);
+
+    const handleClose = useCallback(() => {
+        setIsClosing(true);
+        setTimeout(() => {
+            onClose();
+        }, 300);
+    }, [onClose]);
 
     useEffect(() => {
         const handleKeyDown = (e) => {
@@ -17,7 +23,7 @@ const PhotoModal = ({ photo, onClose }) => {
         };
         document.addEventListener('keydown', handleKeyDown);
         return () => document.removeEventListener('keydown', handleKeyDown);
-    }, [onClose]);
+    }, [onClose, handleClose]);
 
     // Evita scroll del body cuando el modal está abierto
     useEffect(() => {
@@ -26,13 +32,6 @@ const PhotoModal = ({ photo, onClose }) => {
             document.body.style.overflow = 'auto';
         };
     }, []);
-
-    const handleClose = () => {
-        setIsClosing(true);
-        setTimeout(() => {
-            onClose();
-        }, 300);
-    };
 
     const handleModalClick = (e) => {
         if (modalRef.current && !modalRef.current.contains(e.target)) {
@@ -70,14 +69,10 @@ const PhotoModal = ({ photo, onClose }) => {
         }
     };
 
-    const toggleDetails = () => {
-        setShowFullDetails(!showFullDetails);
-    };
-
     return (
         <div className={`photo-modal ${isClosing ? 'closing' : ''}`} onClick={handleModalClick}>
             <div
-                className={`modal-content ${showFullDetails ? 'show-details' : ''}`}
+                className="modal-content"
                 ref={modalRef}
                 onTouchStart={handleTouchStart}
                 onTouchMove={handleTouchMove}
@@ -94,12 +89,6 @@ const PhotoModal = ({ photo, onClose }) => {
                 <div className="photo-details">
                     <div className="details-header">
                         <h2>{photo.alt}</h2>
-                        <button
-                            className={`toggle-details ${showFullDetails ? 'active' : ''}`}
-                            onClick={toggleDetails}
-                        >
-                            {showFullDetails ? 'Ver menos' : 'Ver más'}
-                        </button>
                     </div>
 
                     <div className="category-tag">{photo.category}</div>
