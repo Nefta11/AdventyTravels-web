@@ -1,0 +1,311 @@
+/* PhotoModal.css - Estilos exclusivos para el modal de fotos */
+.photo-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1100;
+    padding: 2vw;
+    animation: fadeIn 0.3s ease-out;
+    overscroll-behavior: contain;
+    transition: opacity 0.3s ease;
+}
+
+.photo-modal.closing {
+    opacity: 0;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background: var(--bg-color, #fff);
+    border-radius: 16px;
+    overflow: hidden;
+    animation: scaleIn 0.3s ease-out;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    max-height: 90vh;
+}
+
+.modal-content.show-details .photo-details {
+    max-height: 100vh;
+    padding-bottom: 2rem;
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    z-index: 10;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.close-modal:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: rotate(90deg) scale(1.08);
+}
+
+.modal-image {
+    width: 100%;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #000;
+    display: block;
+    max-height: 55vh;
+}
+
+.photo-details {
+    padding: 1.5rem 2rem 2rem 2rem;
+    background: var(--bg-color, #fff);
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    overflow: hidden;
+}
+
+.details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.photo-details h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color, #222);
+    text-align: left;
+    margin: 0;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+.toggle-details {
+    font-size: 0.85rem;
+    color: var(--primary-color, #7DC1BD);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.3rem 0;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    font-weight: 500;
+}
+
+.toggle-details:hover,
+.toggle-details.active {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.category-tag {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: var(--primary-color, #7DC1BD);
+    color: #fff;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    margin: 0.5rem 0 1rem 0;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.2rem;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.detail-item .label {
+    font-size: 0.85rem;
+    color: var(--text-color, #666);
+    opacity: 0.7;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.detail-item .value {
+    font-size: 1rem;
+    color: var(--text-color, #222);
+    font-weight: 500;
+    word-break: break-word;
+}
+
+.swipe-indicator {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 0;
+    color: var(--text-color, #666);
+    opacity: 0.7;
+    font-size: 0.8rem;
+}
+
+.swipe-line {
+    width: 36px;
+    height: 4px;
+    background: var(--border-color, #ddd);
+    border-radius: 2px;
+}
+
+@media (max-width: 992px) {
+    .modal-content {
+        width: 95%;
+    }
+    .modal-image {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .swipe-indicator {
+        display: flex;
+    }
+    .photo-modal {
+        padding: 0;
+        align-items: flex-end;
+    }
+    .modal-content {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 20px 20px 0 0;
+        height: auto;
+        max-height: 90vh;
+        margin-bottom: 0;
+        animation: slideUp 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    .modal-content.show-details {
+        max-height: 95vh;
+    }
+    .modal-image {
+        max-height: 45vh;
+        height: auto;
+    }
+    .modal-image img {
+        max-height: 45vh;
+    }
+    .photo-details {
+        padding: 1.2rem 1.5rem;
+        max-height: 45vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .photo-details h2 {
+        font-size: 1.3rem;
+        max-width: 85%;
+    }
+    .details-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        border-radius: 16px 16px 0 0;
+    }
+    .modal-image {
+        max-height: 40vh;
+    }
+    .modal-image img {
+        max-height: 40vh;
+    }
+    .photo-details {
+        padding: 1.2rem;
+        max-height: 50vh;
+    }
+    .photo-details h2 {
+        font-size: 1.2rem;
+        max-width: 80%;
+    }
+    .details-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .detail-item .label {
+        font-size: 0.75rem;
+    }
+    .detail-item .value {
+        font-size: 0.95rem;
+    }
+    .close-modal {
+        top: 0.7rem;
+        right: 0.7rem;
+        width: 36px;
+        height: 36px;
+    }
+    .category-tag {
+        font-size: 0.85rem;
+        padding: 0.35rem 0.9rem;
+        margin-bottom: 0.8rem;
+    }
+    .photo-modal {
+        background: rgba(0, 0, 0, 0.95);
+    }
+}
+
+.dark .modal-content {
+    background: var(--dark-bg);
+}
+.dark .swipe-line {
+    background: rgba(255, 255, 255, 0.2);
+}
+@media (prefers-reduced-motion: reduce) {
+    .close-modal,
+    .modal-content,
+    .modal-image {
+        transition: none;
+    }
+    .modal-content {
+        animation: none;
+    }
+    .photo-modal {
+        animation: none;
+    }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+@keyframes slideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}

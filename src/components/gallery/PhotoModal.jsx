@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import { X } from 'lucide-react';
+import './PhotoModal.css';
 
 const PhotoModal = ({ photo, onClose }) => {
     const modalRef = useRef(null);
