@@ -46,7 +46,7 @@ const AdventyDistributorSection = () => {
             <div className="neft-distributor-container">
                 <div className="neft-distributor-content">
                     <div className="neft-distributor-text-content neft-animated-element">
-                        <h2 className="neft-distributor-title">¿Qué es ser una Distribuidora ADVENTY?</h2>
+                        <h2 className="neft-distributor-title">¿Qué es ser una embajadora ADVENTY?</h2>
 
                         <p className="neft-distributor-description">
                             Es formar parte de una red de mujeres emprendedoras que generan ingresos vendiendo viajes,

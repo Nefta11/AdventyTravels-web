@@ -15,7 +15,7 @@ const AdventyTestimonialsSection = () => {
         <div className={`testimonial-section ${isVisible ? 'testimonial-visible' : ''}`}>
             <div className="testimonial-container">
                 <div className="testimonial-header">
-                    <h2 className="testimonial-title">Ellas ya están cambiando su vida con Distribuidoras ADVENTY</h2>
+                    <h2 className="testimonial-title">Ellas ya están cambiando su vida con Embajadoras ADVENTY</h2>
                     <div className="testimonial-subtitle-container">
                         <span className="testimonial-subtitle">Historias de éxito que te inspirarán</span>
                         <div className="testimonial-divider"></div>

@@ -16,7 +16,7 @@ const AdventyRevolutionBanner = () => {
             <div className="banner-content">
                 <h2 className="banner-title">ÚNETE A LA REVOLUCIÓN ADVENTY</h2>
                 <p className="banner-subtitle">Transforma tu vida, sé dueña de tu tiempo y de tus sueños.</p>
-                <p className="banner-cta">¡Conviértete en Distribuidora ADVENTY hoy!</p>
+                <p className="banner-cta">¡Conviértete en Embajadora ADVENTY hoy!</p>
             </div>
         </div>
     );

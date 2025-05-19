@@ -10,7 +10,7 @@ const AdventyDistribuidoraModal = ({ isOpen, onClose }) => {
                 <button className="adventy-modal-close" onClick={onClose}>
                     ✕
                 </button>
-                <h2 className="adventy-modal-title">Solicitud de alta de Registro de Distribuidor</h2>
+                <h2 className="adventy-modal-title">Solicitud de alta de Registro de Embajadora</h2>
                 <form className="adventy-modal-form">
                     <input
                         type="text"

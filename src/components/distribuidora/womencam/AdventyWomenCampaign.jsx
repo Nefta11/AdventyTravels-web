@@ -51,7 +51,7 @@ const AdventyWomenCampaign = () => {
         {
             icon: <FaUsers />,
             title: "Comunidad de apoyo",
-            description: "Conéctate con otras distribuidoras y crece en red."
+            description: "Conéctate con otras embajadoras y crece en red."
         },
         {
             icon: <FaChartLine />,
@@ -80,7 +80,7 @@ const AdventyWomenCampaign = () => {
                     <div className="campaign-divider"></div>
                 </div>
 
-                <h3 className="campaign-benefits-title">¿Qué obtienes como Distribuidora ADVENTY?</h3>
+                <h3 className="campaign-benefits-title">¿Qué obtienes como Embajadora ADVENTY?</h3>
 
                 <div className="campaign-benefits-grid">
                     {benefits.map((benefit, index) => (

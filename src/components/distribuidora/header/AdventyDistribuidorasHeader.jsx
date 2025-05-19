@@ -66,7 +66,7 @@ const AdventyDistribuidorasHeader = () => {
                     />
                     <h1 className="adventy-title">Convierte tu pasión por viajar en tu nuevo ingreso</h1>
                     <p className="adventy-subtitle">
-                        Sé parte de ADVENTY DISTRIBUIDORAS
+                        Sé parte de ADVENTY EMBAJADORAS
                     </p>
 
                     <div className="adventy-buttons">
@@ -74,13 +74,13 @@ const AdventyDistribuidorasHeader = () => {
                             className="adventy-button adventy-button-primary"
                             onClick={handleBeDistributor}
                         >
-                            QUIERO SER DISTRIBUIDORA
+                            QUIERO SER EMBAJADORA
                         </button>
                         <button
                             className="adventy-button adventy-button-secondary"
                             onClick={handleVerifyDistributor}
                         >
-                            VERIFICAR DISTRIBUIDORA
+                            VERIFICAR EMBAJADORA
                         </button>
                     </div>
                 </div>

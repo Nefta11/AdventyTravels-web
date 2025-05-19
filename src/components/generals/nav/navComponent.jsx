@@ -35,7 +35,7 @@ const NavComponent = () => {
 
     const newsSubmenuItems = [
         {
-            label: 'Distribuidoras Adventy',
+            label: 'Embajadoras Adventy',
             href: '/distribuidor',
             icon: FaFemale
         },
