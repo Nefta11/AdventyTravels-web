@@ -16,7 +16,7 @@ const experiences = [
         duration: "5 días",
         groupSize: "2 personas",
         rating: 4.9,
-        price: "17,098",
+        price: "7,098",
         category: "naturaleza",
         description: "Sumérgete en las aguas cristalinas de Tulum, explora cenotes místicos y descubre las majestuosas ruinas mayas junto al mar Caribe.",
         highlights: ["Ruinas mayas", "Cenotes secretos", "Playas paradisíacas", "Gastronomía local"]
