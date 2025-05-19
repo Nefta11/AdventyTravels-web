@@ -87,7 +87,7 @@ const AdventyDistributorSection = () => {
                         <div className="neft-main-image">
                             <div className="neft-image-overlay-filter"></div>
                             <img
-                                src="https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/images/Embajadora.png"
+                                src="https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/5815be18c649e6396fa95b1524225dfd3b96ad30/src/assets/images/Embajadora.png"
                                 alt="Mujer emprendedora con laptop"
                                 className="neft-image-primary"
                             />
