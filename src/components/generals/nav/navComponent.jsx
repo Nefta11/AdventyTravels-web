@@ -5,7 +5,7 @@ import { Link, useLocation } from 'react-router-dom';
 import logo from '../../../assets/images/LOGOTIPO_OFICIAL.webp';
 import LanguageSelector from '../lenguaje/LanguageSelector';
 import NavItem from './NavItem';
-import './NavComponent.css';
+import './navComponent.css';
 
 const NavComponent = () => {
     const { t } = useTranslation();
