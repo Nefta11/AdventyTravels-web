@@ -46,10 +46,9 @@ const WhatsAppButton = ({
         setTooltipVisible(false);
     };
 
-    // Handle direct click on WhatsApp button (when expanded is false)
+
     const handleDirectClick = () => {
         if (!expanded) {
-            // Track analytics event if needed
             console.log('WhatsApp button clicked');
         }
     };
