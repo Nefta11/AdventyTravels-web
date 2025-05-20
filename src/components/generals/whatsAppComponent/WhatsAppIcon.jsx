@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { FaWhatsapp } from 'react-icons/fa';
 import { IoClose } from 'react-icons/io5';
-import './WhatsAppIcon.css'; // Import your CSS styles
+import './WhatsAppIcon.css';
 
 const WhatsAppButton = ({
     phoneNumber = '5217716075321',
@@ -13,6 +13,19 @@ const WhatsAppButton = ({
     const [isVisible, setIsVisible] = useState(false);
     const [tooltipVisible, setTooltipVisible] = useState(false);
     const [expanded, setExpanded] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    // Detect mobile devices
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
 
     // Control initial appearance with slight delay for better UX
     useEffect(() => {
@@ -44,7 +57,7 @@ const WhatsAppButton = ({
     if (!isVisible) return null;
 
     return (
-        <div className={`whatsapp-container ${expanded ? 'expanded' : ''}`}>
+        <div className={`whatsapp-container ${expanded ? 'expanded' : ''} ${isMobile ? 'mobile' : ''}`}>
             {/* Expanded view with message preview */}
             {expanded && (
                 <div className="whatsapp-expanded-container">
