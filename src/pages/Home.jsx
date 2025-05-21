@@ -14,7 +14,7 @@ import SalesChannels from "../components/home/advantages/SalesChannels";
 import BankPromotions from "../components/home/banner/BankPromotions";
 import Certifications from "../components/home/banner/Certifications";
 import ShopButton from "../components/home/searchF/ShopButton";
-import AdventyPayButton from "../components/adventyPay/AdventyPayButton";
+import AdventyPayButton from "../components/adventyPay/button/AdventyPayButton";
 
 export default function Home() {
   const [showForm, setShowForm] = useState(true);
