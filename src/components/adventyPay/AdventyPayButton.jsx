@@ -1,9 +1,7 @@
-// AdventyPayButton.jsx
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { FaPlane } from 'react-icons/fa';
 import { BsCreditCard2Front } from 'react-icons/bs';
-import { MdOutlineArrowForward } from 'react-icons/md';
 import './AdventyPayButton.css';
 
 const AdventyPayButton = ({
