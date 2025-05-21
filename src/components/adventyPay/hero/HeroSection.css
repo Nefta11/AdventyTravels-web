@@ -1,9 +1,9 @@
 /* HeroSection.css */
-.hero-section {
+.hero-adventy-section {
     position: relative;
     background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
     color: var(--text-light);
-    padding: 100px 20px 80px;
+    padding: 120px 20px 80px;
     margin-top: 90px;
     overflow: hidden;
     display: flex;
@@ -14,7 +14,7 @@
 }
 
 /* Background decorative elements */
-.hero-bg-decoration {
+.hero-adventy-bg-decoration {
     position: absolute;
     top: 0;
     left: 0;
@@ -24,14 +24,14 @@
     z-index: 1;
 }
 
-.floating-shape {
+.hero-adventy-floating-shape {
     position: absolute;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.08);
-    animation: float 8s ease-in-out infinite;
+    animation: hero-adventy-float 8s ease-in-out infinite;
 }
 
-.shape-1 {
+.hero-adventy-shape-1 {
     width: 100px;
     height: 100px;
     top: 15%;
@@ -39,7 +39,7 @@
     animation-delay: 0s;
 }
 
-.shape-2 {
+.hero-adventy-shape-2 {
     width: 150px;
     height: 150px;
     top: 50%;
@@ -47,7 +47,7 @@
     animation-delay: 3s;
 }
 
-.shape-3 {
+.hero-adventy-shape-3 {
     width: 80px;
     height: 80px;
     bottom: 25%;
@@ -55,7 +55,7 @@
     animation-delay: 6s;
 }
 
-@keyframes float {
+@keyframes hero-adventy-float {
 
     0%,
     100% {
@@ -69,15 +69,15 @@
     }
 }
 
-.hero-content {
+.hero-adventy-content {
     flex: 1 1 500px;
     padding: 0 20px;
     z-index: 2;
     position: relative;
-    animation: slideInLeft 1.2s ease-out;
+    animation: hero-adventy-slideInLeft 1.2s ease-out;
 }
 
-@keyframes slideInLeft {
+@keyframes hero-adventy-slideInLeft {
     from {
         opacity: 0;
         transform: translateX(-60px);
@@ -89,7 +89,7 @@
     }
 }
 
-.hero-badge {
+.hero-adventy-badge {
     display: inline-flex;
     align-items: center;
     background: rgba(255, 255, 255, 0.2);
@@ -104,19 +104,19 @@
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
-.hero-badge:hover {
+.hero-adventy-badge:hover {
     background: rgba(255, 255, 255, 0.25);
     transform: translateY(-3px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
-.badge-icon {
+.hero-adventy-badge-icon {
     margin-right: 10px;
     font-size: 1.2rem;
     color: var(--accent);
 }
 
-.hero-title {
+.hero-adventy-title {
     font-size: 4.5rem;
     margin-bottom: 25px;
     color: white;
@@ -126,7 +126,7 @@
     position: relative;
 }
 
-.highlight-text {
+.hero-adventy-highlight-text {
     color: var(--accent);
     font-weight: 900;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
@@ -137,7 +137,7 @@
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
 }
 
-.subtitle {
+.hero-adventy-subtitle {
     font-size: 2.8rem;
     font-weight: 700;
     opacity: 0.95;
@@ -146,17 +146,17 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-.title-underline {
+.hero-adventy-title-underline {
     width: 120px;
     height: 5px;
     background: linear-gradient(90deg, var(--accent), var(--primary));
     border-radius: 3px;
     margin-top: 20px;
-    animation: expandWidth 2s ease-out 0.8s both;
+    animation: hero-adventy-expandWidth 2s ease-out 0.8s both;
     box-shadow: 0 2px 10px rgba(228, 159, 48, 0.4);
 }
 
-@keyframes expandWidth {
+@keyframes hero-adventy-expandWidth {
     from {
         width: 0;
     }
@@ -166,7 +166,7 @@
     }
 }
 
-.hero-description {
+.hero-adventy-description {
     font-size: 1.4rem;
     margin-bottom: 50px;
     max-width: 650px;
@@ -176,19 +176,20 @@
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-.hero-description strong {
+.hero-adventy-description strong {
     color: var(--accent);
     font-weight: 700;
 }
 
-.hero-buttons {
+.hero-adventy-buttons {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: flex-start;
 }
 
-.cta-button-main {
+.hero-adventy-cta-button-main {
     background: linear-gradient(45deg, var(--accent), #ffd700);
     color: white;
     padding: 18px 40px;
@@ -205,7 +206,7 @@
     overflow: hidden;
 }
 
-.cta-button-main::before {
+.hero-adventy-cta-button-main::before {
     content: '';
     position: absolute;
     top: 0;
@@ -216,51 +217,25 @@
     transition: left 0.6s;
 }
 
-.cta-button-main:hover::before {
+.hero-adventy-cta-button-main:hover::before {
     left: 100%;
 }
 
-.cta-button-main:hover {
+.hero-adventy-cta-button-main:hover {
     transform: translateY(-4px);
     box-shadow: 0 15px 40px rgba(228, 159, 48, 0.6);
     background: linear-gradient(45deg, #ffd700, var(--accent));
 }
 
-.whatsapp-button {
-    background: #25D366;
-    color: white;
-    padding: 15px 30px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
-}
-
-.whatsapp-button:hover {
-    background: #22c55e;
-    transform: translateY(-3px);
-    box-shadow: 0 12px 35px rgba(37, 211, 102, 0.4);
-}
-
-.whatsapp-icon {
-    font-size: 1.3rem;
-}
-
-.hero-image {
+.hero-adventy-image {
     flex: 1 1 500px;
     position: relative;
     padding: 0 20px;
     z-index: 2;
-    animation: slideInRight 1.2s ease-out 0.4s both;
+    animation: hero-adventy-slideInRight 1.2s ease-out 0.4s both;
 }
 
-@keyframes slideInRight {
+@keyframes hero-adventy-slideInRight {
     from {
         opacity: 0;
         transform: translateX(60px);
@@ -272,7 +247,7 @@
     }
 }
 
-.image-container {
+.hero-adventy-image-container {
     position: relative;
     border-radius: 25px;
     overflow: hidden;
@@ -280,19 +255,19 @@
     transition: all 0.4s ease;
 }
 
-.image-container:hover {
+.hero-adventy-image-container:hover {
     transform: scale(1.03);
     box-shadow: 0 30px 100px rgba(0, 0, 0, 0.5);
 }
 
-.image-container img {
+.hero-adventy-image-container img {
     width: 100%;
     height: 450px;
     object-fit: cover;
     display: block;
 }
 
-.image-overlay {
+.hero-adventy-image-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -302,183 +277,168 @@
     pointer-events: none;
 }
 
-/* Floating card mejorada */
-.floating-card {
+/* Floating card mejorada - Más visible en web */
+.hero-adventy-floating-card {
     position: absolute;
-    top: 25px;
-    right: -35px;
+    top: 20px;
+    right: -40px;
     background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(20px);
-    padding: 25px;
+    padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
-    width: 280px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    animation: cardFloat 4s ease-in-out infinite;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+    width: 320px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    animation: hero-adventy-cardFloat 4s ease-in-out infinite;
+    transform: scale(1.05);
 }
 
-@keyframes cardFloat {
+@keyframes hero-adventy-cardFloat {
 
     0%,
     100% {
-        transform: translateY(0px);
+        transform: translateY(0px) scale(1.05);
     }
 
     50% {
-        transform: translateY(-15px);
+        transform: translateY(-15px) scale(1.05);
     }
 }
 
-.card-header {
+.hero-adventy-card-header {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
     border-bottom: 2px solid rgba(0, 0, 0, 0.08);
 }
 
-.card-icon-wrapper {
+.hero-adventy-card-icon-wrapper {
     background: linear-gradient(45deg, var(--primary), var(--accent));
-    padding: 12px;
-    border-radius: 15px;
-    margin-right: 15px;
-    box-shadow: 0 8px 25px rgba(125, 193, 189, 0.3);
+    padding: 15px;
+    border-radius: 18px;
+    margin-right: 18px;
+    box-shadow: 0 10px 30px rgba(125, 193, 189, 0.4);
 }
 
-.card-icon {
+.hero-adventy-card-icon {
     color: white;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 
-.card-title {
+.hero-adventy-card-title {
     display: flex;
     flex-direction: column;
 }
 
-.card-name {
+.hero-adventy-card-name {
     font-weight: 800;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: var(--secondary);
     line-height: 1;
 }
 
-.card-subtitle {
-    font-size: 0.85rem;
+.hero-adventy-card-subtitle {
+    font-size: 0.9rem;
     color: var(--accent);
-    font-weight: 600;
-    margin-top: 2px;
+    font-weight: 700;
+    margin-top: 4px;
 }
 
-.card-features {
-    margin-bottom: 20px;
+.hero-adventy-card-features {
+    margin-bottom: 25px;
 }
 
-.card-feature {
+.hero-adventy-card-feature {
     display: flex;
     align-items: center;
-    margin-bottom: 12px;
-    font-size: 1rem;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
     color: var(--text-primary);
-    font-weight: 500;
+    font-weight: 600;
 }
 
-.check-wrapper {
+.hero-adventy-check-wrapper {
     background: linear-gradient(45deg, var(--accent), #ffd700);
-    padding: 6px;
+    padding: 8px;
     border-radius: 50%;
-    margin-right: 12px;
-    width: 24px;
-    height: 24px;
+    margin-right: 15px;
+    width: 28px;
+    height: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(228, 159, 48, 0.3);
+    box-shadow: 0 6px 20px rgba(228, 159, 48, 0.4);
 }
 
-.check-icon {
+.hero-adventy-check-icon {
     color: white;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 
-.card-cta {
+.hero-adventy-card-cta {
     text-align: center;
 }
 
-.card-button {
+.hero-adventy-card-button {
     background: linear-gradient(45deg, var(--accent), #ffd700);
     color: white;
-    padding: 12px 25px;
-    font-size: 1rem;
+    padding: 15px 30px;
+    font-size: 1.1rem;
     font-weight: 700;
     border: none;
-    border-radius: 25px;
+    border-radius: 30px;
     cursor: pointer;
     transition: all 0.3s ease;
     width: 100%;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    box-shadow: 0 8px 25px rgba(228, 159, 48, 0.3);
+    box-shadow: 0 10px 30px rgba(228, 159, 48, 0.4);
 }
 
-.card-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 35px rgba(228, 159, 48, 0.4);
+.hero-adventy-card-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(228, 159, 48, 0.5);
     background: linear-gradient(45deg, #ffd700, var(--accent));
-}
-
-/* Success indicator */
-.success-badge {
-    position: absolute;
-    bottom: 25px;
-    left: 25px;
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(15px);
-    padding: 15px 20px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-}
-
-.success-number {
-    display: block;
-    font-weight: 900;
-    font-size: 1.8rem;
-    color: var(--secondary);
-    line-height: 1;
-}
-
-.success-text {
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-    margin-top: 4px;
-    font-weight: 600;
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .hero-section {
+    .hero-adventy-section {
         min-height: 60vh;
         padding: 90px 20px 60px;
     }
 
-    .hero-title {
+    .hero-adventy-title {
         font-size: 3.8rem;
     }
 
-    .subtitle {
+    .hero-adventy-subtitle {
         font-size: 2.2rem;
     }
 
-    .floating-card {
-        width: 260px;
-        right: -25px;
+    .hero-adventy-floating-card {
+        width: 280px;
+        right: -30px;
+        transform: scale(1);
+    }
+
+    @keyframes hero-adventy-cardFloat {
+
+        0%,
+        100% {
+            transform: translateY(0px) scale(1);
+        }
+
+        50% {
+            transform: translateY(-15px) scale(1);
+        }
     }
 }
 
 @media (max-width: 768px) {
-    .hero-section {
+    .hero-adventy-section {
         flex-direction: column;
         text-align: center;
         min-height: auto;
@@ -486,95 +446,146 @@
         margin-top: 70px;
     }
 
-    .hero-content {
+    .hero-adventy-content {
         margin-bottom: 50px;
     }
 
-    .hero-title {
+    .hero-adventy-title {
         font-size: 3.2rem;
     }
 
-    .subtitle {
+    .hero-adventy-subtitle {
         font-size: 2rem;
     }
 
-    .hero-description {
+    .hero-adventy-description {
         font-size: 1.2rem;
         margin-bottom: 40px;
     }
 
-    .hero-buttons {
+    .hero-adventy-buttons {
         justify-content: center;
-        flex-direction: column;
-        gap: 15px;
     }
 
-    .cta-button-main,
-    .whatsapp-button {
+    .hero-adventy-cta-button-main {
         width: 100%;
         justify-content: center;
     }
 
-    .image-container img {
+    .hero-adventy-image-container img {
         height: 350px;
     }
 
-    .floating-card {
+    .hero-adventy-floating-card {
         position: relative;
         top: -50px;
         right: 0;
         margin: 0 auto;
-        width: 100%;
-        max-width: 300px;
+        width: 85%;
+        max-width: 280px;
+        padding: 20px;
+        transform: scale(0.9);
     }
 
-    .success-badge {
-        position: relative;
-        bottom: 0;
-        left: 0;
-        margin: 20px auto 0;
-        display: inline-block;
+    @keyframes hero-adventy-cardFloat {
+
+        0%,
+        100% {
+            transform: translateY(0px) scale(0.9);
+        }
+
+        50% {
+            transform: translateY(-10px) scale(0.9);
+        }
+    }
+
+    .hero-adventy-card-name {
+        font-size: 1.2rem;
+    }
+
+    .hero-adventy-card-feature {
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+    }
+
+    .hero-adventy-check-wrapper {
+        width: 24px;
+        height: 24px;
+        margin-right: 12px;
+    }
+
+    .hero-adventy-card-button {
+        padding: 12px 25px;
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 480px) {
-    .hero-section {
+    .hero-adventy-section {
         padding: 55px 10px 40px;
     }
 
-    .hero-title {
+    .hero-adventy-title {
         font-size: 2.5rem;
     }
 
-    .subtitle {
+    .hero-adventy-subtitle {
         font-size: 1.6rem;
     }
 
-    .hero-description {
+    .hero-adventy-description {
         font-size: 1.1rem;
     }
 
-    .cta-button-main {
+    .hero-adventy-cta-button-main {
         padding: 15px 30px;
         font-size: 1.1rem;
     }
 
-    .whatsapp-button {
-        padding: 12px 25px;
-        font-size: 1rem;
-    }
-
-    .floating-card {
-        padding: 20px;
-        width: 100%;
+    .hero-adventy-floating-card {
+        padding: 18px;
+        width: 95%;
         max-width: none;
+        transform: scale(0.85);
     }
 
-    .success-number {
-        font-size: 1.5rem;
+    @keyframes hero-adventy-cardFloat {
+
+        0%,
+        100% {
+            transform: translateY(0px) scale(0.85);
+        }
+
+        50% {
+            transform: translateY(-8px) scale(0.85);
+        }
     }
 
-    .success-text {
-        font-size: 0.75rem;
+    .hero-adventy-card-name {
+        font-size: 1.1rem;
+    }
+
+    .hero-adventy-card-subtitle {
+        font-size: 0.8rem;
+    }
+
+    .hero-adventy-card-feature {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+
+    .hero-adventy-check-wrapper {
+        width: 22px;
+        height: 22px;
+        margin-right: 10px;
+    }
+
+    .hero-adventy-check-icon {
+        font-size: 0.8rem;
+    }
+
+    .hero-adventy-card-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
 }
