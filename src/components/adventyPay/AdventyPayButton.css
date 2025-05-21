@@ -1,0 +1,429 @@
+/* Features section */
+.tooltip-features {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 12px;
+    padding: 0 5px;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 11px;
+    color: var(--adventy-dark);
+    background-color: rgba(244, 244, 244, 0.7);
+    border-radius: 8px;
+    padding: 6px 4px;
+    width: 30%;
+    transition: transform 0.2s;
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.feature-item:hover {
+    transform: translateY(-2px);
+    background-color: rgba(244, 244, 244, 0.9);
+}
+
+.feature-item svg {
+    font-size: 15px;
+    color: var(--adventy-primary);
+    margin-bottom: 3px;
+}
+
+/* AdventyPayButton.css */
+:root {
+    /* Usando la paleta de colores proporcionada */
+    --adventy-primary: #7DC1BD;
+    /* color2: verde azulado */
+    --adventy-secondary: #24455D;
+    /* color4: azul oscuro */
+    --adventy-tertiary: #F4F4F4;
+    /* color1: gris claro */
+    --adventy-light: #F4F4F4;
+    /* color1: gris claro */
+    --adventy-dark: #24455D;
+    /* color4: azul oscuro */
+    --adventy-highlight: #E49F30;
+    /* color3: ámbar/naranja */
+    --adventy-shadow: 0 10px 25px -5px rgba(125, 193, 189, 0.5);
+    --adventy-shadow-hover: 0 20px 25px -5px rgba(125, 193, 189, 0.6);
+    --adventy-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --adventy-radius: 16px;
+}
+
+/* Contenedor principal */
+.adventy-pay-container {
+    position: fixed;
+    bottom: 50px;
+    left: 120px;
+    /* Posicionado a la izquierda */
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Alineado a la izquierda */
+}
+
+/* Botón principal */
+.adventy-pay-button {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    border-radius: var(--adventy-radius);
+    background: linear-gradient(135deg, var(--adventy-primary), var(--adventy-secondary));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--adventy-shadow);
+    transition: var(--adventy-transition);
+    text-decoration: none;
+    animation: adventyEntrance 0.6s ease-out;
+    overflow: hidden;
+    border: 2px solid var(--adventy-light);
+}
+
+.adventy-pay-button:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: var(--adventy-shadow-hover);
+}
+
+.adventy-pay-button:active {
+    transform: scale(0.95);
+}
+
+.adventy-pay-button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 60%);
+    transform: rotate(45deg);
+    animation: shimmer 3s infinite linear;
+}
+
+/* Contenedor del icono */
+.adventy-pay-icon-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Icono principal */
+.adventy-pay-icon {
+    font-size: 1.8rem;
+    z-index: 2;
+}
+
+/* Icono de rayo (animado) */
+.adventy-pay-lightning {
+    position: absolute;
+    font-size: 0.8rem;
+    color: var(--adventy-highlight);
+    top: -5px;
+    right: -5px;
+    filter: drop-shadow(0 0 3px var(--adventy-highlight));
+    animation: pulse 1.5s infinite;
+}
+
+/* Badge "CONOCE ADVENTY PAY" */
+.adventy-pay-badge {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--adventy-highlight);
+    color: var(--adventy-dark);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    animation: badgeBounce 1s ease-out, badgePulse 2s infinite 1s;
+    white-space: nowrap;
+    min-width: 140px;
+    text-align: center;
+    letter-spacing: 0.3px;
+}
+
+.badge-arrow {
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: var(--adventy-highlight);
+    filter: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.07));
+}
+
+/* Tooltip al hacer hover */
+.adventy-pay-tooltip {
+    position: absolute;
+    bottom: 75px;
+    /* Posición arriba del botón */
+    left: 50%;
+    /* Centrado horizontalmente */
+    transform: translateX(-50%);
+    /* Centrado perfecto */
+    width: 260px;
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Fondo blanco translúcido */
+    backdrop-filter: blur(5px);
+    /* Efecto de desenfoque */
+    border-radius: var(--adventy-radius);
+    overflow: hidden;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+    animation: tooltipFadeUp 0.3s forwards;
+    z-index: 999;
+    border-bottom: 4px solid var(--adventy-highlight);
+}
+
+/* Flecha apuntando al botón */
+.adventy-pay-tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.tooltip-content {
+    padding: 12px;
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.tooltip-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(36, 69, 93, 0.1);
+    padding-bottom: 8px;
+}
+
+.tooltip-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(135deg, var(--adventy-primary), var(--adventy-secondary));
+    border-radius: 6px;
+    color: white;
+    margin-right: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tooltip-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--adventy-dark);
+}
+
+.tooltip-description {
+    font-size: 13px;
+    color: var(--adventy-dark);
+    margin: 8px 0 12px;
+    line-height: 1.4;
+    position: relative;
+    padding: 0 2px;
+    text-align: center;
+    font-weight: 500;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+.highlight {
+    color: var(--adventy-secondary);
+    font-weight: 700;
+    text-shadow: none;
+}
+
+
+.arrow-icon {
+    margin-left: 6px;
+    transition: transform 0.2s;
+    animation: bounceX 1s infinite;
+}
+
+/* Animaciones */
+@keyframes adventyEntrance {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) translateY(20px);
+    }
+
+    70% {
+        transform: scale(1.1) translateY(-8px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes badgeBounce {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-10px);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(5px);
+    }
+
+    80% {
+        transform: translateX(-50%) translateY(-2px);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+@keyframes badgePulse {
+    0% {
+        transform: translateX(-50%) scale(1);
+    }
+
+    50% {
+        transform: translateX(-50%) scale(1.05);
+    }
+
+    100% {
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        transform: rotate(0) translate(-50%, -50%);
+    }
+
+    100% {
+        transform: rotate(360deg) translate(-50%, -50%);
+    }
+}
+
+@keyframes tooltipFadeUp {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+@keyframes bounceX {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(3px);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .adventy-pay-container {
+        bottom: 25px;
+        left: 15px;
+    }
+
+    .adventy-pay-button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .adventy-pay-icon {
+        font-size: 1.3rem;
+    }
+
+    .adventy-pay-tooltip {
+        width: 220px;
+        bottom: 65px;
+        transform: translateX(-50%) translateY(10px);
+    }
+
+    .adventy-pay-badge {
+        font-size: 11px;
+        min-width: 130px;
+        padding: 5px 10px;
+        top: -38px;
+    }
+
+    .tooltip-content {
+        padding: 10px;
+    }
+
+    .feature-item {
+        font-size: 10px;
+        padding: 5px 2px;
+    }
+
+    .feature-item svg {
+        font-size: 13px;
+    }
+
+    .tooltip-description {
+        font-size: 11px;
+        margin: 6px 0 10px;
+    }
+}
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .adventy-pay-container {
+        bottom: 20px;
+        left: 15px;
+    }
+
+    .adventy-pay-button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .adventy-pay-tooltip {
+        bottom: 5px;
+        left: 65px;
+        width: 220px;
+    }
+
+    .tooltip-content {
+        padding: 12px;
+    }
+}
