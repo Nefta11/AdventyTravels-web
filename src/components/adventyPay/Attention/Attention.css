@@ -1,0 +1,100 @@
+/* Attention.css */
+.attention-section {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: calc(var(--section-spacing) / 2) 20px;
+}
+
+.attention-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.attention-image {
+    flex: 1 1 400px;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.attention-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.attention-text {
+    flex: 1 1 500px;
+}
+
+.attention-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.attention-text p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.attention-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.attention-feature {
+    display: flex;
+    align-items: center;
+    background-color: var(--light);
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.attention-feature:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.attention-feature .feature-icon {
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .attention-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .attention-text p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .attention-text h2 {
+        font-size: 1.6rem;
+    }
+
+    .attention-feature {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}

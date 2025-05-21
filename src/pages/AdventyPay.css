@@ -1,0 +1,107 @@
+/* AdventyPay.css */
+:root {
+    --headerPat-primary-color: #E49F30;
+    /* Ámbar/naranja */
+    --headerPat-secondary-color: #24455D;
+    /* Azul oscuro */
+    --headerPat-white: #ffffff;
+    --headerPat-gray-light: #f8f8f8;
+    --headerPat-gray-dark: #333333;
+    --headerPat-shadow-soft: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --headerPat-shadow-medium: 0 6px 12px rgba(0, 0, 0, 0.15);
+    --headerPat-transition-quick: all 0.3s ease;
+    --headerPat-transition-medium: all 0.5s ease;
+
+    --color1: #F4F4F4;
+    /* Gris claro */
+    --color2: #7DC1BD;
+    /* Verde azulado */
+    --color3: #E49F30;
+    /* Ámbar/naranja */
+    --color4: #24455D;
+    /* Azul oscuro */
+
+    --primary: var(--color2);
+    --secondary: var(--color4);
+    --accent: var(--color3);
+    --light: var(--color1);
+    --dark: var(--color4);
+
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --text-light: var(--color1);
+    --text-dark: var(--color4);
+
+    --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.12);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.15);
+
+    --border-radius-sm: 6px;
+    --border-radius-md: 10px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 24px;
+
+    --transition: all 0.3s ease;
+
+    --section-spacing: 80px;
+    --container-padding: 20px;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+    color: var(--text-primary);
+    line-height: 1.6;
+    background-color: var(--light);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--secondary);
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+    border: none;
+    transition: var(--transition);
+}
+
+.adventy-pay-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

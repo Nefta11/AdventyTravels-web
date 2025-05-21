@@ -1,9 +1,29 @@
+import HeroSection from '../components/adventyPay/hero/HeroSection';
+import WhatIs from '../components/adventyPay/WhatIs/WhatIs';
+import HowItWorks from '../components/adventyPay/HowItWorks/HowItWorks';
+import Services from '../components/adventyPay/services/Services';
+import Advantages from '../components/adventyPay/Advantage/Advantages';
+import Attention from '../components/adventyPay/Attention/Attention';
+import PaymentMethods from '../components/adventyPay/PaymentMethods/PaymentMethods';
+import CTA from '../components/adventyPay/CTA/CTA';
+import NavComponent from '../components/generals/nav/navComponent';
+import FooterComponent from "../components/generals/footer/FooterComponent";
+import './AdventyPay.css';
+
 const AdventyPay = () => {
     return (
-        <div style={{ minHeight: '60vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-            <h1>Adventy Pay</h1>
-            <p>¡Bienvenido a Adventy Pay! Aquí podrás conocer más sobre nuestro sistema de pago flexible y seguro para tus viajes.</p>
-        </div>
+        <>
+            <NavComponent />
+            <HeroSection />
+            <WhatIs />
+            <HowItWorks />
+            <Services />
+            <Advantages />
+            <Attention />
+            <PaymentMethods />
+            <CTA />
+            <FooterComponent />
+        </>
     );
 };
 
