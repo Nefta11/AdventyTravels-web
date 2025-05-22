@@ -1,37 +1,3 @@
-/* Features section */
-.tooltip-features {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 12px;
-    padding: 0 5px;
-}
-
-.feature-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 11px;
-    color: var(--adventy-dark);
-    background-color: rgba(244, 244, 244, 0.7);
-    border-radius: 8px;
-    padding: 6px 4px;
-    width: 30%;
-    transition: transform 0.2s;
-    backdrop-filter: blur(2px);
-    border: 1px solid rgba(255, 255, 255, 0.8);
-}
-
-.feature-item:hover {
-    transform: translateY(-2px);
-    background-color: rgba(244, 244, 244, 0.9);
-}
-
-.feature-item svg {
-    font-size: 15px;
-    color: var(--adventy-primary);
-    margin-bottom: 3px;
-}
-
 /* AdventyPayButton.css */
 :root {
     /* Usando la paleta de colores proporcionada */
@@ -84,6 +50,13 @@
     animation: adventyEntrance 0.6s ease-out;
     overflow: hidden;
     border: 2px solid var(--adventy-light);
+
+    /* Optimizaciones para móviles */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
 }
 
 .adventy-pay-button:hover {
@@ -251,7 +224,6 @@
     text-shadow: none;
 }
 
-
 .arrow-icon {
     margin-left: 6px;
     transition: transform 0.2s;
@@ -365,12 +337,38 @@
     }
 
     .adventy-pay-button {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
+        /* Área de toque más grande para mejor usabilidad */
+        min-width: 60px;
+        min-height: 60px;
+        /* Mejorar la interacción táctil */
+        position: relative;
+    }
+
+    .adventy-pay-button::after {
+        content: '';
+        position: absolute;
+        top: -8px;
+        left: -8px;
+        right: -8px;
+        bottom: -8px;
+        /* Área invisible expandida para touch */
+    }
+
+    .adventy-pay-button:hover {
+        /* Deshabilitar hover en móviles */
+        transform: none;
+        box-shadow: var(--adventy-shadow);
+    }
+
+    .adventy-pay-button:active {
+        transform: scale(0.9);
+        background: linear-gradient(135deg, #6bb1ad, #1e3a47);
     }
 
     .adventy-pay-icon {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
     .adventy-pay-tooltip {
@@ -390,15 +388,6 @@
         padding: 10px;
     }
 
-    .feature-item {
-        font-size: 10px;
-        padding: 5px 2px;
-    }
-
-    .feature-item svg {
-        font-size: 13px;
-    }
-
     .tooltip-description {
         font-size: 11px;
         margin: 6px 0 10px;
@@ -413,8 +402,8 @@
     }
 
     .adventy-pay-button {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
     }
 
     .adventy-pay-tooltip {
@@ -425,5 +414,30 @@
 
     .tooltip-content {
         padding: 12px;
+    }
+}
+
+/* Optimización específica para dispositivos táctiles */
+@media (hover: none) and (pointer: coarse) {
+    .adventy-pay-button {
+        /* Asegurar que el botón funcione bien en dispositivos táctiles */
+        cursor: pointer;
+        /* Expandir área de toque */
+        padding: 8px;
+        margin: -8px;
+    }
+
+    .adventy-pay-button:hover {
+        transform: none;
+        box-shadow: var(--adventy-shadow);
+    }
+
+    .adventy-pay-button:active {
+        transform: scale(0.95);
+        transition: transform 0.1s ease;
+    }
+
+    .adventy-pay-tooltip {
+        display: none;
     }
 }
