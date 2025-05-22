@@ -1,105 +1,293 @@
 /* PaymentMethods.css */
+:root {
+    --color1: #F4F4F4;
+    --color2: #7DC1BD;
+    --color3: #E49F30;
+    --color4: #24455D;
+}
+
 .payment-methods-section {
-    background-color: var(--light);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background: linear-gradient(135deg, var(--color1) 0%, #ffffff 100%);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.payment-methods-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: calc(var(--section-spacing) / 2) 20px;
+    height: 100%;
+    background: radial-gradient(circle at 20% 80%, rgba(125, 193, 189, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(228, 159, 48, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.payment-methods-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: 40px;
-    width: 100%;
+    margin-bottom: 60px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .section-header h2 {
-    font-size: 2.2rem;
-    margin-bottom: 15px;
+    font-size: 3rem;
+    color: var(--color4);
+    margin-bottom: 24px;
+    font-weight: 700;
+    line-height: 1.2;
     position: relative;
-    display: inline-block;
 }
 
 .section-header h2::after {
     content: '';
     position: absolute;
-    bottom: -8px;
+    bottom: -12px;
     left: 50%;
     transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background-color: var(--accent);
-    border-radius: 3px;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color2), var(--color3));
+    border-radius: 2px;
 }
 
 .section-header p {
-    max-width: 1200px;
-    margin: 0 auto;
-    font-size: 1.1rem;
-    color: var(--text-secondary);
+    font-size: 1.25rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 400;
 }
 
 .payment-methods-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-    width: 100%;
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 0 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 20px;
 }
 
 .payment-method-card {
-    background-color: white;
-    padding: 30px;
-    border-radius: var(--border-radius-md);
-    box-shadow: var(--shadow-sm);
-    transition: var(--transition);
+    background: white;
+    border-radius: 20px;
+    padding: 36px 28px;
+    box-shadow: 0 4px 20px rgba(36, 69, 93, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(125, 193, 189, 0.1);
+    display: flex;
+    flex-direction: column;
     height: 100%;
+}
+
+.payment-method-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color2), var(--color3));
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.payment-method-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(36, 69, 93, 0.15);
+}
+
+.payment-method-card:hover::before {
+    transform: scaleX(1);
+}
+
+.highlight-card {
+    background: linear-gradient(135deg, white 0%, rgba(125, 193, 189, 0.02) 100%);
+    border: 2px solid var(--color2);
+    box-shadow: 0 8px 30px rgba(125, 193, 189, 0.2);
+    position: relative;
+}
+
+.highlight-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: linear-gradient(135deg, var(--color3), #d4941a);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.method-icon-wrapper {
+    width: 72px;
+    height: 72px;
+    background: linear-gradient(135deg, var(--color2), #6bb1ad);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 12px rgba(125, 193, 189, 0.3);
+}
+
+.highlight-icon {
+    background: linear-gradient(135deg, var(--color3), #d4941a);
+    box-shadow: 0 4px 12px rgba(228, 159, 48, 0.3);
+}
+
+.payment-method-card:hover .method-icon-wrapper {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 20px rgba(125, 193, 189, 0.4);
+}
+
+.highlight-card:hover .method-icon-wrapper {
+    box-shadow: 0 8px 20px rgba(228, 159, 48, 0.4);
+}
+
+.method-icon {
+    font-size: 2rem;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.card-content {
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
 
-.payment-method-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-md);
-}
-
-.highlight-card {
-    border: 2px solid var(--primary);
-    box-shadow: 0 0 15px rgba(125, 193, 189, 0.3);
-}
-
-.method-icon {
-    font-size: 2.5rem;
-    color: var(--primary);
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-}
-
-.highlight-card .method-icon {
-    color: var(--accent);
-}
-
 .payment-method-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-    color: var(--text-dark);
+    font-size: 1.4rem;
+    color: var(--color4);
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.3;
 }
 
 .payment-method-card p {
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-    margin-bottom: 0;
+    font-size: 1rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
     flex-grow: 1;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
+/* Animaciones de entrada */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.payment-method-card {
+    animation: slideUp 0.6s ease forwards;
+}
+
+.payment-method-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.payment-method-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.payment-method-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.payment-method-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.payment-method-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.payment-method-card:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .payment-methods-grid {
+        gap: 24px;
+    }
+}
+
+@media (max-width: 968px) {
+    .payment-methods-section {
+        padding: 80px 0;
+    }
+
     .section-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .section-header p {
+        font-size: 1.1rem;
+    }
+
+    .payment-methods-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .payment-method-card {
+        padding: 28px 24px;
+    }
+
+    .method-icon-wrapper {
+        width: 64px;
+        height: 64px;
+    }
+
+    .method-icon {
         font-size: 1.8rem;
+    }
+
+    .payment-method-card h3 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .payment-methods-section {
+        padding: 60px 0;
+    }
+
+    .payment-methods-container {
+        padding: 0 16px;
+    }
+
+    .section-header {
+        margin-bottom: 48px;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
     }
 
     .section-header p {
@@ -108,15 +296,35 @@
 
     .payment-methods-grid {
         grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .section-header h2 {
-        font-size: 1.6rem;
+        gap: 16px;
     }
 
     .payment-method-card {
-        padding: 20px 15px;
+        padding: 24px 20px;
+    }
+
+    .method-icon-wrapper {
+        width: 56px;
+        height: 56px;
+    }
+
+    .method-icon {
+        font-size: 1.6rem;
+    }
+
+    .payment-method-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+
+    .payment-method-card p {
+        font-size: 0.95rem;
+    }
+
+    .highlight-badge {
+        top: 12px;
+        right: 12px;
+        padding: 3px 8px;
+        font-size: 0.7rem;
     }
 }
