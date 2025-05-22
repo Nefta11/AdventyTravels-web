@@ -35,6 +35,11 @@ const NavComponent = () => {
 
     const newsSubmenuItems = [
         {
+            label: 'Adventy Pay',
+            href: '/AdventyPay',
+            icon: FaMoneyBillWave
+        },
+        {
             label: 'Embajadoras Adventy',
             href: '/distribuidor',
             icon: FaFemale
@@ -43,11 +48,6 @@ const NavComponent = () => {
             label: 'Adventy Partners',
             href: '/partners',
             icon: FaHandshake
-        },
-        {
-            label: 'Adventy Pay',
-            href: '/AdventyPay',
-            icon: FaMoneyBillWave 
         }
     ];
 
