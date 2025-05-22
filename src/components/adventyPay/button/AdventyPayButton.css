@@ -51,7 +51,7 @@
     overflow: hidden;
     border: 2px solid var(--adventy-light);
 
-    /* Optimizaciones para móviles */
+    /* Optimizaciones básicas */
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -59,12 +59,43 @@
     touch-action: manipulation;
 }
 
-.adventy-pay-button:hover {
+/* Estilos específicos para botón móvil */
+.mobile-button {
+    /* Resetear estilos de button */
+    border: 2px solid var(--adventy-light);
+    outline: none;
+    font-family: inherit;
+
+    /* Optimizaciones táctiles específicas */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    /* Área táctil más generosa */
+    min-width: 64px;
+    min-height: 64px;
+    padding: 8px;
+    margin: -8px;
+}
+
+.mobile-button:focus {
+    outline: none;
+    box-shadow: var(--adventy-shadow-hover);
+}
+
+.mobile-button:active {
+    transform: scale(0.95);
+    background: linear-gradient(135deg, #6bb1ad, #1e3a47);
+    transition: all 0.1s ease;
+}
+
+/* Estilos específicos para enlace desktop */
+.desktop-button:hover {
     transform: scale(1.05) translateY(-5px);
     box-shadow: var(--adventy-shadow-hover);
 }
 
-.adventy-pay-button:active {
+.desktop-button:active {
     transform: scale(0.95);
 }
 
@@ -339,30 +370,22 @@
     .adventy-pay-button {
         width: 60px;
         height: 60px;
-        /* Área de toque más grande para mejor usabilidad */
         min-width: 60px;
         min-height: 60px;
-        /* Mejorar la interacción táctil */
-        position: relative;
     }
 
-    .adventy-pay-button::after {
-        content: '';
-        position: absolute;
-        top: -8px;
-        left: -8px;
-        right: -8px;
-        bottom: -8px;
-        /* Área invisible expandida para touch */
+    /* Específico para botón móvil */
+    .mobile-button {
+        width: 60px;
+        height: 60px;
+        min-width: 60px;
+        min-height: 60px;
+        /* Área táctil expandida */
+        padding: 12px;
+        margin: -12px;
     }
 
-    .adventy-pay-button:hover {
-        /* Deshabilitar hover en móviles */
-        transform: none;
-        box-shadow: var(--adventy-shadow);
-    }
-
-    .adventy-pay-button:active {
+    .mobile-button:active {
         transform: scale(0.9);
         background: linear-gradient(135deg, #6bb1ad, #1e3a47);
     }
@@ -371,10 +394,12 @@
         font-size: 1.5rem;
     }
 
+    /* OCULTAR TOOLTIP COMPLETAMENTE EN MÓVILES */
     .adventy-pay-tooltip {
-        width: 220px;
-        bottom: 65px;
-        transform: translateX(-50%) translateY(10px);
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
     }
 
     .adventy-pay-badge {
@@ -382,15 +407,6 @@
         min-width: 130px;
         padding: 5px 10px;
         top: -38px;
-    }
-
-    .tooltip-content {
-        padding: 10px;
-    }
-
-    .tooltip-description {
-        font-size: 11px;
-        margin: 6px 0 10px;
     }
 }
 
@@ -401,43 +417,42 @@
         left: 60px;
     }
 
-    .adventy-pay-button {
-        width: 60px;
-        height: 60px;
+    .adventy-pay-button,
+    .mobile-button {
+        width: 56px;
+        height: 56px;
+        min-width: 56px;
+        min-height: 56px;
     }
 
+    /* ASEGURAR QUE TOOLTIP NO APAREZCA */
     .adventy-pay-tooltip {
-        bottom: 5px;
-        left: 65px;
-        width: 220px;
-    }
-
-    .tooltip-content {
-        padding: 12px;
+        display: none !important;
+        visibility: hidden !important;
     }
 }
 
 /* Optimización específica para dispositivos táctiles */
 @media (hover: none) and (pointer: coarse) {
-    .adventy-pay-button {
-        /* Asegurar que el botón funcione bien en dispositivos táctiles */
+
+    /* Asegurar que solo funcione el botón móvil */
+    .mobile-button {
         cursor: pointer;
-        /* Expandir área de toque */
-        padding: 8px;
-        margin: -8px;
+        -webkit-tap-highlight-color: rgba(125, 193, 189, 0.3);
+        tap-highlight-color: rgba(125, 193, 189, 0.3);
     }
 
-    .adventy-pay-button:hover {
-        transform: none;
-        box-shadow: var(--adventy-shadow);
-    }
-
-    .adventy-pay-button:active {
+    .mobile-button:active {
         transform: scale(0.95);
         transition: transform 0.1s ease;
+        background: linear-gradient(135deg, #6bb1ad, #1e3a47);
     }
 
+    /* TOOLTIP COMPLETAMENTE DESHABILITADO */
     .adventy-pay-tooltip {
-        display: none;
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
     }
 }
