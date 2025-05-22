@@ -47,7 +47,6 @@ const resources = {
         aboutUs: "¿Quiénes Somos?",
         privacyPolicy: "Políticas de Privacidad",
         financing: "Financiamiento",
-        jobBoard: "Bolsa de trabajo",
         visas: "Visas",
         customerService: "Atención al cliente",
         blog: "Blog"
@@ -406,7 +405,6 @@ const resources = {
         aboutUs: "About Us",
         privacyPolicy: "Privacy Policy",
         financing: "Financing",
-        jobBoard: "Job Board",
         visas: "Visas",
         customerService: "Customer Service",
         blog: "Blog"
@@ -764,7 +762,6 @@ const resources = {
         aboutUs: "Qui sommes-nous?",
         privacyPolicy: "Politique de confidentialité",
         financing: "Financement",
-        jobBoard: "Offres d'emploi",
         visas: "Visas",
         customerService: "Service client",
         blog: "Blog"

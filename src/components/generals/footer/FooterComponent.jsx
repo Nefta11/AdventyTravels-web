@@ -3,7 +3,7 @@ import "./Footer.css";
 import {
     FaInstagram, FaFacebook, FaWhatsapp, FaTiktok,
     FaPhone, FaEnvelope, FaMapMarkerAlt, FaArrowRight,
-    FaInfo, FaShieldAlt, FaCreditCard, FaBriefcase,
+    FaInfo, FaShieldAlt, FaCreditCard,
     FaPassport, FaHeadset, FaNewspaper
 } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
@@ -104,7 +104,7 @@ const FooterComponent = () => {
                 <div className="footer-section footer-links">
                     <h3 className="footer-title">Enlaces</h3>
                     <ul>
-                        <li onClick={() => window.location.href = '/nosotros'} style={{cursor: 'pointer'}}>
+                        <li onClick={() => window.location.href = '/nosotros'} style={{ cursor: 'pointer' }}>
                             <FaInfo className="link-icon" />
                             <span>{t('footer.aboutUs')}</span>
                             <FaArrowRight className="arrow-icon" />
@@ -114,7 +114,7 @@ const FooterComponent = () => {
                             <span>{t('footer.privacyPolicy')}</span>
                             <FaArrowRight className="arrow-icon" />
                         </li>
-                        <li onClick={() => window.location.href = '/AdventyPay'} style={{cursor: 'pointer'}}>
+                        <li onClick={() => window.location.href = '/AdventyPay'} style={{ cursor: 'pointer' }}>
                             <FaCreditCard className="link-icon" />
                             <span>{t('footer.financing')}</span>
                             <FaArrowRight className="arrow-icon" />
@@ -126,11 +126,6 @@ const FooterComponent = () => {
                     <h3 className="footer-title">Servicios</h3>
                     <ul>
                         <li>
-                            <FaBriefcase className="link-icon" />
-                            <span>{t('footer.jobBoard')}</span>
-                            <FaArrowRight className="arrow-icon" />
-                        </li>
-                        <li>
                             <FaPassport className="link-icon" />
                             <span>{t('footer.visas')}</span>
                             <FaArrowRight className="arrow-icon" />
@@ -140,7 +135,7 @@ const FooterComponent = () => {
                             <span>{t('footer.customerService')}</span>
                             <FaArrowRight className="arrow-icon" />
                         </li>
-                        <li>
+                        <li onClick={() => window.location.href = '/blog'} style={{ cursor: 'pointer' }}>
                             <FaNewspaper className="link-icon" />
                             <span>{t('footer.blog')}</span>
                             <FaArrowRight className="arrow-icon" />
