@@ -18,14 +18,17 @@ const WhoWeAre = () => {
             { threshold: 0.2 }
         );
 
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
+        const currentSection = sectionRef.current;
+
+        if (currentSection) {
+            observer.observe(currentSection);
         }
 
         return () => {
-            if (sectionRef.current) {
-                observer.disconnect();
+            if (currentSection) {
+                observer.unobserve(currentSection);
             }
+            observer.disconnect();
         };
     }, []);
 
