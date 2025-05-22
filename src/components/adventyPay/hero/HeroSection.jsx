@@ -30,9 +30,16 @@ const HeroSection = () => {
                 </p>
 
                 <div className="hero-adventy-buttons">
-                    <button className="hero-adventy-cta-button-main">
-                        <span>Solicita tu plan ahora</span>
-                    </button>
+                    <a
+                        href="https://wa.me/5217716075321?text=Hola,%20quiero%20solicitar%20un%20plan%20Adventy%20Pay!"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ textDecoration: 'none' }}
+                    >
+                        <button className="hero-adventy-cta-button-main">
+                            <span>Solicita tu plan ahora</span>
+                        </button>
+                    </a>
                 </div>
             </div>
 
