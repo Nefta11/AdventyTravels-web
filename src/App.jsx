@@ -12,7 +12,7 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 import Distribuidor from './pages/Distribuidor';
 import Partners from './pages/Partners';
 import VerifyDistributor from './pages/VerifyDistributor';
-import AdventyPay from './pages/AdventyPay';
+import AdventyPay from './pages/adventyPay/AdventyPay';
 
 function App() {
   return (

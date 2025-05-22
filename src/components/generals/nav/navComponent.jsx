@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { FaBars, FaTimes, FaHome, FaSuitcase, FaInfoCircle, FaBlog, FaImages, FaEnvelope, FaUsers, FaHandshake, FaFemale } from 'react-icons/fa';
+import { FaMoneyBillWave, FaBars, FaTimes, FaHome, FaSuitcase, FaInfoCircle, FaBlog, FaImages, FaEnvelope, FaUsers, FaHandshake, FaFemale } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../../../assets/images/LOGOTIPO_OFICIAL.webp';
@@ -43,6 +43,11 @@ const NavComponent = () => {
             label: 'Adventy Partners',
             href: '/partners',
             icon: FaHandshake
+        },
+        {
+            label: 'Adventy Pay',
+            href: '/AdventyPay',
+            icon: FaMoneyBillWave 
         }
     ];
 
@@ -124,7 +129,7 @@ const NavComponent = () => {
                         />
                         <NavItem
                             icon={isMobile ? FaUsers : null}
-                            label="News"
+                            label="Nuevos Lanzamientos"
                             menuOpen={menuOpen}
                             submenu
                             submenuItems={newsSubmenuItems}
