@@ -252,7 +252,7 @@
     overflow: hidden;
     position: relative;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-    background: url('https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/feature/AdventyPay/src/assets/photos/video1.gif') center/cover no-repeat;
+    background: url('https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/photos/video1.gif') center/cover no-repeat;
     transition: transform 0.5s ease;
 }
 
