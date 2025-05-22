@@ -1,0 +1,592 @@
+/* HeroSection.css */
+.hero-adventy-section {
+    position: relative;
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+    color: var(--text-light);
+    padding: 50px 20px 70px;
+    margin-top: 90px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-adventy-bg-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-adventy-floating-shape {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    animation: hero-adventy-float 8s ease-in-out infinite;
+}
+
+.hero-adventy-shape-1 {
+    width: 100px;
+    height: 100px;
+    top: 15%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.hero-adventy-shape-2 {
+    width: 150px;
+    height: 150px;
+    top: 50%;
+    right: 10%;
+    animation-delay: 3s;
+}
+
+.hero-adventy-shape-3 {
+    width: 80px;
+    height: 80px;
+    bottom: 25%;
+    left: 25%;
+    animation-delay: 6s;
+}
+
+@keyframes hero-adventy-float {
+
+    0%,
+    100% {
+        transform: translateY(0px) scale(1);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: translateY(-20px) scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+.hero-adventy-content {
+    flex: 1 1 500px;
+    padding: 0 20px;
+    z-index: 2;
+    position: relative;
+    animation: hero-adventy-slideInLeft 1.2s ease-out;
+}
+
+@keyframes hero-adventy-slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hero-adventy-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.hero-adventy-badge:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.hero-adventy-badge-icon {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: var(--accent);
+}
+
+.hero-adventy-title {
+    font-size: 4.5rem;
+    margin-bottom: 25px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+    position: relative;
+}
+
+.hero-adventy-highlight-text {
+    color: var(--accent);
+    font-weight: 900;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(45deg, var(--accent), #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.hero-adventy-subtitle {
+    font-size: 2.8rem;
+    font-weight: 700;
+    opacity: 0.95;
+    margin-top: 10px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.hero-adventy-title-underline {
+    width: 120px;
+    height: 5px;
+    background: linear-gradient(90deg, var(--accent), var(--primary));
+    border-radius: 3px;
+    margin-top: 20px;
+    animation: hero-adventy-expandWidth 2s ease-out 0.8s both;
+    box-shadow: 0 2px 10px rgba(228, 159, 48, 0.4);
+}
+
+@keyframes hero-adventy-expandWidth {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 120px;
+    }
+}
+
+.hero-adventy-description {
+    font-size: 1.4rem;
+    margin-bottom: 50px;
+    max-width: 650px;
+    opacity: 0.95;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.hero-adventy-description strong {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.hero-adventy-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.hero-adventy-cta-button-main {
+    background: linear-gradient(45deg, var(--accent), #ffd700);
+    color: white;
+    padding: 18px 40px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(228, 159, 48, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-adventy-cta-button-main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s;
+}
+
+.hero-adventy-cta-button-main:hover::before {
+    left: 100%;
+}
+
+.hero-adventy-cta-button-main:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(228, 159, 48, 0.6);
+    background: linear-gradient(45deg, #ffd700, var(--accent));
+}
+
+.hero-adventy-image {
+    flex: 1 1 500px;
+    position: relative;
+    padding: 0 20px;
+    z-index: 2;
+    animation: hero-adventy-slideInRight 1.2s ease-out 0.4s both;
+}
+
+@keyframes hero-adventy-slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hero-adventy-image-container {
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease;
+}
+
+.hero-adventy-image-container:hover {
+    transform: scale(1.03);
+    box-shadow: 0 30px 100px rgba(0, 0, 0, 0.5);
+}
+
+.hero-adventy-image-container img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-adventy-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(36, 69, 93, 0.2), rgba(125, 193, 189, 0.15));
+    pointer-events: none;
+}
+
+/* Floating card mejorada - Más visible en web */
+.hero-adventy-floating-card {
+    position: absolute;
+    top: 35px;
+    right: 25px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+    width: 320px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    animation: hero-adventy-cardFloat 4s ease-in-out infinite;
+    transform: scale(1.05);
+}
+
+@keyframes hero-adventy-cardFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px) scale(1.05);
+    }
+
+    50% {
+        transform: translateY(-15px) scale(1.05);
+    }
+}
+
+.hero-adventy-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+}
+
+.hero-adventy-card-icon-wrapper {
+    background: linear-gradient(45deg, var(--primary), var(--accent));
+    padding: 15px;
+    border-radius: 18px;
+    margin-right: 18px;
+    box-shadow: 0 10px 30px rgba(125, 193, 189, 0.4);
+}
+
+.hero-adventy-card-icon {
+    color: white;
+    font-size: 1.8rem;
+}
+
+.hero-adventy-card-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-adventy-card-name {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--secondary);
+    line-height: 1;
+}
+
+.hero-adventy-card-subtitle {
+    font-size: 0.9rem;
+    color: var(--accent);
+    font-weight: 700;
+    margin-top: 4px;
+}
+
+.hero-adventy-card-features {
+    margin-bottom: 25px;
+}
+
+.hero-adventy-card-feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.hero-adventy-check-wrapper {
+    background: linear-gradient(45deg, var(--accent), #ffd700);
+    padding: 8px;
+    border-radius: 50%;
+    margin-right: 15px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(228, 159, 48, 0.4);
+}
+
+.hero-adventy-check-icon {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.hero-adventy-card-cta {
+    text-align: center;
+}
+
+.hero-adventy-card-button {
+    background: linear-gradient(45deg, var(--accent), #ffd700);
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 10px 30px rgba(228, 159, 48, 0.4);
+}
+
+.hero-adventy-card-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(228, 159, 48, 0.5);
+    background: linear-gradient(45deg, #ffd700, var(--accent));
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-adventy-section {
+        min-height: 60vh;
+        padding: 90px 20px 60px;
+    }
+
+    .hero-adventy-title {
+        font-size: 3.8rem;
+    }
+
+    .hero-adventy-subtitle {
+        font-size: 2.2rem;
+    }
+
+    .hero-adventy-floating-card {
+        width: 280px;
+        right: -30px;
+        transform: scale(1);
+    }
+
+    @keyframes hero-adventy-cardFloat {
+
+        0%,
+        100% {
+            transform: translateY(0px) scale(1);
+        }
+
+        50% {
+            transform: translateY(-15px) scale(1);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-adventy-section {
+        flex-direction: column;
+        text-align: center;
+        min-height: auto;
+        padding: 80px 20px 60px;
+        margin-top: 70px;
+    }
+
+    .hero-adventy-content {
+        margin-bottom: 50px;
+    }
+
+    .hero-adventy-title {
+        font-size: 3.2rem;
+    }
+
+    .hero-adventy-subtitle {
+        font-size: 2rem;
+    }
+
+    .hero-adventy-description {
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+    }
+
+    .hero-adventy-buttons {
+        justify-content: center;
+    }
+
+    .hero-adventy-cta-button-main {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-adventy-image-container img {
+        height: 350px;
+    }
+
+    .hero-adventy-floating-card {
+        position: relative;
+        top: -50px;
+        right: 0;
+        margin: 0 auto;
+        width: 85%;
+        max-width: 280px;
+        padding: 20px;
+        transform: scale(0.9);
+    }
+
+    @keyframes hero-adventy-cardFloat {
+
+        0%,
+        100% {
+            transform: translateY(0px) scale(0.9);
+        }
+
+        50% {
+            transform: translateY(-10px) scale(0.9);
+        }
+    }
+
+    .hero-adventy-card-name {
+        font-size: 1.2rem;
+    }
+
+    .hero-adventy-card-feature {
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+    }
+
+    .hero-adventy-check-wrapper {
+        width: 24px;
+        height: 24px;
+        margin-right: 12px;
+    }
+
+    .hero-adventy-card-button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-adventy-section {
+        padding: 35px 10px 40px;
+    }
+
+    .hero-adventy-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-adventy-subtitle {
+        font-size: 1.6rem;
+    }
+
+    .hero-adventy-description {
+        font-size: 1.1rem;
+    }
+
+    .hero-adventy-cta-button-main {
+        padding: 15px 30px;
+        font-size: 1.1rem;
+    }
+
+    .hero-adventy-floating-card {
+        margin-bottom: -50px;
+        margin-top: -190px;
+        padding: 18px;
+        width: 95%;
+        max-width: none;
+        transform: scale(0.85);
+    }
+
+    @keyframes hero-adventy-cardFloat {
+
+        0%,
+        100% {
+            transform: translateY(0px) scale(0.85);
+        }
+
+        50% {
+            transform: translateY(-8px) scale(0.85);
+        }
+    }
+
+    .hero-adventy-card-name {
+        font-size: 1.1rem;
+    }
+
+    .hero-adventy-card-subtitle {
+        font-size: 0.8rem;
+    }
+
+    .hero-adventy-card-feature {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+
+    .hero-adventy-check-wrapper {
+        width: 22px;
+        height: 22px;
+        margin-right: 10px;
+    }
+
+    .hero-adventy-check-icon {
+        font-size: 0.8rem;
+    }
+
+    .hero-adventy-card-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}

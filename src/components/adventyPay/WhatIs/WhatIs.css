@@ -1,0 +1,115 @@
+.what-is-section {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: calc(var(--section-spacing) / 2) 20px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent);
+    border-radius: 3px;
+}
+
+.content-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.text-content {
+    flex: 1 1 500px;
+    padding: 0 20px;
+}
+
+.text-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.2em;
+}
+
+.highlight {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.features-grid {
+    flex: 1 1 400px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.feature-card {
+    background-color: var(--light);
+    padding: 25px 20px;
+    border-radius: var(--border-radius-md);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.feature-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .feature-card {
+        padding: 20px 15px;
+    }
+}

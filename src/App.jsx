@@ -12,6 +12,7 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 import Distribuidor from './pages/Distribuidor';
 import Partners from './pages/Partners';
 import VerifyDistributor from './pages/VerifyDistributor';
+import AdventyPay from './pages/adventyPay/AdventyPay';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function RoutesWithAnimation() {
       <Route path="/distribuidor" element={<Distribuidor />} />
       <Route path="/partners" element={<Partners />} />
       <Route path="/verify-distributor" element={<VerifyDistributor />} />
+      <Route path="/AdventyPay" element={<AdventyPay />} />
       <Route path="*" element={<Error404 />} />
     </Routes>
   );
