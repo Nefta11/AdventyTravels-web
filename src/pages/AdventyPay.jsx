@@ -5,7 +5,6 @@ import Services from '../components/adventyPay/services/Services';
 import Advantages from '../components/adventyPay/Advantage/Advantages';
 import Attention from '../components/adventyPay/Attention/Attention';
 import PaymentMethods from '../components/adventyPay/PaymentMethods/PaymentMethods';
-import CTA from '../components/adventyPay/CTA/CTA';
 import NavComponent from '../components/generals/nav/navComponent';
 import FooterComponent from "../components/generals/footer/FooterComponent";
 import './AdventyPay.css';
@@ -21,7 +20,6 @@ const AdventyPay = () => {
             <Advantages />
             <Attention />
             <PaymentMethods />
-            <CTA />
             <FooterComponent />
         </>
     );
