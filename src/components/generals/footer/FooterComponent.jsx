@@ -104,7 +104,7 @@ const FooterComponent = () => {
                 <div className="footer-section footer-links">
                     <h3 className="footer-title">Enlaces</h3>
                     <ul>
-                        <li>
+                        <li onClick={() => window.location.href = '/nosotros'} style={{cursor: 'pointer'}}>
                             <FaInfo className="link-icon" />
                             <span>{t('footer.aboutUs')}</span>
                             <FaArrowRight className="arrow-icon" />
@@ -114,7 +114,7 @@ const FooterComponent = () => {
                             <span>{t('footer.privacyPolicy')}</span>
                             <FaArrowRight className="arrow-icon" />
                         </li>
-                        <li>
+                        <li onClick={() => window.location.href = '/AdventyPay'} style={{cursor: 'pointer'}}>
                             <FaCreditCard className="link-icon" />
                             <span>{t('footer.financing')}</span>
                             <FaArrowRight className="arrow-icon" />
