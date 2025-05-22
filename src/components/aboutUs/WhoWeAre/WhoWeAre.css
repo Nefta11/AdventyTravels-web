@@ -110,7 +110,7 @@
     overflow: hidden;
     position: relative;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    background: url('https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/feature/AdventyPay/src/assets/photos/5.jpg') center/cover no-repeat;
+    background: url('') center/cover no-repeat;
     transform: translateX(-30px);
     opacity: 0;
     transition: var(--wwa-transition);

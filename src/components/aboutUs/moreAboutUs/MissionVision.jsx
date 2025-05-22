@@ -12,7 +12,8 @@ const MissionVision = () => {
     const images = [
         "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/feature/AdventyPay/src/assets/photos/1.jpg",
         "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/feature/AdventyPay/src/assets/photos/2.jpg",
-        "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/feature/AdventyPay/src/assets/photos/3.jpg"
+        "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/feature/AdventyPay/src/assets/photos/3.jpg",
+        "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/feature/AdventyPay/src/assets/photos/5.jpg",
     ];
 
     const [currentImage, setCurrentImage] = useState(0);
