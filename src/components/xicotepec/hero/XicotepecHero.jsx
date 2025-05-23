@@ -20,12 +20,12 @@ const XicotepecHero = () => {
             alt: "Virgen monumental"
         },
         {
-            url: "https://revistageon.unillanos.edu.co/index.php/geon/article/download/499/936/4474",
-            alt: "Neblina matutina entre las montañas de Xicotepec"
+            url: "https://sicomnoticias.mx/wp-content/uploads/2021/02/NOTA-SESI%C3%93N-VIRTUAL-DECLARAN-XICO-HEROICA-CIUDAD-DE-XICOTEPEC-3.jpg",
+            alt: "Entrada xicotepec"
         },
         {
-            url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&h=1080&fit=crop&q=80",
-            alt: "Bosques y naturaleza exuberante de Xicotepec"
+            url: "https://escapadas.mexicodesconocido.com.mx/wp-content/uploads/2020/10/ACUEDUCTO-HACIENDA-DE-COCOYOC.jpg",
+            alt: "Const Xico"
         }
     ];
 
