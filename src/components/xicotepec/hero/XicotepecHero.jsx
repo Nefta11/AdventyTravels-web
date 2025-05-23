@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { FaFacebookF, FaInstagram, FaWhatsapp, FaCloud, FaTint, FaGlobeAmericas } from 'react-icons/fa';
+import { FaCloud, FaTint, FaGlobeAmericas } from 'react-icons/fa';
 import { IoMdSearch } from 'react-icons/io';
 import { HiMenu } from 'react-icons/hi';
 import axios from 'axios';
@@ -110,19 +110,6 @@ const XicotepecHero = () => {
                         />
                     ))}
                     <div className="xicotepec-hero-overlay"></div>
-
-                    {/* Indicadores del carrusel */}
-                    <div className="xicotepec-carousel-indicators">
-                        {backgroundImages.map((_, index) => (
-                            <button
-                                key={index}
-                                className={`xicotepec-indicator ${index === currentImageIndex ? 'active' : ''
-                                    }`}
-                                onClick={() => setCurrentImageIndex(index)}
-                                aria-label={`Ver imagen ${index + 1}`}
-                            />
-                        ))}
-                    </div>
                 </div>
 
                 <div className="xicotepec-hero-content">
@@ -169,37 +156,6 @@ const XicotepecHero = () => {
                                     <span className="xicotepec-humidity-label">Humedad</span>
                                     <span className="xicotepec-humidity-value">{weather.humidity !== null ? `${weather.humidity}%` : '--'}</span>
                                 </div>
-                            </div>
-                        </div>
-
-                        {/* Social Share */}
-                        <div className="xicotepec-social">
-                            <span className="xicotepec-social-label">Compartir:</span>
-                            <div className="xicotepec-social-buttons">
-                                <button
-                                    className="xicotepec-social-btn xicotepec-facebook"
-                                    style={{ background: '#1877f2', color: '#fff' }}
-                                    onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`, '_blank')}
-                                    aria-label="Compartir en Facebook"
-                                >
-                                    <FaFacebookF />
-                                </button>
-                                <button
-                                    className="xicotepec-social-btn xicotepec-instagram"
-                                    style={{ background: '#E4405F', color: '#fff' }}
-                                    onClick={() => window.open('https://www.instagram.com/', '_blank')}
-                                    aria-label="Ver en Instagram"
-                                >
-                                    <FaInstagram />
-                                </button>
-                                <button
-                                    className="xicotepec-social-btn xicotepec-whatsapp"
-                                    style={{ background: '#25d366', color: '#fff' }}
-                                    onClick={() => window.open(`https://wa.me/?text=¡Descubre%20Xicotepec%20de%20Juárez,%20Puebla!%20${encodeURIComponent(window.location.href)}`, '_blank')}
-                                    aria-label="Compartir en WhatsApp"
-                                >
-                                    <FaWhatsapp />
-                                </button>
                             </div>
                         </div>
                     </div>
