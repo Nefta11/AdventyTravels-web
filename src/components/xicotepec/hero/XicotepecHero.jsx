@@ -107,7 +107,7 @@ const XicotepecHero = () => {
 
                     {/* Title */}
                     <h1 className="xicotepec-title">
-                        Xicotepec
+                        Xicotepec de Juárez
                         <div className="xicotepec-title-underline"></div>
                     </h1>
 
