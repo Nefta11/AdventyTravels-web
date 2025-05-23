@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { FaFacebookF, FaTwitter, FaWhatsapp, FaCloud, FaTint, FaGlobeAmericas } from 'react-icons/fa';
 import { IoMdSearch } from 'react-icons/io';
 import { HiMenu } from 'react-icons/hi';
+import axios from 'axios';
 import './XicotepecHero.css';
 
 const XicotepecHero = () => {
@@ -30,6 +31,7 @@ const XicotepecHero = () => {
     ];
 
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [weather, setWeather] = useState({ temp: null, condition: '', humidity: null, icon: null });
 
     // Cambio automático de imágenes cada 4 segundos
     useEffect(() => {
@@ -41,6 +43,30 @@ const XicotepecHero = () => {
 
         return () => clearInterval(interval);
     }, [backgroundImages.length]);
+
+    useEffect(() => {
+        const fetchWeather = async () => {
+            try {
+                const apiKey = '82ab5004f81d26a35fa4e53e117e0038';
+                const lat = 20.2797;
+                const lon = -97.9611;
+                const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=es`;
+                const response = await axios.get(url);
+                const data = response.data;
+                setWeather({
+                    temp: Math.round(data.main.temp),
+                    condition: data.weather[0].description,
+                    humidity: data.main.humidity,
+                    icon: data.weather[0].icon
+                });
+            } catch {
+                setWeather({ temp: '--', condition: 'No disponible', humidity: '--', icon: null });
+            }
+        };
+        fetchWeather();
+        const interval = setInterval(fetchWeather, 4 * 60 * 60 * 1000); // 4 horas
+        return () => clearInterval(interval);
+    }, []);
 
     return (
         <div className="xicotepec-page">
@@ -123,13 +149,17 @@ const XicotepecHero = () => {
                         <div className="xicotepec-weather">
                             <div className="xicotepec-weather-main">
                                 <div className="xicotepec-weather-icon">
-                                    <FaCloud />
+                                    {weather.icon ? (
+                                        <img src={`https://openweathermap.org/img/wn/${weather.icon}@2x.png`} alt={weather.condition} style={{ width: 48, height: 48 }} />
+                                    ) : (
+                                        <FaCloud />
+                                    )}
                                 </div>
                                 <div className="xicotepec-weather-temp">
-                                    <span className="xicotepec-temp-value">25°</span>
+                                    <span className="xicotepec-temp-value">{weather.temp !== null ? `${weather.temp}°` : '--'}</span>
                                     <div className="xicotepec-weather-info">
                                         <span className="xicotepec-weather-label">Clima Actual</span>
-                                        <span className="xicotepec-weather-condition">Nubes</span>
+                                        <span className="xicotepec-weather-condition">{weather.condition || '--'}</span>
                                     </div>
                                 </div>
                             </div>
@@ -137,7 +167,7 @@ const XicotepecHero = () => {
                                 <FaTint className="xicotepec-humidity-icon" />
                                 <div className="xicotepec-humidity-info">
                                     <span className="xicotepec-humidity-label">Humedad</span>
-                                    <span className="xicotepec-humidity-value">62%</span>
+                                    <span className="xicotepec-humidity-value">{weather.humidity !== null ? `${weather.humidity}%` : '--'}</span>
                                 </div>
                             </div>
                         </div>
