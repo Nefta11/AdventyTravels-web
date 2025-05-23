@@ -138,7 +138,7 @@ const NavComponent = () => {
                         <NavItem
                             to="/xicotepec"
                             icon={isMobile ? GiVillage : null}
-                            label="Conoce Xicotepec"
+                            label="¡Xicotepec!❤️"
                             menuOpen={menuOpen}
                             isActive={location.pathname === '/xicotepec'}
                         />
