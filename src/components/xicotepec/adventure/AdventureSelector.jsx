@@ -1,178 +1,140 @@
-import React, { useState } from 'react';
+import { useState, useRef } from 'react';
 import {
     FaBed,
+    FaMountain,
+    FaHotel,
     FaCamera,
-    FaBuilding,
     FaChevronLeft,
     FaChevronRight
 } from 'react-icons/fa';
-import { GiFireworkRocket, GiPisaTower } from 'react-icons/gi';
+import { GiFireworkRocket } from 'react-icons/gi';
 import './AdventureSelector.css';
 
 const AdventureSelector = () => {
-    const [currentStartIndex, setCurrentStartIndex] = useState(0);
+    const [activeIndex, setActiveIndex] = useState(0);
+    const scrollContainerRef = useRef(null);
 
     const adventures = [
         {
             id: 1,
+            icon: FaBed,
             title: "Vive su magia",
-            subtitle: "Experiencias únicas",
-            icon: <FaBed />,
-            color: "#E91E63",
-            bgGradient: "linear-gradient(135deg, #E91E63 0%, #AD1457 100%)"
+            description: "Experimenta la esencia única del lugar"
         },
         {
             id: 2,
-            title: "Atractivos",
-            subtitle: "Actividades",
-            icon: <GiPisaTower />,
-            color: "#2B5A87",
-            bgGradient: "linear-gradient(135deg, #2B5A87 0%, #1A365D 100%)"
+            icon: FaMountain,
+            title: "Atractivos Actividades",
+            description: "Descubre aventuras emocionantes"
         },
         {
             id: 3,
+            icon: GiFireworkRocket,
             title: "Festividades",
-            subtitle: "Celebraciones",
-            icon: <GiFireworkRocket />,
-            color: "#9C27B0",
-            bgGradient: "linear-gradient(135deg, #9C27B0 0%, #6A1B66 100%)"
+            description: "Celebra tradiciones locales"
         },
         {
             id: 4,
+            icon: FaHotel,
             title: "Hoteles",
-            subtitle: "Hospedaje",
-            icon: <FaBuilding />,
-            color: "#4CAF50",
-            bgGradient: "linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%)"
+            description: "Hospédate con comodidad"
         },
         {
             id: 5,
+            icon: FaCamera,
             title: "Tours",
-            subtitle: "Recorridos",
-            icon: <FaCamera />,
-            color: "#FF9800",
-            bgGradient: "linear-gradient(135deg, #FF9800 0%, #E65100 100%)"
+            description: "Explora con guías expertos"
         }
     ];
 
-    const nextSlide = () => {
-        setCurrentStartIndex((prev) => {
-            const maxIndex = adventures.length - getVisibleItems();
-            return prev >= maxIndex ? 0 : prev + 1;
-        });
+    const scrollLeft = () => {
+        if (scrollContainerRef.current) {
+            const container = scrollContainerRef.current;
+            const scrollAmount = container.clientWidth / 2;
+            container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        }
     };
 
-    const prevSlide = () => {
-        setCurrentStartIndex((prev) => {
-            const maxIndex = adventures.length - getVisibleItems();
-            return prev <= 0 ? maxIndex : prev - 1;
-        });
+    const scrollRight = () => {
+        if (scrollContainerRef.current) {
+            const container = scrollContainerRef.current;
+            const scrollAmount = container.clientWidth / 2;
+            container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
     };
 
-    const getVisibleItems = () => {
-        const width = window.innerWidth;
-        if (width < 640) return 1;
-        if (width < 1024) return 2;
-        return 3;
-    };
-
-    const handleAdventureClick = (adventure) => {
-        console.log(`Seleccionado: ${adventure.title}`);
-        // Aquí puedes agregar la lógica de navegación
-        // Por ejemplo: navigate(`/categoria/${adventure.id}`)
+    const handleItemClick = (index) => {
+        setActiveIndex(index);
     };
 
     return (
         <section className="adventure-selector">
             <div className="adventure-container">
-                {/* Título */}
+                {/* Título principal */}
                 <div className="adventure-header">
                     <h2 className="adventure-title">
                         SELECCIONA TU PRÓXIMA AVENTURA
                     </h2>
-                    <div className="adventure-title-underline"></div>
                 </div>
 
-                {/* Carrusel */}
-                <div className="adventure-carousel">
-                    {/* Botón anterior */}
+                {/* Contenedor principal con flechas */}
+                <div className="adventure-wrapper">
+                    {/* Flecha izquierda */}
                     <button
-                        className="adventure-nav-btn adventure-nav-prev"
-                        onClick={prevSlide}
-                        aria-label="Aventura anterior"
+                        className="adventure-arrow adventure-arrow-left"
+                        onClick={scrollLeft}
+                        aria-label="Anterior"
                     >
                         <FaChevronLeft />
                     </button>
 
-                    {/* Grid de aventuras */}
-                    <div className="adventure-grid">
-                        <div
-                            className="adventure-track"
-                            style={{
-                                transform: `translateX(-${currentStartIndex * (100 / getVisibleItems())}%)`
-                            }}
-                        >
-                            {adventures.map((adventure) => (
-                                <div
-                                    key={adventure.id}
-                                    className="adventure-card"
-                                    onClick={() => handleAdventureClick(adventure)}
-                                    style={{ '--card-color': adventure.color }}
-                                    tabIndex={0}
-                                    role="button"
-                                    onKeyDown={(e) => {
-                                        if (e.key === 'Enter' || e.key === ' ') {
-                                            e.preventDefault();
-                                            handleAdventureClick(adventure);
-                                        }
-                                    }}
-                                >
+                    {/* Contenedor scrolleable */}
+                    <div
+                        className="adventure-scroll-container"
+                        ref={scrollContainerRef}
+                    >
+                        <div className="adventure-items">
+                            {adventures.map((adventure, index) => {
+                                const IconComponent = adventure.icon;
+                                return (
                                     <div
-                                        className="adventure-card-bg"
-                                        style={{ background: adventure.bgGradient }}
-                                    ></div>
-
-                                    <div className="adventure-card-content">
-                                        <div className="adventure-icon">
-                                            {adventure.icon}
+                                        key={adventure.id}
+                                        className={`adventure-item ${index === activeIndex ? 'active' : ''}`}
+                                        onClick={() => handleItemClick(index)}
+                                    >
+                                        <div className="adventure-icon-container">
+                                            <IconComponent className="adventure-icon" />
                                         </div>
-                                        <div className="adventure-text">
-                                            <h3 className="adventure-card-title">
-                                                {adventure.title}
-                                            </h3>
-                                            <p className="adventure-card-subtitle">
-                                                {adventure.subtitle}
-                                            </p>
-                                        </div>
+                                        <h3 className="adventure-item-title">
+                                            {adventure.title}
+                                        </h3>
+                                        <p className="adventure-item-description">
+                                            {adventure.description}
+                                        </p>
                                     </div>
-
-                                    <div className="adventure-card-overlay"></div>
-                                </div>
-                            ))}
+                                );
+                            })}
                         </div>
                     </div>
 
-                    {/* Botón siguiente */}
+                    {/* Flecha derecha */}
                     <button
-                        className="adventure-nav-btn adventure-nav-next"
-                        onClick={nextSlide}
-                        aria-label="Siguiente aventura"
+                        className="adventure-arrow adventure-arrow-right"
+                        onClick={scrollRight}
+                        aria-label="Siguiente"
                     >
                         <FaChevronRight />
                     </button>
                 </div>
 
-                {/* Indicadores */}
+                {/* Indicadores de navegación */}
                 <div className="adventure-indicators">
-                    {Array.from({
-                        length: Math.ceil(adventures.length / getVisibleItems())
-                    }).map((_, index) => (
+                    {adventures.map((_, index) => (
                         <button
                             key={index}
-                            className={`adventure-indicator ${Math.floor(currentStartIndex / getVisibleItems()) === index ? 'active' : ''
-                                }`}
-                            onClick={() => setCurrentStartIndex(index * getVisibleItems())}
-                            aria-label={`Ir a grupo ${index + 1}`}
+                            className={`adventure-indicator ${index === activeIndex ? 'active' : ''}`}
+                            onClick={() => handleItemClick(index)}
+                            aria-label={`Ir a aventura ${index + 1}`}
                         />
                     ))}
                 </div>
