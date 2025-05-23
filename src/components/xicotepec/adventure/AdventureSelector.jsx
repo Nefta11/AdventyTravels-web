@@ -51,7 +51,13 @@ const AdventureSelector = () => {
         if (scrollContainerRef.current) {
             const container = scrollContainerRef.current;
             const scrollAmount = container.clientWidth / 2;
-            container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            if (activeIndex === 0) {
+                setActiveIndex(adventures.length - 1);
+                container.scrollTo({ left: container.scrollWidth, behavior: 'smooth' });
+            } else {
+                setActiveIndex((prev) => prev - 1);
+                container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            }
         }
     };
 
@@ -59,7 +65,13 @@ const AdventureSelector = () => {
         if (scrollContainerRef.current) {
             const container = scrollContainerRef.current;
             const scrollAmount = container.clientWidth / 2;
-            container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            if (activeIndex === adventures.length - 1) {
+                setActiveIndex(0);
+                container.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+                setActiveIndex((prev) => prev + 1);
+                container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
         }
     };
 
