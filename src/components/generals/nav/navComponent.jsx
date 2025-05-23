@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { FaMoneyBillWave, FaBars, FaTimes, FaHome, FaSuitcase, FaInfoCircle, FaBlog, FaImages, FaEnvelope, FaUsers, FaHandshake, FaFemale } from 'react-icons/fa';
+import { GiVillage } from 'react-icons/gi';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../../../assets/images/LOGOTIPO_OFICIAL.webp';
@@ -129,10 +130,17 @@ const NavComponent = () => {
                         />
                         <NavItem
                             icon={isMobile ? FaUsers : null}
-                            label="Nuevos Lanzamientos"
+                            label="Nuevos"
                             menuOpen={menuOpen}
                             submenu
                             submenuItems={newsSubmenuItems}
+                        />
+                        <NavItem
+                            to="/xicotepec"
+                            icon={isMobile ? GiVillage : null}
+                            label="Conoce Xicotepec"
+                            menuOpen={menuOpen}
+                            isActive={location.pathname === '/xicotepec'}
                         />
                     </ul>
                 </div>

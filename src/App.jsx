@@ -13,6 +13,7 @@ import Distribuidor from './pages/Distribuidor';
 import Partners from './pages/Partners';
 import VerifyDistributor from './pages/VerifyDistributor';
 import AdventyPay from './pages/adventyPay/AdventyPay';
+import Xicotepec from './pages/Xicotepec';
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function RoutesWithAnimation() {
       <Route path="/partners" element={<Partners />} />
       <Route path="/verify-distributor" element={<VerifyDistributor />} />
       <Route path="/AdventyPay" element={<AdventyPay />} />
+      <Route path='/xicotepec' element={<Xicotepec />} />
       <Route path="*" element={<Error404 />} />
     </Routes>
   );
