@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import NavComponent from '../components/generals/nav/navComponent';
 import FooterComponent from "../components/generals/footer/FooterComponent";
-import UnderConstruction from '../components/underConstruction/UnderConstruction';
+import XicotepecHero from '../components/xicotepec/hero/XicotepecHero';
 
 export default function Xicotepec() {
 
@@ -12,7 +12,7 @@ export default function Xicotepec() {
             exit={{ opacity: 0 }}
         >
             <NavComponent />
-            <UnderConstruction pageName="Xicotepec" />
+            <XicotepecHero />
             <FooterComponent />
         </motion.div>
     );
