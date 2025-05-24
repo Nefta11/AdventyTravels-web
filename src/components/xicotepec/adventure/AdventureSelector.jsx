@@ -16,8 +16,8 @@ const AdventureSelector = () => {
     const adventures = [
         {
             id: 1,
-            icon: GiVillage, 
-            title: "Vive su magia",
+            icon: GiVillage,
+            title: "Xicotepec Mágico",
             description: "Experimenta la esencia única del lugar"
         },
         {

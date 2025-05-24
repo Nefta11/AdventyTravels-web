@@ -50,7 +50,7 @@ const DestinationInfo = () => {
 
                 {/* Título principal */}
                 <div className="main-title-wrapper">
-                    <h1 className="main-title">Vive su magia</h1>
+                    <h1 className="main-title">Xicotepec Mágico</h1>
                     <div className="main-title-underline"></div>
                 </div>
 
@@ -75,7 +75,7 @@ const DestinationInfo = () => {
 
                         {/* El motivo */}
                         <article className="destination-section motive-section">
-                            <h2 className="section-title">El motivo</h2>
+                            <h2 className="section-title">Por qué visitarlo</h2>
                             <p className="section-subtitle">Sus costumbres místicas</p>
 
                             <div className="motive-points">
@@ -103,7 +103,7 @@ const DestinationInfo = () => {
 
                         {/* Lo básico */}
                         <article className="destination-section basic-section">
-                            <h2 className="section-title">Lo básico</h2>
+                            <h2 className="section-title">Imperdible</h2>
                             <div className="basic-info">
                                 <p>Acudir a <strong>La Xochipila</strong> cualquier día y <strong>pedirle a los curanderos una limpia</strong>.</p>
                             </div>
@@ -136,7 +136,7 @@ const DestinationInfo = () => {
                             {/* Botón de ruta */}
                             <button className="route-button">
                                 <FaRoute className="route-icon" />
-                                Trazar ruta
+                                ¿Cómo llego?
                             </button>
                         </div>
 
