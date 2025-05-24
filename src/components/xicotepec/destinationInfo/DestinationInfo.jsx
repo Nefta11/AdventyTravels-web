@@ -50,7 +50,7 @@ const DestinationInfo = () => {
 
                 {/* Título principal */}
                 <div className="main-title-wrapper">
-                    <h1 className="main-title">Xicotepec Mágico</h1>
+                    <h1 className="main-title">Xicotepec Único</h1>
                     <div className="main-title-underline"></div>
                 </div>
 

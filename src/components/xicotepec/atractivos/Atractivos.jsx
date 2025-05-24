@@ -45,7 +45,7 @@ const Atractivos = () => {
             <div className="atractivos-component-container">
                 {/* Título principal */}
                 <div className="atractivos-main-title-wrapper">
-                    <h1 className="atractivos-main-title">Atractivos</h1>
+                    <h1 className="atractivos-main-title">Sitios y Experiencias</h1>
                     <div className="atractivos-main-title-underline"></div>
                 </div>
 

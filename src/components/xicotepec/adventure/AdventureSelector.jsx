@@ -17,32 +17,32 @@ const AdventureSelector = () => {
         {
             id: 1,
             icon: GiVillage,
-            title: "Xicotepec Mágico",
-            description: "Experimenta la esencia única del lugar"
+            title: "Xicotepec Único",
+            description: "Vive la autenticidad del destino"
         },
         {
             id: 2,
             icon: FaMountain,
-            title: "Atractivos Actividades",
-            description: "Descubre aventuras emocionantes"
+            title: "Sitios y Experiencias",
+            description: "Explora actividades fascinantes"
         },
         {
             id: 3,
             icon: GiFireworkRocket,
-            title: "Festividades",
-            description: "Celebra tradiciones locales"
+            title: "Celebraciones",
+            description: "Disfruta costumbres regionales"
         },
         {
             id: 4,
             icon: FaHotel,
-            title: "Hoteles",
-            description: "Hospédate con comodidad"
+            title: "Alojamientos",
+            description: "Descansa con confort"
         },
         {
             id: 5,
             icon: FaCamera,
-            title: "Tours",
-            description: "Explora con guías expertos"
+            title: "Recorridos",
+            description: "Conoce con expertos locales"
         }
     ];
 
