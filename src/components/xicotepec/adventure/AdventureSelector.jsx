@@ -76,6 +76,12 @@ const AdventureSelector = () => {
 
     const handleItemClick = (index) => {
         setActiveIndex(index);
+        if (index === 0) {
+            const el = document.getElementById('destination-info');
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
     };
 
     // --- SWIPE SUPPORT FOR MOBILE ---

@@ -45,7 +45,7 @@ const DestinationInfo = () => {
     };
 
     return (
-        <section className="destination-info">
+        <section id="destination-info" className="destination-info">
             <div className="destination-container">
 
                 {/* Título principal */}
