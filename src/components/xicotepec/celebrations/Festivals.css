@@ -61,6 +61,25 @@
     border-radius: 2px;
 }
 
+.festivals-main-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    color: var(--festivals-text-dark);
+    margin: 0 0 15px 0;
+    background: linear-gradient(135deg, var(--festivals-primary-blue), var(--festivals-accent-pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.festivals-main-title-underline {
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--festivals-accent-pink), var(--festivals-accent-purple));
+    border-radius: 2px;
+    margin: 0 auto;
+}
+
 /* Grid de festivales */
 .festivals-component-grid {
     display: grid;

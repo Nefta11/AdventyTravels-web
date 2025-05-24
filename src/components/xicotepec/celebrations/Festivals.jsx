@@ -94,7 +94,8 @@ const Festivals = () => {
             <div className="festivals-component-container">
                 {/* Título principal */}
                 <div className="festivals-component-header">
-                    <h2 className="festivals-component-main-title">Celebraciones</h2>
+                    <h1 className="festivals-main-title">Celebraciones</h1>
+                    <div className="festivals-main-title-underline"></div>
                 </div>
 
                 {/* Grid de festivales */}
