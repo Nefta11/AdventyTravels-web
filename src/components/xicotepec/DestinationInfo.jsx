@@ -34,12 +34,6 @@ const DestinationInfo = () => {
             alt: "Ruinas arqueológicas",
             title: "Sitios arqueológicos"
         },
-        {
-            id: 4,
-            url: "https://images.unsplash.com/photo-1596066190600-3af9aadaaea1?w=400&h=300&fit=crop",
-            alt: "Cafetales",
-            title: "Plantaciones de café"
-        }
     ];
 
     const openImageModal = (image) => {
@@ -53,6 +47,12 @@ const DestinationInfo = () => {
     return (
         <section className="destination-info">
             <div className="destination-container">
+
+                {/* Título principal */}
+                <div className="main-title-wrapper">
+                    <h1 className="main-title">Vive su magia</h1>
+                    <div className="main-title-underline"></div>
+                </div>
 
                 {/* Contenido principal y sidebar */}
                 <div className="destination-content-wrapper">
@@ -139,6 +139,7 @@ const DestinationInfo = () => {
                                 Trazar ruta
                             </button>
                         </div>
+
                         {/* Galería */}
                         <article className="destination-section gallery-section">
                             <h2 className="section-title">Galería</h2>
