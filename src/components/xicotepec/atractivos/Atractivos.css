@@ -34,33 +34,6 @@
     padding: 0 20px;
 }
 
-/* Título principal */
-.atractivos-component-header {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.atractivos-component-main-title {
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 800;
-    color: var(--atractivos-text-dark);
-    margin: 0;
-    position: relative;
-    display: inline-block;
-}
-
-.atractivos-component-main-title::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(90deg, var(--atractivos-accent-pink), var(--atractivos-accent-purple));
-    border-radius: 2px;
-}
-
 /* Nueva sección de estilos para el título principal */
 .atractivos-main-title-wrapper {
     text-align: center;

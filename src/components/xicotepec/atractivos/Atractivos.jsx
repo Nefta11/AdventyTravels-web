@@ -44,11 +44,9 @@ const Atractivos = () => {
         <section className="atractivos-component-wrapper">
             <div className="atractivos-component-container">
                 {/* Título principal */}
-                <div className="atractivos-component-header">
-                    <div className="atractivos-main-title-wrapper">
-                        <h1 className="atractivos-main-title">Atractivos</h1>
-                        <div className="atractivos-main-title-underline"></div>
-                    </div>
+                <div className="atractivos-main-title-wrapper">
+                    <h1 className="atractivos-main-title">Atractivos</h1>
+                    <div className="atractivos-main-title-underline"></div>
                 </div>
 
                 {/* Grid de atractivos */}
