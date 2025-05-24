@@ -1,0 +1,323 @@
+/* Atractivos.css */
+
+/* Variables CSS específicas para el componente Atractivos */
+.atractivos-component-wrapper {
+    --atractivos-primary-blue: #2B5A87;
+    --atractivos-accent-pink: #E91E63;
+    --atractivos-accent-green: #4CAF50;
+    --atractivos-accent-purple: #9C27B0;
+    --atractivos-accent-orange: #FF9800;
+    --atractivos-text-light: #ffffff;
+    --atractivos-text-dark: #333333;
+    --atractivos-text-gray: #666666;
+    --atractivos-text-muted: #888888;
+    --atractivos-bg-light: #f8f9fa;
+    --atractivos-bg-white: #ffffff;
+    --atractivos-bg-section: #fafbfc;
+    --atractivos-border-light: #e1e5e9;
+    --atractivos-shadow-light: 0 2px 12px rgba(0, 0, 0, 0.08);
+    --atractivos-shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
+    --atractivos-shadow-strong: 0 8px 32px rgba(0, 0, 0, 0.16);
+}
+
+.atractivos-component-wrapper {
+    width: 100%;
+    padding: 60px 0;
+    background: var(--atractivos-bg-light);
+    font-family: "Gilroy", sans-serif;
+    line-height: 1.6;
+}
+
+.atractivos-component-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Título principal */
+.atractivos-component-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.atractivos-component-main-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: var(--atractivos-text-dark);
+    margin: 0;
+    position: relative;
+    display: inline-block;
+}
+
+.atractivos-component-main-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--atractivos-accent-pink), var(--atractivos-accent-purple));
+    border-radius: 2px;
+}
+
+/* Grid de atractivos */
+.atractivos-component-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    align-items: stretch;
+}
+
+/* Card individual */
+.atractivos-component-card {
+    position: relative;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--atractivos-shadow-light);
+}
+
+.atractivos-component-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--atractivos-shadow-strong);
+}
+
+/* Overlay de la card */
+.atractivos-component-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+            rgba(43, 90, 135, 0.7) 0%,
+            rgba(43, 90, 135, 0.4) 50%,
+            rgba(233, 30, 99, 0.7) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    color: var(--atractivos-text-light);
+    transition: all 0.3s ease;
+}
+
+.atractivos-component-card:hover .atractivos-component-card-overlay {
+    background: linear-gradient(135deg,
+            rgba(43, 90, 135, 0.8) 0%,
+            rgba(43, 90, 135, 0.5) 50%,
+            rgba(233, 30, 99, 0.8) 100%);
+}
+
+/* Ubicación (XICOTEPEC) */
+.atractivos-component-card-location {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.9;
+    align-self: flex-start;
+}
+
+/* Título de la card */
+.atractivos-component-card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.3;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    align-self: flex-end;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .atractivos-component-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 18px;
+    }
+
+    .atractivos-component-card {
+        height: 180px;
+    }
+
+    .atractivos-component-header {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .atractivos-component-wrapper {
+        padding: 40px 0;
+    }
+
+    .atractivos-component-container {
+        padding: 0 15px;
+    }
+
+    .atractivos-component-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .atractivos-component-card {
+        height: 160px;
+    }
+
+    .atractivos-component-card-overlay {
+        padding: 15px;
+    }
+
+    .atractivos-component-card-location {
+        font-size: 0.7rem;
+    }
+
+    .atractivos-component-card-title {
+        font-size: 1rem;
+    }
+
+    .atractivos-component-header {
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .atractivos-component-wrapper {
+        padding: 30px 0;
+    }
+
+    .atractivos-component-container {
+        padding: 0 10px;
+    }
+
+    .atractivos-component-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .atractivos-component-card {
+        height: 140px;
+        min-height: 140px;
+    }
+
+    .atractivos-component-card-overlay {
+        padding: 12px;
+    }
+
+    .atractivos-component-card-location {
+        font-size: 0.65rem;
+    }
+
+    .atractivos-component-card-title {
+        font-size: 0.9rem;
+        line-height: 1.2;
+    }
+
+    .atractivos-component-header {
+        margin-bottom: 25px;
+    }
+
+    .atractivos-component-card:hover {
+        transform: translateY(-4px);
+    }
+}
+
+@media (max-width: 360px) {
+    .atractivos-component-container {
+        padding: 0 8px;
+    }
+
+    .atractivos-component-grid {
+        gap: 10px;
+    }
+
+    .atractivos-component-card {
+        height: 120px;
+        min-height: 120px;
+    }
+
+    .atractivos-component-card-overlay {
+        padding: 10px;
+    }
+
+    .atractivos-component-card-location {
+        font-size: 0.6rem;
+    }
+
+    .atractivos-component-card-title {
+        font-size: 0.85rem;
+        line-height: 1.1;
+    }
+
+    .atractivos-component-header {
+        margin-bottom: 20px;
+    }
+}
+
+/* Animaciones específicas del componente */
+@keyframes atractivos-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.atractivos-component-card {
+    animation: atractivos-fade-in 0.6s ease forwards;
+}
+
+.atractivos-component-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.atractivos-component-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.atractivos-component-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.atractivos-component-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.atractivos-component-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.atractivos-component-card:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.atractivos-component-card:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.atractivos-component-card:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+.atractivos-component-card:nth-child(9) {
+    animation-delay: 0.9s;
+}
+
+.atractivos-component-card:nth-child(10) {
+    animation-delay: 1s;
+}
+
+.atractivos-component-card:nth-child(11) {
+    animation-delay: 1.1s;
+}
+
+.atractivos-component-card:nth-child(12) {
+    animation-delay: 1.2s;
+}
