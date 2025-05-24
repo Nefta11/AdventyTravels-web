@@ -5,6 +5,7 @@ import XicotepecHero from '../components/xicotepec/hero/XicotepecHero';
 import AdventureSelector from '../components/xicotepec/adventure/AdventureSelector';
 import DestinationInfo from '../components/xicotepec/destinationInfo/DestinationInfo';
 import Atractivos from '../components/xicotepec/atractivos/Atractivos';
+import Celebrations from '../components/xicotepec/celebrations/Festivals';
 
 export default function Xicotepec() {
 
@@ -19,6 +20,7 @@ export default function Xicotepec() {
             <AdventureSelector />
             <DestinationInfo />
             <Atractivos />
+            <Celebrations />
             <FooterComponent />
         </motion.div>
     );
