@@ -1,13 +1,12 @@
 import { useState, useRef } from 'react';
 import {
-    FaBed,
     FaMountain,
     FaHotel,
     FaCamera,
     FaChevronLeft,
     FaChevronRight
 } from 'react-icons/fa';
-import { GiFireworkRocket } from 'react-icons/gi';
+import { GiFireworkRocket, GiVillage } from 'react-icons/gi';
 import './AdventureSelector.css';
 
 const AdventureSelector = () => {
@@ -17,7 +16,7 @@ const AdventureSelector = () => {
     const adventures = [
         {
             id: 1,
-            icon: FaBed,
+            icon: GiVillage, // Icono de pueblo para 'Vive su magia'
             title: "Vive su magia",
             description: "Experimenta la esencia única del lugar"
         },
