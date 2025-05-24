@@ -3,6 +3,7 @@ import NavComponent from '../components/generals/nav/navComponent';
 import FooterComponent from "../components/generals/footer/FooterComponent";
 import XicotepecHero from '../components/xicotepec/hero/XicotepecHero';
 import AdventureSelector from '../components/xicotepec/adventure/AdventureSelector';
+import DestinationInfo from '../components/xicotepec/DestinationInfo';
 
 export default function Xicotepec() {
 
@@ -14,7 +15,8 @@ export default function Xicotepec() {
         >
             <NavComponent />
             <XicotepecHero />
-            <AdventureSelector/>
+            <AdventureSelector />
+            <DestinationInfo />
             <FooterComponent />
         </motion.div>
     );
