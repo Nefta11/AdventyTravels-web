@@ -16,7 +16,7 @@ const AdventureSelector = () => {
     const adventures = [
         {
             id: 1,
-            icon: GiVillage, // Icono de pueblo para 'Vive su magia'
+            icon: GiVillage, 
             title: "Vive su magia",
             description: "Experimenta la esencia única del lugar"
         },
@@ -78,6 +78,11 @@ const AdventureSelector = () => {
         setActiveIndex(index);
         if (index === 0) {
             const el = document.getElementById('destination-info');
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth' });
+            }
+        } else if (index === 1) {
+            const el = document.getElementById('atractivos-section');
             if (el) {
                 el.scrollIntoView({ behavior: 'smooth' });
             }

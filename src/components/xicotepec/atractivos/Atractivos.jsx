@@ -41,7 +41,7 @@ const Atractivos = () => {
     ];
 
     return (
-        <section className="atractivos-component-wrapper">
+        <section className="atractivos-component-wrapper" id="atractivos-section">
             <div className="atractivos-component-container">
                 {/* Título principal */}
                 <div className="atractivos-main-title-wrapper">
