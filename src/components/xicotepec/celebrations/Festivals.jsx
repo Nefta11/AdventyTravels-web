@@ -90,7 +90,7 @@ const Festivals = () => {
     };
 
     return (
-        <section className="festivals-component-wrapper">
+        <section className="festivals-component-wrapper" id="celebraciones-section">
             <div className="festivals-component-container">
                 {/* Título principal */}
                 <div className="festivals-component-header">

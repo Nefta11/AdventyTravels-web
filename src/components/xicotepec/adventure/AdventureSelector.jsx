@@ -86,6 +86,11 @@ const AdventureSelector = () => {
             if (el) {
                 el.scrollIntoView({ behavior: 'smooth' });
             }
+        } else if (index === 2) {
+            const el = document.getElementById('celebraciones-section');
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth' });
+            }
         }
     };
 
