@@ -122,6 +122,7 @@ const DestinationInfo = () => {
                                         <h3>Autobús:</h3>
                                     </div>
                                     <p>ATAH y Verdes salen de la Angelópolis.</p>
+                                    <p>Futura y Conexión desde CDMX.</p>
                                 </div>
 
                                 <div className="transport-item">
@@ -134,15 +135,7 @@ const DestinationInfo = () => {
                             </div>
 
                             {/* Botón de ruta */}
-                            <button
-                                className="route-button"
-                                onClick={() => {
-                                    window.open(
-                                        'https://www.google.com/maps/dir/?api=1&destination=Col+Centro,+73080+Xicotepec+de+Ju%C3%A1rez,+Pue.',
-                                        '_blank'
-                                    );
-                                }}
-                            >
+                            <button className="route-button">
                                 <FaRoute className="route-icon" />
                                 ¿Cómo llego?
                             </button>
