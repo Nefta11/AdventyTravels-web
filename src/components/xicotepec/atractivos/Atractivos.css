@@ -192,7 +192,7 @@
     }
 
     .atractivos-component-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr); /* Cambiado de 1fr a 2 columnas */
         gap: 12px;
     }
 
