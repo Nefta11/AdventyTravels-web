@@ -134,7 +134,15 @@ const DestinationInfo = () => {
                             </div>
 
                             {/* Botón de ruta */}
-                            <button className="route-button">
+                            <button
+                                className="route-button"
+                                onClick={() => {
+                                    window.open(
+                                        'https://www.google.com/maps/dir/?api=1&destination=Col+Centro,+73080+Xicotepec+de+Ju%C3%A1rez,+Pue.',
+                                        '_blank'
+                                    );
+                                }}
+                            >
                                 <FaRoute className="route-icon" />
                                 ¿Cómo llego?
                             </button>
