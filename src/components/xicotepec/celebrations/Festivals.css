@@ -101,23 +101,25 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg,
-            rgba(43, 90, 135, 0.1) 0%,
-            rgba(43, 90, 135, 0.7) 50%,
-            rgba(233, 30, 99, 0.8) 100%);
+    background: rgba(40, 40, 40, 0.45); /* gris oscuro translúcido */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 25px;
-    color: var(--festivals-text-light);
+    color: #fff;
     transition: all 0.3s ease;
 }
 
 .festivals-component-card:hover .festivals-component-card-overlay {
-    background: linear-gradient(135deg,
-            rgba(43, 90, 135, 0.2) 0%,
-            rgba(43, 90, 135, 0.8) 50%,
-            rgba(233, 30, 99, 0.9) 100%);
+    background: rgba(40, 40, 40, 0.60); /* un poco más oscuro al hacer hover */
+}
+
+.festivals-component-card-title,
+.festivals-component-card-description,
+.festivals-component-card-date,
+.festivals-component-card-location {
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 
 /* Fecha en la card */
@@ -252,12 +254,11 @@
 .festivals-component-modal-header-content {
     position: relative;
     z-index: 2;
-    background: linear-gradient(135deg,
-            rgba(43, 90, 135, 0.9) 0%,
-            rgba(233, 30, 99, 0.9) 100%);
+    background: rgba(40, 40, 40, 0.55); /* overlay gris translúcido */
     padding: 25px 30px;
-    color: var(--festivals-text-light);
+    color: #fff;
     width: 100%;
+    backdrop-filter: blur(2px);
 }
 
 .festivals-component-modal-title {
@@ -265,6 +266,7 @@
     font-weight: 800;
     margin: 0 0 15px 0;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    color: #fff;
 }
 
 .festivals-component-modal-meta {
