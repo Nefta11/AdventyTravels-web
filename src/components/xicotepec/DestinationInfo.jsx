@@ -18,19 +18,19 @@ const DestinationInfo = () => {
     const galleryImages = [
         {
             id: 1,
-            url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop",
+            url: "https://www.xicotepec.com.mx/wp-content/uploads/2022/02/cropped-Cascadas-de-Tuliman.jpg",
             alt: "Cascada en la naturaleza",
             title: "Cascadas naturales"
         },
         {
             id: 2,
-            url: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
+            url: "https://images.milenio.com/L6rnIA_OndV_BkbLhT5wEamQ4q0=/942x532/uploads/media/2020/12/12/virgen-de-xicotepec-andres-lobato.jpg",
             alt: "Virgen de Guadalupe",
             title: "Virgen monumental"
         },
         {
             id: 3,
-            url: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop",
+            url: "https://www.xicotepec.com.mx/wp-content/uploads/2022/02/cropped-20120519_155954.jpg",
             alt: "Ruinas arqueológicas",
             title: "Sitios arqueológicos"
         },
