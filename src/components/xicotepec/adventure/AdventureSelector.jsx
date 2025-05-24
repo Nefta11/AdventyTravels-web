@@ -79,6 +79,36 @@ const AdventureSelector = () => {
         setActiveIndex(index);
     };
 
+    // --- SWIPE SUPPORT FOR MOBILE ---
+    // Detect touch events for infinite scroll
+    const touchStartX = useRef(null);
+    const touchEndX = useRef(null);
+
+    const handleTouchStart = (e) => {
+        touchStartX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchMove = (e) => {
+        touchEndX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchEnd = () => {
+        if (touchStartX.current !== null && touchEndX.current !== null) {
+            const diff = touchStartX.current - touchEndX.current;
+            if (Math.abs(diff) > 40) {
+                if (diff > 0) {
+                    // Swipe left
+                    scrollRight();
+                } else {
+                    // Swipe right
+                    scrollLeft();
+                }
+            }
+        }
+        touchStartX.current = null;
+        touchEndX.current = null;
+    };
+
     return (
         <section className="adventure-selector">
             <div className="adventure-container">
@@ -104,6 +134,9 @@ const AdventureSelector = () => {
                     <div
                         className="adventure-scroll-container"
                         ref={scrollContainerRef}
+                        onTouchStart={handleTouchStart}
+                        onTouchMove={handleTouchMove}
+                        onTouchEnd={handleTouchEnd}
                     >
                         <div className="adventure-items">
                             {adventures.map((adventure, index) => {
