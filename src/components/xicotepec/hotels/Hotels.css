@@ -1,0 +1,763 @@
+/* Hotels.css */
+
+/* Variables CSS específicas para el componente Hotels */
+.hotels-component-wrapper {
+    --hotels-primary-blue: #2B5A87;
+    --hotels-accent-pink: #E91E63;
+    --hotels-accent-green: #4CAF50;
+    --hotels-accent-purple: #9C27B0;
+    --hotels-accent-orange: #FF9800;
+    --hotels-accent-gold: #FFD700;
+    --hotels-text-light: #ffffff;
+    --hotels-text-dark: #333333;
+    --hotels-text-gray: #666666;
+    --hotels-text-muted: #888888;
+    --hotels-bg-light: #f8f9fa;
+    --hotels-bg-white: #ffffff;
+    --hotels-bg-section: #fafbfc;
+    --hotels-border-light: #e1e5e9;
+    --hotels-shadow-light: 0 2px 12px rgba(0, 0, 0, 0.08);
+    --hotels-shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
+    --hotels-shadow-strong: 0 8px 32px rgba(0, 0, 0, 0.16);
+}
+
+.hotels-component-wrapper {
+    width: 100%;
+    padding: 60px 0;
+    background: var(--hotels-bg-light);
+    font-family: "Gilroy", sans-serif;
+    line-height: 1.6;
+}
+
+.hotels-component-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Título principal */
+.hotels-component-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.hotels-component-main-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: var(--hotels-text-dark);
+    margin: 0;
+    position: relative;
+    display: inline-block;
+}
+
+.hotels-component-main-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--hotels-accent-pink), var(--hotels-accent-purple));
+    border-radius: 2px;
+}
+
+/* Grid de hoteles */
+.hotels-component-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    align-items: stretch;
+}
+
+/* Card individual */
+.hotels-component-card {
+    position: relative;
+    height: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: var(--hotels-shadow-light);
+}
+
+.hotels-component-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: var(--hotels-shadow-strong);
+}
+
+.hotels-component-card-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Overlay de la card */
+.hotels-component-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+            rgba(0, 0, 0, 0.3) 0%,
+            rgba(0, 0, 0, 0.6) 50%,
+            rgba(0, 0, 0, 0.8) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    color: var(--hotels-text-light);
+    transition: all 0.3s ease;
+}
+
+.hotels-component-card:hover .hotels-component-card-overlay {
+    background: linear-gradient(135deg,
+            rgba(0, 0, 0, 0.4) 0%,
+            rgba(0, 0, 0, 0.7) 50%,
+            rgba(0, 0, 0, 0.9) 100%);
+}
+
+/* Categoría en la card */
+.hotels-component-card-category {
+    font-size: 0.8rem;
+    font-weight: 600;
+    opacity: 0.95;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 12px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    align-self: flex-start;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--hotels-text-light);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Contenido de la card */
+.hotels-component-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: var(--hotels-text-light);
+}
+
+.hotels-component-card-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0;
+    color: var(--hotels-text-light);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hotels-component-card-stars {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    margin: 5px 0;
+}
+
+.hotels-component-star {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.3);
+    transition: color 0.3s ease;
+}
+
+.hotels-component-star.filled {
+    color: var(--hotels-accent-gold);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.hotels-component-card-description {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin: 0;
+    color: var(--hotels-text-light);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hotels-component-card-location {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-top: 5px;
+    color: var(--hotels-text-light);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hotels-component-card-location-icon {
+    font-size: 0.8rem;
+}
+
+.hotels-component-card-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--hotels-accent-gold);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+    margin-top: 8px;
+}
+
+/* Modal Backdrop */
+.hotels-component-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+    backdrop-filter: blur(5px);
+    animation: hotels-modal-fade-in 0.3s ease;
+}
+
+/* Modal Container */
+.hotels-component-modal {
+    background: var(--hotels-bg-white);
+    border-radius: 20px;
+    max-width: 900px;
+    max-height: 90vh;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: var(--hotels-shadow-strong);
+    position: relative;
+    animation: hotels-modal-slide-up 0.4s ease;
+    overflow-y: auto;
+}
+
+/* Modal Close Button */
+.hotels-component-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: var(--hotels-text-light);
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1001;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.hotels-component-modal-close:hover {
+    background: rgba(0, 0, 0, 0.9);
+    transform: scale(1.1);
+}
+
+/* Modal Header */
+.hotels-component-modal-header {
+    position: relative;
+    height: 280px;
+    display: flex;
+    align-items: end;
+}
+
+.hotels-component-modal-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hotels-component-modal-header-content {
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(135deg,
+            rgba(0, 0, 0, 0.5) 0%,
+            rgba(0, 0, 0, 0.1) 100%);
+    padding: 25px 30px;
+    color: var(--hotels-text-light);
+    width: 100%;
+    height: 100%;
+}
+
+.hotels-component-modal-category {
+    font-size: 0.9rem;
+    font-weight: 600;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    color: var(--hotels-text-light);
+}
+
+.hotels-component-modal-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0 0 10px 0;
+    color: var(--hotels-text-light);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hotels-component-modal-stars {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.hotels-component-modal-rating {
+    font-size: 1rem;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--hotels-text-light);
+    padding: 4px 8px;
+    border-radius: 8px;
+    margin-left: 10px;
+}
+
+.hotels-component-modal-meta {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.hotels-component-modal-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--hotels-text-light);
+}
+
+.hotels-component-modal-meta-icon {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.hotels-component-modal-price {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--hotels-accent-gold);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Modal Body */
+.hotels-component-modal-body {
+    padding: 30px;
+}
+
+.hotels-component-modal-section {
+    margin-bottom: 30px;
+}
+
+.hotels-component-modal-section:last-child {
+    margin-bottom: 0;
+}
+
+.hotels-component-modal-section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--hotels-primary-blue);
+    margin: 0 0 15px 0;
+    position: relative;
+}
+
+.hotels-component-modal-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--hotels-accent-pink);
+    border-radius: 1px;
+}
+
+.hotels-component-modal-section-icon {
+    font-size: 1.1rem;
+    color: var(--hotels-accent-pink);
+}
+
+.hotels-component-modal-description {
+    font-size: 1rem;
+    color: var(--hotels-text-dark);
+    line-height: 1.7;
+    margin: 0;
+    text-align: justify;
+}
+
+/* Amenidades */
+.hotels-component-modal-amenities {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.hotels-component-modal-amenity {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: var(--hotels-bg-section);
+    border-radius: 10px;
+    border-left: 4px solid var(--hotels-accent-green);
+    transition: all 0.3s ease;
+}
+
+.hotels-component-modal-amenity:hover {
+    transform: translateX(5px);
+    box-shadow: var(--hotels-shadow-light);
+}
+
+.hotels-component-modal-amenity-icon {
+    font-size: 1.2rem;
+    color: var(--hotels-accent-green);
+    flex-shrink: 0;
+}
+
+.hotels-component-modal-amenity span {
+    font-size: 0.95rem;
+    color: var(--hotels-text-dark);
+    font-weight: 500;
+}
+
+/* Listas de características y servicios */
+.hotels-component-modal-features,
+.hotels-component-modal-services {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 10px;
+}
+
+.hotels-component-modal-feature,
+.hotels-component-modal-service {
+    padding: 10px 16px;
+    background: var(--hotels-bg-section);
+    border-radius: 8px;
+    border-left: 3px solid var(--hotels-accent-purple);
+    font-size: 0.95rem;
+    color: var(--hotels-text-dark);
+    transition: all 0.3s ease;
+}
+
+.hotels-component-modal-feature:hover,
+.hotels-component-modal-service:hover {
+    transform: translateX(3px);
+    background: var(--hotels-bg-white);
+    box-shadow: var(--hotels-shadow-light);
+}
+
+/* Horarios */
+.hotels-component-modal-schedule {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.hotels-component-modal-schedule-item {
+    padding: 15px 20px;
+    background: linear-gradient(135deg, var(--hotels-accent-green), var(--hotels-accent-purple));
+    color: var(--hotels-text-light);
+    border-radius: 12px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.hotels-component-modal-schedule-item strong {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Animaciones */
+@keyframes hotels-modal-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes hotels-modal-slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes hotels-card-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hotels-component-card {
+    animation: hotels-card-fade-in 0.6s ease forwards;
+}
+
+.hotels-component-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.hotels-component-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.hotels-component-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.hotels-component-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.hotels-component-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .hotels-component-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .hotels-component-card {
+        height: 320px;
+    }
+
+    .hotels-component-header {
+        margin-bottom: 40px;
+    }
+
+    .hotels-component-modal {
+        max-width: 90vw;
+    }
+
+    .hotels-component-modal-title {
+        font-size: 1.7rem;
+    }
+
+    .hotels-component-modal-amenities {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hotels-component-wrapper {
+        padding: 40px 0;
+    }
+
+    .hotels-component-container {
+        padding: 0 15px;
+    }
+
+    .hotels-component-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .hotels-component-card {
+        height: 300px;
+    }
+
+    .hotels-component-card-overlay {
+        padding: 20px;
+    }
+
+    .hotels-component-card-title {
+        font-size: 1.2rem;
+    }
+
+    .hotels-component-card-description {
+        font-size: 0.9rem;
+    }
+
+    .hotels-component-header {
+        margin-bottom: 35px;
+    }
+
+    .hotels-component-modal {
+        max-width: 95vw;
+        max-height: 95vh;
+    }
+
+    .hotels-component-modal-header {
+        height: 220px;
+    }
+
+    .hotels-component-modal-header-content {
+        padding: 20px 25px;
+    }
+
+    .hotels-component-modal-title {
+        font-size: 1.5rem;
+    }
+
+    .hotels-component-modal-body {
+        padding: 25px 20px;
+    }
+
+    .hotels-component-modal-meta {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hotels-component-modal-schedule {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hotels-component-wrapper {
+        padding: 30px 0;
+    }
+
+    .hotels-component-container {
+        padding: 0 10px;
+    }
+
+    .hotels-component-grid {
+        gap: 15px;
+    }
+
+    .hotels-component-card {
+        height: 280px;
+    }
+
+    .hotels-component-card-overlay {
+        padding: 18px;
+    }
+
+    .hotels-component-card-title {
+        font-size: 1.1rem;
+    }
+
+    .hotels-component-card-description {
+        font-size: 0.85rem;
+    }
+
+    .hotels-component-card-category {
+        font-size: 0.75rem;
+        padding: 5px 10px;
+    }
+
+    .hotels-component-header {
+        margin-bottom: 25px;
+    }
+
+    .hotels-component-modal-header {
+        height: 200px;
+    }
+
+    .hotels-component-modal-header-content {
+        padding: 18px 20px;
+    }
+
+    .hotels-component-modal-title {
+        font-size: 1.3rem;
+    }
+
+    .hotels-component-modal-body {
+        padding: 20px 15px;
+    }
+
+    .hotels-component-modal-section-title {
+        font-size: 1.1rem;
+    }
+
+    .hotels-component-modal-description {
+        font-size: 0.9rem;
+    }
+
+    .hotels-component-modal-amenity span,
+    .hotels-component-modal-feature,
+    .hotels-component-modal-service {
+        font-size: 0.85rem;
+    }
+
+    .hotels-component-modal-amenity {
+        padding: 10px 12px;
+    }
+
+    .hotels-component-card:hover {
+        transform: translateY(-5px) scale(1.01);
+    }
+}
+
+@media (max-width: 360px) {
+    .hotels-component-container {
+        padding: 0 8px;
+    }
+
+    .hotels-component-grid {
+        gap: 12px;
+    }
+
+    .hotels-component-card {
+        height: 260px;
+    }
+
+    .hotels-component-card-overlay {
+        padding: 15px;
+    }
+
+    .hotels-component-card-title {
+        font-size: 1rem;
+    }
+
+    .hotels-component-card-description {
+        font-size: 0.8rem;
+    }
+
+    .hotels-component-modal-close {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        top: 15px;
+        right: 15px;
+    }
+
+    .hotels-component-modal-header {
+        height: 180px;
+    }
+
+    .hotels-component-modal-title {
+        font-size: 1.2rem;
+    }
+
+    .hotels-component-modal-price {
+        font-size: 1.3rem;
+    }
+}
