@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { FaCalendarAlt, FaTimes, FaMapMarkerAlt, FaClock, FaUsers } from 'react-icons/fa';
 import './Festivals.css';
+import FestivalCard from './FestivalCard';
 
 const Festivals = () => {
     const [selectedFestival, setSelectedFestival] = useState(null);
@@ -101,35 +102,11 @@ const Festivals = () => {
                 {/* Grid de festivales */}
                 <div className="festivals-component-grid">
                     {festivals.map((festival) => (
-                        <div
+                        <FestivalCard
                             key={festival.id}
-                            className="festivals-component-card"
+                            festival={festival}
                             onClick={() => openModal(festival)}
-                        >
-                            <div
-                                className="festivals-component-card-image"
-                                style={{ backgroundImage: `url(${festival.image})` }}
-                            >
-                                <div className="festivals-component-card-overlay">
-                                    <div className="festivals-component-card-date">
-                                        <FaCalendarAlt className="festivals-component-card-date-icon" />
-                                        {festival.date}
-                                    </div>
-                                    <div className="festivals-component-card-content">
-                                        <h3 className="festivals-component-card-title">
-                                            {festival.title}
-                                        </h3>
-                                        <p className="festivals-component-card-description">
-                                            {festival.shortDescription}
-                                        </p>
-                                        <div className="festivals-component-card-location">
-                                            <FaMapMarkerAlt className="festivals-component-card-location-icon" />
-                                            {festival.location}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        />
                     ))}
                 </div>
             </div>
