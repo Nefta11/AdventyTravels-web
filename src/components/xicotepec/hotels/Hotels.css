@@ -232,6 +232,12 @@
     position: relative;
     animation: hotels-modal-slide-up 0.4s ease;
     overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+}
+
+.hotels-component-modal::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
 }
 
 /* Modal Close Button */
