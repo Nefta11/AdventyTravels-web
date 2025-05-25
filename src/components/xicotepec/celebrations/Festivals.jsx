@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { FaCalendarAlt, FaTimes, FaMapMarkerAlt, FaClock, FaUsers } from 'react-icons/fa';
 import './Festivals.css';
 import FestivalCard from './FestivalCard';
+import FestivalModal from './FestivalModal';
 
 const Festivals = () => {
     const [selectedFestival, setSelectedFestival] = useState(null);
@@ -113,71 +113,7 @@ const Festivals = () => {
 
             {/* Modal */}
             {selectedFestival && (
-                <div className="festivals-component-modal-backdrop" onClick={closeModal}>
-                    <div className="festivals-component-modal" onClick={(e) => e.stopPropagation()}>
-                        <button className="festivals-component-modal-close" onClick={closeModal}>
-                            <FaTimes />
-                        </button>
-
-                        <div className="festivals-component-modal-header">
-                            <div
-                                className="festivals-component-modal-image"
-                                style={{ backgroundImage: `url(${selectedFestival.image})` }}
-                            />
-                            <div className="festivals-component-modal-header-content">
-                                <h2 className="festivals-component-modal-title">
-                                    {selectedFestival.title}
-                                </h2>
-                                <div className="festivals-component-modal-meta">
-                                    <div className="festivals-component-modal-meta-item">
-                                        <FaCalendarAlt className="festivals-component-modal-meta-icon" />
-                                        <span>{selectedFestival.date}</span>
-                                    </div>
-                                    <div className="festivals-component-modal-meta-item">
-                                        <FaMapMarkerAlt className="festivals-component-modal-meta-icon" />
-                                        <span>{selectedFestival.location}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="festivals-component-modal-body">
-                            <div className="festivals-component-modal-section">
-                                <h3 className="festivals-component-modal-section-title">
-                                    <FaUsers className="festivals-component-modal-section-icon" />
-                                    Descripción
-                                </h3>
-                                <p className="festivals-component-modal-description">
-                                    {selectedFestival.fullDescription}
-                                </p>
-                            </div>
-
-                            <div className="festivals-component-modal-section">
-                                <h3 className="festivals-component-modal-section-title">
-                                    <FaClock className="festivals-component-modal-section-icon" />
-                                    Actividades Principales
-                                </h3>
-                                <ul className="festivals-component-modal-activities">
-                                    {selectedFestival.activities.map((activity, index) => (
-                                        <li key={index} className="festivals-component-modal-activity">
-                                            {activity}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-
-                            <div className="festivals-component-modal-section">
-                                <h3 className="festivals-component-modal-section-title">
-                                    <FaMapMarkerAlt className="festivals-component-modal-section-icon" />
-                                    Significado Cultural
-                                </h3>
-                                <p className="festivals-component-modal-significance">
-                                    {selectedFestival.significance}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <FestivalModal festival={selectedFestival} onClose={closeModal} />
             )}
         </section>
     );
