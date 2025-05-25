@@ -1,7 +1,6 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import {
     FaStar,
-    FaTimes,
     FaMapMarkerAlt,
     FaWifi,
     FaSwimmingPool,
@@ -11,12 +10,11 @@ import {
     FaDumbbell,
     FaSpa,
     FaChild,
-    FaPhone,
-    FaClock,
-    FaUsers,
     FaConciergeBell
 } from 'react-icons/fa';
 import './Hotels.css';
+import HotelModal from './HotelModal';
+import HotelCard from './HotelCard';
 
 const Hotels = () => {
     const [selectedHotel, setSelectedHotel] = useState(null);
@@ -220,13 +218,7 @@ const Hotels = () => {
         }
     ];
 
-    const openModal = (hotel) => {
-        setSelectedHotel(hotel);
-    };
 
-    const closeModal = () => {
-        setSelectedHotel(null);
-    };
 
     const renderStars = (stars) => {
         return [...Array(5)].map((_, index) => (
@@ -248,157 +240,17 @@ const Hotels = () => {
                 {/* Grid de hoteles */}
                 <div className="hotels-component-grid">
                     {hotels.map((hotel) => (
-                        <div
+                        <HotelCard
                             key={hotel.id}
-                            className="hotels-component-card"
-                            onClick={() => openModal(hotel)}
-                        >
-                            <div
-                                className="hotels-component-card-image"
-                                style={{ backgroundImage: `url(${hotel.image})` }}
-                            >
-                                <div className="hotels-component-card-overlay">
-                                    <div className="hotels-component-card-category">
-                                        {hotel.category}
-                                    </div>
-                                    <div className="hotels-component-card-content">
-                                        <h3 className="hotels-component-card-title">
-                                            {hotel.name}
-                                        </h3>
-                                        <div className="hotels-component-card-stars">
-                                            {renderStars(hotel.stars)}
-                                        </div>
-                                        <p className="hotels-component-card-description">
-                                            {hotel.shortDescription}
-                                        </p>
-                                        <div className="hotels-component-card-location">
-                                            <FaMapMarkerAlt className="hotels-component-card-location-icon" />
-                                            {hotel.location}
-                                        </div>
-                                        <div className="hotels-component-card-price">
-                                            {hotel.price}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            hotel={hotel}
+                            onClick={() => setSelectedHotel(hotel)}
+                            renderStars={renderStars}
+                        />
                     ))}
                 </div>
             </div>
-
-            {/* Modal */}
             {selectedHotel && (
-                <div className="hotels-component-modal-backdrop" onClick={closeModal}>
-                    <div className="hotels-component-modal" onClick={(e) => e.stopPropagation()}>
-                        <button className="hotels-component-modal-close" onClick={closeModal}>
-                            <FaTimes />
-                        </button>
-
-                        <div className="hotels-component-modal-header">
-                            <div
-                                className="hotels-component-modal-image"
-                                style={{ backgroundImage: `url(${selectedHotel.image})` }}
-                            />
-                            <div className="hotels-component-modal-header-content">
-                                <div className="hotels-component-modal-category">
-                                    {selectedHotel.category}
-                                </div>
-                                <h2 className="hotels-component-modal-title">
-                                    {selectedHotel.name}
-                                </h2>
-                                <div className="hotels-component-modal-stars">
-                                    {renderStars(selectedHotel.stars)}
-                                    <span className="hotels-component-modal-rating">
-                                        {selectedHotel.rating}/10
-                                    </span>
-                                </div>
-                                <div className="hotels-component-modal-meta">
-                                    <div className="hotels-component-modal-meta-item">
-                                        <FaMapMarkerAlt className="hotels-component-modal-meta-icon" />
-                                        <span>{selectedHotel.location}</span>
-                                    </div>
-                                    <div className="hotels-component-modal-meta-item">
-                                        <FaPhone className="hotels-component-modal-meta-icon" />
-                                        <span>{selectedHotel.contact}</span>
-                                    </div>
-                                </div>
-                                <div className="hotels-component-modal-price">
-                                    {selectedHotel.price}
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="hotels-component-modal-body">
-                            <div className="hotels-component-modal-section">
-                                <h3 className="hotels-component-modal-section-title">
-                                    <FaConciergeBell className="hotels-component-modal-section-icon" />
-                                    Acerca del Hotel
-                                </h3>
-                                <p className="hotels-component-modal-description">
-                                    {selectedHotel.fullDescription}
-                                </p>
-                            </div>
-
-                            <div className="hotels-component-modal-section">
-                                <h3 className="hotels-component-modal-section-title">
-                                    <FaWifi className="hotels-component-modal-section-icon" />
-                                    Amenidades
-                                </h3>
-                                <div className="hotels-component-modal-amenities">
-                                    {selectedHotel.amenities.map((amenity, index) => (
-                                        <div key={index} className="hotels-component-modal-amenity">
-                                            <amenity.icon className="hotels-component-modal-amenity-icon" />
-                                            <span>{amenity.name}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-
-                            <div className="hotels-component-modal-section">
-                                <h3 className="hotels-component-modal-section-title">
-                                    <FaUsers className="hotels-component-modal-section-icon" />
-                                    Habitaciones
-                                </h3>
-                                <ul className="hotels-component-modal-features">
-                                    {selectedHotel.roomFeatures.map((feature, index) => (
-                                        <li key={index} className="hotels-component-modal-feature">
-                                            {feature}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-
-                            <div className="hotels-component-modal-section">
-                                <h3 className="hotels-component-modal-section-title">
-                                    <FaConciergeBell className="hotels-component-modal-section-icon" />
-                                    Servicios
-                                </h3>
-                                <ul className="hotels-component-modal-services">
-                                    {selectedHotel.services.map((service, index) => (
-                                        <li key={index} className="hotels-component-modal-service">
-                                            {service}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-
-                            <div className="hotels-component-modal-section">
-                                <h3 className="hotels-component-modal-section-title">
-                                    <FaClock className="hotels-component-modal-section-icon" />
-                                    Horarios
-                                </h3>
-                                <div className="hotels-component-modal-schedule">
-                                    <div className="hotels-component-modal-schedule-item">
-                                        <strong>Check-in:</strong> {selectedHotel.checkIn}
-                                    </div>
-                                    <div className="hotels-component-modal-schedule-item">
-                                        <strong>Check-out:</strong> {selectedHotel.checkOut}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <HotelModal hotel={selectedHotel} onClose={() => setSelectedHotel(null)} />
             )}
         </section>
     );
