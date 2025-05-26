@@ -30,6 +30,7 @@
     margin-bottom: 1rem;
     position: relative;
     z-index: 1;
+    color: #E49F30;
     animation: fadeInDown 0.8s ease-out;
 }
 
@@ -336,8 +337,7 @@
     }
 }
 
-@media (max-width: 480px) {
-}
+@media (max-width: 480px) {}
 
 /* Dark Mode Support */
 .dark .photo-item {
