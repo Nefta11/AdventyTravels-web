@@ -91,6 +91,11 @@ const AdventureSelector = () => {
             if (el) {
                 el.scrollIntoView({ behavior: 'smooth' });
             }
+        } else if (index === 3) {
+            const el = document.getElementById('hotels-section');
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth' });
+            }
         }
     };
 
