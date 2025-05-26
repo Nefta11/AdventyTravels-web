@@ -3,6 +3,8 @@ import { FaCloud, FaTint, FaGlobeAmericas } from 'react-icons/fa';
 import { IoMdSearch } from 'react-icons/io';
 import { HiMenu } from 'react-icons/hi';
 import axios from 'axios';
+import pueblosMagicos from '../../../assets/images/pueblosMagicos.svg';
+import rehilete from '../../../assets/images/rehilete.svg';
 import './XicotepecHero.css';
 
 const XicotepecHero = () => {
@@ -113,10 +115,11 @@ const XicotepecHero = () => {
                 </div>
 
                 <div className="xicotepec-hero-content">
-                    {/* Breadcrumb */}
-                    <nav className="xicotepec-breadcrumb">
-                        <span className="xicotepec-breadcrumb-item xicotepec-breadcrumb-current">Puebla</span>
-                    </nav>
+                    {/* Logos Pueblo Mágico y Rehilete */}
+                    <div className="xicotepec-pueblo-magico-row">
+                        <img src={pueblosMagicos} alt="Pueblos Mágicos Logo" className="xicotepec-pueblos-magicos-logo" />
+                        <img src={rehilete} alt="Pueblo Mágico Rehilete" className="xicotepec-rehilete-spin" />
+                    </div>
 
                     {/* Title */}
                     <h1 className="xicotepec-title">
