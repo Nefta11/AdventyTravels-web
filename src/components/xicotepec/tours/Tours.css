@@ -42,24 +42,59 @@
 }
 
 .tours-component-main-title {
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 800;
+    font-size: 2.8rem;
+    font-weight: 900;
     color: var(--tours-text-dark);
     margin: 0;
+    letter-spacing: -0.02em;
     position: relative;
     display: inline-block;
+    background: linear-gradient(135deg,
+            var(--tours-primary-blue),
+            var(--tours-accent-pink),
+            var(--tours-accent-purple));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: tours-titleFadeIn 1.2s ease-out;
 }
 
 .tours-component-main-title::after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: -15px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;
+    width: 120px;
     height: 4px;
-    background: linear-gradient(90deg, var(--tours-accent-pink), var(--tours-accent-purple));
+    background: linear-gradient(90deg,
+            var(--tours-accent-pink),
+            var(--tours-accent-purple),
+            var(--tours-accent-green));
     border-radius: 2px;
+    animation: tours-underlineExpand 1.5s ease-out 0.5s both;
+}
+
+@keyframes tours-titleFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes tours-underlineExpand {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 120px;
+    }
 }
 
 /* Grid de tours */
@@ -229,6 +264,39 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+    .tours-component-main-title {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 968px) {
+    .tours-component-header {
+        margin-bottom: 40px;
+    }
+
+    .tours-component-main-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .tours-component-main-title {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .tours-component-main-title {
+        font-size: 1.5rem;
+    }
+
+    .tours-component-header {
+        margin-bottom: 25px;
+    }
+}
+
 @media (max-width: 968px) {
     .tours-component-grid {
         grid-template-columns: 1fr;

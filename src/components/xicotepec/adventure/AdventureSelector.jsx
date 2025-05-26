@@ -96,6 +96,11 @@ const AdventureSelector = () => {
             if (el) {
                 el.scrollIntoView({ behavior: 'smooth' });
             }
+        } else if (index === 4) {
+            const el = document.getElementById('tours-section');
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth' });
+            }
         }
     };
 

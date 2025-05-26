@@ -234,7 +234,7 @@ const Hotels = () => {
             <div className="hotels-component-container">
                 {/* Título principal */}
                 <div className="adventure-header">
-                    <h2 className="adventure-title">Hoteles</h2>
+                    <h2 className="adventure-title">Alojamientos</h2>
                 </div>
 
                 {/* Grid de hoteles */}
