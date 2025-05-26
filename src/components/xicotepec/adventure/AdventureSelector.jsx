@@ -4,7 +4,8 @@ import {
     FaHotel,
     FaCamera,
     FaChevronLeft,
-    FaChevronRight
+    FaChevronRight,
+    FaUtensils
 } from 'react-icons/fa';
 import { GiFireworkRocket, GiVillage } from 'react-icons/gi';
 import './AdventureSelector.css';
@@ -43,6 +44,12 @@ const AdventureSelector = () => {
             icon: FaCamera,
             title: "Recorridos",
             description: "Conoce con expertos locales"
+        },
+        {
+            id: 6,
+            icon: FaUtensils,
+            title: "Restaurantes",
+            description: "Descubre la gastronomía local"
         }
     ];
 
@@ -98,6 +105,11 @@ const AdventureSelector = () => {
             }
         } else if (index === 4) {
             const el = document.getElementById('tours-section');
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth' });
+            }
+        } else if (index === 5) {
+            const el = document.getElementById('restaurants-section');
             if (el) {
                 el.scrollIntoView({ behavior: 'smooth' });
             }
