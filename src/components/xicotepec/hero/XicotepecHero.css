@@ -258,8 +258,11 @@
 .xicotepec-pueblo-magico-row {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 18px;
-
+    margin-bottom: 18px;
+    margin-top: 10px;
+    flex-direction: row;
 }
 
 .xicotepec-pueblos-magicos-logo {
@@ -376,9 +379,10 @@
         }
 
         .xicotepec-pueblo-magico-row {
-            flex-direction: column;
-            gap: 8px;
+            flex-direction: row;
+            gap: 10px;
             margin-bottom: 12px;
+            justify-content: center;
         }
 
         .xicotepec-rehilete-spin {
