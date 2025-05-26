@@ -3,6 +3,9 @@ import './RegistrationFAQ.css';
 
 const RegistrationFAQ = () => {
     const [activeItem, setActiveItem] = useState(null);
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [whatsapp, setWhatsapp] = useState("");
 
     const faqItems = [
         {
@@ -41,16 +44,24 @@ const RegistrationFAQ = () => {
         setActiveItem(activeItem === index ? null : index);
     };
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const phone = '5217716075321'; // Número de WhatsApp destino
+        const text = `Hola, quiero registrarme como Adventy Partner.\nNombre: ${name}\nEmail: ${email}\nWhatsApp: ${whatsapp}`;
+        const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+        window.open(url, '_blank');
+    };
+
     return (
         <div className="registration-faq-container">
             <div className="registration-faq-content">
                 <div className="registration-form-section">
                     <div className="registration-form-card">
                         <h2 className="registration-form-title">Formulario De Registro</h2>
-                        <form className="registration-form">
-                            <input type="text" placeholder="Nombre" className="registration-input" />
-                            <input type="email" placeholder="Email" className="registration-input" />
-                            <input type="tel" placeholder="WhatsApp" className="registration-input" />
+                        <form className="registration-form" onSubmit={handleSubmit}>
+                            <input type="text" placeholder="Nombre" className="registration-input" value={name} onChange={e => setName(e.target.value)} required />
+                            <input type="email" placeholder="Email" className="registration-input" value={email} onChange={e => setEmail(e.target.value)} required />
+                            <input type="tel" placeholder="WhatsApp" className="registration-input" value={whatsapp} onChange={e => setWhatsapp(e.target.value)} required />
                             <button type="submit" className="registration-submit-btn">Registrar Ahora</button>
                         </form>
                     </div>
