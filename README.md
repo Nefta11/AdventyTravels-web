@@ -1,80 +1,129 @@
-# GoodTravel-web
+# AdventyTravel-web 🌎✈️
 
-Este proyecto es una aplicación web desarrollada con React y Vite. A continuación, se detalla la estructura del proyecto, las dependencias utilizadas y sus propósitos.
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=FFD62E)](https://vitejs.dev/)
+[![MIT License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](LICENSE)
+
+Aplicación web moderna para descubrir destinos, experiencias y servicios turísticos, desarrollada con React y Vite.
+
+---
+
+## Tabla de Contenidos
+
+- [Características](#características)
+- [Estructura del Proyecto](#estructura-del-proyecto)
+- [Dependencias](#dependencias)
+- [Scripts Disponibles](#scripts-disponibles)
+- [Instalación](#instalación)
+- [Ejecución](#ejecución)
+- [Internacionalización](#internacionalización)
+- [Contribuir](#contribuir)
+- [Licencia](#licencia)
+
+---
+
+## Características
+
+- ⚡️ Interfaz rápida y responsiva con React + Vite
+- 🌍 Internacionalización con i18next
+- 🎨 UI moderna con Material-UI y Emotion
+- 🗺️ Páginas de destinos, experiencias, hoteles y más
+- 🔄 Animaciones fluidas con Framer Motion y React Spring
+- 🔒 Manejo de estado global con Redux Toolkit
+
+---
 
 ## Estructura del Proyecto
 
-- **src/**: Contiene el código fuente de la aplicación.
-  - **components/**: Componentes reutilizables de React.
-  - **pages/**: Páginas principales de la aplicación.
-  - **assets/**: Recursos estáticos como imágenes y estilos.
-  - **store/**: Configuración de Redux para el manejo del estado global.
-  - **i18n/**: Configuración de internacionalización con i18next.
-  - **App.jsx**: Componente principal de la aplicación.
-  - **main.jsx**: Punto de entrada de la aplicación.
+```
+src/
+  components/      # Componentes reutilizables
+  pages/           # Páginas principales
+  assets/          # Imágenes y recursos estáticos
+  store/           # Configuración de Redux
+  i18n/            # Internacionalización
+  App.jsx          # Componente raíz
+  main.jsx         # Punto de entrada
+```
+
+---
 
 ## Dependencias
 
-- **@emotion/react**: Librería para el manejo de estilos en componentes de React.
-- **@emotion/styled**: API para crear componentes estilizados con Emotion.
-- **@mui/icons-material**: Conjunto de íconos de Material-UI.
-- **@mui/material**: Componentes de interfaz de usuario de Material-UI.
-- **@react-spring/web**: Animaciones para componentes de React.
-- **@reduxjs/toolkit**: Herramientas para simplificar el uso de Redux.
-- **framer-motion**: Librería para animaciones en React.
-- **i18next**: Framework para internacionalización.
-- **react**: Biblioteca principal de React.
-- **react-dom**: Paquete para manipular el DOM con React.
-- **react-i18next**: Integración de i18next con React.
-- **react-icons**: Conjunto de íconos para React.
-- **react-phone-input-2**: Componente de entrada de teléfono para React.
-- **react-redux**: Enlace oficial de React para Redux.
-- **react-router-dom**: Enrutador para aplicaciones de React.
+**Principales:**
 
-## Dependencias de Desarrollo
+- `@emotion/react`, `@emotion/styled` – Estilos CSS-in-JS
+- `@mui/material`, `@mui/icons-material` – Componentes y íconos Material UI
+- `@reduxjs/toolkit`, `react-redux` – Manejo de estado global
+- `framer-motion`, `@react-spring/web` – Animaciones
+- `i18next`, `react-i18next` – Internacionalización
+- `react-router-dom` – Enrutamiento
+- `react-icons`, `react-phone-input-2` – Íconos y entrada de teléfono
 
-- **@eslint/js**: Configuración de ESLint para JavaScript.
-- **@types/react**: Tipos de TypeScript para React.
-- **@types/react-dom**: Tipos de TypeScript para React DOM.
-- **@vitejs/plugin-react**: Plugin de Vite para React.
-- **eslint**: Herramienta para el análisis de código estático.
-- **eslint-plugin-react**: Reglas específicas de ESLint para React.
-- **eslint-plugin-react-hooks**: Reglas de ESLint para hooks de React.
-- **eslint-plugin-react-refresh**: Reglas de ESLint para React Refresh.
-- **globals**: Lista de variables globales.
-- **vite**: Herramienta de construcción rápida para proyectos web.
+**Desarrollo:**
+
+- `eslint`, `@eslint/js`, `eslint-plugin-react` – Linting
+- `@vitejs/plugin-react`, `vite` – Build y desarrollo
+- `@types/react`, `@types/react-dom` – Tipos para TypeScript (si aplica)
+
+---
 
 ## Scripts Disponibles
 
-- `dev`: Inicia el servidor de desarrollo.
-- `build`: Construye la aplicación para producción.
-- `lint`: Ejecuta ESLint para analizar el código.
-- `preview`: Previsualiza la aplicación construida.
+| Comando           | Descripción                                 |
+|-------------------|---------------------------------------------|
+| `npm run dev`     | Inicia el servidor de desarrollo            |
+| `npm run build`   | Construye la app para producción            |
+| `npm run preview` | Previsualiza la app construida              |
+| `npm run lint`    | Ejecuta ESLint para analizar el código      |
+
+---
 
 ## Instalación
 
-Para instalar las dependencias del proyecto, ejecuta:
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/AdventyTravel-web.git
+   cd AdventyTravel-web
+   ```
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
 
-```bash
-npm install
-```
+---
 
 ## Ejecución
 
-Para iniciar el servidor de desarrollo, ejecuta:
+- Servidor de desarrollo:
+  ```bash
+  npm run dev
+  ```
+- Build de producción:
+  ```bash
+  npm run build
+  ```
+- Previsualización:
+  ```bash
+  npm run preview
+  ```
 
-```bash
-npm run dev
-```
+---
 
-Para construir la aplicación para producción, ejecuta:
+## Internacionalización
 
-```bash
-npm run build
-```
+El proyecto soporta múltiples idiomas usando `i18next` y `react-i18next`. Puedes agregar nuevos idiomas editando los archivos en `src/i18n/`.
 
-Para previsualizar la aplicación construida, ejecuta:
+---
 
-```bash
-npm run preview
-```
+## Contribuir
+
+¡Las contribuciones son bienvenidas! Por favor, abre un issue o pull request. Asegúrate de seguir las buenas prácticas de código y ejecutar `npm run lint` antes de enviar cambios.
+
+---
+
+## Licencia
+
+Este proyecto está bajo la licencia MIT.
+
+---
