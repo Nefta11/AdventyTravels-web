@@ -89,9 +89,6 @@ const Restaurants = () => {
                 {/* Título principal */}
                 <div className="restaurants-header">
                     <h2 className="restaurants-main-title">Restaurantes</h2>
-                    <p className="restaurants-subtitle">
-                        Descubre los mejores sabores de Xicotepec
-                    </p>
                 </div>
 
                 {/* Grid de restaurantes */}

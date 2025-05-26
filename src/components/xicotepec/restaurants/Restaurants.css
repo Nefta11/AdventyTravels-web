@@ -59,14 +59,6 @@
     animation: titleSlideUp 1s ease-out;
 }
 
-.restaurants-subtitle {
-    font-size: 1.1rem;
-    color: var(--text-gray);
-    margin: 0;
-    font-weight: 400;
-    animation: subtitleFadeIn 1.2s ease-out 0.3s both;
-}
-
 .restaurants-main-title::after {
     content: '';
     position: absolute;
@@ -405,10 +397,6 @@
 
     .restaurants-main-title {
         font-size: 1.8rem;
-    }
-
-    .restaurants-subtitle {
-        font-size: 1rem;
     }
 
     .restaurant-image-container {
