@@ -135,10 +135,18 @@ const DestinationInfo = () => {
                             </div>
 
                             {/* Botón de ruta */}
-                            <button className="route-button">
-                                <FaRoute className="route-icon" />
-                                ¿Cómo llego?
-                            </button>
+                            <a
+                                href="https://www.google.com/maps/search/?api=1&query=Col+Centro,+73080+Xicotepec+de+Juárez,+Pue."
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="route-button-link"
+                                style={{ textDecoration: 'none' }}
+                            >
+                                <button className="route-button">
+                                    <FaRoute className="route-icon" />
+                                    ¿Cómo llego?
+                                </button>
+                            </a>
                         </div>
 
                         {/* Galería */}
