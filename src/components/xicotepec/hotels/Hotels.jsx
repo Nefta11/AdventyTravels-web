@@ -233,8 +233,8 @@ const Hotels = () => {
         <section className="hotels-component-wrapper" id="hotels-section">
             <div className="hotels-component-container">
                 {/* Título principal */}
-                <div className="hotels-component-header">
-                    <h2 className="hotels-component-main-title">Hoteles</h2>
+                <div className="adventure-header">
+                    <h2 className="adventure-title">Hoteles</h2>
                 </div>
 
                 {/* Grid de hoteles */}
