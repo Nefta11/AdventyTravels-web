@@ -203,278 +203,7 @@
     margin-top: 8px;
 }
 
-/* Modal Backdrop */
-.tours-component-modal-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.85);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    padding: 20px;
-    backdrop-filter: blur(5px);
-    animation: tours-modal-fade-in 0.3s ease;
-}
-
-/* Modal Container */
-.tours-component-modal {
-    background: var(--tours-bg-white);
-    border-radius: 20px;
-    max-width: 1000px;
-    max-height: 90vh;
-    width: 100%;
-    overflow: hidden;
-    box-shadow: var(--tours-shadow-strong);
-    position: relative;
-    animation: tours-modal-slide-up 0.4s ease;
-    overflow-y: auto;
-}
-
-/* Modal Close Button */
-.tours-component-modal-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: rgba(0, 0, 0, 0.7);
-    color: var(--tours-text-light);
-    border: none;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 1001;
-    transition: all 0.3s ease;
-    font-size: 1.1rem;
-}
-
-.tours-component-modal-close:hover {
-    background: rgba(0, 0, 0, 0.9);
-    transform: scale(1.1);
-}
-
-/* Modal Header */
-.tours-component-modal-header {
-    position: relative;
-    height: 300px;
-    display: flex;
-    align-items: end;
-}
-
-.tours-component-modal-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.tours-component-modal-header-content {
-    position: relative;
-    z-index: 2;
-    background: linear-gradient(135deg,
-            rgba(0, 0, 0, 0.6) 0%,
-            rgba(0, 0, 0, 0.2) 100%);
-    padding: 25px 30px;
-    color: var(--tours-text-light);
-    width: 100%;
-    height: 100%;
-}
-
-.tours-component-modal-category {
-    font-size: 0.9rem;
-    font-weight: 600;
-    opacity: 0.9;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
-    color: var(--tours-text-light);
-}
-
-.tours-component-modal-title {
-    font-size: 2rem;
-    font-weight: 800;
-    margin: 0 0 15px 0;
-    color: var(--tours-text-light);
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-}
-
-.tours-component-modal-meta {
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-    margin-bottom: 15px;
-}
-
-.tours-component-modal-meta-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--tours-text-light);
-}
-
-.tours-component-modal-meta-icon {
-    font-size: 0.9rem;
-    opacity: 0.9;
-}
-
-.tours-component-modal-price {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--tours-accent-gold);
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-}
-
-/* Modal Body */
-.tours-component-modal-body {
-    padding: 30px;
-}
-
-.tours-component-modal-section {
-    margin-bottom: 30px;
-}
-
-.tours-component-modal-section:last-child {
-    margin-bottom: 0;
-}
-
-.tours-component-modal-section-title {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: var(--tours-primary-blue);
-    margin: 0 0 15px 0;
-    position: relative;
-}
-
-.tours-component-modal-section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 40px;
-    height: 2px;
-    background: var(--tours-accent-pink);
-    border-radius: 1px;
-}
-
-.tours-component-modal-section-icon {
-    font-size: 1.1rem;
-    color: var(--tours-accent-pink);
-}
-
-.tours-component-modal-description {
-    font-size: 1rem;
-    color: var(--tours-text-dark);
-    line-height: 1.7;
-    margin: 0;
-    text-align: justify;
-}
-
-/* Listas de puntos destacados */
-.tours-component-modal-highlights,
-.tours-component-modal-included,
-.tours-component-modal-recommendations {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    gap: 10px;
-}
-
-.tours-component-modal-highlight,
-.tours-component-modal-included-item,
-.tours-component-modal-recommendation {
-    padding: 12px 16px;
-    background: var(--tours-bg-section);
-    border-radius: 10px;
-    border-left: 4px solid var(--tours-accent-green);
-    font-size: 0.95rem;
-    color: var(--tours-text-dark);
-    transition: all 0.3s ease;
-}
-
-.tours-component-modal-highlight:hover,
-.tours-component-modal-included-item:hover,
-.tours-component-modal-recommendation:hover {
-    transform: translateX(5px);
-    box-shadow: var(--tours-shadow-light);
-}
-
-/* Itinerario */
-.tours-component-modal-itinerary {
-    display: grid;
-    gap: 12px;
-}
-
-.tours-component-modal-itinerary-item {
-    padding: 15px 20px;
-    background: linear-gradient(135deg, var(--tours-accent-purple), var(--tours-primary-blue));
-    color: var(--tours-text-light);
-    border-radius: 12px;
-    font-size: 0.95rem;
-    font-weight: 500;
-    box-shadow: var(--tours-shadow-light);
-}
-
-/* Información de contacto */
-.tours-component-modal-contact {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-}
-
-.tours-component-modal-contact-item {
-    padding: 15px 20px;
-    background: var(--tours-bg-section);
-    border-radius: 12px;
-    border: 2px solid var(--tours-accent-orange);
-    font-size: 0.95rem;
-    color: var(--tours-text-dark);
-}
-
-.tours-component-modal-contact-item strong {
-    color: var(--tours-primary-blue);
-    display: block;
-    margin-bottom: 5px;
-}
-
 /* Animaciones */
-@keyframes tours-modal-fade-in {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes tours-modal-slide-up {
-    from {
-        opacity: 0;
-        transform: translateY(50px) scale(0.9);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
 @keyframes tours-card-fade-in {
     from {
         opacity: 0;
@@ -513,14 +242,6 @@
     .tours-component-header {
         margin-bottom: 40px;
     }
-
-    .tours-component-modal {
-        max-width: 90vw;
-    }
-
-    .tours-component-modal-title {
-        font-size: 1.7rem;
-    }
 }
 
 @media (max-width: 768px) {
@@ -554,36 +275,6 @@
 
     .tours-component-header {
         margin-bottom: 35px;
-    }
-
-    .tours-component-modal {
-        max-width: 95vw;
-        max-height: 95vh;
-    }
-
-    .tours-component-modal-header {
-        height: 250px;
-    }
-
-    .tours-component-modal-header-content {
-        padding: 20px 25px;
-    }
-
-    .tours-component-modal-title {
-        font-size: 1.5rem;
-    }
-
-    .tours-component-modal-body {
-        padding: 25px 20px;
-    }
-
-    .tours-component-modal-meta {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .tours-component-modal-contact {
-        grid-template-columns: 1fr;
     }
 }
 
@@ -629,46 +320,6 @@
     .tours-component-header {
         margin-bottom: 25px;
     }
-
-    .tours-component-modal-header {
-        height: 220px;
-    }
-
-    .tours-component-modal-header-content {
-        padding: 18px 20px;
-    }
-
-    .tours-component-modal-title {
-        font-size: 1.3rem;
-    }
-
-    .tours-component-modal-body {
-        padding: 20px 15px;
-    }
-
-    .tours-component-modal-section-title {
-        font-size: 1.1rem;
-    }
-
-    .tours-component-modal-description {
-        font-size: 0.9rem;
-    }
-
-    .tours-component-modal-highlight,
-    .tours-component-modal-included-item,
-    .tours-component-modal-recommendation {
-        font-size: 0.85rem;
-        padding: 10px 14px;
-    }
-
-    .tours-component-modal-itinerary-item {
-        font-size: 0.85rem;
-        padding: 12px 16px;
-    }
-
-    .tours-component-card:hover {
-        transform: translateY(-5px) scale(1.01);
-    }
 }
 
 @media (max-width: 360px) {
@@ -692,27 +343,11 @@
         font-size: 1.1rem;
     }
 
-    .tours-component-card-description {
+    .tours-component-card_description {
         font-size: 0.8rem;
     }
 
-    .tours-component-modal-close {
-        width: 40px;
-        height: 40px;
-        font-size: 1rem;
-        top: 15px;
-        right: 15px;
-    }
-
-    .tours-component-modal-header {
-        height: 200px;
-    }
-
-    .tours-component-modal-title {
-        font-size: 1.2rem;
-    }
-
-    .tours-component-modal-price {
-        font-size: 1.3rem;
+    .tours-component-card:hover {
+        transform: translateY(-5px) scale(1.01);
     }
 }
