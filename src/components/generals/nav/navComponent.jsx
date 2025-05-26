@@ -7,6 +7,7 @@ import logo from '../../../assets/images/LOGOTIPO_OFICIAL.webp';
 import LanguageSelector from '../lenguaje/LanguageSelector';
 import NavItem from './NavItem';
 import './navComponent.css';
+import rehilete from '../../../assets/images/rehilete.svg';
 
 const NavComponent = () => {
     const { t } = useTranslation();
@@ -138,7 +139,7 @@ const NavComponent = () => {
                         <NavItem
                             to="/xicotepec"
                             icon={isMobile ? GiVillage : null}
-                            label="¡Xicotepec!❤️"
+                            label={<span>¡Xicotepec!<img src={rehilete} alt="Rehilete" className="label-rehilete-spin" /></span>}
                             menuOpen={menuOpen}
                             isActive={location.pathname === '/xicotepec'}
                         />
