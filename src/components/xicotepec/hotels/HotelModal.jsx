@@ -14,7 +14,6 @@ const HotelModal = ({ hotel, onClose }) => (
                     style={{ backgroundImage: `url(${hotel.image})` }}
                 />
                 <div className="hotels-component-modal-header-content">
-                    <div className="hotels-component-modal-category">{hotel.category}</div>
                     <h2 className="hotels-component-modal-title">{hotel.name}</h2>
                     <div className="hotels-component-modal-stars">
                         {[...Array(5)].map((_, i) => (

@@ -86,16 +86,6 @@
     height: 100%;
 }
 
-.hotels-component-modal-category {
-    font-size: 0.9rem;
-    font-weight: 600;
-    opacity: 0.9;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
-    color: #fff;
-}
-
 .hotels-component-modal-title {
     font-size: 2rem;
     font-weight: 800;
@@ -315,11 +305,6 @@
         justify-content: flex-end;
     }
 
-    .hotels-component-modal-category {
-        font-size: 0.7rem;
-        margin-bottom: 4px;
-    }
-
     .hotels-component-modal-title {
         font-size: 1.1rem;
         line-height: 1.1;
@@ -405,62 +390,55 @@
 /* Media Queries para Móviles */
 @media (max-width: 480px) {
     .hotels-component-modal-backdrop {
-        padding: 0;
-        align-items: flex-end;
+        padding: 15px;
+        align-items: center;
     }
 
     .hotels-component-modal {
-        border-radius: 0;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
+        border-radius: 15px;
         max-height: 85vh;
-        height: 85vh;
+        height: auto;
         width: 100%;
         margin: 0;
         position: relative;
-        animation: hotels-modal-slide-up-mobile 0.4s ease;
+        animation: hotels-modal-slide-up 0.4s ease;
     }
 
     .hotels-component-modal-close {
-        top: 12px;
-        right: 12px;
-        width: 32px;
-        height: 32px;
-        font-size: 0.8rem;
-        background: rgba(0, 0, 0, 0.8);
+        top: 15px;
+        right: 15px;
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+        background: rgba(0, 0, 0, 0.7);
     }
 
     .hotels-component-modal-header {
-        height: 160px;
+        height: 200px;
         position: relative;
     }
 
     .hotels-component-modal-header-content {
-        padding: 15px 15px;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 70%, transparent 100%);
+        padding: 20px;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.2) 70%, transparent 100%);
         justify-content: flex-end;
-        min-height: 160px;
-    }
-
-    .hotels-component-modal-category {
-        font-size: 0.75rem;
-        margin-bottom: 4px;
-        opacity: 0.9;
-        font-weight: 600;
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
     }
 
     .hotels-component-modal-title {
         font-size: 1.1rem;
         line-height: 1.2;
-        margin: 0 0 6px 0;
+        margin: 0 0 8px 0;
         max-width: calc(100% - 50px);
-        font-weight: 700;
+        font-weight: 800;
     }
 
-    /* Reestructurar las estrellas y rating con más espacio */
+    /* Estrellas y rating con más espacio */
     .hotels-component-modal-stars {
         gap: 3px;
-        margin-bottom: 8px;
+        margin-bottom: 10px;
         align-items: center;
         flex-wrap: nowrap;
     }
@@ -471,141 +449,128 @@
 
     .hotels-component-modal-rating {
         font-size: 0.75rem;
-        padding: 2px 5px;
+        padding: 3px 6px;
         margin-left: 6px;
         white-space: nowrap;
-        font-weight: 600;
     }
 
-    /* Meta información con más espacio */
+    /* Meta información con más breathing room */
     .hotels-component-modal-meta {
-        gap: 6px;
-        margin-bottom: 8px;
+        gap: 8px;
+        margin-bottom: 10px;
         flex-direction: column;
         align-items: flex-start;
     }
 
     .hotels-component-modal-meta-item {
-        font-size: 0.75rem;
-        gap: 5px;
+        font-size: 0.8rem;
+        gap: 6px;
         line-height: 1.3;
         max-width: calc(100% - 50px);
         word-wrap: break-word;
-        font-weight: 500;
     }
 
     .hotels-component-modal-meta-icon {
-        font-size: 0.7rem;
+        font-size: 0.75rem;
         flex-shrink: 0;
     }
 
-    /* Precio en esquina superior */
+    /* Precio más visible */
     .hotels-component-modal-price {
-        position: absolute;
-        top: 10px;
-        right: 50px;
-        font-size: 0.8rem;
-        background: rgba(0, 0, 0, 0.8);
-        padding: 4px 7px;
-        border-radius: 5px;
-        font-weight: 700;
+        position: static;
+        font-size: 1rem;
+        background: rgba(255, 215, 0, 0.2);
+        color: #FFD700;
+        padding: 5px 10px;
+        border-radius: 6px;
+        font-weight: 800;
         white-space: nowrap;
+        margin-top: 5px;
+        display: inline-block;
+        backdrop-filter: blur(10px);
     }
 
     .hotels-component-modal-body {
-        padding: 10px;
-        padding-bottom: 15px;
+        padding: 20px;
+        padding-bottom: 25px;
     }
 
     .hotels-component-modal-section {
-        margin-bottom: 12px;
+        margin-bottom: 20px;
     }
 
     .hotels-component-modal-section-title {
-        font-size: 0.8rem;
-        gap: 5px;
-        margin-bottom: 6px;
+        font-size: 1rem;
+        gap: 8px;
+        margin-bottom: 10px;
     }
 
     .hotels-component-modal-section-icon {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
     }
 
     .hotels-component-modal-description {
-        font-size: 0.75rem;
-        line-height: 1.3;
+        font-size: 0.85rem;
+        line-height: 1.5;
         text-align: left;
     }
 
-    /* AMENIDADES EN 2 COLUMNAS */
+    /* AMENIDADES EN 2 COLUMNAS con más espacio */
     .hotels-component-modal-amenities {
         grid-template-columns: 1fr 1fr;
-        gap: 4px;
-        column-gap: 6px;
+        gap: 8px;
+        column-gap: 10px;
     }
 
     .hotels-component-modal-amenity {
-        padding: 4px 6px;
-        border-radius: 4px;
-        font-size: 0.7rem;
+        padding: 8px 10px;
+        border-radius: 6px;
+        font-size: 0.8rem;
     }
 
     .hotels-component-modal-amenity-icon {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
     }
 
     .hotels-component-modal-amenity span {
-        font-size: 0.7rem;
-        line-height: 1.1;
+        font-size: 0.8rem;
+        line-height: 1.3;
     }
 
-    /* HABITACIONES Y SERVICIOS EN 2 COLUMNAS */
+    /* HABITACIONES Y SERVICIOS EN 2 COLUMNAS con más espacio */
     .hotels-component-modal-features,
     .hotels-component-modal-services {
-        gap: 4px;
+        gap: 8px;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        column-gap: 6px;
+        column-gap: 10px;
     }
 
     .hotels-component-modal-feature,
     .hotels-component-modal-service {
-        padding: 4px 8px;
-        font-size: 0.7rem;
-        border-radius: 4px;
-        line-height: 1.2;
-        border-left-width: 2px;
+        padding: 8px 12px;
+        font-size: 0.8rem;
+        border-radius: 6px;
+        line-height: 1.3;
+        border-left-width: 3px;
     }
 
-    /* HORARIOS MÁS COMPACTOS */
+    /* HORARIOS con más espacio */
     .hotels-component-modal-schedule {
         grid-template-columns: 1fr 1fr;
-        gap: 4px;
-        column-gap: 6px;
+        gap: 8px;
+        column-gap: 10px;
     }
 
     .hotels-component-modal-schedule-item {
-        padding: 6px 8px;
-        font-size: 0.7rem;
-        border-radius: 6px;
+        padding: 10px 12px;
+        font-size: 0.8rem;
+        border-radius: 8px;
     }
 
     .hotels-component-modal-schedule-item strong {
-        font-size: 0.65rem;
-        margin-bottom: 1px;
-    }
-}
-
-/* Animación específica para móvil */
-@keyframes hotels-modal-slide-up-mobile {
-    from {
-        opacity: 0;
-        transform: translateY(100%);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
+        font-size: 0.75rem;
+        margin-bottom: 3px;
     }
 }
 
