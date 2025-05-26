@@ -7,6 +7,7 @@ import DestinationInfo from '../components/xicotepec/destinationInfo/Destination
 import Atractivos from '../components/xicotepec/atractivos/Atractivos';
 import Celebrations from '../components/xicotepec/celebrations/Festivals';
 import Hotels from '../components/xicotepec/hotels/Hotels'
+import Tours from '../components/xicotepec/tours/Tours';
 
 export default function Xicotepec() {
 
@@ -23,6 +24,7 @@ export default function Xicotepec() {
             <Atractivos />
             <Celebrations />
             <Hotels />
+            <Tours />
             <FooterComponent />
         </motion.div>
     );
