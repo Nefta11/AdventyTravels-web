@@ -282,11 +282,12 @@
     position: relative;
     z-index: 2;
     background: linear-gradient(135deg,
-            rgba(0, 0, 0, 0.8) 0%,
-            rgba(0, 0, 0, 0.9) 100%);
+            rgba(0, 0, 0, 0.6) 0%,
+            rgba(0, 0, 0, 0.2) 100%);
     padding: 25px 30px;
     color: var(--tours-text-light);
     width: 100%;
+    height: 100%;
 }
 
 .tours-component-modal-category {
