@@ -1,153 +1,578 @@
-/* Modal variables - using the same colors from the header */
+/* Enhanced Modal Styles with Modern Design */
 :root {
     --adventy-pink: #FF5FA2;
     --adventy-purple: #8A4FFF;
     --adventy-deep-purple: #5A2E9D;
+    --adventy-light-purple: #E8DBFF;
     --adventy-white: #ffffff;
-    --adventy-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    --adventy-transition: all 0.3s ease;
+    --adventy-gray-100: #f8f9fa;
+    --adventy-gray-200: #e9ecef;
+    --adventy-gray-300: #dee2e6;
+    --adventy-gray-400: #ced4da;
+    --adventy-gray-500: #adb5bd;
+    --adventy-gray-600: #6c757d;
+    --adventy-gray-700: #495057;
+    --adventy-gray-800: #343a40;
+    --adventy-gray-900: #212529;
+    --adventy-success: #10b981;
+    --adventy-error: #ef4444;
+    --adventy-warning: #f59e0b;
+    --adventy-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --adventy-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --adventy-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --adventy-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --adventy-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --adventy-transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Overlay with backdrop blur */
 .adventy-modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    animation: adventy-fadeIn 0.3s ease-out;
+    animation: fadeInOverlay 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    padding: 20px;
 }
 
+@keyframes fadeInOverlay {
+    from {
+        opacity: 0;
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+    }
+
+    to {
+        opacity: 1;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+}
+
+/* Modern glassmorphism container */
 .adventy-modal-container {
-    background-color: white;
-    width: 90%;
-    max-width: 500px;
-    border-radius: 10px;
-    padding: 25px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    width: 100%;
+    max-width: 520px;
+    border-radius: 24px;
+    padding: 0;
     position: relative;
-    box-shadow: var(--adventy-shadow);
-    border: 2px solid var(--adventy-purple);
+    box-shadow:
+        0 25px 50px -12px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(255, 255, 255, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    overflow: hidden;
+    animation: slideInModal 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+@keyframes slideInModal {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Header with gradient background */
+.adventy-modal-header {
+    background: linear-gradient(135deg, var(--adventy-purple) 0%, var(--adventy-pink) 100%);
+    padding: 32px 32px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.adventy-modal-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+    animation: float 20s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Close button with better design */
 .adventy-modal-close {
     position: absolute;
-    top: 15px;
-    right: 15px;
-    background: none;
+    top: 16px;
+    right: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
     border: none;
-    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    color: #333;
+    color: white;
     transition: var(--adventy-transition);
+    z-index: 10;
 }
 
 .adventy-modal-close:hover {
-    color: var(--adventy-purple);
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
 }
 
+/* Icon with gradient and animation */
+.adventy-modal-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.adventy-modal-icon svg {
+    color: white;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Typography improvements */
 .adventy-modal-title {
-    color: #333;
-    font-size: 22px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-weight: 600;
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 8px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: -0.025em;
 }
 
+.adventy-modal-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Form with better spacing */
 .adventy-modal-form {
+    padding: 32px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 
-.adventy-modal-input {
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
+/* Input groups with modern styling */
+.adventy-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.adventy-input-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Input icon styling */
+.adventy-input-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--adventy-gray-500);
     transition: var(--adventy-transition);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Modern input styling */
+.adventy-modal-input {
+    width: 100%;
+    padding: 16px 16px 16px 48px;
+    border: 2px solid var(--adventy-gray-200);
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    background: white;
+    transition: var(--adventy-transition);
+    box-shadow: var(--adventy-shadow-sm);
+    color: var(--adventy-gray-800);
+}
+
+.adventy-modal-input::placeholder {
+    color: var(--adventy-gray-500);
+    font-weight: 400;
 }
 
 .adventy-modal-input:focus {
     border-color: var(--adventy-purple);
     outline: none;
-    box-shadow: 0 0 0 2px rgba(138, 79, 255, 0.2);
+    box-shadow:
+        0 0 0 4px rgba(138, 79, 255, 0.1),
+        var(--adventy-shadow);
+    transform: translateY(-1px);
 }
 
-.adventy-modal-row {
+.adventy-modal-input:focus+.adventy-input-icon,
+.adventy-modal-input:not(:placeholder-shown)+.adventy-input-icon {
+    color: var(--adventy-purple);
+}
+
+/* Error state */
+.adventy-modal-input.error {
+    border-color: var(--adventy-error);
+    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.1);
+}
+
+.adventy-error-message {
+    color: var(--adventy-error);
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 4px;
     display: flex;
-    gap: 15px;
+    align-items: center;
+    gap: 6px;
 }
 
-.adventy-modal-row .adventy-modal-input {
-    flex: 1;
+.adventy-error-message::before {
+    content: '⚠';
+    font-size: 12px;
 }
 
+/* Row layout for country/city */
+.adventy-modal-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* Submit button with enhanced design */
 .adventy-modal-submit {
-    background-color: var(--adventy-purple);
-    color: var(--adventy-white);
+    background: linear-gradient(135deg, var(--adventy-purple) 0%, var(--adventy-pink) 100%);
+    color: white;
     border: none;
-    border-radius: 5px;
-    padding: 14px;
+    border-radius: 12px;
+    padding: 18px 24px;
     font-weight: 700;
     font-size: 16px;
     cursor: pointer;
     transition: var(--adventy-transition);
-    margin-top: 5px;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow:
+        var(--adventy-shadow-lg),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.adventy-modal-submit::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.adventy-modal-submit:hover::before {
+    left: 100%;
 }
 
 .adventy-modal-submit:hover {
-    background-color: var(--adventy-deep-purple);
+    transform: translateY(-2px);
+    box-shadow:
+        0 20px 25px -5px rgba(138, 79, 255, 0.3),
+        0 10px 10px -5px rgba(138, 79, 255, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
-@keyframes adventy-fadeIn {
-    from {
+.adventy-modal-submit:active {
+    transform: translateY(0);
+}
+
+.adventy-modal-submit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.adventy-modal-submit.loading {
+    cursor: wait;
+}
+
+/* Loading spinner */
+.adventy-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Success animation */
+.adventy-success-animation {
+    padding: 48px 32px;
+    text-align: center;
+    animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.adventy-success-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--adventy-success) 0%, #059669 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    color: white;
+    animation: successPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes successPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
         opacity: 0;
-        transform: translateY(-20px);
+        transform: scale(0.3);
     }
 
-    to {
+    50% {
         opacity: 1;
-        transform: translateY(0);
+        transform: scale(1.05);
+    }
+
+    70% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
-/* Responsive adjustments */
+.adventy-success-animation h3 {
+    color: var(--adventy-gray-800);
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 12px;
+}
+
+.adventy-success-animation p {
+    color: var(--adventy-gray-600);
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
+    .adventy-modal-overlay {
+        padding: 16px;
+    }
+
     .adventy-modal-container {
+        max-width: 100%;
+        border-radius: 20px;
+    }
+
+    .adventy-modal-header {
+        padding: 24px 24px 20px;
+    }
+
+    .adventy-modal-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 16px;
+    }
+
+    .adventy-modal-title {
+        font-size: 24px;
+    }
+
+    .adventy-modal-subtitle {
+        font-size: 14px;
+    }
+
+    .adventy-modal-form {
+        padding: 24px;
+        gap: 16px;
+    }
+
+    .adventy-modal-input {
+        padding: 14px 14px 14px 44px;
+        font-size: 16px;
+        /* Prevent zoom on iOS */
+    }
+
+    .adventy-modal-submit {
+        padding: 16px 20px;
+        font-size: 14px;
+    }
+
+    .adventy-modal-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .adventy-modal-overlay {
+        padding: 12px;
+    }
+
+    .adventy-modal-header {
+        padding: 20px 20px 16px;
+    }
+
+    .adventy-modal-form {
         padding: 20px;
+        gap: 14px;
     }
 
     .adventy-modal-title {
         font-size: 20px;
     }
 
-    .adventy-modal-input {
-        padding: 10px 12px;
-        font-size: 14px;
+    .adventy-modal-close {
+        top: 12px;
+        right: 12px;
+        width: 36px;
+        height: 36px;
     }
 
-    .adventy-modal-submit {
-        padding: 12px;
-        font-size: 14px;
+    .adventy-success-animation {
+        padding: 32px 20px;
+    }
+
+    .adventy-success-icon {
+        width: 60px;
+        height: 60px;
     }
 }
 
-@media (max-width: 480px) {
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
     .adventy-modal-container {
-        padding: 15px;
+        background: rgba(30, 30, 30, 0.95);
+        border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    .adventy-modal-row {
-        flex-direction: column;
-        gap: 10px;
+    .adventy-modal-input {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(255, 255, 255, 0.1);
+        color: white;
     }
 
-    .adventy-modal-title {
-        font-size: 18px;
-        margin-bottom: 15px;
+    .adventy-modal-input::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .adventy-success-animation h3 {
+        color: white;
+    }
+
+    .adventy-success-animation p {
+        color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+/* Accessibility improvements */
+.adventy-modal-input:focus-visible {
+    outline: 2px solid var(--adventy-purple);
+    outline-offset: 2px;
+}
+
+.adventy-modal-submit:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+
+    .adventy-modal-overlay,
+    .adventy-modal-container,
+    .adventy-modal-icon,
+    .adventy-success-animation,
+    .adventy-success-icon {
+        animation: none;
+    }
+
+    .adventy-modal-submit::before {
+        display: none;
     }
 }
