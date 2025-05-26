@@ -19,7 +19,7 @@ const Tours = () => {
     const tours = [
         {
             id: 1,
-            image: "https://images.unsplash.com/photo-1559056961-84eedeea7c26?w=500&h=350&fit=crop",
+            image: "https://mexicotrip.mx/uploads/images/202302/image_870x_63f3d0a960d1a.jpg",
             title: "Ruta del Café en Xicotepec saliendo desde la Ciudad de México",
             category: "Tour Gastronómico",
             duration: "12 horas",
