@@ -5,6 +5,8 @@ import ExperienceFilters from '../components/experiencies/ExperienceFilters';
 import ExperienceCard from '../components/experiencies/ExperienceCard';
 import ExperienceCTA from '../components/experiencies/ExperienceCTA';
 import FooterComponent from "../components/generals/footer/FooterComponent";
+import WhatsAppIcon from "../components/generals/whatsAppComponent/WhatsAppIcon";
+import AdventyPayButton from '../components/adventyPay/button/AdventyPayButton';
 import '../components/experiencies/Experiences.css';
 
 const experiences = [
@@ -183,6 +185,8 @@ const Experiences = () => {
             </section>
 
             <ExperienceCTA />
+            <AdventyPayButton />
+            <WhatsAppIcon />
             <FooterComponent />
         </div>
     );

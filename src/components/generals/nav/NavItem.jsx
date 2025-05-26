@@ -103,7 +103,6 @@ const NavItem = ({ to, icon: Icon, label, menuOpen, submenu, submenuItems, isAct
                     </li>
                 ))
             ) : (
-                // Renderizar el submenu de contacto
                 <ContactSubmenu />
             )}
         </ul>

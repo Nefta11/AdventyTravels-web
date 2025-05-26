@@ -1,0 +1,122 @@
+/* Hotels.css optimizado: solo layout y estilos generales, sin estilos de modal ni card */
+
+/* Variables CSS específicas para el componente Hotels */
+.hotels-component-wrapper {
+    --hotels-primary-blue: #2B5A87;
+    --hotels-accent-pink: #E91E63;
+    --hotels-accent-green: #4CAF50;
+    --hotels-accent-purple: #9C27B0;
+    --hotels-accent-orange: #FF9800;
+    --hotels-accent-gold: #FFD700;
+    --hotels-text-light: #ffffff;
+    --hotels-text-dark: #333333;
+    --hotels-bg-light: #f8f9fa;
+    --hotels-bg-white: #ffffff;
+}
+
+.hotels-component-wrapper {
+    width: 100%;
+    padding: 60px 0;
+    background: var(--hotels-bg-light);
+    font-family: "Gilroy", sans-serif;
+    line-height: 1.6;
+}
+
+.hotels-component-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Título principal */
+.hotels-component-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.hotels-component-main-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: var(--hotels-text-dark);
+    margin: 0;
+    position: relative;
+    display: inline-block;
+}
+
+.hotels-component-main-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--hotels-accent-pink), var(--hotels-accent-purple));
+    border-radius: 2px;
+}
+
+/* Grid de hoteles */
+.hotels-component-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    align-items: stretch;
+}
+
+@media (max-width: 968px) {
+    .hotels-component-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .hotels-component-header {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hotels-component-wrapper {
+        padding: 40px 0;
+    }
+
+    .hotels-component-container {
+        padding: 0 15px;
+    }
+
+    .hotels-component-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .hotels-component-header {
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hotels-component-wrapper {
+        padding: 30px 0;
+    }
+
+    .hotels-component-container {
+        padding: 0 10px;
+    }
+
+    .hotels-component-grid {
+        gap: 15px;
+    }
+
+    .hotels-component-header {
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 360px) {
+    .hotels-component-container {
+        padding: 0 8px;
+    }
+
+    .hotels-component-grid {
+        gap: 12px;
+    }
+}
