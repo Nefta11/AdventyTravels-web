@@ -1,12 +1,20 @@
-/* AdventureSelector.css */
+/* AdventureSelector.css - Paleta basada en los colores del rehilete de Pueblos Mágicos */
 
-/* CSS Variables - manteniendo consistencia con XicotepecHero */
+/* CSS Variables - Colores del Rehilete Pueblos Mágicos */
 :root {
-    --primary-blue: #2B5A87;
+    /* Colores principales del rehilete */
+    --primary-blue: #1E88E5;
+    /* Azul - representa a la gente */
+    --accent-purple: #7B1FA2;
+    /* Morado - cultura y tradición */
+    --accent-green: #388E3C;
+    /* Verde - naturaleza */
+    --accent-orange: #F57C00;
+    /* Naranja - gastronomía típica */
     --accent-pink: #E91E63;
-    --accent-green: #4CAF50;
-    --accent-purple: #9C27B0;
-    --accent-orange: #FF9800;
+    /* Rosa mexicano - artesanías */
+
+    /* Colores complementarios */
     --text-light: #ffffff;
     --text-dark: #333333;
     --text-gray: #666666;
@@ -39,8 +47,8 @@
     right: 0;
     bottom: 0;
     background:
-        radial-gradient(circle at 20% 80%, rgba(43, 90, 135, 0.03) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(233, 30, 99, 0.03) 0%, transparent 50%);
+        radial-gradient(circle at 20% 80%, rgba(30, 136, 229, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(245, 124, 0, 0.03) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -67,9 +75,10 @@
     position: relative;
     display: inline-block;
     background: linear-gradient(135deg,
+            var(--accent-purple),
             var(--primary-blue),
-            var(--accent-pink),
-            var(--accent-purple));
+            var(--accent-green),
+            var(--accent-orange));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -85,9 +94,16 @@
     width: 120px;
     height: 4px;
     background: linear-gradient(90deg,
-            var(--accent-pink),
-            var(--accent-purple),
-            var(--accent-green));
+            var(--accent-purple) 0%,
+            /* Morado - cultura */
+            var(--primary-blue) 20%,
+            /* Azul - gente */
+            var(--accent-green) 40%,
+            /* Verde - naturaleza */
+            var(--accent-orange) 60%,
+            /* Naranja - gastronomía */
+            var(--accent-pink) 80%);
+    /* Rosa - artesanías */
     border-radius: 2px;
     animation: adventure-underlineExpand 1.5s ease-out 0.5s both;
 }
@@ -177,27 +193,149 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg,
-            rgba(43, 90, 135, 0.05) 0%,
-            rgba(233, 30, 99, 0.05) 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
+}
+
+/* Colores específicos por item según significado de Pueblos Mágicos */
+
+/* Item 1: Xicotepec Único - MORADO (cultura y tradición) */
+.adventure-item:nth-child(1)::before {
+    background: linear-gradient(135deg,
+            rgba(123, 31, 162, 0.05) 0%,
+            rgba(123, 31, 162, 0.1) 100%);
+}
+
+.adventure-item:nth-child(1):hover {
+    border-color: var(--accent-purple);
+}
+
+.adventure-item:nth-child(1).active {
+    background: linear-gradient(135deg,
+            var(--accent-purple) 0%,
+            rgba(123, 31, 162, 0.9) 100%);
+}
+
+.adventure-item:nth-child(1) .adventure-icon {
+    color: var(--accent-purple);
+}
+
+/* Item 2: Sitios y Experiencias - VERDE (naturaleza) */
+.adventure-item:nth-child(2)::before {
+    background: linear-gradient(135deg,
+            rgba(56, 142, 60, 0.05) 0%,
+            rgba(56, 142, 60, 0.1) 100%);
+}
+
+.adventure-item:nth-child(2):hover {
+    border-color: var(--accent-green);
+}
+
+.adventure-item:nth-child(2).active {
+    background: linear-gradient(135deg,
+            var(--accent-green) 0%,
+            rgba(56, 142, 60, 0.9) 100%);
+}
+
+.adventure-item:nth-child(2) .adventure-icon {
+    color: var(--accent-green);
+}
+
+/* Item 3: Celebraciones - MORADO (cultura y tradición) */
+.adventure-item:nth-child(3)::before {
+    background: linear-gradient(135deg,
+            rgba(123, 31, 162, 0.05) 0%,
+            rgba(123, 31, 162, 0.1) 100%);
+}
+
+.adventure-item:nth-child(3):hover {
+    border-color: var(--accent-purple);
+}
+
+.adventure-item:nth-child(3).active {
+    background: linear-gradient(135deg,
+            var(--accent-purple) 0%,
+            rgba(123, 31, 162, 0.9) 100%);
+}
+
+.adventure-item:nth-child(3) .adventure-icon {
+    color: var(--accent-purple);
+}
+
+/* Item 4: Alojamientos - AZUL (gente) */
+.adventure-item:nth-child(4)::before {
+    background: linear-gradient(135deg,
+            rgba(30, 136, 229, 0.05) 0%,
+            rgba(30, 136, 229, 0.1) 100%);
+}
+
+.adventure-item:nth-child(4):hover {
+    border-color: var(--primary-blue);
+}
+
+.adventure-item:nth-child(4).active {
+    background: linear-gradient(135deg,
+            var(--primary-blue) 0%,
+            rgba(30, 136, 229, 0.9) 100%);
+}
+
+.adventure-item:nth-child(4) .adventure-icon {
+    color: var(--primary-blue);
+}
+
+/* Item 5: Recorridos - AZUL (gente) */
+.adventure-item:nth-child(5)::before {
+    background: linear-gradient(135deg,
+            rgba(30, 136, 229, 0.05) 0%,
+            rgba(30, 136, 229, 0.1) 100%);
+}
+
+.adventure-item:nth-child(5):hover {
+    border-color: var(--primary-blue);
+}
+
+.adventure-item:nth-child(5).active {
+    background: linear-gradient(135deg,
+            var(--primary-blue) 0%,
+            rgba(30, 136, 229, 0.9) 100%);
+}
+
+.adventure-item:nth-child(5) .adventure-icon {
+    color: var(--primary-blue);
+}
+
+/* Item 6: Restaurantes - NARANJA (gastronomía) */
+.adventure-item:nth-child(6)::before {
+    background: linear-gradient(135deg,
+            rgba(245, 124, 0, 0.05) 0%,
+            rgba(245, 124, 0, 0.1) 100%);
+}
+
+.adventure-item:nth-child(6):hover {
+    border-color: var(--accent-orange);
+}
+
+.adventure-item:nth-child(6).active {
+    background: linear-gradient(135deg,
+            var(--accent-orange) 0%,
+            rgba(245, 124, 0, 0.9) 100%);
+}
+
+.adventure-item:nth-child(6) .adventure-icon {
+    color: var(--accent-orange);
+}
+
+/* Estados generales */
+.adventure-item:hover::before {
+    opacity: 1;
 }
 
 .adventure-item:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-strong);
-    border-color: var(--accent-pink);
-}
-
-.adventure-item:hover::before {
-    opacity: 1;
 }
 
 .adventure-item.active {
-    background: linear-gradient(135deg,
-            var(--primary-blue) 0%,
-            var(--accent-pink) 100%);
     color: var(--text-light);
     transform: translateY(-5px);
     box-shadow: var(--shadow-strong);
@@ -222,14 +360,12 @@
 
 .adventure-icon {
     font-size: 3rem;
-    color: var(--primary-blue);
     transition: all 0.3s ease;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 .adventure-item:hover .adventure-icon {
     transform: scale(1.05);
-    color: var(--accent-pink);
 }
 
 /* Título del item */
@@ -272,15 +408,50 @@
     transition: all 0.3s ease;
 }
 
+/* Indicadores con colores específicos */
+.adventure-indicator:nth-child(1):hover,
+.adventure-indicator:nth-child(1).active {
+    background: var(--accent-purple);
+    /* Cultura */
+}
+
+.adventure-indicator:nth-child(2):hover,
+.adventure-indicator:nth-child(2).active {
+    background: var(--accent-green);
+    /* Naturaleza */
+}
+
+.adventure-indicator:nth-child(3):hover,
+.adventure-indicator:nth-child(3).active {
+    background: var(--accent-purple);
+    /* Cultura */
+}
+
+.adventure-indicator:nth-child(4):hover,
+.adventure-indicator:nth-child(4).active {
+    background: var(--primary-blue);
+    /* Gente */
+}
+
+.adventure-indicator:nth-child(5):hover,
+.adventure-indicator:nth-child(5).active {
+    background: var(--primary-blue);
+    /* Gente */
+}
+
+.adventure-indicator:nth-child(6):hover,
+.adventure-indicator:nth-child(6).active {
+    background: var(--accent-orange);
+    /* Gastronomía */
+}
+
 .adventure-indicator:hover {
-    background: var(--accent-pink);
     transform: scale(1.2);
 }
 
 .adventure-indicator.active {
-    background: linear-gradient(45deg, var(--accent-pink), var(--accent-purple));
     transform: scale(1.3);
-    box-shadow: 0 2px 8px rgba(233, 30, 99, 0.4);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Animaciones */
@@ -340,6 +511,10 @@
 
 .adventure-item:nth-child(5) {
     animation-delay: 0.5s;
+}
+
+.adventure-item:nth-child(6) {
+    animation-delay: 0.6s;
 }
 
 /* Responsive Design */
