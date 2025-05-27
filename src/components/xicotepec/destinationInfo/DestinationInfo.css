@@ -1,10 +1,20 @@
-/* DestinationInfo.css */
+/* DestinationInfo.css - Paleta basada en Pueblos Mágicos - MORADO (Cultura y Tradición) */
 
+/* CSS Variables - Colores del Rehilete Pueblos Mágicos */
 :root {
-    --primary-blue: #2B5A87;
+    /* Colores principales del rehilete */
+    --primary-blue: #1E88E5;
+    /* Azul - representa a la gente */
+    --accent-purple: #7B1FA2;
+    /* Morado - cultura y tradición (PRINCIPAL) */
+    --accent-green: #388E3C;
+    /* Verde - naturaleza */
+    --accent-orange: #F57C00;
+    /* Naranja - gastronomía típica */
     --accent-pink: #E91E63;
-    --accent-green: #4CAF50;
-    --accent-purple: #9C27B0;
+    /* Rosa mexicano - artesanías */
+
+    /* Colores complementarios */
     --text-light: #fff;
     --text-dark: #333;
     --text-gray: #666;
@@ -41,7 +51,11 @@
     font-weight: 900;
     color: var(--text-dark);
     margin: 0 0 15px 0;
-    background: linear-gradient(135deg, var(--primary-blue), var(--accent-pink));
+    /* Gradiente con morado como protagonista - representa cultura y tradición */
+    background: linear-gradient(135deg,
+            var(--accent-purple) 0%,
+            var(--primary-blue) 50%,
+            var(--accent-purple) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -50,9 +64,14 @@
 .main-title-underline {
     width: 100px;
     height: 4px;
-    background: linear-gradient(90deg, var(--accent-pink), var(--accent-purple));
+    /* Morado como color principal para "Cultura y Tradición" */
+    background: linear-gradient(90deg,
+            var(--accent-purple),
+            rgba(123, 31, 162, 0.7),
+            var(--accent-purple));
     border-radius: 2px;
     margin: 0 auto;
+    box-shadow: 0 2px 8px rgba(123, 31, 162, 0.3);
 }
 
 .destination-content-wrapper {
@@ -69,6 +88,7 @@
     border-radius: 16px;
     box-shadow: var(--shadow-light);
     overflow: hidden;
+    border: 1px solid rgba(123, 31, 162, 0.1);
 }
 
 .destination-section {
@@ -96,7 +116,10 @@
     left: 0;
     width: 50px;
     height: 3px;
-    background: linear-gradient(90deg, var(--accent-pink), var(--accent-purple));
+    /* Morado como color principal para títulos de sección */
+    background: linear-gradient(90deg,
+            var(--accent-purple),
+            rgba(123, 31, 162, 0.6));
     border-radius: 2px;
 }
 
@@ -115,12 +138,18 @@
 }
 
 .section-text strong {
-    color: var(--primary-blue);
+    /* Morado para enfatizar elementos culturales */
+    color: var(--accent-purple);
     font-weight: 700;
 }
 
+/* Sección "Su magia" - enfoque en cultura mística */
 .magic-section {
-    background: linear-gradient(135deg, rgba(43, 90, 135, 0.02) 0%, rgba(233, 30, 99, 0.02) 100%);
+    background: linear-gradient(135deg,
+            rgba(123, 31, 162, 0.03) 0%,
+            rgba(123, 31, 162, 0.06) 50%,
+            rgba(123, 31, 162, 0.03) 100%);
+    border-left: 4px solid var(--accent-purple);
 }
 
 .motive-points {
@@ -136,18 +165,41 @@
     padding: 15px;
     background: var(--bg-section);
     border-radius: 12px;
-    border-left: 4px solid var(--accent-green);
+    /* Borde morado para puntos de motivación culturales */
+    border-left: 4px solid var(--accent-purple);
     transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.motive-point::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+            rgba(123, 31, 162, 0.05) 0%,
+            transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .motive-point:hover {
     transform: translateX(5px);
     box-shadow: var(--shadow-light);
+    border-left-color: var(--accent-purple);
+}
+
+.motive-point:hover::before {
+    opacity: 1;
 }
 
 .motive-icon {
     font-size: 1.2rem;
-    color: var(--accent-green);
+    /* Iconos en morado para representar aspectos culturales */
+    color: var(--accent-purple);
     margin-top: 2px;
     flex-shrink: 0;
 }
@@ -158,12 +210,20 @@
     color: var(--text-dark);
 }
 
+.motive-point p strong {
+    color: var(--accent-purple);
+}
+
+/* Sección "Imperdible" - destacar con morado */
 .basic-info {
-    background: linear-gradient(135deg, var(--accent-pink), var(--accent-purple));
+    background: linear-gradient(135deg,
+            var(--accent-purple) 0%,
+            rgba(123, 31, 162, 0.9) 100%);
     color: var(--text-light);
     padding: 20px;
     border-radius: 12px;
     text-align: center;
+    box-shadow: 0 4px 20px rgba(123, 31, 162, 0.3);
 }
 
 .basic-info p {
@@ -190,11 +250,13 @@
     overflow: hidden;
     cursor: pointer;
     transition: all 0.3s;
+    border: 2px solid transparent;
 }
 
 .gallery-item:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-medium);
+    border-color: var(--accent-purple);
 }
 
 .gallery-image {
@@ -214,7 +276,10 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(43, 90, 135, 0.8), rgba(233, 30, 99, 0.8));
+    /* Overlay con morado como protagonista - cultura */
+    background: linear-gradient(135deg,
+            rgba(123, 31, 162, 0.85) 0%,
+            rgba(30, 136, 229, 0.75) 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -251,6 +316,7 @@
     padding: 25px;
     box-shadow: var(--shadow-light);
     margin-bottom: 20px;
+    border: 1px solid rgba(123, 31, 162, 0.1);
 }
 
 .transport-info {
@@ -304,7 +370,10 @@
 
 .route-button {
     width: 100%;
-    background: linear-gradient(135deg, var(--primary-blue), var(--accent-pink));
+    /* Botón principal en morado - cultura y tradición */
+    background: linear-gradient(135deg,
+            var(--accent-purple) 0%,
+            rgba(123, 31, 162, 0.9) 100%);
     color: var(--text-light);
     border: none;
     border-radius: 12px;
@@ -318,12 +387,15 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    box-shadow: var(--shadow-light);
+    box-shadow: 0 4px 15px rgba(123, 31, 162, 0.3);
 }
 
 .route-button:hover {
     transform: translateY(-2px);
-    box-shadow: var(--shadow-medium);
+    box-shadow: 0 6px 20px rgba(123, 31, 162, 0.4);
+    background: linear-gradient(135deg,
+            rgba(123, 31, 162, 1.1) 0%,
+            var(--accent-purple) 100%);
 }
 
 .route-button:active {
@@ -356,13 +428,14 @@
     border-radius: 16px;
     overflow: hidden;
     box-shadow: var(--shadow-strong);
+    border: 2px solid rgba(123, 31, 162, 0.2);
 }
 
 .modal-close {
     position: absolute;
     top: 15px;
     right: 15px;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(123, 31, 162, 0.8);
     color: var(--text-light);
     border: none;
     border-radius: 50%;
@@ -377,7 +450,7 @@
 }
 
 .modal-close:hover {
-    background: rgba(0, 0, 0, 0.8);
+    background: var(--accent-purple);
 }
 
 .modal-image {
@@ -395,7 +468,8 @@
 .modal-caption h3 {
     margin: 0 0 8px 0;
     font-size: 1.3rem;
-    color: var(--text-dark);
+    color: var(--accent-purple);
+    font-weight: 700;
 }
 
 .modal-caption p {
