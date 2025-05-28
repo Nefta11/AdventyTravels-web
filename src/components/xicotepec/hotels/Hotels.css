@@ -117,13 +117,15 @@
     margin: 0 0 15px 0;
     background: linear-gradient(135deg,
             var(--hotels-primary-blue) 0%,
-            var(--hotels-primary-blue) 20%);
+            var(--hotels-primary-blue) 55%,
+            var(--hotels-accent-purple) 80%,
+            var(--hotels-accent-purple) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
-/* Línea decorativa debajo del título principal, igual que festivals-main-title-underline */
+/* Línea decorativa debajo del título principal, más azul que morada */
 .hotels-component-main-title::after {
     content: '';
     display: block;
@@ -132,9 +134,10 @@
     height: 5px;
     border-radius: 3px;
     background: linear-gradient(90deg,
-            var(--hotels-accent-purple) 0%,
-            var(--hotels-primary-blue) 100%);
-    box-shadow: 0 2px 8px rgba(123, 31, 162, 0.15);
+            var(--hotels-primary-blue) 0%,
+            var(--hotels-primary-blue) 70%,
+            var(--hotels-accent-purple) 100%);
+    box-shadow: 0 2px 8px rgba(30, 136, 229, 0.15);
 }
 
 /* Grid de hoteles */
