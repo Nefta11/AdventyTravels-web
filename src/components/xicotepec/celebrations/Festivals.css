@@ -1,20 +1,11 @@
 /* Festivals.css - Paleta basada en Pueblos Mágicos - MORADO (Cultura y Tradición) */
-
-/* Variables CSS específicas para el componente Festivals - Colores del Rehilete Pueblos Mágicos */
 .festivals-component-wrapper {
-    /* Colores principales del rehilete */
+    /* Variables CSS específicas para el componente Festivals - Colores del Rehilete Pueblos Mágicos */
     --festivals-primary-blue: #1E88E5;
-    /* Azul - representa a la gente */
     --festivals-accent-purple: #7B1FA2;
-    /* Morado - cultura y tradición (PRINCIPAL) */
     --festivals-accent-green: #388E3C;
-    /* Verde - naturaleza */
     --festivals-accent-orange: #F57C00;
-    /* Naranja - gastronomía típica */
     --festivals-accent-pink: #E91E63;
-    /* Rosa mexicano - artesanías */
-
-    /* Colores complementarios */
     --festivals-text-light: #ffffff;
     --festivals-text-dark: #333333;
     --festivals-text-gray: #666666;
@@ -26,9 +17,6 @@
     --festivals-shadow-light: 0 2px 12px rgba(0, 0, 0, 0.08);
     --festivals-shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
     --festivals-shadow-strong: 0 8px 32px rgba(0, 0, 0, 0.16);
-}
-
-.festivals-component-wrapper {
     width: 100%;
     padding: 60px 0;
     background: var(--festivals-bg-light);
@@ -38,7 +26,6 @@
     overflow: hidden;
 }
 
-/* Fondo sutil con temática cultural */
 .festivals-component-wrapper::before {
     content: '';
     position: absolute;
@@ -60,7 +47,6 @@
     z-index: 2;
 }
 
-/* Título principal */
 .festivals-component-header {
     text-align: center;
     margin-bottom: 50px;
@@ -71,7 +57,6 @@
     font-weight: 900;
     color: var(--festivals-text-dark);
     margin: 0 0 15px 0;
-    /* Gradiente con morado como protagonista - representa cultura y tradición */
     background: linear-gradient(135deg,
             var(--festivals-accent-purple) 0%,
             var(--festivals-primary-blue) 1%,
@@ -84,7 +69,6 @@
 .festivals-main-title-underline {
     width: 100px;
     height: 4px;
-    /* Morado como color principal para "Cultura y Tradición" */
     background: linear-gradient(90deg,
             var(--festivals-accent-purple),
             rgba(123, 31, 162, 0.7),
@@ -94,7 +78,6 @@
     box-shadow: 0 2px 8px rgba(123, 31, 162, 0.3);
 }
 
-/* Grid de festivales */
 .festivals-component-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -102,7 +85,6 @@
     align-items: stretch;
 }
 
-/* Card individual */
 .festivals-component-card {
     position: relative;
     height: 300px;
@@ -130,7 +112,6 @@
     position: relative;
 }
 
-/* Overlay de la card - MORADO CONSISTENTE para tradiciones culturales */
 .festivals-component-card-overlay {
     position: absolute;
     top: 0;
@@ -156,7 +137,6 @@
             rgba(123, 31, 162, 0.9) 100%);
 }
 
-/* Fecha en la card */
 .festivals-component-card-date {
     display: flex;
     align-items: center;
@@ -176,7 +156,6 @@
     font-size: 0.8rem;
 }
 
-/* Contenido de la card */
 .festivals-component-card-content {
     display: flex;
     flex-direction: column;
