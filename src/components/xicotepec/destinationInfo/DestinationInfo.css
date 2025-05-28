@@ -1,12 +1,12 @@
-/* DestinationInfo.css - Paleta basada en Pueblos Mágicos - MORADO (Cultura y Tradición) */
+/* DestinationInfo.css - Paleta basada en Pueblos Mágicos - ROSA (Artesanías) */
 
 /* CSS Variables - Colores del Rehilete Pueblos Mágicos */
 :root {
     /* Colores principales del rehilete */
     --primary-blue: #1E88E5;
     /* Azul - representa a la gente */
-    --accent-purple: #7B1FA2;
-    /* Morado - cultura y tradición (PRINCIPAL) */
+    --accent-purple: #E91E63;
+    /* Rosa mexicano - artesanías (PRINCIPAL) */
     --accent-green: #388E3C;
     /* Verde - naturaleza */
     --accent-orange: #F57C00;
@@ -51,11 +51,14 @@
     font-weight: 900;
     color: var(--text-dark);
     margin: 0 0 15px 0;
-    /* Gradiente con morado como protagonista - representa cultura y tradición */
+    /* Gradiente morado-rosa intenso a rosa claro y regreso para un efecto más rosa pero con base morada */
     background: linear-gradient(135deg,
-            var(--accent-purple) 0%,
-            var(--primary-blue) 1%,
-            var(--accent-purple) 100%);
+            #7b1fa2 0%,   /* Morado intenso */
+            #e91e63 30%,  /* Rosa mexicano fuerte */
+            #ff80ab 60%,  /* Rosa claro */
+            #e91e63 85%,  /* Rosa mexicano fuerte */
+            #7b1fa2 100%  /* Morado intenso */
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -64,14 +67,14 @@
 .main-title-underline {
     width: 100px;
     height: 4px;
-    /* Morado como color principal para "Cultura y Tradición" */
+    /* Rosa como color principal para "Artesanías" */
     background: linear-gradient(90deg,
-            var(--accent-purple),
-            rgba(123, 31, 162, 0.7),
-            var(--accent-purple));
+            var(--accent-pink),
+            rgba(233, 30, 99, 0.7),
+            var(--accent-pink));
     border-radius: 2px;
     margin: 0 auto;
-    box-shadow: 0 2px 8px rgba(123, 31, 162, 0.3);
+    box-shadow: 0 2px 8px rgba(233, 30, 99, 0.3);
 }
 
 .destination-content-wrapper {
@@ -88,7 +91,7 @@
     border-radius: 16px;
     box-shadow: var(--shadow-light);
     overflow: hidden;
-    border: 1px solid rgba(123, 31, 162, 0.1);
+    border: 1px solid rgba(233, 30, 99, 0.1);
 }
 
 .destination-section {
@@ -116,10 +119,10 @@
     left: 0;
     width: 50px;
     height: 3px;
-    /* Morado como color principal para títulos de sección */
+    /* Rosa como color principal para títulos de sección */
     background: linear-gradient(90deg,
-            var(--accent-purple),
-            rgba(123, 31, 162, 0.6));
+            var(--accent-pink),
+            rgba(233, 30, 99, 0.6));
     border-radius: 2px;
 }
 
@@ -138,18 +141,18 @@
 }
 
 .section-text strong {
-    /* Morado para enfatizar elementos culturales */
-    color: var(--accent-purple);
+    /* Rosa para enfatizar elementos culturales */
+    color: var(--accent-pink);
     font-weight: 700;
 }
 
 /* Sección "Su magia" - enfoque en cultura mística */
 .magic-section {
     background: linear-gradient(135deg,
-            rgba(123, 31, 162, 0.03) 0%,
-            rgba(123, 31, 162, 0.06) 50%,
-            rgba(123, 31, 162, 0.03) 100%);
-    border-left: 4px solid var(--accent-purple);
+            rgba(233, 30, 99, 0.03) 0%,
+            rgba(233, 30, 99, 0.06) 50%,
+            rgba(233, 30, 99, 0.03) 100%);
+    border-left: 4px solid var(--accent-pink);
 }
 
 .motive-points {
@@ -165,8 +168,8 @@
     padding: 15px;
     background: var(--bg-section);
     border-radius: 12px;
-    /* Borde morado para puntos de motivación culturales */
-    border-left: 4px solid var(--accent-purple);
+    /* Borde rosa para puntos de motivación */
+    border-left: 4px solid var(--accent-pink);
     transition: all 0.3s;
     position: relative;
     overflow: hidden;
@@ -180,7 +183,7 @@
     right: 0;
     bottom: 0;
     background: linear-gradient(135deg,
-            rgba(123, 31, 162, 0.05) 0%,
+            rgba(233, 30, 99, 0.05) 0%,
             transparent 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -189,7 +192,7 @@
 .motive-point:hover {
     transform: translateX(5px);
     box-shadow: var(--shadow-light);
-    border-left-color: var(--accent-purple);
+    border-left-color: var(--accent-pink);
 }
 
 .motive-point:hover::before {
@@ -198,8 +201,8 @@
 
 .motive-icon {
     font-size: 1.2rem;
-    /* Iconos en morado para representar aspectos culturales */
-    color: var(--accent-purple);
+    /* Iconos en rosa para representar aspectos artesanales */
+    color: var(--accent-pink);
     margin-top: 2px;
     flex-shrink: 0;
 }
@@ -211,19 +214,19 @@
 }
 
 .motive-point p strong {
-    color: var(--accent-purple);
+    color: var(--accent-pink);
 }
 
-/* Sección "Imperdible" - destacar con morado */
+/* Sección "Imperdible" - destacar con rosa */
 .basic-info {
     background: linear-gradient(135deg,
-            var(--accent-purple) 0%,
-            rgba(123, 31, 162, 0.9) 100%);
+            var(--accent-pink) 0%,
+            rgba(233, 30, 99, 0.9) 100%);
     color: var(--text-light);
     padding: 20px;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(123, 31, 162, 0.3);
+    box-shadow: 0 4px 20px rgba(233, 30, 99, 0.3);
 }
 
 .basic-info p {
@@ -256,7 +259,7 @@
 .gallery-item:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-medium);
-    border-color: var(--accent-purple);
+    border-color: var(--accent-pink);
 }
 
 .gallery-image {
@@ -276,9 +279,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    /* Overlay con morado como protagonista - cultura */
+    /* Overlay con rosa como protagonista - artesanías */
     background: linear-gradient(135deg,
-            rgba(123, 31, 162, 0.85) 0%,
+            rgba(233, 30, 99, 0.85) 0%,
             rgba(30, 136, 229, 0.75) 100%);
     display: flex;
     flex-direction: column;
@@ -316,7 +319,7 @@
     padding: 25px;
     box-shadow: var(--shadow-light);
     margin-bottom: 20px;
-    border: 1px solid rgba(123, 31, 162, 0.1);
+    border: 1px solid rgba(233, 30, 99, 0.1);
 }
 
 .transport-info {
@@ -370,10 +373,10 @@
 
 .route-button {
     width: 100%;
-    /* Botón principal en morado - cultura y tradición */
+    /* Botón principal en rosa - artesanías */
     background: linear-gradient(135deg,
-            var(--accent-purple) 0%,
-            rgba(123, 31, 162, 0.9) 100%);
+            var(--accent-pink) 0%,
+            rgba(233, 30, 99, 0.9) 100%);
     color: var(--text-light);
     border: none;
     border-radius: 12px;
@@ -387,15 +390,15 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    box-shadow: 0 4px 15px rgba(123, 31, 162, 0.3);
+    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
 }
 
 .route-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(123, 31, 162, 0.4);
+    box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4);
     background: linear-gradient(135deg,
-            rgba(123, 31, 162, 1.1) 0%,
-            var(--accent-purple) 100%);
+            rgba(233, 30, 99, 1.1) 0%,
+            var(--accent-pink) 100%);
 }
 
 .route-button:active {
@@ -428,14 +431,14 @@
     border-radius: 16px;
     overflow: hidden;
     box-shadow: var(--shadow-strong);
-    border: 2px solid rgba(123, 31, 162, 0.2);
+    border: 2px solid rgba(233, 30, 99, 0.2);
 }
 
 .modal-close {
     position: absolute;
     top: 15px;
     right: 15px;
-    background: rgba(123, 31, 162, 0.8);
+    background: rgba(233, 30, 99, 0.8);
     color: var(--text-light);
     border: none;
     border-radius: 50%;
@@ -450,7 +453,7 @@
 }
 
 .modal-close:hover {
-    background: var(--accent-purple);
+    background: var(--accent-pink);
 }
 
 .modal-image {
@@ -468,7 +471,7 @@
 .modal-caption h3 {
     margin: 0 0 8px 0;
     font-size: 1.3rem;
-    color: var(--accent-purple);
+    color: var(--accent-pink);
     font-weight: 700;
 }
 

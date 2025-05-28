@@ -199,25 +199,25 @@
 
 /* Colores específicos por item según significado de Pueblos Mágicos */
 
-/* Item 1: Xicotepec Único - MORADO (cultura y tradición) */
+/* Item 1: Xicotepec Único - ROSA (artesanías) */
 .adventure-item:nth-child(1)::before {
     background: linear-gradient(135deg,
-            rgba(123, 31, 162, 0.05) 0%,
-            rgba(123, 31, 162, 0.1) 100%);
+            rgba(233, 30, 99, 0.05) 0%,
+            rgba(233, 30, 99, 0.1) 100%);
 }
 
 .adventure-item:nth-child(1):hover {
-    border-color: var(--accent-purple);
+    border-color: var(--accent-pink);
 }
 
 .adventure-item:nth-child(1).active {
     background: linear-gradient(135deg,
-            var(--accent-purple) 0%,
-            rgba(123, 31, 162, 0.9) 100%);
+            var(--accent-pink) 0%,
+            rgba(233, 30, 99, 0.9) 100%);
 }
 
 .adventure-item:nth-child(1) .adventure-icon {
-    color: var(--accent-purple);
+    color: var(--accent-pink);
 }
 
 /* Item 2: Sitios y Experiencias - VERDE (naturaleza) */
