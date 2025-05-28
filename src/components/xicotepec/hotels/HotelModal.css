@@ -85,7 +85,7 @@
     position: relative;
     z-index: 2;
     background: linear-gradient(135deg,
-            rgba(30, 136, 229, 0.8) 0%,
+            rgba(30, 136, 229, 0.4) 0%,
             rgba(30, 136, 229, 0.6) 100%);
     padding: 25px 30px;
     color: #fff;

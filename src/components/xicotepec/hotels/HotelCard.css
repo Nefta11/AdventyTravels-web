@@ -37,9 +37,9 @@
     bottom: 0;
     /* Solo AZUL - servicios para la gente */
     background: linear-gradient(135deg,
-            rgba(30, 136, 229, 0.7) 0%,
-            rgba(30, 136, 229, 0.5) 50%,
-            rgba(30, 136, 229, 0.8) 100%);
+            rgba(30, 136, 229, 0.3) 0%,
+            rgba(30, 136, 229, 0.3) 50%,
+            rgba(30, 136, 229, 0.6) 100%);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
