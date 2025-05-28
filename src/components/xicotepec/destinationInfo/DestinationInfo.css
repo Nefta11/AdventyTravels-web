@@ -54,7 +54,7 @@
     /* Gradiente con morado como protagonista - representa cultura y tradición */
     background: linear-gradient(135deg,
             var(--accent-purple) 0%,
-            var(--primary-blue) 50%,
+            var(--primary-blue) 1%,
             var(--accent-purple) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
