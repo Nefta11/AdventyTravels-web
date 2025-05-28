@@ -1,21 +1,12 @@
 /* Hotels.css - Paleta basada en Pueblos Mágicos - AZUL (La Gente/Servicios) */
-
-/* Variables CSS específicas para el componente Hotels - Colores del Rehilete Pueblos Mágicos */
 .hotels-component-wrapper {
+    /* Variables CSS específicas para el componente Hotels - Colores del Rehilete Pueblos Mágicos */
     --hotels-primary-blue: #1E88E5;
-    /* Azul - representa a la gente (PRINCIPAL) */
     --hotels-accent-purple: #7B1FA2;
-    /* Morado - cultura y tradición */
     --hotels-accent-green: #388E3C;
-    /* Verde - naturaleza */
     --hotels-accent-orange: #F57C00;
-    /* Naranja - gastronomía típica */
     --hotels-accent-pink: #E91E63;
-    /* Rosa mexicano - artesanías */
     --hotels-accent-gold: #FFD700;
-    /* Dorado - calidad premium */
-
-    /* Colores complementarios */
     --hotels-text-light: #ffffff;
     --hotels-text-dark: #333333;
     --hotels-text-gray: #666666;
@@ -27,49 +18,6 @@
     --hotels-shadow-light: 0 2px 12px rgba(0, 0, 0, 0.08);
     --hotels-shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
     --hotels-shadow-strong: 0 8px 32px rgba(0, 0, 0, 0.16);
-}
-
-/* SOPORTE PARA adventure-header y adventure-title */
-.adventure-header {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.adventure-title {
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 800;
-    color: var(--hotels-text-dark);
-    margin: 0;
-    position: relative;
-    display: inline-block;
-    /* Gradiente con azul como protagonista - representa servicios para la gente */
-    background: linear-gradient(135deg,
-            var(--hotels-primary-blue) 0%,
-            rgba(30, 136, 229, 0.8) 50%,
-            var(--hotels-primary-blue) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.adventure-title::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    /* Azul como color principal para "Servicios/La Gente" */
-    background: linear-gradient(90deg,
-            var(--hotels-primary-blue),
-            rgba(30, 136, 229, 0.7),
-            var(--hotels-primary-blue));
-    border-radius: 2px;
-    box-shadow: 0 2px 8px rgba(30, 136, 229, 0.3);
-}
-
-.hotels-component-wrapper {
     width: 100%;
     padding: 60px 0;
     background: var(--hotels-bg-light);
@@ -109,11 +57,8 @@
 
 .hotels-component-main-title {
     font-size: clamp(2.5rem, 5vw, 4rem);
-    /* igual que festivals-main-title */
     font-weight: 900;
-    /* igual que festivals-main-title */
     color: var(--hotels-text-dark);
-    /* usar el color oscuro de hotels */
     margin: 0 0 15px 0;
     background: linear-gradient(135deg,
             var(--hotels-primary-blue) 0%,
@@ -177,17 +122,6 @@
     .hotels-component-header {
         margin-bottom: 35px;
     }
-
-    .adventure-title {
-        font-size: 1.4rem;
-        margin-bottom: 12px;
-    }
-
-    .adventure-title::after {
-        width: 38px;
-        height: 2px;
-        margin-top: 7px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -217,3 +151,5 @@
         gap: 12px;
     }
 }
+
+/* Eliminado: .adventure-header y .adventure-title porque no se usan en JSX de hoteles */
