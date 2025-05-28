@@ -1,20 +1,9 @@
-/* DestinationInfo.css - Paleta basada en Pueblos Mágicos - ROSA (Artesanías) */
-
-/* CSS Variables - Colores del Rehilete Pueblos Mágicos */
 :root {
-    /* Colores principales del rehilete */
     --primary-blue: #1E88E5;
-    /* Azul - representa a la gente */
-    --accent-purple: #E91E63;
-    /* Rosa mexicano - artesanías (PRINCIPAL) */
+    --accent-purple: #7B1FA2;
     --accent-green: #388E3C;
-    /* Verde - naturaleza */
     --accent-orange: #F57C00;
-    /* Naranja - gastronomía típica */
     --accent-pink: #E91E63;
-    /* Rosa mexicano - artesanías */
-
-    /* Colores complementarios */
     --text-light: #fff;
     --text-dark: #333;
     --text-gray: #666;
@@ -49,16 +38,13 @@
 .main-title {
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 900;
-    color: var(--text-dark);
     margin: 0 0 15px 0;
-    /* Gradiente morado-rosa intenso a rosa claro y regreso para un efecto más rosa pero con base morada */
     background: linear-gradient(135deg,
-            #7b1fa2 0%,   /* Morado intenso */
-            #e91e63 30%,  /* Rosa mexicano fuerte */
-            #ff80ab 60%,  /* Rosa claro */
-            #e91e63 85%,  /* Rosa mexicano fuerte */
-            #7b1fa2 100%  /* Morado intenso */
-    );
+            #7b1fa2 0%,
+            #e91e63 30%,
+            #ff80ab 60%,
+            #e91e63 85%,
+            #7b1fa2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -67,10 +53,9 @@
 .main-title-underline {
     width: 100px;
     height: 4px;
-    /* Rosa como color principal para "Artesanías" */
     background: linear-gradient(90deg,
             var(--accent-pink),
-            rgba(233, 30, 99, 0.7),
+            #ff80ab,
             var(--accent-pink));
     border-radius: 2px;
     margin: 0 auto;
@@ -119,10 +104,9 @@
     left: 0;
     width: 50px;
     height: 3px;
-    /* Rosa como color principal para títulos de sección */
     background: linear-gradient(90deg,
             var(--accent-pink),
-            rgba(233, 30, 99, 0.6));
+            #ff80ab);
     border-radius: 2px;
 }
 
@@ -140,13 +124,12 @@
     text-align: justify;
 }
 
-.section-text strong {
-    /* Rosa para enfatizar elementos culturales */
+.section-text strong,
+.motive-point p strong {
     color: var(--accent-pink);
     font-weight: 700;
 }
 
-/* Sección "Su magia" - enfoque en cultura mística */
 .magic-section {
     background: linear-gradient(135deg,
             rgba(233, 30, 99, 0.03) 0%,
@@ -168,7 +151,6 @@
     padding: 15px;
     background: var(--bg-section);
     border-radius: 12px;
-    /* Borde rosa para puntos de motivación */
     border-left: 4px solid var(--accent-pink);
     transition: all 0.3s;
     position: relative;
@@ -182,11 +164,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg,
-            rgba(233, 30, 99, 0.05) 0%,
-            transparent 100%);
+    background: linear-gradient(135deg, rgba(233, 30, 99, 0.05) 0%, transparent 100%);
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s;
 }
 
 .motive-point:hover {
@@ -201,7 +181,6 @@
 
 .motive-icon {
     font-size: 1.2rem;
-    /* Iconos en rosa para representar aspectos artesanales */
     color: var(--accent-pink);
     margin-top: 2px;
     flex-shrink: 0;
@@ -213,15 +192,10 @@
     color: var(--text-dark);
 }
 
-.motive-point p strong {
-    color: var(--accent-pink);
-}
-
-/* Sección "Imperdible" - destacar con rosa */
 .basic-info {
     background: linear-gradient(135deg,
             var(--accent-pink) 0%,
-            rgba(233, 30, 99, 0.9) 100%);
+            #ff80ab 100%);
     color: var(--text-light);
     padding: 20px;
     border-radius: 12px;
@@ -279,10 +253,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    /* Overlay con rosa como protagonista - artesanías */
-    background: linear-gradient(135deg,
-            rgba(233, 30, 99, 0.85) 0%,
-            rgba(30, 136, 229, 0.75) 100%);
+    background: linear-gradient(135deg, rgba(233, 30, 99, 0.85) 0%, rgba(30, 136, 229, 0.75) 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -373,10 +344,9 @@
 
 .route-button {
     width: 100%;
-    /* Botón principal en rosa - artesanías */
     background: linear-gradient(135deg,
             var(--accent-pink) 0%,
-            rgba(233, 30, 99, 0.9) 100%);
+            #ff80ab 100%);
     color: var(--text-light);
     border: none;
     border-radius: 12px;
@@ -396,9 +366,7 @@
 .route-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4);
-    background: linear-gradient(135deg,
-            rgba(233, 30, 99, 1.1) 0%,
-            var(--accent-pink) 100%);
+    background: linear-gradient(135deg, #e91e63 0%, #ff80ab 100%);
 }
 
 .route-button:active {
