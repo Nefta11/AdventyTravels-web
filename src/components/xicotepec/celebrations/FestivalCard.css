@@ -1,4 +1,5 @@
-/* FestivalCard.css: solo estilos de la card, sin modal ni layout general */
+/* FestivalCard.css - Paleta basada en Pueblos Mágicos - MORADO (Cultura y Tradición) */
+
 .festivals-component-card {
     position: relative;
     height: 300px;
@@ -8,11 +9,14 @@
     transition: all 0.4s ease;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     animation: festivals-card-fade-in 0.6s ease forwards;
+    border: 2px solid transparent;
 }
 
 .festivals-component-card:hover {
     transform: translateY(-10px) scale(1.02);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.16);
+    /* Borde morado al hacer hover - representa cultura y tradición */
+    border-color: #7B1FA2;
 }
 
 .festivals-component-card-image {
@@ -24,13 +28,18 @@
     position: relative;
 }
 
+/* Overlay MORADO consistente - representa cultura y tradición */
 .festivals-component-card-overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(40, 40, 40, 0.45);
+    /* Solo MORADO - cultura y tradición */
+    background: linear-gradient(135deg,
+            rgba(123, 31, 162, 0.7) 0%,
+            rgba(123, 31, 162, 0.5) 50%,
+            rgba(123, 31, 162, 0.8) 100%);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -40,9 +49,14 @@
 }
 
 .festivals-component-card:hover .festivals-component-card-overlay {
-    background: rgba(40, 40, 40, 0.60);
+    /* Intensificar el morado al hacer hover */
+    background: linear-gradient(135deg,
+            rgba(123, 31, 162, 0.85) 0%,
+            rgba(123, 31, 162, 0.6) 50%,
+            rgba(123, 31, 162, 0.9) 100%);
 }
 
+/* Fecha con estilo morado - tradiciones culturales */
 .festivals-component-card-date {
     display: flex;
     align-items: center;
@@ -50,11 +64,12 @@
     font-size: 0.9rem;
     font-weight: 600;
     opacity: 0.95;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(123, 31, 162, 0.8);
     padding: 8px 12px;
     border-radius: 20px;
     backdrop-filter: blur(10px);
     align-self: flex-start;
+    color: #fff;
 }
 
 .festivals-component-card-date-icon {
@@ -72,7 +87,7 @@
     font-weight: 800;
     line-height: 1.2;
     margin: 0;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
     color: #fff;
 }
 
@@ -99,6 +114,7 @@
     font-size: 0.8rem;
 }
 
+/* Animación suave */
 @keyframes festivals-card-fade-in {
     from {
         opacity: 0;
@@ -111,6 +127,7 @@
     }
 }
 
+/* Responsive Design */
 @media (max-width: 968px) {
     .festivals-component-card {
         height: 280px;
