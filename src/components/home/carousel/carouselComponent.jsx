@@ -7,7 +7,7 @@ import usaImage3 from "../../../assets/images/carousel/img3.webp";
 import usaImage4 from "../../../assets/images/carousel/img4.webp";
 import usaImage5 from "../../../assets/images/carousel/img5.webp";
 import usaImage6 from "../../../assets/images/carousel/img6.webp";
-import usaImage7 from "../../../assets/images/carousel/img7.webp";
+import usaImage7 from "../../../assets/BannerBrasil.jpg";
 
 const images = [usaImage1, usaImage2, usaImage3, usaImage4, usaImage5, usaImage6, usaImage7];
 
