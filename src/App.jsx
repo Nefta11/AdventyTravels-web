@@ -15,6 +15,7 @@ import VerifyDistributor from './pages/VerifyDistributor';
 import AdventyPay from './pages/adventyPay/AdventyPay';
 import Xicotepec from './pages/Xicotepec';
 import FestivalDetailPage from './pages/xicotepec/FestivalDetailPage';
+import HotelDetail from './pages/xicotepec/HotelDetail';
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function RoutesWithAnimation() {
       <Route path="/AdventyPay" element={<AdventyPay />} />
       <Route path='/xicotepec' element={<Xicotepec />} />
       <Route path='/festival/:id' element={<FestivalDetailPage />} />
+      <Route path='/hotel/:slug' element={<HotelDetail />} />
       <Route path="*" element={<Error404 />} />
     </Routes>
   );

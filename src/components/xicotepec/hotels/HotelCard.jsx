@@ -1,3 +1,4 @@
+// HotelCard.jsx - Actualizado para navegación
 import PropTypes from 'prop-types';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import './HotelCard.css';
@@ -34,6 +35,7 @@ HotelCard.propTypes = {
         location: PropTypes.string.isRequired,
         price: PropTypes.string.isRequired,
         shortDescription: PropTypes.string.isRequired,
+        slug: PropTypes.string.isRequired,
     }).isRequired,
     onClick: PropTypes.func.isRequired,
     renderStars: PropTypes.func.isRequired,

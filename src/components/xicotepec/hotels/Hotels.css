@@ -1,65 +1,33 @@
-/* Hotels.css - Paleta Pueblerina Elegante - AZUL TORMENTA (Hospitalidad/Servicios) */
-
+/* Hotels.css - Paleta basada en Pueblos Mágicos - AZUL (La Gente/Servicios) */
 .hotels-component-wrapper {
-    /* Variables CSS específicas para el componente Hotels - Colores Pueblerinos Sofisticados */
-    /* Colores principales - Tierra y Tradición */
-    --hotels-burnt-sienna: #B8572A;
-    /* Siena quemada - techos de barro elegantes */
-    --hotels-adobe-clay: #C2724B;
-    /* Arcilla adobe - muros coloniales refinados */
-    --hotels-forest-pine: #5A7C58;
-    /* Pino serrano - naturaleza sofisticada */
-    --hotels-warm-ivory: #F7F3E9;
-    /* Marfil cálido - cal y adobe fino */
-
-    /* Acentos sofisticados */
-    --hotels-copper-sunset: #E87B3E;
-    /* Cobre sunset - atardeceres dorados */
-    --hotels-misty-sage: #9CAF88;
-    /* Salvia brumosa - vegetación serrana */
-    --hotels-antique-gold: #D4AF37;
-    /* Oro antiguo - campanarios e iglesias */
-    --hotels-storm-blue: #627B8C;
-    /* Azul tormenta - cielos dramáticos (PRINCIPAL) */
-
-    /* Neutrales elegantes */
-    --hotels-warm-stone: #8C7B6B;
-    /* Piedra cálida - cantera colonial */
-    --hotels-soft-linen: #F2EDE4;
-    /* Lino suave - textiles naturales */
-    --hotels-deep-earth: #3A2F26;
-    /* Tierra profunda - madera envejecida */
-    --hotels-pearl-sand: #E8DDD4;
-    /* Arena perla - senderos empedrados */
-    --hotels-charcoal-ink: #2C2520;
-    /* Tinta carbón - texto principal */
-
-    /* Variables temáticas actualizadas */
+    /* Variables CSS específicas para el componente Hotels - Colores del Rehilete Pueblos Mágicos */
+    --hotels-primary-blue: #1E88E5;
+    --hotels-accent-purple: #7B1FA2;
+    --hotels-accent-green: #388E3C;
+    --hotels-accent-orange: #F57C00;
+    --hotels-accent-pink: #E91E63;
+    --hotels-accent-gold: #FFD700;
     --hotels-text-light: #ffffff;
-    --hotels-text-dark: #2C2520;
-    --hotels-text-gray: #8C7B6B;
-    --hotels-text-muted: #8C7B6B;
-    --hotels-bg-light: #F7F3E9;
+    --hotels-text-dark: #333333;
+    --hotels-text-gray: #666666;
+    --hotels-text-muted: #888888;
+    --hotels-bg-light: #f8f9fa;
     --hotels-bg-white: #ffffff;
-    --hotels-bg-section: #F2EDE4;
-    --hotels-border-light: #E8DDD4;
-    --hotels-shadow-light: 0 2px 12px rgba(184, 87, 42, 0.08);
-    --hotels-shadow-medium: 0 4px 20px rgba(184, 87, 42, 0.12);
-    --hotels-shadow-strong: 0 8px 32px rgba(184, 87, 42, 0.16);
-
+    --hotels-bg-section: #fafbfc;
+    --hotels-border-light: #e1e5e9;
+    --hotels-shadow-light: 0 2px 12px rgba(0, 0, 0, 0.08);
+    --hotels-shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
+    --hotels-shadow-strong: 0 8px 32px rgba(0, 0, 0, 0.16);
     width: 100%;
     padding: 60px 0;
-    background: linear-gradient(135deg,
-            var(--hotels-soft-linen) 0%,
-            var(--hotels-warm-ivory) 50%,
-            var(--hotels-pearl-sand) 100%);
+    background: var(--hotels-bg-light);
     font-family: "Gilroy", sans-serif;
     line-height: 1.6;
     position: relative;
     overflow: hidden;
 }
 
-/* Fondo sutil con temática pueblerina - hospitalidad */
+/* Fondo sutil con temática de servicios turísticos */
 .hotels-component-wrapper::before {
     content: '';
     position: absolute;
@@ -68,8 +36,8 @@
     right: 0;
     bottom: 0;
     background:
-        radial-gradient(circle at 25% 75%, rgba(98, 123, 140, 0.02) 0%, transparent 50%),
-        radial-gradient(circle at 75% 25%, rgba(184, 87, 42, 0.03) 0%, transparent 60%);
+        radial-gradient(circle at 25% 75%, rgba(30, 136, 229, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 75% 25%, rgba(30, 136, 229, 0.05) 0%, transparent 60%);
     pointer-events: none;
 }
 
@@ -81,6 +49,7 @@
     z-index: 2;
 }
 
+/* Título principal */
 .hotels-component-header {
     text-align: center;
     margin-bottom: 50px;
@@ -89,30 +58,30 @@
 .hotels-main-title {
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 900;
-    color: var(--hotels-deep-earth);
+    color: var(--hotels-text-dark);
     margin: 0 0 15px 0;
-    /* Gradiente con siena quemada como protagonista - igual que festivals-main-title */
     background: linear-gradient(135deg,
-            var(--hotels-burnt-sienna) 0%,
-            var(--hotels-copper-sunset) 30%,
-            var(--hotels-antique-gold) 60%,
-            var(--hotels-burnt-sienna) 100%);
+            var(--hotels-primary-blue) 0%,
+            var(--hotels-primary-blue) 55%,
+            var(--hotels-accent-purple) 80%,
+            var(--hotels-accent-purple) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
+/* Línea decorativa debajo del título principal */
 .hotels-main-title-underline {
-    width: 100px;
-    height: 4px;
-    /* Igual que festivals-main-title-underline */
+    display: block;
+    margin: 18px auto 0 auto;
+    width: 90px;
+    height: 5px;
+    border-radius: 3px;
     background: linear-gradient(90deg,
-            var(--hotels-burnt-sienna),
-            var(--hotels-copper-sunset),
-            var(--hotels-burnt-sienna));
-    border-radius: 2px;
-    margin: 0 auto;
-    box-shadow: 0 2px 8px rgba(184, 87, 42, 0.3);
+            var(--hotels-primary-blue) 0%,
+            var(--hotels-primary-blue) 70%,
+            var(--hotels-accent-purple) 100%);
+    box-shadow: 0 2px 8px rgba(30, 136, 229, 0.15);
 }
 
 /* Grid de hoteles */
