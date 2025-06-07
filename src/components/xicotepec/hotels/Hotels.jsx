@@ -229,10 +229,10 @@ const Hotels = () => {
 
     return (
         <section className="hotels-component-wrapper" id="hotels-section">
-            <div className="hotels-component-container">
-                {/* Título principal con paleta AZUL de Pueblos Mágicos */}
+            <div className="hotels-component-container">                {/* Título principal */}
                 <div className="hotels-component-header">
-                    <h2 className="hotels-component-main-title">Alojamientos</h2>
+                    <h1 className="hotels-main-title">Alojamientos</h1>
+                    <div className="hotels-main-title-underline"></div>
                 </div>
 
                 {/* Grid de hoteles */}

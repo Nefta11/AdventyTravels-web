@@ -81,41 +81,38 @@
     z-index: 2;
 }
 
-/* Título principal */
 .hotels-component-header {
     text-align: center;
     margin-bottom: 50px;
 }
 
-.hotels-component-main-title {
+.hotels-main-title {
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 900;
     color: var(--hotels-deep-earth);
     margin: 0 0 15px 0;
-    /* Gradiente con azul tormenta como protagonista - representa hospitalidad pueblerina */
+    /* Gradiente con siena quemada como protagonista - igual que festivals-main-title */
     background: linear-gradient(135deg,
-            var(--hotels-storm-blue) 0%,
-            var(--hotels-storm-blue) 55%,
-            var(--hotels-burnt-sienna) 80%,
+            var(--hotels-burnt-sienna) 0%,
+            var(--hotels-copper-sunset) 30%,
+            var(--hotels-antique-gold) 60%,
             var(--hotels-burnt-sienna) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
-/* Línea decorativa debajo del título principal - más azul tormenta que siena */
-.hotels-component-main-title::after {
-    content: '';
-    display: block;
-    margin: 18px auto 0 auto;
-    width: 90px;
-    height: 5px;
-    border-radius: 3px;
+.hotels-main-title-underline {
+    width: 100px;
+    height: 4px;
+    /* Igual que festivals-main-title-underline */
     background: linear-gradient(90deg,
-            var(--hotels-storm-blue) 0%,
-            var(--hotels-storm-blue) 70%,
-            var(--hotels-burnt-sienna) 100%);
-    box-shadow: 0 2px 8px rgba(98, 123, 140, 0.25);
+            var(--hotels-burnt-sienna),
+            var(--hotels-copper-sunset),
+            var(--hotels-burnt-sienna));
+    border-radius: 2px;
+    margin: 0 auto;
+    box-shadow: 0 2px 8px rgba(184, 87, 42, 0.3);
 }
 
 /* Grid de hoteles */
