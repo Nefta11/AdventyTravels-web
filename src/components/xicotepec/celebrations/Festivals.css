@@ -1,23 +1,58 @@
-/* Festivals.css - Diseño minimalista con toques sutiles morados */
+/* Festivals.css - Paleta Pueblerina Elegante - SIENA QUEMADA (Cultura y Tradición) */
+
 .festivals-component-wrapper {
-    /* Variables CSS minimalistas */
-    --festivals-primary-neutral: #2c3e50;
-    --festivals-accent-purple: #7B1FA2;
-    --festivals-accent-gray: #6c757d;
+    /* Variables CSS pueblerinas sofisticadas */
+    /* Colores principales - Tierra y Tradición */
+    --festivals-burnt-sienna: #B8572A;
+    /* Siena quemada - techos de barro elegantes */
+    --festivals-adobe-clay: #C2724B;
+    /* Arcilla adobe - muros coloniales refinados */
+    --festivals-forest-pine: #5A7C58;
+    /* Pino serrano - naturaleza sofisticada */
+    --festivals-warm-ivory: #F7F3E9;
+    /* Marfil cálido - cal y adobe fino */
+
+    /* Acentos sofisticados */
+    --festivals-copper-sunset: #E87B3E;
+    /* Cobre sunset - atardeceres dorados */
+    --festivals-misty-sage: #9CAF88;
+    /* Salvia brumosa - vegetación serrana */
+    --festivals-antique-gold: #D4AF37;
+    /* Oro antiguo - campanarios e iglesias */
+    --festivals-storm-blue: #627B8C;
+    /* Azul tormenta - cielos dramáticos */
+
+    /* Neutrales elegantes */
+    --festivals-warm-stone: #8C7B6B;
+    /* Piedra cálida - cantera colonial */
+    --festivals-soft-linen: #F2EDE4;
+    /* Lino suave - textiles naturales */
+    --festivals-deep-earth: #3A2F26;
+    /* Tierra profunda - madera envejecida */
+    --festivals-pearl-sand: #E8DDD4;
+    /* Arena perla - senderos empedrados */
+    --festivals-charcoal-ink: #2C2520;
+    /* Tinta carbón - texto principal */
+
+    /* Variables temáticas actualizadas */
     --festivals-text-light: #ffffff;
-    --festivals-text-dark: #333333;
-    --festivals-text-gray: #6c757d;
-    --festivals-text-muted: #888888;
-    --festivals-bg-light: #f8f9fa;
+    --festivals-text-dark: #2C2520;
+    --festivals-text-gray: #8C7B6B;
+    --festivals-text-muted: #8C7B6B;
+    --festivals-bg-light: #F7F3E9;
     --festivals-bg-white: #ffffff;
-    --festivals-bg-section: #f8f9fa;
-    --festivals-border-light: #e1e5e9;
-    --festivals-shadow-light: 0 2px 12px rgba(0, 0, 0, 0.08);
-    --festivals-shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
-    --festivals-shadow-strong: 0 8px 32px rgba(0, 0, 0, 0.16);
+    --festivals-bg-section: #F2EDE4;
+    --festivals-border-light: #E8DDD4;
+    --festivals-shadow-light: 0 2px 12px rgba(184, 87, 42, 0.08);
+    --festivals-shadow-medium: 0 4px 20px rgba(184, 87, 42, 0.12);
+    --festivals-shadow-strong: 0 8px 32px rgba(184, 87, 42, 0.16);
+
     width: 100%;
     padding: 60px 0;
-    background: var(--festivals-bg-white);
+    background: linear-gradient(135deg,
+            var(--festivals-soft-linen) 0%,
+            var(--festivals-warm-ivory) 50%,
+            var(--festivals-pearl-sand) 100%);
     font-family: "Gilroy", sans-serif;
     line-height: 1.6;
     position: relative;
@@ -32,8 +67,8 @@
     right: 0;
     bottom: 0;
     background:
-        radial-gradient(circle at 25% 75%, rgba(123, 31, 162, 0.01) 0%, transparent 50%),
-        radial-gradient(circle at 75% 25%, rgba(123, 31, 162, 0.02) 0%, transparent 60%);
+        radial-gradient(circle at 25% 75%, rgba(184, 87, 42, 0.02) 0%, transparent 50%),
+        radial-gradient(circle at 75% 25%, rgba(232, 123, 62, 0.03) 0%, transparent 60%);
     pointer-events: none;
 }
 
@@ -53,13 +88,14 @@
 .festivals-main-title {
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 900;
-    color: var(--festivals-primary-neutral);
+    color: var(--festivals-deep-earth);
     margin: 0 0 15px 0;
+    /* Gradiente con siena quemada como protagonista - representa cultura y tradición pueblerina */
     background: linear-gradient(135deg,
-            var(--festivals-primary-neutral) 0%,
-            var(--festivals-accent-gray) 30%,
-            var(--festivals-accent-purple) 70%,
-            var(--festivals-primary-neutral) 100%);
+            var(--festivals-burnt-sienna) 0%,
+            var(--festivals-copper-sunset) 30%,
+            var(--festivals-antique-gold) 60%,
+            var(--festivals-burnt-sienna) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -69,12 +105,12 @@
     width: 100px;
     height: 4px;
     background: linear-gradient(90deg,
-            var(--festivals-primary-neutral),
-            var(--festivals-accent-gray),
-            var(--festivals-accent-purple));
+            var(--festivals-burnt-sienna),
+            var(--festivals-copper-sunset),
+            var(--festivals-burnt-sienna));
     border-radius: 2px;
     margin: 0 auto;
-    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.2);
+    box-shadow: 0 2px 8px rgba(184, 87, 42, 0.3);
 }
 
 .festivals-component-grid {
@@ -99,7 +135,7 @@
 .festivals-component-card:hover {
     transform: translateY(-10px) scale(1.02);
     box-shadow: var(--festivals-shadow-strong);
-    border-color: var(--festivals-accent-purple);
+    border-color: var(--festivals-burnt-sienna);
 }
 
 .festivals-component-card-image {
@@ -133,7 +169,7 @@
 .festivals-component-card:hover .festivals-component-card-overlay {
     background: linear-gradient(135deg,
             rgba(0, 0, 0, 0.4) 0%,
-            rgba(123, 31, 162, 0.1) 30%,
+            rgba(184, 87, 42, 0.15) 30%,
             rgba(0, 0, 0, 0.5) 100%);
 }
 
@@ -143,19 +179,19 @@
     gap: 8px;
     font-size: 0.9rem;
     font-weight: 600;
-    background: rgba(255, 255, 255, 0.9);
-    color: var(--festivals-text-dark);
+    background: rgba(247, 243, 233, 0.9);
+    color: var(--festivals-deep-earth);
     padding: 8px 12px;
     border-radius: 20px;
     backdrop-filter: blur(10px);
     align-self: flex-start;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(247, 243, 233, 0.8);
 }
 
 .festivals-component-card-date-icon {
     font-size: 0.8rem;
-    color: var(--festivals-accent-gray);
+    color: var(--festivals-warm-stone);
 }
 
 .festivals-component-card-content {
