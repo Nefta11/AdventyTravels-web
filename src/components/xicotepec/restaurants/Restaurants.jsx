@@ -85,10 +85,10 @@ const Restaurants = () => {
 
     return (
         <section className="restaurants-wrapper" id="restaurants-section">
-            <div className="restaurants-container">
-                {/* Título principal */}
+            <div className="restaurants-container">                {/* Título principal */}
                 <div className="restaurants-header">
-                    <h2 className="restaurants-main-title">Restaurantes</h2>
+                    <h1 className="restaurants-main-title">Restaurantes</h1>
+                    <div className="restaurants-main-title-underline"></div>
                 </div>
 
                 {/* Grid de restaurantes */}

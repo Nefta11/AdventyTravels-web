@@ -1,46 +1,67 @@
-/* Restaurants.css - Paleta basada en Pueblos Mágicos - NARANJA (Gastronomía Típica) */
+/* Restaurants.css - Paleta Pueblerina Elegante - COBRE SUNSET (Gastronomía Típica) */
 
-/* Variables CSS para el componente Restaurants - Colores del Rehilete Pueblos Mágicos */
+/* Variables CSS para el componente Restaurants - Colores Pueblerinos Sofisticados */
 .restaurants-wrapper {
-    /* Colores principales del rehilete */
-    --primary-blue: #1E88E5;
-    /* Azul - representa a la gente */
-    --accent-purple: #7B1FA2;
-    /* Morado - cultura y tradición */
-    --accent-green: #388E3C;
-    /* Verde - naturaleza */
-    --accent-orange: #F57C00;
-    /* Naranja - gastronomía típica (PRINCIPAL) */
-    --accent-pink: #E91E63;
-    /* Rosa mexicano - artesanías */
-    --accent-gold: #FFD700;
-    /* Dorado - calidad premium */
+    /* Colores principales - Tierra y Tradición */
+    --burnt-sienna: #B8572A;
+    /* Siena quemada - techos de barro elegantes */
+    --adobe-clay: #C2724B;
+    /* Arcilla adobe - muros coloniales refinados */
+    --forest-pine: #5A7C58;
+    /* Pino serrano - naturaleza sofisticada */
+    --warm-ivory: #F7F3E9;
+    /* Marfil cálido - cal y adobe fino */
 
-    /* Colores complementarios */
+    /* Acentos sofisticados */
+    --copper-sunset: #E87B3E;
+    /* Cobre sunset - atardeceres dorados (PRINCIPAL) */
+    --misty-sage: #9CAF88;
+    /* Salvia brumosa - vegetación serrana */
+    --antique-gold: #D4AF37;
+    /* Oro antiguo - campanarios e iglesias */
+    --storm-blue: #627B8C;
+    /* Azul tormenta - cielos dramáticos */
+
+    /* Neutrales elegantes */
+    --warm-stone: #8C7B6B;
+    /* Piedra cálida - cantera colonial */
+    --soft-linen: #F2EDE4;
+    /* Lino suave - textiles naturales */
+    --deep-earth: #3A2F26;
+    /* Tierra profunda - madera envejecida */
+    --pearl-sand: #E8DDD4;
+    /* Arena perla - senderos empedrados */
+    --charcoal-ink: #2C2520;
+    /* Tinta carbón - texto principal */
+
+    /* Variables temáticas actualizadas */
     --text-light: #ffffff;
-    --text-dark: #333333;
-    --text-gray: #666666;
-    --text-muted: #888888;
-    --bg-light: #f8f9fa;
+    --text-dark: #2C2520;
+    --text-gray: #8C7B6B;
+    --text-muted: #8C7B6B;
+    --bg-light: #F7F3E9;
     --bg-white: #ffffff;
-    --bg-section: #fafbfc;
-    --border-light: #e1e5e9;
-    --shadow-light: 0 2px 12px rgba(0, 0, 0, 0.08);
-    --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
-    --shadow-strong: 0 8px 32px rgba(0, 0, 0, 0.16);
+    --bg-section: #F2EDE4;
+    --border-light: #E8DDD4;
+    --shadow-light: 0 2px 12px rgba(184, 87, 42, 0.08);
+    --shadow-medium: 0 4px 20px rgba(184, 87, 42, 0.12);
+    --shadow-strong: 0 8px 32px rgba(184, 87, 42, 0.16);
 }
 
 .restaurants-wrapper {
     width: 100%;
     padding: 80px 0;
-    background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-section) 100%);
+    background: linear-gradient(135deg,
+            var(--soft-linen) 0%,
+            var(--warm-ivory) 50%,
+            var(--pearl-sand) 100%);
     font-family: "Gilroy", sans-serif;
     line-height: 1.6;
     position: relative;
     overflow: hidden;
 }
 
-/* Fondo sutil con temática gastronómica */
+/* Fondo sutil con temática gastronómica pueblerina */
 .restaurants-wrapper::before {
     content: '';
     position: absolute;
@@ -49,8 +70,8 @@
     right: 0;
     bottom: 0;
     background:
-        radial-gradient(circle at 25% 75%, rgba(245, 124, 0, 0.03) 0%, transparent 50%),
-        radial-gradient(circle at 75% 25%, rgba(245, 124, 0, 0.05) 0%, transparent 60%);
+        radial-gradient(circle at 25% 75%, rgba(232, 123, 62, 0.02) 0%, transparent 50%),
+        radial-gradient(circle at 75% 25%, rgba(184, 87, 42, 0.03) 0%, transparent 60%);
     pointer-events: none;
 }
 
@@ -69,62 +90,31 @@
 }
 
 .restaurants-main-title {
-    font-size: 3.2rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 900;
-    color: var(--text-dark);
+    color: var(--deep-earth);
     margin: 0 0 15px 0;
-    letter-spacing: -0.03em;
-    position: relative;
-    display: inline-block;
-    /* Gradiente con naranja como protagonista - representa gastronomía típica */
+    /* Gradiente con siena quemada como protagonista - representa cultura y tradición pueblerina */
     background: linear-gradient(135deg,
-            var(--accent-orange) 0%,
-            rgba(245, 124, 0, 0.8) 50%,
-            var(--accent-orange) 100%);
-    background-clip: text;
+            var(--burnt-sienna) 0%,
+            var(--copper-sunset) 30%,
+            var(--antique-gold) 60%,
+            var(--burnt-sienna) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: titleSlideUp 1s ease-out;
+    background-clip: text;
 }
 
-.restaurants-main-title::after {
-    content: '';
-    position: absolute;
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
+.restaurants-main-title-underline {
     width: 100px;
-    height: 3px;
-    /* Naranja como color principal para "Gastronomía Típica" */
+    height: 4px;
     background: linear-gradient(90deg,
-            var(--accent-orange),
-            rgba(245, 124, 0, 0.7),
-            var(--accent-orange));
+            var(--burnt-sienna),
+            var(--copper-sunset),
+            var(--burnt-sienna));
     border-radius: 2px;
-    box-shadow: 0 2px 8px rgba(245, 124, 0, 0.3);
-    animation: underlineGrow 1.5s ease-out 0.6s both;
-}
-
-@keyframes titleSlideUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes underlineGrow {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100px;
-    }
+    margin: 0 auto;
+    box-shadow: 0 2px 8px rgba(184, 87, 42, 0.3);
 }
 
 /* Grid de Restaurantes - 3 columnas */
@@ -183,8 +173,8 @@
 .restaurant-card:hover {
     transform: translateY(-12px) scale(1.03);
     box-shadow: var(--shadow-strong);
-    /* Borde naranja al hacer hover - representa gastronomía típica */
-    border-color: var(--accent-orange);
+    /* Borde cobre sunset al hacer hover - representa gastronomía típica */
+    border-color: var(--copper-sunset);
 }
 
 /* Imagen del Restaurante */
@@ -199,18 +189,19 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.4s ease;
+    filter: brightness(1.05) contrast(1.02);
 }
 
 .restaurant-card:hover .restaurant-image {
     transform: scale(1.1);
 }
 
-/* Badge de Categoría con estilo naranja - gastronomía típica */
+/* Badge de Categoría con estilo cobre sunset - gastronomía típica */
 .restaurant-category-badge {
     position: absolute;
     top: 15px;
     left: 15px;
-    background: linear-gradient(135deg, var(--accent-orange), rgba(245, 124, 0, 0.9));
+    background: linear-gradient(135deg, var(--copper-sunset), rgba(232, 123, 62, 0.9));
     color: var(--text-light);
     padding: 6px 12px;
     border-radius: 20px;
@@ -220,6 +211,7 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(232, 123, 62, 0.3);
 }
 
 /* Rating */
@@ -227,8 +219,9 @@
     position: absolute;
     top: 15px;
     right: 15px;
-    background: rgba(255, 255, 255, 0.95);
-    color: var(--accent-orange);
+    background: rgba(247, 243, 233, 0.95);
+    /* Marfil cálido */
+    color: var(--copper-sunset);
     padding: 6px 10px;
     border-radius: 20px;
     font-size: 0.85rem;
@@ -237,6 +230,8 @@
     align-items: center;
     gap: 4px;
     backdrop-filter: blur(10px);
+    border: 1px solid rgba(247, 243, 233, 0.8);
+    box-shadow: 0 2px 8px rgba(184, 87, 42, 0.1);
 }
 
 .rating-icon {
@@ -262,7 +257,7 @@
 .restaurant-name {
     font-size: 1.4rem;
     font-weight: 800;
-    color: var(--text-dark);
+    color: var(--deep-earth);
     margin: 0;
     line-height: 1.2;
     flex: 1;
@@ -273,34 +268,34 @@
     align-items: center;
     gap: 5px;
     font-size: 0.85rem;
-    color: var(--text-muted);
+    color: var(--warm-stone);
     white-space: nowrap;
 }
 
 .location-icon {
     font-size: 0.8rem;
-    color: var(--accent-orange);
+    color: var(--copper-sunset);
 }
 
-/* Cuisine Type con estilo naranja */
+/* Cuisine Type con estilo cobre sunset */
 .restaurant-cuisine {
     display: flex;
     align-items: center;
     gap: 8px;
     font-size: 0.95rem;
-    color: var(--accent-orange);
+    color: var(--copper-sunset);
     font-weight: 600;
 }
 
 .cuisine-icon {
     font-size: 0.9rem;
-    color: var(--accent-orange);
+    color: var(--copper-sunset);
 }
 
 /* Specialty */
 .restaurant-specialty {
     font-size: 0.9rem;
-    color: var(--text-gray);
+    color: var(--warm-stone);
     margin: 0;
     line-height: 1.4;
     font-style: italic;
@@ -321,32 +316,33 @@
     align-items: center;
     gap: 6px;
     font-size: 0.85rem;
-    color: var(--text-muted);
+    color: var(--warm-stone);
 }
 
 .hours-icon {
     font-size: 0.8rem;
-    color: var(--accent-orange);
+    color: var(--copper-sunset);
 }
 
 .restaurant-price {
     font-size: 1.2rem;
     font-weight: 800;
-    color: var(--accent-gold);
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    color: var(--antique-gold);
+    text-shadow: 0 1px 3px rgba(212, 175, 55, 0.2);
+    filter: drop-shadow(0 1px 2px rgba(212, 175, 55, 0.3));
 }
 
-/* Ambiance con estilo naranja */
+/* Ambiance con estilo cobre sunset */
 .restaurant-ambiance {
     font-size: 0.85rem;
-    color: var(--text-muted);
+    color: var(--warm-stone);
     text-align: center;
     padding: 8px 12px;
     background: linear-gradient(135deg,
-            rgba(245, 124, 0, 0.05),
-            rgba(245, 124, 0, 0.08));
+            rgba(232, 123, 62, 0.05),
+            rgba(232, 123, 62, 0.08));
     border-radius: 8px;
-    border-left: 3px solid var(--accent-orange);
+    border-left: 3px solid var(--copper-sunset);
     font-weight: 500;
 }
 
