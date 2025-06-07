@@ -94,11 +94,11 @@
     font-weight: 900;
     color: var(--atractivos-deep-earth);
     margin: 0 0 15px 0;
-    /* Gradiente con pino serrano como protagonista - representa naturaleza pueblerina */
+    /* Gradiente con siena quemada como protagonista - igual que festivals-main-title */
     background: linear-gradient(135deg,
-            var(--atractivos-forest-pine) 0%,
-            var(--atractivos-misty-sage) 30%,
-            var(--atractivos-forest-pine) 70%,
+            var(--atractivos-burnt-sienna) 0%,
+            var(--atractivos-copper-sunset, #E87B3E) 30%,
+            var(--atractivos-antique-gold, #D4AF37) 60%,
             var(--atractivos-burnt-sienna) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -108,14 +108,14 @@
 .atractivos-main-title-underline {
     width: 100px;
     height: 4px;
-    /* Pino serrano como color principal para "Naturaleza Pueblerina" */
+    /* Igual que festivals-main-title-underline */
     background: linear-gradient(90deg,
-            var(--atractivos-forest-pine),
-            var(--atractivos-misty-sage),
-            var(--atractivos-forest-pine));
+            var(--atractivos-burnt-sienna),
+            var(--atractivos-copper-sunset, #E87B3E),
+            var(--atractivos-burnt-sienna));
     border-radius: 2px;
     margin: 0 auto;
-    box-shadow: 0 2px 8px rgba(90, 124, 88, 0.35);
+    box-shadow: 0 2px 8px rgba(184, 87, 42, 0.3);
 }
 
 /* Grid de atractivos */
