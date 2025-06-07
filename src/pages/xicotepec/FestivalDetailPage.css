@@ -1,0 +1,410 @@
+/* FestivalDetailPage.css - Paleta basada en Pueblos Mágicos - MORADO (Cultura y Tradición) */
+
+.festival-detail-page {
+    min-height: 100vh;
+    background: #f8f9fa;
+    font-family: "Gilroy", sans-serif;
+}
+
+/* Hero Section */
+.festival-detail-hero {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.festival-detail-hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.festival-detail-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+            rgba(123, 31, 162, 0.8) 0%,
+            rgba(123, 31, 162, 0.6) 50%,
+            rgba(123, 31, 162, 0.9) 100%);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.festival-detail-hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+
+/* Botón de Volver */
+.festival-detail-back-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    margin-bottom: 40px;
+}
+
+.festival-detail-back-button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateX(-5px);
+}
+
+/* Información del Hero */
+.festival-detail-hero-info {
+    color: #fff;
+}
+
+.festival-detail-title {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 900;
+    margin: 0 0 25px 0;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    line-height: 1.1;
+}
+
+.festival-detail-meta {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.festival-detail-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 12px 18px;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+}
+
+.festival-detail-short-description {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.6;
+    margin: 0;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+}
+
+/* Content Section */
+.festival-detail-content {
+    position: relative;
+    background: #fff;
+    margin-top: -100px;
+    border-radius: 30px 30px 0 0;
+    z-index: 10;
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.festival-detail-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 30px 60px;
+}
+
+/* Secciones */
+.festival-detail-section {
+    margin-bottom: 60px;
+}
+
+.festival-detail-section:last-child {
+    margin-bottom: 0;
+}
+
+.festival-detail-section-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #7B1FA2;
+    margin: 0 0 30px 0;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.festival-detail-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #7B1FA2, rgba(123, 31, 162, 0.3));
+    border-radius: 2px;
+}
+
+.festival-detail-section-icon {
+    font-size: 1.5rem;
+    color: #7B1FA2;
+}
+
+/* Descripción */
+.festival-detail-description,
+.festival-detail-significance {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.8;
+    margin: 0;
+    text-align: justify;
+}
+
+/* Actividades */
+.festival-detail-activities {
+    display: grid;
+    gap: 20px;
+}
+
+.festival-detail-activity {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 25px;
+    background: #fafbfc;
+    border-radius: 15px;
+    border-left: 5px solid #7B1FA2;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.festival-detail-activity:hover {
+    transform: translateX(10px);
+    box-shadow: 0 5px 25px rgba(123, 31, 162, 0.15);
+}
+
+.festival-detail-activity-number {
+    background: linear-gradient(135deg, #7B1FA2, #9C27B0);
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    box-shadow: 0 3px 15px rgba(123, 31, 162, 0.3);
+}
+
+.festival-detail-activity-text {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 8px;
+}
+
+/* Acciones del Bottom */
+.festival-detail-bottom-actions {
+    margin-top: 60px;
+    text-align: center;
+    padding-top: 40px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.festival-detail-back-bottom {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #7B1FA2, #9C27B0);
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(123, 31, 162, 0.3);
+}
+
+.festival-detail-back-bottom:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(123, 31, 162, 0.4);
+}
+
+/* Error State */
+.festival-detail-error {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    text-align: center;
+    padding: 20px;
+}
+
+.festival-detail-error h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #7B1FA2;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background: #9C27B0;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .festival-detail-hero {
+        height: 60vh;
+        min-height: 400px;
+    }
+
+    .festival-detail-hero-image {
+        background-attachment: scroll;
+    }
+
+    .festival-detail-title {
+        font-size: clamp(2rem, 8vw, 3.5rem);
+    }
+
+    .festival-detail-container {
+        padding: 60px 25px 50px;
+    }
+
+    .festival-detail-section-title {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .festival-detail-hero {
+        height: 50vh;
+        min-height: 350px;
+    }
+
+    .festival-detail-meta {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .festival-detail-meta-item {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    .festival-detail-short-description {
+        font-size: 1.1rem;
+    }
+
+    .festival-detail-container {
+        padding: 50px 20px 40px;
+    }
+
+    .festival-detail-content {
+        margin-top: -50px;
+    }
+
+    .festival-detail-section {
+        margin-bottom: 40px;
+    }
+
+    .festival-detail-section-title {
+        font-size: 1.4rem;
+        gap: 12px;
+    }
+
+    .festival-detail-description,
+    .festival-detail-significance {
+        font-size: 1rem;
+    }
+
+    .festival-detail-activity {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .festival-detail-activity-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .festival-detail-hero-overlay {
+        padding: 0 15px;
+    }
+
+    .festival-detail-back-button {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+        margin-bottom: 30px;
+    }
+
+    .festival-detail-container {
+        padding: 40px 15px 30px;
+    }
+
+    .festival-detail-section-title {
+        font-size: 1.2rem;
+        gap: 10px;
+    }
+
+    .festival-detail-section-icon {
+        font-size: 1.2rem;
+    }
+
+    .festival-detail-activity {
+        padding: 15px;
+        gap: 12px;
+    }
+
+    .festival-detail-activity-number {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .festival-detail-activity-text {
+        font-size: 0.95rem;
+    }
+
+    .festival-detail-back-bottom {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+}

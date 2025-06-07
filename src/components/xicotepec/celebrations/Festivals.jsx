@@ -1,10 +1,9 @@
-import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Festivals.css';
 import FestivalCard from './FestivalCard';
-import FestivalModal from './FestivalModal';
 
 const Festivals = () => {
-    const [selectedFestival, setSelectedFestival] = useState(null);
+    const navigate = useNavigate();
 
     const festivals = [
         {
@@ -82,12 +81,9 @@ const Festivals = () => {
         }
     ];
 
-    const openModal = (festival) => {
-        setSelectedFestival(festival);
-    };
-
-    const closeModal = () => {
-        setSelectedFestival(null);
+    const handleCardClick = (festival) => {
+        // Navegar a la página de detalle del festival
+        navigate(`/festival/${festival.id}`, { state: { festival } });
     };
 
     return (
@@ -105,16 +101,11 @@ const Festivals = () => {
                         <FestivalCard
                             key={festival.id}
                             festival={festival}
-                            onClick={() => openModal(festival)}
+                            onClick={() => handleCardClick(festival)}
                         />
                     ))}
                 </div>
             </div>
-
-            {/* Modal */}
-            {selectedFestival && (
-                <FestivalModal festival={selectedFestival} onClose={closeModal} />
-            )}
         </section>
     );
 };
