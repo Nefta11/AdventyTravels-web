@@ -3,23 +3,36 @@
 /* Variables CSS específicas para el componente Tours - Colores Pueblerinos Sofisticados */
 .tours-component-wrapper {
     /* Colores principales - Tierra y Tradición */
-    --tours-burnt-sienna: #B8572A;       /* Siena quemada - techos de barro elegantes */
-    --tours-adobe-clay: #C2724B;         /* Arcilla adobe - muros coloniales refinados */
-    --tours-forest-pine: #5A7C58;        /* Pino serrano - naturaleza sofisticada */
-    --tours-warm-ivory: #F7F3E9;         /* Marfil cálido - cal y adobe fino */
-    
+    --tours-burnt-sienna: #B8572A;
+    /* Siena quemada - techos de barro elegantes */
+    --tours-adobe-clay: #C2724B;
+    /* Arcilla adobe - muros coloniales refinados */
+    --tours-forest-pine: #5A7C58;
+    /* Pino serrano - naturaleza sofisticada */
+    --tours-warm-ivory: #F7F3E9;
+    /* Marfil cálido - cal y adobe fino */
+
     /* Acentos sofisticados */
-    --tours-copper-sunset: #E87B3E;      /* Cobre sunset - atardeceres dorados */
-    --tours-misty-sage: #9CAF88;         /* Salvia brumosa - vegetación serrana */
-    --tours-antique-gold: #D4AF37;       /* Oro antiguo - campanarios e iglesias */
-    --tours-storm-blue: #627B8C;         /* Azul tormenta - cielos dramáticos (PRINCIPAL) */
-    
+    --tours-copper-sunset: #E87B3E;
+    /* Cobre sunset - atardeceres dorados */
+    --tours-misty-sage: #9CAF88;
+    /* Salvia brumosa - vegetación serrana */
+    --tours-antique-gold: #D4AF37;
+    /* Oro antiguo - campanarios e iglesias */
+    --tours-storm-blue: #627B8C;
+    /* Azul tormenta - cielos dramáticos (PRINCIPAL) */
+
     /* Neutrales elegantes */
-    --tours-warm-stone: #8C7B6B;         /* Piedra cálida - cantera colonial */
-    --tours-soft-linen: #F2EDE4;         /* Lino suave - textiles naturales */
-    --tours-deep-earth: #3A2F26;         /* Tierra profunda - madera envejecida */
-    --tours-pearl-sand: #E8DDD4;         /* Arena perla - senderos empedrados */
-    --tours-charcoal-ink: #2C2520;       /* Tinta carbón - texto principal */
+    --tours-warm-stone: #8C7B6B;
+    /* Piedra cálida - cantera colonial */
+    --tours-soft-linen: #F2EDE4;
+    /* Lino suave - textiles naturales */
+    --tours-deep-earth: #3A2F26;
+    /* Tierra profunda - madera envejecida */
+    --tours-pearl-sand: #E8DDD4;
+    /* Arena perla - senderos empedrados */
+    --tours-charcoal-ink: #2C2520;
+    /* Tinta carbón - texto principal */
 
     /* Variables temáticas actualizadas */
     --tours-text-light: #ffffff;
@@ -76,63 +89,32 @@
     margin-bottom: 50px;
 }
 
-.tours-component-main-title {
-    font-size: 2.8rem;
+.tours-main-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 900;
     color: var(--tours-deep-earth);
-    margin: 0;
-    letter-spacing: -0.02em;
-    position: relative;
-    display: inline-block;
-    /* Gradiente con azul tormenta como protagonista - representa servicios para la gente pueblerina */
+    margin: 0 0 15px 0;
+    /* Gradiente con siena quemada como protagonista - representa cultura y tradición pueblerina */
     background: linear-gradient(135deg,
-            var(--tours-storm-blue) 0%,
-            rgba(98, 123, 140, 0.8) 50%,
-            var(--tours-storm-blue) 100%);
-    background-clip: text;
+            var(--tours-burnt-sienna) 0%,
+            var(--tours-copper-sunset) 30%,
+            var(--tours-antique-gold) 60%,
+            var(--tours-burnt-sienna) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: tours-titleFadeIn 1.2s ease-out;
+    background-clip: text;
 }
 
-.tours-component-main-title::after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 120px;
+.tours-main-title-underline {
+    width: 100px;
     height: 4px;
-    /* Azul tormenta como color principal para "Servicios/La Gente" */
     background: linear-gradient(90deg,
-            var(--tours-storm-blue),
-            rgba(98, 123, 140, 0.7),
-            var(--tours-storm-blue));
+            var(--tours-burnt-sienna),
+            var(--tours-copper-sunset),
+            var(--tours-burnt-sienna));
     border-radius: 2px;
-    box-shadow: 0 2px 8px rgba(98, 123, 140, 0.3);
-    animation: tours-underlineExpand 1.5s ease-out 0.5s both;
-}
-
-@keyframes tours-titleFadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes tours-underlineExpand {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 120px;
-    }
+    margin: 0 auto;
+    box-shadow: 0 2px 8px rgba(184, 87, 42, 0.3);
 }
 
 /* Grid de tours */
@@ -206,7 +188,8 @@
 .tours-component-card-category {
     font-size: 0.8rem;
     font-weight: 600;
-    background: rgba(247, 243, 233, 0.9);  /* Marfil cálido */
+    background: rgba(247, 243, 233, 0.9);
+    /* Marfil cálido */
     color: var(--tours-deep-earth);
     padding: 6px 12px;
     border-radius: 20px;
@@ -281,7 +264,8 @@
 .tours-component-card-price {
     font-size: 1.2rem;
     font-weight: 700;
-    color: var(--tours-antique-gold);  /* Oro antiguo - elegante y pueblerino */
+    color: var(--tours-antique-gold);
+    /* Oro antiguo - elegante y pueblerino */
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
     margin-top: 8px;
     filter: drop-shadow(0 1px 3px rgba(212, 175, 55, 0.3));

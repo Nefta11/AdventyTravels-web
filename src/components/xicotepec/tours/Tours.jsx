@@ -31,10 +31,10 @@ const Tours = () => {
 
     return (
         <section className="tours-component-wrapper" id="tours-section">
-            <div className="tours-component-container">
-                {/* Título principal */}
+            <div className="tours-component-container">                {/* Título principal */}
                 <div className="tours-component-header">
-                    <h2 className="tours-component-main-title">Recorridos</h2>
+                    <h1 className="tours-main-title">Recorridos</h1>
+                    <div className="tours-main-title-underline"></div>
                 </div>
 
                 {/* Grid de tours */}
