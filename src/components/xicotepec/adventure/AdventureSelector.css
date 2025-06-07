@@ -1,39 +1,46 @@
-/* AdventureSelector.css - Paleta basada en los colores del rehilete de Pueblos Mágicos */
+/* AdventureSelector.css - Paleta Pueblerina Elegante y Atractiva */
 
-/* CSS Variables - Colores del Rehilete Pueblos Mágicos */
+/* CSS Variables - Colores Pueblerinos Sofisticados */
 :root {
-    /* Colores principales del rehilete */
-    --primary-blue: #1E88E5;
-    /* Azul - representa a la gente */
-    --accent-purple: #7B1FA2;
-    /* Morado - cultura y tradición */
-    --accent-green: #388E3C;
-    /* Verde - naturaleza */
-    --accent-orange: #F57C00;
-    /* Naranja - gastronomía típica */
-    --accent-pink: #E91E63;
-    /* Rosa mexicano - artesanías */
+    /* Colores principales - Tierra y Tradición */
+    --burnt-sienna: #B8572A;       /* Siena quemada - techos de barro elegantes */
+    --adobe-clay: #C2724B;         /* Arcilla adobe - muros coloniales refinados */
+    --forest-pine: #5A7C58;        /* Pino serrano - naturaleza sofisticada */
+    --warm-ivory: #F7F3E9;         /* Marfil cálido - cal y adobe fino */
+    
+    /* Acentos sofisticados */
+    --copper-sunset: #E87B3E;      /* Cobre sunset - atardeceres dorados */
+    --misty-sage: #9CAF88;         /* Salvia brumosa - vegetación serrana */
+    --antique-gold: #D4AF37;       /* Oro antiguo - campanarios e iglesias */
+    --storm-blue: #627B8C;         /* Azul tormenta - cielos dramáticos */
+    
+    /* Neutrales elegantes */
+    --warm-stone: #8C7B6B;         /* Piedra cálida - cantera colonial */
+    --soft-linen: #F2EDE4;         /* Lino suave - textiles naturales */
+    --deep-earth: #3A2F26;         /* Tierra profunda - madera envejecida */
+    --pearl-sand: #E8DDD4;         /* Arena perla - senderos empedrados */
+    --charcoal-ink: #2C2520;       /* Tinta carbón - texto principal */
 
-    /* Colores complementarios */
+    /* Colores complementarios refinados */
     --text-light: #ffffff;
-    --text-dark: #333333;
-    --text-gray: #666666;
-    --bg-light: #f8f9fa;
+    --text-dark: #2C2520;
+    --text-gray: #8C7B6B;
+    --bg-light: #F7F3E9;
     --bg-white: #ffffff;
-    --glass-bg: rgba(255, 255, 255, 0.1);
-    --glass-border: rgba(255, 255, 255, 0.2);
-    --shadow-light: 0 4px 20px rgba(0, 0, 0, 0.1);
-    --shadow-medium: 0 8px 32px rgba(0, 0, 0, 0.15);
-    --shadow-strong: 0 12px 40px rgba(0, 0, 0, 0.2);
+    --glass-bg: rgba(247, 243, 233, 0.15);
+    --glass-border: rgba(247, 243, 233, 0.25);
+    --shadow-light: 0 4px 20px rgba(184, 87, 42, 0.08);
+    --shadow-medium: 0 8px 32px rgba(184, 87, 42, 0.12);
+    --shadow-strong: 0 12px 40px rgba(184, 87, 42, 0.18);
 }
 
 .adventure-selector {
     width: 100%;
     padding: 80px 0;
     background: linear-gradient(135deg,
-            var(--bg-light) 0%,
-            var(--bg-white) 50%,
-            #f0f4f8 100%);
+            var(--soft-linen) 0%,
+            var(--warm-ivory) 50%,
+            var(--pearl-sand) 100%);
     font-family: "Gilroy", sans-serif;
     position: relative;
     overflow: hidden;
@@ -47,8 +54,8 @@
     right: 0;
     bottom: 0;
     background:
-        radial-gradient(circle at 20% 80%, rgba(30, 136, 229, 0.03) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(245, 124, 0, 0.03) 0%, transparent 50%);
+        radial-gradient(circle at 20% 80%, rgba(184, 87, 42, 0.02) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(232, 123, 62, 0.03) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -69,16 +76,16 @@
 .adventure-title {
     font-size: 2.8rem;
     font-weight: 900;
-    color: var(--text-dark);
+    color: var(--deep-earth);
     margin: 0;
     letter-spacing: -0.02em;
     position: relative;
     display: inline-block;
     background: linear-gradient(135deg,
-            var(--accent-purple),
-            var(--primary-blue),
-            var(--accent-green),
-            var(--accent-orange));
+            var(--burnt-sienna),
+            var(--copper-sunset),
+            var(--antique-gold),
+            var(--misty-sage));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -94,18 +101,16 @@
     width: 120px;
     height: 4px;
     background: linear-gradient(90deg,
-            var(--accent-purple) 0%,
-            /* Morado - cultura */
-            var(--primary-blue) 20%,
-            /* Azul - gente */
-            var(--accent-green) 40%,
-            /* Verde - naturaleza */
-            var(--accent-orange) 60%,
-            /* Naranja - gastronomía */
-            var(--accent-pink) 80%);
-    /* Rosa - artesanías */
+            var(--burnt-sienna) 0%,        /* Siena quemada */
+            var(--copper-sunset) 18%,      /* Cobre sunset */
+            var(--antique-gold) 35%,       /* Oro antiguo */
+            var(--misty-sage) 52%,         /* Salvia brumosa */
+            var(--storm-blue) 70%,         /* Azul tormenta */
+            var(--adobe-clay) 85%,         /* Arcilla adobe */
+            var(--burnt-sienna) 100%);     /* Siena quemada */
     border-radius: 2px;
     animation: adventure-underlineExpand 1.5s ease-out 0.5s both;
+    box-shadow: 0 2px 8px rgba(232, 123, 62, 0.3);
 }
 
 /* Wrapper principal */
@@ -120,14 +125,14 @@
 /* Flechas de navegación */
 .adventure-arrow {
     background: var(--bg-white);
-    border: 2px solid var(--primary-blue);
+    border: 2px solid var(--burnt-sienna);
     border-radius: 50%;
     width: 50px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary-blue);
+    color: var(--burnt-sienna);
     font-size: 1.2rem;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -137,7 +142,7 @@
 }
 
 .adventure-arrow:hover {
-    background: var(--primary-blue);
+    background: var(--burnt-sienna);
     color: var(--text-light);
     transform: translateY(-2px);
     box-shadow: var(--shadow-medium);
@@ -197,132 +202,132 @@
     transition: opacity 0.3s ease;
 }
 
-/* Colores específicos por item según significado de Pueblos Mágicos */
+/* Colores específicos por item - Estilo Pueblerino Elegante */
 
-/* Item 1: Xicotepec Único - ROSA (artesanías) */
+/* Item 1: Xicotepec Único - ARCILLA ADOBE (artesanías y tradición) */
 .adventure-item:nth-child(1)::before {
     background: linear-gradient(135deg,
-            rgba(233, 30, 99, 0.05) 0%,
-            rgba(233, 30, 99, 0.1) 100%);
+            rgba(194, 114, 75, 0.06) 0%,
+            rgba(194, 114, 75, 0.12) 100%);
 }
 
 .adventure-item:nth-child(1):hover {
-    border-color: var(--accent-pink);
+    border-color: var(--adobe-clay);
 }
 
 .adventure-item:nth-child(1).active {
     background: linear-gradient(135deg,
-            var(--accent-pink) 0%,
-            rgba(233, 30, 99, 0.9) 100%);
+            var(--adobe-clay) 0%,
+            rgba(194, 114, 75, 0.9) 100%);
 }
 
 .adventure-item:nth-child(1) .adventure-icon {
-    color: var(--accent-pink);
+    color: var(--adobe-clay);
 }
 
-/* Item 2: Sitios y Experiencias - VERDE (naturaleza) */
+/* Item 2: Sitios y Experiencias - PINO SERRANO (naturaleza) */
 .adventure-item:nth-child(2)::before {
     background: linear-gradient(135deg,
-            rgba(56, 142, 60, 0.05) 0%,
-            rgba(56, 142, 60, 0.1) 100%);
+            rgba(90, 124, 88, 0.06) 0%,
+            rgba(90, 124, 88, 0.12) 100%);
 }
 
 .adventure-item:nth-child(2):hover {
-    border-color: var(--accent-green);
+    border-color: var(--forest-pine);
 }
 
 .adventure-item:nth-child(2).active {
     background: linear-gradient(135deg,
-            var(--accent-green) 0%,
-            rgba(56, 142, 60, 0.9) 100%);
+            var(--forest-pine) 0%,
+            rgba(90, 124, 88, 0.9) 100%);
 }
 
 .adventure-item:nth-child(2) .adventure-icon {
-    color: var(--accent-green);
+    color: var(--forest-pine);
 }
 
-/* Item 3: Celebraciones - MORADO (cultura y tradición) */
+/* Item 3: Celebraciones - SIENA QUEMADA (cultura y tradición) */
 .adventure-item:nth-child(3)::before {
     background: linear-gradient(135deg,
-            rgba(123, 31, 162, 0.05) 0%,
-            rgba(123, 31, 162, 0.1) 100%);
+            rgba(184, 87, 42, 0.06) 0%,
+            rgba(184, 87, 42, 0.12) 100%);
 }
 
 .adventure-item:nth-child(3):hover {
-    border-color: var(--accent-purple);
+    border-color: var(--burnt-sienna);
 }
 
 .adventure-item:nth-child(3).active {
     background: linear-gradient(135deg,
-            var(--accent-purple) 0%,
-            rgba(123, 31, 162, 0.9) 100%);
+            var(--burnt-sienna) 0%,
+            rgba(184, 87, 42, 0.9) 100%);
 }
 
 .adventure-item:nth-child(3) .adventure-icon {
-    color: var(--accent-purple);
+    color: var(--burnt-sienna);
 }
 
-/* Item 4: Alojamientos - AZUL (gente) */
+/* Item 4: Alojamientos - AZUL TORMENTA (hospitalidad) */
 .adventure-item:nth-child(4)::before {
     background: linear-gradient(135deg,
-            rgba(30, 136, 229, 0.05) 0%,
-            rgba(30, 136, 229, 0.1) 100%);
+            rgba(98, 123, 140, 0.06) 0%,
+            rgba(98, 123, 140, 0.12) 100%);
 }
 
 .adventure-item:nth-child(4):hover {
-    border-color: var(--primary-blue);
+    border-color: var(--storm-blue);
 }
 
 .adventure-item:nth-child(4).active {
     background: linear-gradient(135deg,
-            var(--primary-blue) 0%,
-            rgba(30, 136, 229, 0.9) 100%);
+            var(--storm-blue) 0%,
+            rgba(98, 123, 140, 0.9) 100%);
 }
 
 .adventure-item:nth-child(4) .adventure-icon {
-    color: var(--primary-blue);
+    color: var(--storm-blue);
 }
 
-/* Item 5: Recorridos - AZUL (gente) */
+/* Item 5: Recorridos - SALVIA BRUMOSA (exploración) */
 .adventure-item:nth-child(5)::before {
     background: linear-gradient(135deg,
-            rgba(30, 136, 229, 0.05) 0%,
-            rgba(30, 136, 229, 0.1) 100%);
+            rgba(156, 175, 136, 0.06) 0%,
+            rgba(156, 175, 136, 0.12) 100%);
 }
 
 .adventure-item:nth-child(5):hover {
-    border-color: var(--primary-blue);
+    border-color: var(--misty-sage);
 }
 
 .adventure-item:nth-child(5).active {
     background: linear-gradient(135deg,
-            var(--primary-blue) 0%,
-            rgba(30, 136, 229, 0.9) 100%);
+            var(--misty-sage) 0%,
+            rgba(156, 175, 136, 0.9) 100%);
 }
 
 .adventure-item:nth-child(5) .adventure-icon {
-    color: var(--primary-blue);
+    color: var(--misty-sage);
 }
 
-/* Item 6: Restaurantes - NARANJA (gastronomía) */
+/* Item 6: Restaurantes - COBRE SUNSET (gastronomía) */
 .adventure-item:nth-child(6)::before {
     background: linear-gradient(135deg,
-            rgba(245, 124, 0, 0.05) 0%,
-            rgba(245, 124, 0, 0.1) 100%);
+            rgba(232, 123, 62, 0.06) 0%,
+            rgba(232, 123, 62, 0.12) 100%);
 }
 
 .adventure-item:nth-child(6):hover {
-    border-color: var(--accent-orange);
+    border-color: var(--copper-sunset);
 }
 
 .adventure-item:nth-child(6).active {
     background: linear-gradient(135deg,
-            var(--accent-orange) 0%,
-            rgba(245, 124, 0, 0.9) 100%);
+            var(--copper-sunset) 0%,
+            rgba(232, 123, 62, 0.9) 100%);
 }
 
 .adventure-item:nth-child(6) .adventure-icon {
-    color: var(--accent-orange);
+    color: var(--copper-sunset);
 }
 
 /* Estados generales */
@@ -361,7 +366,7 @@
 .adventure-icon {
     font-size: 3rem;
     transition: all 0.3s ease;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0 2px 6px rgba(184, 87, 42, 0.15));
 }
 
 .adventure-item:hover .adventure-icon {
@@ -372,7 +377,7 @@
 .adventure-item-title {
     font-size: 1.3rem;
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--deep-earth);
     margin: 0 0 10px 0;
     transition: color 0.3s ease;
     position: relative;
@@ -382,7 +387,7 @@
 /* Descripción del item */
 .adventure-item-description {
     font-size: 0.95rem;
-    color: var(--text-gray);
+    color: var(--warm-stone);
     margin: 0;
     line-height: 1.4;
     transition: color 0.3s ease;
@@ -403,46 +408,40 @@
     height: 12px;
     border-radius: 50%;
     border: none;
-    background: #ddd;
+    background: var(--pearl-sand);
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-/* Indicadores con colores específicos */
+/* Indicadores con colores pueblerinos específicos */
 .adventure-indicator:nth-child(1):hover,
 .adventure-indicator:nth-child(1).active {
-    background: var(--accent-purple);
-    /* Cultura */
+    background: var(--adobe-clay);    /* Artesanías */
 }
 
 .adventure-indicator:nth-child(2):hover,
 .adventure-indicator:nth-child(2).active {
-    background: var(--accent-green);
-    /* Naturaleza */
+    background: var(--forest-pine);   /* Naturaleza */
 }
 
 .adventure-indicator:nth-child(3):hover,
 .adventure-indicator:nth-child(3).active {
-    background: var(--accent-purple);
-    /* Cultura */
+    background: var(--burnt-sienna);  /* Cultura */
 }
 
 .adventure-indicator:nth-child(4):hover,
 .adventure-indicator:nth-child(4).active {
-    background: var(--primary-blue);
-    /* Gente */
+    background: var(--storm-blue);    /* Hospitalidad */
 }
 
 .adventure-indicator:nth-child(5):hover,
 .adventure-indicator:nth-child(5).active {
-    background: var(--primary-blue);
-    /* Gente */
+    background: var(--misty-sage);    /* Exploración */
 }
 
 .adventure-indicator:nth-child(6):hover,
 .adventure-indicator:nth-child(6).active {
-    background: var(--accent-orange);
-    /* Gastronomía */
+    background: var(--copper-sunset); /* Gastronomía */
 }
 
 .adventure-indicator:hover {
@@ -451,7 +450,7 @@
 
 .adventure-indicator.active {
     transform: scale(1.3);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 8px rgba(184, 87, 42, 0.25);
 }
 
 /* Animaciones */

@@ -1,33 +1,71 @@
+/* DestinationInfo.css - Paleta Pueblerina Elegante y Atractiva */
+
+/* CSS Variables - Colores Pueblerinos Sofisticados */
 :root {
-    --primary-blue: #1E88E5;
-    --accent-purple: #7B1FA2;
-    --accent-green: #388E3C;
-    --accent-orange: #F57C00;
-    --accent-pink: #E91E63;
+    /* Colores principales - Tierra y Tradición */
+    --burnt-sienna: #B8572A;       /* Siena quemada - techos de barro elegantes */
+    --adobe-clay: #C2724B;         /* Arcilla adobe - muros coloniales refinados */
+    --forest-pine: #5A7C58;        /* Pino serrano - naturaleza sofisticada */
+    --warm-ivory: #F7F3E9;         /* Marfil cálido - cal y adobe fino */
+    
+    /* Acentos sofisticados */
+    --copper-sunset: #E87B3E;      /* Cobre sunset - atardeceres dorados */
+    --misty-sage: #9CAF88;         /* Salvia brumosa - vegetación serrana */
+    --antique-gold: #D4AF37;       /* Oro antiguo - campanarios e iglesias */
+    --storm-blue: #627B8C;         /* Azul tormenta - cielos dramáticos */
+    
+    /* Neutrales elegantes */
+    --warm-stone: #8C7B6B;         /* Piedra cálida - cantera colonial */
+    --soft-linen: #F2EDE4;         /* Lino suave - textiles naturales */
+    --deep-earth: #3A2F26;         /* Tierra profunda - madera envejecida */
+    --pearl-sand: #E8DDD4;         /* Arena perla - senderos empedrados */
+    --charcoal-ink: #2C2520;       /* Tinta carbón - texto principal */
+
+    /* Variables temáticas actualizadas */
     --text-light: #fff;
-    --text-dark: #333;
-    --text-gray: #666;
-    --bg-light: #f8f9fa;
+    --text-dark: #2C2520;
+    --text-gray: #8C7B6B;
+    --bg-light: #F7F3E9;
     --bg-white: #fff;
-    --bg-section: #fafbfc;
-    --border-light: #e1e5e9;
-    --shadow-light: 0 2px 12px rgba(0, 0, 0, 0.08);
-    --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
-    --shadow-strong: 0 8px 32px rgba(0, 0, 0, 0.16);
+    --bg-section: #F2EDE4;
+    --border-light: #E8DDD4;
+    --shadow-light: 0 2px 12px rgba(184, 87, 42, 0.08);
+    --shadow-medium: 0 4px 20px rgba(184, 87, 42, 0.12);
+    --shadow-strong: 0 8px 32px rgba(184, 87, 42, 0.16);
 }
 
 .destination-info {
     width: 100%;
     padding: 60px 0;
-    background: var(--bg-light);
+    background: linear-gradient(135deg,
+            var(--soft-linen) 0%,
+            var(--warm-ivory) 50%,
+            var(--pearl-sand) 100%);
     font-family: "Gilroy", sans-serif;
     line-height: 1.6;
+    position: relative;
+    overflow: hidden;
+}
+
+.destination-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 80%, rgba(184, 87, 42, 0.02) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(232, 123, 62, 0.03) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 .destination-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    position: relative;
+    z-index: 2;
 }
 
 .main-title-wrapper {
@@ -40,11 +78,11 @@
     font-weight: 900;
     margin: 0 0 15px 0;
     background: linear-gradient(135deg,
-            #7b1fa2 0%,
-            #e91e63 30%,
-            #ff80ab 60%,
-            #e91e63 85%,
-            #7b1fa2 100%);
+            var(--burnt-sienna) 0%,
+            var(--copper-sunset) 30%,
+            var(--antique-gold) 60%,
+            var(--adobe-clay) 85%,
+            var(--burnt-sienna) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -54,12 +92,12 @@
     width: 100px;
     height: 4px;
     background: linear-gradient(90deg,
-            var(--accent-pink),
-            #ff80ab,
-            var(--accent-pink));
+            var(--burnt-sienna),
+            var(--copper-sunset),
+            var(--burnt-sienna));
     border-radius: 2px;
     margin: 0 auto;
-    box-shadow: 0 2px 8px rgba(233, 30, 99, 0.3);
+    box-shadow: 0 2px 8px rgba(184, 87, 42, 0.3);
 }
 
 .destination-content-wrapper {
@@ -76,7 +114,7 @@
     border-radius: 16px;
     box-shadow: var(--shadow-light);
     overflow: hidden;
-    border: 1px solid rgba(233, 30, 99, 0.1);
+    border: 1px solid rgba(184, 87, 42, 0.1);
 }
 
 .destination-section {
@@ -91,7 +129,7 @@
 .section-title {
     font-size: 1.8rem;
     font-weight: 800;
-    color: var(--text-dark);
+    color: var(--deep-earth);
     margin: 0 0 20px 0;
     position: relative;
     display: inline-block;
@@ -105,14 +143,14 @@
     width: 50px;
     height: 3px;
     background: linear-gradient(90deg,
-            var(--accent-pink),
-            #ff80ab);
+            var(--burnt-sienna),
+            var(--copper-sunset));
     border-radius: 2px;
 }
 
 .section-subtitle {
     font-size: 1.1rem;
-    color: var(--text-gray);
+    color: var(--warm-stone);
     margin: 0 0 20px 0;
     font-weight: 600;
 }
@@ -126,16 +164,16 @@
 
 .section-text strong,
 .motive-point p strong {
-    color: var(--accent-pink);
+    color: var(--burnt-sienna);
     font-weight: 700;
 }
 
 .magic-section {
     background: linear-gradient(135deg,
-            rgba(233, 30, 99, 0.03) 0%,
-            rgba(233, 30, 99, 0.06) 50%,
-            rgba(233, 30, 99, 0.03) 100%);
-    border-left: 4px solid var(--accent-pink);
+            rgba(184, 87, 42, 0.03) 0%,
+            rgba(184, 87, 42, 0.06) 50%,
+            rgba(184, 87, 42, 0.03) 100%);
+    border-left: 4px solid var(--burnt-sienna);
 }
 
 .motive-points {
@@ -151,7 +189,7 @@
     padding: 15px;
     background: var(--bg-section);
     border-radius: 12px;
-    border-left: 4px solid var(--accent-pink);
+    border-left: 4px solid var(--adobe-clay);
     transition: all 0.3s;
     position: relative;
     overflow: hidden;
@@ -164,7 +202,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(233, 30, 99, 0.05) 0%, transparent 100%);
+    background: linear-gradient(135deg, rgba(184, 87, 42, 0.05) 0%, transparent 100%);
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -172,7 +210,7 @@
 .motive-point:hover {
     transform: translateX(5px);
     box-shadow: var(--shadow-light);
-    border-left-color: var(--accent-pink);
+    border-left-color: var(--burnt-sienna);
 }
 
 .motive-point:hover::before {
@@ -181,7 +219,7 @@
 
 .motive-icon {
     font-size: 1.2rem;
-    color: var(--accent-pink);
+    color: var(--copper-sunset);
     margin-top: 2px;
     flex-shrink: 0;
 }
@@ -194,13 +232,13 @@
 
 .basic-info {
     background: linear-gradient(135deg,
-            var(--accent-pink) 0%,
-            #ff80ab 100%);
+            var(--burnt-sienna) 0%,
+            var(--copper-sunset) 100%);
     color: var(--text-light);
     padding: 20px;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(233, 30, 99, 0.3);
+    box-shadow: 0 4px 20px rgba(184, 87, 42, 0.3);
 }
 
 .basic-info p {
@@ -233,7 +271,7 @@
 .gallery-item:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-medium);
-    border-color: var(--accent-pink);
+    border-color: var(--burnt-sienna);
 }
 
 .gallery-image {
@@ -253,7 +291,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(233, 30, 99, 0.85) 0%, rgba(30, 136, 229, 0.75) 100%);
+    background: linear-gradient(135deg, 
+            rgba(184, 87, 42, 0.85) 0%, 
+            rgba(232, 123, 62, 0.75) 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -290,7 +330,7 @@
     padding: 25px;
     box-shadow: var(--shadow-light);
     margin-bottom: 20px;
-    border: 1px solid rgba(233, 30, 99, 0.1);
+    border: 1px solid rgba(184, 87, 42, 0.1);
 }
 
 .transport-info {
@@ -321,32 +361,32 @@
 }
 
 .bus-icon {
-    color: var(--accent-green);
+    color: var(--forest-pine);
 }
 
 .plane-icon {
-    color: var(--primary-blue);
+    color: var(--storm-blue);
 }
 
 .transport-header h3 {
     font-size: 1.1rem;
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--deep-earth);
     margin: 0;
 }
 
 .transport-item p {
     margin: 0;
     font-size: 0.9rem;
-    color: var(--text-gray);
+    color: var(--warm-stone);
     padding-left: 30px;
 }
 
 .route-button {
     width: 100%;
     background: linear-gradient(135deg,
-            var(--accent-pink) 0%,
-            #ff80ab 100%);
+            var(--burnt-sienna) 0%,
+            var(--copper-sunset) 100%);
     color: var(--text-light);
     border: none;
     border-radius: 12px;
@@ -360,13 +400,13 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
+    box-shadow: 0 4px 15px rgba(184, 87, 42, 0.3);
 }
 
 .route-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4);
-    background: linear-gradient(135deg, #e91e63 0%, #ff80ab 100%);
+    box-shadow: 0 6px 20px rgba(184, 87, 42, 0.4);
+    background: linear-gradient(135deg, var(--copper-sunset) 0%, var(--antique-gold) 100%);
 }
 
 .route-button:active {
@@ -399,14 +439,14 @@
     border-radius: 16px;
     overflow: hidden;
     box-shadow: var(--shadow-strong);
-    border: 2px solid rgba(233, 30, 99, 0.2);
+    border: 2px solid rgba(184, 87, 42, 0.2);
 }
 
 .modal-close {
     position: absolute;
     top: 15px;
     right: 15px;
-    background: rgba(233, 30, 99, 0.8);
+    background: rgba(184, 87, 42, 0.8);
     color: var(--text-light);
     border: none;
     border-radius: 50%;
@@ -421,7 +461,7 @@
 }
 
 .modal-close:hover {
-    background: var(--accent-pink);
+    background: var(--burnt-sienna);
 }
 
 .modal-image {
@@ -439,13 +479,13 @@
 .modal-caption h3 {
     margin: 0 0 8px 0;
     font-size: 1.3rem;
-    color: var(--accent-pink);
+    color: var(--burnt-sienna);
     font-weight: 700;
 }
 
 .modal-caption p {
     margin: 0;
-    color: var(--text-gray);
+    color: var(--warm-stone);
     font-size: 0.95rem;
 }
 
