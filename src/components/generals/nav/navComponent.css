@@ -227,3 +227,22 @@
 .dark .fixed-nav {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
+
+.label-rehilete-spin {
+    display: inline-block;
+    width: 20px;
+    height: 22px;
+    margin-left: 1px;
+    vertical-align: middle;
+    animation: nav-rehilete-spin 4.5s linear infinite;
+}
+
+@keyframes nav-rehilete-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

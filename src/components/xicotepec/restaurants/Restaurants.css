@@ -1,13 +1,22 @@
-/* Restaurants.css */
+/* Restaurants.css - Paleta basada en Pueblos Mágicos - NARANJA (Gastronomía Típica) */
 
-/* Variables CSS para el componente Restaurants */
+/* Variables CSS para el componente Restaurants - Colores del Rehilete Pueblos Mágicos */
 .restaurants-wrapper {
-    --primary-blue: #2B5A87;
+    /* Colores principales del rehilete */
+    --primary-blue: #1E88E5;
+    /* Azul - representa a la gente */
+    --accent-purple: #7B1FA2;
+    /* Morado - cultura y tradición */
+    --accent-green: #388E3C;
+    /* Verde - naturaleza */
+    --accent-orange: #F57C00;
+    /* Naranja - gastronomía típica (PRINCIPAL) */
     --accent-pink: #E91E63;
-    --accent-green: #4CAF50;
-    --accent-purple: #9C27B0;
-    --accent-orange: #FF9800;
+    /* Rosa mexicano - artesanías */
     --accent-gold: #FFD700;
+    /* Dorado - calidad premium */
+
+    /* Colores complementarios */
     --text-light: #ffffff;
     --text-dark: #333333;
     --text-gray: #666666;
@@ -27,12 +36,30 @@
     background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-section) 100%);
     font-family: "Gilroy", sans-serif;
     line-height: 1.6;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Fondo sutil con temática gastronómica */
+.restaurants-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 25% 75%, rgba(245, 124, 0, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 75% 25%, rgba(245, 124, 0, 0.05) 0%, transparent 60%);
+    pointer-events: none;
 }
 
 .restaurants-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    position: relative;
+    z-index: 2;
 }
 
 /* Header Section */
@@ -49,10 +76,11 @@
     letter-spacing: -0.03em;
     position: relative;
     display: inline-block;
+    /* Gradiente con naranja como protagonista - representa gastronomía típica */
     background: linear-gradient(135deg,
-            var(--primary-blue),
-            var(--accent-purple),
-            var(--accent-pink));
+            var(--accent-orange) 0%,
+            rgba(245, 124, 0, 0.8) 50%,
+            var(--accent-orange) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -67,11 +95,13 @@
     transform: translateX(-50%);
     width: 100px;
     height: 3px;
+    /* Naranja como color principal para "Gastronomía Típica" */
     background: linear-gradient(90deg,
-            var(--accent-pink),
-            var(--accent-purple),
-            var(--primary-blue));
+            var(--accent-orange),
+            rgba(245, 124, 0, 0.7),
+            var(--accent-orange));
     border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(245, 124, 0, 0.3);
     animation: underlineGrow 1.5s ease-out 0.6s both;
 }
 
@@ -79,18 +109,6 @@
     from {
         opacity: 0;
         transform: translateY(40px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes subtitleFadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
     }
 
     to {
@@ -128,6 +146,7 @@
     animation: cardFadeIn 0.8s ease forwards;
     opacity: 0;
     transform: translateY(30px);
+    border: 2px solid transparent;
 }
 
 .restaurant-card:nth-child(1) {
@@ -164,6 +183,8 @@
 .restaurant-card:hover {
     transform: translateY(-12px) scale(1.03);
     box-shadow: var(--shadow-strong);
+    /* Borde naranja al hacer hover - representa gastronomía típica */
+    border-color: var(--accent-orange);
 }
 
 /* Imagen del Restaurante */
@@ -184,12 +205,12 @@
     transform: scale(1.1);
 }
 
-/* Badge de Categoría */
+/* Badge de Categoría con estilo naranja - gastronomía típica */
 .restaurant-category-badge {
     position: absolute;
     top: 15px;
     left: 15px;
-    background: linear-gradient(135deg, var(--accent-pink), var(--accent-purple));
+    background: linear-gradient(135deg, var(--accent-orange), rgba(245, 124, 0, 0.9));
     color: var(--text-light);
     padding: 6px 12px;
     border-radius: 20px;
@@ -258,22 +279,22 @@
 
 .location-icon {
     font-size: 0.8rem;
-    color: var(--accent-pink);
+    color: var(--accent-orange);
 }
 
-/* Cuisine Type */
+/* Cuisine Type con estilo naranja */
 .restaurant-cuisine {
     display: flex;
     align-items: center;
     gap: 8px;
     font-size: 0.95rem;
-    color: var(--primary-blue);
+    color: var(--accent-orange);
     font-weight: 600;
 }
 
 .cuisine-icon {
     font-size: 0.9rem;
-    color: var(--accent-green);
+    color: var(--accent-orange);
 }
 
 /* Specialty */
@@ -305,7 +326,7 @@
 
 .hours-icon {
     font-size: 0.8rem;
-    color: var(--accent-purple);
+    color: var(--accent-orange);
 }
 
 .restaurant-price {
@@ -315,17 +336,17 @@
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-/* Ambiance */
+/* Ambiance con estilo naranja */
 .restaurant-ambiance {
     font-size: 0.85rem;
     color: var(--text-muted);
     text-align: center;
     padding: 8px 12px;
     background: linear-gradient(135deg,
-            rgba(43, 90, 135, 0.05),
-            rgba(156, 39, 176, 0.05));
+            rgba(245, 124, 0, 0.05),
+            rgba(245, 124, 0, 0.08));
     border-radius: 8px;
-    border-left: 3px solid var(--accent-purple);
+    border-left: 3px solid var(--accent-orange);
     font-weight: 500;
 }
 

@@ -1,13 +1,22 @@
-/* Tours.css */
+/* Tours.css - Paleta basada en Pueblos Mágicos - AZUL (La Gente/Servicios) */
 
-/* Variables CSS específicas para el componente Tours */
+/* Variables CSS específicas para el componente Tours - Colores del Rehilete Pueblos Mágicos */
 .tours-component-wrapper {
-    --tours-primary-blue: #2B5A87;
+    /* Colores principales del rehilete */
+    --tours-primary-blue: #1E88E5;
+    /* Azul - representa a la gente (PRINCIPAL) */
+    --tours-accent-purple: #7B1FA2;
+    /* Morado - cultura y tradición */
+    --tours-accent-green: #388E3C;
+    /* Verde - naturaleza */
+    --tours-accent-orange: #F57C00;
+    /* Naranja - gastronomía típica */
     --tours-accent-pink: #E91E63;
-    --tours-accent-green: #4CAF50;
-    --tours-accent-purple: #9C27B0;
-    --tours-accent-orange: #FF9800;
+    /* Rosa mexicano - artesanías */
     --tours-accent-gold: #FFD700;
+    /* Dorado - calidad premium */
+
+    /* Colores complementarios */
     --tours-text-light: #ffffff;
     --tours-text-dark: #333333;
     --tours-text-gray: #666666;
@@ -27,12 +36,30 @@
     background: var(--tours-bg-light);
     font-family: "Gilroy", sans-serif;
     line-height: 1.6;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Fondo sutil con temática de servicios turísticos */
+.tours-component-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 25% 75%, rgba(30, 136, 229, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 75% 25%, rgba(30, 136, 229, 0.05) 0%, transparent 60%);
+    pointer-events: none;
 }
 
 .tours-component-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    position: relative;
+    z-index: 2;
 }
 
 /* Título principal */
@@ -49,10 +76,11 @@
     letter-spacing: -0.02em;
     position: relative;
     display: inline-block;
+    /* Gradiente con azul como protagonista - representa servicios para la gente */
     background: linear-gradient(135deg,
-            var(--tours-primary-blue),
-            var(--tours-accent-pink),
-            var(--tours-accent-purple));
+            var(--tours-primary-blue) 0%,
+            rgba(30, 136, 229, 0.8) 50%,
+            var(--tours-primary-blue) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -67,11 +95,13 @@
     transform: translateX(-50%);
     width: 120px;
     height: 4px;
+    /* Azul como color principal para "Servicios/La Gente" */
     background: linear-gradient(90deg,
-            var(--tours-accent-pink),
-            var(--tours-accent-purple),
-            var(--tours-accent-green));
+            var(--tours-primary-blue),
+            rgba(30, 136, 229, 0.7),
+            var(--tours-primary-blue));
     border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(30, 136, 229, 0.3);
     animation: tours-underlineExpand 1.5s ease-out 0.5s both;
 }
 
@@ -114,11 +144,14 @@
     cursor: pointer;
     transition: all 0.4s ease;
     box-shadow: var(--tours-shadow-light);
+    border: 2px solid transparent;
 }
 
 .tours-component-card:hover {
     transform: translateY(-10px) scale(1.02);
     box-shadow: var(--tours-shadow-strong);
+    /* Borde azul al hacer hover - representa servicios para la gente */
+    border-color: var(--tours-primary-blue);
 }
 
 .tours-component-card-image {
@@ -130,17 +163,18 @@
     position: relative;
 }
 
-/* Overlay de la card */
+/* Overlay AZUL consistente - representa servicios para la gente */
 .tours-component-card-overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    /* Solo AZUL - servicios para la gente */
     background: linear-gradient(135deg,
-            rgba(0, 0, 0, 0.3) 0%,
-            rgba(0, 0, 0, 0.6) 50%,
-            rgba(0, 0, 0, 0.8) 100%);
+            rgba(30, 136, 229, 0.7) 0%,
+            rgba(30, 136, 229, 0.5) 50%,
+            rgba(30, 136, 229, 0.8) 100%);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -150,18 +184,19 @@
 }
 
 .tours-component-card:hover .tours-component-card-overlay {
+    /* Intensificar el azul al hacer hover */
     background: linear-gradient(135deg,
-            rgba(0, 0, 0, 0.4) 0%,
-            rgba(0, 0, 0, 0.7) 50%,
-            rgba(0, 0, 0, 0.9) 100%);
+            rgba(30, 136, 229, 0.85) 0%,
+            rgba(30, 136, 229, 0.6) 50%,
+            rgba(30, 136, 229, 0.9) 100%);
 }
 
-/* Categoría en la card */
+/* Categoría con estilo azul - servicios turísticos */
 .tours-component-card-category {
     font-size: 0.8rem;
     font-weight: 600;
     opacity: 0.95;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(30, 136, 229, 0.8);
     color: var(--tours-text-light);
     padding: 6px 12px;
     border-radius: 20px;
@@ -271,33 +306,6 @@
 }
 
 @media (max-width: 968px) {
-    .tours-component-header {
-        margin-bottom: 40px;
-    }
-
-    .tours-component-main-title {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .tours-component-main-title {
-        font-size: 1.8rem;
-        text-align: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .tours-component-main-title {
-        font-size: 1.5rem;
-    }
-
-    .tours-component-header {
-        margin-bottom: 25px;
-    }
-}
-
-@media (max-width: 968px) {
     .tours-component-grid {
         grid-template-columns: 1fr;
         gap: 25px;
@@ -309,6 +317,10 @@
 
     .tours-component-header {
         margin-bottom: 40px;
+    }
+
+    .tours-component-main-title {
+        font-size: 2rem;
     }
 }
 
@@ -343,6 +355,11 @@
 
     .tours-component-header {
         margin-bottom: 35px;
+    }
+
+    .tours-component-main-title {
+        font-size: 1.8rem;
+        text-align: center;
     }
 }
 
@@ -388,6 +405,10 @@
     .tours-component-header {
         margin-bottom: 25px;
     }
+
+    .tours-component-main-title {
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 360px) {
@@ -411,7 +432,7 @@
         font-size: 1.1rem;
     }
 
-    .tours-component-card_description {
+    .tours-component-card-description {
         font-size: 0.8rem;
     }
 

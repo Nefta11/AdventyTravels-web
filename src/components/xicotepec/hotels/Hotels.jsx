@@ -218,8 +218,6 @@ const Hotels = () => {
         }
     ];
 
-
-
     const renderStars = (stars) => {
         return [...Array(5)].map((_, index) => (
             <FaStar
@@ -232,9 +230,9 @@ const Hotels = () => {
     return (
         <section className="hotels-component-wrapper" id="hotels-section">
             <div className="hotels-component-container">
-                {/* Título principal */}
-                <div className="adventure-header">
-                    <h2 className="adventure-title">Alojamientos</h2>
+                {/* Título principal con paleta AZUL de Pueblos Mágicos */}
+                <div className="hotels-component-header">
+                    <h2 className="hotels-component-main-title">Alojamientos</h2>
                 </div>
 
                 {/* Grid de hoteles */}
@@ -249,8 +247,13 @@ const Hotels = () => {
                     ))}
                 </div>
             </div>
+
+            {/* Modal con temática azul */}
             {selectedHotel && (
-                <HotelModal hotel={selectedHotel} onClose={() => setSelectedHotel(null)} />
+                <HotelModal
+                    hotel={selectedHotel}
+                    onClose={() => setSelectedHotel(null)}
+                />
             )}
         </section>
     );

@@ -1,31 +1,52 @@
-/* Hotels.css optimizado: solo layout y estilos generales, sin estilos de modal ni card */
-
-/* Variables CSS específicas para el componente Hotels */
+/* Hotels.css - Paleta basada en Pueblos Mágicos - AZUL (La Gente/Servicios) */
 .hotels-component-wrapper {
-    --hotels-primary-blue: #2B5A87;
+    /* Variables CSS específicas para el componente Hotels - Colores del Rehilete Pueblos Mágicos */
+    --hotels-primary-blue: #1E88E5;
+    --hotels-accent-purple: #7B1FA2;
+    --hotels-accent-green: #388E3C;
+    --hotels-accent-orange: #F57C00;
     --hotels-accent-pink: #E91E63;
-    --hotels-accent-green: #4CAF50;
-    --hotels-accent-purple: #9C27B0;
-    --hotels-accent-orange: #FF9800;
     --hotels-accent-gold: #FFD700;
     --hotels-text-light: #ffffff;
     --hotels-text-dark: #333333;
+    --hotels-text-gray: #666666;
+    --hotels-text-muted: #888888;
     --hotels-bg-light: #f8f9fa;
     --hotels-bg-white: #ffffff;
-}
-
-.hotels-component-wrapper {
+    --hotels-bg-section: #fafbfc;
+    --hotels-border-light: #e1e5e9;
+    --hotels-shadow-light: 0 2px 12px rgba(0, 0, 0, 0.08);
+    --hotels-shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
+    --hotels-shadow-strong: 0 8px 32px rgba(0, 0, 0, 0.16);
     width: 100%;
     padding: 60px 0;
     background: var(--hotels-bg-light);
     font-family: "Gilroy", sans-serif;
     line-height: 1.6;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Fondo sutil con temática de servicios turísticos */
+.hotels-component-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 25% 75%, rgba(30, 136, 229, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 75% 25%, rgba(30, 136, 229, 0.05) 0%, transparent 60%);
+    pointer-events: none;
 }
 
 .hotels-component-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    position: relative;
+    z-index: 2;
 }
 
 /* Título principal */
@@ -35,24 +56,33 @@
 }
 
 .hotels-component-main-title {
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 800;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
     color: var(--hotels-text-dark);
-    margin: 0;
-    position: relative;
-    display: inline-block;
+    margin: 0 0 15px 0;
+    background: linear-gradient(135deg,
+            var(--hotels-primary-blue) 0%,
+            var(--hotels-primary-blue) 55%,
+            var(--hotels-accent-purple) 80%,
+            var(--hotels-accent-purple) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
+/* Línea decorativa debajo del título principal, más azul que morada */
 .hotels-component-main-title::after {
     content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(90deg, var(--hotels-accent-pink), var(--hotels-accent-purple));
-    border-radius: 2px;
+    display: block;
+    margin: 18px auto 0 auto;
+    width: 90px;
+    height: 5px;
+    border-radius: 3px;
+    background: linear-gradient(90deg,
+            var(--hotels-primary-blue) 0%,
+            var(--hotels-primary-blue) 70%,
+            var(--hotels-accent-purple) 100%);
+    box-shadow: 0 2px 8px rgba(30, 136, 229, 0.15);
 }
 
 /* Grid de hoteles */
@@ -63,6 +93,7 @@
     align-items: stretch;
 }
 
+/* Responsive Design */
 @media (max-width: 968px) {
     .hotels-component-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -120,3 +151,5 @@
         gap: 12px;
     }
 }
+
+/* Eliminado: .adventure-header y .adventure-title porque no se usan en JSX de hoteles */
