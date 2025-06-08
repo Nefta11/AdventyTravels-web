@@ -172,12 +172,23 @@ const HotelDetail = () => {
                         <section className="hotel-detail-section">
                             <h3><FaInfoCircle /> Descripción</h3>
                             <p>{hotel.fullDescription}</p>
-                        </section>
-
-                        {/* Dirección */}
+                        </section>                        {/* Dirección */}
                         <section className="hotel-detail-section">
                             <h3><FaMapMarkerAlt /> Dirección</h3>
                             <p>{hotel.location}</p>
+                        </section>
+
+                        {/* Horarios */}
+                        <section className="hotel-detail-section">
+                            <h3><FaClock /> Horarios</h3>
+                            <div className="schedule-info">
+                                <div className="schedule-item">
+                                    <strong>Check-in:</strong> {hotel.checkIn || 'Consultar'}
+                                </div>
+                                <div className="schedule-item">
+                                    <strong>Check-out:</strong> {hotel.checkOut || 'Consultar'}
+                                </div>
+                            </div>
                         </section>
 
                         {/* Servicios */}
@@ -219,19 +230,6 @@ const HotelDetail = () => {
                         )}
                     </div>                    {/* Columna derecha - Métodos de pago, Imagen, contacto */}
                     <div className="hotel-detail-right">
-                        {/* Horarios */}
-                        <div className="hotel-detail-schedule-card">
-                            <h4><FaClock /> Horarios</h4>
-                            <div className="schedule-info">
-                                <div className="schedule-item">
-                                    <strong>Check-in:</strong> {hotel.checkIn || 'Consultar'}
-                                </div>
-                                <div className="schedule-item">
-                                    <strong>Check-out:</strong> {hotel.checkOut || 'Consultar'}
-                                </div>
-                            </div>
-                        </div>
-
                         {/* Métodos de pago */}
                         {hotel.metodos_pago && (
                             <div className="hotel-detail-payment-card">
