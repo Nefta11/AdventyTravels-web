@@ -1,4 +1,3 @@
-// HotelDetail.jsx - Actualizado sin duplicación de datos
 import { useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import {
