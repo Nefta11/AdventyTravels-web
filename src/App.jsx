@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { I18nextProvider } from 'react-i18next';
 import { AnimatePresence } from 'framer-motion';
 import LenguajeTranslations from './lenguaje/LenguajeTranslations';
+import ScrollToTop from './utils/ScrollToTop';
 import Home from './pages/Home';
 import Experiences from './pages/Experiences';
 import AboutUs from './pages/AboutUs';
@@ -22,6 +23,7 @@ function App() {
   return (
     <I18nextProvider i18n={LenguajeTranslations}>
       <BrowserRouter>
+        <ScrollToTop />
         <div className="container">
           <SpeedInsights />
           <AnimatePresence exitBeforeEnter>
