@@ -328,5 +328,205 @@ export const restaurantsData = [
             "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
             "https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
         ]
+    },
+    // ID 13
+    {
+        id: 13,
+        slug: "cafeteria-creppycaff",
+        nombre_establecimiento: "Cafetería Creppycaff",
+        imagen: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        direccion_completa: "Calle niños héroes número 10 colonia el tabacal",
+        descripcion_restaurante: "Terraza y cafetería Creppycaff \"Un lugar cerca del cielo\". Lugar donde pasarás momentos muy relajantes ya que cuenta con una bella vista panorámica. Encontrarás desayunos tradicionales, café, postres, bebidas frías o calientes. Lo que hace único a nuestro restaurante es la vista espectacular y los alimentos de calidad, además de nuestro excepcional servicio al cliente. Un espacio pet friendly con Wi-fi gratuito y música en vivo para crear el ambiente perfecto.",
+        tipo_comida: ["Mexicana", "Desayunos", "Postres", "Café", "Bebidas"],
+        especialidades_casa: ["Desayuno tradicional", "Molletipizza", "Café tradicional", "Bebidas frías y calientes"],
+        rango_precios_promedio_persona: "$100-$200 MXN",
+        horarios_atencion: {
+            lunes: "Cerrado",
+            martes: "3:30 pm a 9:30 pm",
+            miercoles: "3:30 pm a 9:30 pm",
+            jueves: "3:30 pm a 9:30 pm",
+            viernes: "10:00 am a 9:30 pm",
+            sabado: "10:00 am a 9:30 pm",
+            domingo: "10:00 am a 9:30 pm"
+        },
+        metodos_pago: ["Efectivo", "Tarjeta de crédito", "Tarjeta de débito"],
+        servicios_adicionales: ["Reservaciones", "Servicio a domicilio", "Wi-fi gratuito", "Música en vivo", "Pet friendly"],
+        redes_sociales: ["Facebook: Creppycaff"],
+        telefono: "7761980794",
+        correo_electronico: "Creppycaff@gmail.com",
+        galeria_imagenes: [
+            "https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+        ]
+    },
+
+    // ID 14
+    {
+        id: 14,
+        slug: "lapin-cafeteria",
+        nombre_establecimiento: "Lapin cafetería",
+        imagen: "https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        direccion_completa: "Boulevard av Juárez 264 local 23",
+        descripcion_restaurante: "Cafetería estilo parisino con las mejores crepas de la región y café de altura regional, helados artesanales Gourmet y pastas italianas auténticas. Lo que hace único a nuestro restaurante es la calidad excepcional de nuestros productos y un estilo que te transporta a un rincón europeo. Ofrecemos un ambiente sofisticado y acogedor donde cada detalle está pensado para brindarte una experiencia culinaria memorable, combinando la elegancia francesa con los sabores locales e internacionales.",
+        tipo_comida: ["Internacional", "Gourmet", "Postres", "Francesa", "Italiana", "Café"],
+        especialidades_casa: ["Café de altura regional", "Crepas gourmet", "Repostería artesanal", "Helados Gourmet", "Pasta tradicional italiana auténtica"],
+        rango_precios_promedio_persona: "$100-$200 MXN",
+        horarios_atencion: {
+            lunes: "3:00 pm a 10:00 pm",
+            martes: "3:00 pm a 10:00 pm",
+            miercoles: "3:00 pm a 10:00 pm",
+            jueves: "3:00 pm a 10:00 pm",
+            viernes: "3:00 pm a 10:00 pm",
+            sabado: "3:00 pm a 10:00 pm",
+            domingo: "3:00 pm a 10:00 pm"
+        },
+        metodos_pago: ["Efectivo", "Tarjeta de crédito", "Tarjeta de débito"],
+        servicios_adicionales: ["Reservaciones", "Servicio para llevar", "Wi-fi gratuito", "Área infantil", "Estacionamiento", "Pet friendly", "Bebidas alcohólicas"],
+        redes_sociales: ["Instagram: @lapin_cafeteria"],
+        telefono: "7647671073",
+        correo_electronico: "cesargmarquina@gmail.com",
+        galeria_imagenes: [
+            "https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+        ]
+    },
+
+    // ID 15
+    {
+        id: 15,
+        slug: "la-birrieria",
+        nombre_establecimiento: "La birrieria",
+        imagen: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        direccion_completa: "Av.zaragoza 166 col. Centro",
+        descripcion_restaurante: "Somos un restaurante familiar con servicio de birria y mariscos. Contamos con jardín y asador, estacionamiento, y también tenemos paquetes para cualquier tipo de evento y servicio para llevar. Lo que hace único a nuestro restaurante son nuestras especialidades: birria y chamorros preparados con receta tradicional. Ofrecemos un ambiente familiar acogedor donde podrás disfrutar de auténticos sabores mexicanos en un espacio cómodo y relajado, perfecto para reuniones familiares y celebraciones.",
+        tipo_comida: ["Mexicana", "Mariscos", "Desayunos", "Comida tradicional"],
+        especialidades_casa: ["Birria", "Chamorros", "Mariscos frescos"],
+        rango_precios_promedio_persona: "$100-$200 MXN",
+        horarios_atencion: {
+            lunes: "9:00 am a 6:00 pm",
+            martes: "9:00 am a 6:00 pm",
+            miercoles: "9:00 am a 6:00 pm",
+            jueves: "9:00 am a 6:00 pm",
+            viernes: "9:00 am a 6:00 pm",
+            sabado: "9:00 am a 6:00 pm",
+            domingo: "9:00 am a 6:00 pm"
+        },
+        metodos_pago: ["Efectivo", "Tarjeta de crédito", "Tarjeta de débito"],
+        servicios_adicionales: ["Reservaciones", "Servicio para llevar", "Servicio a domicilio", "Wi-fi gratuito", "Estacionamiento", "Bebidas alcohólicas", "Jardín", "Asador", "Paquetes para eventos"],
+        redes_sociales: ["Facebook: La birrieria", "Instagram: @la_birrieria"],
+        telefono: "7641120486",
+        correo_electronico: "1ca9rl7os7@gmail.com",
+        galeria_imagenes: [
+            "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+        ]
+    }
+    ,
+    // ID 16
+    {
+        id: 16,
+        slug: "amalindo-cafeteria-reposteria",
+        nombre_establecimiento: "AMALINDO cafetería y repostería",
+        imagen: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        direccion_completa: "Av. 2 de abril, colonia centro #106",
+        descripcion_restaurante: "Somos una cafetería que ofrece un espacio en donde podrás disfrutar de un rico postre, desayunar en compañía de tu persona favorita o simplemente darte un gustito por la tarde. Aunque nos basamos en lo tradicional y brindamos un concepto que se ha trabajado desde hace ya tiempo, nosotros siempre buscamos la forma de darle el toque de Amalindo a lo que hagamos para que obtengas una buena experiencia y siempre tu visita sea buena. Nos encontramos en un espacio céntrico, para que no tengas excusas para perderte todo lo que tenemos para ti. Nos hemos dado a conocer por nuestros riquísimos postres elaborados con los mejores ingredientes y siempre buscamos satisfacer al cliente no solo en su pedido, sino también trabajamos en el servicio, para que puedan obtener una buena experiencia y poder recibirte más de una vez.",
+        tipo_comida: ["Bebidas a base de café", "Desayunos", "Postres", "Repostería", "Cafetería"],
+        especialidades_casa: ["Postres 100% caseros", "Repostería artesanal", "Bebidas de café especializadas"],
+        rango_precios_promedio_persona: "$100-$200 MXN",
+        horarios_atencion: {
+            lunes: "11:30 am a 9:00 pm",
+            martes: "11:30 am a 9:00 pm",
+            miercoles: "11:30 am a 9:00 pm",
+            jueves: "11:30 am a 9:00 pm",
+            viernes: "11:30 am a 9:00 pm",
+            sabado: "11:30 am a 9:00 pm",
+            domingo: "11:30 am a 9:00 pm"
+        },
+        metodos_pago: ["Efectivo", "Tarjeta de crédito", "Tarjeta de débito"],
+        servicios_adicionales: ["Servicio para llevar", "Servicio a domicilio", "Wi-fi gratuito"],
+        redes_sociales: ["Facebook: Amalindo café", "Instagram: @ama.lindo"],
+        telefono: "7647656347",
+        correo_electronico: "amalindo.19@gmail.com",
+        galeria_imagenes: [
+            "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+        ]
+    }
+    ,
+    // ID 17
+    {
+        id: 17,
+        slug: "gonri-cafe",
+        nombre_establecimiento: "GonRi Cafe",
+        imagen: "https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        direccion_completa: "Plaza de la Constitución No. 116, Col. Centro, Xicotepec de Juarez",
+        descripcion_restaurante: "GonRi Café es un espacio cálido, lleno de historia, donde el aroma del café despierta memorias y conversaciones. Servimos café arábigo de estricta altura, 100% de Xicotepec, con la mejor calidad, el mejor sabor… y una tradición que nos enorgullece. Aquí cada taza cuenta una historia, cada sorbo es un momento para compartir. GonRi Café es el lugar ideal para disfrutar de una charla amena y un café auténtico, porque: \"Como me decía mi papá que le decía mi abuelo: Dios… y café.\" Ofrecemos un café de especialidad cuidadosamente seleccionado y preparado, brindando una experiencia única para los paladares más exigentes.",
+        tipo_comida: ["Postres", "Café", "Café de especialidad", "Repostería"],
+        especialidades_casa: ["González Special", "Pay de maracuyá", "Café arábigo de Xicotepec"],
+        rango_precios_promedio_persona: "$100-$200 MXN",
+        horarios_atencion: {
+            lunes: "8:00 am a 9:30 pm",
+            martes: "8:00 am a 9:30 pm",
+            miercoles: "8:00 am a 9:30 pm",
+            jueves: "8:00 am a 9:30 pm",
+            viernes: "8:00 am a 9:30 pm",
+            sabado: "8:00 am a 9:30 pm",
+            domingo: "8:00 am a 9:30 pm"
+        },
+        metodos_pago: ["Efectivo", "Tarjeta de crédito", "Tarjeta de débito"],
+        servicios_adicionales: ["Reservaciones", "Servicio para llevar"],
+        redes_sociales: ["Facebook: https://www.facebook.com/share/16UzxMZS1E/", "Instagram: @cafe_gonri"],
+        telefono: "7641000548",
+        correo_electronico: "gonricafe7647674036@gmail.com",
+        galeria_imagenes: [
+            "https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+        ]
+    }
+    ,
+    // ID 18
+    {
+        id: 18,
+        slug: "azotea-116",
+        nombre_establecimiento: "Azotea 116",
+        imagen: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        direccion_completa: "Plaza de la Constitución No. 116 Planta Alta, Col. Centro, Xicotepec de Juárez",
+        descripcion_restaurante: "Ubicada en la cima de nuestro edificio, Azotea 116 es una terraza con una vista inigualable del centro de Xicotepec, rodeada por el majestuoso paisaje de cerros y atardeceres que tiñen el cielo con luz cálida y dorada. Es un espacio abierto, acogedor y lleno de encanto, perfecto para disfrutar de una tarde tranquila, una charla entre amigos o incluso un evento especial. Azotea 116 también está disponible para eventos privados, reuniones, sesiones fotográficas o celebraciones especiales, adaptándose a distintos estilos y necesidades. Aquí, cada visita es una experiencia distinta… con sabor, vista y corazón. Lo que hace único a nuestro restaurante es la vista panorámica privilegiada al centro de Xicotepec y sus cerros, con atardeceres espectaculares que bañan el espacio en luz cálida y natural, creando un ambiente perfecto para fotos, momentos tranquilos o citas casuales.",
+        tipo_comida: ["Comida rápida", "Postres", "Snacks", "Café", "Terraza"],
+        especialidades_casa: ["González Special", "Tarta de maracuyá", "Cazuelita de queso fundido con chistorra"],
+        rango_precios_promedio_persona: "$100-$200 MXN",
+        horarios_atencion: {
+            lunes: "1:00 pm a 9:30 pm",
+            martes: "1:00 pm a 9:30 pm",
+            miercoles: "1:00 pm a 9:30 pm",
+            jueves: "1:00 pm a 9:30 pm",
+            viernes: "1:00 pm a 9:30 pm",
+            sabado: "1:00 pm a 9:30 pm",
+            domingo: "1:00 pm a 9:30 pm"
+        },
+        metodos_pago: ["Efectivo", "Tarjeta de crédito", "Tarjeta de débito"],
+        servicios_adicionales: ["Reservaciones", "Servicio para llevar", "Wi-fi gratuito", "Pet friendly", "Bebidas alcohólicas", "Proyector para ver películas", "Renta del local para eventos", "Sesiones fotográficas"],
+        redes_sociales: ["Instagram: @azotea_116", "Facebook: https://www.facebook.com/share/16NGP4d68W/"],
+        telefono: "2226676142",
+        correo_electronico: "azotea116@gmail.com",
+        galeria_imagenes: [
+            "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+            "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+        ]
     }
 ];
