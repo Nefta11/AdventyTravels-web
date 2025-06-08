@@ -14,10 +14,8 @@ const Restaurants = () => {
 
     const toggleShowAll = () => {
         setShowAll(!showAll);
-    };
-
-    // Determine how many restaurants to show (9 initially, all when showAll is true)
-    const restaurantsToShow = showAll ? restaurantsData : restaurantsData.slice(0, 9);    // Transform restaurant data for display
+    };    // Determine how many restaurants to show (6 initially, all when showAll is true)
+    const restaurantsToShow = showAll ? restaurantsData : restaurantsData.slice(0, 6);// Transform restaurant data for display
     const displayRestaurants = restaurantsToShow.map(restaurant => ({
         id: restaurant.id,
         slug: restaurant.slug,
@@ -47,10 +45,8 @@ const Restaurants = () => {
                             onClick={handleRestaurantClick}
                         />
                     ))}
-                </div>
-
-                {/* Botón Ver más/Ver menos */}
-                {restaurantsData.length > 9 && (
+                </div>                {/* Botón Ver más/Ver menos */}
+                {restaurantsData.length > 6 && (
                     <div className="restaurants-pagination">
                         <button
                             className="pagination-button"
