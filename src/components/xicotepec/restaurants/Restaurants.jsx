@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaClock, FaUtensils, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaUtensils } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import { restaurantsData } from './restaurantsData';
 import './Restaurants.css';
@@ -17,21 +17,17 @@ const Restaurants = () => {
     };
 
     // Determine how many restaurants to show (9 initially, all when showAll is true)
-    const restaurantsToShow = showAll ? restaurantsData : restaurantsData.slice(0, 9);
-    
-    // Transform restaurant data for display
+    const restaurantsToShow = showAll ? restaurantsData : restaurantsData.slice(0, 9);    // Transform restaurant data for display
     const displayRestaurants = restaurantsToShow.map(restaurant => ({
         id: restaurant.id,
         slug: restaurant.slug,
         image: restaurant.imagen,
         name: restaurant.nombre_establecimiento,
         category: Array.isArray(restaurant.tipo_comida) ? restaurant.tipo_comida[0] : restaurant.tipo_comida,
-        cuisine: Array.isArray(restaurant.tipo_comida) ? restaurant.tipo_comida.join(', ') : restaurant.tipo_comida,
-        hours: restaurant.horarios_atencion,
         priceRange: restaurant.rango_precios_promedio_persona,
-        location: restaurant.direccion_completa,
-        specialty: Array.isArray(restaurant.especialidades_casa) ? restaurant.especialidades_casa.join(', ') : restaurant.especialidades_casa,
-        ambiance: restaurant.descripcion_restaurante.substring(0, 100) + '...'
+        specialty: Array.isArray(restaurant.especialidades_casa) 
+            ? restaurant.especialidades_casa.slice(0, 2).join(', ') 
+            : restaurant.especialidades_casa
     }));
 
     return (
@@ -58,38 +54,19 @@ const Restaurants = () => {
                                 <div className="restaurant-category-badge">
                                     {restaurant.category}
                                 </div>
-                            </div>
-
-                            <div className="restaurant-content">
-                                <div className="restaurant-header-info">
+                            </div>                            <div className="restaurant-content">
+                                <div className="restaurant-main-info">
                                     <h3 className="restaurant-name">{restaurant.name}</h3>
-                                    <div className="restaurant-location">
-                                        <FaMapMarkerAlt className="location-icon" />
-                                        <span>{restaurant.location}</span>
-                                    </div>
-                                </div>
-
-                                <div className="restaurant-cuisine">
-                                    <FaUtensils className="cuisine-icon" />
-                                    <span>{restaurant.cuisine}</span>
-                                </div>
-
-                                <p className="restaurant-specialty">
-                                    {restaurant.specialty}
-                                </p>                                <div className="restaurant-details">
-                                    <div className="restaurant-hours">
-                                        <FaClock className="hours-icon" />
-                                        <span>Consultar horarios</span>
-                                    </div>
                                     <div className="restaurant-price">
                                         {restaurant.priceRange}
                                     </div>
                                 </div>
 
-                                <div className="restaurant-ambiance">
-                                    {restaurant.ambiance}
+                                <div className="restaurant-cuisine">
+                                    <FaUtensils className="cuisine-icon" />
+                                    <span>{restaurant.category}</span>
                                 </div>
-                            </div>                        </div>
+                            </div></div>
                     ))}
                 </div>
 

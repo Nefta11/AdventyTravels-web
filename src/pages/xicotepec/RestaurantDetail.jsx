@@ -31,7 +31,11 @@ const RestaurantDetail = () => {
                         return { type: 'facebook', url: red.replace('Facebook:', '').trim() };
                     } else if (red.includes('Instagram:')) {
                         return { type: 'instagram', url: red.replace('Instagram:', '').trim() };
+                    } else if (red.includes('TikTok:')) {
+                        return { type: 'tiktok', url: red.replace('TikTok:', '').trim() };
                     }
+                    // Si no tiene prefijo, asumir que es Facebook
+                    return { type: 'facebook', url: red };
                 }
                 return null;
             }).filter(Boolean);
@@ -42,7 +46,7 @@ const RestaurantDetail = () => {
 
     // Función para formatear horarios
     const formatSchedule = (horarios) => {
-        const days = {
+        const daysInSpanish = {
             lunes: 'Lunes',
             martes: 'Martes',
             miercoles: 'Miércoles',
@@ -52,10 +56,18 @@ const RestaurantDetail = () => {
             domingo: 'Domingo'
         };
 
-        return Object.entries(horarios).map(([day, hours]) => ({
-            day: days[day],
-            hours: hours
-        }));
+        if (typeof horarios === 'object' && horarios !== null) {
+            return Object.entries(horarios).map(([day, hours]) => ({
+                day: daysInSpanish[day] || day,
+                hours: hours
+            }));
+        }
+
+        // Si es un string, devolver un formato genérico
+        return [{
+            day: 'Horarios',
+            hours: horarios || 'Consultar horarios'
+        }];
     };
 
     // Funciones para la galería
@@ -216,6 +228,7 @@ const RestaurantDetail = () => {
                                                 <div key={index} className="social-item">
                                                     {social.type === 'facebook' && <FaFacebook className="social-icon facebook" />}
                                                     {social.type === 'instagram' && <FaInstagram className="social-icon instagram" />}
+                                                    {social.type === 'tiktok' && <FaInstagram className="social-icon tiktok" />}
                                                     <span>{social.url}</span>
                                                 </div>
                                             ))}
