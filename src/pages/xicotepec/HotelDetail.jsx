@@ -277,8 +277,7 @@ const HotelDetail = () => {
                             {socialNetworks.length > 0 && (
                                 <div className="social-networks">
                                     <h5>Redes Sociales</h5>
-                                    <div className="social-list">
-                                        {socialNetworks.map((network, index) => (
+                                    <div className="social-list">                                        {socialNetworks.map((network, index) => (
                                             <a
                                                 key={index}
                                                 href={network.url}
@@ -289,7 +288,7 @@ const HotelDetail = () => {
                                             >
                                                 <network.icon className="social-icon" />
                                                 <span className="social-text">
-                                                    <strong>{network.name}:</strong> {network.handle}
+                                                    {network.name}
                                                 </span>
                                             </a>
                                         ))}

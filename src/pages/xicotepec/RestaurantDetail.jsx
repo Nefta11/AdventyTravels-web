@@ -18,9 +18,7 @@ const RestaurantDetail = () => {
             setRestaurant(foundRestaurant);
         }
         setLoading(false);
-    }, [slug]);
-
-    // Función para parsear redes sociales
+    }, [slug]);    // Función para parsear redes sociales
     const parseSocialNetworks = (redes) => {
         if (!redes || redes.length === 0) return [];
 
@@ -42,6 +40,35 @@ const RestaurantDetail = () => {
         }
 
         return [];
+    };
+
+    // Función para generar URLs de redes sociales
+    const getSocialNetworkUrl = (social) => {
+        const cleanUrl = social.url.trim();
+        
+        // Si ya es una URL completa, devolverla tal como está
+        if (cleanUrl.startsWith('http://') || cleanUrl.startsWith('https://')) {
+            return cleanUrl;
+        }
+        
+        // Generar URLs basadas en el tipo
+        switch (social.type) {
+            case 'facebook':
+                // Si ya tiene facebook.com, usarlo; sino, construir la URL
+                if (cleanUrl.includes('facebook.com')) {
+                    return cleanUrl.startsWith('http') ? cleanUrl : `https://${cleanUrl}`;
+                }
+                return `https://www.facebook.com/${cleanUrl.replace('@', '')}`;
+            
+            case 'instagram':
+                return `https://www.instagram.com/${cleanUrl.replace('@', '')}`;
+            
+            case 'tiktok':
+                return `https://www.tiktok.com/${cleanUrl.replace('@', '')}`;
+            
+            default:
+                return '#';
+        }
     };
 
     // Función para formatear horarios
@@ -220,17 +247,24 @@ const RestaurantDetail = () => {
                                     <div className="contact-item">
                                         <FaPhone className="contact-icon" />
                                         <span>{restaurant.telefono}</span>
-                                    </div>
-
-                                    {socialNetworks.length > 0 && (
-                                        <div className="social-networks">
+                                    </div>                                    {socialNetworks.length > 0 && (                                        <div className="social-networks">
                                             {socialNetworks.map((social, index) => (
-                                                <div key={index} className="social-item">
+                                                <a 
+                                                    key={index} 
+                                                    href={getSocialNetworkUrl(social)} 
+                                                    target="_blank" 
+                                                    rel="noopener noreferrer" 
+                                                    className="social-item"
+                                                >
                                                     {social.type === 'facebook' && <FaFacebook className="social-icon facebook" />}
                                                     {social.type === 'instagram' && <FaInstagram className="social-icon instagram" />}
                                                     {social.type === 'tiktok' && <FaInstagram className="social-icon tiktok" />}
-                                                    <span>{social.url}</span>
-                                                </div>
+                                                    <span>
+                                                        {social.type === 'facebook' && 'Facebook'}
+                                                        {social.type === 'instagram' && 'Instagram'}
+                                                        {social.type === 'tiktok' && 'TikTok'}
+                                                    </span>
+                                                </a>
                                             ))}
                                         </div>
                                     )}
