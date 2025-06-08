@@ -49,9 +49,7 @@ const HotelDetail = () => {
         if (hotel.whatsapp) {
             window.open(`https://wa.me/${hotel.whatsapp.replace(/\D/g, '')}`, '_blank');
         }
-    };
-
-    // Función para parsear redes sociales
+    };    // Función para parsear redes sociales
     const parseSocialNetworks = () => {
         const networks = [];
 
@@ -66,21 +64,57 @@ const HotelDetail = () => {
         }
 
         if (hotel.redes_sociales) {
-            // Parsear el string "Facebook: hotelbugambilias. Instagram: hotelbugambilias"
-            const socialText = hotel.redes_sociales;
-
-            if (socialText.includes('Facebook:')) {
-                const facebookMatch = socialText.match(/Facebook:\s*([^.]+)/);
-                if (facebookMatch) {
-                    networks.push({
-                        name: 'Facebook',
-                        handle: facebookMatch[1].trim(),
-                        url: `https://facebook.com/${facebookMatch[1].trim()}`,
-                        icon: FaFacebook,
-                        color: '#1877F2'
-                    });
-                }
+            let socialItems = [];
+            
+            // Manejar tanto arrays como strings
+            if (Array.isArray(hotel.redes_sociales)) {
+                socialItems = hotel.redes_sociales;
+            } else {
+                // Si es string, dividir por punto o coma
+                socialItems = hotel.redes_sociales.split(/[.,]/).map(item => item.trim()).filter(item => item);
             }
+
+            // Procesar cada elemento
+            socialItems.forEach(socialText => {
+                if (socialText.includes('Facebook:')) {
+                    const facebookMatch = socialText.match(/Facebook:\s*(.+)/);
+                    if (facebookMatch) {
+                        networks.push({
+                            name: 'Facebook',
+                            handle: facebookMatch[1].trim(),
+                            url: `https://facebook.com/${facebookMatch[1].trim()}`,
+                            icon: FaFacebook,
+                            color: '#1877F2'
+                        });
+                    }
+                }
+
+                if (socialText.includes('Instagram:')) {
+                    const instagramMatch = socialText.match(/Instagram:\s*(.+)/);
+                    if (instagramMatch) {
+                        networks.push({
+                            name: 'Instagram',
+                            handle: instagramMatch[1].trim(),
+                            url: `https://instagram.com/${instagramMatch[1].trim()}`,
+                            icon: FaInstagram,
+                            color: '#E4405F'
+                        });
+                    }
+                }
+
+                if (socialText.includes('Twitter:')) {
+                    const twitterMatch = socialText.match(/Twitter:\s*(.+)/);
+                    if (twitterMatch) {
+                        networks.push({
+                            name: 'Twitter',
+                            handle: twitterMatch[1].trim(),
+                            url: `https://twitter.com/${twitterMatch[1].trim()}`,
+                            icon: FaGlobe, // Usando FaGlobe ya que no tenemos FaTwitter importado
+                            color: '#1DA1F2'
+                        });
+                    }
+                }
+            });
         }
 
         return networks;
@@ -168,22 +202,7 @@ const HotelDetail = () => {
                                 <p><strong>{hotel.habitaciones}</strong> habitaciones: {hotel.tipos_habitacion?.join(', ')}</p>
                                 <p><strong>Capacidad máxima:</strong> {hotel.capacidad_maxima} personas</p>
                             </div>
-                        </section>
-
-                        {/* Información de reserva */}
-                        <section className="hotel-detail-section">
-                            <h3><FaClock /> Horarios</h3>
-                            <div className="schedule-info">
-                                <div className="schedule-item">
-                                    <strong>Check-in:</strong> {hotel.checkIn || 'Consultar'}
-                                </div>
-                                <div className="schedule-item">
-                                    <strong>Check-out:</strong> {hotel.checkOut || 'Consultar'}
-                                </div>
-                            </div>
-                        </section>
-
-                        {/* Restricciones */}
+                        </section>                        {/* Restricciones */}
                         {hotel.restricciones && (
                             <section className="hotel-detail-section hotel-detail-restrictions">
                                 <h3><FaExclamationTriangle /> Políticas</h3>
@@ -198,10 +217,21 @@ const HotelDetail = () => {
                                 <p>{hotel.experiencias_turisticas}</p>
                             </section>
                         )}
-                    </div>
-
-                    {/* Columna derecha - Métodos de pago, Imagen, contacto */}
+                    </div>                    {/* Columna derecha - Métodos de pago, Imagen, contacto */}
                     <div className="hotel-detail-right">
+                        {/* Horarios */}
+                        <div className="hotel-detail-schedule-card">
+                            <h4><FaClock /> Horarios</h4>
+                            <div className="schedule-info">
+                                <div className="schedule-item">
+                                    <strong>Check-in:</strong> {hotel.checkIn || 'Consultar'}
+                                </div>
+                                <div className="schedule-item">
+                                    <strong>Check-out:</strong> {hotel.checkOut || 'Consultar'}
+                                </div>
+                            </div>
+                        </div>
+
                         {/* Métodos de pago */}
                         {hotel.metodos_pago && (
                             <div className="hotel-detail-payment-card">
