@@ -53,7 +53,7 @@
 }
 
 /* Main footer styles */
-.footer {
+.adventy-footer {
     background-color: var(--color4);
     color: var(--color1);
     padding: 60px 0 20px;
@@ -62,7 +62,7 @@
 }
 
 /* Wave decoration at the top */
-.footer-wave {
+.adventy-footer-wave {
     position: absolute;
     top: 0;
     left: 0;
@@ -74,7 +74,7 @@
 }
 
 /* Footer container */
-.footer-container {
+.adventy-footer-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
@@ -85,17 +85,17 @@
 }
 
 /* Footer sections */
-.footer-section {
+.adventy-footer-section {
     padding: 0 15px;
     animation: fadeIn 0.5s ease forwards;
 }
 
 /* Logo section */
-.footer-logo-section {
+.adventy-footer-logo-section {
     position: relative;
 }
 
-.footer-brand {
+.adventy-footer-brand {
     color: var(--color3);
     font-size: 28px;
     font-weight: bold;
@@ -105,12 +105,12 @@
     position: relative;
 }
 
-.footer-reg {
+.adventy-footer-reg {
     font-size: 12px;
     vertical-align: super;
 }
 
-.footer-slogan {
+.adventy-footer-slogan {
     font-size: 15px;
     color: var(--color2);
     margin: 8px 0 25px;
@@ -118,7 +118,7 @@
     position: relative;
 }
 
-.footer-slogan::after {
+.adventy-footer-slogan::after {
     content: '';
     position: absolute;
     bottom: -12px;
@@ -129,13 +129,13 @@
 }
 
 /* Social icons */
-.social-icons {
+.adventy-footer-social-icons {
     display: flex;
     gap: 15px;
     margin-top: 20px;
 }
 
-.social-icon {
+.adventy-footer-social-icon {
     position: relative;
     width: 40px;
     height: 40px;
@@ -151,7 +151,7 @@
     text-decoration: none;
 }
 
-.social-icon::before {
+.adventy-footer-social-icon::before {
     content: '';
     position: absolute;
     top: 0;
@@ -164,35 +164,35 @@
     transition: transform 0.5s ease;
 }
 
-.social-icon:hover::before {
+.adventy-footer-social-icon:hover::before {
     transform: scale(1);
 }
 
-.social-hovered {
+.adventy-footer-social-hovered {
     transform: translateY(-5px);
 }
 
-.instagram:hover {
+.adventy-footer-instagram:hover {
     background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
     color: white;
 }
 
-.facebook:hover {
+.adventy-footer-facebook:hover {
     background-color: #1877f2;
     color: white;
 }
 
-.whatsapp:hover {
+.adventy-footer-whatsapp:hover {
     background-color: #25D366;
     color: white;
 }
 
-.tiktok:hover {
+.adventy-footer-tiktok:hover {
     background: linear-gradient(90deg, #25F4EE, #FE2C55, #000000);
     color: white;
 }
 
-.social-tooltip {
+.adventy-footer-social-tooltip {
     position: absolute;
     top: -30px;
     left: 50%;
@@ -208,7 +208,7 @@
     white-space: nowrap;
 }
 
-.social-tooltip::after {
+.adventy-footer-social-tooltip::after {
     content: '';
     position: absolute;
     top: 100%;
@@ -219,14 +219,14 @@
     border-color: var(--color4) transparent transparent transparent;
 }
 
-.social-icon:hover .social-tooltip {
+.adventy-footer-social-icon:hover .adventy-footer-social-tooltip {
     opacity: 1;
     visibility: visible;
     top: -35px;
 }
 
 /* Footer titles */
-.footer-title {
+.adventy-footer-title {
     color: var(--color2);
     font-size: 18px;
     margin: 0 0 20px;
@@ -235,7 +235,7 @@
     font-weight: 600;
 }
 
-.footer-title::after {
+.adventy-footer-title::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -246,29 +246,29 @@
 }
 
 /* Contact section */
-.footer-contact {
+.adventy-footer-contact {
     animation-delay: 0.1s;
 }
 
-.contact-item {
+.adventy-footer-contact-item {
     display: flex;
     align-items: flex-start;
     margin-bottom: 15px;
     transition: all 0.3s ease;
 }
 
-.contact-item:hover {
+.adventy-footer-contact-item:hover {
     transform: translateX(5px);
 }
 
-.contact-icon {
+.adventy-footer-contact-icon {
     color: var(--color3);
     font-size: 18px;
     margin-right: 15px;
     margin-top: 2px;
 }
 
-.contact-item p {
+.adventy-footer-contact-item p {
     margin: 0;
     font-size: 15px;
     line-height: 1.5;
@@ -276,17 +276,17 @@
 }
 
 /* Links sections */
-.footer-links {
+.adventy-footer-links {
     animation-delay: 0.2s;
 }
 
-.footer-links ul {
+.adventy-footer-links ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.footer-links ul li {
+.adventy-footer-links ul li {
     position: relative;
     padding: 8px 0;
     display: flex;
@@ -296,32 +296,32 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.footer-links ul li:last-child {
+.adventy-footer-links ul li:last-child {
     border-bottom: none;
 }
 
-.footer-links ul li:hover {
+.adventy-footer-links ul li:hover {
     color: var(--color3);
     transform: translateX(5px);
 }
 
-.link-icon {
+.adventy-footer-link-icon {
     color: var(--color2);
     font-size: 14px;
     margin-right: 10px;
     transition: all 0.3s ease;
 }
 
-.footer-links ul li:hover .link-icon {
+.adventy-footer-links ul li:hover .adventy-footer-link-icon {
     color: var(--color3);
 }
 
-.footer-links ul li span {
+.adventy-footer-links ul li span {
     flex: 1;
     font-size: 15px;
 }
 
-.arrow-icon {
+.adventy-footer-arrow-icon {
     font-size: 12px;
     opacity: 0;
     transform: translateX(-10px);
@@ -329,20 +329,20 @@
     color: var(--color3);
 }
 
-.footer-links ul li:hover .arrow-icon {
+.adventy-footer-links ul li:hover .adventy-footer-arrow-icon {
     opacity: 1;
     transform: translateX(0);
 }
 
 /* Footer bottom */
-.footer-bottom {
+.adventy-footer-bottom {
     margin-top: 40px;
     text-align: center;
     padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.footer-copyright p {
+.adventy-footer-copyright p {
     margin: 0;
     font-size: 14px;
     color: rgba(255, 255, 255, 0.7);
@@ -350,80 +350,80 @@
 
 /* Responsive Styles */
 @media (max-width: 800px) {
-    .footer {
+    .adventy-footer {
         padding: 50px 0 20px;
     }
 
-    .footer-container {
+    .adventy-footer-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 40px 30px;
     }
 
-    .footer-logo-section {
+    .adventy-footer-logo-section {
         grid-column: 1 / -1;
         text-align: center;
     }
 
-    .footer-slogan::after {
+    .adventy-footer-slogan::after {
         left: 50%;
         transform: translateX(-50%);
     }
 
-    .social-icons {
+    .adventy-footer-social-icons {
         justify-content: center;
     }
 
-    .footer-title::after {
+    .adventy-footer-title::after {
         left: 0;
     }
 }
 
 @media (max-width: 480px) {
-    .footer {
+    .adventy-footer {
         padding: 40px 0 20px;
     }
 
-    .footer-container {
+    .adventy-footer-container {
         grid-template-columns: 1fr;
         text-align: center;
     }
 
-    .social-icons {
+    .adventy-footer-social-icons {
         justify-content: center;
     }
 
-    .social-icon {
+    .adventy-footer-social-icon {
         width: 36px;
         height: 36px;
         font-size: 18px;
     }
 
-    .footer-title::after {
+    .adventy-footer-title::after {
         left: 50%;
         transform: translateX(-50%);
     }
 
-    .contact-item {
+    .adventy-footer-contact-item {
         flex-direction: column;
         align-items: center;
     }
 
-    .contact-icon {
+    .adventy-footer-contact-icon {
         margin-right: 0;
         margin-bottom: 5px;
     }
 
-    .footer-links ul li {
+    .adventy-footer-links ul li {
         flex-direction: column;
         gap: 5px;
     }
 
-    .link-icon,
-    .arrow-icon {
+    .adventy-footer-link-icon,
+    .adventy-footer-arrow-icon {
         display: none;
     }
 
-    .footer-links ul li span {
+    .adventy-footer-links ul li span {
         font-size: 16px;
     }
 }

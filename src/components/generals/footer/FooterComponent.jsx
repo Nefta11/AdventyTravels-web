@@ -20,132 +20,130 @@ const FooterComponent = () => {
 
     const handleModalClose = () => {
         setShowModal(false);
-    };
+    };    return (
+        <footer className="adventy-footer">
+            <div className="adventy-footer-wave"></div>
 
-    return (
-        <footer className="footer">
-            <div className="footer-wave"></div>
+            <div className="adventy-footer-container">
+                <div className="adventy-footer-section adventy-footer-logo-section">
+                    <h2 className="adventy-footer-brand">ADVENTY TRAVELS<span className="adventy-footer-reg">®</span></h2>
+                    <p className="adventy-footer-slogan">Agencia de viajes</p>
 
-            <div className="footer-container">
-                <div className="footer-section footer-logo-section">
-                    <h2 className="footer-brand">ADVENTY TRAVELS<span className="footer-reg">®</span></h2>
-                    <p className="footer-slogan">Agencia de viajes</p>
-
-                    <div className="social-icons">
+                    <div className="adventy-footer-social-icons">
                         <a
                             href="https://www.instagram.com/adventytravels/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={`social-icon instagram ${hoveredSocial === 'instagram' ? 'social-hovered' : ''}`}
+                            className={`adventy-footer-social-icon adventy-footer-instagram ${hoveredSocial === 'instagram' ? 'adventy-footer-social-hovered' : ''}`}
                             onMouseEnter={() => setHoveredSocial('instagram')}
                             onMouseLeave={() => setHoveredSocial(null)}
                         >
                             <FaInstagram />
-                            <span className="social-tooltip">Instagram</span>
+                            <span className="adventy-footer-social-tooltip">Instagram</span>
                         </a>
                         <a
                             href="https://www.facebook.com/adventytravels?locale=es_LA"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={`social-icon facebook ${hoveredSocial === 'facebook' ? 'social-hovered' : ''}`}
+                            className={`adventy-footer-social-icon adventy-footer-facebook ${hoveredSocial === 'facebook' ? 'adventy-footer-social-hovered' : ''}`}
                             onMouseEnter={() => setHoveredSocial('facebook')}
                             onMouseLeave={() => setHoveredSocial(null)}
                         >
                             <FaFacebook />
-                            <span className="social-tooltip">Facebook</span>
+                            <span className="adventy-footer-social-tooltip">Facebook</span>
                         </a>
                         <a
                             href="whatsapp://send?phone=5217716075321"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={`social-icon whatsapp ${hoveredSocial === 'whatsapp' ? 'social-hovered' : ''}`}
+                            className={`adventy-footer-social-icon adventy-footer-whatsapp ${hoveredSocial === 'whatsapp' ? 'adventy-footer-social-hovered' : ''}`}
                             onMouseEnter={() => setHoveredSocial('whatsapp')}
                             onMouseLeave={() => setHoveredSocial(null)}
                         >
                             <FaWhatsapp />
-                            <span className="social-tooltip">WhatsApp</span>
+                            <span className="adventy-footer-social-tooltip">WhatsApp</span>
                         </a>
                         <a
                             href="https://www.tiktok.com/@adventytravels?_t=ZM-8ttXPrhii7p&_r=1"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={`social-icon tiktok ${hoveredSocial === 'tiktok' ? 'social-hovered' : ''}`}
+                            className={`adventy-footer-social-icon adventy-footer-tiktok ${hoveredSocial === 'tiktok' ? 'adventy-footer-social-hovered' : ''}`}
                             onMouseEnter={() => setHoveredSocial('tiktok')}
                             onMouseLeave={() => setHoveredSocial(null)}
                         >
                             <FaTiktok />
-                            <span className="social-tooltip">TikTok</span>
+                            <span className="adventy-footer-social-tooltip">TikTok</span>
                         </a>
                     </div>
                 </div>
 
-                <div className="footer-section footer-contact">
-                    <h3 className="footer-title">Contacto</h3>
-                    <div className="contact-item">
-                        <div className="contact-icon">
+                <div className="adventy-footer-section adventy-footer-contact">
+                    <h3 className="adventy-footer-title">Contacto</h3>
+                    <div className="adventy-footer-contact-item">
+                        <div className="adventy-footer-contact-icon">
                             <FaPhone />
                         </div>
                         <p>(+52) 776 607 5321</p>
                     </div>
-                    <div className="contact-item">
-                        <div className="contact-icon">
+                    <div className="adventy-footer-contact-item">
+                        <div className="adventy-footer-contact-icon">
                             <FaEnvelope />
                         </div>
                         <p>Administracion@adventytravels.com</p>
                     </div>
-                    <div className="contact-item">
-                        <div className="contact-icon">
+                    <div className="adventy-footer-contact-item">
+                        <div className="adventy-footer-contact-icon">
                             <FaMapMarkerAlt />
                         </div>
                         <p>Av.5 de Mayo Local 5PA, Xicotepec de Juárez, Pue.</p>
                     </div>
                 </div>
 
-                <div className="footer-section footer-links">
-                    <h3 className="footer-title">Enlaces</h3>
+                <div className="adventy-footer-section adventy-footer-links">
+                    <h3 className="adventy-footer-title">Enlaces</h3>
                     <ul>
                         <li onClick={() => window.location.href = '/nosotros'} style={{ cursor: 'pointer' }}>
-                            <FaInfo className="link-icon" />
+                            <FaInfo className="adventy-footer-link-icon" />
                             <span>{t('footer.aboutUs')}</span>
-                            <FaArrowRight className="arrow-icon" />
+                            <FaArrowRight className="adventy-footer-arrow-icon" />
                         </li>
                         <li onClick={handleModalOpen}>
-                            <FaShieldAlt className="link-icon" />
+                            <FaShieldAlt className="adventy-footer-link-icon" />
                             <span>{t('footer.privacyPolicy')}</span>
-                            <FaArrowRight className="arrow-icon" />
+                            <FaArrowRight className="adventy-footer-arrow-icon" />
                         </li>
                         <li onClick={() => window.location.href = '/AdventyPay'} style={{ cursor: 'pointer' }}>
-                            <FaCreditCard className="link-icon" />
+                            <FaCreditCard className="adventy-footer-link-icon" />
                             <span>{t('footer.financing')}</span>
-                            <FaArrowRight className="arrow-icon" />
+                            <FaArrowRight className="adventy-footer-arrow-icon" />
                         </li>
                     </ul>
                 </div>
 
-                <div className="footer-section footer-links">
-                    <h3 className="footer-title">Servicios</h3>
+                <div className="adventy-footer-section adventy-footer-links">
+                    <h3 className="adventy-footer-title">Servicios</h3>
                     <ul>
                         <li>
-                            <FaPassport className="link-icon" />
+                            <FaPassport className="adventy-footer-link-icon" />
                             <span>{t('footer.visas')}</span>
-                            <FaArrowRight className="arrow-icon" />
+                            <FaArrowRight className="adventy-footer-arrow-icon" />
                         </li>
                         <li>
-                            <FaHeadset className="link-icon" />
+                            <FaHeadset className="adventy-footer-link-icon" />
                             <span>{t('footer.customerService')}</span>
-                            <FaArrowRight className="arrow-icon" />
+                            <FaArrowRight className="adventy-footer-arrow-icon" />
                         </li>
                         <li onClick={() => window.location.href = '/blog'} style={{ cursor: 'pointer' }}>
-                            <FaNewspaper className="link-icon" />
+                            <FaNewspaper className="adventy-footer-link-icon" />
                             <span>{t('footer.blog')}</span>
-                            <FaArrowRight className="arrow-icon" />
+                            <FaArrowRight className="adventy-footer-arrow-icon" />
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <div className="footer-bottom">
-                <div className="footer-copyright">
+            <div className="adventy-footer-bottom">
+                <div className="adventy-footer-copyright">
                     <p>© {new Date().getFullYear()} Adventy Travels. Todos los derechos reservados.</p>
                 </div>
             </div>
