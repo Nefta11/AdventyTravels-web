@@ -1,39 +1,40 @@
+// HotelDetail.jsx
 import { useParams, useNavigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
 import {
-    FaArrowLeft,
     FaStar,
     FaMapMarkerAlt,
     FaPhone,
     FaWhatsapp,
     FaEnvelope,
     FaGlobe,
-    FaInstagram,
+    FaArrowLeft,
     FaClock,
-    FaUsers,
     FaBed,
-    FaExclamationTriangle, FaChevronLeft,
-    FaChevronRight,
-    FaTimes,
-    FaCamera
+    FaCreditCard,
+    FaExclamationTriangle,
+    FaInstagram,
+    FaFacebook,
+    FaCheckCircle,
+    FaInfoCircle
 } from 'react-icons/fa';
-import './HotelDetail.css';
 import { getHotelBySlug } from '../../components/xicotepec/hotels/hotelsData';
+import './HotelDetail.css';
 
 const HotelDetail = () => {
     const { slug } = useParams();
     const navigate = useNavigate();
-    const [hotel, setHotel] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    const [showGalleryModal, setShowGalleryModal] = useState(false);
+    const hotel = getHotelBySlug(slug);
 
-    useEffect(() => {
-        // ✅ Usamos la función centralizada para obtener el hotel
-        const foundHotel = getHotelBySlug(slug);
-        setHotel(foundHotel);
-        setLoading(false);
-    }, [slug]);
+    if (!hotel) {
+        return (
+            <div className="hotel-detail-error">
+                <h2>Hotel no encontrado</h2>
+                <button onClick={() => navigate('/hotels')} className="hotel-detail-back-btn">
+                    Volver a hoteles
+                </button>
+            </div>
+        );
+    }
 
     const renderStars = (stars) => {
         return [...Array(5)].map((_, index) => (
@@ -44,295 +45,256 @@ const HotelDetail = () => {
         ));
     };
 
-    const nextImage = () => {
-        if (hotel.images) {
-            setCurrentImageIndex((prev) => (prev + 1) % hotel.images.length);
+    const handleWhatsAppClick = () => {
+        if (hotel.whatsapp) {
+            window.open(`https://wa.me/${hotel.whatsapp.replace(/\D/g, '')}`, '_blank');
         }
     };
 
-    const prevImage = () => {
-        if (hotel.images) {
-            setCurrentImageIndex((prev) => (prev - 1 + hotel.images.length) % hotel.images.length);
+    // Función para parsear redes sociales
+    const parseSocialNetworks = () => {
+        const networks = [];
+
+        if (hotel.instagram) {
+            networks.push({
+                name: 'Instagram',
+                handle: hotel.instagram,
+                url: `https://instagram.com/${hotel.instagram.replace('@', '')}`,
+                icon: FaInstagram,
+                color: '#E4405F'
+            });
         }
+
+        if (hotel.redes_sociales) {
+            // Parsear el string "Facebook: hotelbugambilias. Instagram: hotelbugambilias"
+            const socialText = hotel.redes_sociales;
+
+            if (socialText.includes('Facebook:')) {
+                const facebookMatch = socialText.match(/Facebook:\s*([^.]+)/);
+                if (facebookMatch) {
+                    networks.push({
+                        name: 'Facebook',
+                        handle: facebookMatch[1].trim(),
+                        url: `https://facebook.com/${facebookMatch[1].trim()}`,
+                        icon: FaFacebook,
+                        color: '#1877F2'
+                    });
+                }
+            }
+        }
+
+        return networks;
     };
 
-    const openGalleryModal = () => {
-        setShowGalleryModal(true);
-    };
+    const socialNetworks = parseSocialNetworks();
 
-    const closeGalleryModal = () => {
-        setShowGalleryModal(false);
-    };
+    return (
+        <div className="hotel-detail-wrapper">
+            {/* Botón de regreso */}
+            <button
+                onClick={() => navigate(-1)}
+                className="hotel-detail-back-button"
+            >
+                <FaArrowLeft /> Regresar
+            </button>
 
-    if (loading) {
-        return (
-            <div className="hotel-detail-loading">
-                <div className="hotel-detail-spinner"></div>
-                <p>Cargando información del hotel...</p>
-            </div>
-        );
-    }
-
-    if (!hotel) {
-        return (
-            <div className="hotel-detail-not-found">
-                <h2>Hotel no encontrado</h2>
-                <p>Lo sentimos, no pudimos encontrar el hotel que buscas.</p>
-                <button onClick={() => navigate('/hotels')} className="hotel-detail-back-btn">
-                    Volver a Hoteles
-                </button>
-            </div>
-        );
-    } return (
-        <div className="hotel-detail-page">
-            {/* Modern Header with Gallery */}
-            <div className="hotel-header">
-                <button onClick={() => navigate(-1)} className="back-button">
-                    <FaArrowLeft />
-                </button>
-
-                <div className="gallery-container">
-                    <img
-                        src={hotel.images ? hotel.images[currentImageIndex] : hotel.image}
-                        alt={hotel.name}
-                        className="main-image"
-                    />
-
-                    {hotel.images && hotel.images.length > 1 && (
-                        <>
-                            <button onClick={prevImage} className="gallery-nav prev">
-                                <FaChevronLeft />
-                            </button>
-                            <button onClick={nextImage} className="gallery-nav next">
-                                <FaChevronRight />
-                            </button>
-                        </>
-                    )}
-
-                    <button onClick={openGalleryModal} className="gallery-expand">
-                        <FaCamera />
-                    </button>
-
-                    <div className="image-counter">
-                        {currentImageIndex + 1} / {hotel.images ? hotel.images.length : 1}
-                    </div>
-
-                    {/* Hotel Info Overlay */}
-                    <div className="hotel-info-overlay">
-                        <div className="hotel-category-badge">{hotel.category}</div>
-                        <h1 className="hotel-title-overlay">{hotel.name}</h1>
-                        <div className="hotel-location-overlay">
-                            <FaMapMarkerAlt />
-                            <span>{hotel.location}</span>
-                        </div>
-                        <div className="hotel-rating-overlay">
-                            <div className="rating-stars-overlay">
-                                {renderStars(hotel.stars)}
+            {/* Hero Section */}
+            <section className="hotel-detail-hero">
+                <div
+                    className="hotel-detail-hero-image"
+                    style={{ backgroundImage: `url(${hotel.image})` }}
+                >
+                    <div className="hotel-detail-hero-overlay">
+                        <div className="hotel-detail-hero-content">
+                            <div className="hero-top-info">
+                                <div className="hero-category">{hotel.category}</div>
+                                <div className="hero-price">{hotel.price}</div>
                             </div>
-                            <span className="rating-text-overlay">{hotel.rating}/10</span>
-                        </div>
-                        <div className="hotel-price-overlay">{hotel.price}</div>
-                    </div>
-                </div>
-
-                {/* Thumbnail Strip */}
-                {hotel.images && hotel.images.length > 1 && (
-                    <div className="thumbnail-strip">
-                        {hotel.images.map((img, index) => (
-                            <div
-                                key={index}
-                                className={`thumbnail ${index === currentImageIndex ? 'active' : ''}`}
-                                onClick={() => setCurrentImageIndex(index)}
-                            >
-                                <img src={img} alt={`${hotel.name} ${index + 1}`} />
-                            </div>
-                        ))}
-                    </div>
-                )}
-
-                {/* Quick Info Cards */}
-                <div className="quick-info">
-                    <div className="quick-info-card">
-                        <div className="quick-info-icon"><FaBed /></div>
-                        <div className="quick-info-title">Habitaciones</div>
-                        <div className="quick-info-value">{hotel.habitaciones}</div>
-                    </div>
-                    <div className="quick-info-card">
-                        <div className="quick-info-icon"><FaUsers /></div>
-                        <div className="quick-info-title">Capacidad</div>
-                        <div className="quick-info-value">{hotel.capacidad_maxima} personas</div>
-                    </div>
-                    <div className="quick-info-card">
-                        <div className="quick-info-icon"><FaClock /></div>
-                        <div className="quick-info-title">Check-in</div>
-                        <div className="quick-info-value">{hotel.checkIn}</div>
-                    </div>
-                    <div className="quick-info-card">
-                        <div className="quick-info-icon"><FaClock /></div>
-                        <div className="quick-info-title">Check-out</div>
-                        <div className="quick-info-value">{hotel.checkOut}</div>
-                    </div>
-                </div>
-            </div>            {/* Main Content Grid */}
-            <div className="content-grid">
-                {/* Primary Content */}
-                <div className="primary-content">
-                    {/* Description */}
-                    <div className="content-section">
-                        <h2 className="section-title">Acerca del Hotel</h2>
-                        <p className="description-text">{hotel.fullDescription}</p>
-                    </div>
-
-                    {/* Amenities */}
-                    <div className="content-section">
-                        <h2 className="section-title">Amenidades</h2>
-                        <div className="amenities-grid">
-                            {hotel.amenities.map((amenity, idx) => (
-                                <div key={idx} className="amenity-item">
-                                    <amenity.icon className="amenity-icon" />
-                                    <span className="amenity-text">{amenity.name}</span>
+                            <h1 className="hotel-detail-title">{hotel.name}</h1>
+                            <div className="hero-stars-location">
+                                <div className="hero-stars">
+                                    {renderStars(hotel.stars)}
+                                    {hotel.rating && (
+                                        <span className="hero-rating">({hotel.rating}/10)</span>
+                                    )}
                                 </div>
-                            ))}
+                                <div className="hero-location">
+                                    <FaMapMarkerAlt />
+                                    <span>{hotel.location}</span>
+                                </div>
+                            </div>
+                            <p className="hotel-detail-subtitle">{hotel.shortDescription}</p>
                         </div>
                     </div>
+                </div>
+            </section>
 
-                    {/* Room Features and Services */}
-                    <div className="content-section">
-                        <h2 className="section-title">Habitaciones y Servicios</h2>
-                        <div className="room-types-section">
-                            <h4>Características de las Habitaciones</h4>
-                            <div className="features-list">
-                                {hotel.roomFeatures.map((feature, idx) => (
-                                    <div key={idx} className="feature-item">{feature}</div>
-                                ))}
+            {/* Contenido principal */}
+            <div className="hotel-detail-container">
+                <div className="hotel-detail-content">
+                    {/* Columna izquierda - Información */}
+                    <div className="hotel-detail-left">
+                        {/* Descripción */}
+                        <section className="hotel-detail-section">
+                            <h3><FaInfoCircle /> Descripción</h3>
+                            <p>{hotel.fullDescription}</p>
+                        </section>
+
+                        {/* Dirección */}
+                        <section className="hotel-detail-section">
+                            <h3><FaMapMarkerAlt /> Dirección</h3>
+                            <p>{hotel.location}</p>
+                        </section>
+
+                        {/* Servicios */}
+                        {hotel.amenities && hotel.amenities.length > 0 && (
+                            <section className="hotel-detail-section">
+                                <h3><FaCheckCircle /> Servicios</h3>
+                                <div className="hotel-detail-services-grid">
+                                    {hotel.amenities.map((amenity, index) => (
+                                        <div key={index} className="service-item">
+                                            <amenity.icon />
+                                            <span>{amenity.name}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </section>
+                        )}
+
+                        {/* Habitaciones */}
+                        <section className="hotel-detail-section">
+                            <h3><FaBed /> Habitaciones</h3>
+                            <div className="room-info">
+                                <p><strong>{hotel.habitaciones}</strong> habitaciones: {hotel.tipos_habitacion?.join(', ')}</p>
+                                <p><strong>Capacidad máxima:</strong> {hotel.capacidad_maxima} personas</p>
                             </div>
-                            {hotel.tipos_habitacion && (
-                                <>
-                                    <h4>Tipos de Habitación</h4>
-                                    <div className="room-types-list">
-                                        {hotel.tipos_habitacion.map((tipo, idx) => (
-                                            <span key={idx} className="room-type-tag">{tipo}</span>
+                        </section>
+
+                        {/* Información de reserva */}
+                        <section className="hotel-detail-section">
+                            <h3><FaClock /> Horarios</h3>
+                            <div className="schedule-info">
+                                <div className="schedule-item">
+                                    <strong>Check-in:</strong> {hotel.checkIn || 'Consultar'}
+                                </div>
+                                <div className="schedule-item">
+                                    <strong>Check-out:</strong> {hotel.checkOut || 'Consultar'}
+                                </div>
+                            </div>
+                        </section>
+
+                        {/* Restricciones */}
+                        {hotel.restricciones && (
+                            <section className="hotel-detail-section hotel-detail-restrictions">
+                                <h3><FaExclamationTriangle /> Políticas</h3>
+                                <p>{hotel.restricciones}</p>
+                            </section>
+                        )}
+
+                        {/* Experiencias turísticas */}
+                        {hotel.experiencias_turisticas && hotel.experiencias_turisticas !== "No" && hotel.experiencias_turisticas !== "No directamente" && (
+                            <section className="hotel-detail-section">
+                                <h3><FaCheckCircle /> Experiencias turísticas</h3>
+                                <p>{hotel.experiencias_turisticas}</p>
+                            </section>
+                        )}
+                    </div>
+
+                    {/* Columna derecha - Métodos de pago, Imagen, contacto */}
+                    <div className="hotel-detail-right">
+                        {/* Métodos de pago */}
+                        {hotel.metodos_pago && (
+                            <div className="hotel-detail-payment-card">
+                                <h4><FaCreditCard /> Métodos de pago</h4>
+                                <div className="payment-methods">
+                                    {hotel.metodos_pago.map((method, index) => (
+                                        <span key={index} className="payment-tag">{method}</span>
+                                    ))}
+                                </div>
+                                {hotel.anticipo_requerido && (
+                                    <p className="payment-note">
+                                        <strong>Anticipo requerido:</strong> {hotel.anticipo_requerido}
+                                    </p>
+                                )}
+                            </div>
+                        )}
+
+                        {/* Galería de imagen */}
+                        <div className="hotel-detail-gallery">
+                            <div
+                                className="gallery-main-image"
+                                style={{ backgroundImage: `url(${hotel.image})` }}
+                            >
+                                <div className="gallery-overlay">
+                                    <div className="gallery-badge">
+                                        <span className="gallery-stars">
+                                            {renderStars(hotel.stars)}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Información de contacto */}
+                        <div className="hotel-detail-contact-card">
+                            <h4>Contacto</h4>
+                            <div className="contact-methods">
+                                {hotel.contact && (
+                                    <a href={`tel:${hotel.contact}`} className="contact-method">
+                                        <FaPhone />
+                                        <span>{hotel.contact}</span>
+                                    </a>
+                                )}
+
+                                {hotel.whatsapp && (
+                                    <button onClick={handleWhatsAppClick} className="contact-method whatsapp">
+                                        <FaWhatsapp />
+                                        <span>WhatsApp</span>
+                                    </button>
+                                )}
+
+                                {hotel.email && (
+                                    <a href={`mailto:${hotel.email}`} className="contact-method">
+                                        <FaEnvelope />
+                                        <span>Email</span>
+                                    </a>
+                                )}
+
+                                {hotel.website && (
+                                    <a href={hotel.website} target="_blank" rel="noopener noreferrer" className="contact-method">
+                                        <FaGlobe />
+                                        <span>Sitio web</span>
+                                    </a>
+                                )}
+                            </div>
+
+                            {/* Redes sociales mejoradas */}
+                            {socialNetworks.length > 0 && (
+                                <div className="social-networks">
+                                    <h5>Redes Sociales</h5>
+                                    <div className="social-list">
+                                        {socialNetworks.map((network, index) => (
+                                            <a
+                                                key={index}
+                                                href={network.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="social-item"
+                                                style={{ '--social-color': network.color }}
+                                            >
+                                                <network.icon className="social-icon" />
+                                                <span className="social-text">
+                                                    <strong>{network.name}:</strong> {network.handle}
+                                                </span>
+                                            </a>
                                         ))}
                                     </div>
-                                </>
-                            )}
-                        </div>
-
-                        <div className="room-types-section">
-                            <h4>Servicios</h4>
-                            <div className="services-list">
-                                {hotel.services.map((service, idx) => (
-                                    <div key={idx} className="service-item">{service}</div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </div>                {/* Sidebar */}
-                <div className="sidebar">
-                    {/* Contact Card */}
-                    <div className="contact-card">
-                        <h3 className="card-title">Contacto</h3>
-                        <div>
-                            {hotel.contact && (
-                                <a href={`tel:${hotel.contact}`} className="contact-item">
-                                    <FaPhone />
-                                    <span>Llamar</span>
-                                </a>
-                            )}
-                            {hotel.whatsapp && (
-                                <a href={`https://wa.me/${hotel.whatsapp.replace(/\D/g, '')}`}
-                                    className="contact-item whatsapp-link"
-                                    target="_blank" rel="noopener noreferrer">
-                                    <FaWhatsapp />
-                                    <span>WhatsApp</span>
-                                </a>
-                            )}
-                            {hotel.email && (
-                                <a href={`mailto:${hotel.email}`} className="contact-item">
-                                    <FaEnvelope />
-                                    <span>Email</span>
-                                </a>
-                            )}
-                            {(hotel.website || hotel.instagram) && (
-                                <a href={hotel.website ? `https://${hotel.website}` : `https://instagram.com/${hotel.instagram?.replace('@', '')}`}
-                                    className="contact-item"
-                                    target="_blank" rel="noopener noreferrer">
-                                    {hotel.website ? <FaGlobe /> : <FaInstagram />}
-                                    <span>{hotel.website ? 'Web' : 'Instagram'}</span>
-                                </a>
-                            )}
-                        </div>
-                    </div>
-
-                    {/* Payment Info Card */}
-                    {hotel.metodos_pago && (
-                        <div className="info-card">
-                            <h3 className="card-title">Pagos</h3>
-                            <div className="payment-methods">
-                                {hotel.metodos_pago.map((metodo, idx) => (
-                                    <span key={idx} className="payment-method">{metodo}</span>
-                                ))}
-                            </div>
-                            {hotel.anticipo_requerido && (
-                                <div className="advance-note">{hotel.anticipo_requerido}</div>
-                            )}
-                        </div>
-                    )}
-
-                    {/* Special Features Card */}
-                    {(hotel.caracteristica_unica || hotel.experiencias_turisticas) && (
-                        <div className="info-card">
-                            <h3 className="card-title">Lo Especial</h3>
-                            {hotel.caracteristica_unica && (
-                                <div className="info-item">
-                                    <FaStar />
-                                    <span>{hotel.caracteristica_unica}</span>
                                 </div>
                             )}
-                            {hotel.experiencias_turisticas && hotel.experiencias_turisticas !== "No" && (
-                                <div className="experiences-text">{hotel.experiencias_turisticas}</div>
-                            )}
-                        </div>
-                    )}                    {/* Restrictions Card */}
-                    {hotel.restricciones && (
-                        <div className="info-card">
-                            <h3 className="card-title">
-                                <FaExclamationTriangle /> Importante
-                            </h3>
-                            <div className="restrictions-text">{hotel.restricciones}</div>
-                        </div>
-                    )}
-                </div>
-            </div>
-
-            {/* Modal Gallery */}
-            {showGalleryModal && hotel.images && (
-                <div className="gallery-modal" onClick={closeGalleryModal}>
-                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                        <button className="modal-close" onClick={closeGalleryModal}>
-                            <FaTimes />
-                        </button>
-                        <img
-                            src={hotel.images[currentImageIndex]}
-                            alt={hotel.name}
-                            className="modal-image"
-                        />
-                        {hotel.images.length > 1 && (
-                            <>
-                                <button onClick={prevImage} className="modal-nav prev">
-                                    <FaChevronLeft />
-                                </button>
-                                <button onClick={nextImage} className="modal-nav next">
-                                    <FaChevronRight />
-                                </button>
-                            </>
-                        )}
-                        <div className="modal-counter">
-                            {currentImageIndex + 1} / {hotel.images.length}
                         </div>
                     </div>
                 </div>
-            )}
+            </div>
         </div>
     );
 };
