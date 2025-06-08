@@ -400,6 +400,50 @@ export const HotelsData = [
         habitaciones: 7,
         caracteristica_unica: "Cabañas en Cafetales y beneficio de café",
         experiencias_turisticas: "No"
+    },
+    {
+        id: 9,
+        slug: "casa-don-laureano",
+        image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=500&h=350&fit=crop",
+        name: "Casa Don Laureano",
+        category: "Hotel Boutique Centro",
+        stars: 4,
+        location: "Plaza de la Constitución No. 116, Colonia Centro",
+        price: "Desde $600 MXN",
+        shortDescription: "Hotel en el corazón del centro de Xicotepec, ideal para explorar caminando",
+        rating: 8.5,
+        fullDescription: "Nuestro hotel fue creado para brindar hospitalidad, descanso y calidez a todos aquellos que visitan nuestro bello Pueblo Mágico de Xicotepec. Contamos con 15 habitaciones confortables y una capacidad de 35 personas ideal para hospedar tanto a familias pequeñas como a grupos grandes que buscan disfrutar de la cultura, la naturaleza y la tranquilidad de la región.",
+        amenities: [
+            { icon: FaWifi, name: "WiFi Gratis" },
+            { icon: FaConciergeBell, name: "Recepción 24h" }
+        ],
+        roomFeatures: [
+            "15 habitaciones confortables",
+            "WiFi en todas las habitaciones",
+            "TV en todas las habitaciones",
+            "Baño privado con agua caliente",
+            "Ventilador",
+            "Ropa de cama y toallas incluidas",
+            "Servicio a la habitación"
+        ],
+        services: [
+            "Recepción 24 horas"
+        ],
+        checkIn: "8:00 am - 10:00 pm",
+        checkOut: "12:00 pm",
+        contact: "7641000548",
+        whatsapp: "+52 764 100 0548",
+        email: "gonricafe7647674036@gmail.com",
+        instagram: "@hotelcasadonlaureano",
+        tipos_habitacion: ["Sencilla", "Doble", "Triple", "Suite", "Matrimonial"],
+        metodos_pago: ["Efectivo", "Transferencia", "Tarjeta bancaria", "Depósito"],
+        anticipo_requerido: "Si",
+        capacidad_maxima: 35,
+        habitaciones: 15,
+        caracteristica_unica: "Nos encontramos en el corazón del centro de Xicotepec, lo que nos convierte en el punto perfecto para quienes desean explorar el pueblo caminando.",
+        experiencias_turisticas: "No",
+        rango_precios: "$600-$1500",
+        precios_especiales_grupos: "Bajo solicitud"
     }
 ];
 
