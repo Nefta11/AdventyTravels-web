@@ -125,150 +125,6 @@
     align-items: stretch;
 }
 
-/* Card de Restaurante */
-.restaurant-card {
-    background: var(--bg-white);
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: var(--shadow-light);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    cursor: pointer;
-    animation: cardFadeIn 0.8s ease forwards;
-    opacity: 0;
-    transform: translateY(30px);
-    border: 2px solid transparent;
-}
-
-.restaurant-card:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.restaurant-card:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.restaurant-card:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-.restaurant-card:nth-child(4) {
-    animation-delay: 0.4s;
-}
-
-.restaurant-card:nth-child(5) {
-    animation-delay: 0.5s;
-}
-
-.restaurant-card:nth-child(6) {
-    animation-delay: 0.6s;
-}
-
-@keyframes cardFadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.restaurant-card:hover {
-    transform: translateY(-12px) scale(1.03);
-    box-shadow: var(--shadow-strong);
-    /* Borde cobre sunset al hacer hover - representa gastronomía típica */
-    border-color: var(--copper-sunset);
-}
-
-/* Imagen del Restaurante - Más compacta */
-.restaurant-image-container {
-    position: relative;
-    height: 180px;
-    overflow: hidden;
-}
-
-.restaurant-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-    filter: brightness(1.05) contrast(1.02);
-}
-
-.restaurant-card:hover .restaurant-image {
-    transform: scale(1.1);
-}
-
-/* Badge de Categoría con estilo cobre sunset - gastronomía típica */
-.restaurant-category-badge {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background: linear-gradient(135deg, var(--copper-sunset), rgba(232, 123, 62, 0.9));
-    color: var(--text-light);
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    box-shadow: 0 2px 8px rgba(232, 123, 62, 0.3);
-}
-
-/* Contenido de la Card - Más compacto */
-.restaurant-content {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-/* Main Info Section - Nombre y precio organizados verticalmente */
-.restaurant-main-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-    margin-bottom: 16px;
-}
-
-.restaurant-name {
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: var(--deep-earth);
-    margin: 0;
-    line-height: 1.2;
-    width: 100%;
-}
-
-/* Precio justo debajo del nombre */
-.restaurant-price {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--antique-gold);
-    text-shadow: 0 1px 3px rgba(212, 175, 55, 0.2);
-    filter: drop-shadow(0 1px 2px rgba(212, 175, 55, 0.3));
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.05));
-    padding: 4px 10px;
-    border-radius: 8px;
-    border: 1px solid rgba(212, 175, 55, 0.2);
-    align-self: flex-start;
-}
-
-/* Cuisine Type con estilo cobre sunset */
-.restaurant-cuisine {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 0.95rem;
-    color: var(--copper-sunset);
-    font-weight: 600;
-}
-
-.cuisine-icon {
-    font-size: 0.9rem;
-    color: var(--copper-sunset);
-}
-
 /* Details Section */
 .restaurant-details {
     display: flex;
@@ -404,14 +260,6 @@
         font-size: 2rem;
     }
 
-    .restaurant-image-container {
-        height: 200px;
-    }
-
-    .restaurant-content {
-        padding: 20px;
-    }
-
     .restaurants-header {
         margin-bottom: 40px;
     }
@@ -421,12 +269,12 @@
         padding: 24px 16px;
         gap: 12px;
     }
-    
+
     .pagination-button {
         padding: 12px 24px;
         font-size: 0.9rem;
     }
-    
+
     .restaurants-count {
         font-size: 0.8rem;
     }
@@ -445,32 +293,6 @@
         font-size: 1.8rem;
     }
 
-    .restaurant-image-container {
-        height: 180px;
-    }
-
-    .restaurant-content {
-        padding: 18px;
-        gap: 12px;
-    }
-
-    .restaurant-name {
-        font-size: 1.2rem;
-    }    .restaurant-main-info {
-        gap: 6px;
-        margin-bottom: 12px;
-    }
-
-    .restaurant-details {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-    }
-
-    .restaurant-card:hover {
-        transform: translateY(-8px) scale(1.02);
-    }
-
     .restaurants-header {
         margin-bottom: 30px;
     }
@@ -479,7 +301,7 @@
         margin-top: 24px;
         padding: 20px 12px;
     }
-    
+
     .pagination-button {
         padding: 10px 20px;
         font-size: 0.85rem;
@@ -493,19 +315,5 @@
 
     .restaurants-main-title {
         font-size: 1.6rem;
-    }
-
-    .restaurant-content {
-        padding: 15px;
-    }
-
-    .restaurant-category-badge {
-        font-size: 0.7rem;
-        padding: 5px 10px;
-    }
-
-    .restaurant-rating {
-        font-size: 0.8rem;
-        padding: 5px 8px;
     }
 }

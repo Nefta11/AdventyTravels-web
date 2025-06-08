@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { FaUtensils } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import { restaurantsData } from './restaurantsData';
+import RestaurantCard from './RestaurantCard';
 import './Restaurants.css';
 
 const Restaurants = () => {
@@ -25,8 +25,8 @@ const Restaurants = () => {
         name: restaurant.nombre_establecimiento,
         category: Array.isArray(restaurant.tipo_comida) ? restaurant.tipo_comida[0] : restaurant.tipo_comida,
         priceRange: restaurant.rango_precios_promedio_persona,
-        specialty: Array.isArray(restaurant.especialidades_casa) 
-            ? restaurant.especialidades_casa.slice(0, 2).join(', ') 
+        specialty: Array.isArray(restaurant.especialidades_casa)
+            ? restaurant.especialidades_casa.slice(0, 2).join(', ')
             : restaurant.especialidades_casa
     }));
 
@@ -39,41 +39,18 @@ const Restaurants = () => {
                 </div>                {/* Grid de restaurantes */}
                 <div className="restaurants-grid">
                     {displayRestaurants.map((restaurant) => (
-                        <div 
-                            key={restaurant.id} 
-                            className="restaurant-card"
-                            onClick={() => handleRestaurantClick(restaurant)}
-                            style={{ cursor: 'pointer' }}
-                        >
-                            <div className="restaurant-image-container">
-                                <img
-                                    src={restaurant.image}
-                                    alt={restaurant.name}
-                                    className="restaurant-image"
-                                />
-                                <div className="restaurant-category-badge">
-                                    {restaurant.category}
-                                </div>
-                            </div>                            <div className="restaurant-content">
-                                <div className="restaurant-main-info">
-                                    <h3 className="restaurant-name">{restaurant.name}</h3>
-                                    <div className="restaurant-price">
-                                        {restaurant.priceRange}
-                                    </div>
-                                </div>
-
-                                <div className="restaurant-cuisine">
-                                    <FaUtensils className="cuisine-icon" />
-                                    <span>{restaurant.category}</span>
-                                </div>
-                            </div></div>
+                        <RestaurantCard
+                            key={restaurant.id}
+                            restaurant={restaurant}
+                            onClick={handleRestaurantClick}
+                        />
                     ))}
                 </div>
 
                 {/* Botón Ver más/Ver menos */}
                 {restaurantsData.length > 9 && (
                     <div className="restaurants-pagination">
-                        <button 
+                        <button
                             className="pagination-button"
                             onClick={toggleShowAll}
                         >
