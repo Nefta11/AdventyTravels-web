@@ -123,30 +123,33 @@
     align-items: stretch;
 }
 
-/* Botón Ver más/Ver menos */
+/* Botón Ver más/Ver menos - Estilo igual a restaurantes */
 .hotels-show-more-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    margin-top: 40px;
+    gap: 16px;
+    margin-top: 48px;
+    padding: 32px 24px;
+    background: linear-gradient(135deg, var(--hotels-warm-ivory), var(--hotels-soft-linen));
+    border-radius: 16px;
+    border: 1px solid var(--hotels-border-light);
 }
 
 .hotels-counter {
+    color: var(--hotels-text-gray);
     font-size: 0.9rem;
-    color: var(--hotels-text-muted);
-    margin: 0;
     font-weight: 500;
+    text-align: center;
+    margin: 0;
 }
 
 .hotels-show-more-btn {
-    padding: 12px 30px;
-    background: linear-gradient(135deg,
-            var(--hotels-burnt-sienna) 0%,
-            var(--hotels-copper-sunset) 100%);
+    background: linear-gradient(135deg, var(--hotels-burnt-sienna), var(--hotels-copper-sunset));
     color: var(--hotels-text-light);
     border: none;
-    border-radius: 25px;
+    padding: 14px 32px;
+    border-radius: 50px;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
@@ -157,15 +160,13 @@
 }
 
 .hotels-show-more-btn:hover {
-    transform: translateY(-2px);
+    background: linear-gradient(135deg, var(--hotels-copper-sunset), var(--hotels-antique-gold));
+    transform: translateY(-2px) scale(1.05);
     box-shadow: var(--hotels-shadow-medium);
-    background: linear-gradient(135deg,
-            var(--hotels-copper-sunset) 0%,
-            var(--hotels-burnt-sienna) 100%);
 }
 
 .hotels-show-more-btn:active {
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
     box-shadow: var(--hotels-shadow-light);
 }
 
@@ -178,6 +179,11 @@
 
     .hotels-component-header {
         margin-bottom: 40px;
+    }
+
+    .hotels-show-more-container {
+        margin-top: 40px;
+        padding: 28px 20px;
     }
 }
 
@@ -198,6 +204,16 @@
     .hotels-component-header {
         margin-bottom: 35px;
     }
+
+    .hotels-show-more-container {
+        margin-top: 35px;
+        padding: 24px 16px;
+    }
+
+    .hotels-show-more-btn {
+        padding: 12px 28px;
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -215,6 +231,20 @@
 
     .hotels-component-header {
         margin-bottom: 25px;
+    }
+
+    .hotels-show-more-container {
+        margin-top: 30px;
+        padding: 20px 12px;
+    }
+
+    .hotels-counter {
+        font-size: 0.8rem;
+    }
+
+    .hotels-show-more-btn {
+        padding: 10px 24px;
+        font-size: 0.85rem;
     }
 }
 
