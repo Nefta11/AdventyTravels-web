@@ -322,6 +322,52 @@
     font-weight: 500;
 }
 
+/* Paginación de restaurantes */
+.restaurants-pagination {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-top: 48px;
+    padding: 32px 24px;
+    background: linear-gradient(135deg, var(--warm-ivory), var(--soft-linen));
+    border-radius: 16px;
+    border: 1px solid var(--border-light);
+}
+
+.pagination-button {
+    background: linear-gradient(135deg, var(--burnt-sienna), var(--copper-sunset));
+    color: var(--text-light);
+    border: none;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pagination-button:hover {
+    background: linear-gradient(135deg, var(--copper-sunset), var(--antique-gold));
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: var(--shadow-medium);
+}
+
+.pagination-button:active {
+    transform: translateY(0) scale(1);
+    box-shadow: var(--shadow-light);
+}
+
+.restaurants-count {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
     .restaurants-main-title {
@@ -377,6 +423,21 @@
     .restaurants-header {
         margin-bottom: 40px;
     }
+
+    .restaurants-pagination {
+        margin-top: 32px;
+        padding: 24px 16px;
+        gap: 12px;
+    }
+    
+    .pagination-button {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+    
+    .restaurants-count {
+        font-size: 0.8rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -423,6 +484,16 @@
 
     .restaurants-header {
         margin-bottom: 30px;
+    }
+
+    .restaurants-pagination {
+        margin-top: 24px;
+        padding: 20px 12px;
+    }
+    
+    .pagination-button {
+        padding: 10px 20px;
+        font-size: 0.85rem;
     }
 }
 
