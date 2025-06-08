@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { restaurantsData } from './restaurantsData';
+import { restaurantsData } from './restaurantsData.jsx';
 import RestaurantCard from './RestaurantCard';
 import './Restaurants.css';
 
@@ -21,13 +21,15 @@ const Restaurants = () => {
     const displayRestaurants = restaurantsToShow.map(restaurant => ({
         id: restaurant.id,
         slug: restaurant.slug,
-        image: restaurant.imagen,
-        name: restaurant.nombre_establecimiento,
-        category: Array.isArray(restaurant.tipo_comida) ? restaurant.tipo_comida[0] : restaurant.tipo_comida,
-        priceRange: restaurant.rango_precios_promedio_persona,
+        image: restaurant.imagen || '/placeholder-image.jpg',
+        name: restaurant.nombre_establecimiento || 'Sin nombre',
+        category: Array.isArray(restaurant.tipo_comida)
+            ? restaurant.tipo_comida[0] || 'Sin categoría'
+            : restaurant.tipo_comida || 'Sin categoría',
+        priceRange: restaurant.rango_precios_promedio_persona || 'Precio no disponible',
         specialty: Array.isArray(restaurant.especialidades_casa)
             ? restaurant.especialidades_casa.slice(0, 2).join(', ')
-            : restaurant.especialidades_casa
+            : restaurant.especialidades_casa || 'No especificadas'
     }));
 
     return (
