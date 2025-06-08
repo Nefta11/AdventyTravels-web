@@ -50,7 +50,7 @@ export const HotelsData = [
         contact: "+52 764 764 3681",
         whatsapp: "+52 776 163 0317",
         email: "Hotel_bugambilias2000@hotmail.com",
-        redes_sociales: "Facebook: hotelbugambilias. Instagram: hotelbugambilias",
+        redes_sociales: ["Facebook: hotelbugambilias", "Instagram: hotelbugambilias"],
         restricciones: "Prohibido ingerir bebidas alcohólicas y prohibido fumar 🚭",
         tipos_habitacion: ["Sencilla", "Doble", "Triple", "Familiar"],
         metodos_pago: ["Efectivo", "Transferencia", "Tarjeta bancaria", "Depósito"],
