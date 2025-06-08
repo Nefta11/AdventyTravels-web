@@ -26,8 +26,13 @@
 }
 
 @keyframes hotel-detail-spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Not Found */
@@ -704,7 +709,7 @@
         gap: 25px;
         padding: 20px 15px;
     }
-    
+
     .sidebar {
         order: -1;
         display: grid;
@@ -718,38 +723,38 @@
         margin: 15px;
         border-radius: 15px;
     }
-    
+
     .gallery-container {
         height: 400px;
     }
-    
+
     .hotel-title-overlay {
         font-size: 2rem;
     }
-    
+
     .quick-info {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 10px;
         padding: 15px;
     }
-    
+
     .content-grid {
         padding: 15px 10px;
     }
-    
+
     .content-section {
         padding: 20px;
     }
-    
+
     .amenities-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .features-list,
     .services-list {
         grid-template-columns: 1fr;
     }
-    
+
     .sidebar {
         grid-template-columns: 1fr;
     }
@@ -760,15 +765,15 @@
         margin: 10px;
         border-radius: 10px;
     }
-    
+
     .gallery-container {
         height: 300px;
     }
-    
+
     .hotel-title-overlay {
         font-size: 1.5rem;
     }
-    
+
     .back-button {
         width: 40px;
         height: 40px;
@@ -776,64 +781,64 @@
         left: 15px;
         font-size: 16px;
     }
-    
+
     .gallery-nav,
     .gallery-expand {
         width: 40px;
         height: 40px;
         font-size: 16px;
     }
-    
+
     .gallery-nav.prev {
         left: 15px;
     }
-    
+
     .gallery-nav.next {
         right: 15px;
     }
-    
+
     .gallery-expand {
         top: 15px;
         right: 15px;
     }
-    
+
     .thumbnail-strip {
         padding: 15px;
     }
-    
+
     .thumbnail {
         width: 60px;
         height: 45px;
     }
-    
+
     .quick-info {
         padding: 10px;
         gap: 8px;
     }
-    
+
     .quick-info-card {
         padding: 15px 10px;
     }
-    
+
     .content-section {
         padding: 15px;
     }
-    
+
     .contact-card,
     .info-card {
         padding: 20px;
     }
-    
+
     .modal-content {
         max-width: 95vw;
         max-height: 95vh;
     }
-    
+
     .modal-nav {
         width: 45px;
         height: 45px;
     }
-    
+
     .modal-close {
         width: 40px;
         height: 40px;
@@ -848,6 +853,7 @@
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -861,7 +867,18 @@
     animation: fadeIn 0.6s ease forwards;
 }
 
-.content-section:nth-child(1) { animation-delay: 0.1s; }
-.content-section:nth-child(2) { animation-delay: 0.2s; }
-.content-section:nth-child(3) { animation-delay: 0.3s; }
-.content-section:nth-child(4) { animation-delay: 0.4s; }
+.content-section:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.content-section:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.content-section:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.content-section:nth-child(4) {
+    animation-delay: 0.4s;
+}

@@ -13,7 +13,7 @@ import {
     FaClock,
     FaUsers,
     FaBed,
-    FaExclamationTriangle,    FaChevronLeft,
+    FaExclamationTriangle, FaChevronLeft,
     FaChevronRight,
     FaTimes,
     FaCamera
@@ -84,21 +84,21 @@ const HotelDetail = () => {
                 </button>
             </div>
         );
-    }    return (
+    } return (
         <div className="hotel-detail-page">
             {/* Modern Header with Gallery */}
             <div className="hotel-header">
                 <button onClick={() => navigate(-1)} className="back-button">
                     <FaArrowLeft />
                 </button>
-                
+
                 <div className="gallery-container">
-                    <img 
-                        src={hotel.images ? hotel.images[currentImageIndex] : hotel.image} 
+                    <img
+                        src={hotel.images ? hotel.images[currentImageIndex] : hotel.image}
                         alt={hotel.name}
                         className="main-image"
                     />
-                    
+
                     {hotel.images && hotel.images.length > 1 && (
                         <>
                             <button onClick={prevImage} className="gallery-nav prev">
@@ -109,15 +109,15 @@ const HotelDetail = () => {
                             </button>
                         </>
                     )}
-                    
+
                     <button onClick={openGalleryModal} className="gallery-expand">
                         <FaCamera />
                     </button>
-                    
+
                     <div className="image-counter">
                         {currentImageIndex + 1} / {hotel.images ? hotel.images.length : 1}
                     </div>
-                    
+
                     {/* Hotel Info Overlay */}
                     <div className="hotel-info-overlay">
                         <div className="hotel-category-badge">{hotel.category}</div>
@@ -140,7 +140,7 @@ const HotelDetail = () => {
                 {hotel.images && hotel.images.length > 1 && (
                     <div className="thumbnail-strip">
                         {hotel.images.map((img, index) => (
-                            <div 
+                            <div
                                 key={index}
                                 className={`thumbnail ${index === currentImageIndex ? 'active' : ''}`}
                                 onClick={() => setCurrentImageIndex(index)}
@@ -218,7 +218,7 @@ const HotelDetail = () => {
                                 </>
                             )}
                         </div>
-                        
+
                         <div className="room-types-section">
                             <h4>Servicios</h4>
                             <div className="services-list">
@@ -241,9 +241,9 @@ const HotelDetail = () => {
                                 </a>
                             )}
                             {hotel.whatsapp && (
-                                <a href={`https://wa.me/${hotel.whatsapp.replace(/\D/g, '')}`} 
-                                   className="contact-item whatsapp-link"
-                                   target="_blank" rel="noopener noreferrer">
+                                <a href={`https://wa.me/${hotel.whatsapp.replace(/\D/g, '')}`}
+                                    className="contact-item whatsapp-link"
+                                    target="_blank" rel="noopener noreferrer">
                                     <FaWhatsapp />
                                     <span>WhatsApp</span>
                                 </a>
@@ -256,8 +256,8 @@ const HotelDetail = () => {
                             )}
                             {(hotel.website || hotel.instagram) && (
                                 <a href={hotel.website ? `https://${hotel.website}` : `https://instagram.com/${hotel.instagram?.replace('@', '')}`}
-                                   className="contact-item"
-                                   target="_blank" rel="noopener noreferrer">
+                                    className="contact-item"
+                                    target="_blank" rel="noopener noreferrer">
                                     {hotel.website ? <FaGlobe /> : <FaInstagram />}
                                     <span>{hotel.website ? 'Web' : 'Instagram'}</span>
                                 </a>
@@ -305,7 +305,7 @@ const HotelDetail = () => {
                     )}
                 </div>
             </div>
-            
+
             {/* Modal Gallery */}
             {showGalleryModal && hotel.images && (
                 <div className="gallery-modal" onClick={closeGalleryModal}>
@@ -313,8 +313,8 @@ const HotelDetail = () => {
                         <button className="modal-close" onClick={closeGalleryModal}>
                             <FaTimes />
                         </button>
-                        <img 
-                            src={hotel.images[currentImageIndex]} 
+                        <img
+                            src={hotel.images[currentImageIndex]}
                             alt={hotel.name}
                             className="modal-image"
                         />
