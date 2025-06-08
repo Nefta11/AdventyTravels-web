@@ -172,29 +172,6 @@
     margin-bottom: 15px;
 }
 
-.hero-stars {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.hero-stars .hotel-detail-star {
-    font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.3);
-}
-
-.hero-stars .hotel-detail-star.filled {
-    color: var(--detail-antique-gold);
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-}
-
-.hero-rating {
-    color: white;
-    font-weight: 600;
-    margin-left: 5px;
-    opacity: 0.9;
-}
-
 .hero-location {
     display: flex;
     align-items: center;
@@ -489,20 +466,11 @@
     padding: 8px 12px;
     border-radius: 20px;
     backdrop-filter: blur(10px);
-}
-
-.gallery-stars {
-    display: flex;
-    gap: 2px;
-}
-
-.gallery-stars .hotel-detail-star {
+    color: var(--detail-charcoal);
+    font-weight: 600;
     font-size: 0.9rem;
-    color: rgba(184, 87, 42, 0.3);
-}
-
-.gallery-stars .hotel-detail-star.filled {
-    color: var(--detail-antique-gold);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 /* Tarjeta de contacto mejorada */

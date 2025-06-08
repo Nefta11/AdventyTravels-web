@@ -1,7 +1,6 @@
 // HotelDetail.jsx
 import { useParams, useNavigate } from 'react-router-dom';
 import {
-    FaStar,
     FaMapMarkerAlt,
     FaPhone,
     FaWhatsapp,
@@ -34,22 +33,11 @@ const HotelDetail = () => {
                 </button>
             </div>
         );
-    }
-
-    const renderStars = (stars) => {
-        return [...Array(5)].map((_, index) => (
-            <FaStar
-                key={index}
-                className={`hotel-detail-star ${index < stars ? 'filled' : ''}`}
-            />
-        ));
-    };
-
-    const handleWhatsAppClick = () => {
+    }    const handleWhatsAppClick = () => {
         if (hotel.whatsapp) {
             window.open(`https://wa.me/${hotel.whatsapp.replace(/\D/g, '')}`, '_blank');
         }
-    };    // Función para parsear redes sociales
+    };// Función para parsear redes sociales
     const parseSocialNetworks = () => {
         const networks = [];
 
@@ -143,15 +131,8 @@ const HotelDetail = () => {
                             <div className="hero-top-info">
                                 <div className="hero-category">{hotel.category}</div>
                                 <div className="hero-price">{hotel.price}</div>
-                            </div>
-                            <h1 className="hotel-detail-title">{hotel.name}</h1>
+                            </div>                            <h1 className="hotel-detail-title">{hotel.name}</h1>
                             <div className="hero-stars-location">
-                                <div className="hero-stars">
-                                    {renderStars(hotel.stars)}
-                                    {hotel.rating && (
-                                        <span className="hero-rating">({hotel.rating}/10)</span>
-                                    )}
-                                </div>
                                 <div className="hero-location">
                                     <FaMapMarkerAlt />
                                     <span>{hotel.location}</span>
@@ -245,9 +226,7 @@ const HotelDetail = () => {
                                     </p>
                                 )}
                             </div>
-                        )}
-
-                        {/* Galería de imagen */}
+                        )}                        {/* Galería de imagen */}
                         <div className="hotel-detail-gallery">
                             <div
                                 className="gallery-main-image"
@@ -255,9 +234,7 @@ const HotelDetail = () => {
                             >
                                 <div className="gallery-overlay">
                                     <div className="gallery-badge">
-                                        <span className="gallery-stars">
-                                            {renderStars(hotel.stars)}
-                                        </span>
+                                        <span>{hotel.category}</span>
                                     </div>
                                 </div>
                             </div>
