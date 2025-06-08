@@ -120,6 +120,7 @@ const HotelDetail = () => {
                     
                     {/* Hotel Info Overlay */}
                     <div className="hotel-info-overlay">
+                        <div className="hotel-category-badge">{hotel.category}</div>
                         <h1 className="hotel-title-overlay">{hotel.name}</h1>
                         <div className="hotel-location-overlay">
                             <FaMapMarkerAlt />
@@ -131,6 +132,7 @@ const HotelDetail = () => {
                             </div>
                             <span className="rating-text-overlay">{hotel.rating}/10</span>
                         </div>
+                        <div className="hotel-price-overlay">{hotel.price}</div>
                     </div>
                 </div>
 

@@ -232,6 +232,21 @@
     z-index: 5;
 }
 
+.hotel-category-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
 .hotel-title-overlay {
     font-size: 2.5rem;
     font-weight: 700;
@@ -252,21 +267,15 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-bottom: 15px;
 }
 
-.rating-stars-overlay {
-    display: flex;
-    gap: 2px;
-}
-
-.rating-stars-overlay .star {
+.hotel-price-overlay {
+    font-size: 1.3rem;
+    font-weight: 700;
     color: #FFD700;
-    font-size: 18px;
-}
-
-.rating-text-overlay {
-    font-size: 1rem;
-    opacity: 0.9;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
 }
 
 /* Quick Info Cards */
