@@ -214,30 +214,6 @@
     box-shadow: 0 2px 8px rgba(232, 123, 62, 0.3);
 }
 
-/* Rating */
-.restaurant-rating {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: rgba(247, 243, 233, 0.95);
-    /* Marfil cálido */
-    color: var(--copper-sunset);
-    padding: 6px 10px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(247, 243, 233, 0.8);
-    box-shadow: 0 2px 8px rgba(184, 87, 42, 0.1);
-}
-
-.rating-icon {
-    font-size: 0.8rem;
-}
-
 /* Contenido de la Card */
 .restaurant-content {
     padding: 25px;

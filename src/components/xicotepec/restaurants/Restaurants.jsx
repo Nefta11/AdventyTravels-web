@@ -1,4 +1,4 @@
-import { FaClock, FaUtensils, FaStar, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaClock, FaUtensils, FaMapMarkerAlt } from 'react-icons/fa';
 import './Restaurants.css';
 
 const Restaurants = () => {
@@ -6,11 +6,9 @@ const Restaurants = () => {
         {
             id: 1,
             image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=500&h=400&fit=crop",
-            name: "La Choza",
-            category: "Cocina Regional",
+            name: "La Choza",            category: "Cocina Regional",
             cuisine: "Española y Mexicana",
             hours: "8:00 AM - 10:00 PM",
-            rating: 4.7,
             priceRange: "$",
             location: "Reforma 100, Centro",
             specialty: "Tradición desde 1986, ubicado en el antiguo Cine Garza",
@@ -19,11 +17,9 @@ const Restaurants = () => {
         {
             id: 2,
             image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=500&h=400&fit=crop",
-            name: "Gran Tradición",
-            category: "Cocina Tradicional",
+            name: "Gran Tradición",            category: "Cocina Tradicional",
             cuisine: "Comida Mexicana",
             hours: "9:00 AM - 9:00 PM",
-            rating: 4.5,
             priceRange: "$",
             location: "Plaza de la Constitución, Centro",
             specialty: "Platillos tradicionales de la región serrana",
@@ -32,11 +28,9 @@ const Restaurants = () => {
         {
             id: 3,
             image: "https://images.unsplash.com/photo-1551218808-94e220e084d2?w=500&h=400&fit=crop",
-            name: "Restaurant Pili",
-            category: "Restaurante Bar",
+            name: "Restaurant Pili",            category: "Restaurante Bar",
             cuisine: "Cocina Regional",
             hours: "12:00 PM - 11:00 PM",
-            rating: 4.6,
             priceRange: "$",
             location: "Boulevard Benito Juárez",
             specialty: "Molotes de tinga y café de la región",
@@ -45,11 +39,9 @@ const Restaurants = () => {
         {
             id: 4,
             image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&h=400&fit=crop",
-            name: "Sazón Mágico",
-            category: "Restaurante y Café",
+            name: "Sazón Mágico",            category: "Restaurante y Café",
             cuisine: "Café Gourmet y Regional",
             hours: "7:00 AM - 9:00 PM",
-            rating: 4.8,
             priceRange: "$",
             location: "Centro Histórico",
             specialty: "Café de Xicotepec y repostería artesanal",
@@ -58,11 +50,9 @@ const Restaurants = () => {
         {
             id: 5,
             image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=500&h=400&fit=crop",
-            name: "La Gloria del Mar",
-            category: "Mariscos",
+            name: "La Gloria del Mar",            category: "Mariscos",
             cuisine: "Cocina de Mar",
             hours: "11:00 AM - 10:00 PM",
-            rating: 4.4,
             priceRange: "$",
             location: "Av. Juárez",
             specialty: "Acamayas con salsa macha de hormiga chicala",
@@ -71,11 +61,9 @@ const Restaurants = () => {
         {
             id: 6,
             image: "https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?w=500&h=400&fit=crop",
-            name: "La Finca Burger Grill",
-            category: "Parrilla Moderna",
+            name: "La Finca Burger Grill",            category: "Parrilla Moderna",
             cuisine: "Hamburguesas Gourmet",
             hours: "2:00 PM - 12:00 AM",
-            rating: 4.3,
             priceRange: "$",
             location: "Zona Centro",
             specialty: "Hamburguesas artesanales y licores de la región",
@@ -100,13 +88,8 @@ const Restaurants = () => {
                                     src={restaurant.image}
                                     alt={restaurant.name}
                                     className="restaurant-image"
-                                />
-                                <div className="restaurant-category-badge">
+                                />                                <div className="restaurant-category-badge">
                                     {restaurant.category}
-                                </div>
-                                <div className="restaurant-rating">
-                                    <FaStar className="rating-icon" />
-                                    <span>{restaurant.rating}</span>
                                 </div>
                             </div>
 
