@@ -140,11 +140,19 @@ const FooterComponent = () => {
                         </li>
                     </ul>
                 </div>
-            </div>
-
-            <div className="adventy-footer-bottom">
+            </div>            <div className="adventy-footer-bottom">
                 <div className="adventy-footer-copyright">
-                    <p>© {new Date().getFullYear()} Adventy Travels. Todos los derechos reservados.</p>
+                    <p>© {new Date().getFullYear()} Adventy Travels. Todos los derechos reservados.</p>                    <div className="adventy-footer-developer-credit">
+                        <a 
+                            href="https://neftalivergaraportafolio.netlify.app/" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="developer-credit-link"
+                        >
+                            <span className="heart-icon">💻</span>
+                            <span>Desarrollador: Neftalí V.</span>
+                        </a>
+                    </div>
                 </div>
             </div>
 
