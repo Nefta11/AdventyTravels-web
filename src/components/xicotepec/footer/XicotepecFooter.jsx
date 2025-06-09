@@ -13,11 +13,9 @@ import {
     FaCamera,
     FaRoute
 } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
 import './XicotepecFooter.css';
 
 const XicotepecFooter = () => {
-    const navigate = useNavigate();
 
     const handleWhatsAppClick = () => {
         const phone = "5217716075321";
@@ -51,12 +49,7 @@ const XicotepecFooter = () => {
 
     return (
         <footer className="xicotepec-footer">
-            {/* Decorative wave - color sólido */}
-            <div className="xicotepec-footer-wave">
-                <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" fill="#ffffff"></path>
-                </svg>
-            </div>
+
 
             <div className="xicotepec-footer-container">
 
