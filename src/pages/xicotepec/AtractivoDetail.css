@@ -146,6 +146,7 @@
     font-weight: 900;
     margin: 0 0 15px 0;
     line-height: 1.1;
+    color: white !important;
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
 }
 
@@ -181,6 +182,13 @@
     grid-template-columns: 2fr 1fr;
     gap: 40px;
     align-items: flex-start;
+}
+
+/* Columna izquierda mejorada */
+.atractivo-detail-left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 /* Tarjeta de resumen mejorada */
@@ -313,43 +321,97 @@
     margin: 0;
 }
 
-/* Listas de atracciones y actividades */
-.attractions-list,
-.activities-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+/* Grid mejorado para atracciones y actividades */
+.attractions-grid,
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
 }
 
-.attraction-item,
-.activity-item {
+.attraction-card,
+.activity-card {
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 12px 0;
-    border-bottom: 1px solid rgba(232, 221, 212, 0.3);
+    padding: 15px;
+    background: var(--detail-warm-ivory);
+    border-radius: 12px;
+    border: 1px solid rgba(232, 221, 212, 0.5);
+    transition: all 0.3s ease;
 }
 
-.attraction-item:last-child,
-.activity-item:last-child {
-    border-bottom: none;
+.attraction-card:hover,
+.activity-card:hover {
+    background: rgba(90, 124, 88, 0.05);
+    border-color: var(--detail-forest-pine);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(90, 124, 88, 0.1);
 }
 
 .attraction-icon,
 .activity-icon {
     color: var(--detail-antique-gold);
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     flex-shrink: 0;
 }
 
-.attraction-item span,
-.activity-item span {
-    color: #5A5A5A;
+.attraction-card span,
+.activity-card span {
+    color: #4A4A4A;
     font-size: 0.95rem;
     line-height: 1.5;
+    font-weight: 500;
+}
+.atractivo-detail-features-specs {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(184, 87, 42, 0.08);
+    border: 1px solid rgba(232, 221, 212, 0.5);
+    transition: all 0.3s ease;
 }
 
-/* Grid de especificaciones */
+.atractivo-detail-features-specs:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(184, 87, 42, 0.12);
+}
+
+.atractivo-detail-features-specs h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--detail-burnt-sienna);
+    margin: 0 0 25px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.atractivo-detail-features-specs h3 svg {
+    color: var(--detail-antique-gold);
+    font-size: 1.2rem;
+}
+
+.features-section,
+.specs-section {
+    margin-bottom: 25px;
+}
+
+.features-section:last-child,
+.specs-section:last-child {
+    margin-bottom: 0;
+}
+
+.features-section h4,
+.specs-section h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--detail-forest-pine);
+    margin: 0 0 15px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(90, 124, 88, 0.2);
+}
+
 .specifications-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -465,17 +527,28 @@
 /* Tarjetas de información */
 .atractivo-detail-contact-card,
 .atractivo-detail-info-card,
-.atractivo-detail-special-card {
+.atractivo-detail-special-card,
+.atractivo-detail-practical-card {
     background: white;
     padding: 25px;
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(184, 87, 42, 0.08);
     border: 1px solid rgba(232, 221, 212, 0.5);
+    transition: all 0.3s ease;
+}
+
+.atractivo-detail-contact-card:hover,
+.atractivo-detail-info-card:hover,
+.atractivo-detail-special-card:hover,
+.atractivo-detail-practical-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(184, 87, 42, 0.12);
 }
 
 .atractivo-detail-contact-card h4,
 .atractivo-detail-info-card h4,
-.atractivo-detail-special-card h4 {
+.atractivo-detail-special-card h4,
+.atractivo-detail-practical-card h4 {
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--detail-burnt-sienna);
@@ -483,6 +556,14 @@
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+.atractivo-detail-contact-card h4 svg,
+.atractivo-detail-info-card h4 svg,
+.atractivo-detail-special-card h4 svg,
+.atractivo-detail-practical-card h4 svg {
+    color: var(--detail-antique-gold);
+    font-size: 1.1rem;
 }
 
 .contact-methods {
@@ -529,20 +610,33 @@
     font-weight: 500;
 }
 
-/* Información histórica y elementos especiales */
+/* Información histórica, elementos especiales y prácticos */
 .info-item,
-.special-item {
+.special-item,
+.practical-item {
     padding: 12px 0;
     border-bottom: 1px solid rgba(232, 221, 212, 0.3);
+    transition: all 0.3s ease;
 }
 
 .info-item:last-child,
-.special-item:last-child {
+.special-item:last-child,
+.practical-item:last-child {
     border-bottom: none;
 }
 
+.info-item:hover,
+.special-item:hover,
+.practical-item:hover {
+    background: rgba(90, 124, 88, 0.02);
+    border-radius: 8px;
+    padding: 12px 10px;
+    margin: 0 -10px;
+}
+
 .info-item strong,
-.special-item strong {
+.special-item strong,
+.practical-item strong {
     display: block;
     color: var(--detail-burnt-sienna);
     font-weight: 600;
@@ -551,7 +645,8 @@
 }
 
 .info-item span,
-.special-item span {
+.special-item span,
+.practical-item span {
     color: #5A5A5A;
     font-size: 0.95rem;
     line-height: 1.5;
@@ -596,7 +691,13 @@
         padding: 30px 15px;
     }
 
-    .atractivo-detail-section {
+    .atractivo-detail-section,
+    .atractivo-detail-overview-card,
+    .atractivo-detail-features-specs,
+    .atractivo-detail-contact-card,
+    .atractivo-detail-info-card,
+    .atractivo-detail-special-card,
+    .atractivo-detail-practical-card {
         padding: 20px;
     }
 
@@ -610,6 +711,19 @@
 
     .gallery-main-image {
         height: 200px;
+    }
+
+    .overview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .attractions-grid,
+    .activities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .overview-description {
+        padding: 15px;
     }
 }
 
@@ -631,14 +745,17 @@
         padding: 20px 10px;
     }
 
-    .atractivo-detail-section {
+    .atractivo-detail-section,
+    .atractivo-detail-overview-card,
+    .atractivo-detail-features-specs {
         padding: 15px;
     }
 
     .atractivo-detail-contact-card,
     .atractivo-detail-info-card,
-    .atractivo-detail-special-card {
-        padding: 20px;
+    .atractivo-detail-special-card,
+    .atractivo-detail-practical-card {
+        padding: 15px;
     }
 
     .features-grid {
@@ -647,6 +764,31 @@
 
     .gallery-main-image {
         height: 180px;
+    }
+
+    .overview-description {
+        padding: 12px;
+    }
+
+    .overview-item,
+    .attraction-card,
+    .activity-card {
+        padding: 12px;
+    }
+
+    .spec-item,
+    .feature-item {
+        padding: 10px;
+    }
+
+    .contact-method {
+        padding: 10px 12px;
+    }
+
+    .info-item,
+    .special-item,
+    .practical-item {
+        padding: 10px 0;
     }
 }
 
