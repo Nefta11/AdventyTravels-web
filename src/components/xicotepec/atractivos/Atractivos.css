@@ -51,10 +51,7 @@
 .atractivos-component-wrapper {
     width: 100%;
     padding: 60px 0;
-    background: linear-gradient(135deg,
-            var(--atractivos-soft-linen) 0%,
-            var(--atractivos-warm-ivory) 50%,
-            var(--atractivos-pearl-sand) 100%);
+ background: white;
     font-family: "Gilroy", sans-serif;
     line-height: 1.6;
     position: relative;

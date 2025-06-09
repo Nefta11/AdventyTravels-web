@@ -34,7 +34,7 @@
     /* Tierra oscura */
 
     min-height: 100vh;
-    background: linear-gradient(135deg, var(--detail-cream-white) 0%, var(--detail-warm-ivory) 100%);
+    background: white;
     font-family: "Gilroy", sans-serif;
     line-height: 1.6;
     color: var(--detail-charcoal);

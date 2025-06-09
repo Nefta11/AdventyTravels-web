@@ -27,10 +27,7 @@
 
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(135deg,
-            var(--detail-warm-ivory) 0%,
-            var(--detail-cream-white) 50%,
-            #F2EDE4 100%);
+    background: white;
     font-family: "Gilroy", sans-serif;
     line-height: 1.6;
     position: relative;

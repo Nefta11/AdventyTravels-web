@@ -3,23 +3,36 @@
 /* CSS Variables - Colores Pueblerinos Sofisticados */
 :root {
     /* Colores principales - Tierra y Tradición */
-    --burnt-sienna: #B8572A;       /* Siena quemada - techos de barro elegantes */
-    --adobe-clay: #C2724B;         /* Arcilla adobe - muros coloniales refinados */
-    --forest-pine: #5A7C58;        /* Pino serrano - naturaleza sofisticada */
-    --warm-ivory: #F7F3E9;         /* Marfil cálido - cal y adobe fino */
-    
+    --burnt-sienna: #B8572A;
+    /* Siena quemada - techos de barro elegantes */
+    --adobe-clay: #C2724B;
+    /* Arcilla adobe - muros coloniales refinados */
+    --forest-pine: #5A7C58;
+    /* Pino serrano - naturaleza sofisticada */
+    --warm-ivory: #F7F3E9;
+    /* Marfil cálido - cal y adobe fino */
+
     /* Acentos sofisticados */
-    --copper-sunset: #E87B3E;      /* Cobre sunset - atardeceres dorados */
-    --misty-sage: #9CAF88;         /* Salvia brumosa - vegetación serrana */
-    --antique-gold: #D4AF37;       /* Oro antiguo - campanarios e iglesias */
-    --storm-blue: #627B8C;         /* Azul tormenta - cielos dramáticos */
-    
+    --copper-sunset: #E87B3E;
+    /* Cobre sunset - atardeceres dorados */
+    --misty-sage: #9CAF88;
+    /* Salvia brumosa - vegetación serrana */
+    --antique-gold: #D4AF37;
+    /* Oro antiguo - campanarios e iglesias */
+    --storm-blue: #627B8C;
+    /* Azul tormenta - cielos dramáticos */
+
     /* Neutrales elegantes */
-    --warm-stone: #8C7B6B;         /* Piedra cálida - cantera colonial */
-    --soft-linen: #F2EDE4;         /* Lino suave - textiles naturales */
-    --deep-earth: #3A2F26;         /* Tierra profunda - madera envejecida */
-    --pearl-sand: #E8DDD4;         /* Arena perla - senderos empedrados */
-    --charcoal-ink: #2C2520;       /* Tinta carbón - texto principal */
+    --warm-stone: #8C7B6B;
+    /* Piedra cálida - cantera colonial */
+    --soft-linen: #F2EDE4;
+    /* Lino suave - textiles naturales */
+    --deep-earth: #3A2F26;
+    /* Tierra profunda - madera envejecida */
+    --pearl-sand: #E8DDD4;
+    /* Arena perla - senderos empedrados */
+    --charcoal-ink: #2C2520;
+    /* Tinta carbón - texto principal */
 
     /* Variables temáticas actualizadas */
     --text-light: #fff;
@@ -37,10 +50,7 @@
 .destination-info {
     width: 100%;
     padding: 60px 0;
-    background: linear-gradient(135deg,
-            var(--soft-linen) 0%,
-            var(--warm-ivory) 50%,
-            var(--pearl-sand) 100%);
+    background: white;
     font-family: "Gilroy", sans-serif;
     line-height: 1.6;
     position: relative;
@@ -291,8 +301,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, 
-            rgba(184, 87, 42, 0.85) 0%, 
+    background: linear-gradient(135deg,
+            rgba(184, 87, 42, 0.85) 0%,
             rgba(232, 123, 62, 0.75) 100%);
     display: flex;
     flex-direction: column;

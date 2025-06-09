@@ -49,10 +49,7 @@
 
     width: 100%;
     padding: 60px 0;
-    background: linear-gradient(135deg,
-            var(--hotels-soft-linen) 0%,
-            var(--hotels-warm-ivory) 50%,
-            var(--hotels-pearl-sand) 100%);
+    background: white;
     font-family: "Gilroy", sans-serif;
     line-height: 1.6;
     position: relative;

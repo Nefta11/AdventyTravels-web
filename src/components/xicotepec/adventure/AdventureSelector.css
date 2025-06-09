@@ -3,23 +3,36 @@
 /* CSS Variables - Colores Pueblerinos Sofisticados */
 :root {
     /* Colores principales - Tierra y Tradición */
-    --burnt-sienna: #B8572A;       /* Siena quemada - techos de barro elegantes */
-    --adobe-clay: #C2724B;         /* Arcilla adobe - muros coloniales refinados */
-    --forest-pine: #5A7C58;        /* Pino serrano - naturaleza sofisticada */
-    --warm-ivory: #F7F3E9;         /* Marfil cálido - cal y adobe fino */
-    
+    --burnt-sienna: #B8572A;
+    /* Siena quemada - techos de barro elegantes */
+    --adobe-clay: #C2724B;
+    /* Arcilla adobe - muros coloniales refinados */
+    --forest-pine: #5A7C58;
+    /* Pino serrano - naturaleza sofisticada */
+    --warm-ivory: #F7F3E9;
+    /* Marfil cálido - cal y adobe fino */
+
     /* Acentos sofisticados */
-    --copper-sunset: #E87B3E;      /* Cobre sunset - atardeceres dorados */
-    --misty-sage: #9CAF88;         /* Salvia brumosa - vegetación serrana */
-    --antique-gold: #D4AF37;       /* Oro antiguo - campanarios e iglesias */
-    --storm-blue: #627B8C;         /* Azul tormenta - cielos dramáticos */
-    
+    --copper-sunset: #E87B3E;
+    /* Cobre sunset - atardeceres dorados */
+    --misty-sage: #9CAF88;
+    /* Salvia brumosa - vegetación serrana */
+    --antique-gold: #D4AF37;
+    /* Oro antiguo - campanarios e iglesias */
+    --storm-blue: #627B8C;
+    /* Azul tormenta - cielos dramáticos */
+
     /* Neutrales elegantes */
-    --warm-stone: #8C7B6B;         /* Piedra cálida - cantera colonial */
-    --soft-linen: #F2EDE4;         /* Lino suave - textiles naturales */
-    --deep-earth: #3A2F26;         /* Tierra profunda - madera envejecida */
-    --pearl-sand: #E8DDD4;         /* Arena perla - senderos empedrados */
-    --charcoal-ink: #2C2520;       /* Tinta carbón - texto principal */
+    --warm-stone: #8C7B6B;
+    /* Piedra cálida - cantera colonial */
+    --soft-linen: #F2EDE4;
+    /* Lino suave - textiles naturales */
+    --deep-earth: #3A2F26;
+    /* Tierra profunda - madera envejecida */
+    --pearl-sand: #E8DDD4;
+    /* Arena perla - senderos empedrados */
+    --charcoal-ink: #2C2520;
+    /* Tinta carbón - texto principal */
 
     /* Colores complementarios refinados */
     --text-light: #ffffff;
@@ -37,10 +50,7 @@
 .adventure-selector {
     width: 100%;
     padding: 80px 0;
-    background: linear-gradient(135deg,
-            var(--soft-linen) 0%,
-            var(--warm-ivory) 50%,
-            var(--pearl-sand) 100%);
+    background: white;
     font-family: "Gilroy", sans-serif;
     position: relative;
     overflow: hidden;
@@ -101,13 +111,20 @@
     width: 120px;
     height: 4px;
     background: linear-gradient(90deg,
-            var(--burnt-sienna) 0%,        /* Siena quemada */
-            var(--copper-sunset) 18%,      /* Cobre sunset */
-            var(--antique-gold) 35%,       /* Oro antiguo */
-            var(--misty-sage) 52%,         /* Salvia brumosa */
-            var(--storm-blue) 70%,         /* Azul tormenta */
-            var(--adobe-clay) 85%,         /* Arcilla adobe */
-            var(--burnt-sienna) 100%);     /* Siena quemada */
+            var(--burnt-sienna) 0%,
+            /* Siena quemada */
+            var(--copper-sunset) 18%,
+            /* Cobre sunset */
+            var(--antique-gold) 35%,
+            /* Oro antiguo */
+            var(--misty-sage) 52%,
+            /* Salvia brumosa */
+            var(--storm-blue) 70%,
+            /* Azul tormenta */
+            var(--adobe-clay) 85%,
+            /* Arcilla adobe */
+            var(--burnt-sienna) 100%);
+    /* Siena quemada */
     border-radius: 2px;
     animation: adventure-underlineExpand 1.5s ease-out 0.5s both;
     box-shadow: 0 2px 8px rgba(232, 123, 62, 0.3);
@@ -416,32 +433,38 @@
 /* Indicadores con colores pueblerinos específicos */
 .adventure-indicator:nth-child(1):hover,
 .adventure-indicator:nth-child(1).active {
-    background: var(--adobe-clay);    /* Artesanías */
+    background: var(--adobe-clay);
+    /* Artesanías */
 }
 
 .adventure-indicator:nth-child(2):hover,
 .adventure-indicator:nth-child(2).active {
-    background: var(--forest-pine);   /* Naturaleza */
+    background: var(--forest-pine);
+    /* Naturaleza */
 }
 
 .adventure-indicator:nth-child(3):hover,
 .adventure-indicator:nth-child(3).active {
-    background: var(--burnt-sienna);  /* Cultura */
+    background: var(--burnt-sienna);
+    /* Cultura */
 }
 
 .adventure-indicator:nth-child(4):hover,
 .adventure-indicator:nth-child(4).active {
-    background: var(--storm-blue);    /* Hospitalidad */
+    background: var(--storm-blue);
+    /* Hospitalidad */
 }
 
 .adventure-indicator:nth-child(5):hover,
 .adventure-indicator:nth-child(5).active {
-    background: var(--misty-sage);    /* Exploración */
+    background: var(--misty-sage);
+    /* Exploración */
 }
 
 .adventure-indicator:nth-child(6):hover,
 .adventure-indicator:nth-child(6).active {
-    background: var(--copper-sunset); /* Gastronomía */
+    background: var(--copper-sunset);
+    /* Gastronomía */
 }
 
 .adventure-indicator:hover {
