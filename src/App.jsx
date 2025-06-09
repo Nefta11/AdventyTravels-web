@@ -19,6 +19,7 @@ import FestivalDetailPage from './pages/xicotepec/FestivalDetailPage';
 import HotelDetail from './pages/xicotepec/HotelDetail';
 import RestaurantDetail from './pages/xicotepec/RestaurantDetail';
 import AtractivoDetail from './pages/xicotepec/AtractivoDetail';
+import TourDetail from './pages/xicotepec/TourDetail';
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function RoutesWithAnimation() {
       <Route path='/hotel/:slug' element={<HotelDetail />} />
       <Route path='/restaurant/:slug' element={<RestaurantDetail />} />
       <Route path='/atractivo/:slug' element={<AtractivoDetail />} />
+      <Route path='/xicotepec/tour/:slug' element={<TourDetail />} />
       <Route path="*" element={<Error404 />} />
     </Routes>
   );
