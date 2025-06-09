@@ -18,6 +18,7 @@ import {
 } from 'react-icons/fa';
 import { getHotelBySlug } from '../../components/xicotepec/hotels/hotelsData';
 import './HotelDetail.css';
+import XicotepecFooter from '../../components/xicotepec/footer/XicotepecFooter';
 
 const HotelDetail = () => {
     const { slug } = useParams();
@@ -33,7 +34,7 @@ const HotelDetail = () => {
                 </button>
             </div>
         );
-    }    const handleWhatsAppClick = () => {
+    } const handleWhatsAppClick = () => {
         if (hotel.whatsapp) {
             window.open(`https://wa.me/${hotel.whatsapp.replace(/\D/g, '')}`, '_blank');
         }
@@ -53,7 +54,7 @@ const HotelDetail = () => {
 
         if (hotel.redes_sociales) {
             let socialItems = [];
-            
+
             // Manejar tanto arrays como strings
             if (Array.isArray(hotel.redes_sociales)) {
                 socialItems = hotel.redes_sociales;
@@ -278,27 +279,26 @@ const HotelDetail = () => {
                                 <div className="social-networks">
                                     <h5>Redes Sociales</h5>
                                     <div className="social-list">                                        {socialNetworks.map((network, index) => (
-                                            <a
-                                                key={index}
-                                                href={network.url}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="social-item"
-                                                style={{ '--social-color': network.color }}
-                                            >
-                                                <network.icon className="social-icon" />
-                                                <span className="social-text">
-                                                    {network.name}
-                                                </span>
-                                            </a>
-                                        ))}
+                                        <a
+                                            key={index}
+                                            href={network.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="social-item"
+                                            style={{ '--social-color': network.color }}
+                                        >
+                                            <network.icon className="social-icon" />
+                                            <span className="social-text">
+                                                {network.name}
+                                            </span>
+                                        </a>
+                                    ))}
                                     </div>
                                 </div>
                             )}
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </div>                </div>            </div>
+            <XicotepecFooter />
         </div>
     );
 };

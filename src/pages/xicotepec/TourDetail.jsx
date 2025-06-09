@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { FaArrowLeft, FaClock, FaUsers, FaMapMarkerAlt, FaPhone, FaWhatsapp, FaEnvelope, FaFacebook, FaInstagram, FaStar, FaHeart, FaShare, FaTimes, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { getTourBySlug } from '../../components/xicotepec/tours/toursData';
 import './TourDetail.css';
+import XicotepecFooter from '../../components/xicotepec/footer/XicotepecFooter';
 
 const TourDetail = () => {
     const { slug } = useParams();
@@ -81,19 +82,19 @@ const TourDetail = () => {
         <div className="tour-detail-container">
             {/* Header con imagen principal */}
             <div className="tour-detail-header">
-                <div 
+                <div
                     className="tour-detail-hero-image"
                     style={{ backgroundImage: `url(${selectedImage || tour.image})` }}
                 >
                     <div className="tour-detail-hero-overlay">
-                        <button 
+                        <button
                             onClick={() => navigate('/xicotepec')}
                             className="tour-detail-back-button"
                         >
                             <FaArrowLeft />
                             <span>Volver</span>
                         </button>
-                        
+
                         <div className="tour-detail-hero-content">
                             <div className="tour-detail-category">{tour.category}</div>
                             <h1 className="tour-detail-title">{tour.title}</h1>
@@ -246,7 +247,7 @@ const TourDetail = () => {
                         <h2>Galería</h2>
                         <div className="tour-detail-gallery">
                             {tour.gallery.map((image, index) => (
-                                <div 
+                                <div
                                     key={index}
                                     className="tour-detail-gallery-item"
                                     onClick={() => handleImageClick(image, index)}
@@ -280,21 +281,21 @@ const TourDetail = () => {
                         </div>
 
                         <div className="tour-detail-contact-buttons">
-                            <button 
+                            <button
                                 onClick={handleWhatsAppClick}
                                 className="tour-detail-contact-btn tour-detail-whatsapp-btn"
                             >
                                 <FaWhatsapp />
                                 <span>WhatsApp</span>
                             </button>
-                            <button 
+                            <button
                                 onClick={handlePhoneClick}
                                 className="tour-detail-contact-btn tour-detail-phone-btn"
                             >
                                 <FaPhone />
                                 <span>Llamar</span>
                             </button>
-                            <button 
+                            <button
                                 onClick={handleEmailClick}
                                 className="tour-detail-contact-btn tour-detail-email-btn"
                             >
@@ -309,7 +310,7 @@ const TourDetail = () => {
                                 <h4>Síguenos</h4>
                                 <div className="tour-detail-social-buttons">
                                     {tour.contact.socialMedia.facebook && (
-                                        <a 
+                                        <a
                                             href={`https://facebook.com/${tour.contact.socialMedia.facebook}`}
                                             target="_blank"
                                             rel="noopener noreferrer"
@@ -319,7 +320,7 @@ const TourDetail = () => {
                                         </a>
                                     )}
                                     {tour.contact.socialMedia.instagram && (
-                                        <a 
+                                        <a
                                             href={`https://instagram.com/${tour.contact.socialMedia.instagram}`}
                                             target="_blank"
                                             rel="noopener noreferrer"
@@ -364,24 +365,24 @@ const TourDetail = () => {
             {showGallery && (
                 <div className="tour-detail-gallery-modal" onClick={() => setShowGallery(false)}>
                     <div className="tour-detail-gallery-content" onClick={(e) => e.stopPropagation()}>
-                        <button 
+                        <button
                             className="tour-detail-gallery-close"
                             onClick={() => setShowGallery(false)}
                         >
                             <FaTimes />
                         </button>
-                        <button 
+                        <button
                             className="tour-detail-gallery-nav tour-detail-gallery-prev"
                             onClick={prevImage}
                         >
                             <FaChevronLeft />
                         </button>
-                        <img 
-                            src={selectedImage} 
+                        <img
+                            src={selectedImage}
                             alt={`${tour.title} - Imagen ${currentImageIndex + 1}`}
                             className="tour-detail-gallery-image"
                         />
-                        <button 
+                        <button
                             className="tour-detail-gallery-nav tour-detail-gallery-next"
                             onClick={nextImage}
                         >
@@ -391,8 +392,8 @@ const TourDetail = () => {
                             {currentImageIndex + 1} / {tour.gallery.length}
                         </div>
                     </div>
-                </div>
-            )}
+                </div>)}
+            <XicotepecFooter />
         </div>
     );
 };

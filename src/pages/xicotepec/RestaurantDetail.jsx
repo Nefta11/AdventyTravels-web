@@ -4,6 +4,7 @@ import { FaArrowLeft, FaMapMarkerAlt, FaPhone, FaClock, FaUtensils, FaCreditCard
 import { restaurantsData } from '../../components/xicotepec/restaurants/restaurantsData';
 import ScrollToTop from '../../utils/ScrollToTop';
 import './RestaurantDetail.css';
+import XicotepecFooter from '../../components/xicotepec/footer/XicotepecFooter';
 
 const RestaurantDetail = () => {
     const { slug } = useParams();
@@ -318,10 +319,10 @@ const RestaurantDetail = () => {
                                     ))}
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </div>                    </div>
                 </div>
             </div>
+            <XicotepecFooter />
         </>
     );
 };

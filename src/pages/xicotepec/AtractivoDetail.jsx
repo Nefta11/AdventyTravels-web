@@ -17,6 +17,7 @@ import {
 } from 'react-icons/fa';
 import './AtractivoDetail.css';
 import { getAtractivoBySlug } from '../../components/xicotepec/atractivos/atractivosData';
+import XicotepecFooter from '../../components/xicotepec/footer/XicotepecFooter';
 
 const AtractivoDetail = () => {
     const { slug } = useParams();
@@ -341,13 +342,12 @@ const AtractivoDetail = () => {
                                         <span>{atractivo.duration}</span>
                                     </div>
                                 )}
-                            </div>
-                        )}
+                            </div>)}
                     </div>
                 </div>
             </div>
-        </div>
-    );
+            <XicotepecFooter />
+        </div>);
 };
 
 export default AtractivoDetail;

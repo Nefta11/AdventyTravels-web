@@ -1,0 +1,596 @@
+/* XicotepecFooter.css - Estilos del footer compacto para Xicotepec */
+
+/* Variables CSS - Paleta Pueblerina Elegante */
+.xicotepec-footer {
+    /* Colores principales - Tierra y Tradición */
+    --footer-burnt-sienna: #B8572A;
+    --footer-adobe-clay: #C2724B;
+    --footer-forest-pine: #5A7C58;
+    --footer-warm-ivory: #F7F3E9;
+    
+    /* Acentos sofisticados */
+    --footer-copper-sunset: #E87B3E;
+    --footer-misty-sage: #9CAF88;
+    --footer-antique-gold: #D4AF37;
+    --footer-storm-blue: #627B8C;
+    
+    /* Neutrales elegantes */
+    --footer-warm-stone: #8C7B6B;
+    --footer-soft-linen: #F2EDE4;
+    --footer-deep-earth: #3A2F26;
+    --footer-pearl-sand: #E8DDD4;
+    --footer-charcoal-ink: #2C2520;
+    
+    /* Colores complementarios */
+    --footer-text-light: #ffffff;
+    --footer-text-dark: #2C2520;
+    --footer-text-gray: #8C7B6B;
+    --footer-bg-light: #F7F3E9;
+    --footer-bg-white: #ffffff;
+    --footer-shadow-light: 0 2px 8px rgba(184, 87, 42, 0.06);
+    --footer-shadow-medium: 0 3px 12px rgba(184, 87, 42, 0.08);
+    --footer-shadow-strong: 0 4px 16px rgba(184, 87, 42, 0.1);
+}
+
+/* Contenedor principal del footer */
+.xicotepec-footer {
+    position: relative;
+    background: linear-gradient(135deg, 
+        var(--footer-deep-earth) 0%,
+        var(--footer-charcoal-ink) 30%,
+        var(--footer-burnt-sienna) 70%,
+        var(--footer-adobe-clay) 100%);
+    color: var(--footer-text-light);
+    font-family: "Gilroy", sans-serif;
+    overflow: hidden;
+}
+
+/* Onda decorativa - más pequeña */
+.xicotepec-footer-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M1200 120L0 16.48 0 0 1200 0 1200 120z' fill='%23fff'%3E%3C/path%3E%3C/svg%3E") repeat-x;
+    background-size: 1200px 120px;
+    z-index: 1;
+}
+
+/* Container principal - padding reducido */
+.xicotepec-footer-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 35px 20px 15px;
+}
+
+/* Header del footer - más compacto */
+.xicotepec-footer-header {
+    text-align: center;
+    margin-bottom: 25px;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.xicotepec-footer-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.xicotepec-footer-title h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin: 0;
+    background: linear-gradient(135deg, 
+        var(--footer-text-light) 0%,
+        var(--footer-antique-gold) 50%,
+        var(--footer-text-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.xicotepec-footer-heart {
+    color: var(--footer-copper-sunset);
+    font-size: 1.2rem;
+    animation: heartbeat 2s ease-in-out infinite;
+    filter: drop-shadow(0 2px 6px rgba(232, 123, 62, 0.3));
+}
+
+.xicotepec-footer-subtitle {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--footer-antique-gold);
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 3px;
+}
+
+.xicotepec-footer-description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--footer-text-light);
+    opacity: 0.9;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Contenido principal - gaps reducidos */
+.xicotepec-footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+    animation: fadeInUp 0.6s ease-out 0.15s both;
+}
+
+/* Secciones - espaciado reducido */
+.xicotepec-footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.xicotepec-footer-section-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--footer-antique-gold);
+    margin: 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+}
+
+/* Grid de exploración - más compacto */
+.xicotepec-footer-explore-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.xicotepec-footer-explore-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.xicotepec-footer-explore-item:hover {
+    background: rgba(232, 123, 62, 0.15);
+    border-color: var(--footer-copper-sunset);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(232, 123, 62, 0.15);
+}
+
+.xicotepec-footer-explore-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--footer-copper-sunset), var(--footer-antique-gold));
+    border-radius: 6px;
+    color: white;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(232, 123, 62, 0.2);
+}
+
+.xicotepec-footer-explore-content h4 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0 0 2px 0;
+    color: var(--footer-text-light);
+}
+
+.xicotepec-footer-explore-content p {
+    font-size: 0.75rem;
+    margin: 0;
+    color: var(--footer-text-light);
+    opacity: 0.8;
+    line-height: 1.3;
+}
+
+/* Contacto - más compacto */
+.xicotepec-footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.xicotepec-footer-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.xicotepec-footer-contact-icon {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(212, 175, 55, 0.2);
+    border-radius: 6px;
+    color: var(--footer-antique-gold);
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+
+.xicotepec-footer-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.xicotepec-footer-contact-info span {
+    font-size: 0.8rem;
+    color: var(--footer-text-light);
+    line-height: 1.3;
+}
+
+/* Redes sociales - más pequeñas */
+.xicotepec-footer-social {
+    margin-top: 10px;
+}
+
+.xicotepec-footer-social h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    color: var(--footer-antique-gold);
+}
+
+.xicotepec-footer-social-icons {
+    display: flex;
+    gap: 8px;
+}
+
+.xicotepec-footer-social-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-decoration: none;
+    color: white;
+}
+
+.xicotepec-footer-social-icon.instagram {
+    background: linear-gradient(135deg, #E4405F, #8A3AB9);
+}
+
+.xicotepec-footer-social-icon.facebook {
+    background: #1877F2;
+}
+
+.xicotepec-footer-social-icon.whatsapp {
+    background: #25D366;
+}
+
+.xicotepec-footer-social-icon:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Información de la agencia - texto más pequeño */
+.xicotepec-footer-agency p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: var(--footer-text-light);
+    opacity: 0.9;
+    margin: 0 0 12px 0;
+}
+
+/* Bottom bar - más compacto */
+.xicotepec-footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+.xicotepec-footer-copyright p {
+    margin: 0;
+    font-size: 0.75rem;
+    color: var(--footer-text-light);
+    opacity: 0.8;
+}
+
+.xicotepec-footer-location {
+    color: var(--footer-antique-gold) !important;
+    font-weight: 600;
+    margin-top: 3px !important;
+}
+
+.xicotepec-footer-dev {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.75rem;
+    color: var(--footer-text-light);
+    opacity: 0.8;
+}
+
+.xicotepec-footer-dev-heart {
+    color: var(--footer-copper-sunset);
+    animation: heartbeat 2s ease-in-out infinite;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heartbeat {
+    0%, 50%, 100% {
+        transform: scale(1);
+    }
+    25%, 75% {
+        transform: scale(1.08);
+    }
+}
+
+/* Responsive Design - Mejorado para móviles */
+@media (max-width: 968px) {
+    .xicotepec-footer-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .xicotepec-footer-explore-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .xicotepec-footer-title h2 {
+        font-size: 1.4rem;
+    }
+    
+    .xicotepec-footer-section-title {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .xicotepec-footer-container {
+        padding: 25px 12px 12px;
+    }
+
+    .xicotepec-footer-header {
+        margin-bottom: 20px;
+    }
+
+    .xicotepec-footer-title {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .xicotepec-footer-title h2 {
+        font-size: 1.3rem;
+    }
+
+    .xicotepec-footer-heart {
+        font-size: 1rem;
+    }
+
+    .xicotepec-footer-subtitle {
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+    }
+
+    .xicotepec-footer-description {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+
+    .xicotepec-footer-content {
+        gap: 18px;
+    }
+
+    .xicotepec-footer-section {
+        gap: 12px;
+    }
+
+    .xicotepec-footer-section-title {
+        font-size: 0.95rem;
+        gap: 6px;
+    }
+
+    .xicotepec-footer-explore-item {
+        padding: 8px;
+        gap: 8px;
+    }
+
+    .xicotepec-footer-explore-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+    }
+
+    .xicotepec-footer-explore-content h4 {
+        font-size: 0.8rem;
+    }
+
+    .xicotepec-footer-explore-content p {
+        font-size: 0.7rem;
+    }
+
+    .xicotepec-footer-contact-icon {
+        width: 24px;
+        height: 24px;
+        font-size: 0.7rem;
+    }
+
+    .xicotepec-footer-contact-info span {
+        font-size: 0.75rem;
+    }
+
+    .xicotepec-footer-social-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+    }
+
+    .xicotepec-footer-agency p {
+        font-size: 0.75rem;
+    }
+
+    .xicotepec-footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .xicotepec-footer-copyright p,
+    .xicotepec-footer-dev {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .xicotepec-footer-container {
+        padding: 20px 8px 10px;
+    }
+
+    .xicotepec-footer-wave {
+        height: 30px;
+    }
+
+    .xicotepec-footer-header {
+        margin-bottom: 15px;
+    }
+
+    .xicotepec-footer-title h2 {
+        font-size: 1.1rem;
+    }
+
+    .xicotepec-footer-heart {
+        font-size: 0.9rem;
+    }
+
+    .xicotepec-footer-subtitle {
+        font-size: 0.7rem;
+    }
+
+    .xicotepec-footer-description {
+        font-size: 0.8rem;
+        max-width: 100%;
+    }
+
+    .xicotepec-footer-content {
+        gap: 15px;
+    }
+
+    .xicotepec-footer-section {
+        gap: 10px;
+    }
+
+    .xicotepec-footer-section-title {
+        font-size: 0.9rem;
+        padding-bottom: 6px;
+    }
+
+    .xicotepec-footer-explore-grid {
+        gap: 8px;
+    }
+
+    .xicotepec-footer-explore-item {
+        padding: 6px;
+        gap: 6px;
+        border-radius: 6px;
+    }
+
+    .xicotepec-footer-explore-icon {
+        width: 24px;
+        height: 24px;
+        font-size: 0.7rem;
+        border-radius: 4px;
+    }
+
+    .xicotepec-footer-explore-content h4 {
+        font-size: 0.75rem;
+    }
+
+    .xicotepec-footer-explore-content p {
+        font-size: 0.65rem;
+        line-height: 1.2;
+    }
+
+    .xicotepec-footer-contact {
+        gap: 8px;
+    }
+
+    .xicotepec-footer-contact-item {
+        gap: 8px;
+    }
+
+    .xicotepec-footer-contact-icon {
+        width: 20px;
+        height: 20px;
+        font-size: 0.65rem;
+    }
+
+    .xicotepec-footer-contact-info span {
+        font-size: 0.7rem;
+    }
+
+    .xicotepec-footer-social h4 {
+        font-size: 0.8rem;
+        margin-bottom: 8px;
+    }
+
+    .xicotepec-footer-social-icons {
+        gap: 6px;
+    }
+
+    .xicotepec-footer-social-icon {
+        width: 24px;
+        height: 24px;
+        font-size: 0.7rem;
+    }
+
+    .xicotepec-footer-agency p {
+        font-size: 0.7rem;
+        line-height: 1.3;
+    }
+
+    .xicotepec-footer-bottom {
+        gap: 6px;
+        padding-top: 8px;
+    }
+
+    .xicotepec-footer-copyright p,
+    .xicotepec-footer-dev {
+        font-size: 0.65rem;
+    }
+}
