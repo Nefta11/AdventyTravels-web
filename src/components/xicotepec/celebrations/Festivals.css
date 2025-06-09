@@ -1,25 +1,55 @@
-/* Festivals.css - Paleta basada en Pueblos Mágicos - MORADO (Cultura y Tradición) */
+/* Festivals.css - Paleta Pueblerina Elegante - SIENA QUEMADA (Cultura y Tradición) */
+
 .festivals-component-wrapper {
-    /* Variables CSS específicas para el componente Festivals - Colores del Rehilete Pueblos Mágicos */
-    --festivals-primary-blue: #1E88E5;
-    --festivals-accent-purple: #7B1FA2;
-    --festivals-accent-green: #388E3C;
-    --festivals-accent-orange: #F57C00;
-    --festivals-accent-pink: #E91E63;
+    /* Variables CSS pueblerinas sofisticadas */
+    /* Colores principales - Tierra y Tradición */
+    --festivals-burnt-sienna: #B8572A;
+    /* Siena quemada - techos de barro elegantes */
+    --festivals-adobe-clay: #C2724B;
+    /* Arcilla adobe - muros coloniales refinados */
+    --festivals-forest-pine: #5A7C58;
+    /* Pino serrano - naturaleza sofisticada */
+    --festivals-warm-ivory: #F7F3E9;
+    /* Marfil cálido - cal y adobe fino */
+
+    /* Acentos sofisticados */
+    --festivals-copper-sunset: #E87B3E;
+    /* Cobre sunset - atardeceres dorados */
+    --festivals-misty-sage: #9CAF88;
+    /* Salvia brumosa - vegetación serrana */
+    --festivals-antique-gold: #D4AF37;
+    /* Oro antiguo - campanarios e iglesias */
+    --festivals-storm-blue: #627B8C;
+    /* Azul tormenta - cielos dramáticos */
+
+    /* Neutrales elegantes */
+    --festivals-warm-stone: #8C7B6B;
+    /* Piedra cálida - cantera colonial */
+    --festivals-soft-linen: #F2EDE4;
+    /* Lino suave - textiles naturales */
+    --festivals-deep-earth: #3A2F26;
+    /* Tierra profunda - madera envejecida */
+    --festivals-pearl-sand: #E8DDD4;
+    /* Arena perla - senderos empedrados */
+    --festivals-charcoal-ink: #2C2520;
+    /* Tinta carbón - texto principal */
+
+    /* Variables temáticas actualizadas */
     --festivals-text-light: #ffffff;
-    --festivals-text-dark: #333333;
-    --festivals-text-gray: #666666;
-    --festivals-text-muted: #888888;
-    --festivals-bg-light: #f8f9fa;
+    --festivals-text-dark: #2C2520;
+    --festivals-text-gray: #8C7B6B;
+    --festivals-text-muted: #8C7B6B;
+    --festivals-bg-light: #F7F3E9;
     --festivals-bg-white: #ffffff;
-    --festivals-bg-section: #fafbfc;
-    --festivals-border-light: #e1e5e9;
-    --festivals-shadow-light: 0 2px 12px rgba(0, 0, 0, 0.08);
-    --festivals-shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
-    --festivals-shadow-strong: 0 8px 32px rgba(0, 0, 0, 0.16);
+    --festivals-bg-section: #F2EDE4;
+    --festivals-border-light: #E8DDD4;
+    --festivals-shadow-light: 0 2px 12px rgba(184, 87, 42, 0.08);
+    --festivals-shadow-medium: 0 4px 20px rgba(184, 87, 42, 0.12);
+    --festivals-shadow-strong: 0 8px 32px rgba(184, 87, 42, 0.16);
+
     width: 100%;
     padding: 60px 0;
-    background: var(--festivals-bg-light);
+    background: white;
     font-family: "Gilroy", sans-serif;
     line-height: 1.6;
     position: relative;
@@ -34,8 +64,8 @@
     right: 0;
     bottom: 0;
     background:
-        radial-gradient(circle at 25% 75%, rgba(123, 31, 162, 0.03) 0%, transparent 50%),
-        radial-gradient(circle at 75% 25%, rgba(123, 31, 162, 0.05) 0%, transparent 60%);
+        radial-gradient(circle at 25% 75%, rgba(184, 87, 42, 0.02) 0%, transparent 50%),
+        radial-gradient(circle at 75% 25%, rgba(232, 123, 62, 0.03) 0%, transparent 60%);
     pointer-events: none;
 }
 
@@ -55,12 +85,14 @@
 .festivals-main-title {
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 900;
-    color: var(--festivals-text-dark);
+    color: var(--festivals-deep-earth);
     margin: 0 0 15px 0;
+    /* Gradiente con siena quemada como protagonista - representa cultura y tradición pueblerina */
     background: linear-gradient(135deg,
-            var(--festivals-accent-purple) 0%,
-            var(--festivals-primary-blue) 1%,
-            var(--festivals-accent-purple) 100%);
+            var(--festivals-burnt-sienna) 0%,
+            var(--festivals-copper-sunset) 30%,
+            var(--festivals-antique-gold) 60%,
+            var(--festivals-burnt-sienna) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -70,12 +102,12 @@
     width: 100px;
     height: 4px;
     background: linear-gradient(90deg,
-            var(--festivals-accent-purple),
-            rgba(123, 31, 162, 0.7),
-            var(--festivals-accent-purple));
+            var(--festivals-burnt-sienna),
+            var(--festivals-copper-sunset),
+            var(--festivals-burnt-sienna));
     border-radius: 2px;
     margin: 0 auto;
-    box-shadow: 0 2px 8px rgba(123, 31, 162, 0.3);
+    box-shadow: 0 2px 8px rgba(184, 87, 42, 0.3);
 }
 
 .festivals-component-grid {
@@ -100,7 +132,7 @@
 .festivals-component-card:hover {
     transform: translateY(-10px) scale(1.02);
     box-shadow: var(--festivals-shadow-strong);
-    border-color: var(--festivals-accent-purple);
+    border-color: var(--festivals-burnt-sienna);
 }
 
 .festivals-component-card-image {
@@ -110,6 +142,7 @@
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
+    filter: brightness(1.05) contrast(1.02);
 }
 
 .festivals-component-card-overlay {
@@ -119,9 +152,9 @@
     right: 0;
     bottom: 0;
     background: linear-gradient(135deg,
-            rgba(123, 31, 162, 0.7) 0%,
-            rgba(123, 31, 162, 0.5) 50%,
-            rgba(123, 31, 162, 0.8) 100%);
+            rgba(0, 0, 0, 0.3) 0%,
+            rgba(0, 0, 0, 0.2) 50%,
+            rgba(0, 0, 0, 0.4) 100%);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -132,9 +165,9 @@
 
 .festivals-component-card:hover .festivals-component-card-overlay {
     background: linear-gradient(135deg,
-            rgba(123, 31, 162, 0.85) 0%,
-            rgba(123, 31, 162, 0.6) 50%,
-            rgba(123, 31, 162, 0.9) 100%);
+            rgba(0, 0, 0, 0.4) 0%,
+            rgba(184, 87, 42, 0.15) 30%,
+            rgba(0, 0, 0, 0.5) 100%);
 }
 
 .festivals-component-card-date {
@@ -143,17 +176,19 @@
     gap: 8px;
     font-size: 0.9rem;
     font-weight: 600;
-    opacity: 0.95;
-    background: rgba(123, 31, 162, 0.8);
+    background: rgba(247, 243, 233, 0.9);
+    color: var(--festivals-deep-earth);
     padding: 8px 12px;
     border-radius: 20px;
     backdrop-filter: blur(10px);
     align-self: flex-start;
-    color: var(--festivals-text-light);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(247, 243, 233, 0.8);
 }
 
 .festivals-component-card-date-icon {
     font-size: 0.8rem;
+    color: var(--festivals-warm-stone);
 }
 
 .festivals-component-card-content {
@@ -167,16 +202,18 @@
     font-weight: 800;
     line-height: 1.2;
     margin: 0;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.6);
     color: var(--festivals-text-light);
+    filter: drop-shadow(0 1px 5px rgba(0, 0, 0, 0.3));
 }
 
 .festivals-component-card-description {
     font-size: 1rem;
-    opacity: 0.9;
+    opacity: 0.95;
     margin: 0;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
     color: var(--festivals-text-light);
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.3));
 }
 
 .festivals-component-card-location {
@@ -184,232 +221,17 @@
     align-items: center;
     gap: 6px;
     font-size: 0.85rem;
-    opacity: 0.8;
+    opacity: 0.9;
     margin-top: 5px;
     color: var(--festivals-text-light);
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
 }
 
 .festivals-component-card-location-icon {
     font-size: 0.8rem;
 }
 
-/* Modal Backdrop */
-.festivals-component-modal-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.85);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    padding: 20px;
-    backdrop-filter: blur(5px);
-    animation: festivals-modal-fade-in 0.3s ease;
-}
-
-/* Modal Container */
-.festivals-component-modal {
-    background: var(--festivals-bg-white);
-    border-radius: 20px;
-    max-width: 800px;
-    max-height: 90vh;
-    width: 100%;
-    overflow: hidden;
-    box-shadow: var(--festivals-shadow-strong);
-    position: relative;
-    animation: festivals-modal-slide-up 0.4s ease;
-    overflow-y: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    border: 2px solid rgba(123, 31, 162, 0.2);
-}
-
-.festivals-component-modal::-webkit-scrollbar {
-    display: none;
-}
-
-/* Modal Close Button */
-.festivals-component-modal-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: rgba(123, 31, 162, 0.8);
-    color: var(--festivals-text-light);
-    border: none;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 1001;
-    transition: all 0.3s ease;
-    font-size: 1.1rem;
-}
-
-.festivals-component-modal-close:hover {
-    background: var(--festivals-accent-purple);
-    transform: scale(1.1);
-}
-
-/* Modal Header */
-.festivals-component-modal-header {
-    position: relative;
-    height: 250px;
-    display: flex;
-    align-items: end;
-}
-
-.festivals-component-modal-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.festivals-component-modal-header-content {
-    position: relative;
-    z-index: 2;
-    background: rgba(123, 31, 162, 0.8);
-    padding: 25px 30px;
-    color: var(--festivals-text-light);
-    width: 100%;
-    backdrop-filter: blur(2px);
-}
-
-.festivals-component-modal-title {
-    font-size: 2rem;
-    font-weight: 800;
-    margin: 0 0 15px 0;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    color: var(--festivals-text-light);
-}
-
-.festivals-component-modal-meta {
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-}
-
-.festivals-component-modal-meta-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--festivals-text-light);
-}
-
-.festivals-component-modal-meta-icon {
-    font-size: 0.9rem;
-    opacity: 0.9;
-}
-
-/* Modal Body */
-.festivals-component-modal-body {
-    padding: 30px;
-}
-
-.festivals-component-modal-section {
-    margin-bottom: 30px;
-}
-
-.festivals-component-modal-section:last-child {
-    margin-bottom: 0;
-}
-
-.festivals-component-modal-section-title {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: var(--festivals-accent-purple);
-    margin: 0 0 15px 0;
-    position: relative;
-}
-
-.festivals-component-modal-section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 40px;
-    height: 2px;
-    background: var(--festivals-accent-purple);
-    border-radius: 1px;
-}
-
-.festivals-component-modal-section-icon {
-    font-size: 1.1rem;
-    color: var(--festivals-accent-purple);
-}
-
-.festivals-component-modal-description,
-.festivals-component-modal-significance {
-    font-size: 1rem;
-    color: var(--festivals-text-dark);
-    line-height: 1.7;
-    margin: 0;
-    text-align: justify;
-}
-
-/* Lista de actividades */
-.festivals-component-modal-activities {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    gap: 10px;
-}
-
-.festivals-component-modal-activity {
-    padding: 12px 16px;
-    background: var(--festivals-bg-section);
-    border-radius: 10px;
-    border-left: 4px solid var(--festivals-accent-purple);
-    font-size: 0.95rem;
-    color: var(--festivals-text-dark);
-    transition: all 0.3s ease;
-}
-
-.festivals-component-modal-activity:hover {
-    transform: translateX(5px);
-    box-shadow: var(--festivals-shadow-light);
-}
-
 /* Animaciones */
-@keyframes festivals-modal-fade-in {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes festivals-modal-slide-up {
-    from {
-        opacity: 0;
-        transform: translateY(50px) scale(0.9);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
 @keyframes festivals-card-fade-in {
     from {
         opacity: 0;
@@ -452,14 +274,6 @@
     .festivals-component-header {
         margin-bottom: 40px;
     }
-
-    .festivals-component-modal {
-        max-width: 90vw;
-    }
-
-    .festivals-component-modal-title {
-        font-size: 1.7rem;
-    }
 }
 
 @media (max-width: 768px) {
@@ -494,32 +308,6 @@
 
     .festivals-component-header {
         margin-bottom: 35px;
-    }
-
-    .festivals-component-modal {
-        max-width: 95vw;
-        max-height: 95vh;
-    }
-
-    .festivals-component-modal-header {
-        height: 200px;
-    }
-
-    .festivals-component-modal-header-content {
-        padding: 20px 25px;
-    }
-
-    .festivals-component-modal-title {
-        font-size: 1.5rem;
-    }
-
-    .festivals-component-modal-body {
-        padding: 25px 20px;
-    }
-
-    .festivals-component-modal-meta {
-        flex-direction: column;
-        gap: 10px;
     }
 }
 
@@ -561,36 +349,6 @@
         margin-bottom: 25px;
     }
 
-    .festivals-component-modal-header {
-        height: 180px;
-    }
-
-    .festivals-component-modal-header-content {
-        padding: 18px 20px;
-    }
-
-    .festivals-component-modal-title {
-        font-size: 1.3rem;
-    }
-
-    .festivals-component-modal-body {
-        padding: 20px 15px;
-    }
-
-    .festivals-component-modal-section-title {
-        font-size: 1.1rem;
-    }
-
-    .festivals-component-modal-description,
-    .festivals-component-modal-significance {
-        font-size: 0.9rem;
-    }
-
-    .festivals-component-modal-activity {
-        font-size: 0.85rem;
-        padding: 10px 14px;
-    }
-
     .festivals-component-card:hover {
         transform: translateY(-5px) scale(1.01);
     }
@@ -619,21 +377,5 @@
 
     .festivals-component-card-description {
         font-size: 0.8rem;
-    }
-
-    .festivals-component-modal-close {
-        width: 40px;
-        height: 40px;
-        font-size: 1rem;
-        top: 15px;
-        right: 15px;
-    }
-
-    .festivals-component-modal-header {
-        height: 160px;
-    }
-
-    .festivals-component-modal-title {
-        font-size: 1.2rem;
     }
 }

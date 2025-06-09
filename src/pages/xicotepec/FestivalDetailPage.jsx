@@ -1,6 +1,7 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import { FaArrowLeft, FaCalendarAlt, FaMapMarkerAlt, FaUsers, FaClock, FaHeart } from 'react-icons/fa';
 import './FestivalDetailPage.css';
+import XicotepecFooter from '../../components/xicotepec/footer/XicotepecFooter';
 
 const FestivalDetailPage = () => {
     // const { id } = useParams();
@@ -119,10 +120,10 @@ const FestivalDetailPage = () => {
                         >
                             <FaArrowLeft />
                             Volver a Xicotepec
-                        </button>
-                    </div>
+                        </button>                    </div>
                 </div>
             </div>
+            <XicotepecFooter />
         </div>
     );
 };

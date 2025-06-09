@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { I18nextProvider } from 'react-i18next';
 import { AnimatePresence } from 'framer-motion';
 import LenguajeTranslations from './lenguaje/LenguajeTranslations';
+import ScrollToTop from './utils/ScrollToTop';
 import Home from './pages/Home';
 import Experiences from './pages/Experiences';
 import AboutUs from './pages/AboutUs';
@@ -15,11 +16,16 @@ import VerifyDistributor from './pages/VerifyDistributor';
 import AdventyPay from './pages/adventyPay/AdventyPay';
 import Xicotepec from './pages/Xicotepec';
 import FestivalDetailPage from './pages/xicotepec/FestivalDetailPage';
+import HotelDetail from './pages/xicotepec/HotelDetail';
+import RestaurantDetail from './pages/xicotepec/RestaurantDetail';
+import AtractivoDetail from './pages/xicotepec/AtractivoDetail';
+import TourDetail from './pages/xicotepec/TourDetail';
 
 function App() {
   return (
     <I18nextProvider i18n={LenguajeTranslations}>
       <BrowserRouter>
+        <ScrollToTop />
         <div className="container">
           <SpeedInsights />
           <AnimatePresence exitBeforeEnter>
@@ -44,9 +50,12 @@ function RoutesWithAnimation() {
       <Route path="/distribuidor" element={<Distribuidor />} />
       <Route path="/partners" element={<Partners />} />
       <Route path="/verify-distributor" element={<VerifyDistributor />} />
-      <Route path="/AdventyPay" element={<AdventyPay />} />
-      <Route path='/xicotepec' element={<Xicotepec />} />
+      <Route path="/AdventyPay" element={<AdventyPay />} />      <Route path='/xicotepec' element={<Xicotepec />} />
       <Route path='/festival/:id' element={<FestivalDetailPage />} />
+      <Route path='/hotel/:slug' element={<HotelDetail />} />
+      <Route path='/restaurant/:slug' element={<RestaurantDetail />} />
+      <Route path='/atractivo/:slug' element={<AtractivoDetail />} />
+      <Route path='/xicotepec/tour/:slug' element={<TourDetail />} />
       <Route path="*" element={<Error404 />} />
     </Routes>
   );
