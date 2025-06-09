@@ -45,12 +45,12 @@ const RestaurantDetail = () => {
     // Función para generar URLs de redes sociales
     const getSocialNetworkUrl = (social) => {
         const cleanUrl = social.url.trim();
-        
+
         // Si ya es una URL completa, devolverla tal como está
         if (cleanUrl.startsWith('http://') || cleanUrl.startsWith('https://')) {
             return cleanUrl;
         }
-        
+
         // Generar URLs basadas en el tipo
         switch (social.type) {
             case 'facebook':
@@ -59,13 +59,13 @@ const RestaurantDetail = () => {
                     return cleanUrl.startsWith('http') ? cleanUrl : `https://${cleanUrl}`;
                 }
                 return `https://www.facebook.com/${cleanUrl.replace('@', '')}`;
-            
+
             case 'instagram':
                 return `https://www.instagram.com/${cleanUrl.replace('@', '')}`;
-            
+
             case 'tiktok':
                 return `https://www.tiktok.com/${cleanUrl.replace('@', '')}`;
-            
+
             default:
                 return '#';
         }
@@ -192,13 +192,27 @@ const RestaurantDetail = () => {
                     <div className="restaurant-title-section">
                         <h1 className="restaurant-detail-title">{restaurant.nombre_establecimiento}</h1>
                         <div className="restaurant-basic-info">
-                            <div className="restaurant-cuisine-type">
-                                <FaUtensils />
-                                <span>{Array.isArray(restaurant.tipo_comida) ? restaurant.tipo_comida.join(', ') : restaurant.tipo_comida}</span>
+                            <div className="restaurant-cuisine-types">
+                                <div className="cuisine-section-title">
+                                    <FaUtensils />
+                                    <span>Especialidades Gastronómicas</span>
+                                </div>
+                                <div className="cuisine-tags">
+                                    {Array.isArray(restaurant.tipo_comida)
+                                        ? restaurant.tipo_comida.map((cuisine, index) => (
+                                            <span key={index} className="cuisine-tag">
+                                                {cuisine}
+                                            </span>
+                                        ))
+                                        : <span className="cuisine-tag">{restaurant.tipo_comida}</span>
+                                    }
+                                </div>
                             </div>
-                            <div className="restaurant-price-range">
-                                <span className="price-label">Precio promedio:</span>
-                                <span className="price-value">{restaurant.rango_precios_promedio_persona}</span>
+                            <div className="restaurant-price-section">
+                                <div className="price-container">
+                                    <span className="price-label">Precio promedio por persona</span>
+                                    <span className="price-value">{restaurant.rango_precios_promedio_persona}</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -247,26 +261,26 @@ const RestaurantDetail = () => {
                                     <div className="contact-item">
                                         <FaPhone className="contact-icon" />
                                         <span>{restaurant.telefono}</span>
-                                    </div>                                    {socialNetworks.length > 0 && (                                        <div className="social-networks">
-                                            {socialNetworks.map((social, index) => (
-                                                <a 
-                                                    key={index} 
-                                                    href={getSocialNetworkUrl(social)} 
-                                                    target="_blank" 
-                                                    rel="noopener noreferrer" 
-                                                    className="social-item"
-                                                >
-                                                    {social.type === 'facebook' && <FaFacebook className="social-icon facebook" />}
-                                                    {social.type === 'instagram' && <FaInstagram className="social-icon instagram" />}
-                                                    {social.type === 'tiktok' && <FaInstagram className="social-icon tiktok" />}
-                                                    <span>
-                                                        {social.type === 'facebook' && 'Facebook'}
-                                                        {social.type === 'instagram' && 'Instagram'}
-                                                        {social.type === 'tiktok' && 'TikTok'}
-                                                    </span>
-                                                </a>
-                                            ))}
-                                        </div>
+                                    </div>                                    {socialNetworks.length > 0 && (<div className="social-networks">
+                                        {socialNetworks.map((social, index) => (
+                                            <a
+                                                key={index}
+                                                href={getSocialNetworkUrl(social)}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="social-item"
+                                            >
+                                                {social.type === 'facebook' && <FaFacebook className="social-icon facebook" />}
+                                                {social.type === 'instagram' && <FaInstagram className="social-icon instagram" />}
+                                                {social.type === 'tiktok' && <FaInstagram className="social-icon tiktok" />}
+                                                <span>
+                                                    {social.type === 'facebook' && 'Facebook'}
+                                                    {social.type === 'instagram' && 'Instagram'}
+                                                    {social.type === 'tiktok' && 'TikTok'}
+                                                </span>
+                                            </a>
+                                        ))}
+                                    </div>
                                     )}
                                 </div>
                             </div>
