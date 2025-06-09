@@ -20,7 +20,7 @@ const XicotepecFooter = () => {
     const navigate = useNavigate();
 
     const handleWhatsAppClick = () => {
-        const phone = "7647640000";
+        const phone = "5217716075321";
         const message = "Hola, me interesa conocer más sobre los destinos y servicios turísticos en Xicotepec de Juárez.";
         const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank');
@@ -31,25 +31,25 @@ const XicotepecFooter = () => {
             icon: <FaMountain />,
             title: "Atractivos",
             description: "Sitios emblemáticos",
-            action: () => navigate('/xicotepec#atractivos')
+            action: () => navigate('/atractivos')
         },
         {
             icon: <FaCoffee />,
             title: "Gastronomía",
             description: "Sabores regionales",
-            action: () => navigate('/xicotepec#restaurantes')
+            action: () => navigate('/restaurantes')
         },
         {
             icon: <FaRoute />,
             title: "Tours",
             description: "Experiencias únicas",
-            action: () => navigate('/xicotepec#tours')
+            action: () => navigate('/tours')
         },
         {
             icon: <FaCamera />,
             title: "Hospedaje",
             description: "Lugares para descansar",
-            action: () => navigate('/xicotepec#hoteles')
+            action: () => navigate('/hoteles')
         }
     ];
 
