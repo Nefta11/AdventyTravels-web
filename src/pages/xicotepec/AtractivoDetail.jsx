@@ -58,7 +58,7 @@ const AtractivoDetail = () => {
             default:
                 return <FaEye />;
         }
-    };    const renderFeatures = () => {
+    }; const renderFeatures = () => {
         if (!atractivo.features) return null;
 
         const featureIcons = {
@@ -221,7 +221,7 @@ const AtractivoDetail = () => {
                         {(atractivo.features || atractivo.specifications) && (
                             <div className="atractivo-detail-features-specs">
                                 <h3><FaStar /> Características y Detalles Técnicos</h3>
-                                
+
                                 {/* Características */}
                                 {atractivo.features && (
                                     <div className="features-section">
