@@ -4,38 +4,38 @@ const Atractivos = () => {
     const atractivos = [
         {
             id: 1,
-            image: "https://images.unsplash.com/photo-1504851149312-7a075b496cc7?w=400&h=300&fit=crop",
-            title: "Acampa en un rancho ecoturístico",
+            image: "https://images.unsplash.com/photo-1558020485-83a63e2b9b6a?w=400&h=300&fit=crop",
+            title: "La Xochipila",
             location: "XICOTEPEC"
         },
         {
             id: 2,
-            image: "https://images.unsplash.com/photo-1512090104996-1b8e2e3b1a4d?w=400&h=300&fit=crop",
-            title: "Adéntrate al mundo de la herbolaria",
+            image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop",
+            title: "Mirador de la Cruz Celestial, un encantador lugar en Puebla",
             location: "XICOTEPEC"
         },
         {
             id: 3,
-            image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
-            title: "Compra artesanías de Xicotepec",
+            image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=400&h=300&fit=crop",
+            title: "Museo Casa Carranza",
             location: "XICOTEPEC"
         },
         {
             id: 4,
-            image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=300&fit=crop",
-            title: "Deambula por los jardines de la Casa del Monje",
+            image: "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=400&h=300&fit=crop",
+            title: "Palacio Municipal de Xicotepec",
             location: "XICOTEPEC"
         },
         {
             id: 5,
-            image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop",
-            title: "Haz rafting en Cascadas Barbas de Carranza",
+            image: "https://images.unsplash.com/photo-1518972734183-d0243cd5ac20?w=400&h=300&fit=crop",
+            title: "Parroquia de San Juan Bautista",
             location: "XICOTEPEC"
         },
         {
             id: 6,
-            image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop",
-            title: "La Xochipila",
+            image: "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?w=400&h=300&fit=crop",
+            title: "Visita Tlaxcalantongo",
             location: "XICOTEPEC"
         }
     ];

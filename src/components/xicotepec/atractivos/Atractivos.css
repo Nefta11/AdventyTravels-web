@@ -121,15 +121,15 @@
 /* Grid de atractivos */
 .atractivos-component-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
     align-items: stretch;
 }
 
 /* Card individual */
 .atractivos-component-card {
     position: relative;
-    height: 200px;
+    height: 240px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -209,12 +209,12 @@
 /* Responsive Design */
 @media (max-width: 968px) {
     .atractivos-component-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 18px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
     .atractivos-component-card {
-        height: 180px;
+        height: 200px;
     }
 
     .atractivos-main-title-wrapper {
@@ -237,7 +237,7 @@
     }
 
     .atractivos-component-card {
-        height: 160px;
+        height: 180px;
     }
 
     .atractivos-component-card-overlay {
@@ -273,8 +273,8 @@
     }
 
     .atractivos-component-card {
-        height: 140px;
-        min-height: 140px;
+        height: 160px;
+        min-height: 160px;
     }
 
     .atractivos-component-card-overlay {
