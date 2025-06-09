@@ -1,4 +1,3 @@
-// XicotepecFooter.jsx - Footer compacto para Xicotepec
 import {
     FaMapMarkerAlt,
     FaPhone,
