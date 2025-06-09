@@ -23,26 +23,54 @@ const XicotepecFooter = () => {
         window.open(whatsappUrl, '_blank');
     };
 
+    // Funciones de navegación a secciones específicas
+    const scrollToSection = (sectionId) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    const handleAtractivos = () => {
+        scrollToSection('atractivos-section');
+    };
+
+    const handleGastronomia = () => {
+        scrollToSection('restaurants-section');
+    };
+
+    const handleTours = () => {
+        scrollToSection('tours-section');
+    };
+
+    const handleHospedaje = () => {
+        scrollToSection('hotels-section');
+    };
+
     const xicotepecSections = [
         {
             icon: <FaMountain />,
             title: "Atractivos",
             description: "Sitios emblemáticos",
+            action: handleAtractivos
         },
         {
             icon: <FaCoffee />,
             title: "Gastronomía",
             description: "Sabores regionales",
+            action: handleGastronomia
         },
         {
             icon: <FaRoute />,
             title: "Tours",
             description: "Experiencias únicas",
+            action: handleTours
         },
         {
             icon: <FaCamera />,
             title: "Hospedaje",
             description: "Lugares para descansar",
+            action: handleHospedaje
         }
     ];
 
