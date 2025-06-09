@@ -58,9 +58,7 @@ const AtractivoDetail = () => {
             default:
                 return <FaEye />;
         }
-    };
-
-    const renderFeatures = () => {
+    };    const renderFeatures = () => {
         if (!atractivo.features) return null;
 
         const featureIcons = {
@@ -79,12 +77,28 @@ const AtractivoDetail = () => {
             rafting: <FaRoute />
         };
 
+        const featureTranslations = {
+            cultural: 'Cultural',
+            religious: 'Religioso',
+            mystical: 'Místico',
+            historical: 'Histórico',
+            hiking: 'Senderismo',
+            nature: 'Naturaleza',
+            photography: 'Fotografía',
+            adventure: 'Aventura',
+            educational: 'Educativo',
+            architectural: 'Arquitectónico',
+            art: 'Arte',
+            waterfalls: 'Cascadas',
+            rafting: 'Rafting'
+        };
+
         return Object.entries(atractivo.features)
             .filter(([, value]) => value)
             .map(([key]) => (
                 <div key={key} className="feature-item">
                     {featureIcons[key] || <FaEye />}
-                    <span>{key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</span>
+                    <span>{featureTranslations[key] || key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</span>
                 </div>
             ));
     };
