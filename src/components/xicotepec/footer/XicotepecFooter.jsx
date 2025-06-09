@@ -31,25 +31,21 @@ const XicotepecFooter = () => {
             icon: <FaMountain />,
             title: "Atractivos",
             description: "Sitios emblemáticos",
-            action: () => navigate('/atractivos')
         },
         {
             icon: <FaCoffee />,
             title: "Gastronomía",
             description: "Sabores regionales",
-            action: () => navigate('/restaurantes')
         },
         {
             icon: <FaRoute />,
             title: "Tours",
             description: "Experiencias únicas",
-            action: () => navigate('/tours')
         },
         {
             icon: <FaCamera />,
             title: "Hospedaje",
             description: "Lugares para descansar",
-            action: () => navigate('/hoteles')
         }
     ];
 
