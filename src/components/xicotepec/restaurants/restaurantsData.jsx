@@ -23,7 +23,8 @@ export const restaurantsData = [
         telefono: "7761398490",
         galeria_imagenes: [
             "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/ElBosco2.jpg",
-            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/ElBosco3.jpg"
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/ElBosco3.jpg",
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001ElBosco.jpg"
         ]
     },
     {
@@ -50,14 +51,15 @@ export const restaurantsData = [
         telefono: "7641321656",
         galeria_imagenes: [
             "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/Caffeteo2.jpg",
-            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/Caffeteo3.jpg"
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/Caffeteo3.jpg",
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001Caffeteo.jpg"
         ]
     },
     {
         id: 3,
         slug: "restaurante-la-choza-1986",
         nombre_establecimiento: "Restaurante La Choza 1986",
-        imagen: "https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        imagen: "",
         direccion_completa: "Calle Reforma #100 col. Centro",
         descripcion_restaurante: "En nuestro restaurante encontrarás Tradición, un gran Ambiente Familiar, Con raíces de se remontan al año 1986, Preparamos cada plato con ingredientes frescos y heredados, creando una gran experiencia culinaria. Experimenta la calidez de un lugar donde el tiempo parece detenerse",
         tipo_comida: ["Mexicana", "Internacional", "Mariscos", "Comida rápida", "Vegana/vegetariana", "Desayunos", "Postres"],
@@ -76,15 +78,15 @@ export const restaurantsData = [
         redes_sociales: ["Facebook: LA Choza Xicotepec DE Juarez"],
         telefono: "7647649114",
         galeria_imagenes: [
-            "https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+            "",
+            ""
         ]
     },
     {
         id: 4,
         slug: "shiru-sushi-xicotepec",
         nombre_establecimiento: "SHIRU sushi xicotepec",
-        imagen: "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        imagen: "",
         direccion_completa: "Reforma norte #110 altos",
         descripcion_restaurante: "Shiru sushi xicotepec somos una empresa restaurantera fundada en el 2020 con exquisitos platillos orientales sushi y comida china",
         tipo_comida: ["Comida oriental", "Sushi", "Comida china"],
@@ -103,8 +105,8 @@ export const restaurantsData = [
         redes_sociales: ["Facebook: Shiru sushi xicotepec"],
         telefono: "2211558187",
         galeria_imagenes: [
-            "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1617196034183-421b4917abd8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+            "",
+            ""
         ]
     },
     {
@@ -131,14 +133,15 @@ export const restaurantsData = [
         telefono: "7717739832",
         galeria_imagenes: [
             "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/Colibry2.jpg",
-            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/Colibry3.jpg"
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/Colibry3.jpg",
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/01Colibry.jpg"
         ]
     },
     {
         id: 6,
         slug: "restaurante-villa-tamiahua",
         nombre_establecimiento: "Restaurante Villa Tamiahua",
-        imagen: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        imagen: "",
         direccion_completa: "Calle Allende #159",
         descripcion_restaurante: "Tenemos 35 años de antigüedad, ambiente familiar, prohibido fumar en el interior, por dentro tipo choza, con Palma. Un lugar tradicional que conserva la esencia de la cocina casera con mariscos frescos.",
         tipo_comida: ["Mexicana", "Internacional", "Mariscos"],
@@ -157,15 +160,15 @@ export const restaurantsData = [
         redes_sociales: [],
         telefono: "7641051342",
         galeria_imagenes: [
-            "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+            "",
+            ""
         ]
     },
     {
         id: 7,
         slug: "cafe-bunte",
         nombre_establecimiento: "Café Bunte",
-        imagen: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        imagen: "",
         direccion_completa: "Av. Zaragoza 280",
         descripcion_restaurante: "Café Bunte un lugar familiar para disfrutar con familia y amigos. Ofrecemos un ambiente acogedor y relajado, perfecto para comenzar el día con un buen café y pay casero.",
         tipo_comida: ["Cafetería", "Desayunos", "Postres"],
@@ -184,15 +187,15 @@ export const restaurantsData = [
         redes_sociales: [],
         telefono: "7641202810",
         galeria_imagenes: [
-            "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+            "",
+            ""
         ]
     },
     {
         id: 8,
         slug: "restaurante-la-choza",
         nombre_establecimiento: "Restaurante La Choza",
-        imagen: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        imagen: "",
         direccion_completa: "Reforma # 100 Col. Centro",
         descripcion_restaurante: "Restaurante la Choza Ubicado en el antiguo Cine Garza en el centro de Xicotepec a una cuadra del Zócalo de la ciudad cuenta con desayunos comidas y cenas amplia variedad de platillos regionales nacionales e internacionales postres y bebidas",
         tipo_comida: ["Mexicana", "Internacional", "Mariscos", "Gourmet", "Desayunos", "Postres"],
@@ -211,16 +214,15 @@ export const restaurantsData = [
         redes_sociales: ["Facebook: La Choza Xicotepec de Juarez"],
         telefono: "764 105 6363",
         galeria_imagenes: [
-            "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+            "",
+            "",
         ]
     },
     {
         id: 9,
         slug: "mariscos-el-tizoc-sucursal-xicotepec",
         nombre_establecimiento: "Mariscos el Tizoc Sucursal Xicotepec",
-        imagen: "https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        imagen: "",
         direccion_completa: "Av. Zaragoza #215",
         descripcion_restaurante: "Los mejores platillos del mar están en Mariscos el Tizoc Sucursal Xicotepec Restaurant 100% familiar, del mar a tu paladar!! Tenemos un excelente servicio, precio y calidad, los platillos se preparan al momento con un toque de amor.",
         tipo_comida: ["Mariscos", "Pescados", "Cocina del mar"],
@@ -239,16 +241,15 @@ export const restaurantsData = [
         redes_sociales: ["Facebook: Mariscos el Tizoc"],
         telefono: "7647641472",
         galeria_imagenes: [
-            "https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1559564484-0b8a88db7842?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+            "",
+            "",
         ]
     },
     {
         id: 10,
         slug: "teporingo-cocina-fusion",
         nombre_establecimiento: "Teporingo cocina fusión",
-        imagen: "https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        imagen: "",
         direccion_completa: "Plaza de la construcción 121 sótano",
         descripcion_restaurante: "Lugar único en el centro de la ciudad, el edificio conserva su estructura original, cálido y privado óptimo para tus charlas y reuniones. La comida una función internacional adaptada al paladar mexicano.",
         tipo_comida: ["Mexicana", "Internacional", "Mariscos", "Vegana/vegetariana", "Desayunos", "Postres", "Fusión"],
@@ -267,8 +268,8 @@ export const restaurantsData = [
         redes_sociales: ["Instagram: @el_teporingo_restaurante"],
         telefono: "2221036536",
         galeria_imagenes: [
-            "https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+            "",
+            ""
         ]
     },
     {
@@ -295,7 +296,8 @@ export const restaurantsData = [
         telefono: "7641219984",
         galeria_imagenes: [
             "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/LaTostadora2.jpg",
-            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/LaTostadora3.jpg"
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/LaTostadora3.jpg",
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/01LaTostadora.jpg"
         ]
     },
     {
@@ -322,7 +324,8 @@ export const restaurantsData = [
         telefono: "5543595714",
         galeria_imagenes: [
             "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/PoemaR2.jpg",
-            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/PoemaR3.jpg"
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/PoemaR3.jpg",
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/01PemaR.jpg"
         ]
     },
     // ID 13
@@ -330,7 +333,7 @@ export const restaurantsData = [
         id: 13,
         slug: "cafeteria-creppycaff",
         nombre_establecimiento: "Cafetería Creppycaff",
-        imagen: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        imagen: "",
         direccion_completa: "Calle niños héroes número 10 colonia el tabacal",
         descripcion_restaurante: "Terraza y cafetería Creppycaff \"Un lugar cerca del cielo\". Lugar donde pasarás momentos muy relajantes ya que cuenta con una bella vista panorámica. Encontrarás desayunos tradicionales, café, postres, bebidas frías o calientes. Lo que hace único a nuestro restaurante es la vista espectacular y los alimentos de calidad, además de nuestro excepcional servicio al cliente. Un espacio pet friendly con Wi-fi gratuito y música en vivo para crear el ambiente perfecto.",
         tipo_comida: ["Mexicana", "Desayunos", "Postres", "Café", "Bebidas"],
@@ -351,10 +354,7 @@ export const restaurantsData = [
         telefono: "7761980794",
         correo_electronico: "Creppycaff@gmail.com",
         galeria_imagenes: [
-            "https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+            "",
         ]
     },
 
@@ -363,7 +363,7 @@ export const restaurantsData = [
         id: 14,
         slug: "lapin-cafeteria",
         nombre_establecimiento: "Lapin cafetería",
-        imagen: "https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        imagen: "",
         direccion_completa: "Boulevard av Juárez 264 local 23",
         descripcion_restaurante: "Cafetería estilo parisino con las mejores crepas de la región y café de altura regional, helados artesanales Gourmet y pastas italianas auténticas. Lo que hace único a nuestro restaurante es la calidad excepcional de nuestros productos y un estilo que te transporta a un rincón europeo. Ofrecemos un ambiente sofisticado y acogedor donde cada detalle está pensado para brindarte una experiencia culinaria memorable, combinando la elegancia francesa con los sabores locales e internacionales.",
         tipo_comida: ["Internacional", "Gourmet", "Postres", "Francesa", "Italiana", "Café"],
@@ -384,11 +384,7 @@ export const restaurantsData = [
         telefono: "7647671073",
         correo_electronico: "cesargmarquina@gmail.com",
         galeria_imagenes: [
-            "https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+            "",
         ]
     },
 
@@ -397,7 +393,7 @@ export const restaurantsData = [
         id: 15,
         slug: "la-birrieria",
         nombre_establecimiento: "La birrieria",
-        imagen: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        imagen: "",
         direccion_completa: "Av.zaragoza 166 col. Centro",
         descripcion_restaurante: "Somos un restaurante familiar con servicio de birria y mariscos. Contamos con jardín y asador, estacionamiento, y también tenemos paquetes para cualquier tipo de evento y servicio para llevar. Lo que hace único a nuestro restaurante son nuestras especialidades: birria y chamorros preparados con receta tradicional. Ofrecemos un ambiente familiar acogedor donde podrás disfrutar de auténticos sabores mexicanos en un espacio cómodo y relajado, perfecto para reuniones familiares y celebraciones.",
         tipo_comida: ["Mexicana", "Mariscos", "Desayunos", "Comida tradicional"],
@@ -418,10 +414,7 @@ export const restaurantsData = [
         telefono: "7641120486",
         correo_electronico: "1ca9rl7os7@gmail.com",
         galeria_imagenes: [
-            "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+            "",
         ]
     }
     ,
@@ -430,7 +423,7 @@ export const restaurantsData = [
         id: 16,
         slug: "amalindo-cafeteria-reposteria",
         nombre_establecimiento: "AMALINDO cafetería y repostería",
-        imagen: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        imagen: "",
         direccion_completa: "Av. 2 de abril, colonia centro #106",
         descripcion_restaurante: "Somos una cafetería que ofrece un espacio en donde podrás disfrutar de un rico postre, desayunar en compañía de tu persona favorita o simplemente darte un gustito por la tarde. Aunque nos basamos en lo tradicional y brindamos un concepto que se ha trabajado desde hace ya tiempo, nosotros siempre buscamos la forma de darle el toque de Amalindo a lo que hagamos para que obtengas una buena experiencia y siempre tu visita sea buena. Nos encontramos en un espacio céntrico, para que no tengas excusas para perderte todo lo que tenemos para ti. Nos hemos dado a conocer por nuestros riquísimos postres elaborados con los mejores ingredientes y siempre buscamos satisfacer al cliente no solo en su pedido, sino también trabajamos en el servicio, para que puedan obtener una buena experiencia y poder recibirte más de una vez.",
         tipo_comida: ["Bebidas a base de café", "Desayunos", "Postres", "Repostería", "Cafetería"],
@@ -451,11 +444,7 @@ export const restaurantsData = [
         telefono: "7647656347",
         correo_electronico: "amalindo.19@gmail.com",
         galeria_imagenes: [
-            "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+            "",
         ]
     }
     ,
@@ -464,7 +453,7 @@ export const restaurantsData = [
         id: 17,
         slug: "gonri-cafe",
         nombre_establecimiento: "GonRi Cafe",
-        imagen: "https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        imagen: "",
         direccion_completa: "Plaza de la Constitución No. 116, Col. Centro, Xicotepec de Juarez",
         descripcion_restaurante: "GonRi Café es un espacio cálido, lleno de historia, donde el aroma del café despierta memorias y conversaciones. Servimos café arábigo de estricta altura, 100% de Xicotepec, con la mejor calidad, el mejor sabor… y una tradición que nos enorgullece. Aquí cada taza cuenta una historia, cada sorbo es un momento para compartir. GonRi Café es el lugar ideal para disfrutar de una charla amena y un café auténtico, porque: \"Como me decía mi papá que le decía mi abuelo: Dios… y café.\" Ofrecemos un café de especialidad cuidadosamente seleccionado y preparado, brindando una experiencia única para los paladares más exigentes.",
         tipo_comida: ["Postres", "Café", "Café de especialidad", "Repostería"],
@@ -485,10 +474,7 @@ export const restaurantsData = [
         telefono: "7641000548",
         correo_electronico: "gonricafe7647674036@gmail.com",
         galeria_imagenes: [
-            "https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+            "",
         ]
     }
     ,
@@ -497,7 +483,7 @@ export const restaurantsData = [
         id: 18,
         slug: "azotea-116",
         nombre_establecimiento: "Azotea 116",
-        imagen: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        imagen: "",
         direccion_completa: "Plaza de la Constitución No. 116 Planta Alta, Col. Centro, Xicotepec de Juárez",
         descripcion_restaurante: "Ubicada en la cima de nuestro edificio, Azotea 116 es una terraza con una vista inigualable del centro de Xicotepec, rodeada por el majestuoso paisaje de cerros y atardeceres que tiñen el cielo con luz cálida y dorada. Es un espacio abierto, acogedor y lleno de encanto, perfecto para disfrutar de una tarde tranquila, una charla entre amigos o incluso un evento especial. Azotea 116 también está disponible para eventos privados, reuniones, sesiones fotográficas o celebraciones especiales, adaptándose a distintos estilos y necesidades. Aquí, cada visita es una experiencia distinta… con sabor, vista y corazón. Lo que hace único a nuestro restaurante es la vista panorámica privilegiada al centro de Xicotepec y sus cerros, con atardeceres espectaculares que bañan el espacio en luz cálida y natural, creando un ambiente perfecto para fotos, momentos tranquilos o citas casuales.",
         tipo_comida: ["Comida rápida", "Postres", "Snacks", "Café", "Terraza"],
@@ -518,11 +504,7 @@ export const restaurantsData = [
         telefono: "2226676142",
         correo_electronico: "azotea116@gmail.com",
         galeria_imagenes: [
-            "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+            "",
         ]
     }
 ];
