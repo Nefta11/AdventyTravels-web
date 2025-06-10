@@ -14,7 +14,7 @@ import {
 export const HotelsData = [{
     id: 1,
     slug: "hotel-bugambilias",
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=500&h=350&fit=crop",
+    image: "",
     name: "Hotel Bugambilias",
     category: "Hotel Económico",
     location: "Guerrero #130",
@@ -108,11 +108,11 @@ export const HotelsData = [{
 }, {
     id: 3,
     slug: "hotel-villa-de-cortez",
-    image: "/src/assets/FotosXicotepec/01Colibry.jpg",
+    image: "",
     galeria_imagenes: [
-        "/src/assets/FotosXicotepec/01Colibry.jpg",
-        "/src/assets/FotosXicotepec/Colibry2.jpg",
-        "/src/assets/FotosXicotepec/Colibry3.jpg"
+        "",
+        "",
+        ""
     ],
     name: "Hotel Villa de Cortez",
     category: "Hotel Tradicional",
@@ -206,11 +206,11 @@ export const HotelsData = [{
 }, {
     id: 5,
     slug: "casa-emilia-hotel-boutique",
-    image: "/src/assets/FotosXicotepec/001ElBosco.jpg",
+    image: "",
     galeria_imagenes: [
-        "/src/assets/FotosXicotepec/001ElBosco.jpg",
-        "/src/assets/FotosXicotepec/ElBosco2.jpg",
-        "/src/assets/FotosXicotepec/ElBosco3.jpg"
+        "",
+        "",
+        ""
     ],
     name: "Casa Emilia Hotel Boutique",
     category: "Hotel Boutique Histórico",
@@ -309,11 +309,10 @@ export const HotelsData = [{
 }, {
     id: 7,
     slug: "glamping-xicotepec",
-    image: "/src/assets/FotosXicotepec/01LaTostadora.jpg",
+    image: "",
     galeria_imagenes: [
-        "/src/assets/FotosXicotepec/01LaTostadora.jpg",
-        "/src/assets/FotosXicotepec/LaTostadora2.jpg",
-        "/src/assets/FotosXicotepec/LaTostadora3.jpg"
+        "",
+        ""
     ],
     name: "Glamping Xicotepec",
     category: "Experiencia Premium en Naturaleza",
@@ -362,11 +361,10 @@ export const HotelsData = [{
 }, {
     id: 8,
     slug: "aroma-xicotepex-cabanas-camping",
-    image: "/src/assets/FotosXicotepec/001Caffeteo.jpg",
+    image: "",
     galeria_imagenes: [
-        "/src/assets/FotosXicotepec/001Caffeteo.jpg",
-        "/src/assets/FotosXicotepec/Caffeteo2.jpg",
-        "/src/assets/FotosXicotepec/Caffeteo3.jpg"
+        "",
+        "",
     ],
     name: "Aroma Xicotepex Cabañas y Camping",
     category: "Cabañas Premium en Cafetales",
@@ -414,11 +412,10 @@ export const HotelsData = [{
 }, {
     id: 9,
     slug: "casa-don-laureano",
-    image: "/src/assets/FotosXicotepec/01PemaR.jpg",
+    image: "",
     galeria_imagenes: [
-        "/src/assets/FotosXicotepec/01PemaR.jpg",
-        "/src/assets/FotosXicotepec/PoemaR2.jpg",
-        "/src/assets/FotosXicotepec/PoemaR3.jpg"
+        "",
+        ""
     ],
     name: "Casa Don Laureano",
     category: "Hotel Boutique Centro",
