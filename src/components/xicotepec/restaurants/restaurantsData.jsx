@@ -302,7 +302,7 @@ export const restaurantsData = [
         id: 12,
         slug: "poema-meson-xicotepec",
         nombre_establecimiento: "Poema Mesón Xicotepec",
-        imagen: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        imagen: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/01PemaR.jpg",
         direccion_completa: "Hidalgo 107 Col. Centro de Xicotepec, Xicotepec de Juárez, Puebla CP 73080",
         descripcion_restaurante: "Poema Mesón Xicotepec, ubicado en un espacio histórico lleno de encanto, ofrece una experiencia única para los amantes de la buena comida, el vino y la música. Su menú está inspirado en la tradición culinaria española, con una variedad de tapas y otros platillos emblemáticos. La selección de vinos es cuidadosamente curada para complementar cada platillo, brindando opciones que van desde tintos robustos hasta blancos frescos y elegantes. El ambiente es cálido y acogedor, con música agradable que crea el escenario perfecto para conversar y disfrutar de una velada especial.",
         tipo_comida: ["Española", "Tapas", "Vinos"],
@@ -321,9 +321,8 @@ export const restaurantsData = [
         redes_sociales: ["Instagram: @poema_meson_xicotepec", "Facebook: Poema Mesón"],
         telefono: "5543595714",
         galeria_imagenes: [
-            "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/PoemaR2.jpg",
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/PoemaR3.jpg"
         ]
     },
     // ID 13
