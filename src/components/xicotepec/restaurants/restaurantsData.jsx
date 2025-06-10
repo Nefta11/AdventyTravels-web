@@ -31,7 +31,7 @@ export const restaurantsData = [
         id: 2,
         slug: "caffeteo",
         nombre_establecimiento: "Caffeteo",
-        imagen: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        imagen: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001Caffeteo.webp",
         direccion_completa: "Calle Hidalgo #1, Colonia Centro, C.P. 73080 Xicotepec de Juarez, Puebla",
         descripcion_restaurante: "Brindamos un servicio de calidad en cada unos de nuestros productos, garantizando inocuidad, variedad y sabor. Nuestro modelo de negocio es con servicio al mostrador, dónde realizas tu pedido, pagas y nosotros te llevamos el servicio a la mesa. Queremos que te sientas cómodo y pases un agradable momento disfrutando tus alimentos, y no dejes de tomar una excelente taza de café de nuestra región, orgullo Xicotepequense, sin duda unos de los mejores cafés del país, Garantizado!",
         tipo_comida: ["Mexicana", "Comida rápida", "Desayunos", "Postres", "Cafe", "Antojitos mexicanos"],
@@ -50,8 +50,8 @@ export const restaurantsData = [
         redes_sociales: ["Facebook: Caffeteo"],
         telefono: "7641321656",
         galeria_imagenes: [
-            "https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/Caffeteo3.webp",
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/Caffeteo2.webp"
         ]
     },
     {
