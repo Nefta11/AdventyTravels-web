@@ -111,7 +111,7 @@ export const restaurantsData = [
         id: 5,
         slug: "colibri-la-casa-de-piedra",
         nombre_establecimiento: "Colibrí La Casa de Piedra",
-        imagen: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        imagen: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/01Colibry.jpg",
         direccion_completa: "17 de junio norte 111 col centro. Xicotepec de Juárez, Puebla. 73080",
         descripcion_restaurante: "Colibrí es un restaurante de autor en Xicotepec que nace de un sueño: contar historias de vida a través de la comida. Creemos en el poder de compartir, de volver a lo esencial y de celebrar lo que crece cerca. Nuestro menú va del huerto a tu mesa, con ingredientes locales como quesos artesanales, flores comestibles y cosechas frescas de nuestro jardín. Cada rincón de Colibrí guarda una historia, desde nuestras recetas hasta las lámparas decorativas. Somos el mejor lugar en Xico para saborear su gastronomía, su flora y su alma.",
         tipo_comida: ["Gourmet", "Cocina de autor", "Del huerto a tu mesa"],
@@ -130,9 +130,8 @@ export const restaurantsData = [
         redes_sociales: ["Instagram: @colibrilacasadepiedra", "Facebook: Colibrí La Casa de Piedra"],
         telefono: "7717739832",
         galeria_imagenes: [
-            "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/Colibry2.jpg",
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/Colibry3.jpg"
         ]
     },
     {
@@ -276,7 +275,7 @@ export const restaurantsData = [
         id: 11,
         slug: "la-tostadora-cafe",
         nombre_establecimiento: "La Tostadora Café",
-        imagen: "https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        imagen: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/01LaTostadora.jpg",
         direccion_completa: "Avenida Zaragoza #168, Col Centro. Xicotepec de Juárez, Puebla. C.P.73080",
         descripcion_restaurante: "Desde 1979, somos expertos en café y en hacer que cada visita se sienta como un abrazo al alma. La Tostadora Café no es solo el mejor lugar para comer en Xicotepec, es ese sitio donde el sabor, el ambiente y la calidez se unen para regalarte momentos que no se olvidan. Nuestra comida es deliciosa, casera y preparada con los mejores ingredientes. Nuestro café de especialidad conquista desde el primer sorbo. Y nuestro espacio lleno de vida, detalles hermosos y atención que te apapacha y te hace querer quedarte un rato más… y volver siempre.",
         tipo_comida: ["Mexicana", "Vegana/vegetariana", "Desayunos", "Postres", "Baguettes", "Ensaladas", "Comida Tipica de la región", "Frappes", "Café"],
@@ -295,9 +294,8 @@ export const restaurantsData = [
         redes_sociales: ["Facebook: La Tostadora XICO", "Instagram: @latostadoraxico", "TikTok: @latostadoraxico"],
         telefono: "7641219984",
         galeria_imagenes: [
-            "https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/LaTostadora2.jpg",
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/LaTostadora3.jpg"
         ]
     },
     {
