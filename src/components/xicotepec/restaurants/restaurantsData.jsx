@@ -3,7 +3,7 @@ export const restaurantsData = [
         id: 1,
         slug: "el-bosco-restaurant-cafe",
         nombre_establecimiento: "El Bosco Restaurant Café",
-        imagen: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        imagen: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001ElBosco.jpg",
         direccion_completa: "Plaza de la constitución#106, Centro Xicotepec,73080.",
         descripcion_restaurante: "Somos una empresa dedicada a la elaboración de Alimentos Típicos de Xicotepec, donde podrás encontrar una amplia variedad de sabores con Historias de Xicotepec; como su Café, su Cultura, su Gente, sus Tradiciones, sus Raíces, pero sobre todo, el calor Familiar de El Bosco. Nuestra principal labor es Enamorar tú paladar con cada Nota de Sabor y Sazón, haciendo y sembrando una Experiencia Única e Inigualable en esta bella Trabesia a la que te adentraras.",
         tipo_comida: ["Mexicana", "Desayunos", "Postres", "Café de Especialidad", "Comida regional", "Comida Poblana", "Comida típica de Xicotepec"],
@@ -22,16 +22,15 @@ export const restaurantsData = [
         redes_sociales: ["Facebook: El Bosco Restaurant Café", "Instagram: @restaurante_el_bosco"],
         telefono: "7761398490",
         galeria_imagenes: [
-            "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-            "https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/ElBosco2.jpg",
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/ElBosco3.jpg"
         ]
     },
     {
         id: 2,
         slug: "caffeteo",
         nombre_establecimiento: "Caffeteo",
-        imagen: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001Caffeteo.webp",
+        imagen: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001Caffeteo.jpg",
         direccion_completa: "Calle Hidalgo #1, Colonia Centro, C.P. 73080 Xicotepec de Juarez, Puebla",
         descripcion_restaurante: "Brindamos un servicio de calidad en cada unos de nuestros productos, garantizando inocuidad, variedad y sabor. Nuestro modelo de negocio es con servicio al mostrador, dónde realizas tu pedido, pagas y nosotros te llevamos el servicio a la mesa. Queremos que te sientas cómodo y pases un agradable momento disfrutando tus alimentos, y no dejes de tomar una excelente taza de café de nuestra región, orgullo Xicotepequense, sin duda unos de los mejores cafés del país, Garantizado!",
         tipo_comida: ["Mexicana", "Comida rápida", "Desayunos", "Postres", "Cafe", "Antojitos mexicanos"],
@@ -50,8 +49,8 @@ export const restaurantsData = [
         redes_sociales: ["Facebook: Caffeteo"],
         telefono: "7641321656",
         galeria_imagenes: [
-            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/Caffeteo3.webp",
-            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/Caffeteo2.webp"
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/Caffeteo2.jpg",
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/Caffeteo3.jpg"
         ]
     },
     {
