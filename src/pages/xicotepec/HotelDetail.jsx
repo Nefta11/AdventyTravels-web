@@ -1,4 +1,5 @@
 // HotelDetail.jsx
+import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import {
     FaMapMarkerAlt,
@@ -14,7 +15,11 @@ import {
     FaInstagram,
     FaFacebook,
     FaCheckCircle,
-    FaInfoCircle
+    FaInfoCircle,
+    FaImage,
+    FaTimes,
+    FaChevronLeft,
+    FaChevronRight
 } from 'react-icons/fa';
 import { getHotelBySlug } from '../../components/xicotepec/hotels/hotelsData';
 import './HotelDetail.css';
@@ -24,6 +29,8 @@ const HotelDetail = () => {
     const { slug } = useParams();
     const navigate = useNavigate();
     const hotel = getHotelBySlug(slug);
+    const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+    const [showModal, setShowModal] = useState(false);
 
     if (!hotel) {
         return (
@@ -34,11 +41,47 @@ const HotelDetail = () => {
                 </button>
             </div>
         );
-    } const handleWhatsAppClick = () => {
+    }
+
+    const handleWhatsAppClick = () => {
         if (hotel.whatsapp) {
             window.open(`https://wa.me/${hotel.whatsapp.replace(/\D/g, '')}`, '_blank');
         }
-    };// Función para parsear redes sociales
+    };
+
+    // Función para obtener las imágenes disponibles (hasta 3)
+    const getGalleryImages = () => {
+        if (hotel.galeria_imagenes && hotel.galeria_imagenes.length > 0) {
+            return hotel.galeria_imagenes.slice(0, 3);
+        }
+        return [hotel.image];
+    };
+
+    // Función para abrir el modal con la imagen seleccionada
+    const openModal = (index) => {
+        setSelectedImageIndex(index);
+        setShowModal(true);
+    };
+
+    // Función para cerrar el modal
+    const closeModal = () => {
+        setShowModal(false);
+    };
+
+    // Función para navegar entre imágenes en el modal
+    const nextImage = () => {
+        const images = getGalleryImages();
+        setSelectedImageIndex((prevIndex) => 
+            prevIndex === images.length - 1 ? 0 : prevIndex + 1
+        );
+    };    const prevImage = () => {
+        const images = getGalleryImages();
+        setSelectedImageIndex((prevIndex) => 
+            prevIndex === 0 ? images.length - 1 : prevIndex - 1
+        );
+    };
+
+    // Función para parsear redes sociales
     const parseSocialNetworks = () => {
         const networks = [];
 
@@ -227,17 +270,28 @@ const HotelDetail = () => {
                                     </p>
                                 )}
                             </div>
-                        )}                        {/* Galería de imagen */}
+                        )}                        {/* Galería de imágenes mejorada */}
                         <div className="hotel-detail-gallery">
-                            <div
-                                className="gallery-main-image"
-                                style={{ backgroundImage: `url(${hotel.image})` }}
-                            >
-                                <div className="gallery-overlay">
-                                    <div className="gallery-badge">
-                                        <span>{hotel.category}</span>
+                            <h4><FaImage /> Galería</h4>
+                            <div className="gallery-grid">
+                                {getGalleryImages().map((imagen, index) => (
+                                    <div 
+                                        key={index}
+                                        className={`gallery-item ${index === 0 ? 'main-gallery-item' : ''}`}
+                                        style={{ backgroundImage: `url(${imagen})` }}
+                                        onClick={() => openModal(index)}
+                                    >
+                                        <div className="gallery-item-overlay">
+                                            <FaImage className="gallery-icon" />
+                                            <span>Ver imagen</span>
+                                        </div>
+                                        {index === 0 && (
+                                            <div className="gallery-badge">
+                                                <span>{hotel.category}</span>
+                                            </div>
+                                        )}
                                     </div>
-                                </div>
+                                ))}
                             </div>
                         </div>
 
@@ -296,8 +350,57 @@ const HotelDetail = () => {
                                     </div>
                                 </div>
                             )}
+                        </div>                    </div>                </div>            </div>
+
+            {/* Modal de galería */}
+            {showModal && (
+                <div className="gallery-modal-overlay" onClick={closeModal}>
+                    <div className="gallery-modal-content" onClick={(e) => e.stopPropagation()}>
+                        <button className="gallery-modal-close" onClick={closeModal}>
+                            <FaTimes />
+                        </button>
+                        
+                        <div className="gallery-modal-image-container">
+                            <img 
+                                src={getGalleryImages()[selectedImageIndex]} 
+                                alt={`${hotel.name} - Imagen ${selectedImageIndex + 1}`}
+                                className="gallery-modal-image"
+                            />
+                            
+                            {getGalleryImages().length > 1 && (
+                                <>
+                                    <button className="gallery-nav gallery-prev" onClick={prevImage}>
+                                        <FaChevronLeft />
+                                    </button>
+                                    <button className="gallery-nav gallery-next" onClick={nextImage}>
+                                        <FaChevronRight />
+                                    </button>
+                                </>
+                            )}
                         </div>
-                    </div>                </div>            </div>
+                        
+                        <div className="gallery-modal-info">
+                            <h3>{hotel.name}</h3>
+                            <p>Imagen {selectedImageIndex + 1} de {getGalleryImages().length}</p>
+                            <span className="gallery-modal-category">{hotel.category}</span>
+                        </div>
+                        
+                        {getGalleryImages().length > 1 && (
+                            <div className="gallery-thumbnails">
+                                {getGalleryImages().map((imagen, index) => (
+                                    <div
+                                        key={index}
+                                        className={`gallery-thumb ${index === selectedImageIndex ? 'active' : ''}`}
+                                        style={{ backgroundImage: `url(${imagen})` }}
+                                        onClick={() => setSelectedImageIndex(index)}
+                                    />
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                </div>
+            )}
+
             <XicotepecFooter />
         </div>
     );

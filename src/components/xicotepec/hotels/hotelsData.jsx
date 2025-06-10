@@ -11,11 +11,11 @@ import {
     FaMapMarkerAlt
 } from 'react-icons/fa';
 
-export const HotelsData = [
-    {
+export const HotelsData = [    {
         id: 1,
         slug: "hotel-bugambilias",
-        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=500&h=350&fit=crop",        name: "Hotel Bugambilias",
+        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=500&h=350&fit=crop",
+        name: "Hotel Bugambilias",
         category: "Hotel Económico",
         location: "Guerrero #130",
         price: "Desde $350 MXN",
@@ -55,11 +55,16 @@ export const HotelsData = [
         capacidad_maxima: 73,
         habitaciones: 34,
         experiencias_turisticas: "Brindamos un recorrido por nuestros senderos en los perales"
-    },
-    {
+    },    {
         id: 2,
         slug: "xochitl",
-        image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=500&h=350&fit=crop",        name: "Xochitl",
+        image: "/src/assets/FotosXicotepec/001HXochilt.jpg",
+        galeria_imagenes: [
+            "/src/assets/FotosXicotepec/001HXochilt.jpg",
+            "/src/assets/FotosXicotepec/HXochilt2.jpg",
+            "/src/assets/FotosXicotepec/HXochilt3.jpg"
+        ],
+        name: "Xochitl",
         category: "Hotel Vista Panorámica",
         location: "Estacionamiento de la cruz celestial",
         price: "Desde $700 MXN",
@@ -100,11 +105,16 @@ export const HotelsData = [
         capacidad_maxima: 22,
         habitaciones: 11,
         experiencias_turisticas: "Recorridos de senderismo en conjunto con guías profesionales certificados"
-    },
-    {
+    },    {
         id: 3,
         slug: "hotel-villa-de-cortez",
-        image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=350&fit=crop",        name: "Hotel Villa de Cortez",
+        image: "/src/assets/FotosXicotepec/01Colibry.jpg",
+        galeria_imagenes: [
+            "/src/assets/FotosXicotepec/01Colibry.jpg",
+            "/src/assets/FotosXicotepec/Colibry2.jpg",
+            "/src/assets/FotosXicotepec/Colibry3.jpg"
+        ],
+        name: "Hotel Villa de Cortez",
         category: "Hotel Tradicional",
         location: "Miguel Negrete No.105 Col. Centro",
         price: "Desde $890 MXN",
@@ -146,11 +156,16 @@ export const HotelsData = [
         capacidad_maxima: "105 a 120",
         habitaciones: 45,
         experiencias_turisticas: "40 años de experiencia de servicio, ofreciendo nuestro paquetes a grupos, descuentos a viajeros. Estamos ubicados en el centro de Xicotepec donde nuestros turistas pueden caminar por los alrededores, donde podrán apreciar museo Carranza, las manos de bonanza, la iglesia de san Juan Bautista. la Xochipilla, además poder probar el sabor de las hamburguesas al carbón, los antojitos mexicanos tradicionales. Los dulces típicos, los vinos , el café"
-    },
-    {
+    },    {
         id: 4,
         slug: "khe-xicotepec",
-        image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=500&h=350&fit=crop",        name: "Khé Xicotepec",
+        image: "/src/assets/FotosXicotepec/01HKhe.jpg",
+        galeria_imagenes: [
+            "/src/assets/FotosXicotepec/01HKhe.jpg",
+            "/src/assets/FotosXicotepec/HKhe2.jpg",
+            "/src/assets/FotosXicotepec/HKhe3.jpg"
+        ],
+        name: "Khé Xicotepec",
         category: "Airbnb Boutique",
         location: "Plaza de la Constitución 120 Altos 2",
         price: "Desde $1,100 MXN",
@@ -188,11 +203,16 @@ export const HotelsData = [
         capacidad_maxima: 20,
         habitaciones: 8,
         caracteristica_unica: "Ubicación única y vistas privilegiadas"
-    },
-    {
+    },    {
         id: 5,
         slug: "casa-emilia-hotel-boutique",
-        image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=500&h=350&fit=crop",        name: "Casa Emilia Hotel Boutique",
+        image: "/src/assets/FotosXicotepec/001ElBosco.jpg",
+        galeria_imagenes: [
+            "/src/assets/FotosXicotepec/001ElBosco.jpg",
+            "/src/assets/FotosXicotepec/ElBosco2.jpg",
+            "/src/assets/FotosXicotepec/ElBosco3.jpg"
+        ],
+        name: "Casa Emilia Hotel Boutique",
         category: "Hotel Boutique Histórico",
         location: "5 de mayo #141 col centro",
         price: "Desde $1,150 MXN",
@@ -235,11 +255,16 @@ export const HotelsData = [
         habitaciones: 8,
         caracteristica_unica: "Lo que hace único a nuestro hospedaje en Xicotepec es la fusión entre historia, autenticidad y calidez. No somos un hotel convencional: somos una casona antigua de más de 70 años que ha sido cuidadosamente reconstruida para conservar su esencia, su piedra original y su alma. Aquí, no solo duermes: te conectas con la historia y la magia de Xicotepec.",
         experiencias_turisticas: "No directamente"
-    },
-    {
+    },    {
         id: 6,
         slug: "hotel-casablanca-xicotepec",
-        image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=500&h=350&fit=crop",        name: "Hotel Casablanca Xicotepec",
+        image: "/src/assets/FotosXicotepec/01HCasaBlanca.jpg",
+        galeria_imagenes: [
+            "/src/assets/FotosXicotepec/01HCasaBlanca.jpg",
+            "/src/assets/FotosXicotepec/HCasaBlanca2.jpg",
+            "/src/assets/FotosXicotepec/HCasaBlanca3.jpg"
+        ],
+        name: "Hotel Casablanca Xicotepec",
         category: "Hotel Premium",
         location: "Av. Juárez sur 264, Col. La Rivera",
         price: "Desde $1,100 MXN",
@@ -281,11 +306,16 @@ export const HotelsData = [
         capacidad_maxima: 80,
         habitaciones: 38,
         caracteristica_unica: "Habitaciones amplias y cómodas. Alberca techada y climatizada. Restaurant Café de cocina mexicana contemporanea. Estacionamiento privado Tu escape perfecto te espera. ¡Reserva ahora!"
-    },
-    {
+    },    {
         id: 7,
         slug: "glamping-xicotepec",
-        image: "https://images.unsplash.com/photo-1504280390-6c5d9ac91d1a?w=500&h=350&fit=crop",        name: "Glamping Xicotepec",
+        image: "/src/assets/FotosXicotepec/01LaTostadora.jpg",
+        galeria_imagenes: [
+            "/src/assets/FotosXicotepec/01LaTostadora.jpg",
+            "/src/assets/FotosXicotepec/LaTostadora2.jpg",
+            "/src/assets/FotosXicotepec/LaTostadora3.jpg"
+        ],
+        name: "Glamping Xicotepec",
         category: "Experiencia Premium en Naturaleza",
         location: "Loma alta col los perales",
         price: "Desde $1,500 MXN",
@@ -329,11 +359,16 @@ export const HotelsData = [
         restricciones: "Si. No dañar las áreas verdes.",
         caracteristica_unica: "Duerme en medio de la naturaleza con todas las comodidades de un hotel de lujo",
         experiencias_turisticas: "Brindamos un recorrido por nuestros senderos. Ruta del café santa Lucia."
-    },
-    {
+    },    {
         id: 8,
         slug: "aroma-xicotepex-cabanas-camping",
-        image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=500&h=350&fit=crop",        name: "Aroma Xicotepex Cabañas y Camping",
+        image: "/src/assets/FotosXicotepec/001Caffeteo.jpg",
+        galeria_imagenes: [
+            "/src/assets/FotosXicotepec/001Caffeteo.jpg",
+            "/src/assets/FotosXicotepec/Caffeteo2.jpg",
+            "/src/assets/FotosXicotepec/Caffeteo3.jpg"
+        ],
+        name: "Aroma Xicotepex Cabañas y Camping",
         category: "Cabañas Premium en Cafetales",
         location: "Camino a San Antonio 106",
         price: "Desde $2,200 MXN",
@@ -376,11 +411,16 @@ export const HotelsData = [
         habitaciones: 7,
         caracteristica_unica: "Cabañas en Cafetales y beneficio de café",
         experiencias_turisticas: "No"
-    },
-    {
+    },    {
         id: 9,
         slug: "casa-don-laureano",
-        image: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=500&h=350&fit=crop",        name: "Casa Don Laureano",
+        image: "/src/assets/FotosXicotepec/01PemaR.jpg",
+        galeria_imagenes: [
+            "/src/assets/FotosXicotepec/01PemaR.jpg",
+            "/src/assets/FotosXicotepec/PoemaR2.jpg",
+            "/src/assets/FotosXicotepec/PoemaR3.jpg"
+        ],
+        name: "Casa Don Laureano",
         category: "Hotel Boutique Centro",
         location: "Plaza de la Constitución No. 116, Colonia Centro",
         price: "Desde $600 MXN",
