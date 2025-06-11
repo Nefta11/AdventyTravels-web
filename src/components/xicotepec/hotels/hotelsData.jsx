@@ -14,7 +14,11 @@ import {
 export const HotelsData = [{
     id: 1,
     slug: "hotel-bugambilias",
-    image: "",
+    image: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001Hotel%20Bugambilias.jpg",
+      galeria_imagenes: [
+        "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001Hotel%20Bugambilias.jpg",
+        "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/HotelBugambilias2.jpg",
+    ],
     name: "Hotel Bugambilias",
     category: "Hotel Económico",
     location: "Guerrero #130",
@@ -148,7 +152,7 @@ export const HotelsData = [{
     contact: "+52 764 764 1399",
     whatsapp: "+52 764 102 5996",
     email: "gerenciavilladecortez@gmail.com",
-    website: "www.hotelvilladecortez.mx",
+    website: "https://www.hotelvilladecortez.mx",
     restricciones: "NO INTRODUCIR BEBIDAS ALCOHOLICAS- O PERSONAS EXTRAS QUE NO ESTEN REGISTRADAS EN EL REGISTRO DE ENTRADA",
     tipos_habitacion: ["Sencilla", "Doble", "Triple", "Matrimonial", "Familiar"],
     metodos_pago: ["Efectivo", "Transferencia", "Tarjeta bancaria", "Cobro por línea"],
