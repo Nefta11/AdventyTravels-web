@@ -59,7 +59,7 @@ export const restaurantsData = [
         id: 3,
         slug: "restaurante-la-choza-1986",
         nombre_establecimiento: "Restaurante La Choza 1986",
-        imagen: "",
+        imagen: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001RestauranteLa%20Choza1986.webp",
         direccion_completa: "Calle Reforma #100 col. Centro",
         descripcion_restaurante: "En nuestro restaurante encontrarás Tradición, un gran Ambiente Familiar, Con raíces de se remontan al año 1986, Preparamos cada plato con ingredientes frescos y heredados, creando una gran experiencia culinaria. Experimenta la calidez de un lugar donde el tiempo parece detenerse",
         tipo_comida: ["Mexicana", "Internacional", "Mariscos", "Comida rápida", "Vegana/vegetariana", "Desayunos", "Postres"],
@@ -78,15 +78,16 @@ export const restaurantsData = [
         redes_sociales: ["Facebook: LA Choza Xicotepec DE Juarez"],
         telefono: "7647649114",
         galeria_imagenes: [
-            "",
-            ""
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001RestauranteLa%20Choza1986.webp",
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/RestauranteLaChoza1986-2.webp",
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/RestauranteLaChoza1986-3.webp"
         ]
     },
     {
         id: 4,
         slug: "shiru-sushi-xicotepec",
         nombre_establecimiento: "SHIRU sushi xicotepec",
-        imagen: "",
+        imagen: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001SHIRUsushixicotepec.webp",
         direccion_completa: "Reforma norte #110 altos",
         descripcion_restaurante: "Shiru sushi xicotepec somos una empresa restaurantera fundada en el 2020 con exquisitos platillos orientales sushi y comida china",
         tipo_comida: ["Comida oriental", "Sushi", "Comida china"],
@@ -105,7 +106,7 @@ export const restaurantsData = [
         redes_sociales: ["Facebook: Shiru sushi xicotepec"],
         telefono: "2211558187",
         galeria_imagenes: [
-            "",
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001SHIRUsushixicotepec.webp",
             ""
         ]
     },
