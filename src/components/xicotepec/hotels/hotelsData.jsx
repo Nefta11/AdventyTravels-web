@@ -112,11 +112,11 @@ export const HotelsData = [{
 }, {
     id: 3,
     slug: "hotel-villa-de-cortez",
-    image: "",
+    image: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/hotelvilladecortez2.webp",
     galeria_imagenes: [
-        "",
-        "",
-        ""
+        "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/hotelvilladecortez2.webp",
+        "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/hotelvilladecortez3.webp",
+        "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001hotelvilladecortez.jpg"
     ],
     name: "Hotel Villa de Cortez",
     category: "Hotel Tradicional",
