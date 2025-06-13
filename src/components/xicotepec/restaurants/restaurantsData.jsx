@@ -165,117 +165,8 @@ export const restaurantsData = [
             "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/RestaurantVillaTamu3.jpg",
             "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/RestaurantVillaTamu2.jpg"
         ]
-    },
-    {
+    }, {
         id: 7,
-        slug: "cafe-bunte",
-        nombre_establecimiento: "Café Bunte",
-        imagen: "",
-        direccion_completa: "Av. Zaragoza 280",
-        descripcion_restaurante: "Café Bunte un lugar familiar para disfrutar con familia y amigos. Ofrecemos un ambiente acogedor y relajado, perfecto para comenzar el día con un buen café y pay casero.",
-        tipo_comida: ["Cafetería", "Desayunos", "Postres"],
-        especialidades_casa: ["Café de especialidad", "Pays caseros", "Desayunos tradicionales"],
-        rango_precios_promedio_persona: "$50-$100 MXN",
-        horarios_atencion: {
-            lunes: "7:00 am a 12:00 pm",
-            martes: "7:00 am a 12:00 pm",
-            miercoles: "7:00 am a 12:00 pm",
-            jueves: "7:00 am a 12:00 pm",
-            viernes: "7:00 am a 12:00 pm",
-            sabado: "7:00 am a 12:00 pm",
-            domingo: "7:00 am a 12:00 pm"
-        },
-        metodos_pago: ["Efectivo", "Tarjeta de crédito", "Tarjeta de débito"],
-        redes_sociales: [],
-        telefono: "7641202810",
-        galeria_imagenes: [
-            "",
-            ""
-        ]
-    },
-    {
-        id: 8,
-        slug: "restaurante-la-choza",
-        nombre_establecimiento: "Restaurante La Choza",
-        imagen: "",
-        direccion_completa: "Reforma # 100 Col. Centro",
-        descripcion_restaurante: "Restaurante la Choza Ubicado en el antiguo Cine Garza en el centro de Xicotepec a una cuadra del Zócalo de la ciudad cuenta con desayunos comidas y cenas amplia variedad de platillos regionales nacionales e internacionales postres y bebidas",
-        tipo_comida: ["Mexicana", "Internacional", "Mariscos", "Gourmet", "Desayunos", "Postres"],
-        especialidades_casa: ["Paella Valenciana", "Pecho de Ternera", "Chamorro estilo Alemán", "Camarones a la Española", "Pulpo a la Gallega", "Arrachera Marinada", "Salmon a la Florentina", "Pechuga Carioca", "Pastas", "Ensaladas", "Tacos de Pastor", "Costilla", "Bistek", "Antojitos Mexicanos", "Desayunos de la Región"],
-        rango_precios_promedio_persona: "$100-$200 MXN",
-        horarios_atencion: {
-            lunes: "8:00 am a 10:00 pm",
-            martes: "8:00 am a 10:00 pm",
-            miercoles: "8:00 am a 10:00 pm",
-            jueves: "8:00 am a 10:00 pm",
-            viernes: "8:00 am a 10:00 pm",
-            sabado: "8:00 am a 10:00 pm",
-            domingo: "8:00 am a 10:00 pm"
-        },
-        metodos_pago: ["Efectivo", "Tarjeta de crédito", "Tarjeta de débito"],
-        redes_sociales: ["Facebook: La Choza Xicotepec de Juarez"],
-        telefono: "764 105 6363",
-        galeria_imagenes: [
-            "",
-            "",
-        ]
-    },
-    {
-        id: 9,
-        slug: "mariscos-el-tizoc-sucursal-xicotepec",
-        nombre_establecimiento: "Mariscos el Tizoc Sucursal Xicotepec",
-        imagen: "",
-        direccion_completa: "Av. Zaragoza #215",
-        descripcion_restaurante: "Los mejores platillos del mar están en Mariscos el Tizoc Sucursal Xicotepec Restaurant 100% familiar, del mar a tu paladar!! Tenemos un excelente servicio, precio y calidad, los platillos se preparan al momento con un toque de amor.",
-        tipo_comida: ["Mariscos", "Pescados", "Cocina del mar"],
-        especialidades_casa: ["Filete relleno al gratin", "Torre de Mariscos", "Molcajete Kraken", "Molcajete Mar y Tierra", "Aguachiles", "Fiesta de Camarones"],
-        rango_precios_promedio_persona: "$200-$350 MXN",
-        horarios_atencion: {
-            lunes: "9:00 am a 8:00 pm",
-            martes: "9:00 am a 8:00 pm",
-            miercoles: "9:00 am a 8:00 pm",
-            jueves: "9:00 am a 8:00 pm",
-            viernes: "9:00 am a 8:00 pm",
-            sabado: "9:00 am a 8:00 pm",
-            domingo: "9:00 am a 8:00 pm"
-        },
-        metodos_pago: ["Efectivo", "Tarjeta de crédito", "Tarjeta de débito"],
-        redes_sociales: ["Facebook: Mariscos el Tizoc"],
-        telefono: "7647641472",
-        galeria_imagenes: [
-            "",
-            "",
-        ]
-    },
-    {
-        id: 10,
-        slug: "teporingo-cocina-fusion",
-        nombre_establecimiento: "Teporingo cocina fusión",
-        imagen: "",
-        direccion_completa: "Plaza de la construcción 121 sótano",
-        descripcion_restaurante: "Lugar único en el centro de la ciudad, el edificio conserva su estructura original, cálido y privado óptimo para tus charlas y reuniones. La comida una función internacional adaptada al paladar mexicano.",
-        tipo_comida: ["Mexicana", "Internacional", "Mariscos", "Vegana/vegetariana", "Desayunos", "Postres", "Fusión"],
-        especialidades_casa: ["Burrata", "Ebys", "Tapas"],
-        rango_precios_promedio_persona: "$100-$200 MXN",
-        horarios_atencion: {
-            lunes: "Cerrado",
-            martes: "11:00 am a 9:00 pm",
-            miercoles: "11:00 am a 9:00 pm",
-            jueves: "11:00 am a 9:00 pm",
-            viernes: "11:00 am a 9:00 pm",
-            sabado: "8:00 am a 9:00 pm",
-            domingo: "8:00 am a 9:00 pm"
-        },
-        metodos_pago: ["Efectivo", "Tarjeta de crédito", "Tarjeta de débito"],
-        redes_sociales: ["Instagram: @el_teporingo_restaurante"],
-        telefono: "2221036536",
-        galeria_imagenes: [
-            "",
-            ""
-        ]
-    },
-    {
-        id: 11,
         slug: "la-tostadora-cafe",
         nombre_establecimiento: "La Tostadora Café",
         imagen: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/01LaTostadora.jpg",
@@ -303,7 +194,7 @@ export const restaurantsData = [
         ]
     },
     {
-        id: 12,
+        id: 8,
         slug: "poema-meson-xicotepec",
         nombre_establecimiento: "Poema Mesón Xicotepec",
         imagen: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/01PemaR.jpg",
@@ -330,9 +221,147 @@ export const restaurantsData = [
             "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/01PemaR.jpg"
         ]
     },
-    // ID 13
+    {
+        id: 9,
+        slug: "azotea-116",
+        nombre_establecimiento: "Azotea 116",
+        imagen: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001Azotea.jpg",
+        direccion_completa: "Plaza de la Constitución No. 116 Planta Alta, Col. Centro, Xicotepec de Juárez",
+        descripcion_restaurante: "Ubicada en la cima de nuestro edificio, Azotea 116 es una terraza con una vista inigualable del centro de Xicotepec, rodeada por el majestuoso paisaje de cerros y atardeceres que tiñen el cielo con luz cálida y dorada. Es un espacio abierto, acogedor y lleno de encanto, perfecto para disfrutar de una tarde tranquila, una charla entre amigos o incluso un evento especial. Azotea 116 también está disponible para eventos privados, reuniones, sesiones fotográficas o celebraciones especiales, adaptándose a distintos estilos y necesidades. Aquí, cada visita es una experiencia distinta… con sabor, vista y corazón. Lo que hace único a nuestro restaurante es la vista panorámica privilegiada al centro de Xicotepec y sus cerros, con atardeceres espectaculares que bañan el espacio en luz cálida y natural, creando un ambiente perfecto para fotos, momentos tranquilos o citas casuales.",
+        tipo_comida: ["Comida rápida", "Postres", "Snacks", "Café", "Terraza"],
+        especialidades_casa: ["González Special", "Tarta de maracuyá", "Cazuelita de queso fundido con chistorra"],
+        rango_precios_promedio_persona: "$100-$200 MXN",
+        horarios_atencion: {
+            lunes: "1:00 pm a 9:30 pm",
+            martes: "1:00 pm a 9:30 pm",
+            miercoles: "1:00 pm a 9:30 pm",
+            jueves: "1:00 pm a 9:30 pm",
+            viernes: "1:00 pm a 9:30 pm",
+            sabado: "1:00 pm a 9:30 pm",
+            domingo: "1:00 pm a 9:30 pm"
+        },
+        metodos_pago: ["Efectivo", "Tarjeta de crédito", "Tarjeta de débito"],
+        servicios_adicionales: ["Reservaciones", "Servicio para llevar", "Wi-fi gratuito", "Pet friendly", "Bebidas alcohólicas", "Proyector para ver películas", "Renta del local para eventos", "Sesiones fotográficas"],
+        redes_sociales: ["Instagram: @azotea_116", "Facebook: https://www.facebook.com/share/16NGP4d68W/"],
+        telefono: "2226676142",
+        correo_electronico: "azotea116@gmail.com",
+        galeria_imagenes: [
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001Azotea.jpg",
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/Azotea2.jpg",
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/Azotea3.jpg"
+        ]
+    },
+    {
+        id: 10,
+        slug: "cafe-bunte",
+        nombre_establecimiento: "Café Bunte",
+        imagen: "",
+        direccion_completa: "Av. Zaragoza 280",
+        descripcion_restaurante: "Café Bunte un lugar familiar para disfrutar con familia y amigos. Ofrecemos un ambiente acogedor y relajado, perfecto para comenzar el día con un buen café y pay casero.",
+        tipo_comida: ["Cafetería", "Desayunos", "Postres"],
+        especialidades_casa: ["Café de especialidad", "Pays caseros", "Desayunos tradicionales"],
+        rango_precios_promedio_persona: "$50-$100 MXN",
+        horarios_atencion: {
+            lunes: "7:00 am a 12:00 pm",
+            martes: "7:00 am a 12:00 pm",
+            miercoles: "7:00 am a 12:00 pm",
+            jueves: "7:00 am a 12:00 pm",
+            viernes: "7:00 am a 12:00 pm",
+            sabado: "7:00 am a 12:00 pm",
+            domingo: "7:00 am a 12:00 pm"
+        },
+        metodos_pago: ["Efectivo", "Tarjeta de crédito", "Tarjeta de débito"],
+        redes_sociales: [],
+        telefono: "7641202810",
+        galeria_imagenes: [
+            "",
+            ""
+        ]
+    },
+    {
+        id: 11,
+        slug: "restaurante-la-choza",
+        nombre_establecimiento: "Restaurante La Choza",
+        imagen: "",
+        direccion_completa: "Reforma # 100 Col. Centro",
+        descripcion_restaurante: "Restaurante la Choza Ubicado en el antiguo Cine Garza en el centro de Xicotepec a una cuadra del Zócalo de la ciudad cuenta con desayunos comidas y cenas amplia variedad de platillos regionales nacionales e internacionales postres y bebidas",
+        tipo_comida: ["Mexicana", "Internacional", "Mariscos", "Gourmet", "Desayunos", "Postres"],
+        especialidades_casa: ["Paella Valenciana", "Pecho de Ternera", "Chamorro estilo Alemán", "Camarones a la Española", "Pulpo a la Gallega", "Arrachera Marinada", "Salmon a la Florentina", "Pechuga Carioca", "Pastas", "Ensaladas", "Tacos de Pastor", "Costilla", "Bistek", "Antojitos Mexicanos", "Desayunos de la Región"],
+        rango_precios_promedio_persona: "$100-$200 MXN",
+        horarios_atencion: {
+            lunes: "8:00 am a 10:00 pm",
+            martes: "8:00 am a 10:00 pm",
+            miercoles: "8:00 am a 10:00 pm",
+            jueves: "8:00 am a 10:00 pm",
+            viernes: "8:00 am a 10:00 pm",
+            sabado: "8:00 am a 10:00 pm",
+            domingo: "8:00 am a 10:00 pm"
+        },
+        metodos_pago: ["Efectivo", "Tarjeta de crédito", "Tarjeta de débito"],
+        redes_sociales: ["Facebook: La Choza Xicotepec de Juarez"],
+        telefono: "764 105 6363",
+        galeria_imagenes: [
+            "",
+            "",
+        ]
+    },
+    {
+        id: 12,
+        slug: "mariscos-el-tizoc-sucursal-xicotepec",
+        nombre_establecimiento: "Mariscos el Tizoc Sucursal Xicotepec",
+        imagen: "",
+        direccion_completa: "Av. Zaragoza #215",
+        descripcion_restaurante: "Los mejores platillos del mar están en Mariscos el Tizoc Sucursal Xicotepec Restaurant 100% familiar, del mar a tu paladar!! Tenemos un excelente servicio, precio y calidad, los platillos se preparan al momento con un toque de amor.",
+        tipo_comida: ["Mariscos", "Pescados", "Cocina del mar"],
+        especialidades_casa: ["Filete relleno al gratin", "Torre de Mariscos", "Molcajete Kraken", "Molcajete Mar y Tierra", "Aguachiles", "Fiesta de Camarones"],
+        rango_precios_promedio_persona: "$200-$350 MXN",
+        horarios_atencion: {
+            lunes: "9:00 am a 8:00 pm",
+            martes: "9:00 am a 8:00 pm",
+            miercoles: "9:00 am a 8:00 pm",
+            jueves: "9:00 am a 8:00 pm",
+            viernes: "9:00 am a 8:00 pm",
+            sabado: "9:00 am a 8:00 pm",
+            domingo: "9:00 am a 8:00 pm"
+        },
+        metodos_pago: ["Efectivo", "Tarjeta de crédito", "Tarjeta de débito"],
+        redes_sociales: ["Facebook: Mariscos el Tizoc"],
+        telefono: "7647641472",
+        galeria_imagenes: [
+            "",
+            "",
+        ]
+    },
     {
         id: 13,
+        slug: "teporingo-cocina-fusion",
+        nombre_establecimiento: "Teporingo cocina fusión",
+        imagen: "",
+        direccion_completa: "Plaza de la construcción 121 sótano",
+        descripcion_restaurante: "Lugar único en el centro de la ciudad, el edificio conserva su estructura original, cálido y privado óptimo para tus charlas y reuniones. La comida una función internacional adaptada al paladar mexicano.",
+        tipo_comida: ["Mexicana", "Internacional", "Mariscos", "Vegana/vegetariana", "Desayunos", "Postres", "Fusión"],
+        especialidades_casa: ["Burrata", "Ebys", "Tapas"],
+        rango_precios_promedio_persona: "$100-$200 MXN",
+        horarios_atencion: {
+            lunes: "Cerrado",
+            martes: "11:00 am a 9:00 pm",
+            miercoles: "11:00 am a 9:00 pm",
+            jueves: "11:00 am a 9:00 pm",
+            viernes: "11:00 am a 9:00 pm",
+            sabado: "8:00 am a 9:00 pm",
+            domingo: "8:00 am a 9:00 pm"
+        },
+        metodos_pago: ["Efectivo", "Tarjeta de crédito", "Tarjeta de débito"],
+        redes_sociales: ["Instagram: @el_teporingo_restaurante"],
+        telefono: "2221036536",
+        galeria_imagenes: [
+            "",
+            ""
+        ]
+    },
+    // ID 14
+    {
+        id: 14,
         slug: "cafeteria-creppycaff",
         nombre_establecimiento: "Cafetería Creppycaff",
         imagen: "",
@@ -360,9 +389,9 @@ export const restaurantsData = [
         ]
     },
 
-    // ID 14
+    // ID 15
     {
-        id: 14,
+        id: 15,
         slug: "lapin-cafeteria",
         nombre_establecimiento: "Lapin cafetería",
         imagen: "",
@@ -392,7 +421,7 @@ export const restaurantsData = [
 
     // ID 15
     {
-        id: 15,
+        id: 16,
         slug: "la-birrieria",
         nombre_establecimiento: "La birrieria",
         imagen: "",
@@ -420,9 +449,9 @@ export const restaurantsData = [
         ]
     }
     ,
-    // ID 16
+    // ID 17
     {
-        id: 16,
+        id: 17,
         slug: "amalindo-cafeteria-reposteria",
         nombre_establecimiento: "AMALINDO cafetería y repostería",
         imagen: "",
@@ -450,9 +479,9 @@ export const restaurantsData = [
         ]
     }
     ,
-    // ID 17
+    // ID 18
     {
-        id: 17,
+        id: 18,
         slug: "gonri-cafe",
         nombre_establecimiento: "GonRi Cafe",
         imagen: "",
@@ -480,35 +509,4 @@ export const restaurantsData = [
         ]
     }
     ,
-    // ID 18
-    {
-        id: 18,
-        slug: "azotea-116",
-        nombre_establecimiento: "Azotea 116",
-        imagen: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001Azotea.jpg",
-        direccion_completa: "Plaza de la Constitución No. 116 Planta Alta, Col. Centro, Xicotepec de Juárez",
-        descripcion_restaurante: "Ubicada en la cima de nuestro edificio, Azotea 116 es una terraza con una vista inigualable del centro de Xicotepec, rodeada por el majestuoso paisaje de cerros y atardeceres que tiñen el cielo con luz cálida y dorada. Es un espacio abierto, acogedor y lleno de encanto, perfecto para disfrutar de una tarde tranquila, una charla entre amigos o incluso un evento especial. Azotea 116 también está disponible para eventos privados, reuniones, sesiones fotográficas o celebraciones especiales, adaptándose a distintos estilos y necesidades. Aquí, cada visita es una experiencia distinta… con sabor, vista y corazón. Lo que hace único a nuestro restaurante es la vista panorámica privilegiada al centro de Xicotepec y sus cerros, con atardeceres espectaculares que bañan el espacio en luz cálida y natural, creando un ambiente perfecto para fotos, momentos tranquilos o citas casuales.",
-        tipo_comida: ["Comida rápida", "Postres", "Snacks", "Café", "Terraza"],
-        especialidades_casa: ["González Special", "Tarta de maracuyá", "Cazuelita de queso fundido con chistorra"],
-        rango_precios_promedio_persona: "$100-$200 MXN",
-        horarios_atencion: {
-            lunes: "1:00 pm a 9:30 pm",
-            martes: "1:00 pm a 9:30 pm",
-            miercoles: "1:00 pm a 9:30 pm",
-            jueves: "1:00 pm a 9:30 pm",
-            viernes: "1:00 pm a 9:30 pm",
-            sabado: "1:00 pm a 9:30 pm",
-            domingo: "1:00 pm a 9:30 pm"
-        },
-        metodos_pago: ["Efectivo", "Tarjeta de crédito", "Tarjeta de débito"],
-        servicios_adicionales: ["Reservaciones", "Servicio para llevar", "Wi-fi gratuito", "Pet friendly", "Bebidas alcohólicas", "Proyector para ver películas", "Renta del local para eventos", "Sesiones fotográficas"],
-        redes_sociales: ["Instagram: @azotea_116", "Facebook: https://www.facebook.com/share/16NGP4d68W/"],
-        telefono: "2226676142",
-        correo_electronico: "azotea116@gmail.com",
-        galeria_imagenes: [
-            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001Azotea.jpg",
-            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/Azotea2.jpg",
-            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/Azotea3.jpg"
-        ]
-    }
 ];
