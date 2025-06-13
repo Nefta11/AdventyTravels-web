@@ -210,11 +210,11 @@ export const HotelsData = [{
 }, {
     id: 5,
     slug: "casa-emilia-hotel-boutique",
-    image: "",
+    image: "http://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001HcasaEBou.jpg",
     galeria_imagenes: [
-        "",
-        "",
-        ""
+        "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/HcasaEBou1.jpg",
+        "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/HcasaEBou2.jpg",
+        "http://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001HcasaEBou.jpg"
     ],
     name: "Casa Emilia Hotel Boutique",
     category: "Hotel Boutique Histórico",
@@ -417,10 +417,11 @@ export const HotelsData = [{
 }, {
     id: 9,
     slug: "casa-don-laureano",
-    image: "http://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001HcasaEBou.jpg",
+    image: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001HotelDonLau.jpg",
     galeria_imagenes: [
-        "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/HcasaEBou1.jpg",
-        "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/HcasaEBou2.jpg"
+        "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001HotelDonLau.jpg",
+        "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/HotelDonLau2.jpg",
+        "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/HotelDonLau3.jpg"
     ],
     name: "Casa Don Laureano",
     category: "Hotel Boutique Centro",
