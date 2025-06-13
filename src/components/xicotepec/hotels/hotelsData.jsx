@@ -15,7 +15,7 @@ export const HotelsData = [{
     id: 1,
     slug: "hotel-bugambilias",
     image: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001Hotel%20Bugambilias.jpg",
-      galeria_imagenes: [
+    galeria_imagenes: [
         "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001Hotel%20Bugambilias.jpg",
         "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/HotelBugambilias2.jpg",
     ],
@@ -313,10 +313,11 @@ export const HotelsData = [{
 }, {
     id: 7,
     slug: "glamping-xicotepec",
-    image: "",
+    image: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001GLAMPIN.jpg",
     galeria_imagenes: [
-        "",
-        ""
+        "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001GLAMPIN.jpg",
+        "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/GLAMPIN2.jpg",
+        "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/GLAMPIN3.jpg"
     ],
     name: "Glamping Xicotepec",
     category: "Experiencia Premium en Naturaleza",
@@ -416,10 +417,10 @@ export const HotelsData = [{
 }, {
     id: 9,
     slug: "casa-don-laureano",
-    image: "",
+    image: "http://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001HcasaEBou.jpg",
     galeria_imagenes: [
-        "",
-        ""
+        "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/HcasaEBou1.jpg",
+        "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/HcasaEBou2.jpg"
     ],
     name: "Casa Don Laureano",
     category: "Hotel Boutique Centro",
