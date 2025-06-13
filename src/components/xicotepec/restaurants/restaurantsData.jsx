@@ -485,7 +485,7 @@ export const restaurantsData = [
         id: 18,
         slug: "azotea-116",
         nombre_establecimiento: "Azotea 116",
-        imagen: "",
+        imagen: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001Azotea.jpg",
         direccion_completa: "Plaza de la Constitución No. 116 Planta Alta, Col. Centro, Xicotepec de Juárez",
         descripcion_restaurante: "Ubicada en la cima de nuestro edificio, Azotea 116 es una terraza con una vista inigualable del centro de Xicotepec, rodeada por el majestuoso paisaje de cerros y atardeceres que tiñen el cielo con luz cálida y dorada. Es un espacio abierto, acogedor y lleno de encanto, perfecto para disfrutar de una tarde tranquila, una charla entre amigos o incluso un evento especial. Azotea 116 también está disponible para eventos privados, reuniones, sesiones fotográficas o celebraciones especiales, adaptándose a distintos estilos y necesidades. Aquí, cada visita es una experiencia distinta… con sabor, vista y corazón. Lo que hace único a nuestro restaurante es la vista panorámica privilegiada al centro de Xicotepec y sus cerros, con atardeceres espectaculares que bañan el espacio en luz cálida y natural, creando un ambiente perfecto para fotos, momentos tranquilos o citas casuales.",
         tipo_comida: ["Comida rápida", "Postres", "Snacks", "Café", "Terraza"],
@@ -506,7 +506,9 @@ export const restaurantsData = [
         telefono: "2226676142",
         correo_electronico: "azotea116@gmail.com",
         galeria_imagenes: [
-            "",
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001Azotea.jpg",
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/Azotea2.jpg",
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/Azotea3.jpg"
         ]
     }
 ];
