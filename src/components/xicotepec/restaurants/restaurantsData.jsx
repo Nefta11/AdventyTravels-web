@@ -142,7 +142,7 @@ export const restaurantsData = [
         id: 6,
         slug: "restaurante-villa-tamiahua",
         nombre_establecimiento: "Restaurante Villa Tamiahua",
-        imagen: "",
+        imagen: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001RestaurantVillaTamu.jpg",
         direccion_completa: "Calle Allende #159",
         descripcion_restaurante: "Tenemos 35 años de antigüedad, ambiente familiar, prohibido fumar en el interior, por dentro tipo choza, con Palma. Un lugar tradicional que conserva la esencia de la cocina casera con mariscos frescos.",
         tipo_comida: ["Mexicana", "Internacional", "Mariscos"],
@@ -161,8 +161,9 @@ export const restaurantsData = [
         redes_sociales: [],
         telefono: "7641051342",
         galeria_imagenes: [
-            "",
-            ""
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001RestaurantVillaTamu.jpg",
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/RestaurantVillaTamu3.jpg",
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/RestaurantVillaTamu2.jpg"
         ]
     },
     {
