@@ -197,13 +197,22 @@ const XicotepecFooter = () => {
                             </div>
                         </div>
                     </div>
-                </div>
-
-                {/* Bottom Bar - Simplificado y centrado */}
+                </div>                {/* Bottom Bar - Simplificado y centrado */}
                 <div className="xicotepec-footer-bottom">
                     <div className="xicotepec-footer-copyright">
                         <p>&copy; 2024 Adventy Travels. Todos los derechos reservados.</p>
                         <p className="xicotepec-footer-location">Xicotepec de Juárez, Puebla • Pueblo Mágico</p>
+                        <div className="xicotepec-footer-developer-credit">
+                            <a 
+                                href="https://neftalivergaraportafolio.netlify.app/" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="xicotepec-developer-credit-link"
+                            >
+                                <span className="xicotepec-heart-icon">💻</span>
+                                <span>Desarrollador: Neftalí V.</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

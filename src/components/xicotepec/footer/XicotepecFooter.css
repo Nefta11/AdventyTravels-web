@@ -338,6 +338,56 @@
     margin-top: 4px !important;
 }
 
+/* Crédito del desarrollador */
+.xicotepec-footer-developer-credit {
+    margin-top: 8px;
+}
+
+.xicotepec-developer-credit-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.7rem;
+    transition: all 0.3s ease;
+    padding: 2px 6px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.xicotepec-developer-credit-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.xicotepec-developer-credit-link:hover::before {
+    left: 100%;
+}
+
+.xicotepec-developer-credit-link:hover {
+    color: var(--footer-antique-gold);
+    transform: translateY(-2px);
+}
+
+.xicotepec-heart-icon {
+    font-size: 0.75rem;
+    animation: heartbeat 2s ease-in-out infinite;
+    filter: drop-shadow(0 0 2px rgba(212, 175, 55, 0.3));
+}
+
+.xicotepec-developer-credit-link:hover .xicotepec-heart-icon {
+    animation: heartbeat 0.6s ease;
+    filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.6));
+}
+
 /* Animaciones */
 @keyframes fadeInUp {
     from {
@@ -546,14 +596,22 @@
     .xicotepec-footer-agency p {
         font-size: 0.9rem;
         line-height: 1.5;
-    }
-
-    .xicotepec-footer-copyright p {
+    }    .xicotepec-footer-copyright p {
         font-size: 0.85rem;
     }
 
     .xicotepec-footer-bottom {
         padding-top: 20px;
+    }
+
+    /* Developer credit responsive for tablets */
+    .xicotepec-developer-credit-link {
+        gap: 3px;
+        font-size: 0.65rem;
+    }
+
+    .xicotepec-heart-icon {
+        font-size: 0.7rem;
     }
 }
 
@@ -662,7 +720,6 @@
         width: 42px;
         height: 42px;
         font-size: 1.1rem;
-        border-radius: 10px;
     }
 
     .xicotepec-footer-explore-content h4 {
@@ -790,9 +847,17 @@
 
     .xicotepec-footer-agency p {
         font-size: 0.85rem;
+    }    .xicotepec-footer-copyright p {
+        font-size: 0.75rem;
     }
 
-    .xicotepec-footer-copyright p {
-        font-size: 0.75rem;
+    /* Developer credit responsive */
+    .xicotepec-developer-credit-link {
+        gap: 3px;
+        font-size: 0.6rem;
+    }
+
+    .xicotepec-heart-icon {
+        font-size: 0.65rem;
     }
 }
