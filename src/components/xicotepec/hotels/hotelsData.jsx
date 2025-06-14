@@ -366,12 +366,13 @@ export const HotelsData = [{
 }, {
     id: 8,
     slug: "aroma-xicotepex-cabanas-camping",
-    image: "",
+    image: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001Aroma.jpg",
     galeria_imagenes: [
-        "",
-        "",
+        "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001Aroma.jpg",
+        "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/Aroma2.jpg",
+        "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/Aroma3.jpg"
     ],
-    name: "Aroma Xicotepex Cabañas y Camping",
+    name: "Aroma Xicotepec Cabañas y Camping",
     category: "Cabañas Premium en Cafetales",
     location: "Camino a San Antonio 106",
     price: "Desde $2,200 MXN",
