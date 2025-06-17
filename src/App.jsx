@@ -10,6 +10,7 @@ import Gallery from './pages/Gallery';
 import Blog from './pages/Blog';
 import Error404 from './pages/pagError/Error404';
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { Analytics } from "@vercel/analytics/react";
 import Distribuidor from './pages/Distribuidor';
 import Partners from './pages/Partners';
 import VerifyDistributor from './pages/VerifyDistributor';
@@ -24,10 +25,10 @@ import TourDetail from './pages/xicotepec/TourDetail';
 function App() {
   return (
     <I18nextProvider i18n={LenguajeTranslations}>
-      <BrowserRouter>
-        <ScrollToTop />
+      <BrowserRouter>        <ScrollToTop />
         <div className="container">
           <SpeedInsights />
+          <Analytics />
           <AnimatePresence exitBeforeEnter>
             <RoutesWithAnimation />
           </AnimatePresence>
