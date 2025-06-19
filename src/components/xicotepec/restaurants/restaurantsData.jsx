@@ -309,7 +309,7 @@ export const restaurantsData = [
         id: 12,
         slug: "mariscos-el-tizoc-sucursal-xicotepec",
         nombre_establecimiento: "Mariscos el Tizoc Sucursal Xicotepec",
-        imagen: "",
+        imagen: "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001Tizoc.jpg",
         direccion_completa: "Av. Zaragoza #215",
         descripcion_restaurante: "Los mejores platillos del mar están en Mariscos el Tizoc Sucursal Xicotepec Restaurant 100% familiar, del mar a tu paladar!! Tenemos un excelente servicio, precio y calidad, los platillos se preparan al momento con un toque de amor.",
         tipo_comida: ["Mariscos", "Pescados", "Cocina del mar"],
@@ -328,8 +328,9 @@ export const restaurantsData = [
         redes_sociales: ["Facebook: Mariscos el Tizoc"],
         telefono: "7647641472",
         galeria_imagenes: [
-            "",
-            "",
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/001Tizoc.jpg",
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/Tizoc2.jpg",
+            "https://raw.githubusercontent.com/Nefta11/AdventyTravels-web/refs/heads/main/src/assets/FotosXicotepec/Tizoc3.jpg"
         ]
     },
     {
