@@ -1,15 +1,8 @@
 // ScrollToTop.jsx
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useScrollRestoration } from '../hooks/useScrollRestoration';
 
 const ScrollToTop = () => {
-    const { pathname } = useLocation();
-
-    useEffect(() => {
-        // Hacer scroll al inicio de la página de manera instantánea (sin animación)
-        window.scrollTo(0, 0);
-    }, [pathname]);
-
+    useScrollRestoration();
     return null; // Este componente no renderiza nada
 };
 

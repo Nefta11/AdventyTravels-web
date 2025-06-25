@@ -7,6 +7,8 @@ const Atractivos = () => {
     const atractivos = getAllAtractivos();
 
     const handleAtractivoClick = (atractivoSlug) => {
+        // Guardar la posición actual de scroll antes de navegar
+        sessionStorage.setItem('xicotepecScrollPosition', window.scrollY.toString());
         navigate(`/atractivo/${atractivoSlug}`);
     };
 

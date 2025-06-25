@@ -7,6 +7,12 @@ const Tours = () => {
     const navigate = useNavigate();
     const tours = getAllTours();
 
+    const handleTourClick = (tourSlug) => {
+        // Guardar la posición actual de scroll antes de navegar
+        sessionStorage.setItem('xicotepecScrollPosition', window.scrollY.toString());
+        navigate(`/xicotepec/tour/${tourSlug}`);
+    };
+
     return (
         <section className="tours-component-wrapper" id="tours-section">
             <div className="tours-component-container">                {/* Título principal */}
@@ -19,7 +25,7 @@ const Tours = () => {
                         <div
                             key={tour.id}
                             className="tours-component-card"
-                            onClick={() => navigate(`/xicotepec/tour/${tour.slug}`)}
+                            onClick={() => handleTourClick(tour.slug)}
                         >
                             <div
                                 className="tours-component-card-image"

@@ -11,6 +11,8 @@ const Hotels = () => {
     const [showAll, setShowAll] = useState(false);
 
     const handleHotelClick = (hotelSlug) => {
+        // Guardar la posición actual de scroll antes de navegar
+        sessionStorage.setItem('xicotepecScrollPosition', window.scrollY.toString());
         navigate(`/hotel/${hotelSlug}`);
     };
 

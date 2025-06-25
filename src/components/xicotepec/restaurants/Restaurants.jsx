@@ -9,6 +9,8 @@ const Restaurants = () => {
     const [showAll, setShowAll] = useState(false);
 
     const handleRestaurantClick = (restaurant) => {
+        // Guardar la posición actual de scroll antes de navegar
+        sessionStorage.setItem('xicotepecScrollPosition', window.scrollY.toString());
         navigate(`/restaurant/${restaurant.slug}`, { state: { restaurant } });
     };
 

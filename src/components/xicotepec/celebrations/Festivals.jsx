@@ -82,6 +82,8 @@ const Festivals = () => {
     ];
 
     const handleCardClick = (festival) => {
+        // Guardar la posición actual de scroll antes de navegar
+        sessionStorage.setItem('xicotepecScrollPosition', window.scrollY.toString());
         // Navegar a la página de detalle del festival
         navigate(`/festival/${festival.id}`, { state: { festival } });
     };
