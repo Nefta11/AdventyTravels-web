@@ -59,7 +59,7 @@ function RoutesWithAnimation() {
       <Route path='/xicotepec/tour/:slug' element={<TourDetail />} />
       <Route path="*" element={<Error404 />} />
     </Routes>
-  );
+  ); 
 }
 
 export default App;
