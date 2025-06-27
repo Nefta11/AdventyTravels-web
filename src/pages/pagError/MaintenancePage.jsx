@@ -10,7 +10,7 @@ const MaintenancePage = () => {
             color: '#ffffff',
             fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
             textAlign: 'center',
-            padding: '20px',
+            padding: 'clamp(15px, 4vw, 20px)',
             position: 'relative',
             overflow: 'hidden'
         }}>
@@ -18,9 +18,9 @@ const MaintenancePage = () => {
             <div style={{
                 position: 'absolute',
                 top: '10%',
-                left: '10%',
-                width: '100px',
-                height: '100px',
+                left: '5%',
+                width: 'clamp(60px, 15vw, 100px)',
+                height: 'clamp(60px, 15vw, 100px)',
                 borderRadius: '50%',
                 background: 'rgba(255, 255, 255, 0.1)',
                 animation: 'float 6s ease-in-out infinite'
@@ -28,9 +28,9 @@ const MaintenancePage = () => {
             <div style={{
                 position: 'absolute',
                 top: '60%',
-                right: '15%',
-                width: '150px',
-                height: '150px',
+                right: '8%',
+                width: 'clamp(80px, 20vw, 150px)',
+                height: 'clamp(80px, 20vw, 150px)',
                 borderRadius: '50%',
                 background: 'rgba(255, 255, 255, 0.05)',
                 animation: 'float 8s ease-in-out infinite reverse'
@@ -41,9 +41,9 @@ const MaintenancePage = () => {
                 backgroundColor: 'rgba(255, 255, 255, 0.1)',
                 backdropFilter: 'blur(10px)',
                 borderRadius: '20px',
-                padding: '60px 40px',
+                padding: 'clamp(30px, 8vw, 60px) clamp(20px, 6vw, 40px)',
                 maxWidth: '600px',
-                width: '100%',
+                width: '90%',
                 boxShadow: '0 25px 50px rgba(0, 0, 0, 0.25)',
                 border: '1px solid rgba(255, 255, 255, 0.2)',
                 zIndex: 2,
@@ -51,8 +51,8 @@ const MaintenancePage = () => {
             }}>
                 {/* Icon */}
                 <div style={{
-                    fontSize: '80px',
-                    marginBottom: '30px',
+                    fontSize: 'clamp(50px, 12vw, 80px)',
+                    marginBottom: 'clamp(15px, 4vw, 30px)',
                     animation: 'pulse 2s infinite'
                 }}>
                     ⚠️
@@ -60,32 +60,33 @@ const MaintenancePage = () => {
 
                 {/* Title */}
                 <h1 style={{
-                    fontSize: 'clamp(2rem, 5vw, 3.5rem)',
-                    marginBottom: '20px',
+                    fontSize: 'clamp(1.5rem, 8vw, 3.5rem)',
+                    marginBottom: 'clamp(10px, 3vw, 20px)',
                     fontWeight: '700',
                     background: 'linear-gradient(45deg, #ffffff, #f0f0f0)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text'
+                    backgroundClip: 'text',
+                    lineHeight: '1.2'
                 }}>
                     Servidor No Disponible
                 </h1>
 
                 {/* Subtitle */}
                 <p style={{
-                    fontSize: '1.3rem',
-                    marginBottom: '15px',
+                    fontSize: 'clamp(1rem, 3.5vw, 1.3rem)',
+                    marginBottom: 'clamp(8px, 2vw, 15px)',
                     opacity: 0.9,
-                    lineHeight: '1.6'
+                    lineHeight: '1.4'
                 }}>
                     Estamos experimentando problemas técnicos
                 </p>
 
                 <p style={{
-                    fontSize: '1.1rem',
+                    fontSize: 'clamp(0.9rem, 3vw, 1.1rem)',
                     opacity: 0.7,
-                    marginBottom: '40px',
-                    lineHeight: '1.5'
+                    marginBottom: 'clamp(25px, 6vw, 40px)',
+                    lineHeight: '1.4'
                 }}>
                     Nuestros servidores están siendo restablecidos
                 </p>
@@ -95,15 +96,15 @@ const MaintenancePage = () => {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    gap: '8px',
-                    marginBottom: '30px'
+                    gap: 'clamp(6px, 2vw, 8px)',
+                    marginBottom: 'clamp(20px, 5vw, 30px)'
                 }}>
                     {[0, 1, 2].map(i => (
                         <div
                             key={i}
                             style={{
-                                width: '12px',
-                                height: '12px',
+                                width: 'clamp(8px, 3vw, 12px)',
+                                height: 'clamp(8px, 3vw, 12px)',
                                 borderRadius: '50%',
                                 backgroundColor: '#ffffff',
                                 animation: `bounce 1.4s infinite ease-in-out both`,
@@ -115,7 +116,7 @@ const MaintenancePage = () => {
 
                 {/* Contact info */}
                 <div style={{
-                    fontSize: '0.95rem',
+                    fontSize: 'clamp(0.8rem, 2.5vw, 0.95rem)',
                     opacity: 0.8,
                     color: '#f0f0f0'
                 }}>
@@ -147,7 +148,13 @@ const MaintenancePage = () => {
                 
                 @media (max-width: 768px) {
                     .maintenance-container {
-                        padding: 40px 20px !important;
+                        padding: 30px 15px !important;
+                    }
+                }
+                
+                @media (max-width: 480px) {
+                    .maintenance-container {
+                        padding: 20px 10px !important;
                     }
                 }
             `}</style>
