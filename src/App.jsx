@@ -21,6 +21,7 @@ import HotelDetail from './pages/xicotepec/HotelDetail';
 import RestaurantDetail from './pages/xicotepec/RestaurantDetail';
 import AtractivoDetail from './pages/xicotepec/AtractivoDetail';
 import TourDetail from './pages/xicotepec/TourDetail';
+import MaintenancePage from './pages/pagError/MaintenancePage';
 
 function App() {
   return (
@@ -38,9 +39,23 @@ function App() {
   );
 }
 
+// Variable para controlar el modo mantenimiento
+// Cambia a false cuando el cliente pague 
+const MAINTENANCE_MODE = false;
+
 function RoutesWithAnimation() {
   const location = useLocation();
 
+  // Si está en modo mantenimiento, mostrar solo la página de mantenimiento
+  if (MAINTENANCE_MODE) {
+    return (
+      <Routes location={location} key={location.pathname}>
+        <Route path="*" element={<MaintenancePage />} />
+      </Routes>
+    );
+  }
+
+  // Rutas normales cuando no está en mantenimiento
   return (
     <Routes location={location} key={location.pathname}>
       <Route path="/" element={<Home />} />
@@ -51,7 +66,8 @@ function RoutesWithAnimation() {
       <Route path="/distribuidor" element={<Distribuidor />} />
       <Route path="/partners" element={<Partners />} />
       <Route path="/verify-distributor" element={<VerifyDistributor />} />
-      <Route path="/AdventyPay" element={<AdventyPay />} />      <Route path='/xicotepec' element={<Xicotepec />} />
+      <Route path="/AdventyPay" element={<AdventyPay />} />
+      <Route path='/xicotepec' element={<Xicotepec />} />
       <Route path='/festival/:id' element={<FestivalDetailPage />} />
       <Route path='/hotel/:slug' element={<HotelDetail />} />
       <Route path='/restaurant/:slug' element={<RestaurantDetail />} />
@@ -59,7 +75,7 @@ function RoutesWithAnimation() {
       <Route path='/xicotepec/tour/:slug' element={<TourDetail />} />
       <Route path="*" element={<Error404 />} />
     </Routes>
-  ); 
+  );
 }
 
 export default App;
