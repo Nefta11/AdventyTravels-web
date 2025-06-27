@@ -39,7 +39,6 @@ function App() {
   );
 }
 
-// Variable para controlar el modo mantenimiento
 // Cambia a false cuando el cliente pague 
 const MAINTENANCE_MODE = false;
 
