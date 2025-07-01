@@ -62,22 +62,32 @@ const atractivosData = [
         "location": "XICOTEPEC",
         "address": "5 de Mayo, Colonia Centro, Xicotepec de Juárez, Puebla, México",
         "phone": "764 764 0072",
-        "description": "La antigua casa donde fue velado el cuerpo de Venustiano Carranza antes de ser llevado a la Ciudad de México es ahora el museo dispuesto a recordarlo. Aquí quedaron guardadas sus vísceras, en una urna que participa cada año de la ceremonia luctuosa celebrada por sus descendientes.",
+        "description": "Inaugurado en 1959 en la casa del Sr. Juan Córdoba y Gómez, este museo honra a don José Venustiano Carranza de la Garza. Aquí llegaron sus restos el 21 de mayo de 1920 alrededor de las 4:20 de la mañana, cuando Villa Juárez (ahora Xicotepec) se convirtió temporalmente en capital de la República Mexicana. En esta casa se le realizó la autopsia y su cuerpo permaneció del 21 al 23 de mayo antes de ser trasladado a la Ciudad de México.",
         "type": "Museo Histórico",
+        "founded": "1959",
         "attractions": [
             "Casa histórica donde fue velado Venustiano Carranza",
-            "Museografía sobre la muerte del caudillo",
-            "Urna con las vísceras de Carranza",
-            "Fotos históricas del pueblo",
-            "Video sobre el asesinato de Carranza",
-            "Mural de la Fundación Arellano",
-            "Historia de la Revolución Mexicana"
+            "Urna con las vísceras de Carranza conservadas desde 1920",
+            "Fotografías históricas de la época",
+            "Foto de la choza donde fue asesinado en Tlaxcalantongo",
+            "Acta de defunción original expedida en Xicotepec",
+            "Casquillo de cañón de 75 milímetros percutido",
+            "Museografía sobre 'El Barón de Cuatro Ciénegas'",
+            "Historia de cuando Xicotepec fue capital de México"
         ],
         "features": {
             "historical": true,
             "educational": true,
             "cultural": true,
             "revolutionary_history": true
+        },
+        "historical_facts": {
+            "carranza_birth": "29 de diciembre de 1859, Cuatro Ciénegas, Coahuila",
+            "carranza_death": "21 de mayo de 1920, Tlaxcalantongo, Puebla",
+            "body_arrival": "4:20 AM del 21 de mayo de 1920",
+            "stay_duration": "21, 22 y 23 de mayo de 1920",
+            "temporary_capital": "Xicotepec fue capital de la República Mexicana",
+            "nicknames": ["El Barón de Cuatro Ciénegas", "El hijo predilecto de Coahuila"]
         }
     },
     {
@@ -114,24 +124,28 @@ const atractivosData = [
         "location": "XICOTEPEC",
         "address": "Iturbide, Colonia Centro, Xicotepec de Juárez, Puebla, México",
         "phone": "764 764 0031",
-        "description": "Antes conocida como la Parroquia del Calvario. Se trata de una construcción erigida en el siglo XVI por los agustinos, y se ha ido modificando hasta adquirir ese aspecto neogótico en su fachada.",
+        "description": "Conocida anteriormente como la Parroquia del Calvario, fue fundada en 1571 por los monjes agustinos. Este bellísimo edificio de arquitectura religiosa se asemeja a la Catedral de Notre Dame en París, siendo considerado la más valiosa joya arquitectónica que distingue orgullosamente a Xicotepec de Juárez. Historia cronológica: 1544 - Llegada de los primeros monjes agustinos; 1570 - Aparece como Parroquia de la Diócesis de Tlaxcala; 1571 - Fundación oficial de la parroquia; 1491 - Reconstrucción bajo Prior Fray Francisco de Céspedes; 1754 - Secularización del templo; 1786 - Terminación de la reconstrucción final. El primer párroco fue Francisco León Carvajal (también poeta). El convento original estaba donde hoy se encuentra el restaurante (ex-cine Garza), hasta que un incendio lo destruyó y se trasladaron al cementerio agustino entre las calles Zaragoza, 2 de Abril y Leona Vicario.",
         "type": "Templo Religioso",
+        "founded": "1571",
         "attractions": [
-            "Arquitectura neogótica en fachada",
-            "Interior neoclásico",
-            "Catacumbas de moradores de los siglos XVI y XVII",
-            "Portón de madera con arcos ojivales",
-            "Altar con Cristo, San Juan Bautista y San José",
-            "Historia agustina del siglo XVI"
+            "Arquitectura gótica similar a Notre Dame de París",
+            "Catacumbas con cientos de moradores siglos XVI-XVII",
+            "Estilo gótico y neoclásico predominante",
+            "Fachada y torres reformadas por arquitecto Lozada (años 60)",
+            "Placa de piedra histórica 'Xico 1786'",
+            "Capilla de la Virgen de Guadalupe",
+            "Cementerio agustino histórico",
+            "Patrimonio arquitectónico universal"
         ],
         "features": {
             "religious": true,
             "architectural": true,
             "historical": true,
-            "cultural": true
+            "cultural": true,
+            "gothic_style": true
         },
-        "historical_period": "Siglo XVI",
-        "architectural_style": "Neogótico y Neoclásico"
+        "historical_period": "Fundada en 1571",
+        "architectural_style": "Gótico y Neoclásico"
     },
     {
         "id": 6,
