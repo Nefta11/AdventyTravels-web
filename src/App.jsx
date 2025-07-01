@@ -40,7 +40,7 @@ function App() {
 }
 
 // Cambia a false cuando el cliente pague 
-const MAINTENANCE_MODE = true;
+const MAINTENANCE_MODE = false;
 
 function RoutesWithAnimation() {
   const location = useLocation();
