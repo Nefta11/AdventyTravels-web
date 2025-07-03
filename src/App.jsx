@@ -3,6 +3,7 @@ import { I18nextProvider } from 'react-i18next';
 import { AnimatePresence } from 'framer-motion';
 import LenguajeTranslations from './lenguaje/LenguajeTranslations';
 import ScrollToTop from './utils/ScrollToTop';
+import useFadeOpacity from './hooks/useFadeOpacity';
 import Home from './pages/Home';
 import Experiences from './pages/Experiences';
 import AboutUs from './pages/AboutUs';
@@ -48,17 +49,26 @@ function RoutesWithAnimation() {
 }
 
 function App() {
+  // Usar el hook personalizado para manejar la opacidad con overlay negro
+  // Para opacidad inmediata, usa una fecha pasada:
+  // '2025-06-03' = completamente negro (30 días atrás)
+  // '2025-06-18' = semi-negro (15 días atrás)
+  // '2025-06-05' = muy negro (28 días atrás)
+  const fadeEffect = useFadeOpacity('2025-06-30', 30);
+
   return (
     <I18nextProvider i18n={LenguajeTranslations}>
       <BrowserRouter>
         <ScrollToTop />
-        <div className="container">
+        <div className="container" style={fadeEffect.styles.content}>
           <SpeedInsights />
           <Analytics />
           <AnimatePresence exitBeforeEnter>
             <RoutesWithAnimation />
           </AnimatePresence>
         </div>
+        {/* Overlay negro que se intensifica cada día */}
+        <div style={fadeEffect.styles.overlay}></div>
       </BrowserRouter>
     </I18nextProvider>
   );
