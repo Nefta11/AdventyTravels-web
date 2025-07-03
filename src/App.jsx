@@ -14,46 +14,16 @@ import { Analytics } from "@vercel/analytics/react";
 import Distribuidor from './pages/Distribuidor';
 import Partners from './pages/Partners';
 import VerifyDistributor from './pages/VerifyDistributor';
-// import AdventyPay from './pages/adventyPay/AdventyPay';
+import AdventyPay from './pages/adventyPay/AdventyPay';
 // import Xicotepec from './pages/Xicotepec';
 // import FestivalDetailPage from './pages/xicotepec/FestivalDetailPage';
 // import HotelDetail from './pages/xicotepec/HotelDetail';
 // import RestaurantDetail from './pages/xicotepec/RestaurantDetail';
 // import AtractivoDetail from './pages/xicotepec/AtractivoDetail';
 // import TourDetail from './pages/xicotepec/TourDetail';
-import MaintenancePage from './pages/pagError/MaintenancePage';
-
-function App() {
-  return (
-    <I18nextProvider i18n={LenguajeTranslations}>
-      <BrowserRouter>        <ScrollToTop />
-        <div className="container">
-          <SpeedInsights />
-          <Analytics />
-          <AnimatePresence exitBeforeEnter>
-            <RoutesWithAnimation />
-          </AnimatePresence>
-        </div>
-      </BrowserRouter>
-    </I18nextProvider>
-  );
-}
-
-// Cambia a false cuando el cliente pague 
-const MAINTENANCE_MODE = false;
 
 function RoutesWithAnimation() {
   const location = useLocation();
-
-  // Si está en modo mantenimiento, mostrar solo la página de mantenimiento
-  if (MAINTENANCE_MODE) {
-    return (
-      <Routes location={location} key={location.pathname}>
-        <Route path="*" element={<MaintenancePage />} />
-      </Routes>
-    );
-  }
-
   // Rutas normales cuando no está en mantenimiento
   return (
     <Routes location={location} key={location.pathname}>
@@ -65,7 +35,7 @@ function RoutesWithAnimation() {
       <Route path="/distribuidor" element={<Distribuidor />} />
       <Route path="/partners" element={<Partners />} />
       <Route path="/verify-distributor" element={<VerifyDistributor />} />
-      {/* <Route path="/AdventyPay" element={<AdventyPay />} /> */}
+      <Route path="/AdventyPay" element={<AdventyPay />} />
       {/* <Route path='/xicotepec' element={<Xicotepec />} /> */}
       {/* <Route path='/festival/:id' element={<FestivalDetailPage />} /> */}
       {/* <Route path='/hotel/:slug' element={<HotelDetail />} /> */}
@@ -74,6 +44,23 @@ function RoutesWithAnimation() {
       {/* <Route path='/xicotepec/tour/:slug' element={<TourDetail />} /> */}
       <Route path="*" element={<Error404 />} />
     </Routes>
+  );
+}
+
+function App() {
+  return (
+    <I18nextProvider i18n={LenguajeTranslations}>
+      <BrowserRouter>
+        <ScrollToTop />
+        <div className="container">
+          <SpeedInsights />
+          <Analytics />
+          <AnimatePresence exitBeforeEnter>
+            <RoutesWithAnimation />
+          </AnimatePresence>
+        </div>
+      </BrowserRouter>
+    </I18nextProvider>
   );
 }
 
