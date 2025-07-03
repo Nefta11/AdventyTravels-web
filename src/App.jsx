@@ -14,13 +14,13 @@ import { Analytics } from "@vercel/analytics/react";
 import Distribuidor from './pages/Distribuidor';
 import Partners from './pages/Partners';
 import VerifyDistributor from './pages/VerifyDistributor';
-import AdventyPay from './pages/adventyPay/AdventyPay';
-import Xicotepec from './pages/Xicotepec';
-import FestivalDetailPage from './pages/xicotepec/FestivalDetailPage';
-import HotelDetail from './pages/xicotepec/HotelDetail';
-import RestaurantDetail from './pages/xicotepec/RestaurantDetail';
-import AtractivoDetail from './pages/xicotepec/AtractivoDetail';
-import TourDetail from './pages/xicotepec/TourDetail';
+// import AdventyPay from './pages/adventyPay/AdventyPay';
+// import Xicotepec from './pages/Xicotepec';
+// import FestivalDetailPage from './pages/xicotepec/FestivalDetailPage';
+// import HotelDetail from './pages/xicotepec/HotelDetail';
+// import RestaurantDetail from './pages/xicotepec/RestaurantDetail';
+// import AtractivoDetail from './pages/xicotepec/AtractivoDetail';
+// import TourDetail from './pages/xicotepec/TourDetail';
 import MaintenancePage from './pages/pagError/MaintenancePage';
 
 function App() {
@@ -65,13 +65,13 @@ function RoutesWithAnimation() {
       <Route path="/distribuidor" element={<Distribuidor />} />
       <Route path="/partners" element={<Partners />} />
       <Route path="/verify-distributor" element={<VerifyDistributor />} />
-      <Route path="/AdventyPay" element={<AdventyPay />} />
-      <Route path='/xicotepec' element={<Xicotepec />} />
-      <Route path='/festival/:id' element={<FestivalDetailPage />} />
-      <Route path='/hotel/:slug' element={<HotelDetail />} />
-      <Route path='/restaurant/:slug' element={<RestaurantDetail />} />
-      <Route path='/atractivo/:slug' element={<AtractivoDetail />} />
-      <Route path='/xicotepec/tour/:slug' element={<TourDetail />} />
+      {/* <Route path="/AdventyPay" element={<AdventyPay />} /> */}
+      {/* <Route path='/xicotepec' element={<Xicotepec />} /> */}
+      {/* <Route path='/festival/:id' element={<FestivalDetailPage />} /> */}
+      {/* <Route path='/hotel/:slug' element={<HotelDetail />} /> */}
+      {/* <Route path='/restaurant/:slug' element={<RestaurantDetail />} /> */}
+      {/* <Route path='/atractivo/:slug' element={<AtractivoDetail />} /> */}
+      {/* <Route path='/xicotepec/tour/:slug' element={<TourDetail />} /> */}
       <Route path="*" element={<Error404 />} />
     </Routes>
   );
