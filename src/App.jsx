@@ -49,7 +49,7 @@ function RoutesWithAnimation() {
 }
 
 function App() {
-  const fadeEffect = useFadeOpacity('2025-06-30', 30);
+  const fadeEffect = useFadeOpacity('2025-07-01', 30);
 
   return (
     <I18nextProvider i18n={LenguajeTranslations}>
