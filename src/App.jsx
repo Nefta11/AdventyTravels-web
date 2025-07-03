@@ -49,11 +49,6 @@ function RoutesWithAnimation() {
 }
 
 function App() {
-  // Usar el hook personalizado para manejar la opacidad con overlay negro
-  // Para opacidad inmediata, usa una fecha pasada:
-  // '2025-06-03' = completamente negro (30 días atrás)
-  // '2025-06-18' = semi-negro (15 días atrás)
-  // '2025-06-05' = muy negro (28 días atrás)
   const fadeEffect = useFadeOpacity('2025-06-30', 30);
 
   return (
