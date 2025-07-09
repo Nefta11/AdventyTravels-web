@@ -3,7 +3,6 @@ import { I18nextProvider } from 'react-i18next';
 import { AnimatePresence } from 'framer-motion';
 import LenguajeTranslations from './lenguaje/LenguajeTranslations';
 import ScrollToTop from './utils/ScrollToTop';
-import useFadeOpacity from './hooks/useFadeOpacity';
 import Home from './pages/Home';
 import Experiences from './pages/Experiences';
 import AboutUs from './pages/AboutUs';
@@ -49,21 +48,17 @@ function RoutesWithAnimation() {
 }
 
 function App() {
-  const fadeEffect = useFadeOpacity('2025-07-01', 30);
-
   return (
     <I18nextProvider i18n={LenguajeTranslations}>
       <BrowserRouter>
         <ScrollToTop />
-        <div className="container" style={fadeEffect.styles.content}>
+        <div className="container">
           <SpeedInsights />
           <Analytics />
           <AnimatePresence exitBeforeEnter>
             <RoutesWithAnimation />
           </AnimatePresence>
         </div>
-        {/* Overlay negro que se intensifica cada día */}
-        <div style={fadeEffect.styles.overlay}></div>
       </BrowserRouter>
     </I18nextProvider>
   );
