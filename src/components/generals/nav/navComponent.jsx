@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { FaMoneyBillWave, FaBars, FaTimes, FaHome, FaSuitcase, FaInfoCircle, FaBlog, FaImages, FaEnvelope, FaUsers, FaHandshake, FaFemale } from 'react-icons/fa';
+import { FaMoneyBillWave, FaBars, FaTimes, FaHome, FaSuitcase, FaInfoCircle, /* FaBlog, */ FaImages, FaEnvelope, FaUsers, FaHandshake, FaFemale } from 'react-icons/fa';
 // import { GiVillage } from 'react-icons/gi';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
@@ -109,13 +109,13 @@ const NavComponent = () => {
                             menuOpen={menuOpen}
                             isActive={location.pathname === '/nosotros'}
                         />
-                        <NavItem
+                        {/* <NavItem
                             to="/blog"
                             icon={isMobile ? FaBlog : null}
                             label={t('blog')}
                             menuOpen={menuOpen}
                             isActive={location.pathname === '/blog'}
-                        />
+                        /> */}
                         <NavItem
                             to="/galeria"
                             icon={isMobile ? FaImages : null}
