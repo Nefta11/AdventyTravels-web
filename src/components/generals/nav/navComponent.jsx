@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
-import { FaMoneyBillWave, FaBars, FaTimes, FaHome, FaSuitcase, FaInfoCircle, /* FaBlog, */ FaImages, FaEnvelope, FaUsers, FaHandshake, FaFemale } from 'react-icons/fa';
-// import { GiVillage } from 'react-icons/gi';
+import { FaMoneyBillWave, FaBars, FaTimes, FaHome, FaSuitcase, FaInfoCircle, FaBlog, FaImages, FaEnvelope, FaUsers, FaHandshake, FaFemale } from 'react-icons/fa';
+import { GiVillage } from 'react-icons/gi';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../../../assets/images/LOGOTIPO_OFICIAL.webp';
 import LanguageSelector from '../lenguaje/LanguageSelector';
 import NavItem from './NavItem';
 import './navComponent.css';
-// import rehilete from '../../../assets/images/rehilete.svg';
+import rehilete from '../../../assets/images/rehilete.svg';
 
 const NavComponent = () => {
     const { t } = useTranslation();
@@ -109,13 +109,13 @@ const NavComponent = () => {
                             menuOpen={menuOpen}
                             isActive={location.pathname === '/nosotros'}
                         />
-                        {/* <NavItem
+                        <NavItem
                             to="/blog"
                             icon={isMobile ? FaBlog : null}
                             label={t('blog')}
                             menuOpen={menuOpen}
                             isActive={location.pathname === '/blog'}
-                        /> */}
+                        />
                         <NavItem
                             to="/galeria"
                             icon={isMobile ? FaImages : null}
@@ -136,13 +136,13 @@ const NavComponent = () => {
                             submenu
                             submenuItems={newsSubmenuItems}
                         />
-                        {/* <NavItem
+                        <NavItem
                             to="/xicotepec"
                             icon={isMobile ? GiVillage : null}
                             label={<span>¡Xicotepec!<img src={rehilete} alt="Rehilete" className="label-rehilete-spin" /></span>}
                             menuOpen={menuOpen}
                             isActive={location.pathname === '/xicotepec'}
-                        /> */}
+                        />
                     </ul>
                 </div>
             </div>
